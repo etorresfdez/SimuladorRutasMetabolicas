@@ -1,0 +1,49 @@
+\doxysection{Referencia del archivo script\+\_\+simulation\+\_\+csv.\+py}
+\hypertarget{script__simulation__csv_8py}{}\label{script__simulation__csv_8py}\index{script\_simulation\_csv.py@{script\_simulation\_csv.py}}
+\doxysubsubsection*{Espacios de nombres}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespacescript__simulation__csv}{script\+\_\+simulation\+\_\+csv}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_a9ae3a1d690960b479cb13467314c20f5}{script\+\_\+simulation\+\_\+csv.\+sistema}} (t, x, p)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dict \doxymbox{\hyperlink{namespacescript__simulation__csv_ae498f1a6ef88fad6e275eaafe0d5a3e0}{script\+\_\+simulation\+\_\+csv.\+datos}} = \{\}
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_a7539a3e53ff86f5e6bf2b80036492634}{script\+\_\+simulation\+\_\+csv.\+encoding}}
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_a2a4027593e72e1210dd4b480e30152eb}{script\+\_\+simulation\+\_\+csv.\+line}} = line.\+strip()
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_aba6cc5377bbb70256ee0bd37722bcbe4}{script\+\_\+simulation\+\_\+csv.\+vals}}
+\item 
+dict \doxymbox{\hyperlink{namespacescript__simulation__csv_a7285b4c994d373f7713f816301920f8f}{script\+\_\+simulation\+\_\+csv.\+ecuaciones}} = \doxymbox{\hyperlink{namespacescript__simulation__csv_ae498f1a6ef88fad6e275eaafe0d5a3e0}{datos}}\+["{}ecuaciones"{}]\+
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_a201b273a6553c5d00609dde85322506c}{script\+\_\+simulation\+\_\+csv.\+X0}} = list(map(float, \doxymbox{\hyperlink{namespacescript__simulation__csv_ae498f1a6ef88fad6e275eaafe0d5a3e0}{datos}}\+["{}X0"{}]\+))
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_a011e3e74c22126a4c331ccf27abe2f3a}{script\+\_\+simulation\+\_\+csv.\+p}} = list(map(float, \doxymbox{\hyperlink{namespacescript__simulation__csv_ae498f1a6ef88fad6e275eaafe0d5a3e0}{datos}}\+["{}p"{}]\+))
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_abca8abd84ea0885528153c3116e5bb82}{script\+\_\+simulation\+\_\+csv.\+tini}} = float(\doxymbox{\hyperlink{namespacescript__simulation__csv_ae498f1a6ef88fad6e275eaafe0d5a3e0}{datos}}\+["{}tini"{}]\+\+[0]\+)
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_a67cb9b22776aef4bc4511710820f9a5f}{script\+\_\+simulation\+\_\+csv.\+tfin}} = float(\doxymbox{\hyperlink{namespacescript__simulation__csv_ae498f1a6ef88fad6e275eaafe0d5a3e0}{datos}}\+["{}tfin"{}]\+\+[0]\+)
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_a1dc7c0fff5c3a1e023c667cd83449ef1}{script\+\_\+simulation\+\_\+csv.\+ciclos}} = int(\doxymbox{\hyperlink{namespacescript__simulation__csv_ae498f1a6ef88fad6e275eaafe0d5a3e0}{datos}}\+["{}ciclos"{}]\+\+[0]\+)
+\item 
+dict \doxymbox{\hyperlink{namespacescript__simulation__csv_ab54e770d40d98ee910b87c9bdab94f23}{script\+\_\+simulation\+\_\+csv.\+method}} = \doxymbox{\hyperlink{namespacescript__simulation__csv_ae498f1a6ef88fad6e275eaafe0d5a3e0}{datos}}\+["{}method"{}]\+\+[0]\+
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_a6447963bbe60882cdd6e73bbbd98ec9c}{script\+\_\+simulation\+\_\+csv.\+t\+\_\+eval}} = np.\+linspace(\doxymbox{\hyperlink{namespacescript__simulation__csv_abca8abd84ea0885528153c3116e5bb82}{tini}}, \doxymbox{\hyperlink{namespacescript__simulation__csv_a67cb9b22776aef4bc4511710820f9a5f}{tfin}}, \doxymbox{\hyperlink{namespacescript__simulation__csv_a1dc7c0fff5c3a1e023c667cd83449ef1}{ciclos}})
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_aa48e3308b077668eb6d5b2d24215234a}{script\+\_\+simulation\+\_\+csv.\+sol}} = solve\+\_\+ivp(\doxymbox{\hyperlink{namespacescript__simulation__csv_a9ae3a1d690960b479cb13467314c20f5}{sistema}}, (\doxymbox{\hyperlink{namespacescript__simulation__csv_abca8abd84ea0885528153c3116e5bb82}{tini}}, \doxymbox{\hyperlink{namespacescript__simulation__csv_a67cb9b22776aef4bc4511710820f9a5f}{tfin}}), \doxymbox{\hyperlink{namespacescript__simulation__csv_a201b273a6553c5d00609dde85322506c}{X0}}, args=(\doxymbox{\hyperlink{namespacescript__simulation__csv_a011e3e74c22126a4c331ccf27abe2f3a}{p}},), \doxymbox{\hyperlink{namespacescript__simulation__csv_ab54e770d40d98ee910b87c9bdab94f23}{method}}=\doxymbox{\hyperlink{namespacescript__simulation__csv_ab54e770d40d98ee910b87c9bdab94f23}{method}}, \doxymbox{\hyperlink{namespacescript__simulation__csv_a6447963bbe60882cdd6e73bbbd98ec9c}{t\+\_\+eval}}=\doxymbox{\hyperlink{namespacescript__simulation__csv_a6447963bbe60882cdd6e73bbbd98ec9c}{t\+\_\+eval}})
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_adf68da1f0a2a128a2bde91b9dcb346bf}{script\+\_\+simulation\+\_\+csv.\+newline}}
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_a8ea93eb37f7797069bd806f9f7cd8222}{script\+\_\+simulation\+\_\+csv.\+writer}} = csv.\+writer(f, delimiter="{};"{})
+\item 
+list \doxymbox{\hyperlink{namespacescript__simulation__csv_abd7ceed20ab0e0241b1a701ae540db5d}{script\+\_\+simulation\+\_\+csv.\+fila}} = \+[sol.\+t\+[i]\+]\+ + sol.\+y\+[:\+, i]\+.tolist()
+\item 
+\doxymbox{\hyperlink{namespacescript__simulation__csv_a509501bc157c2a6af80fbba1786d26b2}{script\+\_\+simulation\+\_\+csv.\+file}}
+\end{DoxyCompactItemize}

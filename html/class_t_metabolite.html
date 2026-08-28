@@ -1,0 +1,658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prototipo Simulacion Rutas Metabolicas: Referencia de la clase TMetabolite</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Prototipo Simulacion Rutas Metabolicas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_t_metabolite.html','','class_t_metabolite-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase TMetabolite</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Clase para encapsular los metabolitos del modelo.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_metabolic_elements_8h_source.html">MetabolicElements.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboración de TMetabolite:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_metabolite__coll__graph.png" border="0" usemap="#a_t_metabolite_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_t_metabolite_coll__map" id="a_t_metabolite_coll__map">
+<area shape="rect" title="Clase para encapsular los metabolitos del modelo." alt="" coords="5,5,121,309"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:afb920d9eed20ed43218fb1327eb913b1" id="r_afb920d9eed20ed43218fb1327eb913b1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afb920d9eed20ed43218fb1327eb913b1">TMetabolite</a> (String p_shortName, String p_fullName, double p_initialValue)</td></tr>
+<tr class="memdesc:afb920d9eed20ed43218fb1327eb913b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de <a class="el" href="class_t_metabolite.html" title="Clase para encapsular los metabolitos del modelo.">TMetabolite</a>.  <br /></td></tr>
+<tr class="memitem:af08c956d6a400cd6549d065d04d0b887" id="r_af08c956d6a400cd6549d065d04d0b887"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af08c956d6a400cd6549d065d04d0b887">TMetabolite</a> (String line)</td></tr>
+<tr class="memdesc:af08c956d6a400cd6549d065d04d0b887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de <a class="el" href="class_t_metabolite.html" title="Clase para encapsular los metabolitos del modelo.">TMetabolite</a>.  <br /></td></tr>
+<tr class="memitem:a7818e2aee3c3aa8bfeea327aa9643697" id="r_a7818e2aee3c3aa8bfeea327aa9643697"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a7818e2aee3c3aa8bfeea327aa9643697">getShortName</a> () const</td></tr>
+<tr class="memdesc:a7818e2aee3c3aa8bfeea327aa9643697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el nombre corto del metabolito.  <br /></td></tr>
+<tr class="memitem:ad9f117e3545e66ebed55f93641ce065b" id="r_ad9f117e3545e66ebed55f93641ce065b"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#ad9f117e3545e66ebed55f93641ce065b">getFullName</a> () const</td></tr>
+<tr class="memdesc:ad9f117e3545e66ebed55f93641ce065b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el nombre largo del metabolito.  <br /></td></tr>
+<tr class="memitem:a003dfae1ce41e2e731e9ec2e6cf366a7" id="r_a003dfae1ce41e2e731e9ec2e6cf366a7"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a003dfae1ce41e2e731e9ec2e6cf366a7">getInitialValue</a> () const</td></tr>
+<tr class="memdesc:a003dfae1ce41e2e731e9ec2e6cf366a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la concentracion inicial del metabolito.  <br /></td></tr>
+<tr class="memitem:a58d494d3ae4d68f0c28edab44306be7b" id="r_a58d494d3ae4d68f0c28edab44306be7b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a58d494d3ae4d68f0c28edab44306be7b">setInitialValue</a> (double initialConcentration)</td></tr>
+<tr class="memdesc:a58d494d3ae4d68f0c28edab44306be7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza la concentracion inicial del metabolito.  <br /></td></tr>
+<tr class="memitem:a35589d944d3ac0ad647aa42412c0c3f6" id="r_a35589d944d3ac0ad647aa42412c0c3f6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a35589d944d3ac0ad647aa42412c0c3f6">toString</a> (TMemo *pantallaSalida) const</td></tr>
+<tr class="memdesc:a35589d944d3ac0ad647aa42412c0c3f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra el metabolito guardado y sus atributos.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Atributos públicos estáticos</h2></td></tr>
+<tr class="memitem:a489034c216ea6c68701f1a9e5d7197b5" id="r_a489034c216ea6c68701f1a9e5d7197b5"><td class="memItemLeft">static const String&#160;</td><td class="memItemRight"><a class="el" href="#a489034c216ea6c68701f1a9e5d7197b5">inputTemplate</a> = &quot;METABOLITE &lt;nombre_corto&gt; &lt;nombre_largo&gt; &lt;concentracion_inicial&gt;&quot;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:ac68293e55e00b57510680058356af024" id="r_ac68293e55e00b57510680058356af024"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#ac68293e55e00b57510680058356af024">FloatToStrDot</a> (double value) const</td></tr>
+<tr class="memdesc:ac68293e55e00b57510680058356af024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que convierte un double en string con formato decimal '.'.  <br /></td></tr>
+<tr class="memitem:a410a22efe9cfe469e19d76c1b1a15785" id="r_a410a22efe9cfe469e19d76c1b1a15785"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a410a22efe9cfe469e19d76c1b1a15785">StrToFloatDot</a> (String texto) const</td></tr>
+<tr class="memdesc:a410a22efe9cfe469e19d76c1b1a15785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que convierte un string en double con formato decimal '.'.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:ab5a0c08605d291182d37932bef2454fb" id="r_ab5a0c08605d291182d37932bef2454fb"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#ab5a0c08605d291182d37932bef2454fb">shortName</a></td></tr>
+<tr class="memitem:a61ce37a945aa8ba71b85e0db211da584" id="r_a61ce37a945aa8ba71b85e0db211da584"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a61ce37a945aa8ba71b85e0db211da584">fullName</a></td></tr>
+<tr class="memitem:a6608b5eb153ed1a096f4c1de5d2bcdaf" id="r_a6608b5eb153ed1a096f4c1de5d2bcdaf"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a6608b5eb153ed1a096f4c1de5d2bcdaf">initialValue</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase para encapsular los metabolitos del modelo. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="afb920d9eed20ed43218fb1327eb913b1" name="afb920d9eed20ed43218fb1327eb913b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb920d9eed20ed43218fb1327eb913b1">&#9670;&#160;</a></span>TMetabolite() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMetabolite::TMetabolite </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>p_shortName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>p_fullName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>p_initialValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de <a class="el" href="class_t_metabolite.html" title="Clase para encapsular los metabolitos del modelo.">TMetabolite</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_shortName</td><td>nombre corto del metabolito, tipo String </td></tr>
+    <tr><td class="paramname">p_fullName</td><td>nombre largo del metabolito, tipo String </td></tr>
+    <tr><td class="paramname">p_initialValue</td><td>concentracion inicial del metabolito, tipo double </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af08c956d6a400cd6549d065d04d0b887" name="af08c956d6a400cd6549d065d04d0b887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af08c956d6a400cd6549d065d04d0b887">&#9670;&#160;</a></span>TMetabolite() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMetabolite::TMetabolite </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>line</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de <a class="el" href="class_t_metabolite.html" title="Clase para encapsular los metabolitos del modelo.">TMetabolite</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>linea del panel de entrada asociada a un metabolito, comienza por METABOLITE </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_metabolite_af08c956d6a400cd6549d065d04d0b887_cgraph.png" border="0" usemap="#aclass_t_metabolite_af08c956d6a400cd6549d065d04d0b887_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_metabolite_af08c956d6a400cd6549d065d04d0b887_cgraph" id="aclass_t_metabolite_af08c956d6a400cd6549d065d04d0b887_cgraph">
+<area shape="rect" title="Constructor de TMetabolite." alt="" coords="5,5,171,32"/>
+<area shape="rect" href="class_t_metabolite.html#a410a22efe9cfe469e19d76c1b1a15785" title="Metodo que convierte un string en double con formato decimal &#39;.&#39;." alt="" coords="219,5,397,32"/>
+<area shape="poly" title=" " alt="" coords="171,16,206,19,200,19,171,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="ac68293e55e00b57510680058356af024" name="ac68293e55e00b57510680058356af024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac68293e55e00b57510680058356af024">&#9670;&#160;</a></span>FloatToStrDot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMetabolite::FloatToStrDot </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo que convierte un double en string con formato decimal '.'. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>numero con decimales con '.' </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>String palabra que se devuelve manteniendo el formato decimal '.' </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_metabolite_ac68293e55e00b57510680058356af024_icgraph.png" border="0" usemap="#aclass_t_metabolite_ac68293e55e00b57510680058356af024_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_metabolite_ac68293e55e00b57510680058356af024_icgraph" id="aclass_t_metabolite_ac68293e55e00b57510680058356af024_icgraph">
+<area shape="rect" title="Metodo que convierte un double en string con formato decimal &#39;.&#39;." alt="" coords="196,5,374,32"/>
+<area shape="rect" href="class_t_metabolite.html#a35589d944d3ac0ad647aa42412c0c3f6" title="Muestra el metabolito guardado y sus atributos." alt="" coords="5,5,148,32"/>
+<area shape="poly" title=" " alt="" coords="177,19,148,21,148,16,183,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad9f117e3545e66ebed55f93641ce065b" name="ad9f117e3545e66ebed55f93641ce065b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9f117e3545e66ebed55f93641ce065b">&#9670;&#160;</a></span>getFullName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMetabolite::getFullName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el nombre largo del metabolito. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>String nombre largo del metabolito </dd></dl>
+
+</div>
+</div>
+<a id="a003dfae1ce41e2e731e9ec2e6cf366a7" name="a003dfae1ce41e2e731e9ec2e6cf366a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a003dfae1ce41e2e731e9ec2e6cf366a7">&#9670;&#160;</a></span>getInitialValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TMetabolite::getInitialValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la concentracion inicial del metabolito. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>double concentracion inicial del metabolito </dd></dl>
+
+</div>
+</div>
+<a id="a7818e2aee3c3aa8bfeea327aa9643697" name="a7818e2aee3c3aa8bfeea327aa9643697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7818e2aee3c3aa8bfeea327aa9643697">&#9670;&#160;</a></span>getShortName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMetabolite::getShortName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el nombre corto del metabolito. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>String nombre corto del metabolito </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_metabolite_a7818e2aee3c3aa8bfeea327aa9643697_icgraph.png" border="0" usemap="#aclass_t_metabolite_a7818e2aee3c3aa8bfeea327aa9643697_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_metabolite_a7818e2aee3c3aa8bfeea327aa9643697_icgraph" id="aclass_t_metabolite_a7818e2aee3c3aa8bfeea327aa9643697_icgraph">
+<area shape="rect" title="Devuelve el nombre corto del metabolito." alt="" coords="840,547,1022,573"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a4efc1b68aecca229eb9a9467dd14ef94" title="Construye el denominador de la ecuacion cinetica de tipo MMBiBiInhibidor." alt="" coords="557,147,792,173"/>
+<area shape="poly" title=" " alt="" coords="923,531,910,469,885,386,868,341,846,297,821,255,790,218,759,193,725,177,723,171,761,189,794,214,825,252,851,295,873,339,890,384,915,468,928,532"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a7c70835aee1f69a6acf4cf49618d404f" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="302,5,488,48"/>
+<area shape="poly" title=" " alt="" coords="927,530,920,453,901,347,883,290,860,234,829,182,790,137,758,110,721,88,682,70,642,57,561,39,489,30,487,25,562,33,643,51,684,65,724,83,761,106,794,133,834,179,865,231,888,288,906,345,926,452,932,532"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a2e2b9f5d2797bdcae5f12f7b667962d5" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="298,205,492,248"/>
+<area shape="poly" title=" " alt="" coords="918,532,900,490,874,436,837,382,815,358,791,337,756,314,719,295,641,265,562,246,493,235,491,230,563,241,642,260,721,290,759,309,794,333,819,354,841,379,878,434,905,487,923,533"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#af112b1a3812d328d9836c7962dcc311a" title="Construye el denominador de la ecuacion cinetica de tipo MMBiSecAleatorio." alt="" coords="602,405,747,448"/>
+<area shape="poly" title=" " alt="" coords="890,539,791,485,724,451,723,446,794,480,895,538"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#aa655f131d118c0f2eb0d2f773c30da16" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="322,272,468,315"/>
+<area shape="poly" title=" " alt="" coords="912,533,865,464,830,427,791,396,752,374,710,355,623,327,539,310,469,300,467,296,540,305,624,322,712,350,754,369,794,391,834,423,869,461,918,533"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#af3b3f353979875875816507267ee9ce4" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="322,472,468,515"/>
+<area shape="poly" title=" " alt="" coords="822,546,792,544,469,504,468,499,793,539,827,545"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#adff7e8d28bf0d198688fe6f6036b8bf8" title="Construye el denominador de la ecuacion cinetica de tipo MMUniBiInhibidor." alt="" coords="604,605,745,648"/>
+<area shape="poly" title=" " alt="" coords="860,579,747,611,744,606,864,576"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#afe8e3d6f6e91d0809a097c6ac9833f84" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="325,539,465,581"/>
+<area shape="poly" title=" " alt="" coords="822,562,466,563,465,557,827,558"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a4389b191c3605332cd2d4ee0dbb0f8b0" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="323,739,466,781"/>
+<area shape="poly" title=" " alt="" coords="906,582,856,625,794,662,708,696,620,722,538,741,468,753,466,748,536,735,619,717,707,691,791,658,853,621,902,585"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a61ed9f2604fb99b22b15f56a94598476" title="Construye el denominador de la ecuacion cinetica de tipo MMUniInhibidor." alt="" coords="559,880,790,907"/>
+<area shape="poly" title=" " alt="" coords="920,585,872,687,836,746,794,802,746,848,699,882,696,877,742,844,790,798,832,743,867,684,916,589"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a0a27cec47470b60e46fe110cab3edab6" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="304,805,486,848"/>
+<area shape="poly" title=" " alt="" coords="918,585,899,624,871,665,836,706,794,741,757,762,718,779,637,804,557,819,487,827,485,822,556,814,635,799,716,774,755,757,791,736,832,703,867,662,895,621,915,589"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a7398e14df831e6270e987f4c5eaad236" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="300,1005,490,1048"/>
+<area shape="poly" title=" " alt="" coords="929,586,920,657,897,746,880,793,857,840,829,883,794,921,761,947,724,968,684,986,644,1000,563,1018,491,1027,489,1022,562,1013,642,995,682,981,721,964,758,942,791,917,824,880,852,837,875,791,892,744,915,656,926,591"/>
+<area shape="rect" href="class_t_mass_action.html#a31a4b542f91aab112a7bcb2e3de1819e" title="Construye la ecuacion cinetica segun la ley de accion de masas." alt="" coords="568,1139,781,1165"/>
+<area shape="poly" title=" " alt="" coords="926,587,911,664,885,770,846,889,822,948,795,1005,770,1046,741,1084,691,1140,688,1136,737,1081,765,1043,790,1003,817,946,841,887,879,768,906,663,923,591"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#ae96c6cd6c35591da5afbd8e690366145" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="302,72,488,115"/>
+<area shape="poly" title=" " alt="" coords="598,144,488,118,486,113,603,141"/>
+<area shape="poly" title=" " alt="" coords="637,139,508,62,481,51,479,46,510,58,641,137"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a82dcfcc31f05b07fd90cc5be9df671d8" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="298,139,492,181"/>
+<area shape="poly" title=" " alt="" coords="539,162,493,162,490,158,544,158"/>
+<area shape="poly" title=" " alt="" coords="598,179,489,207,486,203,602,176"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#afd7921f14f90bb419de8d1dd53d27e13" title="Constructor de la clase TMMBiBiInhibidor. Llama al constructor del padre, rellena los atributos propi..." alt="" coords="26,105,212,148"/>
+<area shape="poly" title=" " alt="" coords="285,108,214,117,211,113,289,104"/>
+<area shape="poly" title=" " alt="" coords="299,55,282,63,171,107,167,103,280,57,303,51"/>
+<area shape="poly" title=" " alt="" coords="280,148,214,140,211,136,285,145"/>
+<area shape="poly" title=" " alt="" coords="299,202,280,196,170,151,168,146,282,191,303,199"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#afc3e0110e898539d2128a7673f0239bc" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="322,339,468,381"/>
+<area shape="poly" title=" " alt="" coords="584,407,469,380,467,375,589,405"/>
+<area shape="poly" title=" " alt="" coords="628,397,573,363,508,329,469,314,467,309,510,324,575,358,633,396"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#ab79024ec54f7ab3a243d92dac5596070" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="319,405,470,448"/>
+<area shape="poly" title=" " alt="" coords="584,428,472,429,470,424,589,425"/>
+<area shape="poly" title=" " alt="" coords="585,449,470,478,467,474,589,446"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#ad4e65c49ef3a64b8162e1aab18289d3d" title="Constructor de la clase TMMBiSecAleatorio. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="46,372,192,415"/>
+<area shape="poly" title=" " alt="" coords="305,373,194,387,191,382,309,369"/>
+<area shape="poly" title=" " alt="" coords="306,320,282,329,171,373,167,370,280,324,309,316"/>
+<area shape="poly" title=" " alt="" coords="302,417,193,404,191,400,306,414"/>
+<area shape="poly" title=" " alt="" coords="305,470,280,463,170,418,168,413,282,457,310,468"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a20d6d999152c5042a3e8f9b57c661b4d" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="323,605,466,648"/>
+<area shape="poly" title=" " alt="" coords="587,628,468,629,466,624,591,625"/>
+<area shape="poly" title=" " alt="" coords="587,608,466,579,465,574,592,605"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a59733a3b1589a10af47794977d0f487e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="319,672,470,715"/>
+<area shape="poly" title=" " alt="" coords="587,648,472,678,470,673,592,645"/>
+<area shape="poly" title=" " alt="" coords="629,659,575,695,510,729,468,744,466,740,508,724,573,690,633,655"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a27f1f61c93dc9400e2111c7e84bfb813" title="Constructor de la clase TMMUniBiInhibidor. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="49,639,189,681"/>
+<area shape="poly" title=" " alt="" coords="306,639,191,654,188,649,310,635"/>
+<area shape="poly" title=" " alt="" coords="308,585,282,596,171,640,167,636,280,591,312,582"/>
+<area shape="poly" title=" " alt="" coords="302,684,191,671,189,666,306,681"/>
+<area shape="poly" title=" " alt="" coords="306,737,280,729,170,685,169,679,282,724,311,735"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a1ce34ddce6ad598235045dd9726e9e7e" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="304,872,486,915"/>
+<area shape="poly" title=" " alt="" coords="541,894,487,896,485,891,546,892"/>
+<area shape="poly" title=" " alt="" coords="598,877,486,851,486,846,603,875"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a9bd74e953991c0873e15141e052eeeba" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="300,939,490,981"/>
+<area shape="poly" title=" " alt="" coords="598,912,488,941,486,936,603,910"/>
+<area shape="poly" title=" " alt="" coords="641,914,510,996,481,1007,478,1002,508,991,637,916"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#aacd95490240c218832d2a12e5a6b33a2" title="Constructor de la clase TMMUniInhibidor. Llama al constructor del padre, rellena los atributos propio..." alt="" coords="5,913,233,940"/>
+<area shape="poly" title=" " alt="" coords="286,908,234,915,232,911,291,905"/>
+<area shape="poly" title=" " alt="" coords="299,855,282,862,152,915,149,911,280,858,303,851"/>
+<area shape="poly" title=" " alt="" coords="283,948,234,943,232,938,287,946"/>
+<area shape="poly" title=" " alt="" coords="299,1001,280,996,151,943,151,938,282,991,304,1000"/>
+<area shape="rect" href="class_t_mass_action.html#ab908415a5e4eb18a0ffaf33d5f58ad7c" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="301,1072,488,1115"/>
+<area shape="poly" title=" " alt="" coords="590,1135,489,1116,489,1110,595,1135"/>
+<area shape="rect" href="class_t_mass_action.html#a05e6775beaf34a255e63993627e7ea17" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="285,1139,505,1165"/>
+<area shape="poly" title=" " alt="" coords="550,1152,506,1155,505,1149,556,1152"/>
+<area shape="rect" href="class_t_mass_action.html#a686b8ca0db5dfef10ba9b3adb8e0a40e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="297,1189,492,1232"/>
+<area shape="poly" title=" " alt="" coords="595,1169,493,1193,492,1188,590,1170"/>
+<area shape="rect" href="class_t_mass_action.html#a14d0626057ebcbc68f87caf65a98ffe4" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="281,1256,509,1283"/>
+<area shape="poly" title=" " alt="" coords="643,1173,582,1212,510,1246,473,1258,472,1253,508,1242,579,1208,638,1175"/>
+<area shape="rect" href="class_t_mass_action.html#a74563e7583262c8adf5b9ed1f9bbca63" title="Constructor de la clase TMassAction. Llama al constructor del padre, rellena los atributos propios y ..." alt="" coords="27,1168,211,1195"/>
+<area shape="poly" title=" " alt="" coords="301,1121,281,1129,161,1170,159,1165,280,1124,305,1119"/>
+<area shape="poly" title=" " alt="" coords="267,1166,212,1174,211,1169,272,1164"/>
+<area shape="poly" title=" " alt="" coords="279,1199,211,1194,211,1188,284,1198"/>
+<area shape="poly" title=" " alt="" coords="307,1252,280,1247,210,1222,151,1198,152,1193,212,1217,281,1241,312,1252"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a58d494d3ae4d68f0c28edab44306be7b" name="a58d494d3ae4d68f0c28edab44306be7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58d494d3ae4d68f0c28edab44306be7b">&#9670;&#160;</a></span>setInitialValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMetabolite::setInitialValue </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>initialConcentration</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualiza la concentracion inicial del metabolito. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">double</td><td>concentracion inicial del metabolito </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a410a22efe9cfe469e19d76c1b1a15785" name="a410a22efe9cfe469e19d76c1b1a15785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a410a22efe9cfe469e19d76c1b1a15785">&#9670;&#160;</a></span>StrToFloatDot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TMetabolite::StrToFloatDot </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>texto</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo que convierte un string en double con formato decimal '.'. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texto</td><td>palabra que representa un numero con decimales con '.' </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>double numero que se devuelve manteniendo el formato decimal '.' </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_metabolite_a410a22efe9cfe469e19d76c1b1a15785_icgraph.png" border="0" usemap="#aclass_t_metabolite_a410a22efe9cfe469e19d76c1b1a15785_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_metabolite_a410a22efe9cfe469e19d76c1b1a15785_icgraph" id="aclass_t_metabolite_a410a22efe9cfe469e19d76c1b1a15785_icgraph">
+<area shape="rect" title="Metodo que convierte un string en double con formato decimal &#39;.&#39;." alt="" coords="219,5,397,32"/>
+<area shape="rect" href="class_t_metabolite.html#af08c956d6a400cd6549d065d04d0b887" title="Constructor de TMetabolite." alt="" coords="5,5,171,32"/>
+<area shape="poly" title=" " alt="" coords="200,19,171,21,171,16,206,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35589d944d3ac0ad647aa42412c0c3f6" name="a35589d944d3ac0ad647aa42412c0c3f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35589d944d3ac0ad647aa42412c0c3f6">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMetabolite::toString </td>
+          <td>(</td>
+          <td class="paramtype">TMemo *</td>          <td class="paramname"><span class="paramname"><em>pantallaSalida</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra el metabolito guardado y sus atributos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pantallaSalida</td><td>objeto de la interfaz donde se muestra </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_metabolite_a35589d944d3ac0ad647aa42412c0c3f6_cgraph.png" border="0" usemap="#aclass_t_metabolite_a35589d944d3ac0ad647aa42412c0c3f6_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_metabolite_a35589d944d3ac0ad647aa42412c0c3f6_cgraph" id="aclass_t_metabolite_a35589d944d3ac0ad647aa42412c0c3f6_cgraph">
+<area shape="rect" title="Muestra el metabolito guardado y sus atributos." alt="" coords="5,5,148,32"/>
+<area shape="rect" href="class_t_metabolite.html#ac68293e55e00b57510680058356af024" title="Metodo que convierte un double en string con formato decimal &#39;.&#39;." alt="" coords="196,5,374,32"/>
+<area shape="poly" title=" " alt="" coords="148,16,183,19,177,19,148,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a61ce37a945aa8ba71b85e0db211da584" name="a61ce37a945aa8ba71b85e0db211da584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61ce37a945aa8ba71b85e0db211da584">&#9670;&#160;</a></span>fullName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMetabolite::fullName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Nombre largo del metabolito </p>
+
+</div>
+</div>
+<a id="a6608b5eb153ed1a096f4c1de5d2bcdaf" name="a6608b5eb153ed1a096f4c1de5d2bcdaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6608b5eb153ed1a096f4c1de5d2bcdaf">&#9670;&#160;</a></span>initialValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TMetabolite::initialValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Concentracion inicial del metabolito </p>
+
+</div>
+</div>
+<a id="a489034c216ea6c68701f1a9e5d7197b5" name="a489034c216ea6c68701f1a9e5d7197b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a489034c216ea6c68701f1a9e5d7197b5">&#9670;&#160;</a></span>inputTemplate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const String TMetabolite::inputTemplate = &quot;METABOLITE &lt;nombre_corto&gt; &lt;nombre_largo&gt; &lt;concentracion_inicial&gt;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Estructura de entrada de datos de un metabolito </p>
+
+</div>
+</div>
+<a id="ab5a0c08605d291182d37932bef2454fb" name="ab5a0c08605d291182d37932bef2454fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a0c08605d291182d37932bef2454fb">&#9670;&#160;</a></span>shortName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMetabolite::shortName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Nombre corto del metabolito </p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li><a class="el" href="_metabolic_elements_8h_source.html">MetabolicElements.h</a></li>
+<li><a class="el" href="_metabolic_elements_8cpp.html">MetabolicElements.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_t_metabolite.html">TMetabolite</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

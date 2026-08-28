@@ -1,0 +1,7 @@
+<map id="TReaction::DividesCoeffMetabolite" name="TReaction::DividesCoeffMetabolite">
+<area shape="rect" id="Node000001" title="Separa coeficiente estequiometrico del nombre del metabolito." alt="" coords="447,5,671,32"/>
+<area shape="rect" id="Node000002" href="$class_t_reaction.html#a9ff586b1e6a409124165d40bddc9482a" title="Dada una lista de sustancias, las separa en nombres y coeficientes estequimetricos." alt="" coords="203,5,399,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="429,19,400,21,400,16,434,19"/>
+<area shape="rect" id="Node000003" href="$class_t_reaction.html#ae0662c4665943f5518ae7a8444e759fb" title="Constructor de TReaction, lee una linea completa del panel de entrada." alt="" coords="5,5,155,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="185,19,155,21,155,16,190,19"/>
+</map>

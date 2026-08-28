@@ -1,0 +1,280 @@
+\doxysubsection{Referencia de la clase TMetabolite}
+\hypertarget{class_t_metabolite}{}\label{class_t_metabolite}\index{TMetabolite@{TMetabolite}}
+
+
+Clase para encapsular los metabolitos del modelo.  
+
+
+
+
+{\ttfamily \+\#include $<$Metabolic\+Elements.\+h$>$}
+
+
+
+Diagrama de colaboración de TMetabolite:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_t_metabolite__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_metabolite_afb920d9eed20ed43218fb1327eb913b1}{TMetabolite}} (String p\+\_\+short\+Name, String p\+\_\+full\+Name, double p\+\_\+initial\+Value)
+\begin{DoxyCompactList}\small\item\em Constructor de \doxylink{class_t_metabolite}{TMetabolite}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_t_metabolite_af08c956d6a400cd6549d065d04d0b887}{TMetabolite}} (String line)
+\begin{DoxyCompactList}\small\item\em Constructor de \doxylink{class_t_metabolite}{TMetabolite}. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_metabolite_a7818e2aee3c3aa8bfeea327aa9643697}{get\+Short\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre corto del metabolito. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_metabolite_ad9f117e3545e66ebed55f93641ce065b}{get\+Full\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre largo del metabolito. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_t_metabolite_a003dfae1ce41e2e731e9ec2e6cf366a7}{get\+Initial\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la concentracion inicial del metabolito. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_metabolite_a58d494d3ae4d68f0c28edab44306be7b}{set\+Initial\+Value}} (double initial\+Concentration)
+\begin{DoxyCompactList}\small\item\em Actualiza la concentracion inicial del metabolito. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_metabolite_a35589d944d3ac0ad647aa42412c0c3f6}{to\+String}} (TMemo \texorpdfstring{$\ast$}{*}pantalla\+Salida) const
+\begin{DoxyCompactList}\small\item\em Muestra el metabolito guardado y sus atributos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static const String \doxymbox{\hyperlink{class_t_metabolite_a489034c216ea6c68701f1a9e5d7197b5}{input\+Template}} = "{}METABOLITE $<$nombre\+\_\+corto$>$ $<$nombre\+\_\+largo$>$ $<$concentracion\+\_\+inicial$>$"{}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+String \doxymbox{\hyperlink{class_t_metabolite_ac68293e55e00b57510680058356af024}{Float\+To\+Str\+Dot}} (double value) const
+\begin{DoxyCompactList}\small\item\em Metodo que convierte un double en string con formato decimal \textquotesingle{}.\textquotesingle{}. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_t_metabolite_a410a22efe9cfe469e19d76c1b1a15785}{Str\+To\+Float\+Dot}} (String texto) const
+\begin{DoxyCompactList}\small\item\em Metodo que convierte un string en double con formato decimal \textquotesingle{}.\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+String \doxymbox{\hyperlink{class_t_metabolite_ab5a0c08605d291182d37932bef2454fb}{short\+Name}}
+\item 
+String \doxymbox{\hyperlink{class_t_metabolite_a61ce37a945aa8ba71b85e0db211da584}{full\+Name}}
+\item 
+double \doxymbox{\hyperlink{class_t_metabolite_a6608b5eb153ed1a096f4c1de5d2bcdaf}{initial\+Value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+Clase para encapsular los metabolitos del modelo. 
+
+\label{class_t_metabolite_doc-constructors}
+\Hypertarget{class_t_metabolite_doc-constructors}
+\doxysubsubsection{Documentación de constructores y destructores}
+\Hypertarget{class_t_metabolite_afb920d9eed20ed43218fb1327eb913b1}\index{TMetabolite@{TMetabolite}!TMetabolite@{TMetabolite}}
+\index{TMetabolite@{TMetabolite}!TMetabolite@{TMetabolite}}
+\doxyparagraph{\texorpdfstring{TMetabolite()}{TMetabolite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_t_metabolite_afb920d9eed20ed43218fb1327eb913b1} 
+TMetabolite::\+\+TMetabolite (\begin{DoxyParamCaption}\item[{String}]{p\+\_\+short\+Name}{, }\item[{String}]{p\+\_\+full\+Name}{, }\item[{double}]{p\+\_\+initial\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de \doxylink{class_t_metabolite}{TMetabolite}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p\+\_\+short\+Name} & nombre corto del metabolito, tipo String \\
+\hline
+{\em p\+\_\+full\+Name} & nombre largo del metabolito, tipo String \\
+\hline
+{\em p\+\_\+initial\+Value} & concentracion inicial del metabolito, tipo double \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_metabolite_af08c956d6a400cd6549d065d04d0b887}\index{TMetabolite@{TMetabolite}!TMetabolite@{TMetabolite}}
+\index{TMetabolite@{TMetabolite}!TMetabolite@{TMetabolite}}
+\doxyparagraph{\texorpdfstring{TMetabolite()}{TMetabolite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_t_metabolite_af08c956d6a400cd6549d065d04d0b887} 
+TMetabolite::\+\+TMetabolite (\begin{DoxyParamCaption}\item[{String}]{line}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de \doxylink{class_t_metabolite}{TMetabolite}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em line} & linea del panel de entrada asociada a un metabolito, comienza por METABOLITE \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_metabolite_af08c956d6a400cd6549d065d04d0b887_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_t_metabolite_doc-func-members}
+\Hypertarget{class_t_metabolite_doc-func-members}
+\doxysubsubsection{Documentación de funciones miembro}
+\Hypertarget{class_t_metabolite_ac68293e55e00b57510680058356af024}\index{TMetabolite@{TMetabolite}!FloatToStrDot@{FloatToStrDot}}
+\index{FloatToStrDot@{FloatToStrDot}!TMetabolite@{TMetabolite}}
+\doxyparagraph{\texorpdfstring{FloatToStrDot()}{FloatToStrDot()}}
+{\footnotesize\ttfamily \label{class_t_metabolite_ac68293e55e00b57510680058356af024} 
+String TMetabolite::\+\+Float\+To\+Str\+Dot (\begin{DoxyParamCaption}\item[{double}]{value}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo que convierte un double en string con formato decimal \textquotesingle{}.\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em value} & numero con decimales con \textquotesingle{}.\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+String palabra que se devuelve manteniendo el formato decimal \textquotesingle{}.\textquotesingle{} 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_metabolite_ac68293e55e00b57510680058356af024_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_metabolite_ad9f117e3545e66ebed55f93641ce065b}\index{TMetabolite@{TMetabolite}!getFullName@{getFullName}}
+\index{getFullName@{getFullName}!TMetabolite@{TMetabolite}}
+\doxyparagraph{\texorpdfstring{getFullName()}{getFullName()}}
+{\footnotesize\ttfamily \label{class_t_metabolite_ad9f117e3545e66ebed55f93641ce065b} 
+String TMetabolite::\+get\+Full\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el nombre largo del metabolito. 
+
+\begin{DoxyReturn}{Devuelve}
+String nombre largo del metabolito 
+\end{DoxyReturn}
+\Hypertarget{class_t_metabolite_a003dfae1ce41e2e731e9ec2e6cf366a7}\index{TMetabolite@{TMetabolite}!getInitialValue@{getInitialValue}}
+\index{getInitialValue@{getInitialValue}!TMetabolite@{TMetabolite}}
+\doxyparagraph{\texorpdfstring{getInitialValue()}{getInitialValue()}}
+{\footnotesize\ttfamily \label{class_t_metabolite_a003dfae1ce41e2e731e9ec2e6cf366a7} 
+double TMetabolite::\+get\+Initial\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve la concentracion inicial del metabolito. 
+
+\begin{DoxyReturn}{Devuelve}
+double concentracion inicial del metabolito 
+\end{DoxyReturn}
+\Hypertarget{class_t_metabolite_a7818e2aee3c3aa8bfeea327aa9643697}\index{TMetabolite@{TMetabolite}!getShortName@{getShortName}}
+\index{getShortName@{getShortName}!TMetabolite@{TMetabolite}}
+\doxyparagraph{\texorpdfstring{getShortName()}{getShortName()}}
+{\footnotesize\ttfamily \label{class_t_metabolite_a7818e2aee3c3aa8bfeea327aa9643697} 
+String TMetabolite::\+get\+Short\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el nombre corto del metabolito. 
+
+\begin{DoxyReturn}{Devuelve}
+String nombre corto del metabolito 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_metabolite_a7818e2aee3c3aa8bfeea327aa9643697_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_metabolite_a58d494d3ae4d68f0c28edab44306be7b}\index{TMetabolite@{TMetabolite}!setInitialValue@{setInitialValue}}
+\index{setInitialValue@{setInitialValue}!TMetabolite@{TMetabolite}}
+\doxyparagraph{\texorpdfstring{setInitialValue()}{setInitialValue()}}
+{\footnotesize\ttfamily \label{class_t_metabolite_a58d494d3ae4d68f0c28edab44306be7b} 
+void TMetabolite::\+set\+Initial\+Value (\begin{DoxyParamCaption}\item[{double}]{initial\+Concentration}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza la concentracion inicial del metabolito. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em double} & concentracion inicial del metabolito \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_metabolite_a410a22efe9cfe469e19d76c1b1a15785}\index{TMetabolite@{TMetabolite}!StrToFloatDot@{StrToFloatDot}}
+\index{StrToFloatDot@{StrToFloatDot}!TMetabolite@{TMetabolite}}
+\doxyparagraph{\texorpdfstring{StrToFloatDot()}{StrToFloatDot()}}
+{\footnotesize\ttfamily \label{class_t_metabolite_a410a22efe9cfe469e19d76c1b1a15785} 
+double TMetabolite::\+\+Str\+To\+Float\+Dot (\begin{DoxyParamCaption}\item[{String}]{texto}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo que convierte un string en double con formato decimal \textquotesingle{}.\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em texto} & palabra que representa un numero con decimales con \textquotesingle{}.\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+double numero que se devuelve manteniendo el formato decimal \textquotesingle{}.\textquotesingle{} 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_metabolite_a410a22efe9cfe469e19d76c1b1a15785_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_metabolite_a35589d944d3ac0ad647aa42412c0c3f6}\index{TMetabolite@{TMetabolite}!toString@{toString}}
+\index{toString@{toString}!TMetabolite@{TMetabolite}}
+\doxyparagraph{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_t_metabolite_a35589d944d3ac0ad647aa42412c0c3f6} 
+void TMetabolite::\+to\+String (\begin{DoxyParamCaption}\item[{TMemo \texorpdfstring{$\ast$}{*}}]{pantalla\+Salida}{}\end{DoxyParamCaption}) const}
+
+
+
+Muestra el metabolito guardado y sus atributos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em pantalla\+Salida} & objeto de la interfaz donde se muestra \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_metabolite_a35589d944d3ac0ad647aa42412c0c3f6_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_t_metabolite_doc-variable-members}
+\Hypertarget{class_t_metabolite_doc-variable-members}
+\doxysubsubsection{Documentación de datos miembro}
+\Hypertarget{class_t_metabolite_a61ce37a945aa8ba71b85e0db211da584}\index{TMetabolite@{TMetabolite}!fullName@{fullName}}
+\index{fullName@{fullName}!TMetabolite@{TMetabolite}}
+\doxyparagraph{\texorpdfstring{fullName}{fullName}}
+{\footnotesize\ttfamily \label{class_t_metabolite_a61ce37a945aa8ba71b85e0db211da584} 
+String TMetabolite::\+full\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+Nombre largo del metabolito \Hypertarget{class_t_metabolite_a6608b5eb153ed1a096f4c1de5d2bcdaf}\index{TMetabolite@{TMetabolite}!initialValue@{initialValue}}
+\index{initialValue@{initialValue}!TMetabolite@{TMetabolite}}
+\doxyparagraph{\texorpdfstring{initialValue}{initialValue}}
+{\footnotesize\ttfamily \label{class_t_metabolite_a6608b5eb153ed1a096f4c1de5d2bcdaf} 
+double TMetabolite::\+initial\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+Concentracion inicial del metabolito \Hypertarget{class_t_metabolite_a489034c216ea6c68701f1a9e5d7197b5}\index{TMetabolite@{TMetabolite}!inputTemplate@{inputTemplate}}
+\index{inputTemplate@{inputTemplate}!TMetabolite@{TMetabolite}}
+\doxyparagraph{\texorpdfstring{inputTemplate}{inputTemplate}}
+{\footnotesize\ttfamily \label{class_t_metabolite_a489034c216ea6c68701f1a9e5d7197b5} 
+const String TMetabolite::\+input\+Template = "{}METABOLITE $<$nombre\+\_\+corto$>$ $<$nombre\+\_\+largo$>$ $<$concentracion\+\_\+inicial$>$"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Estructura de entrada de datos de un metabolito \Hypertarget{class_t_metabolite_ab5a0c08605d291182d37932bef2454fb}\index{TMetabolite@{TMetabolite}!shortName@{shortName}}
+\index{shortName@{shortName}!TMetabolite@{TMetabolite}}
+\doxyparagraph{\texorpdfstring{shortName}{shortName}}
+{\footnotesize\ttfamily \label{class_t_metabolite_ab5a0c08605d291182d37932bef2454fb} 
+String TMetabolite::\+short\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+Nombre corto del metabolito 
+
+La documentación de esta clase está generada de los siguientes archivos:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_metabolic_elements_8h}{Metabolic\+Elements.\+h}}\item 
+\doxymbox{\hyperlink{_metabolic_elements_8cpp}{Metabolic\+Elements.\+cpp}}\end{DoxyCompactItemize}

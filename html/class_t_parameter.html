@@ -1,0 +1,540 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prototipo Simulacion Rutas Metabolicas: Referencia de la clase TParameter</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Prototipo Simulacion Rutas Metabolicas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_t_parameter.html','','class_t_parameter-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase TParameter</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Clase para encapsular los parametros del modelo.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_metabolic_elements_8h_source.html">MetabolicElements.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboración de TParameter:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_parameter__coll__graph.png" border="0" usemap="#a_t_parameter_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_t_parameter_coll__map" id="a_t_parameter_coll__map">
+<area shape="rect" title="Clase para encapsular los parametros del modelo." alt="" coords="5,5,121,288"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a59aeefdc8f7cff79dae9f7f4329e5dfb" id="r_a59aeefdc8f7cff79dae9f7f4329e5dfb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a59aeefdc8f7cff79dae9f7f4329e5dfb">TParameter</a> (String p_shortName, String p_fullName, double p_value)</td></tr>
+<tr class="memdesc:a59aeefdc8f7cff79dae9f7f4329e5dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de <a class="el" href="class_t_parameter.html" title="Clase para encapsular los parametros del modelo.">TParameter</a>.  <br /></td></tr>
+<tr class="memitem:afcc4152125de596ee70335325e82f36d" id="r_afcc4152125de596ee70335325e82f36d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afcc4152125de596ee70335325e82f36d">TParameter</a> (String line)</td></tr>
+<tr class="memdesc:afcc4152125de596ee70335325e82f36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de <a class="el" href="class_t_parameter.html" title="Clase para encapsular los parametros del modelo.">TParameter</a>.  <br /></td></tr>
+<tr class="memitem:aefe7ca26e565731cbf1eabfae2a81cbe" id="r_aefe7ca26e565731cbf1eabfae2a81cbe"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#aefe7ca26e565731cbf1eabfae2a81cbe">getShortName</a> () const</td></tr>
+<tr class="memdesc:aefe7ca26e565731cbf1eabfae2a81cbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el nombre corto del parametro.  <br /></td></tr>
+<tr class="memitem:a8726adbd75ef1c27811e4ee9a4c702cf" id="r_a8726adbd75ef1c27811e4ee9a4c702cf"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a8726adbd75ef1c27811e4ee9a4c702cf">getFullName</a> () const</td></tr>
+<tr class="memdesc:a8726adbd75ef1c27811e4ee9a4c702cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el nombre largo del parametro.  <br /></td></tr>
+<tr class="memitem:a6f653341fc5f796833bf4e41045663c3" id="r_a6f653341fc5f796833bf4e41045663c3"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a6f653341fc5f796833bf4e41045663c3">getValue</a> () const</td></tr>
+<tr class="memdesc:a6f653341fc5f796833bf4e41045663c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el valor del parametro.  <br /></td></tr>
+<tr class="memitem:a7d20f5f9dc92d41f5a4629ab65fc417e" id="r_a7d20f5f9dc92d41f5a4629ab65fc417e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7d20f5f9dc92d41f5a4629ab65fc417e">toString</a> (TMemo *pantallaSalida) const</td></tr>
+<tr class="memdesc:a7d20f5f9dc92d41f5a4629ab65fc417e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra el parametro guardado y sus atributos.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Atributos públicos estáticos</h2></td></tr>
+<tr class="memitem:a74d6422b270975b60172ab1d0a4ef956" id="r_a74d6422b270975b60172ab1d0a4ef956"><td class="memItemLeft">static const String&#160;</td><td class="memItemRight"><a class="el" href="#a74d6422b270975b60172ab1d0a4ef956">inputTemplate</a> = &quot;PARAMETER &lt;nombre_corto&gt; &lt;nombre_largo&gt; &lt;valor&gt;&quot;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:afe10a5affd1957eb780da584f15ecbe4" id="r_afe10a5affd1957eb780da584f15ecbe4"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#afe10a5affd1957eb780da584f15ecbe4">FloatToStrDot</a> (double value) const</td></tr>
+<tr class="memdesc:afe10a5affd1957eb780da584f15ecbe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que convierte un double en string con formato decimal '.'.  <br /></td></tr>
+<tr class="memitem:a7d2f0213501ac8315c03424ea829cbe0" id="r_a7d2f0213501ac8315c03424ea829cbe0"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a7d2f0213501ac8315c03424ea829cbe0">StrToFloatDot</a> (String texto) const</td></tr>
+<tr class="memdesc:a7d2f0213501ac8315c03424ea829cbe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que convierte un string en double con formato decimal '.'.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a4abd7ae77966c774b7e29249e6574aea" id="r_a4abd7ae77966c774b7e29249e6574aea"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a4abd7ae77966c774b7e29249e6574aea">shortName</a></td></tr>
+<tr class="memitem:a13184af4d6d1935d2de6ec6c64312595" id="r_a13184af4d6d1935d2de6ec6c64312595"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a13184af4d6d1935d2de6ec6c64312595">fullName</a></td></tr>
+<tr class="memitem:abb6db61af69b4b62ad7ac46b5a97ec31" id="r_abb6db61af69b4b62ad7ac46b5a97ec31"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#abb6db61af69b4b62ad7ac46b5a97ec31">value</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase para encapsular los parametros del modelo. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a59aeefdc8f7cff79dae9f7f4329e5dfb" name="a59aeefdc8f7cff79dae9f7f4329e5dfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59aeefdc8f7cff79dae9f7f4329e5dfb">&#9670;&#160;</a></span>TParameter() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TParameter::TParameter </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>p_shortName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>p_fullName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>p_value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de <a class="el" href="class_t_parameter.html" title="Clase para encapsular los parametros del modelo.">TParameter</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_shortName</td><td>nombre corto del parametro, tipo String </td></tr>
+    <tr><td class="paramname">p_fullName</td><td>nombre largo del parametro, tipo String </td></tr>
+    <tr><td class="paramname">p_value</td><td>valor del parametro, tipo double </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afcc4152125de596ee70335325e82f36d" name="afcc4152125de596ee70335325e82f36d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcc4152125de596ee70335325e82f36d">&#9670;&#160;</a></span>TParameter() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TParameter::TParameter </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>line</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de <a class="el" href="class_t_parameter.html" title="Clase para encapsular los parametros del modelo.">TParameter</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>linea del panel de entrada asociada a un parametro, comienza por PARAMETER </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_parameter_afcc4152125de596ee70335325e82f36d_cgraph.png" border="0" usemap="#aclass_t_parameter_afcc4152125de596ee70335325e82f36d_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_parameter_afcc4152125de596ee70335325e82f36d_cgraph" id="aclass_t_parameter_afcc4152125de596ee70335325e82f36d_cgraph">
+<area shape="rect" title="Constructor de TParameter." alt="" coords="5,5,171,32"/>
+<area shape="rect" href="class_t_parameter.html#a7d2f0213501ac8315c03424ea829cbe0" title="Metodo que convierte un string en double con formato decimal &#39;.&#39;." alt="" coords="219,5,397,32"/>
+<area shape="poly" title=" " alt="" coords="171,16,206,19,200,19,171,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="afe10a5affd1957eb780da584f15ecbe4" name="afe10a5affd1957eb780da584f15ecbe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe10a5affd1957eb780da584f15ecbe4">&#9670;&#160;</a></span>FloatToStrDot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TParameter::FloatToStrDot </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo que convierte un double en string con formato decimal '.'. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>numero con decimales con '.' </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>String palabra que se devuelve manteniendo el formato decimal '.' </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_parameter_afe10a5affd1957eb780da584f15ecbe4_icgraph.png" border="0" usemap="#aclass_t_parameter_afe10a5affd1957eb780da584f15ecbe4_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_parameter_afe10a5affd1957eb780da584f15ecbe4_icgraph" id="aclass_t_parameter_afe10a5affd1957eb780da584f15ecbe4_icgraph">
+<area shape="rect" title="Metodo que convierte un double en string con formato decimal &#39;.&#39;." alt="" coords="196,5,374,32"/>
+<area shape="rect" href="class_t_parameter.html#a7d20f5f9dc92d41f5a4629ab65fc417e" title="Muestra el parametro guardado y sus atributos." alt="" coords="5,5,148,32"/>
+<area shape="poly" title=" " alt="" coords="177,19,148,21,148,16,183,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8726adbd75ef1c27811e4ee9a4c702cf" name="a8726adbd75ef1c27811e4ee9a4c702cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8726adbd75ef1c27811e4ee9a4c702cf">&#9670;&#160;</a></span>getFullName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TParameter::getFullName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el nombre largo del parametro. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>String nombre largo del parametro </dd></dl>
+
+</div>
+</div>
+<a id="aefe7ca26e565731cbf1eabfae2a81cbe" name="aefe7ca26e565731cbf1eabfae2a81cbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefe7ca26e565731cbf1eabfae2a81cbe">&#9670;&#160;</a></span>getShortName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TParameter::getShortName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el nombre corto del parametro. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>String nombre corto del parametro </dd></dl>
+
+</div>
+</div>
+<a id="a6f653341fc5f796833bf4e41045663c3" name="a6f653341fc5f796833bf4e41045663c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f653341fc5f796833bf4e41045663c3">&#9670;&#160;</a></span>getValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TParameter::getValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el valor del parametro. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>double valor del parametro </dd></dl>
+
+</div>
+</div>
+<a id="a7d2f0213501ac8315c03424ea829cbe0" name="a7d2f0213501ac8315c03424ea829cbe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d2f0213501ac8315c03424ea829cbe0">&#9670;&#160;</a></span>StrToFloatDot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TParameter::StrToFloatDot </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>texto</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo que convierte un string en double con formato decimal '.'. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texto</td><td>palabra que representa un numero con decimales con '.' </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>double numero que se devuelve manteniendo el formato decimal '.' </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_parameter_a7d2f0213501ac8315c03424ea829cbe0_icgraph.png" border="0" usemap="#aclass_t_parameter_a7d2f0213501ac8315c03424ea829cbe0_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_parameter_a7d2f0213501ac8315c03424ea829cbe0_icgraph" id="aclass_t_parameter_a7d2f0213501ac8315c03424ea829cbe0_icgraph">
+<area shape="rect" title="Metodo que convierte un string en double con formato decimal &#39;.&#39;." alt="" coords="219,5,397,32"/>
+<area shape="rect" href="class_t_parameter.html#afcc4152125de596ee70335325e82f36d" title="Constructor de TParameter." alt="" coords="5,5,171,32"/>
+<area shape="poly" title=" " alt="" coords="200,19,171,21,171,16,206,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7d20f5f9dc92d41f5a4629ab65fc417e" name="a7d20f5f9dc92d41f5a4629ab65fc417e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d20f5f9dc92d41f5a4629ab65fc417e">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TParameter::toString </td>
+          <td>(</td>
+          <td class="paramtype">TMemo *</td>          <td class="paramname"><span class="paramname"><em>pantallaSalida</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra el parametro guardado y sus atributos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pantallaSalida</td><td>objeto de la interfaz donde se muestra </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_parameter_a7d20f5f9dc92d41f5a4629ab65fc417e_cgraph.png" border="0" usemap="#aclass_t_parameter_a7d20f5f9dc92d41f5a4629ab65fc417e_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_parameter_a7d20f5f9dc92d41f5a4629ab65fc417e_cgraph" id="aclass_t_parameter_a7d20f5f9dc92d41f5a4629ab65fc417e_cgraph">
+<area shape="rect" title="Muestra el parametro guardado y sus atributos." alt="" coords="5,5,148,32"/>
+<area shape="rect" href="class_t_parameter.html#afe10a5affd1957eb780da584f15ecbe4" title="Metodo que convierte un double en string con formato decimal &#39;.&#39;." alt="" coords="196,5,374,32"/>
+<area shape="poly" title=" " alt="" coords="148,16,183,19,177,19,148,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a13184af4d6d1935d2de6ec6c64312595" name="a13184af4d6d1935d2de6ec6c64312595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13184af4d6d1935d2de6ec6c64312595">&#9670;&#160;</a></span>fullName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TParameter::fullName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Nombre largo del parametro </p>
+
+</div>
+</div>
+<a id="a74d6422b270975b60172ab1d0a4ef956" name="a74d6422b270975b60172ab1d0a4ef956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d6422b270975b60172ab1d0a4ef956">&#9670;&#160;</a></span>inputTemplate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const String TParameter::inputTemplate = &quot;PARAMETER &lt;nombre_corto&gt; &lt;nombre_largo&gt; &lt;valor&gt;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Estructura de entrada de datos de un parametro </p>
+
+</div>
+</div>
+<a id="a4abd7ae77966c774b7e29249e6574aea" name="a4abd7ae77966c774b7e29249e6574aea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4abd7ae77966c774b7e29249e6574aea">&#9670;&#160;</a></span>shortName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TParameter::shortName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Nombre corto del parametro </p>
+
+</div>
+</div>
+<a id="abb6db61af69b4b62ad7ac46b5a97ec31" name="abb6db61af69b4b62ad7ac46b5a97ec31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb6db61af69b4b62ad7ac46b5a97ec31">&#9670;&#160;</a></span>value</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TParameter::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Valor del parametro </p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li><a class="el" href="_metabolic_elements_8h_source.html">MetabolicElements.h</a></li>
+<li><a class="el" href="_metabolic_elements_8cpp.html">MetabolicElements.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_t_parameter.html">TParameter</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

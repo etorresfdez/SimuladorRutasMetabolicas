@@ -1,0 +1,74 @@
+'''
+script de python para lanzar el solver de sistemas de ecuaciones diferenciales.
+
+INPUT: Formato del archivo de entrada
+    ecuaciones,- p[0]*x[0] + p[1]*x[1];- p[37]*x[5]*x[7] + p[38]*x[6]**2
+    X0,1;0.5;2
+    p,0.01;0.5;10
+    tini,0
+    tfin,100
+    ciclos,1000
+    method,RK4
+
+OUTPUT: Formato del archivo de salida
+    tiempo,x0,x1,x2,x3,x4,x5
+    0,1,2,13,45,2456,1234
+    1,1.5,2.3,13,48,24124,35234 
+    2,2.1,2.8,14,50,24000,36000
+
+'''
+
+import csv
+import sys
+import numpy as np
+from scipy.integrate import solve_ivp
+
+
+# 1. Lee variables de entrada
+datos = {}
+
+with open(sys.argv[1], newline="", encoding="utf-8") as f:
+    reader = csv.reader(f)
+    for clave, valor in reader:
+        datos[clave] = valor
+
+ecuaciones = [e.strip() for e in datos["ecuaciones"].split(";")]
+X0 = [float(x) for x in datos["X0"].split(";")]
+p = [float(x) for x in datos["p"].split(";")]
+
+tini = float(datos["tini"])
+tfin = float(datos["tfin"])
+ciclos = int(datos["ciclos"])
+method = datos["method"]
+
+# 2. Define el sistema de forma dinamica
+def sistema(t, x, p):
+    dxdt = np.zeros(len(x))
+    
+    safe_globals = {"__builtins__": {}, "np": np}
+    safe_locals = {"x": x, "p": p}
+
+    for i in range(len(x)):
+        dxdt[i] = eval(ecuaciones[i], safe_globals, safe_locals)
+
+    return dxdt
+
+# 3. Llama al solver de ecuaciones diferenciales de scipy
+t_eval = np.linspace(tini, tfin, ciclos)
+
+sol = solve_ivp(sistema, (tini, tfin), X0, 
+                args=(p,), method=method, t_eval=t_eval)
+
+
+# 4. Guarda los resultados y crea un archivo csv de salida
+with open(sys.argv[2], "w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+
+    # Cabecera
+    header = ["tiempo"] + [f"x{i}" for i in range(sol.y.shape[0])]
+    writer.writerow(header)
+
+    # Datos
+    for i in range(sol.t.size):
+        fila = [sol.t[i]] + sol.y[:, i].tolist()
+        writer.writerow(fila)

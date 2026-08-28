@@ -1,0 +1,33 @@
+<map id="TMechanism::getMechType" name="TMechanism::getMechType">
+<area shape="rect" id="Node000001" title="Devuelve el nombre del tipo de mecanismo." alt="" coords="554,261,736,288"/>
+<area shape="rect" id="Node000002" href="$class_t_hill_inhibidor_activador.html#ac8081966718290e0e320eb731f0083d4" title="Comprueba que se envian los parametros propios del mecanismo HillInhibidorActivador: [Vmax,..." alt="" coords="317,9,470,52"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="630,246,611,208,584,160,548,111,504,69,470,50,470,45,508,65,552,107,588,157,616,205,635,248"/>
+<area shape="rect" id="Node000004" href="$class_t_mass_action.html#ab938b358d430a859fe1ebda15c581320" title="Comprueba que se han enviado los parametros necesarios del mecanismo MassAction: [kd,..." alt="" coords="294,79,493,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="624,248,576,187,542,153,505,125,469,109,468,103,507,120,546,149,580,183,630,249"/>
+<area shape="rect" id="Node000006" href="$class_t_m_m_bi_bi_inhibidor.html#a8301f2c15620dba9545389641e372c89" title="Comprueba que se envian los parametros propios del mecanismo MMBiBiInhibidor: [Vmax,..." alt="" coords="281,135,506,161"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="615,251,566,214,505,177,471,165,470,159,507,172,570,209,620,251"/>
+<area shape="rect" id="Node000008" href="$class_t_m_m_bi_sec_aleatorio.html#a4ab89662512bf0e1709d2e2ad8c779c2" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMBiSecAleatorio: [Vmax,..." alt="" coords="321,187,466,229"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="574,257,466,230,466,224,580,256"/>
+<area shape="rect" id="Node000010" href="$class_t_m_m_uni_bi_inhibidor.html#a97da04356397596583848a82396c423e" title="Comprueba que se han enviado los parametros necesarios para el mecanismo MMUniBiInhibidor: [Vmax,..." alt="" coords="323,253,464,296"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="536,275,464,277,463,272,541,274"/>
+<area shape="rect" id="Node000012" href="$class_t_m_m_uni_inhibidor.html#ad8c3741daad20e9a2ce69b95bcd486aa" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMUniInhibidor: [Vmax,..." alt="" coords="283,320,504,347"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="570,293,507,311,457,322,456,317,505,305,575,291"/>
+<area shape="rect" id="Node000014" href="$class_t_form1.html#a592eff540cbc9ff77e21d833059b9a39" title="Al seleccionar una reaccion de la lista de reacciones cargadas, muestra la ecuacion cinetica generada..." alt="" coords="286,371,501,413"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="615,296,565,331,507,361,477,373,476,368,505,356,562,326,610,298"/>
+<area shape="rect" id="Node000015" href="$class_t_form1.html#a4054d1c2b1745192b6b1cff6fee0bcd5" title="Accion que se realiza al darle al boton &#39;Guardar ecuaciones y sistema&#39; del menu. Genera un archivo tx..." alt="" coords="299,437,488,480"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="629,300,579,365,545,399,507,428,485,439,483,434,505,423,542,395,575,362,624,302"/>
+<area shape="rect" id="Node000016" href="$class_t_mechanism.html#ad2054d3b15fe158f94e381fe547f9e55" title="Muestra el mecanismo guardado y sus atributos." alt="" coords="319,504,468,531"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="636,301,619,346,592,398,555,450,532,474,507,494,469,512,468,507,505,490,529,470,550,447,587,395,614,344,632,304"/>
+<area shape="rect" id="Node000003" href="$class_t_hill_inhibidor_activador.html#aa500c80dc4d5647b281f67063009228a" title="Constructor de la clase THillInhibidorActivador. Llama al constructor del padre, rellena los atributo..." alt="" coords="39,5,199,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="299,31,201,30,198,25,303,28"/>
+<area shape="rect" id="Node000005" href="$class_t_mass_action.html#a74563e7583262c8adf5b9ed1f9bbca63" title="Constructor de la clase TMassAction. Llama al constructor del padre, rellena los atributos propios y ..." alt="" coords="27,72,211,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="276,91,212,90,210,85,280,88"/>
+<area shape="rect" id="Node000007" href="$class_t_m_m_bi_bi_inhibidor.html#afd7921f14f90bb419de8d1dd53d27e13" title="Constructor de la clase TMMBiBiInhibidor. Llama al constructor del padre, rellena los atributos propi..." alt="" coords="26,123,212,165"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="263,148,214,148,211,143,268,145"/>
+<area shape="rect" id="Node000009" href="$class_t_m_m_bi_sec_aleatorio.html#ad4e65c49ef3a64b8162e1aab18289d3d" title="Constructor de la clase TMMBiSecAleatorio. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="46,189,192,232"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="303,211,193,212,191,207,307,207"/>
+<area shape="rect" id="Node000011" href="$class_t_m_m_uni_bi_inhibidor.html#a27f1f61c93dc9400e2111c7e84bfb813" title="Constructor de la clase TMMUniBiInhibidor. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="49,256,189,299"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="305,277,190,279,189,274,310,274"/>
+<area shape="rect" id="Node000013" href="$class_t_m_m_uni_inhibidor.html#aacd95490240c218832d2a12e5a6b33a2" title="Constructor de la clase TMMUniInhibidor. Llama al constructor del padre, rellena los atributos propio..." alt="" coords="5,323,233,349"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="265,336,234,337,232,332,269,334"/>
+</map>

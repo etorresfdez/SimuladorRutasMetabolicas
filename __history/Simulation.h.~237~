@@ -1,0 +1,240 @@
+//---------------------------------------------------------------------------
+//
+// Libreria para encapsular el proceso de simulacion de una ruta metabolica
+// Contiene las clases:
+// 	- TSimulation
+//
+// Archivo .h --> Declaraciones
+//
+//---------------------------------------------------------------------------
+
+#include <vector>
+#include <map>
+#include <Vcl.Grids.hpp>       // uso TStringGrid
+#include <System.IOUtils.hpp>  // uso TFile
+#include <Vcl.Edge.hpp>        // uso TEdgeBrowser
+
+
+/**
+ *  @brief enum NumericMethod. Enumerado para representar los distintos metodos numericos considerados.
+ */
+enum NumericMethod
+{
+	RK45,           /**< Metodo de Runge-Kutta explicito. */
+	Radau, 			/**< Metodo de Runge-Kutta implicito. */
+	BDF,            /**< Metodo implicito multipaso. */
+	LSODA           /**< Metodo Adams/BDF con cambio automatico de metodo segun la rigidez del problema. */
+};
+
+/**
+ *  @brief struct TInstantResult. Estructura que almacena, para cada tiempo de la simulacion, las concentraciones de todos los metabolitos guardados.
+ */
+struct TInstantResult
+{
+	double tiempo;                /**< Instante de tiempo de la simulacion */
+	std::vector<double> valores;  /**< Vector de concentraciones de los metabolitos en ese instante */
+};
+
+
+/**
+ *  @class TSimulation
+ *  @brief Clase para encapsular el proceso de simulacion.
+ */
+class TSimulation
+{
+	private: // private members
+
+		int tini;       								/**< Tiempo inicial de la simulacion */
+		int tfin;       								/**< Tiempo final de la simulacion */
+		int ciclos;    									/**< Numero de pasos de la simulacion */
+		NumericMethod metodo;   						/**< Metodo numerico empleado en la simulacion */
+
+		std::vector<String> concNames;     				/**< Vector con los nombres de los metabolitos a simular su concentracion */
+		std::vector<double> concIni;    				/**< Vector con las concentraciones iniciales de los metabolitos */
+		std::vector<String> ecuaciones; 				/**< Vector con las ecuaciones de cada metabolito */
+		std::vector<double> params;     				/**< Vector con todos los parametros necesarios */
+
+		std::map<String, NumericMethod> numericMethods; /**< Mapa con los metodos numericos */
+
+		std::vector<TInstantResult> resultados; 		/**< Vector de resultados. Contiene las concentraciones de todos los metabolitos para cada tiempo. */
+        double tiempoEmpleado;                 			/**< Tiempo empleado en lanzar la simulacion */
+
+
+
+		/**
+		 *  @brief Metodo que convierte un double con formato decimal ',' en un string
+		 *  con formato decimal '.'
+		 *  @param value numero con decimales con ','
+         *  @return String valor que se devuelve, representa el numero con decimales con '.'
+		 */
+		String FloatToStrDot(double value);
+
+    public:
+
+		/**
+		 *  @brief Constructor de TSimulation. Tiene valores por defecto.
+		 *  @param p_tini Tiempo inicial de la simulacion, tipo int
+		 *  @param p_tfin Tiempo final de la simulacion, tipo int
+		 *  @param p_ciclos Numero de pasos de la simulacion, tipo int
+		 *  @param p_metodo Metodo mnumerico empleado en la simulacion, tipo NumericMethod
+		 */
+		TSimulation(int p_tini= 0, int p_tfin= 10, int p_ciclos= 50, NumericMethod p_metodo= Radau);
+
+		/**
+		 *  @brief Rellena el objeto comboEleccionMeotodo con la lista de metodos numericos disponibles.
+		 *  @param comboMetodos objeto TComboBox que contendra un desplegable con los metodos numericos disponibles.
+		 */
+		void fillNumericMethodComboBox(TComboBox* comboMetodos);
+
+
+		/**
+		 *  @brief Efectua la conversion de string a enumerador NumericMethod usando el mapa numericMethods
+		 *  @param metodo en formato String
+         *  @return metodo en formato NumericMethod
+		 */
+		NumericMethod getNumericMethodFromString(String metodo);
+
+		/**
+		 *  @brief Dado un enumerado sobre el metodo numerico, lo devuelve en formato String.
+		 *  @param metodoEnum enumerado que representa un metodo numerico.
+		 *  @return String metodo numerico correspondiente en formato String.
+		 */
+		String getMethodString(NumericMethod metodoEnum);
+
+		/**
+		 *  @brief Dado un indice, devuelve el nombre del metabolito que ocupa esa posicion en el vector de concNames.
+		 *  @param i indice de tipo int.
+         *  @return String nombre del metabolito que se devuelve.
+		 */
+		String getNameMetabolite(int i);
+
+		/**
+		 *  @brief Devuelve los datos del instante 'i' de la simulacion.
+		 *  @param i instante de la simulacion.
+		 *  @return objeto de tipo TInstantResult que contiene el instante temporal y los valores de las concentraciones en ese instante.
+		 */
+		TInstantResult getInstanteSimulacion(int i);
+
+		/**
+		 *  @brief Devuelve los ciclos de la simulacion. Corresponde con el total de instantes de simulacion generados.
+         *  @return entero con el numero de ciclos.
+		 */
+		int getCiclos();
+
+		/**
+		 *  @brief Devuelve true si el atributo 'resultados' esta vacio, false en caso contrario.
+         *  @return bool
+		 */
+		bool resultadosIsEmpty();
+
+
+		/**
+		 *  @brief Cambia el atributo tini de la clase TSimulation. Si no es un valor >= 0 lanza una excepcion.
+		 *  @param ini tiempo inicial que se establece para la simulacion, formato int.
+		 */
+		void setInitialTime(int ini);
+
+		/**
+		 *  @brief Cambia el atributo tfin de la clase TSimulation. Si no es un valor positivo y mayor que tini, lanza una excepcion.
+		 *  @param fin tiempo final que se establece para la simulacion, formato int.
+		 */
+		void setFinalTime(int fin);
+
+        /**
+		 *  @brief Cambia el atributo ciclos de la clase TSimulation. Si no es un valor positivo lanza una excepcion.
+		 *  @param cicles ciclos en los que se mide la simulacion, formato int.
+		 */
+		void setCicles(int cicles);
+
+		/**
+		 *  @brief Actualiza el tiempo empleado en la simulacion.
+         *  @param time tiempo empleado en realizar la simulacion, tipo double.
+		 */
+		void setTiempoEmpleado(double time);
+
+        /**
+		 *  @brief Cambia el atributo metodo de la clase TSimulation.
+		 *  @param method metodo numerico que se establece para la simulacion, formato NumericMethod.
+		 */
+		void setNumericMethod(NumericMethod method);
+
+		/**
+		 *  @brief Cambia el atributo concNames de la clase TSimulation.
+		 *  @param c vector con los nombres de los metabolitos de los que se va a estudiar la evolucion de su concentracion.
+		 */
+		void setConcenNames(const std::vector<String>& c);
+
+		/**
+		 *  @brief Cambia el atributo concIni de la clase TSimulation.
+		 *  @param ini vector con las concentraciones iniciales de los metabolitos que se estudiar.
+		 */
+		void setInitialConcen(const std::vector<double>& ini);
+
+        /**
+		 *  @brief Cambia el atributo ecuaciones de la clase TSimulation.
+		 *  @param equations vector con las EDOs en formato python para cada metabolito.
+		 */
+		void setEquations(const std::vector<String>& equations);
+
+        /**
+		 *  @brief Cambia el atributo params de la clase TSimulation.
+		 *  @param p vector con los parametros del modelo que aparecen en las ecuaciones.
+		 */
+		void setParameters(const std::vector<double>& p);
+
+
+
+		/**
+		 *  @brief Lanza la simulacion: crea archivo de entrada de datos para el python y lo ejecuta.
+		 *  Modifica el atributo privado de 'resultados' con los datos obtenidos.
+		 *  @param progressBar barra de carga para visualizar el avance de la simulacion.
+		 */
+		void runSimulation(TProgressBar *progressBar);
+
+		/**
+		 *  @brief Ejecuta un comando a traves de la powershell de window.
+         *  @param comando string con el comando a ejecutar.
+		 */
+		void ejecutarComando(String comando);
+
+		/**
+		 *  @brief Borra los ficheros anteriores de 'input.csv', 'output.csv' y 'grafico.png'.
+		 */
+		void borrarArchivosAntiguos();
+
+		/**
+		 *  @brief Crea un archivo csv que sirve de entrada para el python que realiza la resolucion numerica del sistema.
+		 *
+		 *  En concreto, crea el archivo 'input.csv' en la ruta de ejecucion de la aplicacion, que contiene:
+		 *  - las ecuaciones para la variacion de la concentracion de cada metabolito (ecuaciones)
+		 *  - las concentraciones iniciales de cada metabolito (concIni)
+         *  - los nombres cortos de los metabolitos (concNames)
+		 *  - todos los parametros implicados (params)
+		 *  - tiempo inicial (tini)
+		 *  - tiempo final (tfin)
+		 *  - ciclos (ciclos)
+		 *  - metodo numerico a emplear (metodo)
+		 */
+		void BuildInputCSV();
+
+        /**
+		 *  @brief Lee el archivo 'output.csv' generado por CallPython()
+		 *  y actualiza el contenido del atributo 'resultados'.
+		 */
+		void ReadOutputCSV();
+
+		/**
+		 *  @brief Parte del contenido del atributo 'resultados' y rellena la tabla que se pasa como parametro.
+		 *  En cada fila, para cada instante de tiempo, se muestra el valor de las concentraciones de los metabolitos obtenidas.
+		 *  @param Grid puntero a la tabla donde se cargan los datos para que el usuario lo vea en la interfaz.
+		 */
+		void createTableResults(TStringGrid *Grid);
+
+		/**
+		 *  @brief Exporta los resultados de la simulacion en un archivo csv.
+         *  @param filePath ruta donde se guarda el archivo 'simulacionTabla.csv'
+		 */
+		void exportResultsToCSV(const String &filePath);
+};
+
+

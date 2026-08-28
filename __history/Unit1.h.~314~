@@ -1,0 +1,378 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <System.IOUtils.hpp>
+#include <System.Diagnostics.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.Menus.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Dialogs.hpp>
+#include <Vcl.ExtDlgs.hpp>
+#include <Vcl.Imaging.pngimage.hpp>
+#include <Vcl.Buttons.hpp>
+#include <Vcl.Samples.Spin.hpp>
+#include <Vcl.Grids.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <Vcl.OleCtrls.hpp>
+#include <SHDocVw.hpp>
+#include <ShellAPI.h>
+
+#include "MetabolicElements.h"
+#include "Simulation.h"
+#include "Unit2.h"
+
+
+//---------------------------------------------------------------------------
+/**
+ *  @class TForm1
+ *  @brief Es la ventana principal de la aplicacion y la encargada de la interfaz grafica de usuario.
+ *
+ *  Contiene los componentes visuales (menu, botones, paneles, cuadros de texto,
+ *  etiquetas, cuadros de dialogo...) y los metodos que gestionan los eventos
+ *  generados por el usuario.
+ */
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+
+	// Main Menu
+	TMainMenu *MainMenu;
+	TMenuItem *Archivo;
+	TMenuItem *SubirArchivo;
+	TMenuItem *NuevoArchivo;
+	TMenuItem *GuardarArchivo;
+	TMenuItem *Resultados;
+	TMenuItem *CargarEjemplo;
+	TMenuItem *GuardarTabla;
+	TMenuItem *GuardarGrafica;
+	TMenuItem *GuardarEcuaciones;
+	TMenuItem *Ayuda;
+	TMenuItem *ManualUsuario;
+	TMenuItem *AcercaDe;
+
+	// 1. Entrada de datos
+	TPanel *PanelEntradaDatos;
+	TPanel *InsertarMecanismo;
+	TPanel *MostrarEcReaccion;
+	TLabel *LabelEntradaDatos;
+	TLabel *LabelMecanismo;
+	TLabel *LabelMostrarEcCinetica;
+	TMemo *MemoTextoEntrada;
+	TMemo *MemoSalidaValidacion;
+	TGridPanel *GridBotonesEntrada;
+	TButton *BtnMetabolito;
+	TButton *BtnParametro;
+	TButton *BtnReaccion;
+	TButton *BtnValidarDatos;
+	TButton *BtnMostrarSistema;
+	TBitBtn *infoMeta;
+	TBitBtn *infoParam;
+	TBitBtn *infoReac;
+	TBitBtn *infoMec;
+    TComboBox *ComboInsertarMecanismo;
+	TComboBox *ComboMostrarReaccion;
+	TSaveTextFileDialog *SaveTextFileDialog;
+	TOpenDialog *DialogSubirArchivo;
+	TTaskDialog *DialogIntroducirDatos;
+	TTaskDialog *DialogNuevoPanelEntrada;
+	TTaskDialog *DialogPrimeroValida;
+	TTaskDialog *DialogMetabolito;
+	TTaskDialog *DialogParametro;
+	TTaskDialog *DialogReaccion;
+	TTaskDialog *DialogMecanismo;
+	TSplitter *Splitter1;
+
+
+	// 2. Simulacion
+	TPanel *PanelSimulacion;
+	TPanel *PanelEleccionMetodo;
+	TLabel *LabelSimulacion;
+	TLabel *LabelEleccionMetodo;
+	TLabel *LabelTiempoInicial;
+	TLabel *LabelTiempoFinal;
+	TLabel *LabelCiclos;
+	TGridPanel *GridBotonesSimulacion;
+	TComboBox *ComboEleccionMetodo;
+	TSpinEdit *SpinTiempoInicial;
+	TSpinEdit *SpinTiempoFinal;
+	TSpinEdit *SpinCiclos;
+	TBitBtn *infoMetodo;
+	TButton *BtnLanzarSimulacion;
+
+    // 3. Salida Datos
+	TPanel *PanelSalidaDatos;
+	TLabel *LabelSalida;
+	TMemo *MemoSalidaSimTexto;
+	TTaskDialog *DialogMetodo;
+	TTaskDialog *DialogNoGrafica;
+	TTaskDialog *DialogNoTabla;
+    TTaskDialog *DialogManualUsuario;
+	TTaskDialog *DialogAcercaDe;
+    TSaveTextFileDialog *SaveTablaSimulacion;
+	TSaveTextFileDialog *SaveGraficaSimulacion;
+	TSaveTextFileDialog *SaveEcuaciones;
+	TPageControl *PageControlSalida;
+	TTabSheet *Tabla;
+	TStringGrid *StringGrid;
+	TTabSheet *Grafica;
+	TImage *ImageGrafica;
+
+
+	/**
+	 *  @brief Adapta el tamanio de los paneles que contiene la interfaz al cambio de tamanio de la ventana.
+	 *  @param Sender objeto de la interfaz que representa la ventana principal.
+	 */
+	void __fastcall FormResize(TObject *Sender);
+
+
+	/**
+	 *  @brief Accion que se genera al clicar sobre el boton Archivo/Subir del menu.
+	 *  Abre cuadro de dialogo para subir un archivo del ordenador.
+	 *  @param Sender objeto SubirArchivo de tipo TMenuItem.
+	 */
+	void __fastcall SubirArchivoClick(TObject *Sender);
+
+    /**
+	 *  @brief Accion que se genera al clicar sobre el boton Archivo/Guardar del menu.
+	 *  Abre cuadro de dialogo para guardar el panel de entrada actual como archivo txt en el ordenador.
+	 *  Solo permite formato txt. Se elige el nombre del archivo y la ruta donde se guarda.
+	 *  @param Sender objeto GuardarArchivo de tipo TMenuItem.
+	 */
+	void __fastcall GuardarArchivoClick(TObject *Sender);
+
+    /**
+	 *  @brief Accion que se genera al clicar sobre el boton Archivo/Nuevo del menu.
+	 *  Abre cuadro de dialogo para limpiar el panel de datos de entrada.
+	 *  Da opciones para borrarlo ("Aceptar") o "Cancelar".
+	 *  @param Sender objeto NuevoArchivo de tipo TMenuItem.
+	 */
+	void __fastcall NuevoArchivoClick(TObject *Sender);
+
+	/**
+	 *  @brief Accion que se genera al clicar sobre el boton Archivo/Cargar ejemplo del menu.
+	 *  Carga un archivo de ejemplo en la Entrada de Datos.
+	 *  @param Sender boton CargarEjemplo de tipo TMenuItem.
+	 */
+	void __fastcall CargarEjemploClick(TObject *Sender);
+
+	/**
+	 *  @brief Accion que se realiza al darle al boton 'Guardar tabla' del menu.
+	 *  Guarda la tabla generada en la simulacion actual en la ruta especificada por el usuario. En formato txt con los datos separados por ';'.
+	 *  @param Sender boton GuardarTabla de tipo TMenuItem.
+	 */
+	void __fastcall GuardarTablaClick(TObject *Sender);
+
+	/**
+	 *  @brief Accion que se realiza al darle al boton 'Guardar grafica' del menu.
+	 *  Guarda la grafica generada en la simulacion actual en la ruta especificada por el usuario. En formato png.
+	 *  @param Sender boton GuardarGrafica de tipo TMenuItem.
+	 */
+	void __fastcall GuardarGraficaClick(TObject *Sender);
+
+	/**
+	 *  @brief Accion que se realiza al darle al boton 'Guardar ecuaciones y sistema' del menu.
+	 *  Genera un archivo txt con las ecuaciones cineticas de cada reaccion introducida.
+	 *  Tambien aniade el sistema de ecuaciones empleado para la simulacion.
+	 *  @param Sender boton GuardarEcuaciones de tipo TMenuItem.
+	 */
+	void __fastcall GuardarEcuacionesClick(TObject *Sender);
+
+    /**
+	 *  @brief Accion que se realiza al darle al boton 'Manual de usuario' del menu.
+	 *  Muestra un cuadro de dialogo en el que aparece una breve descripcion de la aplicacion y cual es el
+	 *  flujo principal de interaccion del usuario con la interfaz.
+	 *  @param Sender boton ManualUsuario de tipo TMenuItem.
+	 */
+	void __fastcall ManualUsuarioClick(TObject *Sender);
+
+    /**
+	 *  @brief Accion que se realiza al darle al boton 'Acerca de' del menu.
+	 *  Muestra un cuadro de dialogo con una breve explicacion sobre la herramienta que se ha usado
+	 *  para implementar la aplicacion, indicando la autora, el año de creacion y la version.
+	 *  @param Sender boton AcercaDe de tipo TMenuItem.
+	 */
+	void __fastcall AcercaDeClick(TObject *Sender);
+
+
+
+    /**
+	 *  @brief Actualiza las variables bandera cuando se modifica el TMemo de entrada de datos.
+	 *  En concreto, pone a false 'datosValidados' y 'entradaVacia'.
+	 *  @param Sender objeto GuardarTabla de tipo TMenuItem.
+	 */
+	void __fastcall MemoTextoEntradaChange(TObject *Sender);
+
+	/**
+	 *  @brief Accion que se genera al clicar sobre el boton ValidaDatos.
+	 *  Valida el texto de entrada proporcionado.
+	 *  Muestra los errores en el objeto MemoSalidaValidacion.
+	 *  @param Sender boton ValidarDatos.
+	 */
+	void __fastcall BtnValidarDatosClick(TObject *Sender);
+
+    /**
+	 *  @brief Accion que se genera al clicar sobre el boton MostrarSistemaEcuaciones.
+	 *  Muestra el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion
+	 *  representa la variacion de concentracion de un metabolito. Hay tantas ecuaciones
+	 *  como metabolitos registrados en el sistema. Escribe en MemoSalidaValidacion.
+	 *  @param Sender boton MostrarSistema.
+	 */
+	void __fastcall BtnMostrarSistemaClick(TObject *Sender);
+
+
+	/**
+	 *  @brief Boton para obtener informacion sobre como introducir un Metabolito en el modelo.
+	 *  @param Sender boton info del Metabolito.
+	 */
+	void __fastcall infoMetaClick(TObject *Sender);
+
+    /**
+	 *  @brief Boton para obtener informacion sobre como introducir un Parametro en el modelo.
+	 *  @param Sender boton info del Parametro.
+	 */
+	void __fastcall infoParamClick(TObject *Sender);
+
+	/**
+	 *  @brief Boton para obtener informacion sobre como introducir un Mecanismo en el modelo.
+	 *  @param Sender boton info del Mecanismo.
+	 */
+	void __fastcall infoMecClick(TObject *Sender);
+
+    /**
+	 *  @brief Boton para obtener informacion sobre como introducir una Reaccion en el modelo.
+	 *  @param Sender boton info de la Reaccion.
+	 */
+	void __fastcall infoReacClick(TObject *Sender);
+
+	/**
+	 *  @brief Boton para obtener informacion sobre los tipos de metodos numericos disponibles
+	 *  para resolver el sistema de ecuaciones generado a partir de los datos de entrada.
+     *  @param Sender boton info del Metodo numerico.
+	 */
+	void __fastcall infoMetodoClick(TObject *Sender);
+
+	/**
+	 *  @brief Escribe en el panel de entrada de datos la plantilla para introducir un Metabolito.
+	 *  Con los campos necesarios para ello separados por tabuladores.
+	 *  @param Sender boton Metabolito.
+	 */
+	void __fastcall BtnMetabolitoClick(TObject *Sender);
+
+    /**
+	 *  @brief Escribe en el panel de entrada de datos la plantilla para introducir un Parametro.
+	 *  Con los campos necesarios para ello separados por tabuladores.
+	 *  @param Sender boton Parametro.
+	 */
+	void __fastcall BtnParametroClick(TObject *Sender);
+
+    /**
+	 *  @brief Escribe en el panel de entrada de datos la plantilla para introducir una Reaccion.
+	 *  Con los campos necesarios para ello separados por tabuladores.
+	 *  @param Sender boton Reaccion.
+	 */
+	void __fastcall BtnReaccionClick(TObject *Sender);
+
+    /**
+	 *  @brief Escribe en el panel de entrada de datos la plantilla para introducir un Mecanismo.
+	 *  Con los campos necesarios para ello separados por tabuladores.
+	 *  @param Sender boton Mecanismo.
+	 */
+	void __fastcall BtnMecanismoClick(TObject *Sender);
+
+
+
+	/**
+	 *  @brief Al seleccionar un mecanismo de la lista de mecanismos disponibles,
+	 *  muestra la plantilla del mecanismo elegido en el texto de entrada de datos.
+	 *  @param Sender objeto TComboBox con la lista de mecanismos.
+	 */
+	void __fastcall ComboInsertarMecanismoChange(TObject *Sender);
+
+	/**
+	 *  @brief Al seleccionar una reaccion de la lista de reacciones cargadas,
+	 *  muestra la ecuacion cinetica generada que describe su velocidad, tanto
+	 *  directa como inversa, en caso de que la reaccion sea bidireccional.
+	 *  @param Sender objeto TComboBox con la lista de reacciones cargadas.
+	 */
+	void __fastcall ComboMostrarReaccionChange(TObject *Sender);
+
+
+	/**
+	 *  @brief Accion que se genera al clicar sobre el boton Lanzar Simulacion.
+	 *  Carga el sistema de ecuaciones del modelo y lanza un python para resolverlo
+	 *  con el metodo numerico escogido. Con ello, se simula la variacion de la
+	 *  concentracion de los metabolitos implicados durante en el rango de tiempo
+	 *  establecido. Al terminar, muestra una grafica con la evolucion de la
+	 *  concentracion de los distintos metabolitos.
+	 *  @param Sender boton LanzarSimulacion.
+	 */
+	void __fastcall BtnLanzarSimulacionClick(TObject *Sender);
+
+	/**
+	 *  @brief Actualiza el formato de las celdas que pertenecen a la primera fila o primera columna.
+	 *  Establece un color distinto para ellas (amarillo claro) y con la letra en negrita.
+	 *  @param Sender objeto de tipo TStringGrid que representa la tabla
+	 *  @param ACol indice de columna
+	 *  @param ARow indice de fila
+	 *  @param Rect rectangulo de coordenadas que representa la celda concreta
+     *  @param State estados posibles de una celda: dgSelected, gdFocused, gdFixed
+	 */
+	void __fastcall StringGridDrawCell(TObject *Sender, System::LongInt ACol, System::LongInt ARow, TRect &Rect, TGridDrawState State);
+
+	/**
+	 *  @brief Amplia la imagen abriendo un nuevo formulario con la imagen maximizada.
+     *  @param Sender objeto de tipo TImage que representa la imagen
+	 */
+	void __fastcall ImageGraficaDblClick(TObject *Sender);
+
+	/**
+	 *  @brief Reestructura los objetos dentro de la interfaz cuando se mueve el splitter.
+	 *  @param Sender
+	 *  @param NewSize
+	 *  @param Accept
+	 */
+	void __fastcall Splitter1CanResize(TObject *Sender, int &NewSize, bool &Accept);
+
+	/**
+	 *  @brief Accion que se genera
+	 *  @param Sender objeto que ha generado el cierre del formulario, normalmente el propio TForm.
+	 */
+	void __fastcall Splitter1Moved(TObject *Sender);
+
+	/**
+	 *  @brief Accion que se activa al cerrar la ventana de la aplicacion.
+	 *  Borra los archivos generados en la simulacion.
+     *  @param Sender objeto que ha generado el cierre del formulario, normalmente el propio TForm.
+	 */
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+
+
+
+
+private:	// User declarations
+
+	TModel model;   			/**< Objeto TModel asociado al formulario abierto. */
+	TSimulation simulation;     /**< Objeto TSimulation asociado al formaulario abierto. */
+	bool entradaVacia;  		/**< Variable bandera para identificar si se introducen datos de entrada o no. */
+	bool datosValidados;    	/**< Variable bandera para identificar si los datos han sido validados o no. */
+
+public:		// User declarations
+
+	/**
+	 * @brief Constructor del formulario, ventana principal de la aplicacion.
+     * Inicializa el modelo a construir.
+	 */
+	__fastcall TForm1(TComponent* Owner);
+};
+
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+
+//---------------------------------------------------------------------------
+#endif

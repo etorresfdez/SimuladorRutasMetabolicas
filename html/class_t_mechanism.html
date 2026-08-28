@@ -1,0 +1,1460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prototipo Simulacion Rutas Metabolicas: Referencia de la clase TMechanism</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Prototipo Simulacion Rutas Metabolicas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_t_mechanism.html','','class_t_mechanism-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase TMechanism</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_metabolic_elements_8h_source.html">MetabolicElements.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de herencia de TMechanism</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism__inherit__graph.png" border="0" usemap="#a_t_mechanism_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_t_mechanism_inherit__map" id="a_t_mechanism_inherit__map">
+<area shape="rect" title="Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo." alt="" coords="472,5,634,459"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html" title="Representa un mecanismo que sigue la ecuacion de Hill con un inhibidor y un activador...." alt="" coords="5,517,168,693"/>
+<area shape="poly" title=" " alt="" coords="458,297,327,393,253,450,182,509,170,520,166,516,178,505,249,446,323,389,462,293"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html" title="Representa un mecanismo de tipo Michaelis&#45;Menten con dos sustratos, dos productos e inhibicion compet..." alt="" coords="192,507,354,704"/>
+<area shape="poly" title=" " alt="" coords="466,351,349,509,345,505,461,354"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html" title="Representa un mecanismo del tipo Michaelis&#45;Menten bisustrato secuencial aleatorio...." alt="" coords="379,507,541,704"/>
+<area shape="poly" title=" " alt="" coords="495,471,487,509,482,505,491,475"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html" title="Representa un mecanismo de tipo Michaelis&#45;Menten con un sustrato, dos productos e inhibicion competit..." alt="" coords="566,507,728,704"/>
+<area shape="poly" title=" " alt="" coords="615,471,625,508,620,506,613,476"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html" title="Representa un mecanismo del tipo Michaelis&#45;Menten unisustrato con inhibicion competitiva...." alt="" coords="752,507,914,704"/>
+<area shape="poly" title=" " alt="" coords="645,350,763,507,758,507,642,355"/>
+<area shape="rect" href="class_t_mass_action.html" title="Representa un mecanismo que sigue la ley de accion de masas. Hereda de TMechanism." alt="" coords="939,507,1101,704"/>
+<area shape="poly" title=" " alt="" coords="647,292,784,389,858,446,929,505,942,519,937,518,925,509,854,450,780,393,646,298"/>
+</map>
+</div>
+<div class="dynheader">
+Diagrama de colaboración de TMechanism:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism__coll__graph.png" border="0" usemap="#a_t_mechanism_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_t_mechanism_coll__map" id="a_t_mechanism_coll__map">
+<area shape="rect" title="Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo." alt="" coords="14,531,176,963"/>
+<area shape="rect" href="class_t_model.html" title="Clase para encapsular un modelo completo, que representa una ruta metabolica especifica." alt="" coords="5,5,184,459"/>
+<area shape="poly" title=" " alt="" coords="95,456,97,514,92,514,95,461"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:aa79afd1a85cdf4e07ac6fcdfb1577285" id="r_aa79afd1a85cdf4e07ac6fcdfb1577285"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa79afd1a85cdf4e07ac6fcdfb1577285">TMechanism</a> (String line, <a class="el" href="class_t_model.html">TModel</a> *p_model)</td></tr>
+<tr class="memdesc:aa79afd1a85cdf4e07ac6fcdfb1577285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de la clase <a class="el" href="class_t_mechanism.html" title="Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo.">TMechanism</a>.  <br /></td></tr>
+<tr class="memitem:a83135bad08af9d4416b57f7fe7c73493" id="r_a83135bad08af9d4416b57f7fe7c73493"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a83135bad08af9d4416b57f7fe7c73493">getMechType</a> () const</td></tr>
+<tr class="memdesc:a83135bad08af9d4416b57f7fe7c73493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el nombre del tipo de mecanismo.  <br /></td></tr>
+<tr class="memitem:a4645ac8a1913d474bded3ccb4f0b75ba" id="r_a4645ac8a1913d474bded3ccb4f0b75ba"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a4645ac8a1913d474bded3ccb4f0b75ba">getReactionName</a> () const</td></tr>
+<tr class="memdesc:a4645ac8a1913d474bded3ccb4f0b75ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el nombre de la reaccion asociada al mecanismo.  <br /></td></tr>
+<tr class="memitem:a952aaf0c9f7c5f2ab95e20ba55cdde4d" id="r_a952aaf0c9f7c5f2ab95e20ba55cdde4d"><td class="memItemLeft">const <a class="el" href="class_t_reaction.html">TReaction</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a952aaf0c9f7c5f2ab95e20ba55cdde4d">getReaction</a> () const</td></tr>
+<tr class="memdesc:a952aaf0c9f7c5f2ab95e20ba55cdde4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un puntero a la reaccion dada su nombre.  <br /></td></tr>
+<tr class="memitem:ad3082b5258b9df20f86bad71acd6bdfb" id="r_ad3082b5258b9df20f86bad71acd6bdfb"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ad3082b5258b9df20f86bad71acd6bdfb">getNMechParams</a> () const</td></tr>
+<tr class="memdesc:ad3082b5258b9df20f86bad71acd6bdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el numero de parametros del mecanismo guardados.  <br /></td></tr>
+<tr class="memitem:a2a8fa75aa79ff89533af07051e1a1007" id="r_a2a8fa75aa79ff89533af07051e1a1007"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a2a8fa75aa79ff89533af07051e1a1007">getMechParams</a> (int i) const</td></tr>
+<tr class="memdesc:a2a8fa75aa79ff89533af07051e1a1007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el parametro del mecanismo de la posicion 'i'.  <br /></td></tr>
+<tr class="memitem:ac46c760fddcd416499a39131141c9804" id="r_ac46c760fddcd416499a39131141c9804"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#ac46c760fddcd416499a39131141c9804">getDirectRatePython</a> () const</td></tr>
+<tr class="memdesc:ac46c760fddcd416499a39131141c9804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la ecuacion cinetica directa en forma de String. Formato para enviarla al solver de Python.  <br /></td></tr>
+<tr class="memitem:a478649141c58734f7a8032300c3e5598" id="r_a478649141c58734f7a8032300c3e5598"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a478649141c58734f7a8032300c3e5598">getInverseRatePython</a> () const</td></tr>
+<tr class="memdesc:a478649141c58734f7a8032300c3e5598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la ecuacion cinetica inversa en forma de String. Formato para enviarla al solver de Python.  <br /></td></tr>
+<tr class="memitem:a8050df05e581819d5e5be8dfbb85b63c" id="r_a8050df05e581819d5e5be8dfbb85b63c"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a8050df05e581819d5e5be8dfbb85b63c">getDirectRateShow</a> () const</td></tr>
+<tr class="memdesc:a8050df05e581819d5e5be8dfbb85b63c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la ecuacion cinetica directa en forma de String. Formato para mostrarla por pantalla.  <br /></td></tr>
+<tr class="memitem:ac25a2712fe94a70768c4af9f791ae051" id="r_ac25a2712fe94a70768c4af9f791ae051"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#ac25a2712fe94a70768c4af9f791ae051">getInverseRateShow</a> () const</td></tr>
+<tr class="memdesc:ac25a2712fe94a70768c4af9f791ae051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la ecuacion cinetica inversa en forma de String. Formato para mostrarla por pantalla.  <br /></td></tr>
+<tr class="memitem:ad2054d3b15fe158f94e381fe547f9e55" id="r_ad2054d3b15fe158f94e381fe547f9e55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad2054d3b15fe158f94e381fe547f9e55">toString</a> (TMemo *pantallaSalida) const</td></tr>
+<tr class="memdesc:ad2054d3b15fe158f94e381fe547f9e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra el mecanismo guardado y sus atributos.  <br /></td></tr>
+<tr class="memitem:a03ed06d4a482c878537e2211a3116ecd" id="r_a03ed06d4a482c878537e2211a3116ecd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a03ed06d4a482c878537e2211a3116ecd">CheckElements</a> () const</td></tr>
+<tr class="memdesc:a03ed06d4a482c878537e2211a3116ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo virtual para comprobar que los atributos cargados en el mecanismo son correctos. Depende del tipo de mecanismo. Lanza excepciones si no son correctos. Se comprueba que el numero de parametros es el adecuado, y que los metabolitos y parametros mencionados estan registrados en el modelo.  <br /></td></tr>
+<tr class="memitem:a1054dac3455a1c80abe423848c3fa2d2" id="r_a1054dac3455a1c80abe423848c3fa2d2"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1054dac3455a1c80abe423848c3fa2d2">setDirectRatePython</a> ()</td></tr>
+<tr class="memdesc:a1054dac3455a1c80abe423848c3fa2d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo virtual para crear la ecuacion cinetica directa en forma de String. Depende del tipo de mecanismo. Formato para enviarla al solver de python.  <br /></td></tr>
+<tr class="memitem:ae0f128e6260d19a7a921282215393710" id="r_ae0f128e6260d19a7a921282215393710"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ae0f128e6260d19a7a921282215393710">setInverseRatePython</a> ()</td></tr>
+<tr class="memdesc:ae0f128e6260d19a7a921282215393710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo virtual para crear la ecuacion cinetica inversa en forma de String. Depende del tipo de mecanismo. Si la reaccion es unidireccional, devuelve "". Formato para enviarla al solver de python.  <br /></td></tr>
+<tr class="memitem:afe8e95d9dff3a179b6768d2433e63391" id="r_afe8e95d9dff3a179b6768d2433e63391"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#afe8e95d9dff3a179b6768d2433e63391">setDirectRateShow</a> ()</td></tr>
+<tr class="memdesc:afe8e95d9dff3a179b6768d2433e63391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo virtual para crear la ecuacion cinetica directa en forma de String. Depende del tipo de mecanismo. Formato para mostrarla por pantalla.  <br /></td></tr>
+<tr class="memitem:ad9fbcdcf6de41d2ebb66597165f199d0" id="r_ad9fbcdcf6de41d2ebb66597165f199d0"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ad9fbcdcf6de41d2ebb66597165f199d0">setInverseRateShow</a> ()</td></tr>
+<tr class="memdesc:ad9fbcdcf6de41d2ebb66597165f199d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo virtual para crear la ecuacion cinetica inversa en forma de String. Depende del tipo de mecanismo. Si la reaccion es unidireccional, devuelve "". Formato para mostrarla por pantalla.  <br /></td></tr>
+<tr class="memitem:a7b180e216a8bac42a71e1606735309e9" id="r_a7b180e216a8bac42a71e1606735309e9"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a7b180e216a8bac42a71e1606735309e9">~TMechanism</a> ()=default</td></tr>
+<tr class="memdesc:a7b180e216a8bac42a71e1606735309e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor virtual de la clase, por defecto.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Atributos públicos estáticos</h2></td></tr>
+<tr class="memitem:a270dc08673ee7a8edaaf2b0ff07cba65" id="r_a270dc08673ee7a8edaaf2b0ff07cba65"><td class="memItemLeft">static const String&#160;</td><td class="memItemRight"><a class="el" href="#a270dc08673ee7a8edaaf2b0ff07cba65">inputTemplate</a> = &quot;MECHANISM &lt;tipo_mecanismo&gt; &lt;nombre_reaccion&gt; &lt;parametros_del_mecanismo&gt;&quot;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Atributos protegidos</h2></td></tr>
+<tr class="memitem:a05f8ce18a876e5f386b1bda9002824de" id="r_a05f8ce18a876e5f386b1bda9002824de"><td class="memItemLeft"><a class="el" href="_metabolic_elements_8h.html#a83d1676f1e139ec0cf5114097373e5c2">TMechanismType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a05f8ce18a876e5f386b1bda9002824de">mechanismType</a></td></tr>
+<tr class="memitem:a65c500e74d8cb41476d0b9baa75427d9" id="r_a65c500e74d8cb41476d0b9baa75427d9"><td class="memItemLeft"><a class="el" href="class_t_model.html">TModel</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a65c500e74d8cb41476d0b9baa75427d9">model</a></td></tr>
+<tr class="memitem:aac356d4e3fd675a4ff936b3f08d5364f" id="r_aac356d4e3fd675a4ff936b3f08d5364f"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#aac356d4e3fd675a4ff936b3f08d5364f">directRatePython</a></td></tr>
+<tr class="memitem:a1d358f94f9433284a57b196e0756cd4a" id="r_a1d358f94f9433284a57b196e0756cd4a"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a1d358f94f9433284a57b196e0756cd4a">directRateShow</a></td></tr>
+<tr class="memitem:a08b003740366b0e9625ebcdd00786608" id="r_a08b003740366b0e9625ebcdd00786608"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a08b003740366b0e9625ebcdd00786608">inverseRatePython</a></td></tr>
+<tr class="memitem:a84e928eb971c6e0b20acd4b099c8dc6f" id="r_a84e928eb971c6e0b20acd4b099c8dc6f"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a84e928eb971c6e0b20acd4b099c8dc6f">inverseRateShow</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a0fcbfb1e612a4ab0418e6addf9ac9c67" id="r_a0fcbfb1e612a4ab0418e6addf9ac9c67"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a0fcbfb1e612a4ab0418e6addf9ac9c67">reactionName</a></td></tr>
+<tr class="memitem:aa26346f3a054f199508c0eef665f8884" id="r_aa26346f3a054f199508c0eef665f8884"><td class="memItemLeft">std::vector&lt; String &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa26346f3a054f199508c0eef665f8884">mechParams</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="aa79afd1a85cdf4e07ac6fcdfb1577285" name="aa79afd1a85cdf4e07ac6fcdfb1577285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa79afd1a85cdf4e07ac6fcdfb1577285">&#9670;&#160;</a></span>TMechanism()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMechanism::TMechanism </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_t_model.html">TModel</a> *</td>          <td class="paramname"><span class="paramname"><em>p_model</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de la clase <a class="el" href="class_t_mechanism.html" title="Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo.">TMechanism</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>linea de entrada de datos que comienza por "MECHANISM" </td></tr>
+    <tr><td class="paramname">p_model</td><td>modelo asociado al mecanismo </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285_icgraph.png" border="0" usemap="#aclass_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285_icgraph" id="aclass_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285_icgraph">
+<area shape="rect" title="Constructor de la clase TMechanism." alt="" coords="281,164,460,191"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html#aa500c80dc4d5647b281f67063009228a" title="Constructor de la clase THillInhibidorActivador. Llama al constructor del padre, rellena los atributo..." alt="" coords="39,5,199,48"/>
+<area shape="poly" title=" " alt="" coords="344,153,295,108,264,83,231,62,200,48,199,43,234,58,268,79,299,104,349,152"/>
+<area shape="rect" href="class_t_mass_action.html#a74563e7583262c8adf5b9ed1f9bbca63" title="Constructor de la clase TMassAction. Llama al constructor del padre, rellena los atributos propios y ..." alt="" coords="27,72,211,99"/>
+<area shape="poly" title=" " alt="" coords="329,157,284,135,232,113,194,102,193,97,234,108,286,130,334,156"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#afd7921f14f90bb419de8d1dd53d27e13" title="Constructor de la clase TMMBiBiInhibidor. Llama al constructor del padre, rellena los atributos propi..." alt="" coords="26,123,212,165"/>
+<area shape="poly" title=" " alt="" coords="263,164,213,159,212,154,268,162"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#ad4e65c49ef3a64b8162e1aab18289d3d" title="Constructor de la clase TMMBiSecAleatorio. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="46,189,192,232"/>
+<area shape="poly" title=" " alt="" coords="263,193,193,204,191,198,268,190"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a27f1f61c93dc9400e2111c7e84bfb813" title="Constructor de la clase TMMUniBiInhibidor. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="49,256,189,299"/>
+<area shape="poly" title=" " alt="" coords="333,197,234,246,190,261,188,256,232,242,328,199"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#aacd95490240c218832d2a12e5a6b33a2" title="Constructor de la clase TMMUniInhibidor. Llama al constructor del padre, rellena los atributos propio..." alt="" coords="5,323,233,349"/>
+<area shape="poly" title=" " alt="" coords="352,202,303,260,270,289,234,313,206,325,205,320,231,308,267,285,299,256,348,205"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7b180e216a8bac42a71e1606735309e9" name="a7b180e216a8bac42a71e1606735309e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b180e216a8bac42a71e1606735309e9">&#9670;&#160;</a></span>~TMechanism()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual TMechanism::~TMechanism </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor virtual de la clase, por defecto. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a03ed06d4a482c878537e2211a3116ecd" name="a03ed06d4a482c878537e2211a3116ecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03ed06d4a482c878537e2211a3116ecd">&#9670;&#160;</a></span>CheckElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMechanism::CheckElements </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo virtual para comprobar que los atributos cargados en el mecanismo son correctos. Depende del tipo de mecanismo. Lanza excepciones si no son correctos. Se comprueba que el numero de parametros es el adecuado, y que los metabolitos y parametros mencionados estan registrados en el modelo. </p>
+
+<p>Reimplementado en <a class="el" href="class_t_hill_inhibidor_activador.html#ac8081966718290e0e320eb731f0083d4">THillInhibidorActivador</a>, <a class="el" href="class_t_mass_action.html#ab938b358d430a859fe1ebda15c581320">TMassAction</a>, <a class="el" href="class_t_m_m_bi_bi_inhibidor.html#a8301f2c15620dba9545389641e372c89">TMMBiBiInhibidor</a>, <a class="el" href="class_t_m_m_bi_sec_aleatorio.html#a4ab89662512bf0e1709d2e2ad8c779c2">TMMBiSecAleatorio</a>, <a class="el" href="class_t_m_m_uni_bi_inhibidor.html#a97da04356397596583848a82396c423e">TMMUniBiInhibidor</a> y <a class="el" href="class_t_m_m_uni_inhibidor.html#ad8c3741daad20e9a2ce69b95bcd486aa">TMMUniInhibidor</a>.</p>
+
+</div>
+</div>
+<a id="ac46c760fddcd416499a39131141c9804" name="ac46c760fddcd416499a39131141c9804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46c760fddcd416499a39131141c9804">&#9670;&#160;</a></span>getDirectRatePython()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMechanism::getDirectRatePython </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la ecuacion cinetica directa en forma de String. Formato para enviarla al solver de Python. </p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism_ac46c760fddcd416499a39131141c9804_icgraph.png" border="0" usemap="#aclass_t_mechanism_ac46c760fddcd416499a39131141c9804_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_mechanism_ac46c760fddcd416499a39131141c9804_icgraph" id="aclass_t_mechanism_ac46c760fddcd416499a39131141c9804_icgraph">
+<area shape="rect" title="Devuelve la ecuacion cinetica directa en forma de String. Formato para enviarla al solver de Python." alt="" coords="213,23,398,65"/>
+<area shape="rect" href="class_t_model.html#a45494635ca0fd3779ea5147b616462c7" title="Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la v..." alt="" coords="5,5,165,32"/>
+<area shape="poly" title=" " alt="" coords="195,32,165,31,165,25,200,31"/>
+<area shape="rect" href="class_t_mechanism.html#ad2054d3b15fe158f94e381fe547f9e55" title="Muestra el mecanismo guardado y sus atributos." alt="" coords="10,56,160,83"/>
+<area shape="poly" title=" " alt="" coords="194,57,160,63,160,58,200,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8050df05e581819d5e5be8dfbb85b63c" name="a8050df05e581819d5e5be8dfbb85b63c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8050df05e581819d5e5be8dfbb85b63c">&#9670;&#160;</a></span>getDirectRateShow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMechanism::getDirectRateShow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la ecuacion cinetica directa en forma de String. Formato para mostrarla por pantalla. </p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c_icgraph.png" border="0" usemap="#aclass_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c_icgraph" id="aclass_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c_icgraph">
+<area shape="rect" title="Devuelve la ecuacion cinetica directa en forma de String. Formato para mostrarla por pantalla." alt="" coords="269,97,487,124"/>
+<area shape="rect" href="class_t_model.html#a45494635ca0fd3779ea5147b616462c7" title="Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la v..." alt="" coords="33,5,193,32"/>
+<area shape="poly" title=" " alt="" coords="332,91,280,69,220,47,181,35,180,30,222,41,282,64,337,90"/>
+<area shape="rect" href="class_t_form1.html#a592eff540cbc9ff77e21d833059b9a39" title="Al seleccionar una reaccion de la lista de reacciones cargadas, muestra la ecuacion cinetica generada..." alt="" coords="5,56,221,99"/>
+<area shape="poly" title=" " alt="" coords="251,96,221,94,221,88,256,94"/>
+<area shape="rect" href="class_t_form1.html#a4054d1c2b1745192b6b1cff6fee0bcd5" title="Accion que se realiza al darle al boton &#39;Guardar ecuaciones y sistema&#39; del menu. Genera un archivo tx..." alt="" coords="19,123,207,165"/>
+<area shape="poly" title=" " alt="" coords="251,127,208,135,207,130,256,126"/>
+<area shape="rect" href="class_t_mechanism.html#ad2054d3b15fe158f94e381fe547f9e55" title="Muestra el mecanismo guardado y sus atributos." alt="" coords="38,189,188,216"/>
+<area shape="poly" title=" " alt="" coords="337,130,282,157,222,180,181,191,180,186,220,175,280,152,332,132"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a478649141c58734f7a8032300c3e5598" name="a478649141c58734f7a8032300c3e5598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a478649141c58734f7a8032300c3e5598">&#9670;&#160;</a></span>getInverseRatePython()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMechanism::getInverseRatePython </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la ecuacion cinetica inversa en forma de String. Formato para enviarla al solver de Python. </p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism_a478649141c58734f7a8032300c3e5598_icgraph.png" border="0" usemap="#aclass_t_mechanism_a478649141c58734f7a8032300c3e5598_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_mechanism_a478649141c58734f7a8032300c3e5598_icgraph" id="aclass_t_mechanism_a478649141c58734f7a8032300c3e5598_icgraph">
+<area shape="rect" title="Devuelve la ecuacion cinetica inversa en forma de String. Formato para enviarla al solver de Python." alt="" coords="213,23,406,65"/>
+<area shape="rect" href="class_t_model.html#a45494635ca0fd3779ea5147b616462c7" title="Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la v..." alt="" coords="5,5,165,32"/>
+<area shape="poly" title=" " alt="" coords="194,32,165,30,165,25,200,31"/>
+<area shape="rect" href="class_t_mechanism.html#ad2054d3b15fe158f94e381fe547f9e55" title="Muestra el mecanismo guardado y sus atributos." alt="" coords="10,56,160,83"/>
+<area shape="poly" title=" " alt="" coords="194,57,160,64,160,58,200,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac25a2712fe94a70768c4af9f791ae051" name="ac25a2712fe94a70768c4af9f791ae051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac25a2712fe94a70768c4af9f791ae051">&#9670;&#160;</a></span>getInverseRateShow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMechanism::getInverseRateShow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la ecuacion cinetica inversa en forma de String. Formato para mostrarla por pantalla. </p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism_ac25a2712fe94a70768c4af9f791ae051_icgraph.png" border="0" usemap="#aclass_t_mechanism_ac25a2712fe94a70768c4af9f791ae051_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_mechanism_ac25a2712fe94a70768c4af9f791ae051_icgraph" id="aclass_t_mechanism_ac25a2712fe94a70768c4af9f791ae051_icgraph">
+<area shape="rect" title="Devuelve la ecuacion cinetica inversa en forma de String. Formato para mostrarla por pantalla." alt="" coords="269,97,495,124"/>
+<area shape="rect" href="class_t_model.html#a45494635ca0fd3779ea5147b616462c7" title="Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la v..." alt="" coords="33,5,193,32"/>
+<area shape="poly" title=" " alt="" coords="335,91,281,69,220,47,180,35,180,30,221,41,283,64,340,90"/>
+<area shape="rect" href="class_t_form1.html#a592eff540cbc9ff77e21d833059b9a39" title="Al seleccionar una reaccion de la lista de reacciones cargadas, muestra la ecuacion cinetica generada..." alt="" coords="5,56,221,99"/>
+<area shape="poly" title=" " alt="" coords="251,95,221,93,221,88,256,94"/>
+<area shape="rect" href="class_t_form1.html#a4054d1c2b1745192b6b1cff6fee0bcd5" title="Accion que se realiza al darle al boton &#39;Guardar ecuaciones y sistema&#39; del menu. Genera un archivo tx..." alt="" coords="19,123,207,165"/>
+<area shape="poly" title=" " alt="" coords="251,127,208,135,207,130,256,126"/>
+<area shape="rect" href="class_t_mechanism.html#ad2054d3b15fe158f94e381fe547f9e55" title="Muestra el mecanismo guardado y sus atributos." alt="" coords="38,189,188,216"/>
+<area shape="poly" title=" " alt="" coords="340,130,283,157,221,180,181,191,179,186,220,175,281,152,335,132"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2a8fa75aa79ff89533af07051e1a1007" name="a2a8fa75aa79ff89533af07051e1a1007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a8fa75aa79ff89533af07051e1a1007">&#9670;&#160;</a></span>getMechParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMechanism::getMechParams </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el parametro del mecanismo de la posicion 'i'. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>indice del parametro del mecanismo que devuelve. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>String nombre corto del parametro del mecanismo, puede ser el nombre corto de un metabolito o un parametro. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007_icgraph.png" border="0" usemap="#aclass_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007_icgraph" id="aclass_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007_icgraph">
+<area shape="rect" title="Devuelve el parametro del mecanismo de la posicion &#39;i&#39;." alt="" coords="840,795,1040,821"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a4efc1b68aecca229eb9a9467dd14ef94" title="Construye el denominador de la ecuacion cinetica de tipo MMBiBiInhibidor." alt="" coords="557,160,792,187"/>
+<area shape="poly" title=" " alt="" coords="933,779,917,656,887,484,868,396,845,316,819,251,805,226,791,207,767,190,765,185,794,203,810,223,824,249,850,315,873,395,893,483,922,655,938,780"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#ae96c6cd6c35591da5afbd8e690366145" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="302,187,488,229"/>
+<area shape="poly" title=" " alt="" coords="933,779,917,664,887,505,868,424,845,352,819,293,805,271,791,255,770,243,740,233,662,219,572,212,489,209,487,205,573,206,662,213,741,227,772,238,794,251,809,268,824,291,850,350,873,423,892,504,922,663,938,780"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a7c70835aee1f69a6acf4cf49618d404f" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="302,253,488,296"/>
+<area shape="poly" title=" " alt="" coords="932,779,915,672,885,527,865,454,843,388,818,336,791,302,757,280,720,264,681,254,641,248,561,247,490,255,487,251,561,242,642,243,682,249,722,259,760,275,794,298,822,333,848,386,870,452,890,526,920,671,937,780"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a82dcfcc31f05b07fd90cc5be9df671d8" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="298,53,492,96"/>
+<area shape="poly" title=" " alt="" coords="935,778,924,636,899,431,879,326,855,232,826,155,809,127,791,106,770,94,741,85,664,74,576,70,493,71,490,67,576,65,665,68,742,79,772,89,794,102,813,124,831,153,860,230,885,325,904,430,929,635,940,780"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a2e2b9f5d2797bdcae5f12f7b667962d5" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="298,120,492,163"/>
+<area shape="poly" title=" " alt="" coords="934,779,922,644,897,452,878,354,854,266,825,195,808,169,791,150,754,127,714,111,671,102,626,99,540,106,466,121,463,117,539,101,626,94,671,97,715,106,757,122,794,146,813,166,829,193,859,264,883,353,902,451,928,643,939,780"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#af112b1a3812d328d9836c7962dcc311a" title="Construye el denominador de la ecuacion cinetica de tipo MMBiSecAleatorio." alt="" coords="602,480,747,523"/>
+<area shape="poly" title=" " alt="" coords="928,779,910,730,882,666,842,600,818,570,791,543,770,529,748,519,747,514,772,525,794,539,822,566,847,597,887,663,915,728,933,780"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#afc3e0110e898539d2128a7673f0239bc" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="322,504,468,547"/>
+<area shape="poly" title=" " alt="" coords="926,780,907,739,878,687,839,635,816,612,791,593,766,581,733,571,647,554,553,541,469,533,467,528,553,536,648,548,734,566,768,576,794,588,820,608,843,631,883,684,912,736,931,781"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#aa655f131d118c0f2eb0d2f773c30da16" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="322,571,468,613"/>
+<area shape="poly" title=" " alt="" coords="922,781,901,748,871,708,835,669,791,638,751,620,709,607,623,591,539,586,469,587,467,582,539,580,623,585,711,602,753,615,794,634,838,665,876,704,905,745,927,781"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#ab79024ec54f7ab3a243d92dac5596070" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="319,371,470,413"/>
+<area shape="poly" title=" " alt="" coords="935,778,926,706,904,609,886,558,861,510,830,466,791,429,754,406,714,390,672,379,629,373,545,372,472,379,469,375,544,367,629,368,673,374,716,385,757,402,794,425,834,462,866,507,890,556,909,608,932,705,940,780"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#af3b3f353979875875816507267ee9ce4" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="322,437,468,480"/>
+<area shape="poly" title=" " alt="" coords="934,778,923,713,899,626,881,582,857,539,827,501,791,470,753,450,712,436,669,428,626,424,541,429,469,441,466,437,541,424,626,419,670,422,713,431,755,445,794,466,831,498,861,536,886,579,904,624,928,711,939,780"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#adff7e8d28bf0d198688fe6f6036b8bf8" title="Construye el denominador de la ecuacion cinetica de tipo MMUniBiInhibidor." alt="" coords="604,816,745,859"/>
+<area shape="poly" title=" " alt="" coords="823,822,747,832,744,827,827,819"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a20d6d999152c5042a3e8f9b57c661b4d" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="323,839,466,881"/>
+<area shape="poly" title=" " alt="" coords="899,830,852,855,793,873,706,885,618,886,536,882,468,874,466,869,536,877,618,881,705,879,792,868,850,850,904,827"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#afe8e3d6f6e91d0809a097c6ac9833f84" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="325,905,465,948"/>
+<area shape="poly" title=" " alt="" coords="906,832,857,864,793,892,706,913,618,925,535,930,467,931,464,926,535,925,617,919,705,907,791,887,854,860,910,829"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a59733a3b1589a10af47794977d0f487e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="319,705,470,748"/>
+<area shape="poly" title=" " alt="" coords="843,792,792,785,472,739,470,734,793,780,848,791"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a4389b191c3605332cd2d4ee0dbb0f8b0" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="323,772,466,815"/>
+<area shape="poly" title=" " alt="" coords="822,806,792,807,468,798,466,793,792,801,827,804"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a61ed9f2604fb99b22b15f56a94598476" title="Construye el denominador de la ecuacion cinetica de tipo MMUniInhibidor." alt="" coords="559,1136,790,1163"/>
+<area shape="poly" title=" " alt="" coords="935,834,921,896,894,972,876,1012,853,1052,826,1088,794,1119,762,1138,759,1133,791,1115,822,1084,848,1049,871,1010,890,970,916,895,932,839"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a1ce34ddce6ad598235045dd9726e9e7e" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="304,1156,486,1199"/>
+<area shape="poly" title=" " alt="" coords="939,835,931,909,922,955,909,1004,890,1053,865,1100,834,1142,794,1177,755,1198,714,1212,671,1219,627,1222,542,1216,470,1202,469,1197,542,1211,627,1217,670,1214,713,1207,753,1193,791,1172,830,1139,861,1097,885,1051,904,1002,917,954,926,908,936,839"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a0a27cec47470b60e46fe110cab3edab6" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="304,1223,486,1265"/>
+<area shape="poly" title=" " alt="" coords="940,835,936,918,928,970,915,1026,897,1082,871,1137,837,1186,794,1228,771,1239,740,1247,660,1256,570,1257,487,1254,486,1248,570,1252,660,1251,739,1242,769,1234,791,1223,833,1183,866,1134,892,1080,910,1024,923,969,930,917,937,840"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a9bd74e953991c0873e15141e052eeeba" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="300,1023,490,1065"/>
+<area shape="poly" title=" " alt="" coords="931,834,913,881,884,933,844,984,820,1007,794,1025,757,1042,718,1055,638,1068,560,1070,491,1064,489,1059,560,1064,638,1063,717,1050,755,1037,791,1020,817,1003,840,981,879,930,908,878,927,838"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a7398e14df831e6270e987f4c5eaad236" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="300,1089,490,1132"/>
+<area shape="poly" title=" " alt="" coords="934,834,919,890,892,956,873,990,851,1022,824,1051,794,1076,771,1087,740,1095,661,1107,573,1113,491,1114,489,1109,573,1107,661,1101,738,1090,769,1082,791,1071,821,1047,846,1019,868,987,887,954,914,888,931,838"/>
+<area shape="rect" href="class_t_mass_action.html#a31a4b542f91aab112a7bcb2e3de1819e" title="Construye la ecuacion cinetica segun la ley de accion de masas." alt="" coords="568,1369,781,1396"/>
+<area shape="poly" title=" " alt="" coords="940,835,935,929,928,991,915,1059,897,1130,871,1201,837,1269,794,1330,764,1355,730,1371,727,1366,761,1350,790,1326,833,1266,866,1199,892,1128,910,1058,922,990,930,929,937,839"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html#ac8081966718290e0e320eb731f0083d4" title="Comprueba que se envian los parametros propios del mecanismo HillInhibidorActivador: [Vmax,..." alt="" coords="598,1420,751,1463"/>
+<area shape="poly" title=" " alt="" coords="937,834,922,959,892,1131,873,1219,850,1299,824,1365,809,1390,794,1410,775,1425,752,1435,750,1430,772,1420,790,1406,805,1387,819,1362,845,1297,868,1217,887,1130,917,959,934,839"/>
+<area shape="rect" href="class_t_mass_action.html#ab938b358d430a859fe1ebda15c581320" title="Comprueba que se han enviado los parametros necesarios del mecanismo MassAction: [kd,..." alt="" coords="575,1289,774,1316"/>
+<area shape="poly" title=" " alt="" coords="940,835,935,922,927,977,914,1038,896,1101,870,1163,837,1220,794,1271,763,1291,761,1286,791,1267,832,1217,865,1160,891,1099,909,1037,922,976,930,921,937,839"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a8301f2c15620dba9545389641e372c89" title="Comprueba que se envian los parametros propios del mecanismo MMBiBiInhibidor: [Vmax,..." alt="" coords="562,5,787,32"/>
+<area shape="poly" title=" " alt="" coords="934,778,922,629,897,411,877,299,853,196,824,112,808,80,790,55,777,44,763,35,762,30,780,39,794,52,813,77,829,110,859,195,883,298,902,410,928,628,940,780"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#a4ab89662512bf0e1709d2e2ad8c779c2" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMBiSecAleatorio: [Vmax,..." alt="" coords="602,312,747,355"/>
+<area shape="poly" title=" " alt="" coords="935,778,926,700,904,592,885,534,861,476,830,423,790,375,770,360,748,349,747,344,773,355,794,371,834,420,866,474,890,532,909,590,932,699,940,780"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a97da04356397596583848a82396c423e" title="Comprueba que se han enviado los parametros necesarios para el mecanismo MMUniBiInhibidor: [Vmax,..." alt="" coords="604,648,745,691"/>
+<area shape="poly" title=" " alt="" coords="907,785,855,749,791,712,745,692,744,687,794,707,858,745,912,785"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#ad8c3741daad20e9a2ce69b95bcd486aa" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMUniInhibidor: [Vmax,..." alt="" coords="564,984,785,1011"/>
+<area shape="poly" title=" " alt="" coords="923,832,871,902,835,937,794,968,752,986,749,981,791,963,831,933,867,898,920,836"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html#acee6ec3171bf98254be22d219f6e037b" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="598,1487,751,1529"/>
+<area shape="poly" title=" " alt="" coords="938,835,925,972,897,1164,877,1262,854,1352,826,1426,811,1454,794,1477,775,1492,752,1502,751,1496,772,1487,790,1473,806,1452,821,1423,849,1350,872,1261,891,1163,919,971,935,839"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html#ad7005d8496600717b5d85e97c6ce3163" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="598,1553,751,1596"/>
+<area shape="poly" title=" " alt="" coords="938,834,927,983,901,1195,882,1304,858,1404,829,1487,812,1519,794,1543,775,1559,752,1569,750,1563,772,1554,790,1539,808,1516,824,1484,853,1403,876,1303,896,1194,922,983,935,839"/>
+<area shape="rect" href="class_t_mechanism.html#ad2054d3b15fe158f94e381fe547f9e55" title="Muestra el mecanismo guardado y sus atributos." alt="" coords="600,1620,749,1647"/>
+<area shape="poly" title=" " alt="" coords="939,834,931,996,907,1229,888,1349,863,1458,832,1549,814,1583,794,1610,774,1625,750,1633,749,1628,771,1620,790,1606,810,1581,827,1546,858,1457,883,1348,901,1228,925,996,936,839"/>
+<area shape="poly" title=" " alt="" coords="545,191,490,199,486,194,549,187"/>
+<area shape="poly" title=" " alt="" coords="627,195,510,244,476,255,472,251,508,239,631,191"/>
+<area shape="poly" title=" " alt="" coords="624,155,508,111,475,99,472,94,510,105,629,152"/>
+<area shape="poly" title=" " alt="" coords="540,160,493,155,490,150,544,157"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#afd7921f14f90bb419de8d1dd53d27e13" title="Constructor de la clase TMMBiBiInhibidor. Llama al constructor del padre, rellena los atributos propi..." alt="" coords="26,120,212,163"/>
+<area shape="poly" title=" " alt="" coords="287,184,212,166,209,161,291,181"/>
+<area shape="poly" title=" " alt="" coords="294,249,280,244,207,205,151,166,149,161,210,200,282,239,298,246"/>
+<area shape="poly" title=" " alt="" coords="287,102,212,121,208,118,291,98"/>
+<area shape="poly" title=" " alt="" coords="281,143,214,143,211,139,285,140"/>
+<area shape="poly" title=" " alt="" coords="585,511,469,521,467,517,589,507"/>
+<area shape="poly" title=" " alt="" coords="597,530,510,561,470,573,466,569,508,556,600,526"/>
+<area shape="poly" title=" " alt="" coords="614,474,508,428,472,415,470,410,510,423,619,472"/>
+<area shape="poly" title=" " alt="" coords="585,489,469,472,467,467,589,487"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#ad4e65c49ef3a64b8162e1aab18289d3d" title="Constructor de la clase TMMBiSecAleatorio. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="46,437,192,480"/>
+<area shape="poly" title=" " alt="" coords="305,506,193,479,191,474,309,503"/>
+<area shape="poly" title=" " alt="" coords="305,571,280,561,207,522,151,483,149,478,210,517,282,556,310,568"/>
+<area shape="poly" title=" " alt="" coords="302,416,194,443,190,439,306,412"/>
+<area shape="poly" title=" " alt="" coords="305,460,194,461,191,456,309,457"/>
+<area shape="poly" title=" " alt="" coords="587,846,468,857,466,852,591,843"/>
+<area shape="poly" title=" " alt="" coords="595,866,510,896,467,909,464,905,508,891,599,863"/>
+<area shape="poly" title=" " alt="" coords="616,810,508,762,472,749,470,744,510,758,621,808"/>
+<area shape="poly" title=" " alt="" coords="587,825,468,807,466,802,591,823"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a27f1f61c93dc9400e2111c7e84bfb813" title="Constructor de la clase TMMUniBiInhibidor. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="49,772,189,815"/>
+<area shape="poly" title=" " alt="" coords="306,841,191,813,189,808,310,838"/>
+<area shape="poly" title=" " alt="" coords="307,906,280,896,207,857,151,818,149,813,210,852,282,891,312,904"/>
+<area shape="poly" title=" " alt="" coords="303,750,191,778,188,774,306,746"/>
+<area shape="poly" title=" " alt="" coords="306,795,191,796,188,791,309,792"/>
+<area shape="poly" title=" " alt="" coords="541,1164,487,1171,485,1166,546,1161"/>
+<area shape="poly" title=" " alt="" coords="622,1170,510,1213,474,1224,472,1220,508,1208,626,1167"/>
+<area shape="poly" title=" " alt="" coords="629,1130,508,1080,476,1068,474,1063,510,1075,634,1128"/>
+<area shape="poly" title=" " alt="" coords="556,1134,491,1126,489,1121,561,1132"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#aacd95490240c218832d2a12e5a6b33a2" title="Constructor de la clase TMMUniInhibidor. Llama al constructor del padre, rellena los atributos propio..." alt="" coords="5,1097,233,1124"/>
+<area shape="poly" title=" " alt="" coords="287,1153,178,1127,177,1122,291,1150"/>
+<area shape="poly" title=" " alt="" coords="293,1218,280,1213,199,1169,139,1127,138,1122,201,1164,282,1208,299,1216"/>
+<area shape="poly" title=" " alt="" coords="287,1072,179,1099,176,1095,291,1068"/>
+<area shape="poly" title=" " alt="" coords="282,1112,234,1113,232,1108,287,1109"/>
+<area shape="rect" href="class_t_mass_action.html#ab908415a5e4eb18a0ffaf33d5f58ad7c" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="301,1340,488,1383"/>
+<area shape="poly" title=" " alt="" coords="551,1374,489,1371,489,1366,556,1373"/>
+<area shape="rect" href="class_t_mass_action.html#a05e6775beaf34a255e63993627e7ea17" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="285,1407,505,1433"/>
+<area shape="poly" title=" " alt="" coords="552,1399,501,1409,499,1403,557,1398"/>
+<area shape="rect" href="class_t_mass_action.html#a686b8ca0db5dfef10ba9b3adb8e0a40e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="297,1457,492,1500"/>
+<area shape="poly" title=" " alt="" coords="571,1402,558,1410,544,1419,535,1428,525,1438,510,1448,484,1459,481,1454,508,1443,522,1434,531,1424,541,1415,556,1406,576,1400"/>
+<area shape="rect" href="class_t_mass_action.html#a14d0626057ebcbc68f87caf65a98ffe4" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="281,1524,509,1551"/>
+<area shape="poly" title=" " alt="" coords="565,1403,559,1410,547,1422,541,1434,536,1460,530,1488,523,1501,511,1514,492,1526,489,1521,507,1510,519,1498,525,1486,530,1459,536,1432,543,1419,555,1406,560,1405"/>
+<area shape="rect" href="class_t_mass_action.html#a74563e7583262c8adf5b9ed1f9bbca63" title="Constructor de la clase TMassAction. Llama al constructor del padre, rellena los atributos propios y ..." alt="" coords="27,1407,211,1433"/>
+<area shape="poly" title=" " alt="" coords="284,1386,186,1408,184,1404,288,1383"/>
+<area shape="poly" title=" " alt="" coords="267,1421,212,1423,211,1417,272,1419"/>
+<area shape="poly" title=" " alt="" coords="280,1456,186,1437,185,1431,284,1453"/>
+<area shape="poly" title=" " alt="" coords="300,1520,280,1514,200,1475,140,1437,140,1431,203,1470,282,1510,305,1519"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html#aa500c80dc4d5647b281f67063009228a" title="Constructor de la clase THillInhibidorActivador. Llama al constructor del padre, rellena los atributo..." alt="" coords="315,1575,475,1617"/>
+<area shape="poly" title=" " alt="" coords="587,1458,559,1477,542,1497,536,1519,529,1542,511,1565,476,1584,474,1579,507,1561,524,1540,530,1518,537,1495,555,1473,582,1460"/>
+<area shape="poly" title=" " alt="" coords="557,1297,495,1300,425,1304,352,1314,281,1331,240,1347,200,1368,140,1408,136,1404,197,1363,237,1342,280,1325,351,1309,424,1299,495,1294,562,1296"/>
+<area shape="poly" title=" " alt="" coords="544,12,484,13,416,18,348,27,281,44,243,60,206,80,148,121,144,118,204,75,241,55,280,39,347,22,416,12,484,8,548,9"/>
+<area shape="poly" title=" " alt="" coords="584,329,519,329,441,332,360,342,281,361,243,377,207,397,148,438,144,435,204,393,241,372,280,356,359,337,441,327,519,323,589,325"/>
+<area shape="poly" title=" " alt="" coords="587,664,521,664,443,667,361,677,281,696,243,712,207,732,148,773,144,770,204,727,241,707,280,691,360,672,443,662,521,659,591,661"/>
+<area shape="poly" title=" " alt="" coords="546,987,486,987,418,989,349,998,281,1013,238,1031,198,1054,138,1098,134,1095,195,1050,236,1026,280,1008,348,992,417,984,486,981,551,984"/>
+<area shape="poly" title=" " alt="" coords="587,1532,558,1544,510,1565,476,1577,474,1572,508,1560,556,1539,581,1533"/>
+<area shape="poly" title=" " alt="" coords="580,1582,476,1593,475,1587,586,1581"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a83135bad08af9d4416b57f7fe7c73493" name="a83135bad08af9d4416b57f7fe7c73493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83135bad08af9d4416b57f7fe7c73493">&#9670;&#160;</a></span>getMechType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMechanism::getMechType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el nombre del tipo de mecanismo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>String nombre del tipo de mecanismo. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism_a83135bad08af9d4416b57f7fe7c73493_icgraph.png" border="0" usemap="#aclass_t_mechanism_a83135bad08af9d4416b57f7fe7c73493_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_mechanism_a83135bad08af9d4416b57f7fe7c73493_icgraph" id="aclass_t_mechanism_a83135bad08af9d4416b57f7fe7c73493_icgraph">
+<area shape="rect" title="Devuelve el nombre del tipo de mecanismo." alt="" coords="554,261,736,288"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html#ac8081966718290e0e320eb731f0083d4" title="Comprueba que se envian los parametros propios del mecanismo HillInhibidorActivador: [Vmax,..." alt="" coords="317,9,470,52"/>
+<area shape="poly" title=" " alt="" coords="630,246,611,208,584,160,548,111,504,69,470,50,470,45,508,65,552,107,588,157,616,205,635,248"/>
+<area shape="rect" href="class_t_mass_action.html#ab938b358d430a859fe1ebda15c581320" title="Comprueba que se han enviado los parametros necesarios del mecanismo MassAction: [kd,..." alt="" coords="294,79,493,105"/>
+<area shape="poly" title=" " alt="" coords="624,248,576,187,542,153,505,125,469,109,468,103,507,120,546,149,580,183,630,249"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a8301f2c15620dba9545389641e372c89" title="Comprueba que se envian los parametros propios del mecanismo MMBiBiInhibidor: [Vmax,..." alt="" coords="281,135,506,161"/>
+<area shape="poly" title=" " alt="" coords="615,251,566,214,505,177,471,165,470,159,507,172,570,209,620,251"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#a4ab89662512bf0e1709d2e2ad8c779c2" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMBiSecAleatorio: [Vmax,..." alt="" coords="321,187,466,229"/>
+<area shape="poly" title=" " alt="" coords="574,257,466,230,466,224,580,256"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a97da04356397596583848a82396c423e" title="Comprueba que se han enviado los parametros necesarios para el mecanismo MMUniBiInhibidor: [Vmax,..." alt="" coords="323,253,464,296"/>
+<area shape="poly" title=" " alt="" coords="536,275,464,277,463,272,541,274"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#ad8c3741daad20e9a2ce69b95bcd486aa" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMUniInhibidor: [Vmax,..." alt="" coords="283,320,504,347"/>
+<area shape="poly" title=" " alt="" coords="570,293,507,311,457,322,456,317,505,305,575,291"/>
+<area shape="rect" href="class_t_form1.html#a592eff540cbc9ff77e21d833059b9a39" title="Al seleccionar una reaccion de la lista de reacciones cargadas, muestra la ecuacion cinetica generada..." alt="" coords="286,371,501,413"/>
+<area shape="poly" title=" " alt="" coords="615,296,565,331,507,361,477,373,476,368,505,356,562,326,610,298"/>
+<area shape="rect" href="class_t_form1.html#a4054d1c2b1745192b6b1cff6fee0bcd5" title="Accion que se realiza al darle al boton &#39;Guardar ecuaciones y sistema&#39; del menu. Genera un archivo tx..." alt="" coords="299,437,488,480"/>
+<area shape="poly" title=" " alt="" coords="629,300,579,365,545,399,507,428,485,439,483,434,505,423,542,395,575,362,624,302"/>
+<area shape="rect" href="class_t_mechanism.html#ad2054d3b15fe158f94e381fe547f9e55" title="Muestra el mecanismo guardado y sus atributos." alt="" coords="319,504,468,531"/>
+<area shape="poly" title=" " alt="" coords="636,301,619,346,592,398,555,450,532,474,507,494,469,512,468,507,505,490,529,470,550,447,587,395,614,344,632,304"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html#aa500c80dc4d5647b281f67063009228a" title="Constructor de la clase THillInhibidorActivador. Llama al constructor del padre, rellena los atributo..." alt="" coords="39,5,199,48"/>
+<area shape="poly" title=" " alt="" coords="299,31,201,30,198,25,303,28"/>
+<area shape="rect" href="class_t_mass_action.html#a74563e7583262c8adf5b9ed1f9bbca63" title="Constructor de la clase TMassAction. Llama al constructor del padre, rellena los atributos propios y ..." alt="" coords="27,72,211,99"/>
+<area shape="poly" title=" " alt="" coords="276,91,212,90,210,85,280,88"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#afd7921f14f90bb419de8d1dd53d27e13" title="Constructor de la clase TMMBiBiInhibidor. Llama al constructor del padre, rellena los atributos propi..." alt="" coords="26,123,212,165"/>
+<area shape="poly" title=" " alt="" coords="263,148,214,148,211,143,268,145"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#ad4e65c49ef3a64b8162e1aab18289d3d" title="Constructor de la clase TMMBiSecAleatorio. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="46,189,192,232"/>
+<area shape="poly" title=" " alt="" coords="303,211,193,212,191,207,307,207"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a27f1f61c93dc9400e2111c7e84bfb813" title="Constructor de la clase TMMUniBiInhibidor. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="49,256,189,299"/>
+<area shape="poly" title=" " alt="" coords="305,277,190,279,189,274,310,274"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#aacd95490240c218832d2a12e5a6b33a2" title="Constructor de la clase TMMUniInhibidor. Llama al constructor del padre, rellena los atributos propio..." alt="" coords="5,323,233,349"/>
+<area shape="poly" title=" " alt="" coords="265,336,234,337,232,332,269,334"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad3082b5258b9df20f86bad71acd6bdfb" name="ad3082b5258b9df20f86bad71acd6bdfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3082b5258b9df20f86bad71acd6bdfb">&#9670;&#160;</a></span>getNMechParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMechanism::getNMechParams </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el numero de parametros del mecanismo guardados. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>int numero de parametros del mecanismo. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb_icgraph.png" border="0" usemap="#aclass_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb_icgraph" id="aclass_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb_icgraph">
+<area shape="rect" title="Devuelve el numero de parametros del mecanismo guardados." alt="" coords="747,597,957,624"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#af112b1a3812d328d9836c7962dcc311a" title="Construye el denominador de la ecuacion cinetica de tipo MMBiSecAleatorio." alt="" coords="514,139,659,181"/>
+<area shape="poly" title=" " alt="" coords="844,581,830,513,802,418,783,367,759,316,731,267,697,223,672,201,645,184,644,179,675,197,701,220,735,264,764,313,788,365,807,416,835,511,849,583"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#ab79024ec54f7ab3a243d92dac5596070" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="237,5,388,48"/>
+<area shape="poly" title=" " alt="" coords="848,581,843,494,835,435,822,371,803,306,777,241,742,181,697,129,664,102,626,80,586,63,544,50,461,34,390,28,387,23,462,29,545,44,587,58,628,75,667,97,701,125,746,178,782,239,808,304,827,370,840,434,848,493,853,583"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#af3b3f353979875875816507267ee9ce4" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="240,205,385,248"/>
+<area shape="poly" title=" " alt="" coords="843,581,828,522,801,445,782,405,758,366,730,331,698,301,662,278,622,259,581,246,539,236,457,226,387,224,384,219,457,220,540,231,583,241,624,254,664,273,701,297,734,327,763,363,786,402,806,443,833,521,848,583"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#adff7e8d28bf0d198688fe6f6036b8bf8" title="Construye el denominador de la ecuacion cinetica de tipo MMUniBiInhibidor." alt="" coords="516,405,657,448"/>
+<area shape="poly" title=" " alt="" coords="827,585,772,528,737,497,698,469,658,449,657,444,701,464,740,492,776,524,832,585"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a59733a3b1589a10af47794977d0f487e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="237,339,388,381"/>
+<area shape="poly" title=" " alt="" coords="838,582,819,541,789,488,749,436,725,414,698,396,661,378,621,364,538,350,458,347,390,351,387,346,458,341,539,344,622,359,663,373,701,391,728,410,752,433,793,485,823,538,843,584"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a4389b191c3605332cd2d4ee0dbb0f8b0" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="241,539,384,581"/>
+<area shape="poly" title=" " alt="" coords="822,587,769,547,735,528,699,513,637,499,588,497,538,502,475,513,451,520,427,529,386,542,383,537,425,524,449,515,473,508,537,497,588,491,638,494,700,508,737,523,772,543,828,587"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html#ac8081966718290e0e320eb731f0083d4" title="Comprueba que se envian los parametros propios del mecanismo HillInhibidorActivador: [Vmax,..." alt="" coords="510,589,663,632"/>
+<area shape="poly" title=" " alt="" coords="729,612,664,613,662,608,734,610"/>
+<area shape="rect" href="class_t_mass_action.html#ab938b358d430a859fe1ebda15c581320" title="Comprueba que se han enviado los parametros necesarios del mecanismo MassAction: [kd,..." alt="" coords="487,656,686,683"/>
+<area shape="poly" title=" " alt="" coords="771,629,652,658,650,653,776,627"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a8301f2c15620dba9545389641e372c89" title="Comprueba que se envian los parametros propios del mecanismo MMBiBiInhibidor: [Vmax,..." alt="" coords="474,840,699,867"/>
+<area shape="poly" title=" " alt="" coords="841,637,821,682,791,734,751,786,727,810,701,830,679,842,676,837,698,826,723,806,747,783,786,731,817,680,838,640"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#a4ab89662512bf0e1709d2e2ad8c779c2" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMBiSecAleatorio: [Vmax,..." alt="" coords="240,272,385,315"/>
+<area shape="poly" title=" " alt="" coords="841,582,823,532,795,468,753,404,727,375,698,352,661,331,621,314,580,303,538,295,456,288,387,288,384,284,456,282,538,289,581,297,623,309,663,326,701,347,731,372,757,400,799,465,828,530,846,583"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a97da04356397596583848a82396c423e" title="Comprueba que se han enviado los parametros necesarios para el mecanismo MMUniBiInhibidor: [Vmax,..." alt="" coords="516,523,657,565"/>
+<area shape="poly" title=" " alt="" coords="778,594,657,564,657,559,783,592"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#ad8c3741daad20e9a2ce69b95bcd486aa" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMUniInhibidor: [Vmax,..." alt="" coords="476,1024,697,1051"/>
+<area shape="poly" title=" " alt="" coords="850,638,842,715,817,817,798,871,773,923,741,972,701,1014,683,1026,681,1021,698,1010,737,969,768,921,793,868,812,815,836,714,847,642"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a82dcfcc31f05b07fd90cc5be9df671d8" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="490,707,683,749"/>
+<area shape="poly" title=" " alt="" coords="819,631,764,666,700,697,670,709,667,704,698,692,761,662,814,634"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a9bd74e953991c0873e15141e052eeeba" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="492,891,681,933"/>
+<area shape="poly" title=" " alt="" coords="844,637,827,691,797,756,756,823,730,854,701,881,682,893,680,888,698,877,726,850,751,820,793,753,822,689,841,640"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a2e2b9f5d2797bdcae5f12f7b667962d5" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="490,773,683,816"/>
+<area shape="poly" title=" " alt="" coords="834,635,778,701,741,735,701,764,677,775,675,770,698,759,738,730,775,697,829,638"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a7398e14df831e6270e987f4c5eaad236" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="492,957,681,1000"/>
+<area shape="poly" title=" " alt="" coords="848,638,834,703,807,786,787,830,763,873,735,912,701,947,683,960,681,955,698,943,731,909,759,870,782,828,802,784,829,702,844,642"/>
+<area shape="rect" href="class_t_mechanism.html#ad2054d3b15fe158f94e381fe547f9e55" title="Muestra el mecanismo guardado y sus atributos." alt="" coords="512,1075,661,1101"/>
+<area shape="poly" title=" " alt="" coords="852,637,846,723,838,778,824,838,805,900,779,960,745,1016,701,1065,683,1077,662,1085,661,1080,680,1072,698,1061,740,1013,774,958,800,898,819,837,832,777,841,723,849,642"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#afc3e0110e898539d2128a7673f0239bc" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="240,139,385,181"/>
+<area shape="poly" title=" " alt="" coords="496,162,387,162,384,158,500,158"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#aa655f131d118c0f2eb0d2f773c30da16" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="240,72,385,115"/>
+<area shape="poly" title=" " alt="" coords="497,140,386,113,384,108,501,137"/>
+<area shape="poly" title=" " alt="" coords="541,130,488,96,425,62,389,48,387,43,427,58,490,91,546,129"/>
+<area shape="poly" title=" " alt="" coords="497,183,387,211,384,207,501,179"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#ad4e65c49ef3a64b8162e1aab18289d3d" title="Constructor de la clase TMMBiSecAleatorio. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="5,139,151,181"/>
+<area shape="poly" title=" " alt="" coords="223,162,153,162,150,158,226,158"/>
+<area shape="poly" title=" " alt="" coords="223,120,153,141,149,137,227,116"/>
+<area shape="poly" title=" " alt="" coords="221,51,200,62,145,101,102,140,97,137,141,96,197,58,224,47"/>
+<area shape="poly" title=" " alt="" coords="223,203,153,183,150,178,227,200"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a20d6d999152c5042a3e8f9b57c661b4d" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="241,472,384,515"/>
+<area shape="poly" title=" " alt="" coords="499,449,386,478,383,474,504,446"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#afe8e3d6f6e91d0809a097c6ac9833f84" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="242,405,382,448"/>
+<area shape="poly" title=" " alt="" coords="499,428,384,429,382,424,503,425"/>
+<area shape="poly" title=" " alt="" coords="499,407,389,381,388,376,504,405"/>
+<area shape="poly" title=" " alt="" coords="500,453,476,469,461,483,453,498,444,514,427,529,386,548,383,544,425,524,439,510,448,496,457,480,472,465,504,449"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a27f1f61c93dc9400e2111c7e84bfb813" title="Constructor de la clase TMMUniBiInhibidor. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="8,472,148,515"/>
+<area shape="poly" title=" " alt="" coords="223,495,150,496,147,491,227,492"/>
+<area shape="poly" title=" " alt="" coords="226,453,150,475,147,471,229,449"/>
+<area shape="poly" title=" " alt="" coords="221,385,200,396,145,434,102,473,97,470,141,430,197,391,224,380"/>
+<area shape="poly" title=" " alt="" coords="223,537,149,516,147,511,228,534"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html#aa500c80dc4d5647b281f67063009228a" title="Constructor de la clase THillInhibidorActivador. Llama al constructor del padre, rellena los atributo..." alt="" coords="232,656,392,699"/>
+<area shape="poly" title=" " alt="" coords="493,634,394,660,392,656,497,631"/>
+<area shape="rect" href="class_t_mass_action.html#a74563e7583262c8adf5b9ed1f9bbca63" title="Constructor de la clase TMassAction. Llama al constructor del padre, rellena los atributos propios y ..." alt="" coords="221,723,404,749"/>
+<area shape="poly" title=" " alt="" coords="502,688,475,697,427,713,382,724,379,720,425,708,473,692,507,686"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#afd7921f14f90bb419de8d1dd53d27e13" title="Constructor de la clase TMMBiBiInhibidor. Llama al constructor del padre, rellena los atributos propi..." alt="" coords="219,773,406,816"/>
+<area shape="poly" title=" " alt="" coords="503,837,406,817,406,812,508,835"/>
+<area shape="poly" title=" " alt="" coords="222,273,197,262,141,224,101,184,99,179,145,219,200,258,227,271"/>
+<area shape="poly" title=" " alt="" coords="499,570,475,580,451,589,427,596,362,608,311,615,260,613,198,596,166,580,138,560,97,518,96,513,141,556,169,576,200,591,261,608,310,610,361,602,425,591,449,584,473,575,504,567"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#aacd95490240c218832d2a12e5a6b33a2" title="Constructor de la clase TMMUniInhibidor. Llama al constructor del padre, rellena los atributos propio..." alt="" coords="199,965,426,992"/>
+<area shape="poly" title=" " alt="" coords="503,1021,378,995,379,990,509,1020"/>
+<area shape="poly" title=" " alt="" coords="479,755,404,775,402,770,484,752"/>
+<area shape="poly" title=" " alt="" coords="479,938,371,967,370,962,484,937"/>
+<area shape="poly" title=" " alt="" coords="472,796,407,797,405,792,477,794"/>
+<area shape="poly" title=" " alt="" coords="474,979,427,981,426,976,479,978"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a952aaf0c9f7c5f2ab95e20ba55cdde4d" name="a952aaf0c9f7c5f2ab95e20ba55cdde4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a952aaf0c9f7c5f2ab95e20ba55cdde4d">&#9670;&#160;</a></span>getReaction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_t_reaction.html">TReaction</a> * TMechanism::getReaction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve un puntero a la reaccion dada su nombre. </p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_cgraph.png" border="0" usemap="#aclass_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_cgraph" id="aclass_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_cgraph">
+<area shape="rect" title="Devuelve un puntero a la reaccion dada su nombre." alt="" coords="5,5,180,32"/>
+<area shape="rect" href="class_t_mechanism.html#a4645ac8a1913d474bded3ccb4f0b75ba" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="228,5,437,32"/>
+<area shape="poly" title=" " alt="" coords="180,16,215,19,209,19,180,21"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_icgraph.png" border="0" usemap="#aclass_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_icgraph" id="aclass_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_icgraph">
+<area shape="rect" title="Devuelve un puntero a la reaccion dada su nombre." alt="" coords="840,824,1015,851"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a4efc1b68aecca229eb9a9467dd14ef94" title="Construye el denominador de la ecuacion cinetica de tipo MMBiBiInhibidor." alt="" coords="557,160,792,187"/>
+<area shape="poly" title=" " alt="" coords="921,808,909,680,884,499,866,407,845,323,819,254,805,227,790,207,767,190,766,184,794,203,810,224,824,251,850,321,871,406,889,498,914,680,927,809"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#ae96c6cd6c35591da5afbd8e690366145" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="302,187,488,229"/>
+<area shape="poly" title=" " alt="" coords="921,808,908,690,883,526,865,442,844,367,819,306,805,283,791,266,770,253,740,242,662,226,573,216,489,212,486,207,573,211,663,220,742,237,772,248,794,262,809,280,824,304,849,365,870,441,888,525,913,689,926,809"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a7c70835aee1f69a6acf4cf49618d404f" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="302,253,488,296"/>
+<area shape="poly" title=" " alt="" coords="921,808,907,696,881,541,864,464,843,394,818,338,805,317,791,302,770,290,740,281,662,271,572,269,489,271,486,266,572,263,662,266,741,276,772,285,794,298,809,314,823,336,848,392,869,463,887,540,912,695,926,809"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a82dcfcc31f05b07fd90cc5be9df671d8" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="298,53,492,96"/>
+<area shape="poly" title=" " alt="" coords="923,807,915,659,895,445,878,336,855,237,826,157,809,127,791,105,770,92,741,83,664,72,576,69,493,71,490,66,576,64,665,67,742,78,772,88,794,101,814,124,831,154,861,235,883,335,900,445,921,659,928,809"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a2e2b9f5d2797bdcae5f12f7b667962d5" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="298,120,492,163"/>
+<area shape="poly" title=" " alt="" coords="923,808,914,668,893,467,876,364,854,272,825,198,809,170,791,150,754,126,714,110,670,101,626,99,582,100,539,106,465,121,462,117,538,100,581,95,626,93,671,96,715,105,757,121,794,146,813,167,830,195,859,270,881,363,899,466,920,667,928,810"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#af112b1a3812d328d9836c7962dcc311a" title="Construye el denominador de la ecuacion cinetica de tipo MMBiSecAleatorio." alt="" coords="602,480,747,523"/>
+<area shape="poly" title=" " alt="" coords="919,808,905,754,881,682,843,608,819,574,791,543,770,529,748,518,747,513,773,524,794,539,823,570,848,605,885,680,910,752,924,810"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#afc3e0110e898539d2128a7673f0239bc" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="322,437,468,480"/>
+<area shape="poly" title=" " alt="" coords="923,808,917,737,910,691,898,643,881,594,858,547,828,505,791,470,754,449,713,434,670,426,627,423,542,427,470,440,466,436,541,422,627,417,671,421,714,429,756,444,794,466,832,501,863,544,886,592,903,641,915,690,922,736,928,809"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#aa655f131d118c0f2eb0d2f773c30da16" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="322,504,468,547"/>
+<area shape="poly" title=" " alt="" coords="917,808,902,761,877,701,840,641,817,614,791,592,767,579,734,568,648,551,553,539,469,532,467,527,554,534,649,546,735,563,769,574,794,587,821,610,845,638,882,699,907,759,922,810"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#ab79024ec54f7ab3a243d92dac5596070" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="319,571,470,613"/>
+<area shape="poly" title=" " alt="" coords="914,809,897,770,871,723,835,676,814,655,791,638,753,619,712,604,669,593,626,587,543,582,473,585,470,580,543,577,627,581,670,588,713,599,755,614,794,634,818,651,839,672,875,720,902,768,919,810"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#af3b3f353979875875816507267ee9ce4" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="322,371,468,413"/>
+<area shape="poly" title=" " alt="" coords="924,807,920,730,914,679,903,625,886,570,862,516,831,468,791,427,768,415,735,406,649,394,554,391,470,391,467,387,554,385,650,389,736,400,770,410,794,423,835,465,867,514,891,568,908,624,919,678,925,729,929,809"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#adff7e8d28bf0d198688fe6f6036b8bf8" title="Construye el denominador de la ecuacion cinetica de tipo MMUniBiInhibidor." alt="" coords="604,816,745,859"/>
+<area shape="poly" title=" " alt="" coords="822,838,746,840,745,835,827,836"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a20d6d999152c5042a3e8f9b57c661b4d" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="323,705,466,748"/>
+<area shape="poly" title=" " alt="" coords="884,817,841,799,792,781,705,761,618,747,468,732,466,727,619,742,706,756,793,776,843,794,889,816"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#afe8e3d6f6e91d0809a097c6ac9833f84" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="325,772,465,815"/>
+<area shape="poly" title=" " alt="" coords="864,820,792,807,704,798,616,793,467,793,464,788,616,788,705,792,793,801,869,819"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a59733a3b1589a10af47794977d0f487e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="319,839,470,881"/>
+<area shape="poly" title=" " alt="" coords="865,857,793,873,706,880,620,880,472,871,470,866,620,875,706,875,792,868,870,854"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a4389b191c3605332cd2d4ee0dbb0f8b0" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="323,905,466,948"/>
+<area shape="poly" title=" " alt="" coords="877,858,793,887,706,903,618,914,468,926,466,921,617,909,705,898,792,881,881,855"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a61ed9f2604fb99b22b15f56a94598476" title="Construye el denominador de la ecuacion cinetica de tipo MMUniInhibidor." alt="" coords="559,1136,790,1163"/>
+<area shape="poly" title=" " alt="" coords="922,864,909,920,885,989,847,1059,823,1091,794,1119,762,1138,759,1133,791,1115,819,1088,842,1056,880,986,904,919,919,868"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a1ce34ddce6ad598235045dd9726e9e7e" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="304,1023,486,1065"/>
+<area shape="poly" title=" " alt="" coords="917,863,900,904,873,948,838,991,817,1010,794,1025,756,1042,717,1054,635,1067,556,1069,487,1063,485,1058,556,1063,635,1062,716,1049,754,1037,791,1020,814,1006,834,987,869,945,895,902,914,867"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a0a27cec47470b60e46fe110cab3edab6" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="304,1089,486,1132"/>
+<area shape="poly" title=" " alt="" coords="921,863,907,913,881,971,844,1028,821,1053,794,1074,770,1085,739,1094,659,1106,570,1112,487,1114,485,1109,569,1107,658,1101,737,1089,768,1080,791,1070,817,1049,840,1025,876,968,902,911,918,868"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a9bd74e953991c0873e15141e052eeeba" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="300,1156,490,1199"/>
+<area shape="poly" title=" " alt="" coords="926,864,920,933,899,1020,882,1064,859,1107,830,1145,794,1177,755,1198,714,1212,671,1220,626,1222,541,1216,469,1202,468,1197,542,1211,627,1217,670,1214,713,1207,753,1193,791,1172,826,1142,855,1104,877,1062,894,1018,914,932,924,868"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a7398e14df831e6270e987f4c5eaad236" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="300,1223,490,1265"/>
+<area shape="poly" title=" " alt="" coords="928,864,924,941,917,989,905,1041,888,1093,865,1144,834,1189,794,1228,771,1239,740,1247,662,1256,574,1257,491,1254,489,1249,574,1252,662,1251,739,1242,769,1234,791,1223,830,1186,860,1141,883,1091,900,1040,912,988,919,941,925,868"/>
+<area shape="rect" href="class_t_mass_action.html#a31a4b542f91aab112a7bcb2e3de1819e" title="Construye la ecuacion cinetica segun la ley de accion de masas." alt="" coords="568,1456,781,1483"/>
+<area shape="poly" title=" " alt="" coords="925,863,913,989,887,1160,869,1248,848,1328,823,1394,809,1420,794,1439,767,1458,765,1453,790,1435,805,1417,818,1392,843,1327,864,1247,882,1159,908,988,922,868"/>
+<area shape="rect" href="class_t_mass_action.html#a686b8ca0db5dfef10ba9b3adb8e0a40e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="297,1407,492,1449"/>
+<area shape="poly" title=" " alt="" coords="925,864,913,983,888,1143,870,1223,849,1297,823,1356,809,1379,794,1395,772,1408,742,1418,665,1430,577,1435,493,1435,493,1429,577,1429,665,1425,741,1413,770,1403,791,1391,805,1375,819,1353,844,1295,865,1222,882,1142,908,982,922,868"/>
+<area shape="rect" href="class_t_mass_action.html#a14d0626057ebcbc68f87caf65a98ffe4" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="281,1591,509,1617"/>
+<area shape="poly" title=" " alt="" coords="926,864,916,1000,892,1190,874,1286,853,1375,826,1447,811,1475,794,1497,766,1519,738,1531,711,1536,683,1535,625,1533,593,1537,558,1548,535,1564,510,1581,477,1593,476,1587,508,1576,531,1560,556,1543,592,1531,624,1527,683,1530,711,1530,737,1526,763,1515,790,1493,806,1472,821,1445,847,1373,869,1285,887,1189,911,1000,923,868"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html#ac8081966718290e0e320eb731f0083d4" title="Comprueba que se envian los parametros propios del mecanismo HillInhibidorActivador: [Vmax,..." alt="" coords="598,1288,751,1331"/>
+<area shape="poly" title=" " alt="" coords="927,864,922,945,903,1053,886,1112,863,1169,833,1223,794,1271,775,1287,752,1297,750,1293,772,1282,790,1267,828,1220,858,1167,881,1110,898,1052,917,945,924,868"/>
+<area shape="rect" href="class_t_mass_action.html#ab938b358d430a859fe1ebda15c581320" title="Comprueba que se han enviado los parametros necesarios del mecanismo MassAction: [kd,..." alt="" coords="575,1355,774,1381"/>
+<area shape="poly" title=" " alt="" coords="924,864,909,972,882,1116,864,1188,843,1254,820,1308,794,1345,776,1357,773,1353,790,1341,815,1305,838,1252,859,1187,876,1115,904,972,921,868"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a8301f2c15620dba9545389641e372c89" title="Comprueba que se envian los parametros propios del mecanismo MMBiBiInhibidor: [Vmax,..." alt="" coords="562,5,787,32"/>
+<area shape="poly" title=" " alt="" coords="923,808,914,653,893,427,875,310,853,203,825,115,808,81,790,55,777,44,764,35,762,30,780,39,794,52,813,78,830,113,858,202,881,309,898,426,919,653,928,809"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#a4ab89662512bf0e1709d2e2ad8c779c2" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMBiSecAleatorio: [Vmax,..." alt="" coords="602,312,747,355"/>
+<area shape="poly" title=" " alt="" coords="924,807,919,724,913,669,902,609,885,546,862,484,830,426,790,375,770,359,748,349,747,344,773,355,794,371,835,424,866,482,890,544,907,607,918,668,925,724,929,809"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a97da04356397596583848a82396c423e" title="Comprueba que se han enviado los parametros necesarios para el mecanismo MMUniBiInhibidor: [Vmax,..." alt="" coords="604,648,745,691"/>
+<area shape="poly" title=" " alt="" coords="903,812,855,762,824,735,791,712,746,690,745,685,794,707,828,731,859,758,908,812"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#ad8c3741daad20e9a2ce69b95bcd486aa" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMUniInhibidor: [Vmax,..." alt="" coords="564,984,785,1011"/>
+<area shape="poly" title=" " alt="" coords="908,861,860,917,828,944,794,968,750,986,747,981,791,963,825,940,856,913,904,865"/>
+<area shape="rect" href="class_t_form1.html#a592eff540cbc9ff77e21d833059b9a39" title="Al seleccionar una reaccion de la lista de reacciones cargadas, muestra la ecuacion cinetica generada..." alt="" coords="567,1557,782,1600"/>
+<area shape="poly" title=" " alt="" coords="926,864,916,1007,892,1209,874,1312,852,1407,826,1486,811,1517,794,1540,771,1559,769,1554,790,1537,806,1514,821,1484,847,1406,869,1311,887,1208,911,1007,923,869"/>
+<area shape="rect" href="class_t_form1.html#a4054d1c2b1745192b6b1cff6fee0bcd5" title="Accion que se realiza al darle al boton &#39;Guardar ecuaciones y sistema&#39; del menu. Genera un archivo tx..." alt="" coords="580,1624,769,1667"/>
+<area shape="poly" title=" " alt="" coords="927,864,919,1020,898,1244,880,1360,858,1466,830,1554,813,1588,794,1614,770,1632,768,1627,790,1610,808,1585,825,1552,853,1465,875,1359,892,1244,914,1020,924,868"/>
+<area shape="poly" title=" " alt="" coords="545,191,490,199,486,194,549,187"/>
+<area shape="poly" title=" " alt="" coords="627,195,510,244,476,255,472,251,508,239,631,191"/>
+<area shape="poly" title=" " alt="" coords="624,155,508,111,475,99,472,94,510,105,629,152"/>
+<area shape="poly" title=" " alt="" coords="540,160,493,155,490,150,544,157"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#afd7921f14f90bb419de8d1dd53d27e13" title="Constructor de la clase TMMBiBiInhibidor. Llama al constructor del padre, rellena los atributos propi..." alt="" coords="26,120,212,163"/>
+<area shape="poly" title=" " alt="" coords="287,184,212,166,209,161,291,181"/>
+<area shape="poly" title=" " alt="" coords="294,249,280,244,207,205,151,166,149,161,210,200,282,239,298,246"/>
+<area shape="poly" title=" " alt="" coords="287,102,212,121,208,118,291,98"/>
+<area shape="poly" title=" " alt="" coords="281,143,214,143,211,139,285,140"/>
+<area shape="poly" title=" " alt="" coords="585,489,469,472,467,467,589,487"/>
+<area shape="poly" title=" " alt="" coords="585,511,469,521,467,517,589,507"/>
+<area shape="poly" title=" " alt="" coords="597,530,510,561,473,572,469,568,508,556,600,526"/>
+<area shape="poly" title=" " alt="" coords="614,474,508,428,469,414,467,409,510,423,619,472"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#ad4e65c49ef3a64b8162e1aab18289d3d" title="Constructor de la clase TMMBiSecAleatorio. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="46,437,192,480"/>
+<area shape="poly" title=" " alt="" coords="305,460,194,461,191,456,309,457"/>
+<area shape="poly" title=" " alt="" coords="305,506,193,479,191,474,309,503"/>
+<area shape="poly" title=" " alt="" coords="303,570,280,561,207,522,151,483,149,478,210,517,282,556,307,567"/>
+<area shape="poly" title=" " alt="" coords="306,415,194,443,190,439,309,411"/>
+<area shape="poly" title=" " alt="" coords="616,810,508,762,468,748,466,743,510,758,621,808"/>
+<area shape="poly" title=" " alt="" coords="587,825,466,807,465,802,592,823"/>
+<area shape="poly" title=" " alt="" coords="587,846,472,856,470,852,591,843"/>
+<area shape="poly" title=" " alt="" coords="595,866,510,896,468,908,465,904,508,891,599,862"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a27f1f61c93dc9400e2111c7e84bfb813" title="Constructor de la clase TMMUniBiInhibidor. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="49,772,189,815"/>
+<area shape="poly" title=" " alt="" coords="306,750,192,778,188,774,310,745"/>
+<area shape="poly" title=" " alt="" coords="307,795,191,796,188,791,311,792"/>
+<area shape="poly" title=" " alt="" coords="302,840,191,813,189,808,307,837"/>
+<area shape="poly" title=" " alt="" coords="306,905,280,896,207,857,151,818,149,813,210,852,282,891,311,903"/>
+<area shape="poly" title=" " alt="" coords="629,1130,508,1080,476,1068,474,1063,510,1075,634,1128"/>
+<area shape="poly" title=" " alt="" coords="556,1134,487,1126,485,1121,561,1132"/>
+<area shape="poly" title=" " alt="" coords="541,1164,491,1170,489,1165,546,1161"/>
+<area shape="poly" title=" " alt="" coords="622,1170,510,1213,474,1224,472,1220,508,1208,626,1167"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#aacd95490240c218832d2a12e5a6b33a2" title="Constructor de la clase TMMUniInhibidor. Llama al constructor del padre, rellena los atributos propio..." alt="" coords="5,1097,233,1124"/>
+<area shape="poly" title=" " alt="" coords="287,1072,179,1099,176,1095,291,1068"/>
+<area shape="poly" title=" " alt="" coords="286,1112,234,1113,232,1108,291,1109"/>
+<area shape="poly" title=" " alt="" coords="287,1153,178,1127,177,1122,291,1150"/>
+<area shape="poly" title=" " alt="" coords="293,1218,280,1213,199,1169,139,1127,138,1122,201,1164,282,1208,299,1216"/>
+<area shape="rect" href="class_t_mass_action.html#ab908415a5e4eb18a0ffaf33d5f58ad7c" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="301,1524,488,1567"/>
+<area shape="poly" title=" " alt="" coords="605,1488,477,1526,475,1521,611,1487"/>
+<area shape="rect" href="class_t_mass_action.html#a05e6775beaf34a255e63993627e7ea17" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="285,1473,505,1500"/>
+<area shape="poly" title=" " alt="" coords="550,1477,506,1482,505,1477,556,1476"/>
+<area shape="poly" title=" " alt="" coords="562,1454,493,1445,493,1440,567,1453"/>
+<area shape="poly" title=" " alt="" coords="581,1488,559,1503,543,1522,536,1541,528,1561,511,1581,489,1593,487,1588,507,1577,524,1559,531,1539,538,1519,555,1499,576,1490"/>
+<area shape="rect" href="class_t_mass_action.html#a74563e7583262c8adf5b9ed1f9bbca63" title="Constructor de la clase TMassAction. Llama al constructor del padre, rellena los atributos propios y ..." alt="" coords="27,1473,211,1500"/>
+<area shape="poly" title=" " alt="" coords="283,1523,186,1503,185,1498,288,1521"/>
+<area shape="poly" title=" " alt="" coords="267,1488,212,1489,211,1484,272,1486"/>
+<area shape="poly" title=" " alt="" coords="280,1454,186,1475,184,1470,284,1450"/>
+<area shape="poly" title=" " alt="" coords="300,1586,280,1581,200,1542,140,1503,140,1498,203,1537,282,1576,305,1586"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html#aa500c80dc4d5647b281f67063009228a" title="Constructor de la clase THillInhibidorActivador. Llama al constructor del padre, rellena los atributo..." alt="" coords="315,1289,475,1332"/>
+<area shape="poly" title=" " alt="" coords="580,1311,476,1313,475,1308,585,1309"/>
+<area shape="poly" title=" " alt="" coords="557,1363,495,1366,425,1371,352,1380,281,1397,240,1414,200,1435,140,1475,136,1471,197,1430,237,1409,280,1392,351,1375,424,1365,495,1361,562,1362"/>
+<area shape="poly" title=" " alt="" coords="544,12,484,13,416,18,348,27,281,44,243,60,206,80,148,121,144,118,204,75,241,55,280,39,347,22,416,12,484,8,548,9"/>
+<area shape="poly" title=" " alt="" coords="584,329,519,329,441,332,360,342,281,361,243,377,207,397,148,438,144,435,204,393,241,372,280,356,359,337,441,327,519,323,589,325"/>
+<area shape="poly" title=" " alt="" coords="587,664,521,664,443,667,361,677,281,696,243,712,207,732,148,773,144,770,204,727,241,707,280,691,360,672,443,662,521,659,591,661"/>
+<area shape="poly" title=" " alt="" coords="546,987,486,987,418,989,349,998,281,1013,238,1031,198,1054,138,1098,134,1095,195,1050,236,1026,280,1008,348,992,417,984,486,981,551,984"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4645ac8a1913d474bded3ccb4f0b75ba" name="a4645ac8a1913d474bded3ccb4f0b75ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4645ac8a1913d474bded3ccb4f0b75ba">&#9670;&#160;</a></span>getReactionName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMechanism::getReactionName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el nombre de la reaccion asociada al mecanismo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>String nombre corto de la reaccion. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba_icgraph.png" border="0" usemap="#aclass_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba_icgraph" id="aclass_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba_icgraph">
+<area shape="rect" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="1063,824,1272,851"/>
+<area shape="rect" href="class_t_model.html#a45494635ca0fd3779ea5147b616462c7" title="Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la v..." alt="" coords="848,773,1007,800"/>
+<area shape="poly" title=" " alt="" coords="1083,821,995,803,994,798,1088,819"/>
+<area shape="rect" href="class_t_mechanism.html#a952aaf0c9f7c5f2ab95e20ba55cdde4d" title="Devuelve un puntero a la reaccion dada su nombre." alt="" coords="840,824,1015,851"/>
+<area shape="poly" title=" " alt="" coords="1045,838,1016,840,1014,835,1050,836"/>
+<area shape="rect" href="class_t_mechanism.html#ad2054d3b15fe158f94e381fe547f9e55" title="Muestra el mecanismo guardado y sus atributos." alt="" coords="853,875,1002,901"/>
+<area shape="poly" title=" " alt="" coords="1083,856,995,877,993,872,1088,853"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a4efc1b68aecca229eb9a9467dd14ef94" title="Construye el denominador de la ecuacion cinetica de tipo MMBiBiInhibidor." alt="" coords="557,160,792,187"/>
+<area shape="poly" title=" " alt="" coords="839,814,838,814,824,790,815,761,806,688,808,601,814,508,820,415,822,329,813,258,804,229,790,207,770,190,769,185,794,204,809,227,818,256,827,329,826,416,819,509,813,601,812,687,820,759,829,788,843,810,844,814"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#ae96c6cd6c35591da5afbd8e690366145" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="302,187,488,229"/>
+<area shape="poly" title=" " alt="" coords="839,814,838,814,826,792,817,765,809,699,811,620,816,536,821,451,822,374,813,310,804,285,790,266,771,252,742,240,663,224,573,215,489,211,486,206,574,209,664,218,743,235,773,247,794,262,808,283,818,308,827,374,827,452,822,536,816,621,815,699,822,764,830,790,842,810,844,814"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a7c70835aee1f69a6acf4cf49618d404f" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="302,253,488,296"/>
+<area shape="poly" title=" " alt="" coords="839,814,838,814,826,794,818,768,811,706,812,632,817,553,822,474,822,401,812,342,803,319,791,302,770,289,741,280,663,269,573,267,489,270,486,265,573,262,663,264,742,274,773,284,794,298,808,317,818,341,827,401,827,474,823,553,818,632,816,706,823,767,831,791,842,810,844,814"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a82dcfcc31f05b07fd90cc5be9df671d8" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="298,53,492,96"/>
+<area shape="poly" title=" " alt="" coords="839,814,838,814,823,786,812,752,806,712,804,668,808,567,818,460,827,352,829,254,826,210,819,172,807,141,790,116,760,91,725,72,687,60,647,52,567,49,494,55,490,51,566,43,648,47,688,54,727,68,763,87,794,113,812,138,824,171,831,210,834,254,832,353,823,460,814,568,810,668,812,712,817,751,827,784,843,810,844,814"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a2e2b9f5d2797bdcae5f12f7b667962d5" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="298,120,492,163"/>
+<area shape="poly" title=" " alt="" coords="839,814,838,814,823,788,813,755,808,717,806,674,810,578,819,475,828,372,829,279,826,238,819,202,807,172,791,150,771,138,742,129,665,122,577,124,493,131,490,127,576,119,665,117,743,124,773,133,794,146,812,170,824,200,831,237,835,278,833,373,824,475,815,578,811,674,813,716,819,754,828,786,843,810,844,814"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#af112b1a3812d328d9836c7962dcc311a" title="Construye el denominador de la ecuacion cinetica de tipo MMBiSecAleatorio." alt="" coords="602,480,747,523"/>
+<area shape="poly" title=" " alt="" coords="840,815,838,814,816,779,807,745,808,711,813,677,818,644,819,610,811,577,790,543,771,527,748,516,747,510,773,522,794,540,816,575,825,610,824,644,818,678,813,711,812,744,821,777,842,810,845,815"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#afc3e0110e898539d2128a7673f0239bc" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="322,437,468,480"/>
+<area shape="poly" title=" " alt="" coords="840,814,838,814,822,791,812,769,806,746,804,723,809,678,819,634,829,591,832,549,828,529,821,509,809,489,791,470,755,445,715,429,671,419,627,416,582,418,539,423,465,439,462,435,539,418,582,412,627,411,672,414,716,423,757,440,794,466,813,486,826,506,834,527,837,549,834,592,824,635,814,679,809,723,811,745,817,767,827,789,842,810,845,814"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#aa655f131d118c0f2eb0d2f773c30da16" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="322,504,468,547"/>
+<area shape="poly" title=" " alt="" coords="840,814,838,814,819,786,812,757,812,729,815,702,818,674,818,648,810,622,791,597,768,582,736,569,651,550,555,538,469,531,467,526,555,533,651,545,737,564,771,577,794,593,815,619,823,647,824,675,820,702,817,730,817,757,824,784,842,810,845,814"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#ab79024ec54f7ab3a243d92dac5596070" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="319,571,470,613"/>
+<area shape="poly" title=" " alt="" coords="841,815,838,814,822,791,815,768,815,722,817,700,815,678,807,658,791,638,768,625,736,615,652,601,557,595,472,593,470,588,557,589,652,596,737,609,770,620,794,634,812,655,820,677,822,700,821,722,820,767,827,789,842,810,846,815"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#af3b3f353979875875816507267ee9ce4" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="322,371,468,413"/>
+<area shape="poly" title=" " alt="" coords="840,814,838,814,820,788,809,763,802,737,800,712,806,662,819,612,831,563,834,516,831,493,824,470,810,447,791,425,769,411,736,401,651,390,555,387,469,389,466,385,555,382,652,384,738,396,771,406,794,421,815,444,828,467,837,491,840,516,836,564,824,613,811,663,806,712,807,737,814,761,825,786,842,810,845,814"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#adff7e8d28bf0d198688fe6f6036b8bf8" title="Construye el denominador de la ecuacion cinetica de tipo MMUniBiInhibidor." alt="" coords="604,816,745,859"/>
+<area shape="poly" title=" " alt="" coords="822,838,746,840,745,835,827,836"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a20d6d999152c5042a3e8f9b57c661b4d" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="323,705,466,748"/>
+<area shape="poly" title=" " alt="" coords="852,819,839,814,815,797,805,788,791,781,707,756,619,740,537,732,468,728,466,724,537,726,620,735,708,750,793,776,808,784,818,793,842,810,858,818"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#afe8e3d6f6e91d0809a097c6ac9833f84" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="325,772,465,815"/>
+<area shape="poly" title=" " alt="" coords="864,820,792,807,704,798,616,793,467,793,464,788,616,788,705,792,793,801,869,819"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a59733a3b1589a10af47794977d0f487e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="319,839,470,881"/>
+<area shape="poly" title=" " alt="" coords="865,857,793,873,706,880,620,880,472,871,470,866,620,875,706,875,792,868,870,854"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a4389b191c3605332cd2d4ee0dbb0f8b0" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="323,905,466,948"/>
+<area shape="poly" title=" " alt="" coords="859,857,841,865,818,877,793,887,706,905,618,918,468,928,466,923,618,912,705,900,792,881,815,872,839,860,863,854"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a61ed9f2604fb99b22b15f56a94598476" title="Construye el denominador de la ecuacion cinetica de tipo MMUniInhibidor." alt="" coords="559,1136,790,1163"/>
+<area shape="poly" title=" " alt="" coords="845,858,842,864,822,896,814,927,814,958,819,990,824,1022,825,1054,816,1087,794,1119,769,1138,765,1133,790,1115,811,1084,819,1053,819,1022,814,991,809,959,809,926,817,894,838,861,841,862"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a1ce34ddce6ad598235045dd9726e9e7e" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="304,1023,486,1065"/>
+<area shape="poly" title=" " alt="" coords="842,862,842,864,828,884,821,904,821,945,820,986,811,1006,794,1025,759,1047,721,1063,681,1073,639,1079,558,1078,486,1069,484,1063,558,1073,639,1073,680,1068,719,1058,757,1042,791,1021,807,1003,814,985,816,945,816,903,823,881,838,861,845,858"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a0a27cec47470b60e46fe110cab3edab6" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="304,1089,486,1132"/>
+<area shape="poly" title=" " alt="" coords="845,858,842,864,824,891,818,918,818,946,822,974,825,1002,824,1029,815,1056,794,1082,772,1095,741,1105,661,1116,571,1120,487,1118,485,1113,571,1114,661,1111,740,1100,770,1090,791,1078,811,1054,819,1028,820,1002,816,974,813,946,812,918,820,889,838,861,841,862"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a9bd74e953991c0873e15141e052eeeba" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="300,1156,490,1199"/>
+<area shape="poly" title=" " alt="" coords="844,859,842,864,828,884,819,903,811,943,815,983,824,1023,832,1063,834,1102,831,1122,823,1140,811,1159,794,1177,772,1189,742,1197,663,1204,574,1201,491,1193,489,1188,574,1195,663,1198,741,1192,770,1184,791,1173,807,1156,819,1138,826,1120,829,1102,827,1064,819,1024,810,984,806,943,814,902,823,881,838,861,840,862"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#a7398e14df831e6270e987f4c5eaad236" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="300,1223,490,1265"/>
+<area shape="poly" title=" " alt="" coords="844,859,842,864,827,886,816,908,811,929,809,951,813,994,823,1038,833,1081,835,1124,832,1146,825,1167,812,1188,794,1209,762,1234,725,1252,686,1265,645,1272,564,1275,491,1267,489,1262,564,1270,645,1267,685,1259,723,1247,759,1229,791,1205,808,1185,820,1165,827,1145,830,1124,827,1082,818,1039,808,995,803,951,805,928,811,906,822,883,838,861,840,862"/>
+<area shape="rect" href="class_t_mass_action.html#a31a4b542f91aab112a7bcb2e3de1819e" title="Construye la ecuacion cinetica segun la ley de accion de masas." alt="" coords="568,1456,781,1483"/>
+<area shape="poly" title=" " alt="" coords="844,859,842,864,830,886,821,912,813,981,814,1062,819,1150,825,1238,826,1320,817,1389,808,1417,794,1439,770,1458,768,1453,790,1436,803,1415,812,1388,820,1320,819,1238,814,1150,808,1062,808,980,816,911,825,883,838,861,840,863"/>
+<area shape="rect" href="class_t_mass_action.html#a686b8ca0db5dfef10ba9b3adb8e0a40e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="297,1407,492,1449"/>
+<area shape="poly" title=" " alt="" coords="844,859,842,864,831,884,823,909,816,973,817,1049,822,1131,827,1213,827,1288,818,1351,808,1376,794,1395,773,1409,744,1420,667,1432,578,1437,494,1436,493,1431,578,1431,666,1427,742,1415,771,1404,790,1391,804,1373,813,1350,822,1288,822,1213,817,1131,812,1049,810,972,818,908,826,882,838,861,840,863"/>
+<area shape="rect" href="class_t_mass_action.html#a14d0626057ebcbc68f87caf65a98ffe4" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="281,1591,509,1617"/>
+<area shape="poly" title=" " alt="" coords="844,859,843,864,829,888,819,917,811,993,813,1083,821,1180,828,1277,829,1367,826,1407,820,1442,810,1472,794,1496,768,1520,740,1533,713,1538,685,1537,625,1533,593,1537,558,1548,535,1564,510,1581,477,1593,476,1587,508,1576,531,1560,556,1543,592,1532,625,1528,685,1532,713,1532,739,1528,765,1516,790,1493,805,1470,815,1441,821,1406,824,1366,822,1277,815,1180,808,1083,806,993,814,916,824,886,838,861,840,863"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html#ac8081966718290e0e320eb731f0083d4" title="Comprueba que se envian los parametros propios del mecanismo HillInhibidorActivador: [Vmax,..." alt="" coords="598,1288,751,1331"/>
+<area shape="poly" title=" " alt="" coords="844,859,842,864,824,890,812,915,805,940,802,965,806,1015,818,1064,829,1115,834,1166,832,1192,825,1218,813,1244,794,1271,775,1288,753,1299,750,1295,772,1284,790,1268,808,1242,820,1216,827,1191,829,1166,824,1116,813,1066,801,1016,797,965,800,939,807,913,819,887,838,861,840,862"/>
+<area shape="rect" href="class_t_mass_action.html#ab938b358d430a859fe1ebda15c581320" title="Comprueba que se han enviado los parametros necesarios del mecanismo MassAction: [kd,..." alt="" coords="575,1355,774,1381"/>
+<area shape="poly" title=" " alt="" coords="844,859,842,864,832,882,824,904,817,961,817,1030,820,1103,824,1177,823,1246,815,1303,806,1326,794,1344,776,1359,773,1354,790,1341,801,1324,809,1302,818,1245,818,1177,815,1104,811,1030,811,961,819,903,827,880,838,861,840,863"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#a8301f2c15620dba9545389641e372c89" title="Comprueba que se envian los parametros propios del mecanismo MMBiBiInhibidor: [Vmax,..." alt="" coords="562,5,787,32"/>
+<area shape="poly" title=" " alt="" coords="839,814,838,814,821,784,810,748,803,705,801,656,804,549,814,432,823,316,827,209,824,161,818,119,807,83,790,55,778,43,766,35,764,30,782,39,794,52,811,81,823,118,829,161,832,209,829,317,819,433,809,549,806,656,808,704,815,746,826,782,843,810,844,814"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#a4ab89662512bf0e1709d2e2ad8c779c2" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMBiSecAleatorio: [Vmax,..." alt="" coords="602,312,747,355"/>
+<area shape="poly" title=" " alt="" coords="839,814,838,814,818,785,805,757,797,729,794,702,800,647,812,593,826,539,831,485,829,458,822,431,809,403,790,375,771,358,749,347,747,342,774,354,794,372,814,401,827,429,834,457,836,485,831,540,818,594,805,648,800,702,802,728,810,755,823,783,842,810,844,814"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a97da04356397596583848a82396c423e" title="Comprueba que se han enviado los parametros necesarios para el mecanismo MMUniBiInhibidor: [Vmax,..." alt="" coords="604,648,745,691"/>
+<area shape="poly" title=" " alt="" coords="842,816,839,814,827,801,819,788,813,762,808,736,801,724,791,711,769,696,746,686,744,680,771,692,794,707,806,721,813,734,819,760,824,786,831,798,842,810,848,815"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#ad8c3741daad20e9a2ce69b95bcd486aa" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMUniInhibidor: [Vmax,..." alt="" coords="564,984,785,1011"/>
+<area shape="poly" title=" " alt="" coords="843,861,842,865,831,877,825,889,819,915,813,941,806,954,794,967,763,986,760,981,791,963,802,951,808,939,814,914,820,887,827,874,839,861,847,857"/>
+<area shape="rect" href="class_t_form1.html#a592eff540cbc9ff77e21d833059b9a39" title="Al seleccionar una reaccion de la lista de reacciones cargadas, muestra la ecuacion cinetica generada..." alt="" coords="567,1557,782,1600"/>
+<area shape="poly" title=" " alt="" coords="844,859,843,864,828,889,818,921,811,959,809,1001,811,1097,818,1200,826,1303,828,1399,825,1442,819,1481,809,1514,794,1540,773,1559,771,1554,790,1537,805,1512,814,1480,820,1442,823,1399,820,1303,813,1200,805,1097,803,1001,806,958,812,920,823,887,838,861,840,863"/>
+<area shape="rect" href="class_t_form1.html#a4054d1c2b1745192b6b1cff6fee0bcd5" title="Accion que se realiza al darle al boton &#39;Guardar ecuaciones y sistema&#39; del menu. Genera un archivo tx..." alt="" coords="580,1624,769,1667"/>
+<area shape="poly" title=" " alt="" coords="844,859,843,864,826,892,815,928,809,969,806,1017,810,1123,819,1237,829,1352,832,1458,829,1506,823,1548,811,1585,794,1614,770,1633,768,1628,790,1610,807,1583,818,1547,824,1505,827,1458,823,1352,814,1238,804,1123,801,1016,804,969,810,926,821,890,838,861,840,863"/>
+<area shape="poly" title=" " alt="" coords="545,191,490,199,486,194,549,187"/>
+<area shape="poly" title=" " alt="" coords="627,195,510,244,476,255,472,251,508,239,631,191"/>
+<area shape="poly" title=" " alt="" coords="624,155,508,111,475,99,472,94,510,105,629,152"/>
+<area shape="poly" title=" " alt="" coords="540,160,493,155,490,150,544,157"/>
+<area shape="rect" href="class_t_m_m_bi_bi_inhibidor.html#afd7921f14f90bb419de8d1dd53d27e13" title="Constructor de la clase TMMBiBiInhibidor. Llama al constructor del padre, rellena los atributos propi..." alt="" coords="26,120,212,163"/>
+<area shape="poly" title=" " alt="" coords="287,184,212,166,209,161,291,181"/>
+<area shape="poly" title=" " alt="" coords="294,249,280,244,207,205,151,166,149,161,210,200,282,239,298,246"/>
+<area shape="poly" title=" " alt="" coords="287,102,212,121,208,118,291,98"/>
+<area shape="poly" title=" " alt="" coords="281,143,214,143,211,139,285,140"/>
+<area shape="poly" title=" " alt="" coords="585,489,469,472,467,467,589,487"/>
+<area shape="poly" title=" " alt="" coords="585,511,469,521,467,517,589,507"/>
+<area shape="poly" title=" " alt="" coords="597,530,510,561,473,572,469,568,508,556,600,526"/>
+<area shape="poly" title=" " alt="" coords="614,474,508,428,469,414,467,409,510,423,619,472"/>
+<area shape="rect" href="class_t_m_m_bi_sec_aleatorio.html#ad4e65c49ef3a64b8162e1aab18289d3d" title="Constructor de la clase TMMBiSecAleatorio. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="46,437,192,480"/>
+<area shape="poly" title=" " alt="" coords="305,460,194,461,191,456,309,457"/>
+<area shape="poly" title=" " alt="" coords="305,506,193,479,191,474,309,503"/>
+<area shape="poly" title=" " alt="" coords="303,570,280,561,207,522,151,483,149,478,210,517,282,556,307,567"/>
+<area shape="poly" title=" " alt="" coords="306,415,194,443,190,439,309,411"/>
+<area shape="poly" title=" " alt="" coords="616,810,508,762,468,748,466,743,510,758,621,808"/>
+<area shape="poly" title=" " alt="" coords="587,825,466,807,465,802,592,823"/>
+<area shape="poly" title=" " alt="" coords="587,846,472,856,470,852,591,843"/>
+<area shape="poly" title=" " alt="" coords="595,866,510,896,468,908,465,904,508,891,599,862"/>
+<area shape="rect" href="class_t_m_m_uni_bi_inhibidor.html#a27f1f61c93dc9400e2111c7e84bfb813" title="Constructor de la clase TMMUniBiInhibidor. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="49,772,189,815"/>
+<area shape="poly" title=" " alt="" coords="306,750,192,778,188,774,310,745"/>
+<area shape="poly" title=" " alt="" coords="307,795,191,796,188,791,311,792"/>
+<area shape="poly" title=" " alt="" coords="302,840,191,813,189,808,307,837"/>
+<area shape="poly" title=" " alt="" coords="306,905,280,896,207,857,151,818,149,813,210,852,282,891,311,903"/>
+<area shape="poly" title=" " alt="" coords="629,1130,508,1080,476,1068,474,1063,510,1075,634,1128"/>
+<area shape="poly" title=" " alt="" coords="556,1134,487,1126,485,1121,561,1132"/>
+<area shape="poly" title=" " alt="" coords="541,1164,491,1170,489,1165,546,1161"/>
+<area shape="poly" title=" " alt="" coords="622,1170,510,1213,474,1224,472,1220,508,1208,626,1167"/>
+<area shape="rect" href="class_t_m_m_uni_inhibidor.html#aacd95490240c218832d2a12e5a6b33a2" title="Constructor de la clase TMMUniInhibidor. Llama al constructor del padre, rellena los atributos propio..." alt="" coords="5,1097,233,1124"/>
+<area shape="poly" title=" " alt="" coords="287,1072,179,1099,176,1095,291,1068"/>
+<area shape="poly" title=" " alt="" coords="286,1112,234,1113,232,1108,291,1109"/>
+<area shape="poly" title=" " alt="" coords="287,1153,178,1127,177,1122,291,1150"/>
+<area shape="poly" title=" " alt="" coords="293,1218,280,1213,199,1169,139,1127,138,1122,201,1164,282,1208,299,1216"/>
+<area shape="rect" href="class_t_mass_action.html#ab908415a5e4eb18a0ffaf33d5f58ad7c" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="301,1524,488,1567"/>
+<area shape="poly" title=" " alt="" coords="605,1488,477,1526,475,1521,611,1487"/>
+<area shape="rect" href="class_t_mass_action.html#a05e6775beaf34a255e63993627e7ea17" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="285,1473,505,1500"/>
+<area shape="poly" title=" " alt="" coords="550,1477,506,1482,505,1477,556,1476"/>
+<area shape="poly" title=" " alt="" coords="562,1454,493,1445,493,1440,567,1453"/>
+<area shape="poly" title=" " alt="" coords="581,1488,559,1503,543,1522,536,1541,528,1561,511,1581,489,1593,487,1588,507,1577,524,1559,531,1539,538,1519,555,1499,576,1490"/>
+<area shape="rect" href="class_t_mass_action.html#a74563e7583262c8adf5b9ed1f9bbca63" title="Constructor de la clase TMassAction. Llama al constructor del padre, rellena los atributos propios y ..." alt="" coords="27,1473,211,1500"/>
+<area shape="poly" title=" " alt="" coords="283,1523,186,1503,185,1498,288,1521"/>
+<area shape="poly" title=" " alt="" coords="267,1488,212,1489,211,1484,272,1486"/>
+<area shape="poly" title=" " alt="" coords="280,1454,186,1475,184,1470,284,1450"/>
+<area shape="poly" title=" " alt="" coords="300,1586,280,1581,200,1542,140,1503,140,1498,203,1537,282,1576,305,1586"/>
+<area shape="rect" href="class_t_hill_inhibidor_activador.html#aa500c80dc4d5647b281f67063009228a" title="Constructor de la clase THillInhibidorActivador. Llama al constructor del padre, rellena los atributo..." alt="" coords="315,1289,475,1332"/>
+<area shape="poly" title=" " alt="" coords="580,1311,476,1313,475,1308,585,1309"/>
+<area shape="poly" title=" " alt="" coords="557,1363,495,1366,425,1371,352,1380,281,1397,240,1414,200,1435,140,1475,136,1471,197,1430,237,1409,280,1392,351,1375,424,1365,495,1361,562,1362"/>
+<area shape="poly" title=" " alt="" coords="544,12,484,13,416,18,348,27,281,44,243,60,206,80,148,121,144,118,204,75,241,55,280,39,347,22,416,12,484,8,548,9"/>
+<area shape="poly" title=" " alt="" coords="584,329,519,329,441,332,360,342,281,361,243,377,207,397,148,438,144,435,204,393,241,372,280,356,359,337,441,327,519,323,589,325"/>
+<area shape="poly" title=" " alt="" coords="587,664,521,664,443,667,361,677,281,696,243,712,207,732,148,773,144,770,204,727,241,707,280,691,360,672,443,662,521,659,591,661"/>
+<area shape="poly" title=" " alt="" coords="546,987,486,987,418,989,349,998,281,1013,238,1031,198,1054,138,1098,134,1095,195,1050,236,1026,280,1008,348,992,417,984,486,981,551,984"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1054dac3455a1c80abe423848c3fa2d2" name="a1054dac3455a1c80abe423848c3fa2d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1054dac3455a1c80abe423848c3fa2d2">&#9670;&#160;</a></span>setDirectRatePython()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMechanism::setDirectRatePython </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo virtual para crear la ecuacion cinetica directa en forma de String. Depende del tipo de mecanismo. Formato para enviarla al solver de python. </p>
+
+<p>Reimplementado en <a class="el" href="class_t_hill_inhibidor_activador.html#acee6ec3171bf98254be22d219f6e037b">THillInhibidorActivador</a>, <a class="el" href="class_t_mass_action.html#ab908415a5e4eb18a0ffaf33d5f58ad7c">TMassAction</a>, <a class="el" href="class_t_m_m_bi_bi_inhibidor.html#ae96c6cd6c35591da5afbd8e690366145">TMMBiBiInhibidor</a>, <a class="el" href="class_t_m_m_bi_sec_aleatorio.html#afc3e0110e898539d2128a7673f0239bc">TMMBiSecAleatorio</a>, <a class="el" href="class_t_m_m_uni_bi_inhibidor.html#a20d6d999152c5042a3e8f9b57c661b4d">TMMUniBiInhibidor</a> y <a class="el" href="class_t_m_m_uni_inhibidor.html#a1ce34ddce6ad598235045dd9726e9e7e">TMMUniInhibidor</a>.</p>
+
+</div>
+</div>
+<a id="afe8e95d9dff3a179b6768d2433e63391" name="afe8e95d9dff3a179b6768d2433e63391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe8e95d9dff3a179b6768d2433e63391">&#9670;&#160;</a></span>setDirectRateShow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMechanism::setDirectRateShow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo virtual para crear la ecuacion cinetica directa en forma de String. Depende del tipo de mecanismo. Formato para mostrarla por pantalla. </p>
+
+<p>Reimplementado en <a class="el" href="class_t_hill_inhibidor_activador.html#ad7005d8496600717b5d85e97c6ce3163">THillInhibidorActivador</a>, <a class="el" href="class_t_mass_action.html#a05e6775beaf34a255e63993627e7ea17">TMassAction</a>, <a class="el" href="class_t_m_m_bi_bi_inhibidor.html#a7c70835aee1f69a6acf4cf49618d404f">TMMBiBiInhibidor</a>, <a class="el" href="class_t_m_m_bi_sec_aleatorio.html#aa655f131d118c0f2eb0d2f773c30da16">TMMBiSecAleatorio</a>, <a class="el" href="class_t_m_m_uni_bi_inhibidor.html#afe8e3d6f6e91d0809a097c6ac9833f84">TMMUniBiInhibidor</a> y <a class="el" href="class_t_m_m_uni_inhibidor.html#a0a27cec47470b60e46fe110cab3edab6">TMMUniInhibidor</a>.</p>
+
+</div>
+</div>
+<a id="ae0f128e6260d19a7a921282215393710" name="ae0f128e6260d19a7a921282215393710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0f128e6260d19a7a921282215393710">&#9670;&#160;</a></span>setInverseRatePython()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMechanism::setInverseRatePython </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo virtual para crear la ecuacion cinetica inversa en forma de String. Depende del tipo de mecanismo. Si la reaccion es unidireccional, devuelve "". Formato para enviarla al solver de python. </p>
+
+<p>Reimplementado en <a class="el" href="class_t_hill_inhibidor_activador.html#a1fe354667595968a2871276c71ed8f5a">THillInhibidorActivador</a>, <a class="el" href="class_t_mass_action.html#a686b8ca0db5dfef10ba9b3adb8e0a40e">TMassAction</a>, <a class="el" href="class_t_m_m_bi_bi_inhibidor.html#a82dcfcc31f05b07fd90cc5be9df671d8">TMMBiBiInhibidor</a>, <a class="el" href="class_t_m_m_bi_sec_aleatorio.html#ab79024ec54f7ab3a243d92dac5596070">TMMBiSecAleatorio</a>, <a class="el" href="class_t_m_m_uni_bi_inhibidor.html#a59733a3b1589a10af47794977d0f487e">TMMUniBiInhibidor</a> y <a class="el" href="class_t_m_m_uni_inhibidor.html#a9bd74e953991c0873e15141e052eeeba">TMMUniInhibidor</a>.</p>
+
+</div>
+</div>
+<a id="ad9fbcdcf6de41d2ebb66597165f199d0" name="ad9fbcdcf6de41d2ebb66597165f199d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9fbcdcf6de41d2ebb66597165f199d0">&#9670;&#160;</a></span>setInverseRateShow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMechanism::setInverseRateShow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo virtual para crear la ecuacion cinetica inversa en forma de String. Depende del tipo de mecanismo. Si la reaccion es unidireccional, devuelve "". Formato para mostrarla por pantalla. </p>
+
+<p>Reimplementado en <a class="el" href="class_t_hill_inhibidor_activador.html#aa8fb8bb153ef57fe1da0d83d53533558">THillInhibidorActivador</a>, <a class="el" href="class_t_mass_action.html#a14d0626057ebcbc68f87caf65a98ffe4">TMassAction</a>, <a class="el" href="class_t_m_m_bi_bi_inhibidor.html#a2e2b9f5d2797bdcae5f12f7b667962d5">TMMBiBiInhibidor</a>, <a class="el" href="class_t_m_m_bi_sec_aleatorio.html#af3b3f353979875875816507267ee9ce4">TMMBiSecAleatorio</a>, <a class="el" href="class_t_m_m_uni_bi_inhibidor.html#a4389b191c3605332cd2d4ee0dbb0f8b0">TMMUniBiInhibidor</a> y <a class="el" href="class_t_m_m_uni_inhibidor.html#a7398e14df831e6270e987f4c5eaad236">TMMUniInhibidor</a>.</p>
+
+</div>
+</div>
+<a id="ad2054d3b15fe158f94e381fe547f9e55" name="ad2054d3b15fe158f94e381fe547f9e55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2054d3b15fe158f94e381fe547f9e55">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMechanism::toString </td>
+          <td>(</td>
+          <td class="paramtype">TMemo *</td>          <td class="paramname"><span class="paramname"><em>pantallaSalida</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra el mecanismo guardado y sus atributos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pantallaSalida</td><td>objeto de la interfaz donde se muestra </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55_cgraph.png" border="0" usemap="#aclass_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55_cgraph" id="aclass_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55_cgraph">
+<area shape="rect" title="Muestra el mecanismo guardado y sus atributos." alt="" coords="5,215,155,241"/>
+<area shape="rect" href="class_t_mechanism.html#ac46c760fddcd416499a39131141c9804" title="Devuelve la ecuacion cinetica directa en forma de String. Formato para enviarla al solver de Python." alt="" coords="223,5,408,48"/>
+<area shape="poly" title=" " alt="" coords="85,213,101,181,126,139,160,96,201,58,212,53,208,57,204,62,164,99,131,142,106,184,90,215"/>
+<area shape="rect" href="class_t_mechanism.html#a8050df05e581819d5e5be8dfbb85b63c" title="Devuelve la ecuacion cinetica directa en forma de String. Formato para mostrarla por pantalla." alt="" coords="207,72,425,99"/>
+<area shape="poly" title=" " alt="" coords="89,213,134,161,165,133,201,108,217,103,213,106,204,113,169,137,137,165,93,216"/>
+<area shape="rect" href="class_t_mechanism.html#a478649141c58734f7a8032300c3e5598" title="Devuelve la ecuacion cinetica inversa en forma de String. Formato para enviarla al solver de Python." alt="" coords="219,123,412,165"/>
+<area shape="poly" title=" " alt="" coords="110,212,202,175,225,169,221,172,204,180,113,216"/>
+<area shape="rect" href="class_t_mechanism.html#ac25a2712fe94a70768c4af9f791ae051" title="Devuelve la ecuacion cinetica inversa en forma de String. Formato para mostrarla por pantalla." alt="" coords="203,189,429,216"/>
+<area shape="poly" title=" " alt="" coords="154,218,189,215,185,218,156,222"/>
+<area shape="rect" href="class_t_mechanism.html#a2a8fa75aa79ff89533af07051e1a1007" title="Devuelve el parametro del mecanismo de la posicion &#39;i&#39;." alt="" coords="216,240,416,267"/>
+<area shape="poly" title=" " alt="" coords="154,233,203,240,198,242,156,239"/>
+<area shape="rect" href="class_t_mechanism.html#a83135bad08af9d4416b57f7fe7c73493" title="Devuelve el nombre del tipo de mecanismo." alt="" coords="225,291,407,317"/>
+<area shape="poly" title=" " alt="" coords="111,239,204,276,232,286,227,287,202,281,111,245"/>
+<area shape="rect" href="class_t_mechanism.html#ad3082b5258b9df20f86bad71acd6bdfb" title="Devuelve el numero de parametros del mecanismo guardados." alt="" coords="211,341,420,368"/>
+<area shape="poly" title=" " alt="" coords="94,239,140,283,171,307,204,327,221,336,215,336,201,332,168,311,137,287,93,245"/>
+<area shape="rect" href="class_t_mechanism.html#a4645ac8a1913d474bded3ccb4f0b75ba" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="211,392,420,419"/>
+<area shape="poly" title=" " alt="" coords="89,239,107,270,132,307,165,346,204,378,215,386,210,385,201,382,161,350,128,311,102,273,88,245"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="aac356d4e3fd675a4ff936b3f08d5364f" name="aac356d4e3fd675a4ff936b3f08d5364f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac356d4e3fd675a4ff936b3f08d5364f">&#9670;&#160;</a></span>directRatePython</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMechanism::directRatePython</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>String que representa la ecuacion cinetica directa, formato Python </p>
+
+</div>
+</div>
+<a id="a1d358f94f9433284a57b196e0756cd4a" name="a1d358f94f9433284a57b196e0756cd4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d358f94f9433284a57b196e0756cd4a">&#9670;&#160;</a></span>directRateShow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMechanism::directRateShow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>String que representa la ecuacion cinetica directa, formato salida usuario </p>
+
+</div>
+</div>
+<a id="a270dc08673ee7a8edaaf2b0ff07cba65" name="a270dc08673ee7a8edaaf2b0ff07cba65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a270dc08673ee7a8edaaf2b0ff07cba65">&#9670;&#160;</a></span>inputTemplate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const String TMechanism::inputTemplate = &quot;MECHANISM &lt;tipo_mecanismo&gt; &lt;nombre_reaccion&gt; &lt;parametros_del_mecanismo&gt;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Estructura de entrada de datos de un mecanismo </p>
+
+</div>
+</div>
+<a id="a08b003740366b0e9625ebcdd00786608" name="a08b003740366b0e9625ebcdd00786608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08b003740366b0e9625ebcdd00786608">&#9670;&#160;</a></span>inverseRatePython</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMechanism::inverseRatePython</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>String que representa la ecuacion cinetica inversa, formato Python </p>
+
+</div>
+</div>
+<a id="a84e928eb971c6e0b20acd4b099c8dc6f" name="a84e928eb971c6e0b20acd4b099c8dc6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84e928eb971c6e0b20acd4b099c8dc6f">&#9670;&#160;</a></span>inverseRateShow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMechanism::inverseRateShow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>String que representa la ecuacion cinetica inversa, formato salida usuario </p>
+
+</div>
+</div>
+<a id="a05f8ce18a876e5f386b1bda9002824de" name="a05f8ce18a876e5f386b1bda9002824de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05f8ce18a876e5f386b1bda9002824de">&#9670;&#160;</a></span>mechanismType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_metabolic_elements_8h.html#a83d1676f1e139ec0cf5114097373e5c2">TMechanismType</a> TMechanism::mechanismType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Enumerado que indica el tipo de mecanismo </p>
+
+</div>
+</div>
+<a id="aa26346f3a054f199508c0eef665f8884" name="aa26346f3a054f199508c0eef665f8884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa26346f3a054f199508c0eef665f8884">&#9670;&#160;</a></span>mechParams</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;String&gt; TMechanism::mechParams</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vector de los parametros asociados al mecanismo concreto de la reaccion </p>
+
+</div>
+</div>
+<a id="a65c500e74d8cb41476d0b9baa75427d9" name="a65c500e74d8cb41476d0b9baa75427d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65c500e74d8cb41476d0b9baa75427d9">&#9670;&#160;</a></span>model</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_model.html">TModel</a>* TMechanism::model</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Modelo dentro del que se incluye el mecanismo </p>
+
+</div>
+</div>
+<a id="a0fcbfb1e612a4ab0418e6addf9ac9c67" name="a0fcbfb1e612a4ab0418e6addf9ac9c67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fcbfb1e612a4ab0418e6addf9ac9c67">&#9670;&#160;</a></span>reactionName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMechanism::reactionName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Nombre de la reaccion que sigue el mecanismo creado </p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li><a class="el" href="_metabolic_elements_8h_source.html">MetabolicElements.h</a></li>
+<li><a class="el" href="_metabolic_elements_8cpp.html">MetabolicElements.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_t_mechanism.html">TMechanism</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

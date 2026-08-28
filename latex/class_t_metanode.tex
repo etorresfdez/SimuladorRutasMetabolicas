@@ -1,0 +1,163 @@
+\doxysection{Referencia de la clase TMetanode}
+\label{class_t_metanode}\index{TMetanode@{TMetanode}}
+
+
+Clase para encapsular los metabolitos del modelo.  
+
+
+
+
+{\ttfamily \+\#include $<$Metabolic\+Elements.\+h$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ TMetanode} (String p\+\_\+short\+Name, String p\+\_\+full\+Name, double p\+\_\+initial\+Value)
+\begin{DoxyCompactList}\small\item\em Constructor de \doxyref{TMetanode}{pág.}{class_t_metanode}. \end{DoxyCompactList}\item 
+\textbf{ TMetanode} (String line)
+\begin{DoxyCompactList}\small\item\em Constructor de \doxyref{TMetanode}{pág.}{class_t_metanode}. \end{DoxyCompactList}\item 
+String \textbf{ get\+Short\+Name} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre corto del metanodo. \end{DoxyCompactList}\item 
+String \textbf{ get\+Full\+Name} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre largo del metanodo. \end{DoxyCompactList}\item 
+double \textbf{ get\+Initial\+Value} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la concentracion inicial del metabolito. \end{DoxyCompactList}\item 
+void \textbf{ set\+Initial\+Value} (double initial\+Concentration)
+\begin{DoxyCompactList}\small\item\em Actualiza la concentracion inicial del metabolito. \end{DoxyCompactList}\item 
+void \textbf{ to\+String} (TMemo $\ast$pantalla\+Salida) const
+\begin{DoxyCompactList}\small\item\em Muestra el metabolito guardado y sus atributos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static const String \textbf{ input\+Template} = "{}METANODE $<$nombre\+\_\+corto$>$ $<$nombre\+\_\+largo$>$ $<$concentracion\+\_\+inicial$>$"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase para encapsular los metabolitos del modelo. 
+
+\label{class_t_metanode_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\index{TMetanode@{TMetanode}!TMetanode@{TMetanode}}
+\index{TMetanode@{TMetanode}!TMetanode@{TMetanode}}
+\doxysubsubsection{TMetanode()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_t_metanode_aac0b9cb13d54831bd68b5f466eb8fdde} 
+TMetanode::\+\+TMetanode (\begin{DoxyParamCaption}\item[{String}]{p\+\_\+short\+Name}{, }\item[{String}]{p\+\_\+full\+Name}{, }\item[{double}]{p\+\_\+initial\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de \doxyref{TMetanode}{pág.}{class_t_metanode}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p\+\_\+short\+Name} & nombre corto del metabolito, tipo String \\
+\hline
+{\em p\+\_\+full\+Name} & nombre largo del metabolito, tipo String \\
+\hline
+{\em p\+\_\+initial\+Value} & concentracion inicial del metabolito, tipo double \\
+\hline
+\end{DoxyParams}
+\index{TMetanode@{TMetanode}!TMetanode@{TMetanode}}
+\index{TMetanode@{TMetanode}!TMetanode@{TMetanode}}
+\doxysubsubsection{TMetanode()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_t_metanode_a76ec2b9c92d143d9d0f38dfbb248be45} 
+TMetanode::\+\+TMetanode (\begin{DoxyParamCaption}\item[{String}]{line}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de \doxyref{TMetanode}{pág.}{class_t_metanode}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em line} & linea del panel de entrada asociada a un metabolito, comienza por METANODE \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_t_metanode_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\index{TMetanode@{TMetanode}!getFullName@{getFullName}}
+\index{getFullName@{getFullName}!TMetanode@{TMetanode}}
+\doxysubsubsection{getFullName()}
+{\footnotesize\ttfamily \label{class_t_metanode_a0c9d1c3e1570c79fa472e0c9b94267e6} 
+String TMetanode::\+get\+Full\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el nombre largo del metanodo. 
+
+\begin{DoxyReturn}{Devuelve}
+String nombre largo del metanodo 
+\end{DoxyReturn}
+\index{TMetanode@{TMetanode}!getInitialValue@{getInitialValue}}
+\index{getInitialValue@{getInitialValue}!TMetanode@{TMetanode}}
+\doxysubsubsection{getInitialValue()}
+{\footnotesize\ttfamily \label{class_t_metanode_a7d187d69ad4ea6e4b1f2023b16f42e61} 
+double TMetanode::\+get\+Initial\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve la concentracion inicial del metabolito. 
+
+\begin{DoxyReturn}{Devuelve}
+double concentracion inicial del metabolito 
+\end{DoxyReturn}
+\index{TMetanode@{TMetanode}!getShortName@{getShortName}}
+\index{getShortName@{getShortName}!TMetanode@{TMetanode}}
+\doxysubsubsection{getShortName()}
+{\footnotesize\ttfamily \label{class_t_metanode_a75e0e02586a52f746b74a6a132c17bf5} 
+String TMetanode::\+get\+Short\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el nombre corto del metanodo. 
+
+\begin{DoxyReturn}{Devuelve}
+String nombre corto del metanodo 
+\end{DoxyReturn}
+\index{TMetanode@{TMetanode}!setInitialValue@{setInitialValue}}
+\index{setInitialValue@{setInitialValue}!TMetanode@{TMetanode}}
+\doxysubsubsection{setInitialValue()}
+{\footnotesize\ttfamily \label{class_t_metanode_ab780f1f97599cf8ccac31989c351d07d} 
+void TMetanode::\+set\+Initial\+Value (\begin{DoxyParamCaption}\item[{double}]{initial\+Concentration}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza la concentracion inicial del metabolito. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em double} & concentracion inicial del metabolito \\
+\hline
+\end{DoxyParams}
+\index{TMetanode@{TMetanode}!toString@{toString}}
+\index{toString@{toString}!TMetanode@{TMetanode}}
+\doxysubsubsection{toString()}
+{\footnotesize\ttfamily \label{class_t_metanode_a99f2ac4adeaf2f234d057b4872976111} 
+void TMetanode::\+to\+String (\begin{DoxyParamCaption}\item[{TMemo $\ast$}]{pantalla\+Salida}{}\end{DoxyParamCaption}) const}
+
+
+
+Muestra el metabolito guardado y sus atributos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em pantalla\+Salida} & objeto de la interfaz donde se muestra \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_t_metanode_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\index{TMetanode@{TMetanode}!inputTemplate@{inputTemplate}}
+\index{inputTemplate@{inputTemplate}!TMetanode@{TMetanode}}
+\doxysubsubsection{inputTemplate}
+{\footnotesize\ttfamily \label{class_t_metanode_a0f080cf5a61679bd70ba01d4e0fd05ee} 
+const String TMetanode::\+input\+Template = "{}METANODE $<$nombre\+\_\+corto$>$ $<$nombre\+\_\+largo$>$ $<$concentracion\+\_\+inicial$>$"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Estructura de entrada de datos de un metabolito 
+
+La documentación de esta clase está generada de los siguientes archivos:\+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Metabolic\+Elements.\+h}\item 
+\textbf{ Metabolic\+Elements.\+cpp}\end{DoxyCompactItemize}

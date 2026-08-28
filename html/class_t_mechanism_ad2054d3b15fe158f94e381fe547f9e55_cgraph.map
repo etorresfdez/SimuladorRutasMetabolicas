@@ -1,0 +1,19 @@
+<map id="TMechanism::toString" name="TMechanism::toString">
+<area shape="rect" id="Node000001" title="Muestra el mecanismo guardado y sus atributos." alt="" coords="5,215,155,241"/>
+<area shape="rect" id="Node000002" href="$class_t_mechanism.html#ac46c760fddcd416499a39131141c9804" title="Devuelve la ecuacion cinetica directa en forma de String. Formato para enviarla al solver de Python." alt="" coords="223,5,408,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,213,101,181,126,139,160,96,201,58,212,53,208,57,204,62,164,99,131,142,106,184,90,215"/>
+<area shape="rect" id="Node000003" href="$class_t_mechanism.html#a8050df05e581819d5e5be8dfbb85b63c" title="Devuelve la ecuacion cinetica directa en forma de String. Formato para mostrarla por pantalla." alt="" coords="207,72,425,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="89,213,134,161,165,133,201,108,217,103,213,106,204,113,169,137,137,165,93,216"/>
+<area shape="rect" id="Node000004" href="$class_t_mechanism.html#a478649141c58734f7a8032300c3e5598" title="Devuelve la ecuacion cinetica inversa en forma de String. Formato para enviarla al solver de Python." alt="" coords="219,123,412,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="110,212,202,175,225,169,221,172,204,180,113,216"/>
+<area shape="rect" id="Node000005" href="$class_t_mechanism.html#ac25a2712fe94a70768c4af9f791ae051" title="Devuelve la ecuacion cinetica inversa en forma de String. Formato para mostrarla por pantalla." alt="" coords="203,189,429,216"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="154,218,189,215,185,218,156,222"/>
+<area shape="rect" id="Node000006" href="$class_t_mechanism.html#a2a8fa75aa79ff89533af07051e1a1007" title="Devuelve el parametro del mecanismo de la posicion &#39;i&#39;." alt="" coords="216,240,416,267"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="154,233,203,240,198,242,156,239"/>
+<area shape="rect" id="Node000007" href="$class_t_mechanism.html#a83135bad08af9d4416b57f7fe7c73493" title="Devuelve el nombre del tipo de mecanismo." alt="" coords="225,291,407,317"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="111,239,204,276,232,286,227,287,202,281,111,245"/>
+<area shape="rect" id="Node000008" href="$class_t_mechanism.html#ad3082b5258b9df20f86bad71acd6bdfb" title="Devuelve el numero de parametros del mecanismo guardados." alt="" coords="211,341,420,368"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="94,239,140,283,171,307,204,327,221,336,215,336,201,332,168,311,137,287,93,245"/>
+<area shape="rect" id="Node000009" href="$class_t_mechanism.html#a4645ac8a1913d474bded3ccb4f0b75ba" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="211,392,420,419"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="89,239,107,270,132,307,165,346,204,378,215,386,210,385,201,382,161,350,128,311,102,273,88,245"/>
+</map>

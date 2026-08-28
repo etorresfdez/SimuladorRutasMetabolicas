@@ -1,0 +1,5 @@
+<map id="TSubstance" name="TSubstance">
+<area shape="rect" id="Node000001" title="struct TSubstance para agrupar el metabolito y su coeficiente que participan en una reaccion." alt="" coords="22,381,105,451"/>
+<area shape="rect" id="Node000002" href="$class_t_metabolite.html" title="Clase para encapsular los metabolitos del modelo." alt="" coords="5,5,121,309"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,307,66,365,61,364,62,311"/>
+</map>

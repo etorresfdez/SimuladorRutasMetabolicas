@@ -1,0 +1,5 @@
+<map id="TMetabolite::toString" name="TMetabolite::toString">
+<area shape="rect" id="Node000001" title="Muestra el metabolito guardado y sus atributos." alt="" coords="5,5,148,32"/>
+<area shape="rect" id="Node000002" href="$class_t_metabolite.html#ac68293e55e00b57510680058356af024" title="Metodo que convierte un double en string con formato decimal &#39;.&#39;." alt="" coords="196,5,374,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,16,183,19,177,19,148,21"/>
+</map>

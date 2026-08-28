@@ -1,0 +1,419 @@
+﻿//---------------------------------------------------------------------------
+//
+// Libreria para encapsular el proceso de simulacion de una ruta metabolica
+// Contiene las clases:
+// 	- TSimulation
+//
+// Archivo .cpp --> Implementaciones
+//
+//---------------------------------------------------------------------------
+
+#include "Simulation.h"
+
+
+//***************************************************************************
+// Metodos de la clase TSimulation
+
+// metodo privado para convertir un numero en string con decimales '.'
+String TSimulation::FloatToStrDot(double value)
+{
+    TFormatSettings fs;
+    fs.DecimalSeparator = '.';
+    return FloatToStr(value, fs);
+}
+
+// Constructor
+TSimulation::TSimulation(int p_tini, int p_tfin, int p_ciclos, NumericMethod p_metodo)
+	: tini(p_tini), tfin(p_tfin), ciclos(p_ciclos), metodo(p_metodo)
+{
+	numericMethods =
+	{
+		{"Runge-Kutta 45", RK45},
+		{"Radau", Radau},
+		{"BDF", BDF},
+		{"LSODA", LSODA},
+	};
+
+    tiempoEmpleado = 0;
+}
+
+// Rellena el objeto ComboEleccionMetodo con los metodos numericos disponibles
+void TSimulation::fillNumericMethodComboBox(TComboBox* combo)
+{
+	// limpia el objeto combo
+	combo->Items->Clear();
+
+	// recorre el mapa numericMethods para añadir cada clave al objeto combo
+	for(const std::pair<String, NumericMethod>& p : numericMethods)
+		combo->Items->Add(p.first);
+
+	// formato downlist
+	combo->Style = csDropDownList;
+}
+
+// Setters
+void TSimulation::setConcenNames(const std::vector<String>& c)
+{
+	concNames = c;
+}
+
+void TSimulation::setInitialConcen(const std::vector<double>& ini)
+{
+	concIni = ini;
+}
+
+void TSimulation::setEquations(const std::vector<String>& equations)
+{
+	ecuaciones = equations;
+}
+
+void TSimulation::setParameters(const std::vector<double>& p)
+{
+	params = p;
+}
+
+void TSimulation::setInitialTime(int ini)
+{
+	if (ini < 0)
+		throw Exception("El tiempo inicial debe ser >= 0.");
+
+	tini = ini;
+}
+
+void TSimulation::setFinalTime(int fin)
+{
+	if ((fin < 0) || (fin < tini))
+		throw Exception("El tiempo final debe ser positivo y mayor que el tiempo inicial cargado.");
+
+	tfin = fin;
+}
+
+void TSimulation::setCicles(int cicles)
+{
+	if (cicles < 0)
+		throw Exception("El número de ciclos debe ser positivo.");
+
+	ciclos = cicles;
+}
+
+void TSimulation::setNumericMethod(NumericMethod method)
+{
+	metodo = method;
+}
+
+void TSimulation::setTiempoEmpleado(double time)
+{
+	tiempoEmpleado = time;
+}
+
+
+// Getters
+NumericMethod TSimulation::getNumericMethodFromString(String metodo)
+{
+	// busca el elemento del mapa con la clave dada
+	std::map<String, NumericMethod>::iterator it = numericMethods.find(metodo);
+
+    // devuelve el valor asociado a esa clave
+	if(it != numericMethods.end())
+		return it->second;
+
+	return Radau; // metodo numerico por defecto
+}
+
+String TSimulation::getMethodString(NumericMethod metodoEnum)
+{
+	if(metodoEnum == RK45)
+		return "RK45";
+	else if(metodoEnum == Radau)
+		return "Radau";
+	else if(metodoEnum == BDF)
+		return "BDF";
+	else if(metodoEnum == LSODA)
+		return "LSODA";
+	else
+        return "Radau"; // metodo por defecto
+}
+
+String TSimulation::getNameMetabolite(int i)
+{
+	if (i>=0 && i<concNames.size())
+		return concNames[i];
+	else
+		return "";
+}
+
+TInstantResult TSimulation::getInstanteSimulacion(int i)
+{
+	TInstantResult instanteNoValido;
+	instanteNoValido.tiempo = -1;
+	instanteNoValido.valores = std::vector<double>();
+
+	if (i>=0 && i<concNames.size())
+		return resultados[i];
+	else
+		return instanteNoValido;
+}
+
+bool TSimulation::resultadosIsEmpty()
+{
+	return resultados.empty();
+}
+
+
+// Metodos para ejecutar la simulacion
+void TSimulation::borrarArchivosAntiguos()
+{
+	DeleteFile("input.csv");
+	DeleteFile("output.csv");
+	DeleteFile("grafico.png");
+}
+
+void TSimulation::BuildInputCSV()
+{
+	// Usamos unique_ptr para asegurar la liberacion de memoria
+	std::unique_ptr<TStringList> csv(new TStringList());
+
+	try
+	{
+		// carga el contenido del fichero con los parametros necesarios
+		String linea;
+
+		// Ecuaciones
+		linea = "ecuaciones";
+		for (int i = 0; i < ecuaciones.size(); i++)
+		{
+			linea += ";";
+			linea += ecuaciones[i];
+		}
+		csv->Add(linea);
+
+		// Concentraciones iniciales
+		linea = "X0";
+		for (int i = 0; i < concIni.size(); i++)
+		{
+			linea += ";";
+			linea += FloatToStrDot(concIni[i]);
+		}
+		csv->Add(linea);
+
+		// Nombres de los metabolitos
+		linea = "metabolitos";
+		for (int i = 0; i < concNames.size(); i++)
+		{
+			linea += ";";
+			linea += concNames[i];
+		}
+		csv->Add(linea);
+
+		// Parametros
+		linea = "p";
+		for (int i = 0; i < params.size(); i++)
+		{
+			linea += ";";
+			linea += FloatToStrDot(params[i]);
+		}
+		csv->Add(linea);
+
+		// Parametros escalares
+		csv->Add("tini;" + IntToStr(tini));
+		csv->Add("tfin;" + IntToStr(tfin));
+		csv->Add("ciclos;" + IntToStr(ciclos));
+		csv->Add("method;" + getMethodString(metodo));
+
+		// Guardar archivo
+		csv->SaveToFile("input.csv");
+	}
+	catch (const Exception &e)
+	{
+        throw Exception("Error crítico al crear el archivo de entrada: " + e.Message);
+	}
+}
+
+void TSimulation::ejecutarComando(String comando)
+{
+	// prepara el comando
+	STARTUPINFOW si = { sizeof(si) };
+	PROCESS_INFORMATION pi = {};
+	UnicodeString cmd = comando;
+	UniqueString(cmd);
+
+    // ejecuta el comando
+	if (!CreateProcessW(
+		NULL,
+		cmd.c_str(),
+		NULL,
+		NULL,
+		FALSE,
+		CREATE_NO_WINDOW,
+		NULL,
+		NULL,
+		&si,
+		&pi))
+	{
+		throw Exception("No se pudo ejecutar el comando '" + comando + "'.");
+	}
+
+	// espera a que la ventana se cierre
+	WaitForSingleObject(pi.hProcess, INFINITE);
+
+	// limpiar
+	CloseHandle(pi.hThread);
+	CloseHandle(pi.hProcess);
+}
+
+void TSimulation::ReadOutputCSV()
+{
+	// verifica que existe el archivo de salida
+	if (!TFile::Exists("output.csv"))
+		throw Exception("Error en la simulación: El archivo de salida de Python no se ha generado.");
+
+	// el formato de los decimales en python es '.'
+	TFormatSettings fs;
+	fs.DecimalSeparator = '.';
+
+    // inicializamos variables para cargar los resultados
+	std::unique_ptr<TStringList> lines(new TStringList());
+    resultados.clear();
+
+    try
+	{
+		// lee el archivo de salida
+		lines->LoadFromFile("output.csv");
+
+		// Esto rompe el vinculo fisico con output.csv inmediatamente en Windows
+		String contenidoSeguro = lines->Text;
+		lines->Clear();
+
+		// Ahora procesamos los datos usando la variable local temporal
+		std::unique_ptr<TStringList> lineasProcesar(new TStringList());
+		lineasProcesar->Text = contenidoSeguro;
+
+		// recorre cada linea
+		for (int i = 0; i < lineasProcesar->Count; i++)
+		{
+			// elimina espacios en blanco iniciales y finales
+			String line = lineasProcesar->Strings[i].Trim();
+			if (line.IsEmpty()) continue;
+
+			// separa campos por ;
+			std::unique_ptr<TStringList> cols(new TStringList());
+			cols->StrictDelimiter = true;
+			cols->Delimiter = ';';
+			cols->DelimitedText = line;
+
+			if (cols->Count < 2) continue;
+
+			TInstantResult instantResult;
+
+			// el tiempo es el primer campo
+			instantResult.tiempo = StrToFloat(cols->Strings[0].Trim(), fs);
+
+			// el resto de campos son los valores
+			for (int j = 1; j < cols->Count; j++)
+				instantResult.valores.push_back(StrToFloat(cols->Strings[j].Trim(), fs));
+
+			resultados.push_back(instantResult);
+		}
+	}
+	catch (const Exception &e)
+	{
+		throw Exception("Error al procesar los datos de salida: " + e.Message);
+	}
+}
+
+void TSimulation::runSimulation()
+{
+	// elimina input.csv, output.csv y grafico.png anteriores
+	borrarArchivosAntiguos();
+
+	// construye el archivo de entrada de datos para el python
+	BuildInputCSV();
+
+	// ejecuta el Python --> crea el archivo output.csv y grafico.png
+	ejecutarComando("./script.exe");
+
+	// lee output.csv para cargar el atributo 'resultados'
+	ReadOutputCSV();
+}
+
+
+// Crea tabla a partir de los resultados obtenidos
+void TSimulation::createTableResults(TStringGrid *Grid)
+{
+    // separador decimal
+	TFormatSettings fs;
+	fs.DecimalSeparator = '.';
+
+	// comprueba si los resultados estan vacios
+	if (resultados.empty())
+    {
+		Grid->RowCount = 2;
+        Grid->ColCount = 2;
+        Grid->Cells[0][0] = "Tabla vacía";
+        return;
+	}
+
+	// establece numero de filas y columnas segun los resultados obtenidos
+	int rows = resultados.size();
+	int numVariables = resultados[0].valores.size();
+	int cols = 1 + numVariables; // tiempo + variables
+	Grid->RowCount = rows + 1;   // cada instante + cabecera
+	Grid->ColCount = cols;
+
+    // celdas fijas ante el scroll
+    Grid->FixedCols = 1;
+	Grid->FixedRows = 1;
+
+	// Cabeceras: Tiempo + Nombre de los metabolitos
+	Grid->Cells[0][0] = "Tiempo";
+
+	for (int j = 0; j < numVariables; j++)
+		Grid->Cells[j+1][0] = getNameMetabolite(j);
+
+	// Datos
+    for (int i = 0; i < rows; i++)
+    {
+        // Info de cada instante de la simulacion
+		const TInstantResult &r = resultados[i];
+
+		// Muestra el tiempo con dos decimales
+		Grid->Cells[0][i + 1] = FloatToStrF(r.tiempo, ffFixed, 15, 2, fs);
+
+        // Muestra las concentraciones de los metabolitos con 4 decimales
+		int n = r.valores.size();
+		for (int j = 0; j < n; j++)
+			Grid->Cells[j + 1][i + 1] = FloatToStrF(r.valores[j], ffFixed, 15, 4, fs);
+	}
+}
+
+// Exportar resultados
+void TSimulation::exportResultsToCSV(const String &filePath)
+{
+	// Usamos unique_ptr para gestion automatica de memoria
+    std::unique_ptr<TStringList> csv(new TStringList());
+
+	// CABECERA del archivo csv
+    String cabecera = "Tiempo";
+	int numVariables = resultados.empty() ? 0 : resultados[0].valores.size();
+
+	// nombre de los metabolitos separados por ';'
+	for (int j = 0; j < numVariables; j++)
+		cabecera += ";" + getNameMetabolite(j);
+
+    csv->Add(cabecera);
+
+	// LINEAS con los datos de las concentraciones en cada instante de la simulacion
+	for (const auto &r : resultados)
+	{
+		// primer campo: tiempo
+		String linea = FloatToStrF(r.tiempo, ffFixed, 15, 2);
+
+		// siguientes campos: concentraciones de los metabolitos
+		for (double val : r.valores)
+			linea += ";" + FloatToStrF(val, ffFixed, 15, 4);
+		csv->Add(linea);
+    }
+
+    // Guardamos el archivo en la ruta indicada
+    csv->SaveToFile(filePath, TEncoding::UTF8);
+}

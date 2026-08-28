@@ -1,0 +1,9 @@
+<map id="TForm1" name="TForm1">
+<area shape="rect" id="Node000001" title="Es la ventana principal de la aplicacion y la encargada de la interfaz grafica de usuario." alt="" coords="79,573,255,1112"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,219,54,288"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="35,300,49,395,68,501,86,573,81,574,63,502,44,396,35,305"/>
+<area shape="rect" id="Node000003" href="$class_t_model.html" title="Clase para encapsular un modelo completo, que representa una ruta metabolica especifica." alt="" coords="78,27,256,480"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,477,170,557,164,556,167,482"/>
+<area shape="rect" id="Node000004" href="$class_t_simulation.html" title="Clase para encapsular el proceso de simulacion." alt="" coords="280,5,486,501"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="293,498,263,588,258,586,291,503"/>
+</map>

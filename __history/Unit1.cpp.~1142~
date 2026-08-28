@@ -1,0 +1,1005 @@
+﻿//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "perfgrap"
+#pragma resource "*.dfm"
+TForm1 *Form1;
+
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+	// inicializa objetos modelo y simulacion
+	model = TModel();
+	simulation = TSimulation();
+
+	// inicializa variables bandera
+	entradaVacia = true;
+	datosValidados = false;
+
+	// rellena los combobox con los mecanismos y metodos numericos disponibles
+	model.fillMechanismComboBox(ComboInsertarMecanismo);
+	simulation.fillNumericMethodComboBox(ComboEleccionMetodo);
+}
+
+//---------------------------------------------------------------------------
+void __fastcall TForm1::FormResize(TObject *Sender)
+{
+	int half = ClientWidth / 2;
+
+	// seccion entrada de datos
+	PanelEntradaDatos->SetBounds(
+		0,             // left
+		0,             // top
+		half,          // width
+		ClientHeight   // height
+	);
+	MemoTextoEntrada->SetBounds(
+		0,
+		PanelEntradaDatos->BoundsRect.Bottom + 5,
+		PanelEntradaDatos->ClientWidth,
+		MemoTextoEntrada->Height
+	);
+    Splitter1->Top = MemoTextoEntrada->BoundsRect.Bottom;
+	GridBotonesEntrada->SetBounds(
+		0,
+		Splitter1->BoundsRect.Bottom + 5,
+		PanelEntradaDatos->ClientWidth,
+		120
+	);
+	MemoSalidaValidacion->SetBounds(
+		0,
+		GridBotonesEntrada->BoundsRect.Bottom + 5,
+		PanelEntradaDatos->ClientWidth,
+		ClientHeight - (GridBotonesEntrada->BoundsRect.Bottom + 5)
+	);
+
+	// seccion simulacion
+	PanelSimulacion->SetBounds(
+		half +5,
+		0,
+		half -5,
+		ClientHeight/5
+	);
+	GridBotonesSimulacion->SetBounds(
+		0,
+		LabelSimulacion->BoundsRect.Bottom + 5,
+		PanelSimulacion->ClientWidth,
+		PanelSimulacion->ClientHeight - LabelSimulacion->ClientHeight - 10
+	);
+
+	// seccion salida datos
+	PanelSalidaDatos->SetBounds(
+		half +5,
+		PanelSimulacion->BoundsRect.Bottom + 5,
+		half -5,
+		ClientHeight - (PanelSimulacion->BoundsRect.Bottom + 5)
+	);
+	MemoSalidaSimTexto->SetBounds(
+		0,
+		LabelSalida->BoundsRect.Bottom + 5,
+		PanelSalidaDatos->ClientWidth,
+		150
+	);
+	PageControlSalida->SetBounds(
+        0,
+		MemoSalidaSimTexto->BoundsRect.Bottom + 5,
+		PanelSalidaDatos->ClientWidth,
+		PanelSalidaDatos->ClientHeight - (MemoSalidaSimTexto->BoundsRect.Bottom)
+	);
+    PageControlSalida->ActivePage = Tabla;
+
+	// botones de informacion pegados a sus respectivos botones
+	infoMeta->Left = BtnMetabolito->Left + BtnMetabolito->Width;
+	infoParam->Left = BtnParametro->Left + BtnParametro->Width;
+	infoReac->Left = BtnReaccion->Left + BtnReaccion->Width;
+	infoMec->Left = ComboInsertarMecanismo->Left + ComboInsertarMecanismo->Width;
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Splitter1CanResize(TObject *Sender, int &NewSize, bool &Accept)
+{
+    // establecemos un minimo y maximo para la altura de MemoTextoEntrada
+	const int alturaMinimaMemo = 100;
+	const int alturaMaximaMemo = PanelEntradaDatos->Height - 200;
+
+    if (NewSize < alturaMinimaMemo)
+		NewSize = alturaMinimaMemo;
+
+	if (NewSize > alturaMaximaMemo)
+		NewSize = alturaMaximaMemo;
+
+	Accept = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Splitter1Moved(TObject *Sender)
+{
+	// Altura del Memo superior
+	MemoTextoEntrada->Height = Splitter1->Top - MemoTextoEntrada->Top;
+
+	// El Grid se desplaza, pero mantiene su altura
+	GridBotonesEntrada->Top = Splitter1->BoundsRect.Bottom + 5;
+
+	// El Memo inferior se desplaza y ocupa el espacio restante
+	MemoSalidaValidacion->Top = Splitter1->BoundsRect.Bottom + GridBotonesEntrada->Height + 5;
+	MemoSalidaValidacion->Height = PanelEntradaDatos->ClientHeight - MemoSalidaValidacion->Top;
+}
+
+//---------------------------------------------------------------------------
+void __fastcall TForm1::SubirArchivoClick(TObject *Sender)
+{
+	// abre carpeta para subir archivo local
+	if (DialogSubirArchivo->Execute())
+	{
+        try
+        {
+			// carga el contenido del archivo en MemoTextoEntrada
+			MemoTextoEntrada->Lines->LoadFromFile(
+				DialogSubirArchivo->FileName,
+				TEncoding::UTF8
+			);
+        }
+		catch (const Exception &e)
+		{
+            // muestra excepcion si se produce algun error de lectura
+			ShowMessage("Error al cargar el archivo:\n" + e.Message);
+        }
+	}
+}
+
+
+//---------------------------------------------------------------------------
+void __fastcall TForm1::NuevoArchivoClick(TObject *Sender)
+{
+	// crea cuadro dialogo
+	TTaskDialog* DialogNuevoPanelEntrada = new TTaskDialog(this);
+	DialogNuevoPanelEntrada->Caption = "Nuevo Panel Entrada de Datos";
+	DialogNuevoPanelEntrada->Text = "Se borrará el contenido del panel de entrada de datos actual.";
+	DialogNuevoPanelEntrada->CommonButtons = TTaskDialogCommonButtons();
+
+	// botones personalizados
+	TTaskDialogBaseButtonItem *btnAceptar = DialogNuevoPanelEntrada->Buttons->Add();
+	btnAceptar->Caption = "Aceptar";
+
+	TTaskDialogBaseButtonItem *btnCancelar = DialogNuevoPanelEntrada->Buttons->Add();
+	btnCancelar->Caption = "Cancelar";
+
+	// ejecuta el cuadro de dialogo
+	if (DialogNuevoPanelEntrada->Execute())
+	{
+		int id = DialogNuevoPanelEntrada->ModalResult;
+
+		// Aceptar -> borra directamente
+		if (id == btnAceptar->ModalResult)
+		{
+			MemoTextoEntrada->Clear();
+			MemoSalidaValidacion->Clear();
+			datosValidados = false;
+			entradaVacia = true;
+		}
+		// Cancelar -> no hace nada
+	}
+}
+
+//---------------------------------------------------------------------------
+void __fastcall TForm1::GuardarArchivoClick(TObject *Sender)
+{
+	// crea cuadro dialogo, solo permite guardar en formato txt
+	TSaveDialog *SaveTextFileDialog = new TSaveDialog(this);
+	SaveTextFileDialog->Filter = "Text files (*.txt)|*.txt";
+	SaveTextFileDialog->DefaultExt = "txt";
+
+    // al ejecutar, guarda el contenido en UTF-8
+	if (SaveTextFileDialog->Execute())
+		MemoTextoEntrada->Lines->SaveToFile(SaveTextFileDialog->FileName, TEncoding::UTF8);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::CargarEjemploClick(TObject *Sender)
+{
+	MemoTextoEntrada->Clear();
+	MemoSalidaValidacion->Clear();
+	MemoTextoEntrada->Lines->Text =
+	"// ---------------------------------------------------------------------\n"
+	"// MODELO DE LA GLUCOLISIS - EJEMPLO\n"
+	"// \n"
+	"// Se incluyen las reacciones que componen la glucolisis,\n"
+	"// los metabolitos que participan en ella,\n"
+	"// los mecanismos cineticos asociados a cada reaccion\n"
+	"// y los parametros necesarios.\n"
+	"// ---------------------------------------------------------------------\n\n"
+	"METABOLITO\tGlu_e\tGlucosa exterior\t\t1.55307\n\n"
+	"METABOLITO\tGlu\tGlucosa\t\t\t\t0.573074\n\n"
+	"METABOLITO\tG6P\tGlucosa-6-fosfato\t\t4.2\n\n"
+	"METABOLITO\tF6P\tFructosa-6-fosfato\t\t0.49\n\n"
+	"METABOLITO\tFBP\tFructosa-1,6-bifosfato\t\t4.64\n\n"
+	"METABOLITO\tATP\tAdenosín trifosfato\t\t2.1\n\n"
+	"METABOLITO\tADP\tAdenosín difosfato\t\t1.5\n\n"
+	"METABOLITO\tAMP\tAdenosín monofosfato\t\t0.33\n\n"
+	"METABOLITO\tGAP\tGliceraldehido-3-fosfato\t0.115\n\n"
+	"METABOLITO\tDHAP\tDihidroxiacetona-fosfato\t2.95\n\n"
+	"METABOLITO\tBPG\t1,3-bifosfoglicerato\t\t0.00027\n\n"
+	"METABOLITO\tNAD+\tNAD oxidado\t\t\t0.65\n\n"
+	"METABOLITO\tNADH\tNAD reducido\t\t\t0.33\n\n"
+	"METABOLITO\tPEP\tFosfoenolpiruvato\t\t0.04\n\n"
+	"METABOLITO\tPyr\tPiruvato\t\t\t8.7\n\n\n"
+	"REACCION\tTrans\tTransporte\t\t\t\t[Glu_e]\t\tBI\t[Glu]\n\n"
+	"REACCION\tHK\tHexoquinasa\t\t\t\t[Glu, ATP]\tUNI\t[G6P, ADP]\n\n"
+	"REACCION\tPGI\tGlucosa-fosfato-isomerasa\t\t[G6P]\t\tBI\t[F6P]\n\n"
+	"REACCION\tPFK\tFosfofructoquinasa\t\t\t[F6P, ATP]\tUNI\t[FBP, ADP]\n\n"
+	"REACCION\tALD\tFructosa-bifosfato aldolasa\t\t[FBP]\t\tBI\t[GAP, DHAP]\n\n"
+	"REACCION\tTIM\tTriosa-fosfato isomerasa\t\t[DHAP]\t\tBI\t[GAP]\n\n"
+	"REACCION\tGAPDH\tGliceraldehído-fosfato deshidrogenasa\t[GAP, NAD+]\tBI\t[BPG, NADH]\n\n"
+	"REACCION\tPEP\tCombinacion-3-reacciones\t\t[BPG, ADP]\tBI\t[PEP, ATP]\n\n"
+	"REACCION\tPyK\tPiruvato quinasa\t\t\t[PEP, ADP]\tUNI\t[Pyr, ATP]\n\n"
+	"REACCION\tAK\tAdenilato quinasa\t\t\t[ATP, AMP]\tBI\t[(2)ADP]\n\n\n"
+	"PARAMETRO\tk0d\t\tk0d\t\t2.832\n\n"
+	"PARAMETRO\tk0i\t\tk0i\t\t2.832\n\n"
+	"PARAMETRO\tV1\t\tV1\t\t51.7547\n\n"
+	"PARAMETRO\tK1Glu\t\tK1Glu\t\t0\n\n"
+	"PARAMETRO\tK1ATP\t\tK1ATP\t\t0.1\n\n"
+	"PARAMETRO\tK1dGlu\t\tK1dGlu\t\t0.37\n\n"
+	"PARAMETRO\tV2\t\tV2\t\t496.042\n\n"
+	"PARAMETRO\tK2G6P\t\tK2G6P\t\t0.8\n\n"
+	"PARAMETRO\tK2F6P\t\tK2F6P\t\t0.15\n\n"
+	"PARAMETRO\tK2eq\t\tK2eq\t\t0.13\n\n"
+	"PARAMETRO\tV3\t\tV3\t\t45.4327\n\n"
+	"PARAMETRO\tK3F6P\t\tK3F6P\t\t0.021\n\n"
+	"PARAMETRO\tk3\t\tk3\t\t0.15\n\n"
+	"PARAMETRO\tV4d\t\tV4d\t\t2207.82\n\n"
+	"PARAMETRO\tV4i\t\tV4i\t\t11039.1\n\n"
+	"PARAMETRO\tK4FBP\t\tK4FBP\t\t0.3\n\n"
+	"PARAMETRO\tK4DHAP\t\tK4DHAP\t\t2\n\n"
+	"PARAMETRO\tK4GAP\t\tK4GAP\t\t4\n\n"
+	"PARAMETRO\tK4iGAP\t\tK4iGAP\t\t10\n\n"
+	"PARAMETRO\tK4eq\t\tK4eq\t\t0.081\n\n"
+	"PARAMETRO\tV5\t\tV5\t\t116.365\n\n"
+	"PARAMETRO\tK5DHAP\t\tK5DHAP\t\t1.23\n\n"
+	"PARAMETRO\tK5GAP\t\tK5GAP\t\t1.27\n\n"
+	"PARAMETRO\tK5eq\t\tK5eq\t\t0.055\n\n"
+	"PARAMETRO\tV6\t\tV6\t\t833.858\n\n"
+	"PARAMETRO\tK6GAP\t\tK6GAP\t\t0.6\n\n"
+	"PARAMETRO\tK6NAD\t\tK6NAD\t\t0.1\n\n"
+	"PARAMETRO\tK6BPG\t\tK6BPG\t\t0.01\n\n"
+	"PARAMETRO\tK6NADH\t\tK6NADH\t\t0.06\n\n"
+	"PARAMETRO\tK6eq\t\tK6eq\t\t0.0055\n\n"
+	"PARAMETRO\tk7d\t\tk7d\t\t443866\n\n"
+	"PARAMETRO\tk7i\t\tk7i\t\t1528.62\n\n"
+	"PARAMETRO\tV8\t\tV8\t\t343.096\n\n"
+	"PARAMETRO\tK8PEP\t\tK8PEP\t\t0.2\n\n"
+	"PARAMETRO\tK8ADP\t\tK8ADP\t\t0.17\n\n"
+	"PARAMETRO\tk11d\t\tk11d\t\t432.9\n\n"
+	"PARAMETRO\tk11i\t\tk11i\t\t133.333\n\n\n"
+	"MECANISMO\tLEY-ACCION-MASAS\t\tTrans\t\t[k0d, k0i]\n\n"
+	"MECANISMO\tMM-BI-SEC-ALEATORIO\t\tHK\t\t[V1, K1Glu, K1ATP, K1dGlu]\n\n"
+	"MECANISMO\tMM-UNI-INHIBIDOR\t\tPGI\t\t[V2, K2G6P, K2F6P, F6P, K2eq]\n\n"
+	"MECANISMO\tHILL-INHIBIDOR-ACTIVADOR\tPFK\t\t[V3, K3F6P, k3, F6P, ATP, AMP]\n\n"
+	"MECANISMO\tMM-UNI-BI-INHIBIDOR\t\tALD\t\t[V4d, V4i, K4FBP, K4GAP, K4DHAP, K4iGAP, K4eq, GAP]\n\n"
+	"MECANISMO\tMM-UNI-INHIBIDOR\t\tTIM\t\t[V5, K5DHAP, K5GAP, GAP, K5eq]\n\n"
+	"MECANISMO\tMM-BI-BI-INHIBIDOR\t\tGAPDH\t\t[V6, K6GAP, K6NAD, K6BPG, K6NADH, K6eq]\n\n"
+	"MECANISMO\tLEY-ACCION-MASAS\t\tPEP\t\t[k7d, k7i]\n\n"
+	"MECANISMO\tMM-BI-SEC-ALEATORIO\t\tPyK\t\t[V8, K8PEP, K8ADP]\n\n"
+	"MECANISMO\tLEY-ACCION-MASAS\t\tAK\t\t[k11d, k11i]\n\n"  ;
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::BtnMetabolitoClick(TObject *Sender)
+{
+	MemoTextoEntrada->Lines->Add("METABOLITO\t<nombre_corto>\t<nombre_largo>\t<conc_inicial>");
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::BtnParametroClick(TObject *Sender)
+{
+	MemoTextoEntrada->Lines->Add("PARAMETRO\t<nombre_corto>\t<nombre_largo>\t<valor>");
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::BtnReaccionClick(TObject *Sender)
+{
+	MemoTextoEntrada->Lines->Add("REACCION\t<nombre_corto>\t<nombre_largo>\t<lista_reactivos>\t<sentido_reaccion>\t<lista_productos>");
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::BtnMecanismoClick(TObject *Sender)
+{
+	MemoTextoEntrada->Lines->Add("MECANISMO\t<tipo_mecanismo>\t<nombre_reaccion>\t<params>");
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::infoMetaClick(TObject *Sender)
+{
+	DialogMetabolito->Text =
+		"Los metabolitos son las sustancias que participan en una ruta metabólica. "
+		"En la simulación se medirá la evolución de su concentración a lo largo del tiempo, "
+		"partiendo de la concentración inicial que se indique y teniendo en cuenta las "
+		"reacciones en las que participa.\n\n"
+
+		"Usa el botón 'Metabolito' para introducir la información de un metabolito "
+		"siguiendo esta plantilla:\n\n"
+		"METABOLITO    <nombre_corto>    <nombre_largo>    <concentracion_inicial>\n\n"
+
+		"Sustituye cada campo entre '<>' por la información correspondiente. "
+		"Los campos deben estar separados por tabuladores.\n\n"
+
+		"Ejemplo:\n"
+		"METABOLITO    Glu    Glucosa    0.573074";
+
+	DialogMetabolito->FooterText =
+		"METABOLITO: palabra clave para identificar que esa línea es un Metabolito.\n\n"
+		"<nombre_corto>: identificador único del metabolito.\n\n"
+		"<nombre_largo>: nombre del metabolito.\n\n"
+		"<concentracion_inicial>: concentración inicial del metabolito. "
+		"Usa '.' para los decimales.";
+
+	DialogMetabolito->Execute();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::infoParamClick(TObject *Sender)
+{
+	DialogParametro->Text =
+		"Los parámetros son las constantes de cinética química que aparecen en las "
+		"ecuaciones cinéticas de cada reacción a simular, como las constantes de "
+		"Michaelis-Menten o las velocidades máximas.\n\n"
+
+        "Usa el botón 'Parámetro' para introducir la información de un parámetro "
+		"siguiendo esta plantilla:\n\n"
+
+		"PARAMETRO <nombre_corto> <nombre_largo> <valor>\n\n"
+
+		"Sustituye cada campo entre '<>' por la información correspondiente. "
+		"Los campos deben estar separados por tabuladores.\n\n"
+
+		"Ejemplo:\n"
+		"PARAMETRO        V1        VmaxHexoquinasa        51.7547";
+
+	DialogParametro->FooterText =
+		"PARAMETRO: palabra clave para identificar que esa línea es un Parámetro.\n\n"
+		"<nombre_corto>: identificador único del parámetro.\n\n"
+		"<nombre_largo>: nombre del parámetro.\n\n"
+		"<valor>: valor del parámetro. Usa '.' para los decimales.";
+
+	DialogParametro->Execute();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::infoReacClick(TObject *Sender)
+{
+	DialogReaccion->Text =
+		"Las reacciones representan las transformaciones químicas que tienen lugar "
+		"entre los metabolitos de la ruta metabólica a simular.\n\n"
+
+		"Usa el botón 'Reacción' para introducir la información de una reacción "
+		"siguiendo esta plantilla:\n\n"
+
+		"REACCION <nombre_corto> <nombre_largo> <lista_reactivos> <sentido_reaccion> <lista_productos>\n\n"
+
+		"Sustituye cada campo entre '<>' por la información correspondiente. "
+		"Los campos deben estar separados por tabuladores.\n\n"
+
+		"Ejemplo:\n"
+		"REACCION    HK    Hexoquinasa    [Glu, ATP]    UNI    [G6P, ADP]";
+
+	DialogReaccion->FooterText =
+		"REACCION: palabra clave para identificar que esa línea es una Reacción.\n\n"
+		"<nombre_corto>: identificador único de la reacción.\n\n"
+		"<nombre_largo>: nombre de la reacción.\n\n"
+		"<lista_reactivos>: metabolitos que participan como reactivos. "
+		"Usa sus nombres cortos entre corchetes y separados por comas.\n\n"
+		"<sentido_reaccion>: 'UNI' para una reacción unidireccional o 'BI' "
+		"para una reacción bidireccional.\n\n"
+		"<lista_productos>: metabolitos que participan como productos. "
+		"Usa sus nombres cortos entre corchetes y separados por comas.";
+	DialogReaccion->Execute();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::infoMecClick(TObject *Sender)
+{
+	DialogMecanismo->Text =
+		"Cada reacción química tiene asociada una velocidad de reacción, que indica "
+		"la rapidez con la que se producen sus productos. Un mecanismo define la "
+		"ecuación cinética utilizada para calcular esa velocidad. Por tanto, debes "
+		"introducir un mecanismo para cada reacción de la ruta a simular.\n\n"
+
+		"Usa el botón 'Mecanismo' para introducir la información de un mecanismo "
+		"siguiendo esta plantilla:\n\n"
+		"MECANISMO <tipo_mecanismo> <nombre_reaccion> <params>\n\n"
+
+		"Sustituye cada campo entre '<>' por la información correspondiente. "
+		"Los campos deben estar separados por tabuladores.\n\n"
+
+		"Ejemplos:\n"
+		"MECANISMO    LEY-ACCION-MASAS        PEP   [k7d, k7i]\n"
+		"MECANISMO    MM-BI-SEC-ALEATORIO   PyK   [V8, K8PEP, K8ADP]";
+
+	DialogMecanismo->FooterText =
+		"MECANISMO: palabra clave para identificar que esa línea es un Mecanismo.\n\n"
+		"<tipo_mecanismo>: tipo de mecanismo. La aplicación contempla estos 6:\n\n"
+		"· LEY-ACCION-MASAS: ley de acción de masas.\n"
+		"· MM-UNI-INHIBIDOR: Michaelis-Menten Unisustrato con Inhibición.\n"
+		"· MM-BI-SEC-ALEATORIO: Michaelis-Menten Bisustrato Secuencial Aleatorio.\n"
+		"· MM-UNI-BI-INHIBIDOR: Michaelis-Menten Uni-Bi con Inhibición.\n"
+		"· MM-BI-BI-INHIBIDOR: Michaelis-Menten Bi-Bi con Inhibición.\n"
+		"· HILL-INHIBIDOR-ACTIVADOR: Ecuación de Hill con Inhibidor y Activador.\n\n"
+		"<nombre_reaccion>: nombre corto de la reacción que se rige por este mecanismo.\n\n"
+		"<params>: lista de los parámetros que aparecen en el mecanismo, escritos entre "
+		"corchetes y separados por comas. Deben estar registrados en el modelo y respetar "
+		"el orden de la plantilla. Los indicados entre paréntesis son opcionales, "
+		"asociados a la reacción inversa si fuera bidireccional o ctes de disociación, "
+		"y deben borrarse si no se van a introducir. "
+		"En la plantilla, se consideran A, B reactivos; C, D productos; I inhibidor.";
+
+	DialogMecanismo->Execute();
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::BtnValidarDatosClick(TObject *Sender)
+{
+	// borra el contenido de MemoSalidaValidacion
+	MemoSalidaValidacion->Lines->Clear();
+
+	// se establece a true y cambia a false durante la funcion si ocurre algun error
+	datosValidados = true;
+
+	// reinicia los valores del modelo
+	model.Clear();
+
+	// lee cada linea del texto de entrada
+	for (int i = 0; i < MemoTextoEntrada->Lines->Count; i++)
+	{
+		String line = Trim(MemoTextoEntrada->Lines->Strings[i]);
+
+		// ignora lineas vacias
+        if (line.IsEmpty())
+			continue;
+
+		// si empieza por METABOLITO
+		if (UpperCase(line.SubString(1, 10)) == "METABOLITO")
+		{
+			entradaVacia = false;
+
+			try
+			{
+				// crea un objeto metabolito llamando a su constructor
+				TMetabolite metabolito(line);
+				model.addMetabolite(metabolito);
+
+				// muestra el metabolito encontrado
+				//metabolito.toString(MemoSalidaValidacion);
+			}
+			catch (Exception &e)
+			{
+				// muestra excepcion en el texto de salida validacion
+				MemoSalidaValidacion->Lines->Text = MemoSalidaValidacion->Lines->Text +
+					"[Línea " + IntToStr(i+1) + "] " +
+					"Error en lectura de METABOLITO: " + e.Message + "\n";
+				datosValidados = false;
+			}
+		}
+		else if (UpperCase(line.SubString(1, 9)) == "PARAMETRO")
+		{
+			entradaVacia = false;
+
+			try
+			{
+				// crea un objeto parametro llamando a su constructor
+				TParameter param(line);
+				model.addParameter(param);
+
+				// muestra el parametro encontrado
+				//param.toString(MemoSalidaValidacion);
+			}
+			catch (Exception &e)
+			{
+				// muestra excepcion en el texto de salida validacion
+				MemoSalidaValidacion->Lines->Text = MemoSalidaValidacion->Lines->Text +
+					"[Línea " + IntToStr(i+1) + "] " +
+					"Error en lectura de PARAMETRO: " + e.Message + "\n";
+				datosValidados = false;
+			}
+		}
+        else if (UpperCase(line.SubString(1, 8)) == "REACCION")
+		{
+			entradaVacia = false;
+
+			try
+			{
+				// crea un objeto reaction llamando a su constructor
+				TReaction reaction(line, &model);
+				model.addReaction(reaction);
+
+				// muestra el parametro encontrado
+				//reaction.toString(MemoSalidaValidacion);
+			}
+			catch (Exception &e)
+			{
+				// muestra excepcion en el texto de salida validacion
+				MemoSalidaValidacion->Lines->Text = MemoSalidaValidacion->Lines->Text +
+					"[Línea " + IntToStr(i+1) + "] " +
+					"Error en lectura de REACCION: " + e.Message + "\n";
+                datosValidados = false;
+			}
+		}
+		else if (UpperCase(line.SubString(1, 9)) == "MECANISMO")
+		{
+			entradaVacia = false;
+
+			try
+			{
+                // Crea el objeto mecanismo segun el tipo que sea
+				TMechanism mech = model.CreateMechanism(line, &model);
+				model.addMechanism(mech);
+
+				// muestra el mecanismo encontrado aplicado a una reaccion concreta
+				//mech.toString(MemoSalidaValidacion);
+			}
+			catch (Exception &e)
+			{
+				// muestra excepcion en el texto de salida validacion
+				MemoSalidaValidacion->Lines->Text = MemoSalidaValidacion->Lines->Text +
+					"[Línea " + IntToStr(i+1) + "] " +
+					"Error en lectura de MECANISMO: " + e.Message + "\n";
+                datosValidados = false;
+			}
+		}
+	}
+
+	// el numero de reacciones y mecanismos registrados debe coincidir
+	if (model.getNReactions() != model.getNMechanisms())
+	{
+		MemoSalidaValidacion->Lines->Add("[Error semántico]: El número de reacciones y mecanismos no coincide. Cada reacción debe tener un mecanismo asociado.");
+		datosValidados = false;
+	}
+
+	// si los datos son validos y hay mecanismos
+	if (datosValidados && (model.getNMechanisms() > 0))
+	{
+		//rellena el objeto combobox con las reacciones cargadas
+		model.fillReactionsComboBox(ComboMostrarReaccion);
+		// construye el sistema de ecuaciones
+		model.BuildEquations();
+	}
+
+	// Mostrar el total de metabolitos, parametros, reacciones y mecanismos leidos
+	if (!entradaVacia){
+		MemoSalidaValidacion->Lines->Text = MemoSalidaValidacion->Lines->Text + "\n";
+		MemoSalidaValidacion->Lines->Add("Elementos leídos correctamente:");
+		MemoSalidaValidacion->Lines->Add("Total Metabolitos: " + IntToStr(model.getNMetabolites()));
+		MemoSalidaValidacion->Lines->Add("Total Parámetros:  " + IntToStr(model.getNParameters()));
+		MemoSalidaValidacion->Lines->Add("Total Reacciones: " + IntToStr(model.getNReactions()));
+		MemoSalidaValidacion->Lines->Add("Total Mecanismos: " + IntToStr(model.getNMechanisms()));
+
+		if (datosValidados)
+		{
+            // informacion para el usuario
+			MemoSalidaValidacion->Lines->Add("");
+			MemoSalidaValidacion->Lines->Add("DATOS VALIDADOS");
+        }
+	}
+	else
+	{
+		// Avisar si no se ha introducido ningun dato
+		DialogIntroducirDatos->Execute();
+		datosValidados = false;
+	}
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::BtnMostrarSistemaClick(TObject *Sender)
+{
+	if (!datosValidados) // datos no validados
+	{
+		DialogPrimeroValida->Execute();
+	}
+	else
+	{
+        // Muestra las ecuaciones para cada metabolito - formato para el usuario condensado
+		MemoSalidaValidacion->Lines->Add("");
+		MemoSalidaValidacion->Lines->Add("----------------------------------------------------------");
+		MemoSalidaValidacion->Lines->Add("Sistema de ecuaciones:");
+
+		for (int i=0; i < model.getNMetabolites(); i++)
+			MemoSalidaValidacion->Lines->Add("d["+ model.getMetabolite(i)->getShortName() + "]/dt = " + model.getEquationShowCondensed(i));
+																											// getEquationPython
+		MemoSalidaValidacion->Lines->Add("----------------------------------------------------------");     // getEquationShow
+	}
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::ComboInsertarMecanismoChange(TObject *Sender)
+{
+	// coge el texto actual del comobox --> tipo de mecanismo seleccionado
+	String key = ComboInsertarMecanismo->Text;
+
+	// inserta la plantilla de ese mencanismo en el panel de entrada de datos
+	MemoTextoEntrada->Lines->Add(model.getMechanismTemplate(key));
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::ComboMostrarReaccionChange(TObject *Sender)
+{
+    if (!datosValidados) // datos no validados
+	{
+		DialogPrimeroValida->Execute();
+	}
+	else
+	{
+		// coge la seleccion del combobox
+		String key = ComboMostrarReaccion->Text;
+
+		// si se ha seleccionado la opcion "Todas", muestra las ecuaciones cineticas de todas las reacciones del modelo
+		if (key == "Todas")
+		{
+			for (int i=0; i< model.getNMechanisms(); i++)
+			{
+				const TMechanism* m = model.getMechanism(i);
+
+				MemoSalidaValidacion->Lines->Add("----------------------------------------------------------");
+				MemoSalidaValidacion->Lines->Add("Reacción '" + m->getReaction()->getShortName() + "' : " + m->getMechType());
+				MemoSalidaValidacion->Lines->Add(m->getReaction()->getShortName() + "_d = " + m->getDirectRateShow());
+
+				if (m->getReaction()->getDirectionString() == "BI")
+					MemoSalidaValidacion->Lines->Add(m->getReaction()->getShortName() + "_i = " + m->getInverseRateShow());
+			}
+		}
+		else // muestra solo la ecuacion de la reaccion seleccionada
+		{
+			// mecanismo asociado a la reaccion seleccionada
+			const TMechanism* mech = model.givesMechanism(key);
+
+			// muestra la ecuacion cinetica de la reaccion seleccionada
+			MemoSalidaValidacion->Lines->Add("----------------------------------------------------------");
+			MemoSalidaValidacion->Lines->Add("Reacción '" + key + "' : " + mech->getMechType());
+			MemoSalidaValidacion->Lines->Add(key + "_d = " + mech->getDirectRateShow());
+			if (model.findReaction(key)->getDirectionString() == "BI")
+				MemoSalidaValidacion->Lines->Add(key + "_i = " + mech->getInverseRateShow());
+		}
+    }
+}
+
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::BtnLanzarSimulacionClick(TObject *Sender)
+{
+	// comprobaciones previas
+	if (!datosValidados)
+	{
+		DialogPrimeroValida->Execute();
+	}
+	else
+	{
+		// inicia cronometro
+		TStopwatch cronometro = TStopwatch::StartNew();
+
+		// limpia salida de texto de la simulacion
+		MemoSalidaSimTexto->Clear();
+
+		// borra contenido de la tabla
+		StringGrid->ColCount = 1;
+		StringGrid->RowCount = 1;
+		StringGrid->Cells[0][0] = "";
+
+		// borra la imagen
+		ImageGrafica->Visible = false;
+		Application->ProcessMessages();
+
+		// actualiza parametros simulacion desde los Spin
+		simulation.setInitialTime(SpinTiempoInicial->Value);
+		simulation.setFinalTime(SpinTiempoFinal->Value);
+		simulation.setCicles(SpinCiclos->Value);
+		simulation.setNumericMethod(simulation.getNumericMethodFromString(ComboEleccionMetodo->Text));
+
+		// actualiza vectores de datos necesarios para la simulacion desde el modelo cargado
+		simulation.setConcenNames(model.getAllMetaboliteNames());
+		simulation.setInitialConcen(model.getAllInitialConcen());
+		simulation.setEquations(model.getAllEquationsPython());
+		simulation.setParameters(model.getAllParameters());
+
+		// mensaje de aviso al usuario
+		MemoSalidaSimTexto->Lines->Text = "Iniciando simulación...";
+		MemoSalidaSimTexto->Lines->Add("Espere mientras termina la ejecución.");
+
+		// punto decimal
+		TFormatSettings fs;
+		fs.DecimalSeparator = '.';
+
+		try
+		{
+			// lanza la simulacion
+			simulation.runSimulation();
+
+			// carga tabla
+			simulation.createTableResults(StringGrid);
+
+			// carga grafica
+			ImageGrafica->Picture->LoadFromFile("grafico.png");
+			ImageGrafica->Visible = true;
+
+			// para el cronometro y extrae los segundos/minutos empleados
+			cronometro.Stop();
+			double segundos = cronometro.Elapsed.TotalSeconds;
+			double minutos = cronometro.Elapsed.TotalMinutes;
+			String tiempoStr = FloatToStrF(segundos, ffFixed, 15, 2, fs) + " segundos";
+			if(segundos > 120) tiempoStr = FloatToStrF(minutos, ffFixed, 15, 2, fs) + " minutos";
+
+			// informacion de finalizacion
+			MemoSalidaSimTexto->Lines->Add("Simulación terminada en " + tiempoStr + ".");
+			MemoSalidaSimTexto->Lines->Add("Puedes consultar la evolución de las concentraciones en la tabla y gráfica inferiores.");
+
+            // borra archivos generados
+			DeleteFile("input.csv");
+            Sleep(500); // ms
+			DeleteFile("output.csv");
+		}
+		catch (Exception &e)
+		{
+			// muestra excepcion en el texto de salida simulacion texto
+			MemoSalidaSimTexto->Lines->Text = e.Message;
+		}
+	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::infoMetodoClick(TObject *Sender)
+{
+	DialogMetodo->Text =
+		"Se debe elegir un método numérico para realizar la simulación.\n"
+		"Los métodos numéricos disponibles son: \n\n"
+		"· Runge-Kutta 45: método de Runge-Kutta explícito. Calcula el siguiente paso directamente a partir de la información disponible. "
+		"Ajusta automáticamente el tamaño del paso para mantener el error dentro de los límites especificados. "
+		"Utiliza una aproximación de quinto orden para calcular la solución y una de cuarto orden para estimar el error cometido. "
+		"Es el método más simple de los listados. Se vuelve ineficiente para problemas rígidos.\n\n"
+		"· Radau (por defecto): método de Runge-Kutta implícito. En cada paso necesita resolver un sistema de ecuaciones diferenciales. "
+		"Esto lo hace más costoso por paso, pero mucho más estable en problemas rígidos. Utiliza una aproximación de quinto orden "
+		" y el control del error se realiza mediante una fórmula de tercer orden.\n\n"
+		"· BDF (Backward Differentiation Formula): método implícito multipaso. "
+		"Utiliza información de varios pasos anteriores para calcular el siguiente. "
+		"Cambia automáticamente el orden del método entre 1 y 5, y el tamaño del paso, según convenga para mejorar la eficiencia. "
+		"Muy adecuado para simulaciones de problemas rígidos de gran tamaño.\n\n"
+		"· LSODA (Livermore Solver for Ordinary Differential equations with Automatic method switching): "
+		"método que detecta automáticamente si el problema es rígido o no. Comienza utilizando el método Adams para problemas no rígidos. "
+		"Si detecta que se vuelve rígido, cambia automáticamente a un método BDF.\n\n";
+
+	DialogMetodo->FooterText =
+		"¿Qué significa que un problema sea rígido?\n\n"
+		"Un problema se considera rígido cuando algunas variables del sistema cambian muy rápidamente mientras que otras evolucionan mucho más despacio. "
+		"En estos casos, métodos como RK45 se ven obligados a utilizar pasos extremadamente pequeños para mantener la estabilidad, haciendo que la simulación sea muy lenta. "
+		"Los métodos Radau, BDF y LSODA están diseñados específicamente para manejar este tipo de simulaciones de forma mucho más eficiente.";
+
+	DialogMetodo->Execute();
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::StringGridDrawCell(TObject *Sender, System::LongInt ACol,
+		  System::LongInt ARow, TRect &Rect, TGridDrawState State)
+{
+	TStringGrid *Grid = dynamic_cast<TStringGrid*>(Sender);
+	if (!Grid) return;
+
+	// Edita las celdas de la primera fila o la primera columna
+    if (ACol == 0 || ARow == 0)
+	{
+		// 1. Pinta el color de fondo
+		Grid->Canvas->Brush->Color = TColor(RGB(255, 239, 213)); // papaya whip
+		Grid->Canvas->FillRect(Rect);
+
+		// 2. Configura el estilo del texto
+		Grid->Canvas->Font->Color = clBlack;
+		Grid->Canvas->Font->Style = TFontStyles() << fsBold;
+
+		// 3. Obtiene el texto de la celda actual
+		String textoCelda = Grid->Cells[ACol][ARow];
+
+		// 4. Dibuja el texto explicitamente (con margen de 4 pixeles)
+		Grid->Canvas->TextRect(Rect, Rect.Left + 4, Rect.Top + 4, textoCelda);
+	}
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::MemoTextoEntradaChange(TObject *Sender)
+{
+	// cambia la variable bandera
+	datosValidados = false;
+
+    // detecta el texto "DATOS VALIDADOS" y lo borra si existe
+	int pos = MemoSalidaValidacion->Lines->Text.Pos(L"DATOS VALIDADOS");
+
+	if (pos > 0)
+		MemoSalidaValidacion->Lines->Text = MemoSalidaValidacion->Lines->Text.Delete(pos, 15);
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::GuardarTablaClick(TObject *Sender)
+{
+	// si no hay resultados de simulacion, no se puede guardar la tabla
+	if(simulation.resultadosIsEmpty())
+	{
+		DialogNoTabla->Execute();
+	}
+	// si hay resultados:
+	else
+	{
+		// crea cuadro dialogo, solo permite guardar en formato txt
+		std::unique_ptr<TSaveDialog> SaveTablaSimulacion(new TSaveDialog(this));
+		SaveTablaSimulacion->Filter = "Text files (*.txt)|*.txt";
+		SaveTablaSimulacion->DefaultExt = "txt";
+
+		// exporta la tabla en formato csv en la ruta que diga el usuario
+		if (SaveTablaSimulacion->Execute()) simulation.exportResultsToCSV(SaveTablaSimulacion->FileName);
+	}
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::GuardarGraficaClick(TObject *Sender)
+{
+	// si no hay resultados de simulacion, no se puede guardar la grafica
+	if (simulation.resultadosIsEmpty())
+	{
+		DialogNoGrafica->Execute();
+	}
+	else // si se han generado los resultados
+	{
+		// configuracion del dialogo
+		std::unique_ptr<TSaveDialog> SaveGraficaSimulacion(new TSaveDialog(this));
+
+		SaveGraficaSimulacion->Filter = "Imagen PNG (*.png)|*.png";
+		SaveGraficaSimulacion->DefaultExt = "png";
+
+		if (SaveGraficaSimulacion->Execute())
+		{
+			String origen = ExtractFilePath(Application->ExeName) + "grafico.png";
+			String destino = SaveGraficaSimulacion->FileName;
+			TFile::Copy(origen, destino, true);
+		}
+	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::GuardarEcuacionesClick(TObject *Sender)
+{
+	// los datos deben estar validados para que se hayan construido las ecuaciones
+	if(!datosValidados)
+	{
+		DialogPrimeroValida->Execute();
+	}
+	else
+	{
+		// crea cuadro dialogo, solo permite guardar en formato txt
+		std::unique_ptr<TSaveDialog> SaveEcuaciones(new TSaveDialog(this));
+		SaveEcuaciones->Filter = "Text files (*.txt)|*.txt";
+		SaveEcuaciones->DefaultExt = "txt";
+
+		// carga las ecuaciones en un archivo txt
+		if (SaveEcuaciones->Execute())
+		{
+			std::unique_ptr<TStringList> csv(new TStringList());
+
+			// recorre todos los mecanismos cargados
+			for (int i=0; i< model.getNMechanisms(); i++)
+			{
+				const TMechanism* m = model.getMechanism(i);
+
+				csv->Add("----------------------------------------------------------");
+				csv->Add("Reacción '" + m->getReaction()->getShortName() + "' : " + m->getMechType());
+				csv->Add(m->getReaction()->getShortName() + "_d = " + m->getDirectRateShow());
+
+				if (m->getReaction()->getDirectionString() == "BI")
+					csv->Add(m->getReaction()->getShortName() + "_i = " + m->getInverseRateShow());
+			}
+
+			// tambien carga el sistema de ecuaciones generado
+			csv->Add("");
+			csv->Add("----------------------------------------------------------");
+			csv->Add("Sistema de ecuaciones:");
+
+			for (int i=0; i < model.getNMetabolites(); i++)
+				csv->Add("d["+ model.getMetabolite(i)->getShortName() + "]/dt = " + model.getEquationShowCondensed(i));
+																												//getEquationPython
+			csv->Add("----------------------------------------------------------");
+
+
+			// crea el archivo txt
+			csv->SaveToFile(SaveEcuaciones->FileName, TEncoding::UTF8);
+		}
+	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::ManualUsuarioClick(TObject *Sender)
+{
+	DialogManualUsuario->Text =
+		"DESCRIPCIÓN DE LA APLICACIÓN\n\n"
+		"La aplicación es un simulador de rutas metabólicas que permite modelar y analizar sistemas de reacciones químicas "
+		"mediante resolución numérica. El objetivo principal es facilitar el estudio del comportamiento dinámico de una ruta "
+		"metabólica de forma visual e interactiva, permitiendo modificar fácilmente distintos elementos del modelo "
+		"y estudiar sus variaciones.\n\n\n"
+
+		"FLUJO PRINCIPAL DE LA INTERFAZ\n\n"
+		"1. Entrada de datos: El usuario introduce una ruta metabólica indicando los METABOLITOS que participan en ella, "
+		"las REACCIONES que la componen, qué tipo de MECANISMO sigue cada reacción y los PARÁMETROS de cinética química necesarios. "
+		"Para cada elemento, hay un botón que indica cómo introducirlo. También puede usar el menú superior para subir plantillas "
+		"ya guardadas o cargar un ejemplo de ruta de la glucólisis.\n\n"
+
+		"Después, el usuario VALIDA los datos introducidos mediante el botón 'Validar datos'. Si hay errores en la carga de datos, "
+		"la aplicación indica la línea donde se encuentran y el motivo. Si la validación es satisfactoria, se calculan las ecuaciones "
+		"cinéticas de cada reacción introducida y el sistema de ecuaciones asociado. El sistema contiene una ecuación por metabolito cargado "
+		"y representa su variación de concentración en el tiempo. Se pueden visualizar mediante los botones de 'Mostrar Ec.Cinética' y "
+		"'Mostrar Sistema de Ecuaciones'.\n\n"
+
+		"2. Configuración de la simulación: Una vez validados los datos, el usuario establece el intervalo temporal y los ciclos "
+		"para la simulación, así como el método numérico a emplear. Se recomienda leer la información de los métodos numéricos "
+		"para entender cuándo conviene usar cada uno de ellos.\n\n"
+
+		"3. Salida: Tras lanzar la simulación, el usuario puede visualizar los resultados obtenidos en forma de TABLA o GRÁFICA. "
+		"En ellas se muestra la concentración de los metabolitos cargados en cada instante de la simulación, pudiendo analizar su evolución. "
+		"La gráfica y la tabla son descargables usando el menú superior.";
+
+	DialogManualUsuario->Execute();
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::AcercaDeClick(TObject *Sender)
+{
+  	DialogAcercaDe->Text =
+		"Simulador de Rutas Metabólicas\n\n"
+		"Versión 1.0\n\n"
+		"Esta aplicación ha sido desarrollada como parte de un Trabajo Fin de Grado con el objetivo "
+		"de facilitar la simulación de rutas metabólicas.\n\n"
+		"Se ha utilizado Embarcadero C++ Builder 12 Community Edition para la implementación de la "
+		"interfaz gráfica y las librerías SciPy, NumPy y Matplotlib de Python para la resolución "
+		"de las ecuaciones diferenciales resultantes y su visualización.";
+
+	DialogAcercaDe->FooterText =
+		"Autora: Elena Torres Fernández\n"
+		"Universidad de Granada\n"
+		"Año: 2026";
+
+	DialogAcercaDe->Execute();
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::ImageGraficaDblClick(TObject *Sender)
+{
+	// copia la imagen al segundo formulario
+	Form2->ImageGrafica->Picture->LoadFromFile("grafico.png");
+
+	// abre la ventana maximizada
+	Form2->WindowState = wsMaximized;
+	Form2->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
+{
+    // borra los archivos generados en la simulacion
+	simulation.borrarArchivosAntiguos();
+
+    // libera la memoria del formulario
+	Action = caFree;
+}
+//---------------------------------------------------------------------------
+

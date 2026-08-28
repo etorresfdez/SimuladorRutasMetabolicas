@@ -1,0 +1,28 @@
+<map id="TReaction::getShortName" name="TReaction::getShortName">
+<area shape="rect" id="Node000001" title="Devuelve el nombre corto de la reaccion." alt="" coords="503,247,676,273"/>
+<area shape="rect" id="Node000002" href="$class_t_form1.html#a592eff540cbc9ff77e21d833059b9a39" title="Al seleccionar una reaccion de la lista de reacciones cargadas, muestra la ecuacion cinetica generada..." alt="" coords="240,5,455,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="575,232,557,195,530,149,495,102,453,62,436,51,436,46,457,58,499,99,534,146,561,193,580,233"/>
+<area shape="rect" id="Node000003" href="$class_t_form1.html#a4054d1c2b1745192b6b1cff6fee0bcd5" title="Accion que se realiza al darle al boton &#39;Guardar ecuaciones y sistema&#39; del menu. Genera un archivo tx..." alt="" coords="253,72,442,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="566,234,519,182,488,153,454,129,433,118,432,113,456,124,491,149,523,178,572,234"/>
+<area shape="rect" id="Node000004" href="$class_t_m_m_bi_bi_inhibidor.html#ae96c6cd6c35591da5afbd8e690366145" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="255,139,440,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="548,240,454,196,424,184,423,179,456,191,553,239"/>
+<area shape="rect" id="Node000006" href="$class_t_m_m_bi_sec_aleatorio.html#afc3e0110e898539d2128a7673f0239bc" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="275,272,420,315"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="485,275,421,286,420,281,490,273"/>
+<area shape="rect" id="Node000008" href="$class_t_m_m_uni_bi_inhibidor.html#a20d6d999152c5042a3e8f9b57c661b4d" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="276,405,419,448"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="571,284,523,342,491,371,456,396,420,412,418,407,454,391,488,367,519,338,567,287"/>
+<area shape="rect" id="Node000010" href="$class_t_m_m_bi_bi_inhibidor.html#a82dcfcc31f05b07fd90cc5be9df671d8" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="251,205,444,248"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="485,247,445,243,444,237,490,245"/>
+<area shape="rect" id="Node000011" href="$class_t_m_m_bi_sec_aleatorio.html#ab79024ec54f7ab3a243d92dac5596070" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="272,339,423,381"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="553,280,456,329,425,341,423,336,454,324,548,282"/>
+<area shape="rect" id="Node000012" href="$class_t_m_m_uni_bi_inhibidor.html#a59733a3b1589a10af47794977d0f487e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="272,472,423,515"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="579,286,561,327,534,374,499,421,457,462,424,480,422,475,453,458,495,418,530,371,557,325,575,289"/>
+<area shape="rect" id="Node000005" href="$class_t_m_m_bi_bi_inhibidor.html#afd7921f14f90bb419de8d1dd53d27e13" title="Constructor de la clase TMMBiBiInhibidor. Llama al constructor del padre, rellena los atributos propi..." alt="" coords="5,172,192,215"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="237,176,193,183,191,179,241,173"/>
+<area shape="rect" id="Node000007" href="$class_t_m_m_bi_sec_aleatorio.html#ad4e65c49ef3a64b8162e1aab18289d3d" title="Constructor de la clase TMMBiSecAleatorio. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="26,305,171,348"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="257,307,173,319,171,314,261,303"/>
+<area shape="rect" id="Node000009" href="$class_t_m_m_uni_bi_inhibidor.html#a27f1f61c93dc9400e2111c7e84bfb813" title="Constructor de la clase TMMUniBiInhibidor. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="28,439,169,481"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="258,439,170,453,169,448,263,437"/>
+<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="233,213,193,208,191,203,238,210"/>
+<area shape="poly" id="edge12_Node000011_Node000007" title=" " alt="" coords="254,349,172,339,171,334,258,347"/>
+<area shape="poly" id="edge14_Node000012_Node000009" title=" " alt="" coords="253,482,169,472,169,467,259,480"/>
+</map>

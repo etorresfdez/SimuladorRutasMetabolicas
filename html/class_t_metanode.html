@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PrototipoSimulacionRutasMetabolicas: Referencia de la clase TMetanode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PrototipoSimulacionRutasMetabolicas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_t_metanode.html','','class_t_metanode-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase TMetanode</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Clase para encapsular los metabolitos del modelo.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_metabolic_elements_8h_source.html">MetabolicElements.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:aac0b9cb13d54831bd68b5f466eb8fdde" id="r_aac0b9cb13d54831bd68b5f466eb8fdde"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aac0b9cb13d54831bd68b5f466eb8fdde">TMetanode</a> (String p_shortName, String p_fullName, double p_initialValue)</td></tr>
+<tr class="memdesc:aac0b9cb13d54831bd68b5f466eb8fdde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de <a class="el" href="class_t_metanode.html" title="Clase para encapsular los metabolitos del modelo.">TMetanode</a>.  <br /></td></tr>
+<tr class="memitem:a76ec2b9c92d143d9d0f38dfbb248be45" id="r_a76ec2b9c92d143d9d0f38dfbb248be45"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a76ec2b9c92d143d9d0f38dfbb248be45">TMetanode</a> (String line)</td></tr>
+<tr class="memdesc:a76ec2b9c92d143d9d0f38dfbb248be45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de <a class="el" href="class_t_metanode.html" title="Clase para encapsular los metabolitos del modelo.">TMetanode</a>.  <br /></td></tr>
+<tr class="memitem:a75e0e02586a52f746b74a6a132c17bf5" id="r_a75e0e02586a52f746b74a6a132c17bf5"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a75e0e02586a52f746b74a6a132c17bf5">getShortName</a> () const</td></tr>
+<tr class="memdesc:a75e0e02586a52f746b74a6a132c17bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el nombre corto del metanodo.  <br /></td></tr>
+<tr class="memitem:a0c9d1c3e1570c79fa472e0c9b94267e6" id="r_a0c9d1c3e1570c79fa472e0c9b94267e6"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a0c9d1c3e1570c79fa472e0c9b94267e6">getFullName</a> () const</td></tr>
+<tr class="memdesc:a0c9d1c3e1570c79fa472e0c9b94267e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el nombre largo del metanodo.  <br /></td></tr>
+<tr class="memitem:a7d187d69ad4ea6e4b1f2023b16f42e61" id="r_a7d187d69ad4ea6e4b1f2023b16f42e61"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a7d187d69ad4ea6e4b1f2023b16f42e61">getInitialValue</a> () const</td></tr>
+<tr class="memdesc:a7d187d69ad4ea6e4b1f2023b16f42e61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la concentracion inicial del metabolito.  <br /></td></tr>
+<tr class="memitem:ab780f1f97599cf8ccac31989c351d07d" id="r_ab780f1f97599cf8ccac31989c351d07d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab780f1f97599cf8ccac31989c351d07d">setInitialValue</a> (double initialConcentration)</td></tr>
+<tr class="memdesc:ab780f1f97599cf8ccac31989c351d07d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza la concentracion inicial del metabolito.  <br /></td></tr>
+<tr class="memitem:a99f2ac4adeaf2f234d057b4872976111" id="r_a99f2ac4adeaf2f234d057b4872976111"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a99f2ac4adeaf2f234d057b4872976111">toString</a> (TMemo *pantallaSalida) const</td></tr>
+<tr class="memdesc:a99f2ac4adeaf2f234d057b4872976111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra el metabolito guardado y sus atributos.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Atributos públicos estáticos</h2></td></tr>
+<tr class="memitem:a0f080cf5a61679bd70ba01d4e0fd05ee" id="r_a0f080cf5a61679bd70ba01d4e0fd05ee"><td class="memItemLeft">static const String&#160;</td><td class="memItemRight"><a class="el" href="#a0f080cf5a61679bd70ba01d4e0fd05ee">inputTemplate</a> = &quot;METANODE &lt;nombre_corto&gt; &lt;nombre_largo&gt; &lt;concentracion_inicial&gt;&quot;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase para encapsular los metabolitos del modelo. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="aac0b9cb13d54831bd68b5f466eb8fdde" name="aac0b9cb13d54831bd68b5f466eb8fdde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac0b9cb13d54831bd68b5f466eb8fdde">&#9670;&#160;</a></span>TMetanode() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMetanode::TMetanode </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>p_shortName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>p_fullName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>p_initialValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de <a class="el" href="class_t_metanode.html" title="Clase para encapsular los metabolitos del modelo.">TMetanode</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_shortName</td><td>nombre corto del metabolito, tipo String </td></tr>
+    <tr><td class="paramname">p_fullName</td><td>nombre largo del metabolito, tipo String </td></tr>
+    <tr><td class="paramname">p_initialValue</td><td>concentracion inicial del metabolito, tipo double </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a76ec2b9c92d143d9d0f38dfbb248be45" name="a76ec2b9c92d143d9d0f38dfbb248be45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ec2b9c92d143d9d0f38dfbb248be45">&#9670;&#160;</a></span>TMetanode() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMetanode::TMetanode </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>line</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de <a class="el" href="class_t_metanode.html" title="Clase para encapsular los metabolitos del modelo.">TMetanode</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>linea del panel de entrada asociada a un metabolito, comienza por METANODE </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a0c9d1c3e1570c79fa472e0c9b94267e6" name="a0c9d1c3e1570c79fa472e0c9b94267e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c9d1c3e1570c79fa472e0c9b94267e6">&#9670;&#160;</a></span>getFullName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMetanode::getFullName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el nombre largo del metanodo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>String nombre largo del metanodo </dd></dl>
+
+</div>
+</div>
+<a id="a7d187d69ad4ea6e4b1f2023b16f42e61" name="a7d187d69ad4ea6e4b1f2023b16f42e61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d187d69ad4ea6e4b1f2023b16f42e61">&#9670;&#160;</a></span>getInitialValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TMetanode::getInitialValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la concentracion inicial del metabolito. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>double concentracion inicial del metabolito </dd></dl>
+
+</div>
+</div>
+<a id="a75e0e02586a52f746b74a6a132c17bf5" name="a75e0e02586a52f746b74a6a132c17bf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75e0e02586a52f746b74a6a132c17bf5">&#9670;&#160;</a></span>getShortName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TMetanode::getShortName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el nombre corto del metanodo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>String nombre corto del metanodo </dd></dl>
+
+</div>
+</div>
+<a id="ab780f1f97599cf8ccac31989c351d07d" name="ab780f1f97599cf8ccac31989c351d07d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab780f1f97599cf8ccac31989c351d07d">&#9670;&#160;</a></span>setInitialValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMetanode::setInitialValue </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>initialConcentration</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualiza la concentracion inicial del metabolito. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">double</td><td>concentracion inicial del metabolito </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a99f2ac4adeaf2f234d057b4872976111" name="a99f2ac4adeaf2f234d057b4872976111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99f2ac4adeaf2f234d057b4872976111">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMetanode::toString </td>
+          <td>(</td>
+          <td class="paramtype">TMemo *</td>          <td class="paramname"><span class="paramname"><em>pantallaSalida</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra el metabolito guardado y sus atributos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pantallaSalida</td><td>objeto de la interfaz donde se muestra </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a0f080cf5a61679bd70ba01d4e0fd05ee" name="a0f080cf5a61679bd70ba01d4e0fd05ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f080cf5a61679bd70ba01d4e0fd05ee">&#9670;&#160;</a></span>inputTemplate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const String TMetanode::inputTemplate = &quot;METANODE &lt;nombre_corto&gt; &lt;nombre_largo&gt; &lt;concentracion_inicial&gt;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Estructura de entrada de datos de un metabolito </p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li><a class="el" href="_metabolic_elements_8h_source.html">MetabolicElements.h</a></li>
+<li><a class="el" href="_metabolic_elements_8cpp.html">MetabolicElements.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_t_metanode.html">TMetanode</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

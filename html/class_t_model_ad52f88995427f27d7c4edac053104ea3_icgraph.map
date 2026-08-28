@@ -1,0 +1,7 @@
+<map id="TModel::getNReactions" name="TModel::getNReactions">
+<area shape="rect" id="Node000001" title="Devuelve el numero de reacciones que contiene el modelo." alt="" coords="263,31,422,57"/>
+<area shape="rect" id="Node000002" href="$class_t_model.html#a45494635ca0fd3779ea5147b616462c7" title="Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la v..." alt="" coords="30,5,190,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,34,190,30,190,25,250,33"/>
+<area shape="rect" id="Node000003" href="$class_t_model.html#a058434cf073381782bfbbe17905bdff9" title="Rellena el objeto comboReactions con la lista de las reacciones cargadas en el modelo." alt="" coords="5,56,215,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,55,215,61,215,55,250,54"/>
+</map>

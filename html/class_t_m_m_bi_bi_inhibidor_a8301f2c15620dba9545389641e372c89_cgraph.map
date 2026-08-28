@@ -1,0 +1,13 @@
+<map id="TMMBiBiInhibidor::CheckElements" name="TMMBiBiInhibidor::CheckElements">
+<area shape="rect" id="Node000001" title="Comprueba que se envian los parametros propios del mecanismo MMBiBiInhibidor: [Vmax,..." alt="" coords="5,81,231,108"/>
+<area shape="rect" id="Node000002" href="$class_t_mechanism.html#a2a8fa75aa79ff89533af07051e1a1007" title="Devuelve el parametro del mecanismo de la posicion &#39;i&#39;." alt="" coords="284,5,483,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,78,278,41,310,35,305,37,279,47,161,83"/>
+<area shape="rect" id="Node000003" href="$class_t_mechanism.html#a83135bad08af9d4416b57f7fe7c73493" title="Devuelve el nombre del tipo de mecanismo." alt="" coords="292,56,474,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="231,81,279,79,274,80,232,86"/>
+<area shape="rect" id="Node000004" href="$class_t_mechanism.html#ad3082b5258b9df20f86bad71acd6bdfb" title="Devuelve el numero de parametros del mecanismo guardados." alt="" coords="279,107,488,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="231,103,266,108,261,109,231,108"/>
+<area shape="rect" id="Node000005" href="$class_t_mechanism.html#a952aaf0c9f7c5f2ab95e20ba55cdde4d" title="Devuelve un puntero a la reaccion dada su nombre." alt="" coords="296,157,470,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="161,106,279,143,310,153,305,153,278,148,160,111"/>
+<area shape="rect" id="Node000006" href="$class_t_mechanism.html#a4645ac8a1913d474bded3ccb4f0b75ba" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="536,157,745,184"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="471,168,523,171,518,171,471,173"/>
+</map>

@@ -1,0 +1,441 @@
+\doxysubsection{Referencia de la clase TReaction}
+\hypertarget{class_t_reaction}{}\label{class_t_reaction}\index{TReaction@{TReaction}}
+
+
+Clase para encapsular las reacciones del modelo.  
+
+
+
+
+{\ttfamily \+\#include $<$Metabolic\+Elements.\+h$>$}
+
+
+
+Diagrama de colaboración de TReaction:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_t_reaction__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_reaction_ab291a02ec265f50f71259f3fea6dafa7}{TReaction}} (String p\+\_\+short\+Name, String p\+\_\+full\+Name, \doxymbox{\hyperlink{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74}{TReaction\+Direction}} p\+\_\+sentido, const std::\+vector$<$ \doxymbox{\hyperlink{struct_t_substance}{TSubstance}} $>$ \&p\+\_\+reactants, const std::\+vector$<$ \doxymbox{\hyperlink{struct_t_substance}{TSubstance}} $>$ \&p\+\_\+products, \doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*}model)
+\begin{DoxyCompactList}\small\item\em Constructor de \doxylink{class_t_reaction}{TReaction}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_t_reaction_ae0662c4665943f5518ae7a8444e759fb}{TReaction}} (String line, \doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*}model)
+\begin{DoxyCompactList}\small\item\em Constructor de \doxylink{class_t_reaction}{TReaction}, lee una linea completa del panel de entrada. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_reaction_a9fc380df98f36344ae0686632b22892c}{get\+Short\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre corto de la reaccion. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_reaction_a1e5454c61f101fb0a40f273071702229}{get\+Full\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre largo del parametro. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_reaction_a910b2d30b88293dc97f76300db9f3905}{get\+Direction\+String}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el sentido de la reaccion. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_reaction_a7e87afed02be63e8a789f97bebdc124a}{get\+NReactants}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de reactivos que tiene la reaccion. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_reaction_ab2d2437342af2beeaa3818be3cf903b5}{get\+NProducts}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de productos que tiene la reaccion. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{struct_t_substance}{TSubstance}} \doxymbox{\hyperlink{class_t_reaction_ae3762acaeb86390a70fb57a9c8061e39}{get\+Reactant}} (int i) const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre corto del reactivo i de la reaccion. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{struct_t_substance}{TSubstance}} \doxymbox{\hyperlink{class_t_reaction_ada88866d9b8c955b03a1415181994ce6}{get\+Product}} (int i) const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre corto del producto i de la reaccion. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_reaction_affa3bd3d32b5a15fc41ada24088fedb3}{to\+String}} (TMemo \texorpdfstring{$\ast$}{*}pantalla\+Salida) const
+\begin{DoxyCompactList}\small\item\em Muestra la reaccion guardada y sus atributos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static const String \doxymbox{\hyperlink{class_t_reaction_a2892b21ec0bfa0d161545b3c267723b8}{input\+Template}} = "{}REACTION $<$nombre\+\_\+corto$>$ $<$nombre\+\_\+largo$>$ $<$lista\+\_\+reactivos$>$ $<$sentido\+\_\+reaccion$>$ $<$lista\+\_\+productos$>$"{}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{class_t_reaction_a3222fa351cbf4ad913d1d47c650676ce}{Str\+To\+Float\+Dot}} (String texto) const
+\begin{DoxyCompactList}\small\item\em Metodo que convierte un string en double con formato decimal \textquotesingle{}.\textquotesingle{}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_reaction_a9ff586b1e6a409124165d40bddc9482a}{Reads\+Substances}} (String sustancias, String label)
+\begin{DoxyCompactList}\small\item\em Dada una lista de sustancias, las separa en nombres y coeficientes estequimetricos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_reaction_a861e1e400bc3e97e1e9700c114316a41}{Divides\+Coeff\+Metabolite}} (String text, String \&name, double \&coeff)
+\begin{DoxyCompactList}\small\item\em Separa coeficiente estequiometrico del nombre del metabolito. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+String \doxymbox{\hyperlink{class_t_reaction_a016837822c3c14651f08df4c931873c5}{short\+Name}}
+\item 
+String \doxymbox{\hyperlink{class_t_reaction_a1066ba6bf6bf818991738ede72b75397}{full\+Name}}
+\item 
+\doxymbox{\hyperlink{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74}{TReaction\+Direction}} \doxymbox{\hyperlink{class_t_reaction_aee56fdf0bd5fe4ff10628e8c35e2852d}{sentido}}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_t_substance}{TSubstance}} $>$ \doxymbox{\hyperlink{class_t_reaction_ad8c7c4a8d9a3811fdcfa2dc9e222af36}{reactants}}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_t_substance}{TSubstance}} $>$ \doxymbox{\hyperlink{class_t_reaction_a521c284045ec42de7ecc9755024f8723}{products}}
+\item 
+\doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_reaction_a7d5896c7c875e3f00f98f3c53a723be7}{model}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+Clase para encapsular las reacciones del modelo. 
+
+\label{class_t_reaction_doc-constructors}
+\Hypertarget{class_t_reaction_doc-constructors}
+\doxysubsubsection{Documentación de constructores y destructores}
+\Hypertarget{class_t_reaction_ab291a02ec265f50f71259f3fea6dafa7}\index{TReaction@{TReaction}!TReaction@{TReaction}}
+\index{TReaction@{TReaction}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{TReaction()}{TReaction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_t_reaction_ab291a02ec265f50f71259f3fea6dafa7} 
+TReaction::\+\+TReaction (\begin{DoxyParamCaption}\item[{String}]{p\+\_\+short\+Name}{, }\item[{String}]{p\+\_\+full\+Name}{, }\item[{\doxymbox{\hyperlink{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74}{TReaction\+Direction}}}]{p\+\_\+sentido}{, }\item[{const std::\+vector$<$ \doxymbox{\hyperlink{struct_t_substance}{TSubstance}} $>$ \&}]{p\+\_\+reactants}{, }\item[{const std::\+vector$<$ \doxymbox{\hyperlink{struct_t_substance}{TSubstance}} $>$ \&}]{p\+\_\+products}{, }\item[{\doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*}}]{model}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de \doxylink{class_t_reaction}{TReaction}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p\+\_\+short\+Name} & nombre corto de la reaccion, tipo String \\
+\hline
+{\em p\+\_\+full\+Name} & nombre largo de la reaccion, tipo String \\
+\hline
+{\em p\+\_\+sentido} & sentido de la reaccion (UNI o BI), tipo \doxylink{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74}{TReaction\+Direction} \\
+\hline
+{\em p\+\_\+reactants} & array de reactivos de la reaccion, tipo std::\+vector$<$\+TSubstance$>$ \\
+\hline
+{\em p\+\_\+products} & array de productos de la reaccion, tipo std::\+vector$<$\+TSubstance$>$ \\
+\hline
+{\em p\+\_\+model} & modelo al que pertenece la reaccion, tipo puntero a \doxylink{class_t_model}{TModel} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_reaction_ae0662c4665943f5518ae7a8444e759fb}\index{TReaction@{TReaction}!TReaction@{TReaction}}
+\index{TReaction@{TReaction}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{TReaction()}{TReaction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_t_reaction_ae0662c4665943f5518ae7a8444e759fb} 
+TReaction::\+\+TReaction (\begin{DoxyParamCaption}\item[{String}]{line}{, }\item[{\doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*}}]{model}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de \doxylink{class_t_reaction}{TReaction}, lee una linea completa del panel de entrada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em line} & linea del panel de entrada asociada a una reaccion, comienza por REACTION \\
+\hline
+{\em model} & modelo al que pertenece la reaccion \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_reaction_ae0662c4665943f5518ae7a8444e759fb_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_t_reaction_doc-func-members}
+\Hypertarget{class_t_reaction_doc-func-members}
+\doxysubsubsection{Documentación de funciones miembro}
+\Hypertarget{class_t_reaction_a861e1e400bc3e97e1e9700c114316a41}\index{TReaction@{TReaction}!DividesCoeffMetabolite@{DividesCoeffMetabolite}}
+\index{DividesCoeffMetabolite@{DividesCoeffMetabolite}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{DividesCoeffMetabolite()}{DividesCoeffMetabolite()}}
+{\footnotesize\ttfamily \label{class_t_reaction_a861e1e400bc3e97e1e9700c114316a41} 
+void TReaction::\+\+Divides\+Coeff\+Metabolite (\begin{DoxyParamCaption}\item[{String}]{text}{, }\item[{String \&}]{name}{, }\item[{double \&}]{coeff}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Separa coeficiente estequiometrico del nombre del metabolito. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em text} & nombre temporal del metabolito extraido directamente del panel de entrada, tipo String \\
+\hline
+{\em name} & nombre del metabolito sin el coeficiente estequiometrico (parametro por referencia), tipo String \\
+\hline
+{\em coeff} & coeficiente estequiometrico del metabolito (parametro por referencia), tipo double\\
+\hline
+\end{DoxyParams}
+Dado el text pasado como parametro, lo divide en coeficiente estequiometrico (coeff) y nombre del metabolito (name) en caso de que dicho metabolito tenga un coeficiente estequiometrico distinto de 1 en la reaccion. En ese caso, text tendra la forma "{}(2)\+A"{}, con el coeficiente estequiometrico entre parentesis. Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_reaction_a861e1e400bc3e97e1e9700c114316a41_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_reaction_a861e1e400bc3e97e1e9700c114316a41_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_reaction_a910b2d30b88293dc97f76300db9f3905}\index{TReaction@{TReaction}!getDirectionString@{getDirectionString}}
+\index{getDirectionString@{getDirectionString}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{getDirectionString()}{getDirectionString()}}
+{\footnotesize\ttfamily \label{class_t_reaction_a910b2d30b88293dc97f76300db9f3905} 
+String TReaction::\+get\+Direction\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el sentido de la reaccion. 
+
+\begin{DoxyReturn}{Devuelve}
+UNI o BI segun la reaccion sea unidireccional o bidireccional 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_reaction_a910b2d30b88293dc97f76300db9f3905_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_reaction_a1e5454c61f101fb0a40f273071702229}\index{TReaction@{TReaction}!getFullName@{getFullName}}
+\index{getFullName@{getFullName}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{getFullName()}{getFullName()}}
+{\footnotesize\ttfamily \label{class_t_reaction_a1e5454c61f101fb0a40f273071702229} 
+String TReaction::\+get\+Full\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el nombre largo del parametro. 
+
+\begin{DoxyReturn}{Devuelve}
+String nombre largo del parametro 
+\end{DoxyReturn}
+\Hypertarget{class_t_reaction_ab2d2437342af2beeaa3818be3cf903b5}\index{TReaction@{TReaction}!getNProducts@{getNProducts}}
+\index{getNProducts@{getNProducts}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{getNProducts()}{getNProducts()}}
+{\footnotesize\ttfamily \label{class_t_reaction_ab2d2437342af2beeaa3818be3cf903b5} 
+int TReaction::\+get\+NProducts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el numero de productos que tiene la reaccion. 
+
+\begin{DoxyReturn}{Devuelve}
+numero de productos 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_reaction_ab2d2437342af2beeaa3818be3cf903b5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_reaction_a7e87afed02be63e8a789f97bebdc124a}\index{TReaction@{TReaction}!getNReactants@{getNReactants}}
+\index{getNReactants@{getNReactants}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{getNReactants()}{getNReactants()}}
+{\footnotesize\ttfamily \label{class_t_reaction_a7e87afed02be63e8a789f97bebdc124a} 
+int TReaction::\+get\+NReactants (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el numero de reactivos que tiene la reaccion. 
+
+\begin{DoxyReturn}{Devuelve}
+numero de reactivos 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_reaction_a7e87afed02be63e8a789f97bebdc124a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_reaction_ada88866d9b8c955b03a1415181994ce6}\index{TReaction@{TReaction}!getProduct@{getProduct}}
+\index{getProduct@{getProduct}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{getProduct()}{getProduct()}}
+{\footnotesize\ttfamily \label{class_t_reaction_ada88866d9b8c955b03a1415181994ce6} 
+const \doxymbox{\hyperlink{struct_t_substance}{TSubstance}} TReaction::\+get\+Product (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el nombre corto del producto i de la reaccion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & indice del producto a devolver (empieza en 0) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+sustancia (metabolito y coef) que actua como producto en esta reaccion 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_reaction_ada88866d9b8c955b03a1415181994ce6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_reaction_ae3762acaeb86390a70fb57a9c8061e39}\index{TReaction@{TReaction}!getReactant@{getReactant}}
+\index{getReactant@{getReactant}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{getReactant()}{getReactant()}}
+{\footnotesize\ttfamily \label{class_t_reaction_ae3762acaeb86390a70fb57a9c8061e39} 
+const \doxymbox{\hyperlink{struct_t_substance}{TSubstance}} TReaction::\+get\+Reactant (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el nombre corto del reactivo i de la reaccion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & indice del reactivo a devolver (empieza en 0) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+sustancia (metabolito y coef) que actua como reactivo en esta reaccion 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_reaction_ae3762acaeb86390a70fb57a9c8061e39_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_reaction_a9fc380df98f36344ae0686632b22892c}\index{TReaction@{TReaction}!getShortName@{getShortName}}
+\index{getShortName@{getShortName}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{getShortName()}{getShortName()}}
+{\footnotesize\ttfamily \label{class_t_reaction_a9fc380df98f36344ae0686632b22892c} 
+String TReaction::\+get\+Short\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el nombre corto de la reaccion. 
+
+\begin{DoxyReturn}{Devuelve}
+String nombre corto de la reaccion 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_reaction_a9fc380df98f36344ae0686632b22892c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_reaction_a9ff586b1e6a409124165d40bddc9482a}\index{TReaction@{TReaction}!ReadsSubstances@{ReadsSubstances}}
+\index{ReadsSubstances@{ReadsSubstances}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{ReadsSubstances()}{ReadsSubstances()}}
+{\footnotesize\ttfamily \label{class_t_reaction_a9ff586b1e6a409124165d40bddc9482a} 
+void TReaction::\+\+Reads\+Substances (\begin{DoxyParamCaption}\item[{String}]{sustancias}{, }\item[{String}]{label}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dada una lista de sustancias, las separa en nombres y coeficientes estequimetricos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em sustancias} & lista de sustancias con formato \+[A, (2)B, C]\+, tipo String \\
+\hline
+{\em label} & "{}reactivos"{} si las sustancias son reactivos, "{}productos"{} si son productos; tipo String\\
+\hline
+\end{DoxyParams}
+Si label indica reactivos, rellena los atributos reactants y reactant\+Stoich\+Coeffs. Si label indica productos, rellena los atributos products y product\+Stoich\+Coeffs. Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_reaction_a9ff586b1e6a409124165d40bddc9482a_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_reaction_a9ff586b1e6a409124165d40bddc9482a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_reaction_a3222fa351cbf4ad913d1d47c650676ce}\index{TReaction@{TReaction}!StrToFloatDot@{StrToFloatDot}}
+\index{StrToFloatDot@{StrToFloatDot}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{StrToFloatDot()}{StrToFloatDot()}}
+{\footnotesize\ttfamily \label{class_t_reaction_a3222fa351cbf4ad913d1d47c650676ce} 
+double TReaction::\+\+Str\+To\+Float\+Dot (\begin{DoxyParamCaption}\item[{String}]{texto}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo que convierte un string en double con formato decimal \textquotesingle{}.\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em texto} & palabra que representa un numero con decimales con \textquotesingle{}.\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+double numero que se devuelve manteniendo el formato decimal \textquotesingle{}.\textquotesingle{} 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_reaction_a3222fa351cbf4ad913d1d47c650676ce_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_reaction_affa3bd3d32b5a15fc41ada24088fedb3}\index{TReaction@{TReaction}!toString@{toString}}
+\index{toString@{toString}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_t_reaction_affa3bd3d32b5a15fc41ada24088fedb3} 
+void TReaction::\+to\+String (\begin{DoxyParamCaption}\item[{TMemo \texorpdfstring{$\ast$}{*}}]{pantalla\+Salida}{}\end{DoxyParamCaption}) const}
+
+
+
+Muestra la reaccion guardada y sus atributos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em pantalla\+Salida} & objeto de la interfaz donde se muestra \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_reaction_affa3bd3d32b5a15fc41ada24088fedb3_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_t_reaction_doc-variable-members}
+\Hypertarget{class_t_reaction_doc-variable-members}
+\doxysubsubsection{Documentación de datos miembro}
+\Hypertarget{class_t_reaction_a1066ba6bf6bf818991738ede72b75397}\index{TReaction@{TReaction}!fullName@{fullName}}
+\index{fullName@{fullName}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{fullName}{fullName}}
+{\footnotesize\ttfamily \label{class_t_reaction_a1066ba6bf6bf818991738ede72b75397} 
+String TReaction::\+full\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+Nombre largo de la reaccion \Hypertarget{class_t_reaction_a2892b21ec0bfa0d161545b3c267723b8}\index{TReaction@{TReaction}!inputTemplate@{inputTemplate}}
+\index{inputTemplate@{inputTemplate}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{inputTemplate}{inputTemplate}}
+{\footnotesize\ttfamily \label{class_t_reaction_a2892b21ec0bfa0d161545b3c267723b8} 
+const String TReaction::\+input\+Template = "{}REACTION $<$nombre\+\_\+corto$>$ $<$nombre\+\_\+largo$>$ $<$lista\+\_\+reactivos$>$ $<$sentido\+\_\+reaccion$>$ $<$lista\+\_\+productos$>$"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Estructura de entrada de datos de una reaccion \Hypertarget{class_t_reaction_a7d5896c7c875e3f00f98f3c53a723be7}\index{TReaction@{TReaction}!model@{model}}
+\index{model@{model}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \label{class_t_reaction_a7d5896c7c875e3f00f98f3c53a723be7} 
+\doxymbox{\hyperlink{class_t_model}{TModel}}\texorpdfstring{$\ast$}{*} TReaction::\+model\hspace{0.3cm}{\ttfamily [private]}}
+
+Modelo al que pertenece la reaccion \Hypertarget{class_t_reaction_a521c284045ec42de7ecc9755024f8723}\index{TReaction@{TReaction}!products@{products}}
+\index{products@{products}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{products}{products}}
+{\footnotesize\ttfamily \label{class_t_reaction_a521c284045ec42de7ecc9755024f8723} 
+std::\+vector$<$\doxymbox{\hyperlink{struct_t_substance}{TSubstance}}$>$ TReaction::\+products\hspace{0.3cm}{\ttfamily [private]}}
+
+Array de productos de la reaccion \Hypertarget{class_t_reaction_ad8c7c4a8d9a3811fdcfa2dc9e222af36}\index{TReaction@{TReaction}!reactants@{reactants}}
+\index{reactants@{reactants}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{reactants}{reactants}}
+{\footnotesize\ttfamily \label{class_t_reaction_ad8c7c4a8d9a3811fdcfa2dc9e222af36} 
+std::\+vector$<$\doxymbox{\hyperlink{struct_t_substance}{TSubstance}}$>$ TReaction::\+reactants\hspace{0.3cm}{\ttfamily [private]}}
+
+Array de reactivos de la reaccion \Hypertarget{class_t_reaction_aee56fdf0bd5fe4ff10628e8c35e2852d}\index{TReaction@{TReaction}!sentido@{sentido}}
+\index{sentido@{sentido}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{sentido}{sentido}}
+{\footnotesize\ttfamily \label{class_t_reaction_aee56fdf0bd5fe4ff10628e8c35e2852d} 
+\doxymbox{\hyperlink{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74}{TReaction\+Direction}} TReaction::\+sentido\hspace{0.3cm}{\ttfamily [private]}}
+
+Sentido de la reaccion (UNI o BI) \Hypertarget{class_t_reaction_a016837822c3c14651f08df4c931873c5}\index{TReaction@{TReaction}!shortName@{shortName}}
+\index{shortName@{shortName}!TReaction@{TReaction}}
+\doxyparagraph{\texorpdfstring{shortName}{shortName}}
+{\footnotesize\ttfamily \label{class_t_reaction_a016837822c3c14651f08df4c931873c5} 
+String TReaction::\+short\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+Nombre corto de la reaccion 
+
+La documentación de esta clase está generada de los siguientes archivos:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_metabolic_elements_8h}{Metabolic\+Elements.\+h}}\item 
+\doxymbox{\hyperlink{_metabolic_elements_8cpp}{Metabolic\+Elements.\+cpp}}\end{DoxyCompactItemize}

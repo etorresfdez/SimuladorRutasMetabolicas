@@ -1,0 +1,17 @@
+<map id="TForm1::ComboMostrarReaccionChange" name="TForm1::ComboMostrarReaccionChange">
+<area shape="rect" id="Node000001" title="Al seleccionar una reaccion de la lista de reacciones cargadas, muestra la ecuacion cinetica generada..." alt="" coords="5,124,221,167"/>
+<area shape="rect" id="Node000002" href="$class_t_reaction.html#a910b2d30b88293dc97f76300db9f3905" title="Devuelve el sentido de la reaccion." alt="" coords="285,5,478,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,121,196,81,268,42,290,35,286,38,270,46,199,85,143,125"/>
+<area shape="rect" id="Node000003" href="$class_t_mechanism.html#a8050df05e581819d5e5be8dfbb85b63c" title="Devuelve la ecuacion cinetica directa en forma de String. Formato para mostrarla por pantalla." alt="" coords="273,56,491,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,121,268,92,301,86,297,88,269,97,178,126"/>
+<area shape="rect" id="Node000004" href="$class_t_mechanism.html#ac25a2712fe94a70768c4af9f791ae051" title="Devuelve la ecuacion cinetica inversa en forma de String. Formato para mostrarla por pantalla." alt="" coords="269,107,495,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="220,133,255,131,251,133,222,138"/>
+<area shape="rect" id="Node000005" href="$class_t_mechanism.html#a83135bad08af9d4416b57f7fe7c73493" title="Devuelve el nombre del tipo de mecanismo." alt="" coords="291,157,473,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="221,153,278,160,273,161,221,158"/>
+<area shape="rect" id="Node000006" href="$class_t_mechanism.html#a952aaf0c9f7c5f2ab95e20ba55cdde4d" title="Devuelve un puntero a la reaccion dada su nombre." alt="" coords="295,208,469,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="177,165,269,193,302,204,296,204,268,199,176,170"/>
+<area shape="rect" id="Node000008" href="$class_t_reaction.html#a9fc380df98f36344ae0686632b22892c" title="Devuelve el nombre corto de la reaccion." alt="" coords="295,259,468,285"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="142,165,199,206,270,244,290,254,285,254,268,249,196,210,140,170"/>
+<area shape="rect" id="Node000007" href="$class_t_mechanism.html#a4645ac8a1913d474bded3ccb4f0b75ba" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="543,208,752,235"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="469,219,530,221,525,222,469,224"/>
+</map>

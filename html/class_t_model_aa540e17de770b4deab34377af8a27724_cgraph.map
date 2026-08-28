@@ -1,0 +1,7 @@
+<map id="TModel::getAllMetaboliteNames" name="TModel::getAllMetaboliteNames">
+<area shape="rect" id="Node000001" title="Devuelve un vector con todos los nombres cortos de los metabolitos guardados en el modelo." alt="" coords="5,23,171,65"/>
+<area shape="rect" id="Node000002" href="$class_t_model.html#a47f72912b3399ef5f306b5ec355c7e43" title="Dado el indice de un metabolito, lo busca en el vector de metabolitos del modelo." alt="" coords="227,5,378,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,32,214,29,209,30,172,37"/>
+<area shape="rect" id="Node000003" href="$class_t_model.html#a822ed3dc51f7e3e9d6bf7451b36b6673" title="Devuelve el numero de metabolitos que contiene el modelo." alt="" coords="219,56,386,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,51,206,57,201,58,171,56"/>
+</map>

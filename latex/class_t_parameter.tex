@@ -1,0 +1,256 @@
+\doxysubsection{Referencia de la clase TParameter}
+\hypertarget{class_t_parameter}{}\label{class_t_parameter}\index{TParameter@{TParameter}}
+
+
+Clase para encapsular los parametros del modelo.  
+
+
+
+
+{\ttfamily \+\#include $<$Metabolic\+Elements.\+h$>$}
+
+
+
+Diagrama de colaboración de TParameter:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_t_parameter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_parameter_a59aeefdc8f7cff79dae9f7f4329e5dfb}{TParameter}} (String p\+\_\+short\+Name, String p\+\_\+full\+Name, double p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Constructor de \doxylink{class_t_parameter}{TParameter}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_t_parameter_afcc4152125de596ee70335325e82f36d}{TParameter}} (String line)
+\begin{DoxyCompactList}\small\item\em Constructor de \doxylink{class_t_parameter}{TParameter}. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_parameter_aefe7ca26e565731cbf1eabfae2a81cbe}{get\+Short\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre corto del parametro. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_parameter_a8726adbd75ef1c27811e4ee9a4c702cf}{get\+Full\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre largo del parametro. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_t_parameter_a6f653341fc5f796833bf4e41045663c3}{get\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el valor del parametro. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_parameter_a7d20f5f9dc92d41f5a4629ab65fc417e}{to\+String}} (TMemo \texorpdfstring{$\ast$}{*}pantalla\+Salida) const
+\begin{DoxyCompactList}\small\item\em Muestra el parametro guardado y sus atributos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static const String \doxymbox{\hyperlink{class_t_parameter_a74d6422b270975b60172ab1d0a4ef956}{input\+Template}} = "{}PARAMETER $<$nombre\+\_\+corto$>$ $<$nombre\+\_\+largo$>$ $<$valor$>$"{}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+String \doxymbox{\hyperlink{class_t_parameter_afe10a5affd1957eb780da584f15ecbe4}{Float\+To\+Str\+Dot}} (double value) const
+\begin{DoxyCompactList}\small\item\em Metodo que convierte un double en string con formato decimal \textquotesingle{}.\textquotesingle{}. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_t_parameter_a7d2f0213501ac8315c03424ea829cbe0}{Str\+To\+Float\+Dot}} (String texto) const
+\begin{DoxyCompactList}\small\item\em Metodo que convierte un string en double con formato decimal \textquotesingle{}.\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+String \doxymbox{\hyperlink{class_t_parameter_a4abd7ae77966c774b7e29249e6574aea}{short\+Name}}
+\item 
+String \doxymbox{\hyperlink{class_t_parameter_a13184af4d6d1935d2de6ec6c64312595}{full\+Name}}
+\item 
+double \doxymbox{\hyperlink{class_t_parameter_abb6db61af69b4b62ad7ac46b5a97ec31}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+Clase para encapsular los parametros del modelo. 
+
+\label{class_t_parameter_doc-constructors}
+\Hypertarget{class_t_parameter_doc-constructors}
+\doxysubsubsection{Documentación de constructores y destructores}
+\Hypertarget{class_t_parameter_a59aeefdc8f7cff79dae9f7f4329e5dfb}\index{TParameter@{TParameter}!TParameter@{TParameter}}
+\index{TParameter@{TParameter}!TParameter@{TParameter}}
+\doxyparagraph{\texorpdfstring{TParameter()}{TParameter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_t_parameter_a59aeefdc8f7cff79dae9f7f4329e5dfb} 
+TParameter::\+\+TParameter (\begin{DoxyParamCaption}\item[{String}]{p\+\_\+short\+Name}{, }\item[{String}]{p\+\_\+full\+Name}{, }\item[{double}]{p\+\_\+value}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de \doxylink{class_t_parameter}{TParameter}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p\+\_\+short\+Name} & nombre corto del parametro, tipo String \\
+\hline
+{\em p\+\_\+full\+Name} & nombre largo del parametro, tipo String \\
+\hline
+{\em p\+\_\+value} & valor del parametro, tipo double \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_parameter_afcc4152125de596ee70335325e82f36d}\index{TParameter@{TParameter}!TParameter@{TParameter}}
+\index{TParameter@{TParameter}!TParameter@{TParameter}}
+\doxyparagraph{\texorpdfstring{TParameter()}{TParameter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_t_parameter_afcc4152125de596ee70335325e82f36d} 
+TParameter::\+\+TParameter (\begin{DoxyParamCaption}\item[{String}]{line}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de \doxylink{class_t_parameter}{TParameter}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em line} & linea del panel de entrada asociada a un parametro, comienza por PARAMETER \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_parameter_afcc4152125de596ee70335325e82f36d_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_t_parameter_doc-func-members}
+\Hypertarget{class_t_parameter_doc-func-members}
+\doxysubsubsection{Documentación de funciones miembro}
+\Hypertarget{class_t_parameter_afe10a5affd1957eb780da584f15ecbe4}\index{TParameter@{TParameter}!FloatToStrDot@{FloatToStrDot}}
+\index{FloatToStrDot@{FloatToStrDot}!TParameter@{TParameter}}
+\doxyparagraph{\texorpdfstring{FloatToStrDot()}{FloatToStrDot()}}
+{\footnotesize\ttfamily \label{class_t_parameter_afe10a5affd1957eb780da584f15ecbe4} 
+String TParameter::\+\+Float\+To\+Str\+Dot (\begin{DoxyParamCaption}\item[{double}]{value}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo que convierte un double en string con formato decimal \textquotesingle{}.\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em value} & numero con decimales con \textquotesingle{}.\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+String palabra que se devuelve manteniendo el formato decimal \textquotesingle{}.\textquotesingle{} 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_parameter_afe10a5affd1957eb780da584f15ecbe4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_parameter_a8726adbd75ef1c27811e4ee9a4c702cf}\index{TParameter@{TParameter}!getFullName@{getFullName}}
+\index{getFullName@{getFullName}!TParameter@{TParameter}}
+\doxyparagraph{\texorpdfstring{getFullName()}{getFullName()}}
+{\footnotesize\ttfamily \label{class_t_parameter_a8726adbd75ef1c27811e4ee9a4c702cf} 
+String TParameter::\+get\+Full\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el nombre largo del parametro. 
+
+\begin{DoxyReturn}{Devuelve}
+String nombre largo del parametro 
+\end{DoxyReturn}
+\Hypertarget{class_t_parameter_aefe7ca26e565731cbf1eabfae2a81cbe}\index{TParameter@{TParameter}!getShortName@{getShortName}}
+\index{getShortName@{getShortName}!TParameter@{TParameter}}
+\doxyparagraph{\texorpdfstring{getShortName()}{getShortName()}}
+{\footnotesize\ttfamily \label{class_t_parameter_aefe7ca26e565731cbf1eabfae2a81cbe} 
+String TParameter::\+get\+Short\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el nombre corto del parametro. 
+
+\begin{DoxyReturn}{Devuelve}
+String nombre corto del parametro 
+\end{DoxyReturn}
+\Hypertarget{class_t_parameter_a6f653341fc5f796833bf4e41045663c3}\index{TParameter@{TParameter}!getValue@{getValue}}
+\index{getValue@{getValue}!TParameter@{TParameter}}
+\doxyparagraph{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily \label{class_t_parameter_a6f653341fc5f796833bf4e41045663c3} 
+double TParameter::\+get\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el valor del parametro. 
+
+\begin{DoxyReturn}{Devuelve}
+double valor del parametro 
+\end{DoxyReturn}
+\Hypertarget{class_t_parameter_a7d2f0213501ac8315c03424ea829cbe0}\index{TParameter@{TParameter}!StrToFloatDot@{StrToFloatDot}}
+\index{StrToFloatDot@{StrToFloatDot}!TParameter@{TParameter}}
+\doxyparagraph{\texorpdfstring{StrToFloatDot()}{StrToFloatDot()}}
+{\footnotesize\ttfamily \label{class_t_parameter_a7d2f0213501ac8315c03424ea829cbe0} 
+double TParameter::\+\+Str\+To\+Float\+Dot (\begin{DoxyParamCaption}\item[{String}]{texto}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo que convierte un string en double con formato decimal \textquotesingle{}.\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em texto} & palabra que representa un numero con decimales con \textquotesingle{}.\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+double numero que se devuelve manteniendo el formato decimal \textquotesingle{}.\textquotesingle{} 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_parameter_a7d2f0213501ac8315c03424ea829cbe0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_parameter_a7d20f5f9dc92d41f5a4629ab65fc417e}\index{TParameter@{TParameter}!toString@{toString}}
+\index{toString@{toString}!TParameter@{TParameter}}
+\doxyparagraph{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_t_parameter_a7d20f5f9dc92d41f5a4629ab65fc417e} 
+void TParameter::\+to\+String (\begin{DoxyParamCaption}\item[{TMemo \texorpdfstring{$\ast$}{*}}]{pantalla\+Salida}{}\end{DoxyParamCaption}) const}
+
+
+
+Muestra el parametro guardado y sus atributos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em pantalla\+Salida} & objeto de la interfaz donde se muestra \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_parameter_a7d20f5f9dc92d41f5a4629ab65fc417e_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_t_parameter_doc-variable-members}
+\Hypertarget{class_t_parameter_doc-variable-members}
+\doxysubsubsection{Documentación de datos miembro}
+\Hypertarget{class_t_parameter_a13184af4d6d1935d2de6ec6c64312595}\index{TParameter@{TParameter}!fullName@{fullName}}
+\index{fullName@{fullName}!TParameter@{TParameter}}
+\doxyparagraph{\texorpdfstring{fullName}{fullName}}
+{\footnotesize\ttfamily \label{class_t_parameter_a13184af4d6d1935d2de6ec6c64312595} 
+String TParameter::\+full\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+Nombre largo del parametro \Hypertarget{class_t_parameter_a74d6422b270975b60172ab1d0a4ef956}\index{TParameter@{TParameter}!inputTemplate@{inputTemplate}}
+\index{inputTemplate@{inputTemplate}!TParameter@{TParameter}}
+\doxyparagraph{\texorpdfstring{inputTemplate}{inputTemplate}}
+{\footnotesize\ttfamily \label{class_t_parameter_a74d6422b270975b60172ab1d0a4ef956} 
+const String TParameter::\+input\+Template = "{}PARAMETER $<$nombre\+\_\+corto$>$ $<$nombre\+\_\+largo$>$ $<$valor$>$"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Estructura de entrada de datos de un parametro \Hypertarget{class_t_parameter_a4abd7ae77966c774b7e29249e6574aea}\index{TParameter@{TParameter}!shortName@{shortName}}
+\index{shortName@{shortName}!TParameter@{TParameter}}
+\doxyparagraph{\texorpdfstring{shortName}{shortName}}
+{\footnotesize\ttfamily \label{class_t_parameter_a4abd7ae77966c774b7e29249e6574aea} 
+String TParameter::\+short\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+Nombre corto del parametro \Hypertarget{class_t_parameter_abb6db61af69b4b62ad7ac46b5a97ec31}\index{TParameter@{TParameter}!value@{value}}
+\index{value@{value}!TParameter@{TParameter}}
+\doxyparagraph{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \label{class_t_parameter_abb6db61af69b4b62ad7ac46b5a97ec31} 
+double TParameter::\+value\hspace{0.3cm}{\ttfamily [private]}}
+
+Valor del parametro 
+
+La documentación de esta clase está generada de los siguientes archivos:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_metabolic_elements_8h}{Metabolic\+Elements.\+h}}\item 
+\doxymbox{\hyperlink{_metabolic_elements_8cpp}{Metabolic\+Elements.\+cpp}}\end{DoxyCompactItemize}

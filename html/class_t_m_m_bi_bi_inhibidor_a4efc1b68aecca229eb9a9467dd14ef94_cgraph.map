@@ -1,0 +1,15 @@
+<map id="TMMBiBiInhibidor::BuildDenominator" name="TMMBiBiInhibidor::BuildDenominator">
+<area shape="rect" id="Node000001" title="Construye el denominador de la ecuacion cinetica de tipo MMBiBiInhibidor." alt="" coords="5,107,241,133"/>
+<area shape="rect" id="Node000002" href="$class_t_mechanism.html#a2a8fa75aa79ff89533af07051e1a1007" title="Devuelve el parametro del mecanismo de la posicion &#39;i&#39;." alt="" coords="289,5,488,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,104,212,73,288,41,313,36,309,38,290,47,214,78,152,108"/>
+<area shape="rect" id="Node000003" href="$class_t_reaction.html#ada88866d9b8c955b03a1415181994ce6" title="Devuelve el nombre corto del producto i de la reaccion." alt="" coords="312,56,464,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,103,302,85,297,88,198,109"/>
+<area shape="rect" id="Node000004" href="$class_t_reaction.html#ae3762acaeb86390a70fb57a9c8061e39" title="Devuelve el nombre corto del reactivo i de la reaccion." alt="" coords="308,107,468,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="241,117,295,119,290,121,242,123"/>
+<area shape="rect" id="Node000005" href="$class_t_mechanism.html#a952aaf0c9f7c5f2ab95e20ba55cdde4d" title="Devuelve un puntero a la reaccion dada su nombre." alt="" coords="301,157,476,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="197,131,302,153,297,155,197,137"/>
+<area shape="rect" id="Node000007" href="$class_t_metabolite.html#a7818e2aee3c3aa8bfeea327aa9643697" title="Devuelve el nombre corto del metabolito." alt="" coords="298,208,479,235"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="151,131,214,162,290,193,314,203,308,203,288,199,212,167,150,137"/>
+<area shape="rect" id="Node000006" href="$class_t_mechanism.html#a4645ac8a1913d474bded3ccb4f0b75ba" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="536,157,745,184"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="476,168,523,170,518,171,476,173"/>
+</map>

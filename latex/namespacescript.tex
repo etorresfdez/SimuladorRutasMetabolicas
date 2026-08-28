@@ -1,0 +1,182 @@
+\doxysubsection{Referencia del espacio de nombres script}
+\hypertarget{namespacescript}{}\label{namespacescript}\index{script@{script}}
+\doxysubsubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespacescript_a9ae3a1d690960b479cb13467314c20f5}{sistema}} (t, x, p)
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dict \doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}} = \{\}
+\item 
+\doxymbox{\hyperlink{namespacescript_a661c108ac2ca7b5187fa1d0dc07069a7}{encoding}}
+\item 
+\doxymbox{\hyperlink{namespacescript_a675c6a55711f325fab4d1e92188d9986}{line}} = line.\+strip()
+\item 
+\doxymbox{\hyperlink{namespacescript_af47ffdbef4d3dfb5df24aa4a6cb63b13}{vals}}
+\item 
+dict \doxymbox{\hyperlink{namespacescript_ad39beb73b50f1a02dd8418f1dc375668}{ecuaciones}} = \doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}ecuaciones"{}]\+
+\item 
+\doxymbox{\hyperlink{namespacescript_a46cdb75096858c34099623e419b3cbc1}{X0}} = list(map(float, \doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}X0"{}]\+))
+\item 
+\doxymbox{\hyperlink{namespacescript_a8ec8dfd1ff5c0ecd3ff7077141b62cce}{p}} = list(map(float, \doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}p"{}]\+))
+\item 
+\doxymbox{\hyperlink{namespacescript_a5d6ac1c5da17de6bc8924c4c23d4f6b5}{tini}} = float(\doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}tini"{}]\+\+[0]\+)
+\item 
+\doxymbox{\hyperlink{namespacescript_a11b24ff3f7e040ba572b8bfc23b52b1c}{tfin}} = float(\doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}tfin"{}]\+\+[0]\+)
+\item 
+\doxymbox{\hyperlink{namespacescript_a06769eeca4605ab9c587af808c466958}{ciclos}} = int(\doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}ciclos"{}]\+\+[0]\+)
+\item 
+dict \doxymbox{\hyperlink{namespacescript_aab418fcc9ad5284dcf7eb6ca1a49dc5f}{method}} = \doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}method"{}]\+\+[0]\+
+\item 
+\doxymbox{\hyperlink{namespacescript_a4ca60cf1b0741f1e7308cf633b6011f0}{t\+\_\+eval}} = np.\+linspace(\doxymbox{\hyperlink{namespacescript_a5d6ac1c5da17de6bc8924c4c23d4f6b5}{tini}}, \doxymbox{\hyperlink{namespacescript_a11b24ff3f7e040ba572b8bfc23b52b1c}{tfin}}, \doxymbox{\hyperlink{namespacescript_a06769eeca4605ab9c587af808c466958}{ciclos}})
+\item 
+\doxymbox{\hyperlink{namespacescript_ad8c12543276fadaaa710b13c4734d53d}{sol}} = solve\+\_\+ivp(\doxymbox{\hyperlink{namespacescript_a9ae3a1d690960b479cb13467314c20f5}{sistema}}, (\doxymbox{\hyperlink{namespacescript_a5d6ac1c5da17de6bc8924c4c23d4f6b5}{tini}}, \doxymbox{\hyperlink{namespacescript_a11b24ff3f7e040ba572b8bfc23b52b1c}{tfin}}), \doxymbox{\hyperlink{namespacescript_a46cdb75096858c34099623e419b3cbc1}{X0}}, args=(\doxymbox{\hyperlink{namespacescript_a8ec8dfd1ff5c0ecd3ff7077141b62cce}{p}},), \doxymbox{\hyperlink{namespacescript_aab418fcc9ad5284dcf7eb6ca1a49dc5f}{method}}=\doxymbox{\hyperlink{namespacescript_aab418fcc9ad5284dcf7eb6ca1a49dc5f}{method}}, \doxymbox{\hyperlink{namespacescript_a4ca60cf1b0741f1e7308cf633b6011f0}{t\+\_\+eval}}=\doxymbox{\hyperlink{namespacescript_a4ca60cf1b0741f1e7308cf633b6011f0}{t\+\_\+eval}})
+\item 
+\doxymbox{\hyperlink{namespacescript_a5bdbd1fc37e153c561ce5ac1f93e8236}{newline}}
+\item 
+\doxymbox{\hyperlink{namespacescript_ad04b56e3c87354772121c82c9519eae1}{writer}} = csv.\+writer(f, delimiter="{};"{})
+\item 
+list \doxymbox{\hyperlink{namespacescript_a1f8d5cde1403734e32b654cd5b3d8c8d}{fila}} = \+[sol.\+t\+[i]\+]\+ + sol.\+y\+[:\+, i]\+.tolist()
+\item 
+\doxymbox{\hyperlink{namespacescript_ad1b20bda444fb3c6683b70df6bb60a0b}{file}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+\begin{DoxyVerb}script de python para lanzar el solver de sistemas de ecuaciones diferenciales
+para problemas de valores iniciales.
+
+INPUT: Formato del archivo de entrada
+    ecuaciones;- p[0]*x[0] + p[1]*x[1];- p[37]*x[5]*x[7] + p[38]*x[6]**2
+    X0;1;0.5;2
+    p;0.01;0.5;10
+    tini;0
+    tfin;100
+    ciclos;1000
+    method;Radau
+
+OUTPUT: Formato del archivo de salida
+    0.0;1.55307;0.573074
+    1.0;1.6;0.03
+    2.0;1.6;0.006
+\end{DoxyVerb}
+ 
+
+\label{namespacescript_doc-func-members}
+\Hypertarget{namespacescript_doc-func-members}
+\doxysubsubsection{Documentación de funciones}
+\Hypertarget{namespacescript_a9ae3a1d690960b479cb13467314c20f5}\index{script@{script}!sistema@{sistema}}
+\index{sistema@{sistema}!script@{script}}
+\doxyparagraph{\texorpdfstring{sistema()}{sistema()}}
+{\footnotesize\ttfamily \label{namespacescript_a9ae3a1d690960b479cb13467314c20f5} 
+sistema (\begin{DoxyParamCaption}\item[{}]{t}{, }\item[{}]{x}{, }\item[{}]{p}{}\end{DoxyParamCaption})}
+
+
+
+\label{namespacescript_doc-var-members}
+\Hypertarget{namespacescript_doc-var-members}
+\doxysubsubsection{Documentación de variables}
+\Hypertarget{namespacescript_a06769eeca4605ab9c587af808c466958}\index{script@{script}!ciclos@{ciclos}}
+\index{ciclos@{ciclos}!script@{script}}
+\doxyparagraph{\texorpdfstring{ciclos}{ciclos}}
+{\footnotesize\ttfamily \label{namespacescript_a06769eeca4605ab9c587af808c466958} 
+script.\+ciclos = int(\doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}ciclos"{}]\+\+[0]\+)}
+
+\Hypertarget{namespacescript_a6d573e19db72305055e60239200da2d5}\index{script@{script}!datos@{datos}}
+\index{datos@{datos}!script@{script}}
+\doxyparagraph{\texorpdfstring{datos}{datos}}
+{\footnotesize\ttfamily \label{namespacescript_a6d573e19db72305055e60239200da2d5} 
+dict script.\+datos = \{\}}
+
+\Hypertarget{namespacescript_ad39beb73b50f1a02dd8418f1dc375668}\index{script@{script}!ecuaciones@{ecuaciones}}
+\index{ecuaciones@{ecuaciones}!script@{script}}
+\doxyparagraph{\texorpdfstring{ecuaciones}{ecuaciones}}
+{\footnotesize\ttfamily \label{namespacescript_ad39beb73b50f1a02dd8418f1dc375668} 
+dict script.\+ecuaciones = \doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}ecuaciones"{}]\+}
+
+\Hypertarget{namespacescript_a661c108ac2ca7b5187fa1d0dc07069a7}\index{script@{script}!encoding@{encoding}}
+\index{encoding@{encoding}!script@{script}}
+\doxyparagraph{\texorpdfstring{encoding}{encoding}}
+{\footnotesize\ttfamily \label{namespacescript_a661c108ac2ca7b5187fa1d0dc07069a7} 
+script.\+encoding}
+
+\Hypertarget{namespacescript_a1f8d5cde1403734e32b654cd5b3d8c8d}\index{script@{script}!fila@{fila}}
+\index{fila@{fila}!script@{script}}
+\doxyparagraph{\texorpdfstring{fila}{fila}}
+{\footnotesize\ttfamily \label{namespacescript_a1f8d5cde1403734e32b654cd5b3d8c8d} 
+list script.\+fila = \+[sol.\+t\+[i]\+]\+ + sol.\+y\+[:\+, i]\+.tolist()}
+
+\Hypertarget{namespacescript_ad1b20bda444fb3c6683b70df6bb60a0b}\index{script@{script}!file@{file}}
+\index{file@{file}!script@{script}}
+\doxyparagraph{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily \label{namespacescript_ad1b20bda444fb3c6683b70df6bb60a0b} 
+script.\+file}
+
+\Hypertarget{namespacescript_a675c6a55711f325fab4d1e92188d9986}\index{script@{script}!line@{line}}
+\index{line@{line}!script@{script}}
+\doxyparagraph{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily \label{namespacescript_a675c6a55711f325fab4d1e92188d9986} 
+script.\+line = line.\+strip()}
+
+\Hypertarget{namespacescript_aab418fcc9ad5284dcf7eb6ca1a49dc5f}\index{script@{script}!method@{method}}
+\index{method@{method}!script@{script}}
+\doxyparagraph{\texorpdfstring{method}{method}}
+{\footnotesize\ttfamily \label{namespacescript_aab418fcc9ad5284dcf7eb6ca1a49dc5f} 
+dict script.\+method = \doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}method"{}]\+\+[0]\+}
+
+\Hypertarget{namespacescript_a5bdbd1fc37e153c561ce5ac1f93e8236}\index{script@{script}!newline@{newline}}
+\index{newline@{newline}!script@{script}}
+\doxyparagraph{\texorpdfstring{newline}{newline}}
+{\footnotesize\ttfamily \label{namespacescript_a5bdbd1fc37e153c561ce5ac1f93e8236} 
+script.\+newline}
+
+\Hypertarget{namespacescript_a8ec8dfd1ff5c0ecd3ff7077141b62cce}\index{script@{script}!p@{p}}
+\index{p@{p}!script@{script}}
+\doxyparagraph{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily \label{namespacescript_a8ec8dfd1ff5c0ecd3ff7077141b62cce} 
+script.\+p = list(map(float, \doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}p"{}]\+))}
+
+\Hypertarget{namespacescript_ad8c12543276fadaaa710b13c4734d53d}\index{script@{script}!sol@{sol}}
+\index{sol@{sol}!script@{script}}
+\doxyparagraph{\texorpdfstring{sol}{sol}}
+{\footnotesize\ttfamily \label{namespacescript_ad8c12543276fadaaa710b13c4734d53d} 
+script.\+sol = solve\+\_\+ivp(\doxymbox{\hyperlink{namespacescript_a9ae3a1d690960b479cb13467314c20f5}{sistema}}, (\doxymbox{\hyperlink{namespacescript_a5d6ac1c5da17de6bc8924c4c23d4f6b5}{tini}}, \doxymbox{\hyperlink{namespacescript_a11b24ff3f7e040ba572b8bfc23b52b1c}{tfin}}), \doxymbox{\hyperlink{namespacescript_a46cdb75096858c34099623e419b3cbc1}{X0}}, args=(\doxymbox{\hyperlink{namespacescript_a8ec8dfd1ff5c0ecd3ff7077141b62cce}{p}},), \doxymbox{\hyperlink{namespacescript_aab418fcc9ad5284dcf7eb6ca1a49dc5f}{method}}=\doxymbox{\hyperlink{namespacescript_aab418fcc9ad5284dcf7eb6ca1a49dc5f}{method}}, \doxymbox{\hyperlink{namespacescript_a4ca60cf1b0741f1e7308cf633b6011f0}{t\+\_\+eval}}=\doxymbox{\hyperlink{namespacescript_a4ca60cf1b0741f1e7308cf633b6011f0}{t\+\_\+eval}})}
+
+\Hypertarget{namespacescript_a4ca60cf1b0741f1e7308cf633b6011f0}\index{script@{script}!t\_eval@{t\_eval}}
+\index{t\_eval@{t\_eval}!script@{script}}
+\doxyparagraph{\texorpdfstring{t\_eval}{t\_eval}}
+{\footnotesize\ttfamily \label{namespacescript_a4ca60cf1b0741f1e7308cf633b6011f0} 
+script.\+t\+\_\+eval = np.\+linspace(\doxymbox{\hyperlink{namespacescript_a5d6ac1c5da17de6bc8924c4c23d4f6b5}{tini}}, \doxymbox{\hyperlink{namespacescript_a11b24ff3f7e040ba572b8bfc23b52b1c}{tfin}}, \doxymbox{\hyperlink{namespacescript_a06769eeca4605ab9c587af808c466958}{ciclos}})}
+
+\Hypertarget{namespacescript_a11b24ff3f7e040ba572b8bfc23b52b1c}\index{script@{script}!tfin@{tfin}}
+\index{tfin@{tfin}!script@{script}}
+\doxyparagraph{\texorpdfstring{tfin}{tfin}}
+{\footnotesize\ttfamily \label{namespacescript_a11b24ff3f7e040ba572b8bfc23b52b1c} 
+script.\+tfin = float(\doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}tfin"{}]\+\+[0]\+)}
+
+\Hypertarget{namespacescript_a5d6ac1c5da17de6bc8924c4c23d4f6b5}\index{script@{script}!tini@{tini}}
+\index{tini@{tini}!script@{script}}
+\doxyparagraph{\texorpdfstring{tini}{tini}}
+{\footnotesize\ttfamily \label{namespacescript_a5d6ac1c5da17de6bc8924c4c23d4f6b5} 
+script.\+tini = float(\doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}tini"{}]\+\+[0]\+)}
+
+\Hypertarget{namespacescript_af47ffdbef4d3dfb5df24aa4a6cb63b13}\index{script@{script}!vals@{vals}}
+\index{vals@{vals}!script@{script}}
+\doxyparagraph{\texorpdfstring{vals}{vals}}
+{\footnotesize\ttfamily \label{namespacescript_af47ffdbef4d3dfb5df24aa4a6cb63b13} 
+script.\+vals}
+
+\Hypertarget{namespacescript_ad04b56e3c87354772121c82c9519eae1}\index{script@{script}!writer@{writer}}
+\index{writer@{writer}!script@{script}}
+\doxyparagraph{\texorpdfstring{writer}{writer}}
+{\footnotesize\ttfamily \label{namespacescript_ad04b56e3c87354772121c82c9519eae1} 
+script.\+writer = csv.\+writer(f, delimiter="{};"{})}
+
+\Hypertarget{namespacescript_a46cdb75096858c34099623e419b3cbc1}\index{script@{script}!X0@{X0}}
+\index{X0@{X0}!script@{script}}
+\doxyparagraph{\texorpdfstring{X0}{X0}}
+{\footnotesize\ttfamily \label{namespacescript_a46cdb75096858c34099623e419b3cbc1} 
+script.\+X0 = list(map(float, \doxymbox{\hyperlink{namespacescript_a6d573e19db72305055e60239200da2d5}{datos}}\+["{}X0"{}]\+))}
+

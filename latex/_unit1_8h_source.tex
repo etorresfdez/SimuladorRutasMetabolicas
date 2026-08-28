@@ -1,0 +1,210 @@
+\doxysubsection{Unit1.\+h}
+\hypertarget{_unit1_8h_source}{}\label{_unit1_8h_source}\doxymbox{\hyperlink{_unit1_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ Unit1H}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ Unit1H}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <System.Classes.hpp>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <System.IOUtils.hpp>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <System.Diagnostics.hpp>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <Vcl.Controls.hpp>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <Vcl.StdCtrls.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <Vcl.Forms.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <Vcl.Menus.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <Vcl.ExtCtrls.hpp>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <Vcl.Dialogs.hpp>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <Vcl.ExtDlgs.hpp>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <Vcl.Imaging.pngimage.hpp>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <Vcl.Buttons.hpp>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <Vcl.Samples.Spin.hpp>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <Vcl.Grids.hpp>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <Vcl.ComCtrls.hpp>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <Vcl.OleCtrls.hpp>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <SHDocVw.hpp>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <ShellAPI.h>}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_metabolic_elements_8h}{MetabolicElements.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_simulation_8h}{Simulation.h}}"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_unit2_8h}{Unit2.h}}"{}}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_t_form1_a4b77eaf706e8386bc8d79ec547efc8b9}{TForm1}}\ :\ \textcolor{keyword}{public}\ TForm}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \_\_published:\ \ \ \ \textcolor{comment}{//\ IDE-\/managed\ Components}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ Main\ Menu}}
+\DoxyCodeLine{00045\ \ \ \ \ TMainMenu\ *\doxymbox{\hyperlink{class_t_form1_a663d809447cba48ab33d9d44d9e0e42d}{MainMenu}};}
+\DoxyCodeLine{00046\ \ \ \ \ TMenuItem\ *\doxymbox{\hyperlink{class_t_form1_afea368fc3cc620ef8a143e5d82d3deb8}{Archivo}};}
+\DoxyCodeLine{00047\ \ \ \ \ TMenuItem\ *\doxymbox{\hyperlink{class_t_form1_a77d371cc46133d52648d9671f962960d}{SubirArchivo}};}
+\DoxyCodeLine{00048\ \ \ \ \ TMenuItem\ *\doxymbox{\hyperlink{class_t_form1_a653321ee99a43a437b35dbcfe45efc8a}{NuevoArchivo}};}
+\DoxyCodeLine{00049\ \ \ \ \ TMenuItem\ *\doxymbox{\hyperlink{class_t_form1_a14bc11ca7f8e858332bb9849091c6e57}{GuardarArchivo}};}
+\DoxyCodeLine{00050\ \ \ \ \ TMenuItem\ *\doxymbox{\hyperlink{class_t_form1_a8b16c264f2bda8a6c197690317bd17df}{Resultados}};}
+\DoxyCodeLine{00051\ \ \ \ \ TMenuItem\ *\doxymbox{\hyperlink{class_t_form1_afe2a6b2419569bfded5e694c858351ad}{CargarEjemplo}};}
+\DoxyCodeLine{00052\ \ \ \ \ TMenuItem\ *\doxymbox{\hyperlink{class_t_form1_aac56c71df764a759b7a441b910371152}{GuardarTabla}};}
+\DoxyCodeLine{00053\ \ \ \ \ TMenuItem\ *\doxymbox{\hyperlink{class_t_form1_af7caf8cee32806f87f8611fe45fc7642}{GuardarGrafica}};}
+\DoxyCodeLine{00054\ \ \ \ \ TMenuItem\ *\doxymbox{\hyperlink{class_t_form1_a3a3337f2dd5e7cff82dcb26d82ce121a}{GuardarEcuaciones}};}
+\DoxyCodeLine{00055\ \ \ \ \ TMenuItem\ *\doxymbox{\hyperlink{class_t_form1_aa5b56bcd60dcef88ffc7540c2dd6ded5}{Ayuda}};}
+\DoxyCodeLine{00056\ \ \ \ \ TMenuItem\ *\doxymbox{\hyperlink{class_t_form1_a9afd818096bbc9d90b0d8a948d598b3a}{ManualUsuario}};}
+\DoxyCodeLine{00057\ \ \ \ \ TMenuItem\ *\doxymbox{\hyperlink{class_t_form1_a37d7911e01eaeda4fab71a4534137ed7}{AcercaDe}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ 1.\ Entrada\ de\ datos}}
+\DoxyCodeLine{00060\ \ \ \ \ TPanel\ *\doxymbox{\hyperlink{class_t_form1_aa7fdd54b41e0cedd27cd7fd6284d5d55}{PanelEntradaDatos}};}
+\DoxyCodeLine{00061\ \ \ \ \ TPanel\ *\doxymbox{\hyperlink{class_t_form1_a02c5ecc5081717b9c228d0169ebc3706}{InsertarMecanismo}};}
+\DoxyCodeLine{00062\ \ \ \ \ TPanel\ *\doxymbox{\hyperlink{class_t_form1_a10c77fa78d21fe66c8fa60032e6b1494}{MostrarEcReaccion}};}
+\DoxyCodeLine{00063\ \ \ \ \ TLabel\ *\doxymbox{\hyperlink{class_t_form1_a922c8f6efedff3cae5f296313972a2b2}{LabelEntradaDatos}};}
+\DoxyCodeLine{00064\ \ \ \ \ TLabel\ *\doxymbox{\hyperlink{class_t_form1_a9a2b36b411d7a73a6f386586b9c6b28b}{LabelMecanismo}};}
+\DoxyCodeLine{00065\ \ \ \ \ TLabel\ *\doxymbox{\hyperlink{class_t_form1_a09ac49a6cb43d562b19137da61d2c371}{LabelMostrarEcCinetica}};}
+\DoxyCodeLine{00066\ \ \ \ \ TMemo\ *\doxymbox{\hyperlink{class_t_form1_aa9e86c2dba2b22b377d54ef1dcde453a}{MemoTextoEntrada}};}
+\DoxyCodeLine{00067\ \ \ \ \ TMemo\ *\doxymbox{\hyperlink{class_t_form1_ab4a8940161709859783d852d614ff27d}{MemoSalidaValidacion}};}
+\DoxyCodeLine{00068\ \ \ \ \ TGridPanel\ *\doxymbox{\hyperlink{class_t_form1_ab5924af8daf590ab836bafde5d21fd37}{GridBotonesEntrada}};}
+\DoxyCodeLine{00069\ \ \ \ \ TButton\ *\doxymbox{\hyperlink{class_t_form1_a4cf69ff717fdf6cb6303c7135a6217fd}{BtnMetabolito}};}
+\DoxyCodeLine{00070\ \ \ \ \ TButton\ *\doxymbox{\hyperlink{class_t_form1_a6c17650a72e319894075b410873e2ada}{BtnParametro}};}
+\DoxyCodeLine{00071\ \ \ \ \ TButton\ *\doxymbox{\hyperlink{class_t_form1_ab17126f38fdba73ac6673b525b277aa6}{BtnReaccion}};}
+\DoxyCodeLine{00072\ \ \ \ \ TButton\ *\doxymbox{\hyperlink{class_t_form1_ae00aabd5289ceae6440768a666688a22}{BtnValidarDatos}};}
+\DoxyCodeLine{00073\ \ \ \ \ TButton\ *\doxymbox{\hyperlink{class_t_form1_ac5bcf07bed92dadd74568a5802709b8f}{BtnMostrarSistema}};}
+\DoxyCodeLine{00074\ \ \ \ \ TBitBtn\ *\doxymbox{\hyperlink{class_t_form1_a9fb79b1dab5c778460bc8861174bd3e7}{infoMeta}};}
+\DoxyCodeLine{00075\ \ \ \ \ TBitBtn\ *\doxymbox{\hyperlink{class_t_form1_aa7794190632ca3a63a91be8d06ef46be}{infoParam}};}
+\DoxyCodeLine{00076\ \ \ \ \ TBitBtn\ *\doxymbox{\hyperlink{class_t_form1_ae3e76258255ad11ed2d4f6934eaa2af7}{infoReac}};}
+\DoxyCodeLine{00077\ \ \ \ \ TBitBtn\ *\doxymbox{\hyperlink{class_t_form1_a88059de68ca8a6aa0b7f77a2effde44a}{infoMec}};}
+\DoxyCodeLine{00078\ \ \ \ \ TComboBox\ *\doxymbox{\hyperlink{class_t_form1_a660c2035351aefe038fc7e14b493fe9c}{ComboInsertarMecanismo}};}
+\DoxyCodeLine{00079\ \ \ \ \ TComboBox\ *\doxymbox{\hyperlink{class_t_form1_a894009436101b3472353b8beaf7879a0}{ComboMostrarReaccion}};}
+\DoxyCodeLine{00080\ \ \ \ \ TSaveTextFileDialog\ *\doxymbox{\hyperlink{class_t_form1_aa712cb01027b39f9f81f190ae99213b7}{SaveTextFileDialog}};}
+\DoxyCodeLine{00081\ \ \ \ \ TOpenDialog\ *\doxymbox{\hyperlink{class_t_form1_af5d638939de80a0edcac2b80741875c4}{DialogSubirArchivo}};}
+\DoxyCodeLine{00082\ \ \ \ \ TTaskDialog\ *\doxymbox{\hyperlink{class_t_form1_ae4dc4482b3617e822ddb407864b2d961}{DialogIntroducirDatos}};}
+\DoxyCodeLine{00083\ \ \ \ \ TTaskDialog\ *\doxymbox{\hyperlink{class_t_form1_a4fb84711d5e78fd2275062bfcf3af039}{DialogNuevoPanelEntrada}};}
+\DoxyCodeLine{00084\ \ \ \ \ TTaskDialog\ *\doxymbox{\hyperlink{class_t_form1_ac318dd14bfbb9ce3d3c5b616092a043d}{DialogPrimeroValida}};}
+\DoxyCodeLine{00085\ \ \ \ \ TTaskDialog\ *\doxymbox{\hyperlink{class_t_form1_a31da02670e94e7432d74ffe03895db66}{DialogMetabolito}};}
+\DoxyCodeLine{00086\ \ \ \ \ TTaskDialog\ *\doxymbox{\hyperlink{class_t_form1_aa4820de2c5c3451d7f826446a6063098}{DialogParametro}};}
+\DoxyCodeLine{00087\ \ \ \ \ TTaskDialog\ *\doxymbox{\hyperlink{class_t_form1_aed4132415fbb1a0b29408631c98e1479}{DialogReaccion}};}
+\DoxyCodeLine{00088\ \ \ \ \ TTaskDialog\ *\doxymbox{\hyperlink{class_t_form1_a5e5483fc072f203d20338ae160ff9b0d}{DialogMecanismo}};}
+\DoxyCodeLine{00089\ \ \ \ \ TSplitter\ *\doxymbox{\hyperlink{class_t_form1_a251b602e4aa43042da5e2acf5a237f12}{Splitter1}};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//\ 2.\ Simulacion}}
+\DoxyCodeLine{00093\ \ \ \ \ TPanel\ *\doxymbox{\hyperlink{class_t_form1_ae7dae94601eefe835743dbe8d1ae2623}{PanelSimulacion}};}
+\DoxyCodeLine{00094\ \ \ \ \ TPanel\ *\doxymbox{\hyperlink{class_t_form1_abb7627f3c59fc6e6799ab147a878a169}{PanelEleccionMetodo}};}
+\DoxyCodeLine{00095\ \ \ \ \ TLabel\ *\doxymbox{\hyperlink{class_t_form1_a344f8330a3a7b26735eea0f2d4c43408}{LabelSimulacion}};}
+\DoxyCodeLine{00096\ \ \ \ \ TLabel\ *\doxymbox{\hyperlink{class_t_form1_a1167e34f0e23238f966422f2012dced2}{LabelEleccionMetodo}};}
+\DoxyCodeLine{00097\ \ \ \ \ TLabel\ *\doxymbox{\hyperlink{class_t_form1_af53c3331a120e002ed121f5f3e14e31d}{LabelTiempoInicial}};}
+\DoxyCodeLine{00098\ \ \ \ \ TLabel\ *\doxymbox{\hyperlink{class_t_form1_a37c438ffb801cc74af48c65d2d770a39}{LabelTiempoFinal}};}
+\DoxyCodeLine{00099\ \ \ \ \ TLabel\ *\doxymbox{\hyperlink{class_t_form1_a6bd391549e2b90ebc116cf705fd77723}{LabelCiclos}};}
+\DoxyCodeLine{00100\ \ \ \ \ TGridPanel\ *\doxymbox{\hyperlink{class_t_form1_a5a1bc8e6e8b358271dc6569aa3c3451e}{GridBotonesSimulacion}};}
+\DoxyCodeLine{00101\ \ \ \ \ TComboBox\ *\doxymbox{\hyperlink{class_t_form1_a44a2ef081d543b54f87c14338698ab78}{ComboEleccionMetodo}};}
+\DoxyCodeLine{00102\ \ \ \ \ TSpinEdit\ *\doxymbox{\hyperlink{class_t_form1_a17af3972cdda8d1dadd0738018aae617}{SpinTiempoInicial}};}
+\DoxyCodeLine{00103\ \ \ \ \ TSpinEdit\ *\doxymbox{\hyperlink{class_t_form1_aa482bab5f28b9388e3b2892078dfa7a9}{SpinTiempoFinal}};}
+\DoxyCodeLine{00104\ \ \ \ \ TSpinEdit\ *\doxymbox{\hyperlink{class_t_form1_ac911a8c3298f01dea8af80d132fa847c}{SpinCiclos}};}
+\DoxyCodeLine{00105\ \ \ \ \ TBitBtn\ *\doxymbox{\hyperlink{class_t_form1_a6cea4aab69f5817adeee6faaccdf62f8}{infoMetodo}};}
+\DoxyCodeLine{00106\ \ \ \ \ TButton\ *\doxymbox{\hyperlink{class_t_form1_a3e544b8e8e5654ed51cd771bb00f0403}{BtnLanzarSimulacion}};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//\ 3.\ Salida\ Datos}}
+\DoxyCodeLine{00109\ \ \ \ \ TPanel\ *\doxymbox{\hyperlink{class_t_form1_a93c988cb499157d0681bd7082a5cf977}{PanelSalidaDatos}};}
+\DoxyCodeLine{00110\ \ \ \ \ TLabel\ *\doxymbox{\hyperlink{class_t_form1_abea774ddc34a5d12d34a568a48bdaca1}{LabelSalida}};}
+\DoxyCodeLine{00111\ \ \ \ \ TMemo\ *\doxymbox{\hyperlink{class_t_form1_a8c7ccdd0b566fdc4f31a07f1b610d609}{MemoSalidaSimTexto}};}
+\DoxyCodeLine{00112\ \ \ \ \ TTaskDialog\ *\doxymbox{\hyperlink{class_t_form1_a276405b1e9a0b7f7e64f15bf1aa66a56}{DialogMetodo}};}
+\DoxyCodeLine{00113\ \ \ \ \ TTaskDialog\ *\doxymbox{\hyperlink{class_t_form1_acd9a909f3f56bb5f69d440e53204a8e8}{DialogNoGrafica}};}
+\DoxyCodeLine{00114\ \ \ \ \ TTaskDialog\ *\doxymbox{\hyperlink{class_t_form1_af6f3b8acc373d4487b3dcddd99766944}{DialogNoTabla}};}
+\DoxyCodeLine{00115\ \ \ \ \ TTaskDialog\ *\doxymbox{\hyperlink{class_t_form1_ac5fed2ecedb345756f064ad017b9a829}{DialogManualUsuario}};}
+\DoxyCodeLine{00116\ \ \ \ \ TTaskDialog\ *\doxymbox{\hyperlink{class_t_form1_a5671a9e7ca546bd171c941a455819575}{DialogAcercaDe}};}
+\DoxyCodeLine{00117\ \ \ \ \ TSaveTextFileDialog\ *\doxymbox{\hyperlink{class_t_form1_aa895da18090366efcec368f3a68e9a2f}{SaveTablaSimulacion}};}
+\DoxyCodeLine{00118\ \ \ \ \ TSaveTextFileDialog\ *\doxymbox{\hyperlink{class_t_form1_ad4d23c9c9929b1edb9e1b1073795c111}{SaveGraficaSimulacion}};}
+\DoxyCodeLine{00119\ \ \ \ \ TSaveTextFileDialog\ *\doxymbox{\hyperlink{class_t_form1_a3e7d1ab4251df32ffbec3a73083cfe92}{SaveEcuaciones}};}
+\DoxyCodeLine{00120\ \ \ \ \ TPageControl\ *\doxymbox{\hyperlink{class_t_form1_a18b6c7736500126b008f5fc1ff5ee453}{PageControlSalida}};}
+\DoxyCodeLine{00121\ \ \ \ \ TTabSheet\ *\doxymbox{\hyperlink{class_t_form1_ac32c021ce06fd2303fcd5216543946b5}{Tabla}};}
+\DoxyCodeLine{00122\ \ \ \ \ TStringGrid\ *\doxymbox{\hyperlink{class_t_form1_a798d3b58aedc24d649a7201fcf9e0a72}{StringGrid}};}
+\DoxyCodeLine{00123\ \ \ \ \ TTabSheet\ *\doxymbox{\hyperlink{class_t_form1_a7c1486c3db708d6a674c9e5bd76d5082}{Grafica}};}
+\DoxyCodeLine{00124\ \ \ \ \ TImage\ *\doxymbox{\hyperlink{class_t_form1_a287e0e1495b569b18373a0eb490f331d}{ImageGrafica}};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a329defcfa3dd860b9171b45ab1098fd3}{FormResize}}(TObject\ *Sender);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a4155debba8bc79169bdff3e2e7454145}{SubirArchivoClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a69313b46bbed2c28fba451d35bed90ef}{GuardarArchivoClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a7b8100b0f829a433330f4aa65b317fd1}{NuevoArchivoClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_abbdc49091697f71071ce7e92d4ba9b21}{CargarEjemploClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_af94a85828f23c7428f76484d72c2e42e}{GuardarTablaClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a06c5cf15ddee764c60091b683a434bc8}{GuardarGraficaClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a4054d1c2b1745192b6b1cff6fee0bcd5}{GuardarEcuacionesClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a58ec67b65a9e7d2da6dba79d4c4c3313}{ManualUsuarioClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a59c138436f623ae2e6452bda5aae24fd}{AcercaDeClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a5ade53be84a10d8d2669064348ed4ae1}{MemoTextoEntradaChange}}(TObject\ *Sender);}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_ae520b5039bf5fa33ccf2cfa8126d4473}{BtnValidarDatosClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_affe85330b73bae8f89bf9fb739edf06f}{BtnMostrarSistemaClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a7f84220cfe27e325568532c24d1e7533}{infoMetaClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a43001f7620650af63723839e11d264e4}{infoParamClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_ac4a322d5fd147b8f78b21a0d10062418}{infoMecClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a02788683a6b4925e789f406ecb9d5a52}{infoReacClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a723f8b188febb6db118b1ee0da00b8c4}{infoMetodoClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a797288bb997882dc0998f3404fb014d7}{BtnMetabolitoClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_ae51152d68d35be0ae8e5329f4d8cbbf5}{BtnParametroClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_af5e815dc56d52fc5b5c60f625b602766}{BtnReaccionClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a460763217589b7b00f0561b1d588b3ca}{BtnMecanismoClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a0027f47316b47ea5fdc245a7f8bf9511}{ComboInsertarMecanismoChange}}(TObject\ *Sender);}
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a592eff540cbc9ff77e21d833059b9a39}{ComboMostrarReaccionChange}}(TObject\ *Sender);}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_ae580913222051e0123ef7a6df22c515c}{BtnLanzarSimulacionClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00326\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a83bec61518b9f1b09e42e4456d42ed15}{StringGridDrawCell}}(TObject\ *Sender,\ System::LongInt\ ACol,\ System::LongInt\ ARow,\ TRect\ \&Rect,\ TGridDrawState\ State);}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a4c645d0ca24b0febcfe71ecf74d6fe33}{ImageGraficaDblClick}}(TObject\ *Sender);}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_affac639c5f2cec3b97fd262a13ea389d}{Splitter1CanResize}}(TObject\ *Sender,\ \textcolor{keywordtype}{int}\ \&NewSize,\ \textcolor{keywordtype}{bool}\ \&Accept);}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00347\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a05008fb7c2ed5a2b6c585b1948fcf4f6}{Splitter1Moved}}(TObject\ *Sender);}
+\DoxyCodeLine{00348\ }
+\DoxyCodeLine{00349\ }
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a88a1c0d872d5b1744f9d704e4a4ca4f9}{FormClose}}(TObject\ *Sender,\ TCloseAction\ \&Action);}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00359\ \textcolor{keyword}{private}:\ \ \ \ \textcolor{comment}{//\ User\ declarations}}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ \ \ \ \ \doxymbox{\hyperlink{class_t_model}{TModel}}\ \doxymbox{\hyperlink{class_t_form1_aef11bfb2a9d3c4f6043d2539a9b5eab4}{model}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00362\ \ \ \ \ \doxymbox{\hyperlink{class_t_simulation}{TSimulation}}\ \doxymbox{\hyperlink{class_t_form1_a9211b1e013014197ef85fec1fbbbdb28}{simulation}};\ \ \ \ \ }
+\DoxyCodeLine{00363\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_t_form1_a200a0af091188d3e3d5e4341a4853b04}{entradaVacia}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00364\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_t_form1_ab7754143b3db97431d635ef2dafba857}{datosValidados}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ \textcolor{keyword}{public}:\ \ \ \ \ \textcolor{comment}{//\ User\ declarations}}
+\DoxyCodeLine{00367\ }
+\DoxyCodeLine{00372\ \ \ \ \ \_\_fastcall\ \doxymbox{\hyperlink{class_t_form1_a4b77eaf706e8386bc8d79ec547efc8b9}{TForm1}}(TComponent*\ Owner);}
+\DoxyCodeLine{00373\ \};}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00376\ \textcolor{keyword}{extern}\ PACKAGE\ \doxymbox{\hyperlink{class_t_form1}{TForm1}}\ *\doxymbox{\hyperlink{_unit1_8cpp_a63c0f898900f4351321800d0a9772291}{Form1}};}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00378\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00379\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

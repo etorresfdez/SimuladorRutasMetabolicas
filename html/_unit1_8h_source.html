@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prototipo Simulacion Rutas Metabolicas: Archivo de código fuente Unit1.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Prototipo Simulacion Rutas Metabolicas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_unit1_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Unit1.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_unit1_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#ifndef Unit1H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#define Unit1H</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;System.Classes.hpp&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;System.IOUtils.hpp&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;System.Diagnostics.hpp&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;Vcl.Controls.hpp&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;Vcl.StdCtrls.hpp&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;Vcl.Forms.hpp&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;Vcl.Menus.hpp&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;Vcl.ExtCtrls.hpp&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;Vcl.Dialogs.hpp&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;Vcl.ExtDlgs.hpp&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;Vcl.Imaging.pngimage.hpp&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;Vcl.Buttons.hpp&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;Vcl.Samples.Spin.hpp&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;Vcl.Grids.hpp&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;Vcl.ComCtrls.hpp&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;Vcl.OleCtrls.hpp&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;SHDocVw.hpp&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;ShellAPI.h&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="_metabolic_elements_8h.html">MetabolicElements.h</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="_simulation_8h.html">Simulation.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="_unit2_8h.html">Unit2.h</a>&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_t_form1.html">   40</a></span><span class="keyword">class </span><a class="code hl_function" href="class_t_form1.html#a4b77eaf706e8386bc8d79ec547efc8b9">TForm1</a> : <span class="keyword">public</span> TForm</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>__published:    <span class="comment">// IDE-managed Components</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// Main Menu</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_t_form1.html#a663d809447cba48ab33d9d44d9e0e42d">   45</a></span>    TMainMenu *<a class="code hl_variable" href="class_t_form1.html#a663d809447cba48ab33d9d44d9e0e42d">MainMenu</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_t_form1.html#afea368fc3cc620ef8a143e5d82d3deb8">   46</a></span>    TMenuItem *<a class="code hl_variable" href="class_t_form1.html#afea368fc3cc620ef8a143e5d82d3deb8">Archivo</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_t_form1.html#a77d371cc46133d52648d9671f962960d">   47</a></span>    TMenuItem *<a class="code hl_variable" href="class_t_form1.html#a77d371cc46133d52648d9671f962960d">SubirArchivo</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_t_form1.html#a653321ee99a43a437b35dbcfe45efc8a">   48</a></span>    TMenuItem *<a class="code hl_variable" href="class_t_form1.html#a653321ee99a43a437b35dbcfe45efc8a">NuevoArchivo</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_t_form1.html#a14bc11ca7f8e858332bb9849091c6e57">   49</a></span>    TMenuItem *<a class="code hl_variable" href="class_t_form1.html#a14bc11ca7f8e858332bb9849091c6e57">GuardarArchivo</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_t_form1.html#a8b16c264f2bda8a6c197690317bd17df">   50</a></span>    TMenuItem *<a class="code hl_variable" href="class_t_form1.html#a8b16c264f2bda8a6c197690317bd17df">Resultados</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_t_form1.html#afe2a6b2419569bfded5e694c858351ad">   51</a></span>    TMenuItem *<a class="code hl_variable" href="class_t_form1.html#afe2a6b2419569bfded5e694c858351ad">CargarEjemplo</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_t_form1.html#aac56c71df764a759b7a441b910371152">   52</a></span>    TMenuItem *<a class="code hl_variable" href="class_t_form1.html#aac56c71df764a759b7a441b910371152">GuardarTabla</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_t_form1.html#af7caf8cee32806f87f8611fe45fc7642">   53</a></span>    TMenuItem *<a class="code hl_variable" href="class_t_form1.html#af7caf8cee32806f87f8611fe45fc7642">GuardarGrafica</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_t_form1.html#a3a3337f2dd5e7cff82dcb26d82ce121a">   54</a></span>    TMenuItem *<a class="code hl_variable" href="class_t_form1.html#a3a3337f2dd5e7cff82dcb26d82ce121a">GuardarEcuaciones</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_t_form1.html#aa5b56bcd60dcef88ffc7540c2dd6ded5">   55</a></span>    TMenuItem *<a class="code hl_variable" href="class_t_form1.html#aa5b56bcd60dcef88ffc7540c2dd6ded5">Ayuda</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_t_form1.html#a9afd818096bbc9d90b0d8a948d598b3a">   56</a></span>    TMenuItem *<a class="code hl_variable" href="class_t_form1.html#a9afd818096bbc9d90b0d8a948d598b3a">ManualUsuario</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_t_form1.html#a37d7911e01eaeda4fab71a4534137ed7">   57</a></span>    TMenuItem *<a class="code hl_variable" href="class_t_form1.html#a37d7911e01eaeda4fab71a4534137ed7">AcercaDe</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// 1. Entrada de datos</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_t_form1.html#aa7fdd54b41e0cedd27cd7fd6284d5d55">   60</a></span>    TPanel *<a class="code hl_variable" href="class_t_form1.html#aa7fdd54b41e0cedd27cd7fd6284d5d55">PanelEntradaDatos</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_t_form1.html#a02c5ecc5081717b9c228d0169ebc3706">   61</a></span>    TPanel *<a class="code hl_variable" href="class_t_form1.html#a02c5ecc5081717b9c228d0169ebc3706">InsertarMecanismo</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_t_form1.html#a10c77fa78d21fe66c8fa60032e6b1494">   62</a></span>    TPanel *<a class="code hl_variable" href="class_t_form1.html#a10c77fa78d21fe66c8fa60032e6b1494">MostrarEcReaccion</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_t_form1.html#a922c8f6efedff3cae5f296313972a2b2">   63</a></span>    TLabel *<a class="code hl_variable" href="class_t_form1.html#a922c8f6efedff3cae5f296313972a2b2">LabelEntradaDatos</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_t_form1.html#a9a2b36b411d7a73a6f386586b9c6b28b">   64</a></span>    TLabel *<a class="code hl_variable" href="class_t_form1.html#a9a2b36b411d7a73a6f386586b9c6b28b">LabelMecanismo</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_t_form1.html#a09ac49a6cb43d562b19137da61d2c371">   65</a></span>    TLabel *<a class="code hl_variable" href="class_t_form1.html#a09ac49a6cb43d562b19137da61d2c371">LabelMostrarEcCinetica</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_t_form1.html#aa9e86c2dba2b22b377d54ef1dcde453a">   66</a></span>    TMemo *<a class="code hl_variable" href="class_t_form1.html#aa9e86c2dba2b22b377d54ef1dcde453a">MemoTextoEntrada</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_t_form1.html#ab4a8940161709859783d852d614ff27d">   67</a></span>    TMemo *<a class="code hl_variable" href="class_t_form1.html#ab4a8940161709859783d852d614ff27d">MemoSalidaValidacion</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_t_form1.html#ab5924af8daf590ab836bafde5d21fd37">   68</a></span>    TGridPanel *<a class="code hl_variable" href="class_t_form1.html#ab5924af8daf590ab836bafde5d21fd37">GridBotonesEntrada</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_t_form1.html#a4cf69ff717fdf6cb6303c7135a6217fd">   69</a></span>    TButton *<a class="code hl_variable" href="class_t_form1.html#a4cf69ff717fdf6cb6303c7135a6217fd">BtnMetabolito</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_t_form1.html#a6c17650a72e319894075b410873e2ada">   70</a></span>    TButton *<a class="code hl_variable" href="class_t_form1.html#a6c17650a72e319894075b410873e2ada">BtnParametro</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_t_form1.html#ab17126f38fdba73ac6673b525b277aa6">   71</a></span>    TButton *<a class="code hl_variable" href="class_t_form1.html#ab17126f38fdba73ac6673b525b277aa6">BtnReaccion</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_t_form1.html#ae00aabd5289ceae6440768a666688a22">   72</a></span>    TButton *<a class="code hl_variable" href="class_t_form1.html#ae00aabd5289ceae6440768a666688a22">BtnValidarDatos</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_t_form1.html#ac5bcf07bed92dadd74568a5802709b8f">   73</a></span>    TButton *<a class="code hl_variable" href="class_t_form1.html#ac5bcf07bed92dadd74568a5802709b8f">BtnMostrarSistema</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_t_form1.html#a9fb79b1dab5c778460bc8861174bd3e7">   74</a></span>    TBitBtn *<a class="code hl_variable" href="class_t_form1.html#a9fb79b1dab5c778460bc8861174bd3e7">infoMeta</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_t_form1.html#aa7794190632ca3a63a91be8d06ef46be">   75</a></span>    TBitBtn *<a class="code hl_variable" href="class_t_form1.html#aa7794190632ca3a63a91be8d06ef46be">infoParam</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_t_form1.html#ae3e76258255ad11ed2d4f6934eaa2af7">   76</a></span>    TBitBtn *<a class="code hl_variable" href="class_t_form1.html#ae3e76258255ad11ed2d4f6934eaa2af7">infoReac</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_t_form1.html#a88059de68ca8a6aa0b7f77a2effde44a">   77</a></span>    TBitBtn *<a class="code hl_variable" href="class_t_form1.html#a88059de68ca8a6aa0b7f77a2effde44a">infoMec</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_t_form1.html#a660c2035351aefe038fc7e14b493fe9c">   78</a></span>    TComboBox *<a class="code hl_variable" href="class_t_form1.html#a660c2035351aefe038fc7e14b493fe9c">ComboInsertarMecanismo</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_t_form1.html#a894009436101b3472353b8beaf7879a0">   79</a></span>    TComboBox *<a class="code hl_variable" href="class_t_form1.html#a894009436101b3472353b8beaf7879a0">ComboMostrarReaccion</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_t_form1.html#aa712cb01027b39f9f81f190ae99213b7">   80</a></span>    TSaveTextFileDialog *<a class="code hl_variable" href="class_t_form1.html#aa712cb01027b39f9f81f190ae99213b7">SaveTextFileDialog</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_t_form1.html#af5d638939de80a0edcac2b80741875c4">   81</a></span>    TOpenDialog *<a class="code hl_variable" href="class_t_form1.html#af5d638939de80a0edcac2b80741875c4">DialogSubirArchivo</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_t_form1.html#ae4dc4482b3617e822ddb407864b2d961">   82</a></span>    TTaskDialog *<a class="code hl_variable" href="class_t_form1.html#ae4dc4482b3617e822ddb407864b2d961">DialogIntroducirDatos</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_t_form1.html#a4fb84711d5e78fd2275062bfcf3af039">   83</a></span>    TTaskDialog *<a class="code hl_variable" href="class_t_form1.html#a4fb84711d5e78fd2275062bfcf3af039">DialogNuevoPanelEntrada</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_t_form1.html#ac318dd14bfbb9ce3d3c5b616092a043d">   84</a></span>    TTaskDialog *<a class="code hl_variable" href="class_t_form1.html#ac318dd14bfbb9ce3d3c5b616092a043d">DialogPrimeroValida</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_t_form1.html#a31da02670e94e7432d74ffe03895db66">   85</a></span>    TTaskDialog *<a class="code hl_variable" href="class_t_form1.html#a31da02670e94e7432d74ffe03895db66">DialogMetabolito</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_t_form1.html#aa4820de2c5c3451d7f826446a6063098">   86</a></span>    TTaskDialog *<a class="code hl_variable" href="class_t_form1.html#aa4820de2c5c3451d7f826446a6063098">DialogParametro</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_t_form1.html#aed4132415fbb1a0b29408631c98e1479">   87</a></span>    TTaskDialog *<a class="code hl_variable" href="class_t_form1.html#aed4132415fbb1a0b29408631c98e1479">DialogReaccion</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_t_form1.html#a5e5483fc072f203d20338ae160ff9b0d">   88</a></span>    TTaskDialog *<a class="code hl_variable" href="class_t_form1.html#a5e5483fc072f203d20338ae160ff9b0d">DialogMecanismo</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_t_form1.html#a251b602e4aa43042da5e2acf5a237f12">   89</a></span>    TSplitter *<a class="code hl_variable" href="class_t_form1.html#a251b602e4aa43042da5e2acf5a237f12">Splitter1</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">// 2. Simulacion</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_t_form1.html#ae7dae94601eefe835743dbe8d1ae2623">   93</a></span>    TPanel *<a class="code hl_variable" href="class_t_form1.html#ae7dae94601eefe835743dbe8d1ae2623">PanelSimulacion</a>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_t_form1.html#abb7627f3c59fc6e6799ab147a878a169">   94</a></span>    TPanel *<a class="code hl_variable" href="class_t_form1.html#abb7627f3c59fc6e6799ab147a878a169">PanelEleccionMetodo</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_t_form1.html#a344f8330a3a7b26735eea0f2d4c43408">   95</a></span>    TLabel *<a class="code hl_variable" href="class_t_form1.html#a344f8330a3a7b26735eea0f2d4c43408">LabelSimulacion</a>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_t_form1.html#a1167e34f0e23238f966422f2012dced2">   96</a></span>    TLabel *<a class="code hl_variable" href="class_t_form1.html#a1167e34f0e23238f966422f2012dced2">LabelEleccionMetodo</a>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_t_form1.html#af53c3331a120e002ed121f5f3e14e31d">   97</a></span>    TLabel *<a class="code hl_variable" href="class_t_form1.html#af53c3331a120e002ed121f5f3e14e31d">LabelTiempoInicial</a>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_t_form1.html#a37c438ffb801cc74af48c65d2d770a39">   98</a></span>    TLabel *<a class="code hl_variable" href="class_t_form1.html#a37c438ffb801cc74af48c65d2d770a39">LabelTiempoFinal</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_t_form1.html#a6bd391549e2b90ebc116cf705fd77723">   99</a></span>    TLabel *<a class="code hl_variable" href="class_t_form1.html#a6bd391549e2b90ebc116cf705fd77723">LabelCiclos</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_t_form1.html#a5a1bc8e6e8b358271dc6569aa3c3451e">  100</a></span>    TGridPanel *<a class="code hl_variable" href="class_t_form1.html#a5a1bc8e6e8b358271dc6569aa3c3451e">GridBotonesSimulacion</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_t_form1.html#a44a2ef081d543b54f87c14338698ab78">  101</a></span>    TComboBox *<a class="code hl_variable" href="class_t_form1.html#a44a2ef081d543b54f87c14338698ab78">ComboEleccionMetodo</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_t_form1.html#a17af3972cdda8d1dadd0738018aae617">  102</a></span>    TSpinEdit *<a class="code hl_variable" href="class_t_form1.html#a17af3972cdda8d1dadd0738018aae617">SpinTiempoInicial</a>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_t_form1.html#aa482bab5f28b9388e3b2892078dfa7a9">  103</a></span>    TSpinEdit *<a class="code hl_variable" href="class_t_form1.html#aa482bab5f28b9388e3b2892078dfa7a9">SpinTiempoFinal</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_t_form1.html#ac911a8c3298f01dea8af80d132fa847c">  104</a></span>    TSpinEdit *<a class="code hl_variable" href="class_t_form1.html#ac911a8c3298f01dea8af80d132fa847c">SpinCiclos</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_t_form1.html#a6cea4aab69f5817adeee6faaccdf62f8">  105</a></span>    TBitBtn *<a class="code hl_variable" href="class_t_form1.html#a6cea4aab69f5817adeee6faaccdf62f8">infoMetodo</a>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_t_form1.html#a3e544b8e8e5654ed51cd771bb00f0403">  106</a></span>    TButton *<a class="code hl_variable" href="class_t_form1.html#a3e544b8e8e5654ed51cd771bb00f0403">BtnLanzarSimulacion</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">// 3. Salida Datos</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_t_form1.html#a93c988cb499157d0681bd7082a5cf977">  109</a></span>    TPanel *<a class="code hl_variable" href="class_t_form1.html#a93c988cb499157d0681bd7082a5cf977">PanelSalidaDatos</a>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_t_form1.html#abea774ddc34a5d12d34a568a48bdaca1">  110</a></span>    TLabel *<a class="code hl_variable" href="class_t_form1.html#abea774ddc34a5d12d34a568a48bdaca1">LabelSalida</a>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="class_t_form1.html#a8c7ccdd0b566fdc4f31a07f1b610d609">  111</a></span>    TMemo *<a class="code hl_variable" href="class_t_form1.html#a8c7ccdd0b566fdc4f31a07f1b610d609">MemoSalidaSimTexto</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_t_form1.html#a276405b1e9a0b7f7e64f15bf1aa66a56">  112</a></span>    TTaskDialog *<a class="code hl_variable" href="class_t_form1.html#a276405b1e9a0b7f7e64f15bf1aa66a56">DialogMetodo</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_t_form1.html#acd9a909f3f56bb5f69d440e53204a8e8">  113</a></span>    TTaskDialog *<a class="code hl_variable" href="class_t_form1.html#acd9a909f3f56bb5f69d440e53204a8e8">DialogNoGrafica</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_t_form1.html#af6f3b8acc373d4487b3dcddd99766944">  114</a></span>    TTaskDialog *<a class="code hl_variable" href="class_t_form1.html#af6f3b8acc373d4487b3dcddd99766944">DialogNoTabla</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_t_form1.html#ac5fed2ecedb345756f064ad017b9a829">  115</a></span>    TTaskDialog *<a class="code hl_variable" href="class_t_form1.html#ac5fed2ecedb345756f064ad017b9a829">DialogManualUsuario</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_t_form1.html#a5671a9e7ca546bd171c941a455819575">  116</a></span>    TTaskDialog *<a class="code hl_variable" href="class_t_form1.html#a5671a9e7ca546bd171c941a455819575">DialogAcercaDe</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_t_form1.html#aa895da18090366efcec368f3a68e9a2f">  117</a></span>    TSaveTextFileDialog *<a class="code hl_variable" href="class_t_form1.html#aa895da18090366efcec368f3a68e9a2f">SaveTablaSimulacion</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_t_form1.html#ad4d23c9c9929b1edb9e1b1073795c111">  118</a></span>    TSaveTextFileDialog *<a class="code hl_variable" href="class_t_form1.html#ad4d23c9c9929b1edb9e1b1073795c111">SaveGraficaSimulacion</a>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_t_form1.html#a3e7d1ab4251df32ffbec3a73083cfe92">  119</a></span>    TSaveTextFileDialog *<a class="code hl_variable" href="class_t_form1.html#a3e7d1ab4251df32ffbec3a73083cfe92">SaveEcuaciones</a>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_t_form1.html#a18b6c7736500126b008f5fc1ff5ee453">  120</a></span>    TPageControl *<a class="code hl_variable" href="class_t_form1.html#a18b6c7736500126b008f5fc1ff5ee453">PageControlSalida</a>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_t_form1.html#ac32c021ce06fd2303fcd5216543946b5">  121</a></span>    TTabSheet *<a class="code hl_variable" href="class_t_form1.html#ac32c021ce06fd2303fcd5216543946b5">Tabla</a>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_t_form1.html#a798d3b58aedc24d649a7201fcf9e0a72">  122</a></span>    TStringGrid *<a class="code hl_variable" href="class_t_form1.html#a798d3b58aedc24d649a7201fcf9e0a72">StringGrid</a>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_t_form1.html#a7c1486c3db708d6a674c9e5bd76d5082">  123</a></span>    TTabSheet *<a class="code hl_variable" href="class_t_form1.html#a7c1486c3db708d6a674c9e5bd76d5082">Grafica</a>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_t_form1.html#a287e0e1495b569b18373a0eb490f331d">  124</a></span>    TImage *<a class="code hl_variable" href="class_t_form1.html#a287e0e1495b569b18373a0eb490f331d">ImageGrafica</a>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a329defcfa3dd860b9171b45ab1098fd3">FormResize</a>(TObject *Sender);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a4155debba8bc79169bdff3e2e7454145">SubirArchivoClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a69313b46bbed2c28fba451d35bed90ef">GuardarArchivoClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a7b8100b0f829a433330f4aa65b317fd1">NuevoArchivoClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#abbdc49091697f71071ce7e92d4ba9b21">CargarEjemploClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#af94a85828f23c7428f76484d72c2e42e">GuardarTablaClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a06c5cf15ddee764c60091b683a434bc8">GuardarGraficaClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a4054d1c2b1745192b6b1cff6fee0bcd5">GuardarEcuacionesClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a58ec67b65a9e7d2da6dba79d4c4c3313">ManualUsuarioClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a59c138436f623ae2e6452bda5aae24fd">AcercaDeClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a5ade53be84a10d8d2669064348ed4ae1">MemoTextoEntradaChange</a>(TObject *Sender);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#ae520b5039bf5fa33ccf2cfa8126d4473">BtnValidarDatosClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#affe85330b73bae8f89bf9fb739edf06f">BtnMostrarSistemaClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a7f84220cfe27e325568532c24d1e7533">infoMetaClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a43001f7620650af63723839e11d264e4">infoParamClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#ac4a322d5fd147b8f78b21a0d10062418">infoMecClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a02788683a6b4925e789f406ecb9d5a52">infoReacClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a723f8b188febb6db118b1ee0da00b8c4">infoMetodoClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a797288bb997882dc0998f3404fb014d7">BtnMetabolitoClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#ae51152d68d35be0ae8e5329f4d8cbbf5">BtnParametroClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#af5e815dc56d52fc5b5c60f625b602766">BtnReaccionClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a460763217589b7b00f0561b1d588b3ca">BtnMecanismoClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a0027f47316b47ea5fdc245a7f8bf9511">ComboInsertarMecanismoChange</a>(TObject *Sender);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a592eff540cbc9ff77e21d833059b9a39">ComboMostrarReaccionChange</a>(TObject *Sender);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#ae580913222051e0123ef7a6df22c515c">BtnLanzarSimulacionClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a83bec61518b9f1b09e42e4456d42ed15">StringGridDrawCell</a>(TObject *Sender, System::LongInt ACol, System::LongInt ARow, TRect &amp;Rect, TGridDrawState State);</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a4c645d0ca24b0febcfe71ecf74d6fe33">ImageGraficaDblClick</a>(TObject *Sender);</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#affac639c5f2cec3b97fd262a13ea389d">Splitter1CanResize</a>(TObject *Sender, <span class="keywordtype">int</span> &amp;NewSize, <span class="keywordtype">bool</span> &amp;Accept);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a05008fb7c2ed5a2b6c585b1948fcf4f6">Splitter1Moved</a>(TObject *Sender);</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span></div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <span class="keywordtype">void</span> __fastcall <a class="code hl_function" href="class_t_form1.html#a88a1c0d872d5b1744f9d704e4a4ca4f9">FormClose</a>(TObject *Sender, TCloseAction &amp;Action);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="keyword">private</span>:    <span class="comment">// User declarations</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno"><a class="line" href="class_t_form1.html#aef11bfb2a9d3c4f6043d2539a9b5eab4">  361</a></span>    <a class="code hl_class" href="class_t_model.html">TModel</a> <a class="code hl_variable" href="class_t_form1.html#aef11bfb2a9d3c4f6043d2539a9b5eab4">model</a>;               </div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno"><a class="line" href="class_t_form1.html#a9211b1e013014197ef85fec1fbbbdb28">  362</a></span>    <a class="code hl_class" href="class_t_simulation.html">TSimulation</a> <a class="code hl_variable" href="class_t_form1.html#a9211b1e013014197ef85fec1fbbbdb28">simulation</a>;     </div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno"><a class="line" href="class_t_form1.html#a200a0af091188d3e3d5e4341a4853b04">  363</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_t_form1.html#a200a0af091188d3e3d5e4341a4853b04">entradaVacia</a>;          </div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno"><a class="line" href="class_t_form1.html#ab7754143b3db97431d635ef2dafba857">  364</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_t_form1.html#ab7754143b3db97431d635ef2dafba857">datosValidados</a>;        </div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span> </div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="keyword">public</span>:     <span class="comment">// User declarations</span></div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span></div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    __fastcall <a class="code hl_function" href="class_t_form1.html#a4b77eaf706e8386bc8d79ec547efc8b9">TForm1</a>(TComponent* Owner);</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>};</div>
+</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span> </div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="keyword">extern</span> PACKAGE <a class="code hl_class" href="class_t_form1.html">TForm1</a> *<a class="code hl_variable" href="_unit1_8cpp.html#a63c0f898900f4351321800d0a9772291">Form1</a>;</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_metabolic_elements_8h_html"><div class="ttname"><a href="_metabolic_elements_8h.html">MetabolicElements.h</a></div></div>
+<div class="ttc" id="a_simulation_8h_html"><div class="ttname"><a href="_simulation_8h.html">Simulation.h</a></div></div>
+<div class="ttc" id="a_unit1_8cpp_html_a63c0f898900f4351321800d0a9772291"><div class="ttname"><a href="_unit1_8cpp.html#a63c0f898900f4351321800d0a9772291">Form1</a></div><div class="ttdeci">TForm1 * Form1</div><div class="ttdef"><b>Definition</b> Unit1.cpp:12</div></div>
+<div class="ttc" id="a_unit2_8h_html"><div class="ttname"><a href="_unit2_8h.html">Unit2.h</a></div></div>
+<div class="ttc" id="aclass_t_form1_html"><div class="ttname"><a href="class_t_form1.html">TForm1</a></div><div class="ttdoc">Es la ventana principal de la aplicacion y la encargada de la interfaz grafica de usuario.</div><div class="ttdef"><b>Definition</b> Unit1.h:41</div></div>
+<div class="ttc" id="aclass_t_form1_html_a0027f47316b47ea5fdc245a7f8bf9511"><div class="ttname"><a href="class_t_form1.html#a0027f47316b47ea5fdc245a7f8bf9511">TForm1::ComboInsertarMecanismoChange</a></div><div class="ttdeci">void __fastcall ComboInsertarMecanismoChange(TObject *Sender)</div><div class="ttdoc">Al seleccionar un mecanismo de la lista de mecanismos disponibles, muestra la plantilla del mecanismo...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:628</div></div>
+<div class="ttc" id="aclass_t_form1_html_a02788683a6b4925e789f406ecb9d5a52"><div class="ttname"><a href="class_t_form1.html#a02788683a6b4925e789f406ecb9d5a52">TForm1::infoReacClick</a></div><div class="ttdeci">void __fastcall infoReacClick(TObject *Sender)</div><div class="ttdoc">Boton para obtener informacion sobre como introducir una Reaccion en el modelo.</div><div class="ttdef"><b>Definition</b> Unit1.cpp:380</div></div>
+<div class="ttc" id="aclass_t_form1_html_a02c5ecc5081717b9c228d0169ebc3706"><div class="ttname"><a href="class_t_form1.html#a02c5ecc5081717b9c228d0169ebc3706">TForm1::InsertarMecanismo</a></div><div class="ttdeci">TPanel * InsertarMecanismo</div><div class="ttdef"><b>Definition</b> Unit1.h:61</div></div>
+<div class="ttc" id="aclass_t_form1_html_a05008fb7c2ed5a2b6c585b1948fcf4f6"><div class="ttname"><a href="class_t_form1.html#a05008fb7c2ed5a2b6c585b1948fcf4f6">TForm1::Splitter1Moved</a></div><div class="ttdeci">void __fastcall Splitter1Moved(TObject *Sender)</div><div class="ttdoc">Actualiza la interfaz despues de mover el splitter.</div><div class="ttdef"><b>Definition</b> Unit1.cpp:123</div></div>
+<div class="ttc" id="aclass_t_form1_html_a06c5cf15ddee764c60091b683a434bc8"><div class="ttname"><a href="class_t_form1.html#a06c5cf15ddee764c60091b683a434bc8">TForm1::GuardarGraficaClick</a></div><div class="ttdeci">void __fastcall GuardarGraficaClick(TObject *Sender)</div><div class="ttdoc">Accion que se realiza al darle al boton &#39;Guardar grafica&#39; del menu. Guarda la grafica generada en la ...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:857</div></div>
+<div class="ttc" id="aclass_t_form1_html_a09ac49a6cb43d562b19137da61d2c371"><div class="ttname"><a href="class_t_form1.html#a09ac49a6cb43d562b19137da61d2c371">TForm1::LabelMostrarEcCinetica</a></div><div class="ttdeci">TLabel * LabelMostrarEcCinetica</div><div class="ttdef"><b>Definition</b> Unit1.h:65</div></div>
+<div class="ttc" id="aclass_t_form1_html_a10c77fa78d21fe66c8fa60032e6b1494"><div class="ttname"><a href="class_t_form1.html#a10c77fa78d21fe66c8fa60032e6b1494">TForm1::MostrarEcReaccion</a></div><div class="ttdeci">TPanel * MostrarEcReaccion</div><div class="ttdef"><b>Definition</b> Unit1.h:62</div></div>
+<div class="ttc" id="aclass_t_form1_html_a1167e34f0e23238f966422f2012dced2"><div class="ttname"><a href="class_t_form1.html#a1167e34f0e23238f966422f2012dced2">TForm1::LabelEleccionMetodo</a></div><div class="ttdeci">TLabel * LabelEleccionMetodo</div><div class="ttdef"><b>Definition</b> Unit1.h:96</div></div>
+<div class="ttc" id="aclass_t_form1_html_a14bc11ca7f8e858332bb9849091c6e57"><div class="ttname"><a href="class_t_form1.html#a14bc11ca7f8e858332bb9849091c6e57">TForm1::GuardarArchivo</a></div><div class="ttdeci">TMenuItem * GuardarArchivo</div><div class="ttdef"><b>Definition</b> Unit1.h:49</div></div>
+<div class="ttc" id="aclass_t_form1_html_a17af3972cdda8d1dadd0738018aae617"><div class="ttname"><a href="class_t_form1.html#a17af3972cdda8d1dadd0738018aae617">TForm1::SpinTiempoInicial</a></div><div class="ttdeci">TSpinEdit * SpinTiempoInicial</div><div class="ttdef"><b>Definition</b> Unit1.h:102</div></div>
+<div class="ttc" id="aclass_t_form1_html_a18b6c7736500126b008f5fc1ff5ee453"><div class="ttname"><a href="class_t_form1.html#a18b6c7736500126b008f5fc1ff5ee453">TForm1::PageControlSalida</a></div><div class="ttdeci">TPageControl * PageControlSalida</div><div class="ttdef"><b>Definition</b> Unit1.h:120</div></div>
+<div class="ttc" id="aclass_t_form1_html_a200a0af091188d3e3d5e4341a4853b04"><div class="ttname"><a href="class_t_form1.html#a200a0af091188d3e3d5e4341a4853b04">TForm1::entradaVacia</a></div><div class="ttdeci">bool entradaVacia</div><div class="ttdef"><b>Definition</b> Unit1.h:363</div></div>
+<div class="ttc" id="aclass_t_form1_html_a251b602e4aa43042da5e2acf5a237f12"><div class="ttname"><a href="class_t_form1.html#a251b602e4aa43042da5e2acf5a237f12">TForm1::Splitter1</a></div><div class="ttdeci">TSplitter * Splitter1</div><div class="ttdef"><b>Definition</b> Unit1.h:89</div></div>
+<div class="ttc" id="aclass_t_form1_html_a276405b1e9a0b7f7e64f15bf1aa66a56"><div class="ttname"><a href="class_t_form1.html#a276405b1e9a0b7f7e64f15bf1aa66a56">TForm1::DialogMetodo</a></div><div class="ttdeci">TTaskDialog * DialogMetodo</div><div class="ttdef"><b>Definition</b> Unit1.h:112</div></div>
+<div class="ttc" id="aclass_t_form1_html_a287e0e1495b569b18373a0eb490f331d"><div class="ttname"><a href="class_t_form1.html#a287e0e1495b569b18373a0eb490f331d">TForm1::ImageGrafica</a></div><div class="ttdeci">TImage * ImageGrafica</div><div class="ttdef"><b>Definition</b> Unit1.h:124</div></div>
+<div class="ttc" id="aclass_t_form1_html_a31da02670e94e7432d74ffe03895db66"><div class="ttname"><a href="class_t_form1.html#a31da02670e94e7432d74ffe03895db66">TForm1::DialogMetabolito</a></div><div class="ttdeci">TTaskDialog * DialogMetabolito</div><div class="ttdef"><b>Definition</b> Unit1.h:85</div></div>
+<div class="ttc" id="aclass_t_form1_html_a329defcfa3dd860b9171b45ab1098fd3"><div class="ttname"><a href="class_t_form1.html#a329defcfa3dd860b9171b45ab1098fd3">TForm1::FormResize</a></div><div class="ttdeci">void __fastcall FormResize(TObject *Sender)</div><div class="ttdoc">Adapta el tamanio de los paneles que contiene la interfaz al cambio de tamanio de la ventana.</div><div class="ttdef"><b>Definition</b> Unit1.cpp:32</div></div>
+<div class="ttc" id="aclass_t_form1_html_a344f8330a3a7b26735eea0f2d4c43408"><div class="ttname"><a href="class_t_form1.html#a344f8330a3a7b26735eea0f2d4c43408">TForm1::LabelSimulacion</a></div><div class="ttdeci">TLabel * LabelSimulacion</div><div class="ttdef"><b>Definition</b> Unit1.h:95</div></div>
+<div class="ttc" id="aclass_t_form1_html_a37c438ffb801cc74af48c65d2d770a39"><div class="ttname"><a href="class_t_form1.html#a37c438ffb801cc74af48c65d2d770a39">TForm1::LabelTiempoFinal</a></div><div class="ttdeci">TLabel * LabelTiempoFinal</div><div class="ttdef"><b>Definition</b> Unit1.h:98</div></div>
+<div class="ttc" id="aclass_t_form1_html_a37d7911e01eaeda4fab71a4534137ed7"><div class="ttname"><a href="class_t_form1.html#a37d7911e01eaeda4fab71a4534137ed7">TForm1::AcercaDe</a></div><div class="ttdeci">TMenuItem * AcercaDe</div><div class="ttdef"><b>Definition</b> Unit1.h:57</div></div>
+<div class="ttc" id="aclass_t_form1_html_a3a3337f2dd5e7cff82dcb26d82ce121a"><div class="ttname"><a href="class_t_form1.html#a3a3337f2dd5e7cff82dcb26d82ce121a">TForm1::GuardarEcuaciones</a></div><div class="ttdeci">TMenuItem * GuardarEcuaciones</div><div class="ttdef"><b>Definition</b> Unit1.h:54</div></div>
+<div class="ttc" id="aclass_t_form1_html_a3e544b8e8e5654ed51cd771bb00f0403"><div class="ttname"><a href="class_t_form1.html#a3e544b8e8e5654ed51cd771bb00f0403">TForm1::BtnLanzarSimulacion</a></div><div class="ttdeci">TButton * BtnLanzarSimulacion</div><div class="ttdef"><b>Definition</b> Unit1.h:106</div></div>
+<div class="ttc" id="aclass_t_form1_html_a3e7d1ab4251df32ffbec3a73083cfe92"><div class="ttname"><a href="class_t_form1.html#a3e7d1ab4251df32ffbec3a73083cfe92">TForm1::SaveEcuaciones</a></div><div class="ttdeci">TSaveTextFileDialog * SaveEcuaciones</div><div class="ttdef"><b>Definition</b> Unit1.h:119</div></div>
+<div class="ttc" id="aclass_t_form1_html_a4054d1c2b1745192b6b1cff6fee0bcd5"><div class="ttname"><a href="class_t_form1.html#a4054d1c2b1745192b6b1cff6fee0bcd5">TForm1::GuardarEcuacionesClick</a></div><div class="ttdeci">void __fastcall GuardarEcuacionesClick(TObject *Sender)</div><div class="ttdoc">Accion que se realiza al darle al boton &#39;Guardar ecuaciones y sistema&#39; del menu. Genera un archivo tx...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:882</div></div>
+<div class="ttc" id="aclass_t_form1_html_a4155debba8bc79169bdff3e2e7454145"><div class="ttname"><a href="class_t_form1.html#a4155debba8bc79169bdff3e2e7454145">TForm1::SubirArchivoClick</a></div><div class="ttdeci">void __fastcall SubirArchivoClick(TObject *Sender)</div><div class="ttdoc">Accion que se genera al clicar sobre el boton Archivo/Subir del menu. Abre cuadro de dialogo para sub...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:137</div></div>
+<div class="ttc" id="aclass_t_form1_html_a43001f7620650af63723839e11d264e4"><div class="ttname"><a href="class_t_form1.html#a43001f7620650af63723839e11d264e4">TForm1::infoParamClick</a></div><div class="ttdeci">void __fastcall infoParamClick(TObject *Sender)</div><div class="ttdoc">Boton para obtener informacion sobre como introducir un Parametro en el modelo.</div><div class="ttdef"><b>Definition</b> Unit1.cpp:352</div></div>
+<div class="ttc" id="aclass_t_form1_html_a44a2ef081d543b54f87c14338698ab78"><div class="ttname"><a href="class_t_form1.html#a44a2ef081d543b54f87c14338698ab78">TForm1::ComboEleccionMetodo</a></div><div class="ttdeci">TComboBox * ComboEleccionMetodo</div><div class="ttdef"><b>Definition</b> Unit1.h:101</div></div>
+<div class="ttc" id="aclass_t_form1_html_a460763217589b7b00f0561b1d588b3ca"><div class="ttname"><a href="class_t_form1.html#a460763217589b7b00f0561b1d588b3ca">TForm1::BtnMecanismoClick</a></div><div class="ttdeci">void __fastcall BtnMecanismoClick(TObject *Sender)</div><div class="ttdoc">Escribe en el panel de entrada de datos la plantilla para introducir un Mecanismo....</div><div class="ttdef"><b>Definition</b> Unit1.cpp:316</div></div>
+<div class="ttc" id="aclass_t_form1_html_a4b77eaf706e8386bc8d79ec547efc8b9"><div class="ttname"><a href="class_t_form1.html#a4b77eaf706e8386bc8d79ec547efc8b9">TForm1::TForm1</a></div><div class="ttdeci">__fastcall TForm1(TComponent *Owner)</div><div class="ttdoc">Constructor del formulario, ventana principal de la aplicacion. Inicializa el modelo a construir.</div><div class="ttdef"><b>Definition</b> Unit1.cpp:15</div></div>
+<div class="ttc" id="aclass_t_form1_html_a4c645d0ca24b0febcfe71ecf74d6fe33"><div class="ttname"><a href="class_t_form1.html#a4c645d0ca24b0febcfe71ecf74d6fe33">TForm1::ImageGraficaDblClick</a></div><div class="ttdeci">void __fastcall ImageGraficaDblClick(TObject *Sender)</div><div class="ttdoc">Amplia la imagen abriendo un nuevo formulario con la imagen maximizada.</div><div class="ttdef"><b>Definition</b> Unit1.cpp:985</div></div>
+<div class="ttc" id="aclass_t_form1_html_a4cf69ff717fdf6cb6303c7135a6217fd"><div class="ttname"><a href="class_t_form1.html#a4cf69ff717fdf6cb6303c7135a6217fd">TForm1::BtnMetabolito</a></div><div class="ttdeci">TButton * BtnMetabolito</div><div class="ttdef"><b>Definition</b> Unit1.h:69</div></div>
+<div class="ttc" id="aclass_t_form1_html_a4fb84711d5e78fd2275062bfcf3af039"><div class="ttname"><a href="class_t_form1.html#a4fb84711d5e78fd2275062bfcf3af039">TForm1::DialogNuevoPanelEntrada</a></div><div class="ttdeci">TTaskDialog * DialogNuevoPanelEntrada</div><div class="ttdef"><b>Definition</b> Unit1.h:83</div></div>
+<div class="ttc" id="aclass_t_form1_html_a5671a9e7ca546bd171c941a455819575"><div class="ttname"><a href="class_t_form1.html#a5671a9e7ca546bd171c941a455819575">TForm1::DialogAcercaDe</a></div><div class="ttdeci">TTaskDialog * DialogAcercaDe</div><div class="ttdef"><b>Definition</b> Unit1.h:116</div></div>
+<div class="ttc" id="aclass_t_form1_html_a58ec67b65a9e7d2da6dba79d4c4c3313"><div class="ttname"><a href="class_t_form1.html#a58ec67b65a9e7d2da6dba79d4c4c3313">TForm1::ManualUsuarioClick</a></div><div class="ttdeci">void __fastcall ManualUsuarioClick(TObject *Sender)</div><div class="ttdoc">Accion que se realiza al darle al boton &#39;Manual de usuario&#39; del menu. Muestra un cuadro de dialogo en...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:932</div></div>
+<div class="ttc" id="aclass_t_form1_html_a592eff540cbc9ff77e21d833059b9a39"><div class="ttname"><a href="class_t_form1.html#a592eff540cbc9ff77e21d833059b9a39">TForm1::ComboMostrarReaccionChange</a></div><div class="ttdeci">void __fastcall ComboMostrarReaccionChange(TObject *Sender)</div><div class="ttdoc">Al seleccionar una reaccion de la lista de reacciones cargadas, muestra la ecuacion cinetica generada...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:638</div></div>
+<div class="ttc" id="aclass_t_form1_html_a59c138436f623ae2e6452bda5aae24fd"><div class="ttname"><a href="class_t_form1.html#a59c138436f623ae2e6452bda5aae24fd">TForm1::AcercaDeClick</a></div><div class="ttdeci">void __fastcall AcercaDeClick(TObject *Sender)</div><div class="ttdoc">Accion que se realiza al darle al boton &#39;Acerca de&#39; del menu. Muestra un cuadro de dialogo con una br...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:966</div></div>
+<div class="ttc" id="aclass_t_form1_html_a5a1bc8e6e8b358271dc6569aa3c3451e"><div class="ttname"><a href="class_t_form1.html#a5a1bc8e6e8b358271dc6569aa3c3451e">TForm1::GridBotonesSimulacion</a></div><div class="ttdeci">TGridPanel * GridBotonesSimulacion</div><div class="ttdef"><b>Definition</b> Unit1.h:100</div></div>
+<div class="ttc" id="aclass_t_form1_html_a5ade53be84a10d8d2669064348ed4ae1"><div class="ttname"><a href="class_t_form1.html#a5ade53be84a10d8d2669064348ed4ae1">TForm1::MemoTextoEntradaChange</a></div><div class="ttdeci">void __fastcall MemoTextoEntradaChange(TObject *Sender)</div><div class="ttdoc">Actualiza las variables bandera cuando se modifica el TMemo de entrada de datos. En concreto,...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:821</div></div>
+<div class="ttc" id="aclass_t_form1_html_a5e5483fc072f203d20338ae160ff9b0d"><div class="ttname"><a href="class_t_form1.html#a5e5483fc072f203d20338ae160ff9b0d">TForm1::DialogMecanismo</a></div><div class="ttdeci">TTaskDialog * DialogMecanismo</div><div class="ttdef"><b>Definition</b> Unit1.h:88</div></div>
+<div class="ttc" id="aclass_t_form1_html_a653321ee99a43a437b35dbcfe45efc8a"><div class="ttname"><a href="class_t_form1.html#a653321ee99a43a437b35dbcfe45efc8a">TForm1::NuevoArchivo</a></div><div class="ttdeci">TMenuItem * NuevoArchivo</div><div class="ttdef"><b>Definition</b> Unit1.h:48</div></div>
+<div class="ttc" id="aclass_t_form1_html_a660c2035351aefe038fc7e14b493fe9c"><div class="ttname"><a href="class_t_form1.html#a660c2035351aefe038fc7e14b493fe9c">TForm1::ComboInsertarMecanismo</a></div><div class="ttdeci">TComboBox * ComboInsertarMecanismo</div><div class="ttdef"><b>Definition</b> Unit1.h:78</div></div>
+<div class="ttc" id="aclass_t_form1_html_a663d809447cba48ab33d9d44d9e0e42d"><div class="ttname"><a href="class_t_form1.html#a663d809447cba48ab33d9d44d9e0e42d">TForm1::MainMenu</a></div><div class="ttdeci">TMainMenu * MainMenu</div><div class="ttdef"><b>Definition</b> Unit1.h:45</div></div>
+<div class="ttc" id="aclass_t_form1_html_a69313b46bbed2c28fba451d35bed90ef"><div class="ttname"><a href="class_t_form1.html#a69313b46bbed2c28fba451d35bed90ef">TForm1::GuardarArchivoClick</a></div><div class="ttdeci">void __fastcall GuardarArchivoClick(TObject *Sender)</div><div class="ttdoc">Accion que se genera al clicar sobre el boton Archivo/Guardar del menu. Abre cuadro de dialogo para g...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:193</div></div>
+<div class="ttc" id="aclass_t_form1_html_a6bd391549e2b90ebc116cf705fd77723"><div class="ttname"><a href="class_t_form1.html#a6bd391549e2b90ebc116cf705fd77723">TForm1::LabelCiclos</a></div><div class="ttdeci">TLabel * LabelCiclos</div><div class="ttdef"><b>Definition</b> Unit1.h:99</div></div>
+<div class="ttc" id="aclass_t_form1_html_a6c17650a72e319894075b410873e2ada"><div class="ttname"><a href="class_t_form1.html#a6c17650a72e319894075b410873e2ada">TForm1::BtnParametro</a></div><div class="ttdeci">TButton * BtnParametro</div><div class="ttdef"><b>Definition</b> Unit1.h:70</div></div>
+<div class="ttc" id="aclass_t_form1_html_a6cea4aab69f5817adeee6faaccdf62f8"><div class="ttname"><a href="class_t_form1.html#a6cea4aab69f5817adeee6faaccdf62f8">TForm1::infoMetodo</a></div><div class="ttdeci">TBitBtn * infoMetodo</div><div class="ttdef"><b>Definition</b> Unit1.h:105</div></div>
+<div class="ttc" id="aclass_t_form1_html_a723f8b188febb6db118b1ee0da00b8c4"><div class="ttname"><a href="class_t_form1.html#a723f8b188febb6db118b1ee0da00b8c4">TForm1::infoMetodoClick</a></div><div class="ttdeci">void __fastcall infoMetodoClick(TObject *Sender)</div><div class="ttdoc">Boton para obtener informacion sobre los tipos de metodos numericos disponibles para resolver el sist...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:763</div></div>
+<div class="ttc" id="aclass_t_form1_html_a77d371cc46133d52648d9671f962960d"><div class="ttname"><a href="class_t_form1.html#a77d371cc46133d52648d9671f962960d">TForm1::SubirArchivo</a></div><div class="ttdeci">TMenuItem * SubirArchivo</div><div class="ttdef"><b>Definition</b> Unit1.h:47</div></div>
+<div class="ttc" id="aclass_t_form1_html_a797288bb997882dc0998f3404fb014d7"><div class="ttname"><a href="class_t_form1.html#a797288bb997882dc0998f3404fb014d7">TForm1::BtnMetabolitoClick</a></div><div class="ttdeci">void __fastcall BtnMetabolitoClick(TObject *Sender)</div><div class="ttdoc">Escribe en el panel de entrada de datos la plantilla para introducir un Metabolito....</div><div class="ttdef"><b>Definition</b> Unit1.cpp:295</div></div>
+<div class="ttc" id="aclass_t_form1_html_a798d3b58aedc24d649a7201fcf9e0a72"><div class="ttname"><a href="class_t_form1.html#a798d3b58aedc24d649a7201fcf9e0a72">TForm1::StringGrid</a></div><div class="ttdeci">TStringGrid * StringGrid</div><div class="ttdef"><b>Definition</b> Unit1.h:122</div></div>
+<div class="ttc" id="aclass_t_form1_html_a7b8100b0f829a433330f4aa65b317fd1"><div class="ttname"><a href="class_t_form1.html#a7b8100b0f829a433330f4aa65b317fd1">TForm1::NuevoArchivoClick</a></div><div class="ttdeci">void __fastcall NuevoArchivoClick(TObject *Sender)</div><div class="ttdoc">Accion que se genera al clicar sobre el boton Archivo/Nuevo del menu. Abre cuadro de dialogo para lim...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:160</div></div>
+<div class="ttc" id="aclass_t_form1_html_a7c1486c3db708d6a674c9e5bd76d5082"><div class="ttname"><a href="class_t_form1.html#a7c1486c3db708d6a674c9e5bd76d5082">TForm1::Grafica</a></div><div class="ttdeci">TTabSheet * Grafica</div><div class="ttdef"><b>Definition</b> Unit1.h:123</div></div>
+<div class="ttc" id="aclass_t_form1_html_a7f84220cfe27e325568532c24d1e7533"><div class="ttname"><a href="class_t_form1.html#a7f84220cfe27e325568532c24d1e7533">TForm1::infoMetaClick</a></div><div class="ttdeci">void __fastcall infoMetaClick(TObject *Sender)</div><div class="ttdoc">Boton para obtener informacion sobre como introducir un Metabolito en el modelo.</div><div class="ttdef"><b>Definition</b> Unit1.cpp:323</div></div>
+<div class="ttc" id="aclass_t_form1_html_a83bec61518b9f1b09e42e4456d42ed15"><div class="ttname"><a href="class_t_form1.html#a83bec61518b9f1b09e42e4456d42ed15">TForm1::StringGridDrawCell</a></div><div class="ttdeci">void __fastcall StringGridDrawCell(TObject *Sender, System::LongInt ACol, System::LongInt ARow, TRect &amp;Rect, TGridDrawState State)</div><div class="ttdoc">Actualiza el formato de las celdas que pertenecen a la primera fila o primera columna....</div><div class="ttdef"><b>Definition</b> Unit1.cpp:794</div></div>
+<div class="ttc" id="aclass_t_form1_html_a88059de68ca8a6aa0b7f77a2effde44a"><div class="ttname"><a href="class_t_form1.html#a88059de68ca8a6aa0b7f77a2effde44a">TForm1::infoMec</a></div><div class="ttdeci">TBitBtn * infoMec</div><div class="ttdef"><b>Definition</b> Unit1.h:77</div></div>
+<div class="ttc" id="aclass_t_form1_html_a88a1c0d872d5b1744f9d704e4a4ca4f9"><div class="ttname"><a href="class_t_form1.html#a88a1c0d872d5b1744f9d704e4a4ca4f9">TForm1::FormClose</a></div><div class="ttdeci">void __fastcall FormClose(TObject *Sender, TCloseAction &amp;Action)</div><div class="ttdoc">Accion que se activa al cerrar la ventana de la aplicacion. Borra los archivos generados en la simula...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:996</div></div>
+<div class="ttc" id="aclass_t_form1_html_a894009436101b3472353b8beaf7879a0"><div class="ttname"><a href="class_t_form1.html#a894009436101b3472353b8beaf7879a0">TForm1::ComboMostrarReaccion</a></div><div class="ttdeci">TComboBox * ComboMostrarReaccion</div><div class="ttdef"><b>Definition</b> Unit1.h:79</div></div>
+<div class="ttc" id="aclass_t_form1_html_a8b16c264f2bda8a6c197690317bd17df"><div class="ttname"><a href="class_t_form1.html#a8b16c264f2bda8a6c197690317bd17df">TForm1::Resultados</a></div><div class="ttdeci">TMenuItem * Resultados</div><div class="ttdef"><b>Definition</b> Unit1.h:50</div></div>
+<div class="ttc" id="aclass_t_form1_html_a8c7ccdd0b566fdc4f31a07f1b610d609"><div class="ttname"><a href="class_t_form1.html#a8c7ccdd0b566fdc4f31a07f1b610d609">TForm1::MemoSalidaSimTexto</a></div><div class="ttdeci">TMemo * MemoSalidaSimTexto</div><div class="ttdef"><b>Definition</b> Unit1.h:111</div></div>
+<div class="ttc" id="aclass_t_form1_html_a9211b1e013014197ef85fec1fbbbdb28"><div class="ttname"><a href="class_t_form1.html#a9211b1e013014197ef85fec1fbbbdb28">TForm1::simulation</a></div><div class="ttdeci">TSimulation simulation</div><div class="ttdef"><b>Definition</b> Unit1.h:362</div></div>
+<div class="ttc" id="aclass_t_form1_html_a922c8f6efedff3cae5f296313972a2b2"><div class="ttname"><a href="class_t_form1.html#a922c8f6efedff3cae5f296313972a2b2">TForm1::LabelEntradaDatos</a></div><div class="ttdeci">TLabel * LabelEntradaDatos</div><div class="ttdef"><b>Definition</b> Unit1.h:63</div></div>
+<div class="ttc" id="aclass_t_form1_html_a93c988cb499157d0681bd7082a5cf977"><div class="ttname"><a href="class_t_form1.html#a93c988cb499157d0681bd7082a5cf977">TForm1::PanelSalidaDatos</a></div><div class="ttdeci">TPanel * PanelSalidaDatos</div><div class="ttdef"><b>Definition</b> Unit1.h:109</div></div>
+<div class="ttc" id="aclass_t_form1_html_a9a2b36b411d7a73a6f386586b9c6b28b"><div class="ttname"><a href="class_t_form1.html#a9a2b36b411d7a73a6f386586b9c6b28b">TForm1::LabelMecanismo</a></div><div class="ttdeci">TLabel * LabelMecanismo</div><div class="ttdef"><b>Definition</b> Unit1.h:64</div></div>
+<div class="ttc" id="aclass_t_form1_html_a9afd818096bbc9d90b0d8a948d598b3a"><div class="ttname"><a href="class_t_form1.html#a9afd818096bbc9d90b0d8a948d598b3a">TForm1::ManualUsuario</a></div><div class="ttdeci">TMenuItem * ManualUsuario</div><div class="ttdef"><b>Definition</b> Unit1.h:56</div></div>
+<div class="ttc" id="aclass_t_form1_html_a9fb79b1dab5c778460bc8861174bd3e7"><div class="ttname"><a href="class_t_form1.html#a9fb79b1dab5c778460bc8861174bd3e7">TForm1::infoMeta</a></div><div class="ttdeci">TBitBtn * infoMeta</div><div class="ttdef"><b>Definition</b> Unit1.h:74</div></div>
+<div class="ttc" id="aclass_t_form1_html_aa4820de2c5c3451d7f826446a6063098"><div class="ttname"><a href="class_t_form1.html#aa4820de2c5c3451d7f826446a6063098">TForm1::DialogParametro</a></div><div class="ttdeci">TTaskDialog * DialogParametro</div><div class="ttdef"><b>Definition</b> Unit1.h:86</div></div>
+<div class="ttc" id="aclass_t_form1_html_aa482bab5f28b9388e3b2892078dfa7a9"><div class="ttname"><a href="class_t_form1.html#aa482bab5f28b9388e3b2892078dfa7a9">TForm1::SpinTiempoFinal</a></div><div class="ttdeci">TSpinEdit * SpinTiempoFinal</div><div class="ttdef"><b>Definition</b> Unit1.h:103</div></div>
+<div class="ttc" id="aclass_t_form1_html_aa5b56bcd60dcef88ffc7540c2dd6ded5"><div class="ttname"><a href="class_t_form1.html#aa5b56bcd60dcef88ffc7540c2dd6ded5">TForm1::Ayuda</a></div><div class="ttdeci">TMenuItem * Ayuda</div><div class="ttdef"><b>Definition</b> Unit1.h:55</div></div>
+<div class="ttc" id="aclass_t_form1_html_aa712cb01027b39f9f81f190ae99213b7"><div class="ttname"><a href="class_t_form1.html#aa712cb01027b39f9f81f190ae99213b7">TForm1::SaveTextFileDialog</a></div><div class="ttdeci">TSaveTextFileDialog * SaveTextFileDialog</div><div class="ttdef"><b>Definition</b> Unit1.h:80</div></div>
+<div class="ttc" id="aclass_t_form1_html_aa7794190632ca3a63a91be8d06ef46be"><div class="ttname"><a href="class_t_form1.html#aa7794190632ca3a63a91be8d06ef46be">TForm1::infoParam</a></div><div class="ttdeci">TBitBtn * infoParam</div><div class="ttdef"><b>Definition</b> Unit1.h:75</div></div>
+<div class="ttc" id="aclass_t_form1_html_aa7fdd54b41e0cedd27cd7fd6284d5d55"><div class="ttname"><a href="class_t_form1.html#aa7fdd54b41e0cedd27cd7fd6284d5d55">TForm1::PanelEntradaDatos</a></div><div class="ttdeci">TPanel * PanelEntradaDatos</div><div class="ttdef"><b>Definition</b> Unit1.h:60</div></div>
+<div class="ttc" id="aclass_t_form1_html_aa895da18090366efcec368f3a68e9a2f"><div class="ttname"><a href="class_t_form1.html#aa895da18090366efcec368f3a68e9a2f">TForm1::SaveTablaSimulacion</a></div><div class="ttdeci">TSaveTextFileDialog * SaveTablaSimulacion</div><div class="ttdef"><b>Definition</b> Unit1.h:117</div></div>
+<div class="ttc" id="aclass_t_form1_html_aa9e86c2dba2b22b377d54ef1dcde453a"><div class="ttname"><a href="class_t_form1.html#aa9e86c2dba2b22b377d54ef1dcde453a">TForm1::MemoTextoEntrada</a></div><div class="ttdeci">TMemo * MemoTextoEntrada</div><div class="ttdef"><b>Definition</b> Unit1.h:66</div></div>
+<div class="ttc" id="aclass_t_form1_html_aac56c71df764a759b7a441b910371152"><div class="ttname"><a href="class_t_form1.html#aac56c71df764a759b7a441b910371152">TForm1::GuardarTabla</a></div><div class="ttdeci">TMenuItem * GuardarTabla</div><div class="ttdef"><b>Definition</b> Unit1.h:52</div></div>
+<div class="ttc" id="aclass_t_form1_html_ab17126f38fdba73ac6673b525b277aa6"><div class="ttname"><a href="class_t_form1.html#ab17126f38fdba73ac6673b525b277aa6">TForm1::BtnReaccion</a></div><div class="ttdeci">TButton * BtnReaccion</div><div class="ttdef"><b>Definition</b> Unit1.h:71</div></div>
+<div class="ttc" id="aclass_t_form1_html_ab4a8940161709859783d852d614ff27d"><div class="ttname"><a href="class_t_form1.html#ab4a8940161709859783d852d614ff27d">TForm1::MemoSalidaValidacion</a></div><div class="ttdeci">TMemo * MemoSalidaValidacion</div><div class="ttdef"><b>Definition</b> Unit1.h:67</div></div>
+<div class="ttc" id="aclass_t_form1_html_ab5924af8daf590ab836bafde5d21fd37"><div class="ttname"><a href="class_t_form1.html#ab5924af8daf590ab836bafde5d21fd37">TForm1::GridBotonesEntrada</a></div><div class="ttdeci">TGridPanel * GridBotonesEntrada</div><div class="ttdef"><b>Definition</b> Unit1.h:68</div></div>
+<div class="ttc" id="aclass_t_form1_html_ab7754143b3db97431d635ef2dafba857"><div class="ttname"><a href="class_t_form1.html#ab7754143b3db97431d635ef2dafba857">TForm1::datosValidados</a></div><div class="ttdeci">bool datosValidados</div><div class="ttdef"><b>Definition</b> Unit1.h:364</div></div>
+<div class="ttc" id="aclass_t_form1_html_abb7627f3c59fc6e6799ab147a878a169"><div class="ttname"><a href="class_t_form1.html#abb7627f3c59fc6e6799ab147a878a169">TForm1::PanelEleccionMetodo</a></div><div class="ttdeci">TPanel * PanelEleccionMetodo</div><div class="ttdef"><b>Definition</b> Unit1.h:94</div></div>
+<div class="ttc" id="aclass_t_form1_html_abbdc49091697f71071ce7e92d4ba9b21"><div class="ttname"><a href="class_t_form1.html#abbdc49091697f71071ce7e92d4ba9b21">TForm1::CargarEjemploClick</a></div><div class="ttdeci">void __fastcall CargarEjemploClick(TObject *Sender)</div><div class="ttdoc">Accion que se genera al clicar sobre el boton Archivo/Cargar ejemplo del menu. Carga un archivo de ej...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:206</div></div>
+<div class="ttc" id="aclass_t_form1_html_abea774ddc34a5d12d34a568a48bdaca1"><div class="ttname"><a href="class_t_form1.html#abea774ddc34a5d12d34a568a48bdaca1">TForm1::LabelSalida</a></div><div class="ttdeci">TLabel * LabelSalida</div><div class="ttdef"><b>Definition</b> Unit1.h:110</div></div>
+<div class="ttc" id="aclass_t_form1_html_ac318dd14bfbb9ce3d3c5b616092a043d"><div class="ttname"><a href="class_t_form1.html#ac318dd14bfbb9ce3d3c5b616092a043d">TForm1::DialogPrimeroValida</a></div><div class="ttdeci">TTaskDialog * DialogPrimeroValida</div><div class="ttdef"><b>Definition</b> Unit1.h:84</div></div>
+<div class="ttc" id="aclass_t_form1_html_ac32c021ce06fd2303fcd5216543946b5"><div class="ttname"><a href="class_t_form1.html#ac32c021ce06fd2303fcd5216543946b5">TForm1::Tabla</a></div><div class="ttdeci">TTabSheet * Tabla</div><div class="ttdef"><b>Definition</b> Unit1.h:121</div></div>
+<div class="ttc" id="aclass_t_form1_html_ac4a322d5fd147b8f78b21a0d10062418"><div class="ttname"><a href="class_t_form1.html#ac4a322d5fd147b8f78b21a0d10062418">TForm1::infoMecClick</a></div><div class="ttdeci">void __fastcall infoMecClick(TObject *Sender)</div><div class="ttdoc">Boton para obtener informacion sobre como introducir un Mecanismo en el modelo.</div><div class="ttdef"><b>Definition</b> Unit1.cpp:412</div></div>
+<div class="ttc" id="aclass_t_form1_html_ac5bcf07bed92dadd74568a5802709b8f"><div class="ttname"><a href="class_t_form1.html#ac5bcf07bed92dadd74568a5802709b8f">TForm1::BtnMostrarSistema</a></div><div class="ttdeci">TButton * BtnMostrarSistema</div><div class="ttdef"><b>Definition</b> Unit1.h:73</div></div>
+<div class="ttc" id="aclass_t_form1_html_ac5fed2ecedb345756f064ad017b9a829"><div class="ttname"><a href="class_t_form1.html#ac5fed2ecedb345756f064ad017b9a829">TForm1::DialogManualUsuario</a></div><div class="ttdeci">TTaskDialog * DialogManualUsuario</div><div class="ttdef"><b>Definition</b> Unit1.h:115</div></div>
+<div class="ttc" id="aclass_t_form1_html_ac911a8c3298f01dea8af80d132fa847c"><div class="ttname"><a href="class_t_form1.html#ac911a8c3298f01dea8af80d132fa847c">TForm1::SpinCiclos</a></div><div class="ttdeci">TSpinEdit * SpinCiclos</div><div class="ttdef"><b>Definition</b> Unit1.h:104</div></div>
+<div class="ttc" id="aclass_t_form1_html_acd9a909f3f56bb5f69d440e53204a8e8"><div class="ttname"><a href="class_t_form1.html#acd9a909f3f56bb5f69d440e53204a8e8">TForm1::DialogNoGrafica</a></div><div class="ttdeci">TTaskDialog * DialogNoGrafica</div><div class="ttdef"><b>Definition</b> Unit1.h:113</div></div>
+<div class="ttc" id="aclass_t_form1_html_ad4d23c9c9929b1edb9e1b1073795c111"><div class="ttname"><a href="class_t_form1.html#ad4d23c9c9929b1edb9e1b1073795c111">TForm1::SaveGraficaSimulacion</a></div><div class="ttdeci">TSaveTextFileDialog * SaveGraficaSimulacion</div><div class="ttdef"><b>Definition</b> Unit1.h:118</div></div>
+<div class="ttc" id="aclass_t_form1_html_ae00aabd5289ceae6440768a666688a22"><div class="ttname"><a href="class_t_form1.html#ae00aabd5289ceae6440768a666688a22">TForm1::BtnValidarDatos</a></div><div class="ttdeci">TButton * BtnValidarDatos</div><div class="ttdef"><b>Definition</b> Unit1.h:72</div></div>
+<div class="ttc" id="aclass_t_form1_html_ae3e76258255ad11ed2d4f6934eaa2af7"><div class="ttname"><a href="class_t_form1.html#ae3e76258255ad11ed2d4f6934eaa2af7">TForm1::infoReac</a></div><div class="ttdeci">TBitBtn * infoReac</div><div class="ttdef"><b>Definition</b> Unit1.h:76</div></div>
+<div class="ttc" id="aclass_t_form1_html_ae4dc4482b3617e822ddb407864b2d961"><div class="ttname"><a href="class_t_form1.html#ae4dc4482b3617e822ddb407864b2d961">TForm1::DialogIntroducirDatos</a></div><div class="ttdeci">TTaskDialog * DialogIntroducirDatos</div><div class="ttdef"><b>Definition</b> Unit1.h:82</div></div>
+<div class="ttc" id="aclass_t_form1_html_ae51152d68d35be0ae8e5329f4d8cbbf5"><div class="ttname"><a href="class_t_form1.html#ae51152d68d35be0ae8e5329f4d8cbbf5">TForm1::BtnParametroClick</a></div><div class="ttdeci">void __fastcall BtnParametroClick(TObject *Sender)</div><div class="ttdoc">Escribe en el panel de entrada de datos la plantilla para introducir un Parametro....</div><div class="ttdef"><b>Definition</b> Unit1.cpp:302</div></div>
+<div class="ttc" id="aclass_t_form1_html_ae520b5039bf5fa33ccf2cfa8126d4473"><div class="ttname"><a href="class_t_form1.html#ae520b5039bf5fa33ccf2cfa8126d4473">TForm1::BtnValidarDatosClick</a></div><div class="ttdeci">void __fastcall BtnValidarDatosClick(TObject *Sender)</div><div class="ttdoc">Accion que se genera al clicar sobre el boton ValidaDatos. Valida el texto de entrada proporcionado....</div><div class="ttdef"><b>Definition</b> Unit1.cpp:453</div></div>
+<div class="ttc" id="aclass_t_form1_html_ae580913222051e0123ef7a6df22c515c"><div class="ttname"><a href="class_t_form1.html#ae580913222051e0123ef7a6df22c515c">TForm1::BtnLanzarSimulacionClick</a></div><div class="ttdeci">void __fastcall BtnLanzarSimulacionClick(TObject *Sender)</div><div class="ttdoc">Accion que se genera al clicar sobre el boton Lanzar Simulacion. Carga el sistema de ecuaciones del m...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:682</div></div>
+<div class="ttc" id="aclass_t_form1_html_ae7dae94601eefe835743dbe8d1ae2623"><div class="ttname"><a href="class_t_form1.html#ae7dae94601eefe835743dbe8d1ae2623">TForm1::PanelSimulacion</a></div><div class="ttdeci">TPanel * PanelSimulacion</div><div class="ttdef"><b>Definition</b> Unit1.h:93</div></div>
+<div class="ttc" id="aclass_t_form1_html_aed4132415fbb1a0b29408631c98e1479"><div class="ttname"><a href="class_t_form1.html#aed4132415fbb1a0b29408631c98e1479">TForm1::DialogReaccion</a></div><div class="ttdeci">TTaskDialog * DialogReaccion</div><div class="ttdef"><b>Definition</b> Unit1.h:87</div></div>
+<div class="ttc" id="aclass_t_form1_html_aef11bfb2a9d3c4f6043d2539a9b5eab4"><div class="ttname"><a href="class_t_form1.html#aef11bfb2a9d3c4f6043d2539a9b5eab4">TForm1::model</a></div><div class="ttdeci">TModel model</div><div class="ttdef"><b>Definition</b> Unit1.h:361</div></div>
+<div class="ttc" id="aclass_t_form1_html_af53c3331a120e002ed121f5f3e14e31d"><div class="ttname"><a href="class_t_form1.html#af53c3331a120e002ed121f5f3e14e31d">TForm1::LabelTiempoInicial</a></div><div class="ttdeci">TLabel * LabelTiempoInicial</div><div class="ttdef"><b>Definition</b> Unit1.h:97</div></div>
+<div class="ttc" id="aclass_t_form1_html_af5d638939de80a0edcac2b80741875c4"><div class="ttname"><a href="class_t_form1.html#af5d638939de80a0edcac2b80741875c4">TForm1::DialogSubirArchivo</a></div><div class="ttdeci">TOpenDialog * DialogSubirArchivo</div><div class="ttdef"><b>Definition</b> Unit1.h:81</div></div>
+<div class="ttc" id="aclass_t_form1_html_af5e815dc56d52fc5b5c60f625b602766"><div class="ttname"><a href="class_t_form1.html#af5e815dc56d52fc5b5c60f625b602766">TForm1::BtnReaccionClick</a></div><div class="ttdeci">void __fastcall BtnReaccionClick(TObject *Sender)</div><div class="ttdoc">Escribe en el panel de entrada de datos la plantilla para introducir una Reaccion....</div><div class="ttdef"><b>Definition</b> Unit1.cpp:309</div></div>
+<div class="ttc" id="aclass_t_form1_html_af6f3b8acc373d4487b3dcddd99766944"><div class="ttname"><a href="class_t_form1.html#af6f3b8acc373d4487b3dcddd99766944">TForm1::DialogNoTabla</a></div><div class="ttdeci">TTaskDialog * DialogNoTabla</div><div class="ttdef"><b>Definition</b> Unit1.h:114</div></div>
+<div class="ttc" id="aclass_t_form1_html_af7caf8cee32806f87f8611fe45fc7642"><div class="ttname"><a href="class_t_form1.html#af7caf8cee32806f87f8611fe45fc7642">TForm1::GuardarGrafica</a></div><div class="ttdeci">TMenuItem * GuardarGrafica</div><div class="ttdef"><b>Definition</b> Unit1.h:53</div></div>
+<div class="ttc" id="aclass_t_form1_html_af94a85828f23c7428f76484d72c2e42e"><div class="ttname"><a href="class_t_form1.html#af94a85828f23c7428f76484d72c2e42e">TForm1::GuardarTablaClick</a></div><div class="ttdeci">void __fastcall GuardarTablaClick(TObject *Sender)</div><div class="ttdoc">Accion que se realiza al darle al boton &#39;Guardar tabla&#39; del menu. Guarda la tabla generada en la simu...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:835</div></div>
+<div class="ttc" id="aclass_t_form1_html_afe2a6b2419569bfded5e694c858351ad"><div class="ttname"><a href="class_t_form1.html#afe2a6b2419569bfded5e694c858351ad">TForm1::CargarEjemplo</a></div><div class="ttdeci">TMenuItem * CargarEjemplo</div><div class="ttdef"><b>Definition</b> Unit1.h:51</div></div>
+<div class="ttc" id="aclass_t_form1_html_afea368fc3cc620ef8a143e5d82d3deb8"><div class="ttname"><a href="class_t_form1.html#afea368fc3cc620ef8a143e5d82d3deb8">TForm1::Archivo</a></div><div class="ttdeci">TMenuItem * Archivo</div><div class="ttdef"><b>Definition</b> Unit1.h:46</div></div>
+<div class="ttc" id="aclass_t_form1_html_affac639c5f2cec3b97fd262a13ea389d"><div class="ttname"><a href="class_t_form1.html#affac639c5f2cec3b97fd262a13ea389d">TForm1::Splitter1CanResize</a></div><div class="ttdeci">void __fastcall Splitter1CanResize(TObject *Sender, int &amp;NewSize, bool &amp;Accept)</div><div class="ttdoc">Controla el redimensionamiento de los paneles al mover el splitter.</div><div class="ttdef"><b>Definition</b> Unit1.cpp:107</div></div>
+<div class="ttc" id="aclass_t_form1_html_affe85330b73bae8f89bf9fb739edf06f"><div class="ttname"><a href="class_t_form1.html#affe85330b73bae8f89bf9fb739edf06f">TForm1::BtnMostrarSistemaClick</a></div><div class="ttdeci">void __fastcall BtnMostrarSistemaClick(TObject *Sender)</div><div class="ttdoc">Accion que se genera al clicar sobre el boton MostrarSistemaEcuaciones. Muestra el sistema de ecuacio...</div><div class="ttdef"><b>Definition</b> Unit1.cpp:606</div></div>
+<div class="ttc" id="aclass_t_model_html"><div class="ttname"><a href="class_t_model.html">TModel</a></div><div class="ttdoc">Clase para encapsular un modelo completo, que representa una ruta metabolica especifica.</div><div class="ttdef"><b>Definition</b> MetabolicElements.h:836</div></div>
+<div class="ttc" id="aclass_t_simulation_html"><div class="ttname"><a href="class_t_simulation.html">TSimulation</a></div><div class="ttdoc">Clase para encapsular el proceso de simulacion.</div><div class="ttdef"><b>Definition</b> Simulation.h:51</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="_unit1_8h.html">Unit1.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

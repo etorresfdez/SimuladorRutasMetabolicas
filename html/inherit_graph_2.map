@@ -1,0 +1,15 @@
+<map id="Gráfico de jerarquía de clases" name="Gráfico de jerarquía de clases">
+<area shape="rect" id="Node000000" href="$class_t_mechanism.html" title="Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo." alt="" coords="5,132,102,159"/>
+<area shape="rect" id="Node000001" href="$class_t_hill_inhibidor_activador.html" title="Representa un mecanismo que sigue la ecuacion de Hill con un inhibidor y un activador...." alt="" coords="150,5,302,32"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="71,118,104,79,148,42,174,31,170,35,151,46,108,83,75,121"/>
+<area shape="rect" id="Node000002" href="$class_t_m_m_bi_bi_inhibidor.html" title="Representa un mecanismo de tipo Michaelis&#45;Menten con dos sustratos, dos productos e inhibicion compet..." alt="" coords="164,56,288,83"/>
+<area shape="poly" id="edge4_Node000000_Node000002" title=" " alt="" coords="89,122,149,92,181,82,177,85,151,97,93,126"/>
+<area shape="rect" id="Node000003" href="$class_t_m_m_bi_sec_aleatorio.html" title="Representa un mecanismo del tipo Michaelis&#45;Menten bisustrato secuencial aleatorio...." alt="" coords="157,107,294,133"/>
+<area shape="poly" id="edge5_Node000000_Node000003" title=" " alt="" coords="116,134,159,129,154,132,118,138"/>
+<area shape="rect" id="Node000004" href="$class_t_m_m_uni_bi_inhibidor.html" title="Representa un mecanismo de tipo Michaelis&#45;Menten con un sustrato, dos productos e inhibicion competit..." alt="" coords="160,157,292,184"/>
+<area shape="poly" id="edge6_Node000000_Node000004" title=" " alt="" coords="117,152,161,160,157,162,118,157"/>
+<area shape="rect" id="Node000005" href="$class_t_m_m_uni_inhibidor.html" title="Representa un mecanismo del tipo Michaelis&#45;Menten unisustrato con inhibicion competitiva...." alt="" coords="166,208,286,235"/>
+<area shape="poly" id="edge7_Node000000_Node000005" title=" " alt="" coords="91,164,151,194,182,207,177,208,149,198,91,169"/>
+<area shape="rect" id="Node000006" href="$class_t_mass_action.html" title="Representa un mecanismo que sigue la ley de accion de masas. Hereda de TMechanism." alt="" coords="177,259,275,285"/>
+<area shape="poly" id="edge8_Node000000_Node000006" title=" " alt="" coords="74,169,108,208,151,244,179,260,174,259,148,249,104,212,72,174"/>
+</map>

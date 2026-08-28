@@ -1,0 +1,5 @@
+<map id="TSimulation::createTableResults" name="TSimulation::createTableResults">
+<area shape="rect" id="Node000001" title="Parte del contenido del atributo &#39;resultados&#39; y rellena la tabla que se pasa como parametro...." alt="" coords="5,5,171,48"/>
+<area shape="rect" id="Node000002" href="$class_t_simulation.html#a1179f8897b35b9798dd3da62049d6c43" title="Dado un indice, devuelve el nombre del metabolito que ocupa esa posicion en el vector de concNames." alt="" coords="219,13,430,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,24,206,26,200,27,171,29"/>
+</map>

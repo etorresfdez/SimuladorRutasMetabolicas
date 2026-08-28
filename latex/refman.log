@@ -1,0 +1,3339 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.30)  28 AUG 2026 13:22
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./refman.tex
+(refman.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr
+.sty
+package info suppressed
+) (doxygen.sty
+Package: doxygen 
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\alltt.sty
+Package: alltt 2024/07/07 v2.0g defines alltt environment
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen149
+\ar@mcellbox=\box53
+\extrarowheight=\dimen150
+\NC@list=\toks17
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box54
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count283
+\calc@Bcount=\count284
+\calc@Adimen=\dimen151
+\calc@Bdimen=\dimen152
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count285
+\calc@Cskip=\skip55
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count286
+\float@exts=\toks18
+\float@box=\box55
+\@float@everytoks=\toks19
+\@floatcapt=\box56
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
+\verbatim@in@stream=\read2
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box57
+\sift@deathcycles=\count287
+\@vwid@loff=\dimen153
+\@vwid@roff=\dimen154
+)
+==> First Aid for varwidth.sty applied!
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cf
+g
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.d
+ef
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.lt
+x)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2026/05/01 v1.0l Color table columns (DPC)
+\everycr=\toks22
+\minrowclearance=\skip56
+\rownum=\count288
+) (C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip57
+\LTright=\skip58
+\LTpre=\skip59
+\LTpost=\skip60
+\LTchunksize=\count289
+\LTcapwidth=\dimen155
+\LT@head=\box58
+\LT@firsthead=\box59
+\LT@foot=\box60
+\LT@lastfoot=\box61
+\LT@gbox=\box62
+\LT@cols=\count290
+\LT@rows=\count291
+\c@LT@tables=\count292
+\c@LT@chunks=\count293
+\LT@p@ftn=\toks23
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/xltabular\xltabular.s
+ty
+Package: xltabular 2025/02/28 v0.2i `xltabular' package (hv,RN)
+ (C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen156
+\TX@old@table=\dimen157
+\TX@old@col=\dimen158
+\TX@target=\dimen159
+\TX@delta=\dimen160
+\TX@cols=\count294
+\TX@ftn=\toks24
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count295
+) (C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/ltablex\ltablex.sty
+Package: ltablex 2014/08/13 v1.1 Modified tabularx
+))
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/tabularray\tabularray
+.sty
+Package: tabularray 2025-11-27 v2025C Typeset tabulars and arrays with LaTeX3
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/ninecolors\ninecolors
+.sty
+Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpa
+rse.sty
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2025-12-24 L3 programming layer (loader) 
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-p
+dftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count296
+))
+Package: xparse 2025-10-09 L3 Experimental document command parser
+))
+\g__tblr_nohyper_int=\count297
+\l__tblr_a_int=\count298
+\l__tblr_c_int=\count299
+\l__tblr_r_int=\count300
+\l__tblr_d_dim=\dimen161
+\l__tblr_h_dim=\dimen162
+\l__tblr_o_dim=\dimen163
+\l__tblr_p_dim=\dimen164
+\l__tblr_q_dim=\dimen165
+\l__tblr_r_dim=\dimen166
+\l__tblr_s_dim=\dimen167
+\l__tblr_t_dim=\dimen168
+\l__tblr_v_dim=\dimen169
+\l__tblr_w_dim=\dimen170
+\l__tblr_a_box=\box63
+\l__tblr_b_box=\box64
+\l__tblr_c_box=\box65
+\l__tblr_d_box=\box66
+\c@tblrcount=\count301
+\c@colnum=\count302
+\c@rowcount=\count303
+\c@colcount=\count304
+\abovesep=\dimen171
+\belowsep=\dimen172
+\leftsep=\dimen173
+\rightsep=\dimen174
+\gTblrLevelInt=\count305
+\g__tblr_data_row_key_count_int=\count306
+\g__tblr_data_column_key_count_int=\count307
+\g__tblr_data_cell_key_count_int=\count308
+\g__tblr_array_int=\count309
+\l__tblr_key_count_int=\count310
+\l__tblr_key_quotient_int=\count311
+\l__tblr_key_quotient_two_int=\count312
+\l__tblr_key_remainder_int=\count313
+\g__tblr_data_str_value_count_int=\count314
+\lTblrChildTotalInt=\count315
+\lTblrChildHtotalInt=\count316
+\lTblrChildVtotalInt=\count317
+\l__child_diff_h_int=\count318
+\l__child_diff_v_int=\count319
+\l__child_sign_h_int=\count320
+\l__child_sign_v_int=\count321
+\l__child_step_int=\count322
+\lTblrDefaultHruleWidthDim=\dimen175
+\lTblrDefaultVruleWidthDim=\dimen176
+\l__tblr_split_balance_int=\count323
+\l__tblr_strut_dp_dim=\dimen177
+\l__tblr_strut_ht_dim=\dimen178
+\g__tblr_cell_wd_dim=\dimen179
+\g__tblr_cell_ht_dim=\dimen180
+\g__tblr_cell_head_dim=\dimen181
+\g__tblr_cell_foot_dim=\dimen182
+\l__tblr_measured_cell_box=\box67
+\g__tblr_last_box=\box68
+\l__tblr_temp_box=\box69
+\l__tblr_column_target_dim=\dimen183
+\l__tblr_hfuzz_dim=\dimen184
+\l__tblr_caption_box=\box70
+\l__tblr_caption_left_box=\box71
+\lTblrRowHeadInt=\count324
+\lTblrRowFootInt=\count325
+\l__tblr_row_head_box=\box72
+\l__tblr_row_foot_box=\box73
+\l__tblr_row_head_foot_dim=\dimen185
+\lTblrTableWidthDim=\dimen186
+\l__tblr_table_firsthead_box=\box74
+\l__tblr_table_middlehead_box=\box75
+\l__tblr_table_lasthead_box=\box76
+\l__tblr_table_firstfoot_box=\box77
+\l__tblr_table_middlefoot_box=\box78
+\l__tblr_table_lastfoot_box=\box79
+\l__tblr_remain_height_dim=\dimen187
+\l__tblr_next_rows_dim=\dimen188
+\l__tblr_page_overfill_dim=\dimen189
+\l__tblr_long_from_int=\count326
+\l__tblr_long_to_int=\count327
+\l__tblr_curr_i_int=\count328
+\l__tblr_prev_i_int=\count329
+\lTblrTablePageInt=\count330
+\l__tblr_table_head_box=\box80
+\l__tblr_table_foot_box=\box81
+\l__tblr_table_head_foot_dim=\dimen190
+\l__tblr_table_head_body_foot_dim=\dimen191
+\l__tblr_table_box=\box82
+\lTblrRowFirstInt=\count331
+\lTblrRowLastInt=\count332
+\l__tblr_cover_box_a_dim=\dimen192
+\l__tblr_cover_box_b_dim=\dimen193
+\l__tblr_table_hlines_box=\box83
+\l__tblr_hline_box=\box84
+\l__tblr_row_box=\box85
+\l__tblr_col_o_wd_dim=\dimen194
+\l__tblr_col_b_wd_dim=\dimen195
+\l__tblr_hline_leftskip_dim=\dimen196
+\l__tblr_hline_rightskip_dim=\dimen197
+\l__tblr_row_ht_dim=\dimen198
+\l__tblr_row_dp_dim=\dimen199
+\l__tblr_row_abovesep_dim=\dimen256
+\l__tblr_row_belowsep_dim=\dimen257
+\l__tblr_row_vlines_box=\box86
+\l__tblr_vline_box=\box87
+\l__tblr_cell_box=\box88
+\l__tblr_row_upper_dim=\dimen258
+\l__tblr_row_lower_dim=\dimen259
+\l__tblr_row_vpace_dim=\dimen260
+\l__tblr_vline_aboveskip_dim=\dimen261
+\l__tblr_vline_belowskip_dim=\dimen262
+\lTblrCellRowSpanInt=\count333
+\lTblrCellColSpanInt=\count334
+\l__tblr_cell_wd_dim=\dimen263
+\l__tblr_cell_ht_dim=\dimen264
+\lTblrCellAboveBorderWidthDim=\dimen265
+\lTblrCellBelowBorderWidthDim=\dimen266
+\lTblrCellLeftBorderWidthDim=\dimen267
+\lTblrCellRightBorderWidthDim=\dimen268
+\l__tblr_diag_box=\box89
+\l__tblr_cell_inner_wd_dim=\dimen269
+\l__tblr_cell_inner_dp_dim=\dimen270
+\l__tblr_cell_hanchor_dim=\dimen271
+\l__tblr_last_cell_table_ht_dim=\dimen272
+\l__tblr_last_cell_table_dp_dim=\dimen273
+\l__tblr_last_vline_wd_dim=\dimen274
+\l__tblr_tikz_node_box=\box90
+)
+\g__doxy_nohyper_int=\count335
+\doxytablewidth=\dimen275
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2026/04/16 4.6a verbatim text (tvz,hv)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+\FV@CodeLineNo=\count336
+\FV@InFile=\read3
+\FV@TabBox=\box91
+\c@FancyVerbLine=\count337
+\FV@StepNumber=\count338
+\FV@OutFile=\write3
+) (C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
+\c@tracingmulticols=\count339
+\mult@box=\box92
+\multicol@leftmargin=\dimen276
+\c@unbalance=\count340
+\c@collectmore=\count341
+\doublecol@number=\count342
+\multicoltolerance=\count343
+\multicolpretolerance=\count344
+\full@width=\dimen277
+\page@free=\dimen278
+\premulticols=\dimen279
+\postmulticols=\dimen280
+\multicolsep=\skip61
+\multicolbaselineskip=\skip62
+\partial@page=\box93
+\last@line=\box94
+\mc@boxedresult=\box95
+\maxbalancingoverflow=\dimen281
+\mult@rightbox=\box96
+\mult@grightbox=\box97
+\mult@firstbox=\box98
+\mult@gfirstbox=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\@tempa=\box127
+\@tempa=\box128
+\@tempa=\box129
+\@tempa=\box130
+\@tempa=\box131
+\@tempa=\box132
+\@tempa=\box133
+\@tempa=\box134
+\@tempa=\box135
+\c@minrows=\count345
+\c@columnbadness=\count346
+\c@finalcolumnbadness=\count347
+\last@try=\dimen282
+\multicolovershoot=\dimen283
+\multicolundershoot=\dimen284
+\mult@nat@firstbox=\box136
+\colbreak@box=\box137
+\mc@col@check@num=\count348
+\g__mc_curr_col_int=\count349
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip63
+\multirow@cntb=\count350
+\multirow@dima=\skip64
+\bigstrutjot=\dimen285
+) (C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/hanging\hanging.sty
+Package: hanging 2009/09/02 v1.2b hanging paragraphs and punctuation
+\h@ngcommawd=\skip65
+\h@ngfstopwd=\skip66
+\h@ngquotewd=\skip67
+\h@ngdquotewd=\skip68
+\h@ngquerywd=\skip69
+\h@ngexclwd=\skip70
+\h@ngcolonwd=\skip71
+\h@ngscolonwd=\skip72
+) (C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.s
+ty
+Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.te
+x
+\XKV@toks=\toks26
+\XKV@tempa@toks=\toks27
+)
+\XKV@depth=\count351
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.st
+y
+Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics
+.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+)
+\Gin@req@height=\dimen286
+\Gin@req@width=\dimen287
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox
+.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box138
+)
+\tc@llx=\dimen288
+\tc@lly=\dimen289
+\tc@urx=\dimen290
+\tc@ury=\dimen291
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.d
+ef
+File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen292
+\adjbox@Height=\dimen293
+\adjbox@Depth=\dimen294
+\adjbox@Totalheight=\dimen295
+\adjbox@pwidth=\dimen296
+\adjbox@pheight=\dimen297
+\adjbox@pdepth=\dimen298
+\adjbox@ptotalheight=\dimen299
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.s
+ty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count352
+))
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks28
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/stackengine\stackengi
+ne.sty
+Package: stackengine 2021/07/22 v4.11\ Stacking text and objects in convenient 
+ways
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/listofitems\listofite
+ms.sty
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/listofitems\listofi
+tems.tex
+\loi_cnt_foreach_nest=\count353
+\loi_nestcnt=\count354
+)
+Package: listofitems 2024/03/09 v1.65 Grab items in lists using user-specified 
+sep char (CT)
+)
+\c@@stackindex=\count355
+\@boxshift=\skip73
+\stack@tmplength=\skip74
+\temp@stkl=\skip75
+\@stackedboxwidth=\skip76
+\@addedbox=\box139
+\@anchorbox=\box140
+\@insetbox=\box141
+\se@backgroundbox=\box142
+\stackedbox=\box143
+\@centerbox=\box144
+\c@ROWcellindex@=\count356
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip77
+\enit@outerparindent=\dimen300
+\enit@toks=\toks29
+\enit@inbox=\box145
+\enit@count@id=\count357
+\enitdp@description=\count358
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/alphalph\alphalph.s
+ty
+Package: alphalph 2019/12/09 v2.6 Convert numbers to letters (HO)
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)) (C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
+\UL@box=\box146
+\UL@hyphenbox=\box147
+\UL@skip=\skip78
+\UL@hook=\toks30
+\UL@height=\dimen301
+\UL@pe=\count359
+\UL@pixel=\dimen302
+\ULC@box=\box148
+Package: ulem 2019/11/18
+\ULdepth=\dimen303
+)
+\xrefbox=\box149
+\xreflength=\skip79
+\CodeWidthChar=\skip80
+\CodeHeightChar=\skip81
+\DoxyCodeWidth=\skip82
+\ttcharwidth=\skip83
+\c@DoxyEnumeratei=\count360
+\c@DoxyEnumerateii=\count361
+\c@DoxyEnumerateiii=\count362
+\c@DoxyEnumerateiv=\count363
+\c@DoxyEnumeratev=\count364
+\c@DoxyEnumeratevi=\count365
+\c@DoxyEnumeratevii=\count366
+\c@DoxyEnumerateviii=\count367
+\c@DoxyEnumerateix=\count368
+\c@DoxyEnumeratex=\count369
+\c@DoxyEnumeratexi=\count370
+\c@DoxyEnumeratexii=\count371
+\enitdp@DoxyEnumerate=\count372
+\enitdp@DoxyItemize=\count373
+\doxymboxbox=\box150
+\doxymboxlength=\skip84
+\c@subsubsubsection=\count374
+\c@subsubsubsubsection=\count375
+\c@subsubsubsubsubsection=\count376
+\c@subsubsubsubsubsubsection=\count377
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks31
+\inpenc@posthook=\toks32
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\wasysym.sty
+Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
+\symwasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
+TeX and XeLaTeX
+\babel@savecnt=\count378
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2068.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2070.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2072.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2073.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2074.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2076.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2101.
+\U@D=\dimen304
+\l@unhyphenated=\language79
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read4
+\bbl@dirlevel=\count379
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4196.
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\bab
+el-spanish.tex)
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 4320.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish
+.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks33
+\es@quotdepth=\count380
+))
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) 
+on input line 47.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1)
+ on input line 47.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\courier.sty
+Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count381
+\Gm@cntv=\count382
+\c@Gm@tempcnt=\count383
+\Gm@bindingoffset=\dimen305
+\Gm@wd@mp=\dimen306
+\Gm@odd@mp=\dimen307
+\Gm@even@mp=\dimen308
+\Gm@layoutwidth=\dimen309
+\Gm@layoutheight=\dimen310
+\Gm@layouthoffset=\dimen311
+\Gm@layoutvoffset=\dimen312
+\Gm@dimlist=\toks34
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
+))
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage
+.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count384
+\cp@tempcnt=\count385
+LaTeX Info: Redefining \checkoddpage on input line 59.
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip85
+\f@nch@offset@elh=\skip86
+\f@nch@offset@erh=\skip87
+\f@nch@offset@olh=\skip88
+\f@nch@offset@orh=\skip89
+\f@nch@offset@elf=\skip90
+\f@nch@offset@erf=\skip91
+\f@nch@offset@olf=\skip92
+\f@nch@offset@orf=\skip93
+\f@nch@height=\skip94
+\f@nch@footalignment=\skip95
+\f@nch@widthL=\skip96
+\f@nch@widthC=\skip97
+\f@nch@widthR=\skip98
+\@temptokenb=\toks35
+) (C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip99
+\bibsep=\skip100
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count386
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 51.
+\cftparskip=\skip101
+\cftbeforetoctitleskip=\skip102
+\cftaftertoctitleskip=\skip103
+\cftbeforepartskip=\skip104
+\cftpartnumwidth=\skip105
+\cftpartindent=\skip106
+\cftbeforesecskip=\skip107
+\cftsecindent=\skip108
+\cftsecnumwidth=\skip109
+\cftbeforesubsecskip=\skip110
+\cftsubsecindent=\skip111
+\cftsubsecnumwidth=\skip112
+\cftbeforesubsubsecskip=\skip113
+\cftsubsubsecindent=\skip114
+\cftsubsubsecnumwidth=\skip115
+\cftbeforeparaskip=\skip116
+\cftparaindent=\skip117
+\cftparanumwidth=\skip118
+\cftbeforesubparaskip=\skip119
+\cftsubparaindent=\skip120
+\cftsubparanumwidth=\skip121
+\cftbeforeloftitleskip=\skip122
+\cftafterloftitleskip=\skip123
+\cftbeforefigskip=\skip124
+\cftfigindent=\skip125
+\cftfignumwidth=\skip126
+\c@lofdepth=\count387
+\c@lotdepth=\count388
+\cftbeforelottitleskip=\skip127
+\cftafterlottitleskip=\skip128
+\cftbeforetabskip=\skip129
+\cfttabindent=\skip130
+\cfttabnumwidth=\skip131
+)
+\@indexfile=\write4
+\openout4 = `refman.idx'.
+
+
+Writing index file refman.idx
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/newunicodechar\newuni
+codechar.sty
+Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.s
+ty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefi
+nekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape
+.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcm
+ds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gett
+itlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.s
+ty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count389
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc
+.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen313
+\Hy@linkcounter=\count390
+\Hy@pagecounter=\count391
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count392
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing ON on input line 4213.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4462.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\backref.sty
+Package: backref 2025-06-21 v1.45 Bibliographical back referencing
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunf
+ilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniqu
+ecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintca
+lc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+))
+\c@Hy@tempcnt=\count393
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen314
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+)
+\Fld@menulength=\count394
+\Field@Width=\dimen315
+\Fld@charsize=\dimen316
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing ON on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count395
+\c@Item=\count396
+\c@Hfootnote=\count397
+)
+Package hyperref Info: Driver: hpdftex.
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+\Fld@listcount=\count398
+\c@bookmark@seq@number=\count399
+\Hy@SectionHShift=\skip132
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 177.
+Package hyperref Info: Option `unicode' set `true' on input line 177.
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen317
+\captionmargin=\dimen318
+\caption@leftmargin=\dimen319
+\caption@rightmargin=\dimen320
+\caption@width=\dimen321
+\caption@indent=\dimen322
+\caption@parindent=\dimen323
+\caption@hangindent=\dimen324
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count400
+\c@continuedfloat=\count401
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen325
+\caption@adjustwidth@linewidth=\dimen326
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)) (C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/etoc\etoc.sty
+Package: etoc 2026/05/04 v1.2e Completely customisable TOCs (JFB)
+\Etoc@toctoks=\toks36
+\c@etoc@tocid=\count402
+\etoc@framed@titlebox=\box151
+\etoc@framed@contentsbox=\box152
+)
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 19
+9.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 199.
+
+(refman.aux
+LaTeX Info: Redefining \. on input line 9.
+LaTeX Info: Redefining \% on input line 9.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 9.
+)
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
+mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count403
+\scratchdimen=\dimen327
+\scratchbox=\box153
+\nofMPsegments=\count404
+\nofMParguments=\count405
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count406
+\MPscratchDim=\dimen328
+\MPnumerator=\count407
+\makeMPintoPDFobject=\count408
+\everyMPtoPDFconversion=\toks38
+)
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
+-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys
+.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Info: Redefining \. on input line 199.
+LaTeX Info: Redefining \% on input line 199.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=121.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package backref Info: ** backref set up for natbib ** on input line 199.
+Package hyperref Info: Link coloring ON on input line 199.
+(refman.out) (refman.out)
+\@outlinefile=\write5
+\openout5 = `refman.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\Etoc@tf=\read5
+Package hyperref Info: Option `pageanchor' set `false' on input line 207.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 207.
+
+Package hyperref Info: Option `unicode' set `true' on input line 207.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 12.9599pt on input line 212.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 214.
+ [1
+
+{C:/Users/usuario/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/us
+uario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+\tf@toc=\write6
+\openout6 = `refman.toc'.
+
+LaTeX Info: Redefining \. on input line 219.
+LaTeX Info: Redefining \% on input line 219.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 219.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 219
+.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 219
+.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 21
+9.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 219.
+LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
+(Font)              scaled to size 8.99994pt on input line 219.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 219.
+
+[1] [2]
+Package hyperref Info: Option `pageanchor' set `true' on input line 221.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 223.
+ (hierarchy.tex
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 1.
+LaTeX Info: Redefining \. on input line 20.
+LaTeX Info: Redefining \% on input line 20.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 20.
+ [1]) (annotated.tex [2]) (files.tex) (class_t_form1.tex
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10
+.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) <./class_t_form1__inherit__graph.pdf>
+<class_t_form1__inherit__graph.pdf, id=646, 212.795pt x 606.265pt>
+File: class_t_form1__inherit__graph.pdf Graphic file (type pdf)
+<use class_t_form1__inherit__graph.pdf>
+Package pdftex.def Info: class_t_form1__inherit__graph.pdf  used on input line 
+18.
+(pdftex.def)             Requested size: 193.04953pt x 550.0pt.
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
+ [3] <./class_t_form1__coll__graph.pdf>
+<class_t_form1__coll__graph.pdf, id=674, 442.65375pt x 913.4125pt>
+File: class_t_form1__coll__graph.pdf Graphic file (type pdf)
+<use class_t_form1__coll__graph.pdf>
+Package pdftex.def Info: class_t_form1__coll__graph.pdf  used on input line 27.
+
+(pdftex.def)             Requested size: 266.54665pt x 550.0pt.
+
+[4]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 34.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 34.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 34.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 36.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 36.
+LaTeX Info: Redefining \. on input line 38.
+LaTeX Info: Redefining \% on input line 38.
+ [5]
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 4
+4.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 44.
+LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 44.
+
+[6]
+LaTeX Info: Redefining \. on input line 146.
+LaTeX Info: Redefining \% on input line 146.
+ [7] [8]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 268.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 269.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 279.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.99994pt on input line 279.
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 293.
+LaTeX Info: Redefining \. on input line 314.
+LaTeX Info: Redefining \% on input line 314.
+ [9] [10]
+LaTeX Info: Redefining \. on input line 419.
+LaTeX Info: Redefining \% on input line 419.
+ [11] <./class_t_form1_a592eff540cbc9ff77e21d833059b9a39_cgraph.pdf>
+<class_t_form1_a592eff540cbc9ff77e21d833059b9a39_cgraph.pdf, id=1077, 642.4pt x
+ 291.0875pt>
+File: class_t_form1_a592eff540cbc9ff77e21d833059b9a39_cgraph.pdf Graphic file (
+type pdf)
+<use class_t_form1_a592eff540cbc9ff77e21d833059b9a39_cgraph.pdf>
+Package pdftex.def Info: class_t_form1_a592eff540cbc9ff77e21d833059b9a39_cgraph
+.pdf  used on input line 454.
+(pdftex.def)             Requested size: 350.0pt x 158.59734pt.
+ [12]
+LaTeX Info: Redefining \. on input line 518.
+LaTeX Info: Redefining \% on input line 518.
+ [13] <./class_t_form1_a4054d1c2b1745192b6b1cff6fee0bcd5_cgraph.pdf>
+<class_t_form1_a4054d1c2b1745192b6b1cff6fee0bcd5_cgraph.pdf, id=1108, 622.325pt
+ x 291.0875pt>
+File: class_t_form1_a4054d1c2b1745192b6b1cff6fee0bcd5_cgraph.pdf Graphic file (
+type pdf)
+<use class_t_form1_a4054d1c2b1745192b6b1cff6fee0bcd5_cgraph.pdf>
+Package pdftex.def Info: class_t_form1_a4054d1c2b1745192b6b1cff6fee0bcd5_cgraph
+.pdf  used on input line 523.
+(pdftex.def)             Requested size: 350.0pt x 163.70966pt.
+ [14]
+LaTeX Info: Redefining \. on input line 630.
+LaTeX Info: Redefining \% on input line 630.
+ [15] [16]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 695.
+LaTeX Info: Redefining \. on input line 747.
+LaTeX Info: Redefining \% on input line 747.
+ [17] [18]
+LaTeX Info: Redefining \. on input line 884.
+LaTeX Info: Redefining \% on input line 884.
+ [19] [20]
+LaTeX Info: Redefining \. on input line 1004.
+LaTeX Info: Redefining \% on input line 1004.
+ [21] [22]
+LaTeX Info: Redefining \. on input line 1124.
+LaTeX Info: Redefining \% on input line 1124.
+ [23] [24]) (class_t_form2.tex
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+
+[25] <./class_t_form2__inherit__graph.pdf>
+<class_t_form2__inherit__graph.pdf, id=1287, 157.58875pt x 220.825pt>
+File: class_t_form2__inherit__graph.pdf Graphic file (type pdf)
+<use class_t_form2__inherit__graph.pdf>
+Package pdftex.def Info: class_t_form2__inherit__graph.pdf  used on input line 
+18.
+(pdftex.def)             Requested size: 157.0pt x 220.01239pt.
+ <./class_t_form2__coll__graph.pdf>
+<class_t_form2__coll__graph.pdf, id=1302, 157.58875pt x 220.825pt>
+File: class_t_form2__coll__graph.pdf Graphic file (type pdf)
+<use class_t_form2__coll__graph.pdf>
+Package pdftex.def Info: class_t_form2__coll__graph.pdf  used on input line 27.
+
+(pdftex.def)             Requested size: 157.0pt x 220.01239pt.
+
+[26]
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+ [27]) (class_t_hill_inhibidor_activador.tex <./class_t_hill_inhibidor_activado
+r__inherit__graph.pdf>
+<class_t_hill_inhibidor_activador__inherit__graph.pdf, id=1349, 202.7575pt x 59
+0.205pt>
+File: class_t_hill_inhibidor_activador__inherit__graph.pdf Graphic file (type p
+df)
+<use class_t_hill_inhibidor_activador__inherit__graph.pdf>
+Package pdftex.def Info: class_t_hill_inhibidor_activador__inherit__graph.pdf  
+used on input line 18.
+(pdftex.def)             Requested size: 188.94925pt x 550.0pt.
+ [28] <./class_t_hill_inhibidor_activador__coll__graph.pdf>
+<class_t_hill_inhibidor_activador__coll__graph.pdf, id=1370, 214.8025pt x 970.6
+2625pt>
+File: class_t_hill_inhibidor_activador__coll__graph.pdf Graphic file (type pdf)
+
+<use class_t_hill_inhibidor_activador__coll__graph.pdf>
+Package pdftex.def Info: class_t_hill_inhibidor_activador__coll__graph.pdf  use
+d on input line 27.
+(pdftex.def)             Requested size: 121.72417pt x 550.0pt.
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
+ [29] [30]
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
+ [31] <./class_t_hill_inhibidor_activador_aa500c80dc4d5647b281f67063009228a_cgr
+aph.pdf>
+<class_t_hill_inhibidor_activador_aa500c80dc4d5647b281f67063009228a_cgraph.pdf,
+ id=1500, 759.83875pt x 351.3125pt>
+File: class_t_hill_inhibidor_activador_aa500c80dc4d5647b281f67063009228a_cgraph
+.pdf Graphic file (type pdf)
+<use class_t_hill_inhibidor_activador_aa500c80dc4d5647b281f67063009228a_cgraph.
+pdf>
+Package pdftex.def Info: class_t_hill_inhibidor_activador_aa500c80dc4d5647b281f
+67063009228a_cgraph.pdf  used on input line 115.
+(pdftex.def)             Requested size: 350.0pt x 161.82549pt.
+ [32] <./class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4_cgr
+aph.pdf>
+<class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4_cgraph.pdf,
+ id=1528, 582.175pt x 214.8025pt>
+File: class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4_cgraph
+.pdf Graphic file (type pdf)
+<use class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4_cgraph.
+pdf>
+Package pdftex.def Info: class_t_hill_inhibidor_activador_ac8081966718290e0e320
+eb731f0083d4_cgraph.pdf  used on input line 149.
+(pdftex.def)             Requested size: 350.0pt x 129.14142pt.
+ <./class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4_icgraph.
+pdf>
+<class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4_icgraph.pdf
+, id=1536, 352.31625pt x 112.42pt>
+File: class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4_icgrap
+h.pdf Graphic file (type pdf)
+<use class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4_icgraph
+.pdf>
+Package pdftex.def Info: class_t_hill_inhibidor_activador_ac8081966718290e0e320
+eb731f0083d4_icgraph.pdf  used on input line 156.
+(pdftex.def)             Requested size: 350.0pt x 111.68039pt.
+ <./class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b_cgraph.p
+df>
+<class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b_cgraph.pdf,
+ id=1546, 381.425pt x 112.42pt>
+File: class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b_cgraph
+.pdf Graphic file (type pdf)
+<use class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b_cgraph.
+pdf>
+Package pdftex.def Info: class_t_hill_inhibidor_activador_acee6ec3171bf98254be2
+2d219f6e037b_cgraph.pdf  used on input line 177.
+(pdftex.def)             Requested size: 350.0pt x 103.16176pt.
+LaTeX Info: Redefining \. on input line 180.
+LaTeX Info: Redefining \% on input line 180.
+ [33] <./class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b_icg
+raph.pdf>
+<class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b_icgraph.pdf
+, id=1564, 352.31625pt x 112.42pt>
+File: class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b_icgrap
+h.pdf Graphic file (type pdf)
+<use class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b_icgraph
+.pdf>
+Package pdftex.def Info: class_t_hill_inhibidor_activador_acee6ec3171bf98254be2
+2d219f6e037b_icgraph.pdf  used on input line 184.
+(pdftex.def)             Requested size: 350.0pt x 111.68039pt.
+ <./class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163_cgraph.p
+df>
+<class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163_cgraph.pdf,
+ id=1574, 381.425pt x 112.42pt>
+File: class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163_cgraph
+.pdf Graphic file (type pdf)
+<use class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163_cgraph.
+pdf>
+Package pdftex.def Info: class_t_hill_inhibidor_activador_ad7005d8496600717b5d8
+5e97c6ce3163_cgraph.pdf  used on input line 205.
+(pdftex.def)             Requested size: 350.0pt x 103.16176pt.
+ <./class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163_icgraph.
+pdf>
+<class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163_icgraph.pdf
+, id=1582, 352.31625pt x 112.42pt>
+File: class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163_icgrap
+h.pdf Graphic file (type pdf)
+<use class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163_icgraph
+.pdf>
+Package pdftex.def Info: class_t_hill_inhibidor_activador_ad7005d8496600717b5d8
+5e97c6ce3163_icgraph.pdf  used on input line 212.
+(pdftex.def)             Requested size: 350.0pt x 111.68039pt.
+ [34] <./class_t_hill_inhibidor_activador_a1fe354667595968a2871276c71ed8f5a_icg
+raph.pdf>
+<class_t_hill_inhibidor_activador_a1fe354667595968a2871276c71ed8f5a_icgraph.pdf
+, id=1604, 357.335pt x 112.42pt>
+File: class_t_hill_inhibidor_activador_a1fe354667595968a2871276c71ed8f5a_icgrap
+h.pdf Graphic file (type pdf)
+<use class_t_hill_inhibidor_activador_a1fe354667595968a2871276c71ed8f5a_icgraph
+.pdf>
+Package pdftex.def Info: class_t_hill_inhibidor_activador_a1fe354667595968a2871
+276c71ed8f5a_icgraph.pdf  used on input line 233.
+(pdftex.def)             Requested size: 350.0pt x 110.11766pt.
+ <./class_t_hill_inhibidor_activador_aa8fb8bb153ef57fe1da0d83d53533558_icgraph.
+pdf>
+<class_t_hill_inhibidor_activador_aa8fb8bb153ef57fe1da0d83d53533558_icgraph.pdf
+, id=1614, 352.31625pt x 112.42pt>
+File: class_t_hill_inhibidor_activador_aa8fb8bb153ef57fe1da0d83d53533558_icgrap
+h.pdf Graphic file (type pdf)
+<use class_t_hill_inhibidor_activador_aa8fb8bb153ef57fe1da0d83d53533558_icgraph
+.pdf>
+Package pdftex.def Info: class_t_hill_inhibidor_activador_aa8fb8bb153ef57fe1da0
+d83d53533558_icgraph.pdf  used on input line 254.
+(pdftex.def)             Requested size: 350.0pt x 111.68039pt.
+)
+(struct_t_instant_result.tex <./struct_t_instant_result__coll__graph.pdf>
+<struct_t_instant_result__coll__graph.pdf, id=1628, 153.57375pt x 148.555pt>
+File: struct_t_instant_result__coll__graph.pdf Graphic file (type pdf)
+<use struct_t_instant_result__coll__graph.pdf>
+Package pdftex.def Info: struct_t_instant_result__coll__graph.pdf  used on inpu
+t line 18.
+(pdftex.def)             Requested size: 153.0pt x 148.00833pt.
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
+
+[35]) (class_t_mass_action.tex <./class_t_mass_action__inherit__graph.pdf>
+<class_t_mass_action__inherit__graph.pdf, id=1664, 202.7575pt x 606.265pt>
+File: class_t_mass_action__inherit__graph.pdf Graphic file (type pdf)
+<use class_t_mass_action__inherit__graph.pdf>
+Package pdftex.def Info: class_t_mass_action__inherit__graph.pdf  used on input
+ line 18.
+(pdftex.def)             Requested size: 183.94344pt x 550.0pt.
+
+[36] <./class_t_mass_action__coll__graph.pdf>
+<class_t_mass_action__coll__graph.pdf, id=1692, 214.8025pt x 986.68625pt>
+File: class_t_mass_action__coll__graph.pdf Graphic file (type pdf)
+<use class_t_mass_action__coll__graph.pdf>
+Package pdftex.def Info: class_t_mass_action__coll__graph.pdf  used on input li
+ne 27.
+(pdftex.def)             Requested size: 119.74121pt x 550.0pt.
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
+ [37] [38]
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
+ [39] <./class_t_mass_action_a74563e7583262c8adf5b9ed1f9bbca63_cgraph.pdf>
+<class_t_mass_action_a74563e7583262c8adf5b9ed1f9bbca63_cgraph.pdf, id=1813, 100
+9.7725pt x 405.515pt>
+File: class_t_mass_action_a74563e7583262c8adf5b9ed1f9bbca63_cgraph.pdf Graphic 
+file (type pdf)
+<use class_t_mass_action_a74563e7583262c8adf5b9ed1f9bbca63_cgraph.pdf>
+Package pdftex.def Info: class_t_mass_action_a74563e7583262c8adf5b9ed1f9bbca63_
+cgraph.pdf  used on input line 117.
+(pdftex.def)             Requested size: 350.0pt x 140.5587pt.
+ [40]
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 140.
+
+Underfull \hbox (badness 10000) detected at line 140
+[][][]
+ []
+
+ <./class_t_mass_action_a31a4b542f91aab112a7bcb2e3de1819e_cgraph.pdf>
+<class_t_mass_action_a31a4b542f91aab112a7bcb2e3de1819e_cgraph.pdf, id=1833, 620
+.3175pt x 329.23pt>
+File: class_t_mass_action_a31a4b542f91aab112a7bcb2e3de1819e_cgraph.pdf Graphic 
+file (type pdf)
+<use class_t_mass_action_a31a4b542f91aab112a7bcb2e3de1819e_cgraph.pdf>
+Package pdftex.def Info: class_t_mass_action_a31a4b542f91aab112a7bcb2e3de1819e_
+cgraph.pdf  used on input line 147.
+(pdftex.def)             Requested size: 350.0pt x 185.75908pt.
+ <./class_t_mass_action_a31a4b542f91aab112a7bcb2e3de1819e_icgraph.pdf>
+<class_t_mass_action_a31a4b542f91aab112a7bcb2e3de1819e_icgraph.pdf, id=1841, 62
+2.325pt x 238.8925pt>
+File: class_t_mass_action_a31a4b542f91aab112a7bcb2e3de1819e_icgraph.pdf Graphic
+ file (type pdf)
+<use class_t_mass_action_a31a4b542f91aab112a7bcb2e3de1819e_icgraph.pdf>
+Package pdftex.def Info: class_t_mass_action_a31a4b542f91aab112a7bcb2e3de1819e_
+icgraph.pdf  used on input line 154.
+(pdftex.def)             Requested size: 350.0pt x 134.35481pt.
+ <./class_t_mass_action_ab938b358d430a859fe1ebda15c581320_cgraph.pdf>
+<class_t_mass_action_ab938b358d430a859fe1ebda15c581320_cgraph.pdf, id=1851, 618
+.31pt x 214.8025pt>
+File: class_t_mass_action_ab938b358d430a859fe1ebda15c581320_cgraph.pdf Graphic 
+file (type pdf)
+<use class_t_mass_action_ab938b358d430a859fe1ebda15c581320_cgraph.pdf>
+Package pdftex.def Info: class_t_mass_action_ab938b358d430a859fe1ebda15c581320_
+cgraph.pdf  used on input line 179.
+(pdftex.def)             Requested size: 350.0pt x 121.59306pt.
+LaTeX Info: Redefining \. on input line 182.
+LaTeX Info: Redefining \% on input line 182.
+ [41] <./class_t_mass_action_ab938b358d430a859fe1ebda15c581320_icgraph.pdf>
+<class_t_mass_action_ab938b358d430a859fe1ebda15c581320_icgraph.pdf, id=1869, 40
+4.51125pt x 100.375pt>
+File: class_t_mass_action_ab938b358d430a859fe1ebda15c581320_icgraph.pdf Graphic
+ file (type pdf)
+<use class_t_mass_action_ab938b358d430a859fe1ebda15c581320_icgraph.pdf>
+Package pdftex.def Info: class_t_mass_action_ab938b358d430a859fe1ebda15c581320_
+icgraph.pdf  used on input line 186.
+(pdftex.def)             Requested size: 350.0pt x 86.85074pt.
+ <./class_t_mass_action_ab908415a5e4eb18a0ffaf33d5f58ad7c_cgraph.pdf>
+<class_t_mass_action_ab908415a5e4eb18a0ffaf33d5f58ad7c_cgraph.pdf, id=1879, 796
+.9775pt x 329.23pt>
+File: class_t_mass_action_ab908415a5e4eb18a0ffaf33d5f58ad7c_cgraph.pdf Graphic 
+file (type pdf)
+<use class_t_mass_action_ab908415a5e4eb18a0ffaf33d5f58ad7c_cgraph.pdf>
+Package pdftex.def Info: class_t_mass_action_ab908415a5e4eb18a0ffaf33d5f58ad7c_
+cgraph.pdf  used on input line 207.
+(pdftex.def)             Requested size: 350.0pt x 144.58534pt.
+ <./class_t_mass_action_ab908415a5e4eb18a0ffaf33d5f58ad7c_icgraph.pdf>
+<class_t_mass_action_ab908415a5e4eb18a0ffaf33d5f58ad7c_icgraph.pdf, id=1887, 39
+5.4775pt x 112.42pt>
+File: class_t_mass_action_ab908415a5e4eb18a0ffaf33d5f58ad7c_icgraph.pdf Graphic
+ file (type pdf)
+<use class_t_mass_action_ab908415a5e4eb18a0ffaf33d5f58ad7c_icgraph.pdf>
+Package pdftex.def Info: class_t_mass_action_ab908415a5e4eb18a0ffaf33d5f58ad7c_
+icgraph.pdf  used on input line 214.
+(pdftex.def)             Requested size: 350.0pt x 99.49426pt.
+ [42] <./class_t_mass_action_a05e6775beaf34a255e63993627e7ea17_cgraph.pdf>
+<class_t_mass_action_a05e6775beaf34a255e63993627e7ea17_cgraph.pdf, id=1906, 822
+.07124pt x 329.23pt>
+File: class_t_mass_action_a05e6775beaf34a255e63993627e7ea17_cgraph.pdf Graphic 
+file (type pdf)
+<use class_t_mass_action_a05e6775beaf34a255e63993627e7ea17_cgraph.pdf>
+Package pdftex.def Info: class_t_mass_action_a05e6775beaf34a255e63993627e7ea17_
+cgraph.pdf  used on input line 235.
+(pdftex.def)             Requested size: 350.0pt x 140.16956pt.
+ <./class_t_mass_action_a05e6775beaf34a255e63993627e7ea17_icgraph.pdf>
+<class_t_mass_action_a05e6775beaf34a255e63993627e7ea17_icgraph.pdf, id=1914, 42
+0.57124pt x 100.375pt>
+File: class_t_mass_action_a05e6775beaf34a255e63993627e7ea17_icgraph.pdf Graphic
+ file (type pdf)
+<use class_t_mass_action_a05e6775beaf34a255e63993627e7ea17_icgraph.pdf>
+Package pdftex.def Info: class_t_mass_action_a05e6775beaf34a255e63993627e7ea17_
+icgraph.pdf  used on input line 242.
+(pdftex.def)             Requested size: 350.0pt x 83.5333pt.
+ <./class_t_mass_action_a686b8ca0db5dfef10ba9b3adb8e0a40e_cgraph.pdf>
+<class_t_mass_action_a686b8ca0db5dfef10ba9b3adb8e0a40e_cgraph.pdf, id=1924, 803
+.0pt x 329.23pt>
+File: class_t_mass_action_a686b8ca0db5dfef10ba9b3adb8e0a40e_cgraph.pdf Graphic 
+file (type pdf)
+<use class_t_mass_action_a686b8ca0db5dfef10ba9b3adb8e0a40e_cgraph.pdf>
+Package pdftex.def Info: class_t_mass_action_a686b8ca0db5dfef10ba9b3adb8e0a40e_
+cgraph.pdf  used on input line 263.
+(pdftex.def)             Requested size: 350.0pt x 143.50023pt.
+LaTeX Info: Redefining \. on input line 266.
+LaTeX Info: Redefining \% on input line 266.
+ [43] <./class_t_mass_action_a686b8ca0db5dfef10ba9b3adb8e0a40e_icgraph.pdf>
+<class_t_mass_action_a686b8ca0db5dfef10ba9b3adb8e0a40e_icgraph.pdf, id=1941, 40
+1.5pt x 112.42pt>
+File: class_t_mass_action_a686b8ca0db5dfef10ba9b3adb8e0a40e_icgraph.pdf Graphic
+ file (type pdf)
+<use class_t_mass_action_a686b8ca0db5dfef10ba9b3adb8e0a40e_icgraph.pdf>
+Package pdftex.def Info: class_t_mass_action_a686b8ca0db5dfef10ba9b3adb8e0a40e_
+icgraph.pdf  used on input line 270.
+(pdftex.def)             Requested size: 350.0pt x 98.00702pt.
+ <./class_t_mass_action_a14d0626057ebcbc68f87caf65a98ffe4_cgraph.pdf>
+<class_t_mass_action_a14d0626057ebcbc68f87caf65a98ffe4_cgraph.pdf, id=1951, 828
+.09375pt x 329.23pt>
+File: class_t_mass_action_a14d0626057ebcbc68f87caf65a98ffe4_cgraph.pdf Graphic 
+file (type pdf)
+<use class_t_mass_action_a14d0626057ebcbc68f87caf65a98ffe4_cgraph.pdf>
+Package pdftex.def Info: class_t_mass_action_a14d0626057ebcbc68f87caf65a98ffe4_
+cgraph.pdf  used on input line 291.
+(pdftex.def)             Requested size: 350.0pt x 139.15479pt.
+ <./class_t_mass_action_a14d0626057ebcbc68f87caf65a98ffe4_icgraph.pdf>
+<class_t_mass_action_a14d0626057ebcbc68f87caf65a98ffe4_icgraph.pdf, id=1959, 42
+6.59375pt x 100.375pt>
+File: class_t_mass_action_a14d0626057ebcbc68f87caf65a98ffe4_icgraph.pdf Graphic
+ file (type pdf)
+<use class_t_mass_action_a14d0626057ebcbc68f87caf65a98ffe4_icgraph.pdf>
+Package pdftex.def Info: class_t_mass_action_a14d0626057ebcbc68f87caf65a98ffe4_
+icgraph.pdf  used on input line 298.
+(pdftex.def)             Requested size: 350.0pt x 82.35855pt.
+ [44])
+(class_t_mechanism.tex <./class_t_mechanism__inherit__graph.pdf>
+<class_t_mechanism__inherit__graph.pdf, id=1981, 905.3825pt x 606.265pt>
+File: class_t_mechanism__inherit__graph.pdf Graphic file (type pdf)
+<use class_t_mechanism__inherit__graph.pdf>
+Package pdftex.def Info: class_t_mechanism__inherit__graph.pdf  used on input l
+ine 18.
+(pdftex.def)             Requested size: 350.0pt x 234.36095pt.
+ <./class_t_mechanism__coll__graph.pdf>
+<class_t_mechanism__coll__graph.pdf, id=1989, 214.8025pt x 800.9925pt>
+File: class_t_mechanism__coll__graph.pdf Graphic file (type pdf)
+<use class_t_mechanism__coll__graph.pdf>
+Package pdftex.def Info: class_t_mechanism__coll__graph.pdf  used on input line
+ 27.
+(pdftex.def)             Requested size: 147.50264pt x 550.0pt.
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
+ [45] [46]
+LaTeX Info: Redefining \. on input line 101.
+LaTeX Info: Redefining \% on input line 101.
+ [47] <./class_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285_icgraph.pdf>
+<class_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285_icgraph.pdf, id=2084, 422.
+57875pt x 339.2675pt>
+File: class_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285_icgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285_icgraph.pdf>
+Package pdftex.def Info: class_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285_ic
+graph.pdf  used on input line 123.
+(pdftex.def)             Requested size: 350.0pt x 281.00696pt.
+ [48] <./class_t_mechanism_ac46c760fddcd416499a39131141c9804_icgraph.pdf>
+<class_t_mechanism_ac46c760fddcd416499a39131141c9804_icgraph.pdf, id=2116, 376.
+40625pt x 138.5175pt>
+File: class_t_mechanism_ac46c760fddcd416499a39131141c9804_icgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_mechanism_ac46c760fddcd416499a39131141c9804_icgraph.pdf>
+Package pdftex.def Info: class_t_mechanism_ac46c760fddcd416499a39131141c9804_ic
+graph.pdf  used on input line 169.
+(pdftex.def)             Requested size: 350.0pt x 128.80936pt.
+ <./class_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c_icgraph.pdf>
+<class_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c_icgraph.pdf, id=2124, 442.
+65375pt x 238.8925pt>
+File: class_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c_icgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c_icgraph.pdf>
+Package pdftex.def Info: class_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c_ic
+graph.pdf  used on input line 186.
+(pdftex.def)             Requested size: 350.0pt x 188.89796pt.
+LaTeX Info: Redefining \. on input line 189.
+LaTeX Info: Redefining \% on input line 189.
+ [49] <./class_t_mechanism_a478649141c58734f7a8032300c3e5598_icgraph.pdf>
+<class_t_mechanism_a478649141c58734f7a8032300c3e5598_icgraph.pdf, id=2146, 382.
+42876pt x 138.5175pt>
+File: class_t_mechanism_a478649141c58734f7a8032300c3e5598_icgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_mechanism_a478649141c58734f7a8032300c3e5598_icgraph.pdf>
+Package pdftex.def Info: class_t_mechanism_a478649141c58734f7a8032300c3e5598_ic
+graph.pdf  used on input line 203.
+(pdftex.def)             Requested size: 350.0pt x 126.77818pt.
+ <./class_t_mechanism_ac25a2712fe94a70768c4af9f791ae051_icgraph.pdf>
+<class_t_mechanism_ac25a2712fe94a70768c4af9f791ae051_icgraph.pdf, id=2154, 448.
+67625pt x 238.8925pt>
+File: class_t_mechanism_ac25a2712fe94a70768c4af9f791ae051_icgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_mechanism_ac25a2712fe94a70768c4af9f791ae051_icgraph.pdf>
+Package pdftex.def Info: class_t_mechanism_ac25a2712fe94a70768c4af9f791ae051_ic
+graph.pdf  used on input line 220.
+(pdftex.def)             Requested size: 350.0pt x 186.3609pt.
+
+[50]
+Underfull \hbox (badness 10000) detected at line 238
+[][][]
+ []
+
+ <./class_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007_icgraph.pdf>
+<class_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007_icgraph.pdf, id=2171, 859.
+21pt x 1315.91624pt>
+File: class_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007_icgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007_icgraph.pdf>
+Package pdftex.def Info: class_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007_ic
+graph.pdf  used on input line 245.
+(pdftex.def)             Requested size: 350.0pt x 536.03537pt.
+LaTeX Info: Redefining \. on input line 248.
+LaTeX Info: Redefining \% on input line 248.
+ [51]
+[52]
+Underfull \hbox (badness 10000) detected at line 258
+[][][]
+ []
+
+ <./class_t_mechanism_a83135bad08af9d4416b57f7fe7c73493_icgraph.pdf>
+<class_t_mechanism_a83135bad08af9d4416b57f7fe7c73493_icgraph.pdf, id=2196, 630.
+355pt x 475.7775pt>
+File: class_t_mechanism_a83135bad08af9d4416b57f7fe7c73493_icgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_mechanism_a83135bad08af9d4416b57f7fe7c73493_icgraph.pdf>
+Package pdftex.def Info: class_t_mechanism_a83135bad08af9d4416b57f7fe7c73493_ic
+graph.pdf  used on input line 265.
+(pdftex.def)             Requested size: 350.0pt x 264.17578pt.
+
+Underfull \hbox (badness 10000) detected at line 278
+[][][]
+ []
+
+ <./class_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb_icgraph.pdf>
+<class_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb_icgraph.pdf, id=2204, 796.
+9775pt x 905.3825pt>
+File: class_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb_icgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb_icgraph.pdf>
+Package pdftex.def Info: class_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb_ic
+graph.pdf  used on input line 285.
+(pdftex.def)             Requested size: 350.0pt x 397.60971pt.
+LaTeX Info: Redefining \. on input line 288.
+LaTeX Info: Redefining \% on input line 288.
+ [53] <./class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_cgraph.pdf>
+<class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_cgraph.pdf, id=2221, 405.5
+15pt x 100.375pt>
+File: class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_cgraph.pdf Graphic fi
+le (type pdf)
+<use class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_cgraph.pdf>
+Package pdftex.def Info: class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_cg
+raph.pdf  used on input line 302.
+(pdftex.def)             Requested size: 350.0pt x 86.6363pt.
+ <./class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_icgraph.pdf>
+<class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_icgraph.pdf, id=2229, 840.
+13875pt x 1330.9725pt>
+File: class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_icgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_icgraph.pdf>
+Package pdftex.def Info: class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_ic
+graph.pdf  used on input line 309.
+(pdftex.def)             Requested size: 347.17685pt x 550.0pt.
+ [54]
+LaTeX Info: Redefining \. on input line 322.
+LaTeX Info: Redefining \% on input line 322.
+ [55]
+Underfull \hbox (badness 10000) detected at line 322
+[][][]
+ []
+
+ <./class_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba_icgraph.pdf>
+<class_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba_icgraph.pdf, id=2252, 1033
+.8625pt x 1330.9725pt>
+File: class_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba_icgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba_icgraph.pdf>
+Package pdftex.def Info: class_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba_ic
+graph.pdf  used on input line 329.
+(pdftex.def)             Requested size: 350.0pt x 450.575pt.
+ [56] <./class_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55_cgraph.pdf>
+<class_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55_cgraph.pdf, id=2319, 399.4
+925pt x 391.4625pt>
+File: class_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55_cgraph.pdf Graphic fi
+le (type pdf)
+<use class_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55_cgraph.pdf>
+Package pdftex.def Info: class_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55_cg
+raph.pdf  used on input line 407.
+(pdftex.def)             Requested size: 350.0pt x 342.9828pt.
+LaTeX Info: Redefining \. on input line 410.
+LaTeX Info: Redefining \% on input line 410.
+ [57]
+Overfull \hbox (33.19371pt too wide) in paragraph at lines 431--432
+[]\T1/pcr/m/n/8 const String TMechanism::[]input[]Template = "MECHANISM $\OML/c
+mm/m/it/8 <$\T1/pcr/m/n/8 tipo[]_[]mecanismo$\OML/cmm/m/it/8 >$ $<$\T1/pcr/m/n/
+8 nombre[]_[]reaccion$\OML/cmm/m/it/8 >$ $<$\T1/pcr/m/n/8 parametros[]
+ []
+
+[58]) (class_t_metabolite.tex <./class_t_metabolite__coll__graph.pdf>
+<class_t_metabolite__coll__graph.pdf, id=2367, 167.62625pt x 309.155pt>
+File: class_t_metabolite__coll__graph.pdf Graphic file (type pdf)
+<use class_t_metabolite__coll__graph.pdf>
+Package pdftex.def Info: class_t_metabolite__coll__graph.pdf  used on input lin
+e 18.
+(pdftex.def)             Requested size: 167.0pt x 307.99849pt.
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
+ [59]
+[60]
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.19995pt on input line 69.
+LaTeX Info: Redefining \. on input line 100.
+LaTeX Info: Redefining \% on input line 100.
+ [61] <./class_t_metabolite_af08c956d6a400cd6549d065d04d0b887_cgraph.pdf>
+<class_t_metabolite_af08c956d6a400cd6549d065d04d0b887_cgraph.pdf, id=2450, 375.
+4025pt x 100.375pt>
+File: class_t_metabolite_af08c956d6a400cd6549d065d04d0b887_cgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_metabolite_af08c956d6a400cd6549d065d04d0b887_cgraph.pdf>
+Package pdftex.def Info: class_t_metabolite_af08c956d6a400cd6549d065d04d0b887_c
+graph.pdf  used on input line 105.
+(pdftex.def)             Requested size: 350.0pt x 93.58823pt.
+
+Underfull \hbox (badness 10000) detected at line 128
+[][][]
+ []
+
+ <./class_t_metabolite_ac68293e55e00b57510680058356af024_icgraph.pdf>
+<class_t_metabolite_ac68293e55e00b57510680058356af024_icgraph.pdf, id=2458, 358
+.33875pt x 100.375pt>
+File: class_t_metabolite_ac68293e55e00b57510680058356af024_icgraph.pdf Graphic 
+file (type pdf)
+<use class_t_metabolite_ac68293e55e00b57510680058356af024_icgraph.pdf>
+Package pdftex.def Info: class_t_metabolite_ac68293e55e00b57510680058356af024_i
+cgraph.pdf  used on input line 135.
+(pdftex.def)             Requested size: 350.0pt x 98.04518pt.
+ [62]
+Underfull \hbox (badness 10000) detected at line 148
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 161
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 174
+[][][]
+ []
+
+ <./class_t_metabolite_a7818e2aee3c3aa8bfeea327aa9643697_icgraph.pdf>
+<class_t_metabolite_a7818e2aee3c3aa8bfeea327aa9643697_icgraph.pdf, id=2478, 845
+.1575pt x 1041.8925pt>
+File: class_t_metabolite_a7818e2aee3c3aa8bfeea327aa9643697_icgraph.pdf Graphic 
+file (type pdf)
+<use class_t_metabolite_a7818e2aee3c3aa8bfeea327aa9643697_icgraph.pdf>
+Package pdftex.def Info: class_t_metabolite_a7818e2aee3c3aa8bfeea327aa9643697_i
+cgraph.pdf  used on input line 181.
+(pdftex.def)             Requested size: 350.0pt x 431.48705pt.
+LaTeX Info: Redefining \. on input line 184.
+LaTeX Info: Redefining \% on input line 184.
+ [63]
+[64]
+Underfull \hbox (badness 10000) detected at line 214
+[][][]
+ []
+
+ <./class_t_metabolite_a410a22efe9cfe469e19d76c1b1a15785_icgraph.pdf>
+<class_t_metabolite_a410a22efe9cfe469e19d76c1b1a15785_icgraph.pdf, id=2502, 375
+.4025pt x 100.375pt>
+File: class_t_metabolite_a410a22efe9cfe469e19d76c1b1a15785_icgraph.pdf Graphic 
+file (type pdf)
+<use class_t_metabolite_a410a22efe9cfe469e19d76c1b1a15785_icgraph.pdf>
+Package pdftex.def Info: class_t_metabolite_a410a22efe9cfe469e19d76c1b1a15785_i
+cgraph.pdf  used on input line 221.
+(pdftex.def)             Requested size: 350.0pt x 93.58823pt.
+ <./class_t_metabolite_a35589d944d3ac0ad647aa42412c0c3f6_cgraph.pdf>
+<class_t_metabolite_a35589d944d3ac0ad647aa42412c0c3f6_cgraph.pdf, id=2510, 358.
+33875pt x 100.375pt>
+File: class_t_metabolite_a35589d944d3ac0ad647aa42412c0c3f6_cgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_metabolite_a35589d944d3ac0ad647aa42412c0c3f6_cgraph.pdf>
+Package pdftex.def Info: class_t_metabolite_a35589d944d3ac0ad647aa42412c0c3f6_c
+graph.pdf  used on input line 243.
+(pdftex.def)             Requested size: 350.0pt x 98.04518pt.
+LaTeX Info: Redefining \. on input line 263.
+LaTeX Info: Redefining \% on input line 263.
+ [65]
+Overfull \hbox (33.19371pt too wide) in paragraph at lines 267--268
+[]\T1/pcr/m/n/8 const String TMetabolite::[]input[]Template = "METABOLITE $\OML
+/cmm/m/it/8 <$\T1/pcr/m/n/8 nombre[]_[]corto$\OML/cmm/m/it/8 >$ $<$\T1/pcr/m/n/
+8 nombre[]_[]largo$\OML/cmm/m/it/8 >$ $<$\T1/pcr/m/n/8 concentracion[]
+ []
+
+) (class_t_m_m_bi_bi_inhibidor.tex <./class_t_m_m_bi_bi_inhibidor__inherit__gra
+ph.pdf>
+<class_t_m_m_bi_bi_inhibidor__inherit__graph.pdf, id=2536, 202.7575pt x 606.265
+pt>
+File: class_t_m_m_bi_bi_inhibidor__inherit__graph.pdf Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor__inherit__graph.pdf>
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor__inherit__graph.pdf  used 
+on input line 18.
+(pdftex.def)             Requested size: 183.94344pt x 550.0pt.
+ [66] <./class_t_m_m_bi_bi_inhibidor__coll__graph.pdf>
+<class_t_m_m_bi_bi_inhibidor__coll__graph.pdf, id=2559, 214.8025pt x 986.68625p
+t>
+File: class_t_m_m_bi_bi_inhibidor__coll__graph.pdf Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor__coll__graph.pdf>
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor__coll__graph.pdf  used on 
+input line 27.
+(pdftex.def)             Requested size: 119.74121pt x 550.0pt.
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
+ [67] [68]
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
+
+[69] <./class_t_m_m_bi_bi_inhibidor_afd7921f14f90bb419de8d1dd53d27e13_cgraph.pd
+f>
+<class_t_m_m_bi_bi_inhibidor_afd7921f14f90bb419de8d1dd53d27e13_cgraph.pdf, id=2
+674, 1019.81pt x 747.79375pt>
+File: class_t_m_m_bi_bi_inhibidor_afd7921f14f90bb419de8d1dd53d27e13_cgraph.pdf 
+Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor_afd7921f14f90bb419de8d1dd53d27e13_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor_afd7921f14f90bb419de8d1dd5
+3d27e13_cgraph.pdf  used on input line 117.
+(pdftex.def)             Requested size: 350.0pt x 256.64268pt.
+ [70]
+Underfull \hbox (badness 10000) detected at line 140
+[][][]
+ []
+
+ <./class_t_m_m_bi_bi_inhibidor_a4efc1b68aecca229eb9a9467dd14ef94_cgraph.pdf>
+<class_t_m_m_bi_bi_inhibidor_a4efc1b68aecca229eb9a9467dd14ef94_cgraph.pdf, id=2
+693, 637.38126pt x 252.945pt>
+File: class_t_m_m_bi_bi_inhibidor_a4efc1b68aecca229eb9a9467dd14ef94_cgraph.pdf 
+Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor_a4efc1b68aecca229eb9a9467dd14ef94_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor_a4efc1b68aecca229eb9a9467d
+d14ef94_cgraph.pdf  used on input line 147.
+(pdftex.def)             Requested size: 350.0pt x 138.89632pt.
+ <./class_t_m_m_bi_bi_inhibidor_a4efc1b68aecca229eb9a9467dd14ef94_icgraph.pdf>
+<class_t_m_m_bi_bi_inhibidor_a4efc1b68aecca229eb9a9467dd14ef94_icgraph.pdf, id=
+2701, 615.29875pt x 262.9825pt>
+File: class_t_m_m_bi_bi_inhibidor_a4efc1b68aecca229eb9a9467dd14ef94_icgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor_a4efc1b68aecca229eb9a9467dd14ef94_icgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor_a4efc1b68aecca229eb9a9467d
+d14ef94_icgraph.pdf  used on input line 154.
+(pdftex.def)             Requested size: 350.0pt x 149.59259pt.
+LaTeX Info: Redefining \. on input line 172.
+LaTeX Info: Redefining \% on input line 172.
+
+[71] <./class_t_m_m_bi_bi_inhibidor_a8301f2c15620dba9545389641e372c89_cgraph.pd
+f>
+<class_t_m_m_bi_bi_inhibidor_a8301f2c15620dba9545389641e372c89_cgraph.pdf, id=2
+720, 637.38126pt x 214.8025pt>
+File: class_t_m_m_bi_bi_inhibidor_a8301f2c15620dba9545389641e372c89_cgraph.pdf 
+Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor_a8301f2c15620dba9545389641e372c89_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor_a8301f2c15620dba9545389641
+e372c89_cgraph.pdf  used on input line 183.
+(pdftex.def)             Requested size: 350.0pt x 117.95163pt.
+ <./class_t_m_m_bi_bi_inhibidor_a8301f2c15620dba9545389641e372c89_icgraph.pdf>
+<class_t_m_m_bi_bi_inhibidor_a8301f2c15620dba9545389641e372c89_icgraph.pdf, id=
+2728, 426.59375pt x 112.42pt>
+File: class_t_m_m_bi_bi_inhibidor_a8301f2c15620dba9545389641e372c89_icgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor_a8301f2c15620dba9545389641e372c89_icgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor_a8301f2c15620dba9545389641
+e372c89_icgraph.pdf  used on input line 190.
+(pdftex.def)             Requested size: 350.0pt x 92.2416pt.
+ <./class_t_m_m_bi_bi_inhibidor_ae96c6cd6c35591da5afbd8e690366145_cgraph.pdf>
+<class_t_m_m_bi_bi_inhibidor_ae96c6cd6c35591da5afbd8e690366145_cgraph.pdf, id=2
+738, 813.0375pt x 252.945pt>
+File: class_t_m_m_bi_bi_inhibidor_ae96c6cd6c35591da5afbd8e690366145_cgraph.pdf 
+Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor_ae96c6cd6c35591da5afbd8e690366145_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor_ae96c6cd6c35591da5afbd8e69
+0366145_cgraph.pdf  used on input line 211.
+(pdftex.def)             Requested size: 350.0pt x 108.88773pt.
+
+[72] <./class_t_m_m_bi_bi_inhibidor_ae96c6cd6c35591da5afbd8e690366145_icgraph.p
+df>
+<class_t_m_m_bi_bi_inhibidor_ae96c6cd6c35591da5afbd8e690366145_icgraph.pdf, id=
+2754, 396.48125pt x 112.42pt>
+File: class_t_m_m_bi_bi_inhibidor_ae96c6cd6c35591da5afbd8e690366145_icgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor_ae96c6cd6c35591da5afbd8e690366145_icgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor_ae96c6cd6c35591da5afbd8e69
+0366145_icgraph.pdf  used on input line 218.
+(pdftex.def)             Requested size: 350.0pt x 99.2421pt.
+ <./class_t_m_m_bi_bi_inhibidor_a7c70835aee1f69a6acf4cf49618d404f_cgraph.pdf>
+<class_t_m_m_bi_bi_inhibidor_a7c70835aee1f69a6acf4cf49618d404f_cgraph.pdf, id=2
+764, 813.0375pt x 252.945pt>
+File: class_t_m_m_bi_bi_inhibidor_a7c70835aee1f69a6acf4cf49618d404f_cgraph.pdf 
+Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor_a7c70835aee1f69a6acf4cf49618d404f_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor_a7c70835aee1f69a6acf4cf496
+18d404f_cgraph.pdf  used on input line 239.
+(pdftex.def)             Requested size: 350.0pt x 108.88773pt.
+ <./class_t_m_m_bi_bi_inhibidor_a7c70835aee1f69a6acf4cf49618d404f_icgraph.pdf>
+<class_t_m_m_bi_bi_inhibidor_a7c70835aee1f69a6acf4cf49618d404f_icgraph.pdf, id=
+2772, 396.48125pt x 112.42pt>
+File: class_t_m_m_bi_bi_inhibidor_a7c70835aee1f69a6acf4cf49618d404f_icgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor_a7c70835aee1f69a6acf4cf49618d404f_icgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor_a7c70835aee1f69a6acf4cf496
+18d404f_icgraph.pdf  used on input line 246.
+(pdftex.def)             Requested size: 350.0pt x 99.2421pt.
+LaTeX Info: Redefining \. on input line 249.
+LaTeX Info: Redefining \% on input line 249.
+[73] <./class_t_m_m_bi_bi_inhibidor_a82dcfcc31f05b07fd90cc5be9df671d8_cgraph.pd
+f>
+<class_t_m_m_bi_bi_inhibidor_a82dcfcc31f05b07fd90cc5be9df671d8_cgraph.pdf, id=2
+792, 819.06pt x 291.0875pt>
+File: class_t_m_m_bi_bi_inhibidor_a82dcfcc31f05b07fd90cc5be9df671d8_cgraph.pdf 
+Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor_a82dcfcc31f05b07fd90cc5be9df671d8_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor_a82dcfcc31f05b07fd90cc5be9
+df671d8_cgraph.pdf  used on input line 267.
+(pdftex.def)             Requested size: 350.0pt x 124.3879pt.
+ <./class_t_m_m_bi_bi_inhibidor_a82dcfcc31f05b07fd90cc5be9df671d8_icgraph.pdf>
+<class_t_m_m_bi_bi_inhibidor_a82dcfcc31f05b07fd90cc5be9df671d8_icgraph.pdf, id=
+2800, 402.50375pt x 112.42pt>
+File: class_t_m_m_bi_bi_inhibidor_a82dcfcc31f05b07fd90cc5be9df671d8_icgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor_a82dcfcc31f05b07fd90cc5be9df671d8_icgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor_a82dcfcc31f05b07fd90cc5be9
+df671d8_icgraph.pdf  used on input line 274.
+(pdftex.def)             Requested size: 350.0pt x 97.75485pt.
+ <./class_t_m_m_bi_bi_inhibidor_a2e2b9f5d2797bdcae5f12f7b667962d5_cgraph.pdf>
+<class_t_m_m_bi_bi_inhibidor_a2e2b9f5d2797bdcae5f12f7b667962d5_cgraph.pdf, id=2
+810, 819.06pt x 291.0875pt>
+File: class_t_m_m_bi_bi_inhibidor_a2e2b9f5d2797bdcae5f12f7b667962d5_cgraph.pdf 
+Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor_a2e2b9f5d2797bdcae5f12f7b667962d5_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor_a2e2b9f5d2797bdcae5f12f7b6
+67962d5_cgraph.pdf  used on input line 295.
+(pdftex.def)             Requested size: 350.0pt x 124.3879pt.
+
+[74] <./class_t_m_m_bi_bi_inhibidor_a2e2b9f5d2797bdcae5f12f7b667962d5_icgraph.p
+df>
+<class_t_m_m_bi_bi_inhibidor_a2e2b9f5d2797bdcae5f12f7b667962d5_icgraph.pdf, id=
+2827, 402.50375pt x 112.42pt>
+File: class_t_m_m_bi_bi_inhibidor_a2e2b9f5d2797bdcae5f12f7b667962d5_icgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_bi_bi_inhibidor_a2e2b9f5d2797bdcae5f12f7b667962d5_icgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_bi_bi_inhibidor_a2e2b9f5d2797bdcae5f12f7b6
+67962d5_icgraph.pdf  used on input line 302.
+(pdftex.def)             Requested size: 350.0pt x 97.75485pt.
+) (class_t_m_m_bi_sec_aleatorio.tex <./class_t_m_m_bi_sec_aleatorio__inherit__g
+raph.pdf>
+<class_t_m_m_bi_sec_aleatorio__inherit__graph.pdf, id=2841, 202.7575pt x 606.26
+5pt>
+File: class_t_m_m_bi_sec_aleatorio__inherit__graph.pdf Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio__inherit__graph.pdf>
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio__inherit__graph.pdf  used
+ on input line 18.
+(pdftex.def)             Requested size: 183.94344pt x 550.0pt.
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
+ [75] <./class_t_m_m_bi_sec_aleatorio__coll__graph.pdf>
+<class_t_m_m_bi_sec_aleatorio__coll__graph.pdf, id=2864, 214.8025pt x 986.68625
+pt>
+File: class_t_m_m_bi_sec_aleatorio__coll__graph.pdf Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio__coll__graph.pdf>
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio__coll__graph.pdf  used on
+ input line 27.
+(pdftex.def)             Requested size: 119.74121pt x 550.0pt.
+ [76]
+LaTeX Info: Redefining \. on input line 38.
+LaTeX Info: Redefining \% on input line 38.
+
+[77] [78] <./class_t_m_m_bi_sec_aleatorio_ad4e65c49ef3a64b8162e1aab18289d3d_cgr
+aph.pdf>
+<class_t_m_m_bi_sec_aleatorio_ad4e65c49ef3a64b8162e1aab18289d3d_cgraph.pdf, id=
+2980, 915.42pt x 716.6775pt>
+File: class_t_m_m_bi_sec_aleatorio_ad4e65c49ef3a64b8162e1aab18289d3d_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio_ad4e65c49ef3a64b8162e1aab18289d3d_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio_ad4e65c49ef3a64b8162e1aab
+18289d3d_cgraph.pdf  used on input line 117.
+(pdftex.def)             Requested size: 350.0pt x 274.01343pt.
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
+ [79]
+Underfull \hbox (badness 10000) detected at line 140
+[][][]
+ []
+
+ <./class_t_m_m_bi_sec_aleatorio_af112b1a3812d328d9836c7962dcc311a_cgraph.pdf>
+<class_t_m_m_bi_sec_aleatorio_af112b1a3812d328d9836c7962dcc311a_cgraph.pdf, id=
+2998, 577.15625pt x 252.945pt>
+File: class_t_m_m_bi_sec_aleatorio_af112b1a3812d328d9836c7962dcc311a_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio_af112b1a3812d328d9836c7962dcc311a_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio_af112b1a3812d328d9836c796
+2dcc311a_cgraph.pdf  used on input line 147.
+(pdftex.def)             Requested size: 350.0pt x 153.39693pt.
+ <./class_t_m_m_bi_sec_aleatorio_af112b1a3812d328d9836c7962dcc311a_icgraph.pdf>
+<class_t_m_m_bi_sec_aleatorio_af112b1a3812d328d9836c7962dcc311a_icgraph.pdf, id
+=3006, 485.815pt x 262.9825pt>
+File: class_t_m_m_bi_sec_aleatorio_af112b1a3812d328d9836c7962dcc311a_icgraph.pd
+f Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio_af112b1a3812d328d9836c7962dcc311a_icgraph.pdf
+>
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio_af112b1a3812d328d9836c796
+2dcc311a_icgraph.pdf  used on input line 154.
+(pdftex.def)             Requested size: 350.0pt x 189.4596pt.
+
+[80] <./class_t_m_m_bi_sec_aleatorio_a4ab89662512bf0e1709d2e2ad8c779c2_cgraph.p
+df>
+<class_t_m_m_bi_sec_aleatorio_a4ab89662512bf0e1709d2e2ad8c779c2_cgraph.pdf, id=
+3025, 577.15625pt x 214.8025pt>
+File: class_t_m_m_bi_sec_aleatorio_a4ab89662512bf0e1709d2e2ad8c779c2_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio_a4ab89662512bf0e1709d2e2ad8c779c2_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio_a4ab89662512bf0e1709d2e2a
+d8c779c2_cgraph.pdf  used on input line 182.
+(pdftex.def)             Requested size: 350.0pt x 130.26564pt.
+ <./class_t_m_m_bi_sec_aleatorio_a4ab89662512bf0e1709d2e2ad8c779c2_icgraph.pdf>
+<class_t_m_m_bi_sec_aleatorio_a4ab89662512bf0e1709d2e2ad8c779c2_icgraph.pdf, id
+=3033, 335.2525pt x 112.42pt>
+File: class_t_m_m_bi_sec_aleatorio_a4ab89662512bf0e1709d2e2ad8c779c2_icgraph.pd
+f Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio_a4ab89662512bf0e1709d2e2ad8c779c2_icgraph.pdf
+>
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio_a4ab89662512bf0e1709d2e2a
+d8c779c2_icgraph.pdf  used on input line 189.
+(pdftex.def)             Requested size: 334.0pt x 111.99945pt.
+ <./class_t_m_m_bi_sec_aleatorio_afc3e0110e898539d2128a7673f0239bc_cgraph.pdf>
+<class_t_m_m_bi_sec_aleatorio_afc3e0110e898539d2128a7673f0239bc_cgraph.pdf, id=
+3043, 743.77875pt x 258.9675pt>
+File: class_t_m_m_bi_sec_aleatorio_afc3e0110e898539d2128a7673f0239bc_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio_afc3e0110e898539d2128a7673f0239bc_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio_afc3e0110e898539d2128a767
+3f0239bc_cgraph.pdf  used on input line 210.
+(pdftex.def)             Requested size: 350.0pt x 121.86488pt.
+LaTeX Info: Redefining \. on input line 213.
+LaTeX Info: Redefining \% on input line 213.
+ [81] <./class_t_m_m_bi_sec_aleatorio_afc3e0110e898539d2128a7673f0239bc_icgraph
+.pdf>
+<class_t_m_m_bi_sec_aleatorio_afc3e0110e898539d2128a7673f0239bc_icgraph.pdf, id
+=3059, 335.2525pt x 112.42pt>
+File: class_t_m_m_bi_sec_aleatorio_afc3e0110e898539d2128a7673f0239bc_icgraph.pd
+f Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio_afc3e0110e898539d2128a7673f0239bc_icgraph.pdf
+>
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio_afc3e0110e898539d2128a767
+3f0239bc_icgraph.pdf  used on input line 217.
+(pdftex.def)             Requested size: 334.0pt x 111.99945pt.
+ <./class_t_m_m_bi_sec_aleatorio_aa655f131d118c0f2eb0d2f773c30da16_cgraph.pdf>
+<class_t_m_m_bi_sec_aleatorio_aa655f131d118c0f2eb0d2f773c30da16_cgraph.pdf, id=
+3069, 722.7pt x 260.975pt>
+File: class_t_m_m_bi_sec_aleatorio_aa655f131d118c0f2eb0d2f773c30da16_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio_aa655f131d118c0f2eb0d2f773c30da16_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio_aa655f131d118c0f2eb0d2f77
+3c30da16_cgraph.pdf  used on input line 238.
+(pdftex.def)             Requested size: 350.0pt x 126.38954pt.
+ <./class_t_m_m_bi_sec_aleatorio_aa655f131d118c0f2eb0d2f773c30da16_icgraph.pdf>
+<class_t_m_m_bi_sec_aleatorio_aa655f131d118c0f2eb0d2f773c30da16_icgraph.pdf, id
+=3077, 335.2525pt x 112.42pt>
+File: class_t_m_m_bi_sec_aleatorio_aa655f131d118c0f2eb0d2f773c30da16_icgraph.pd
+f Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio_aa655f131d118c0f2eb0d2f773c30da16_icgraph.pdf
+>
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio_aa655f131d118c0f2eb0d2f77
+3c30da16_icgraph.pdf  used on input line 245.
+(pdftex.def)             Requested size: 334.0pt x 111.99945pt.
+ [82] <./class_t_m_m_bi_sec_aleatorio_ab79024ec54f7ab3a243d92dac5596070_cgraph.
+pdf>
+<class_t_m_m_bi_sec_aleatorio_ab79024ec54f7ab3a243d92dac5596070_cgraph.pdf, id=
+3098, 748.7975pt x 264.99pt>
+File: class_t_m_m_bi_sec_aleatorio_ab79024ec54f7ab3a243d92dac5596070_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio_ab79024ec54f7ab3a243d92dac5596070_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio_ab79024ec54f7ab3a243d92da
+c5596070_cgraph.pdf  used on input line 266.
+(pdftex.def)             Requested size: 350.0pt x 123.86197pt.
+ <./class_t_m_m_bi_sec_aleatorio_ab79024ec54f7ab3a243d92dac5596070_icgraph.pdf>
+<class_t_m_m_bi_sec_aleatorio_ab79024ec54f7ab3a243d92dac5596070_icgraph.pdf, id
+=3106, 340.27126pt x 112.42pt>
+File: class_t_m_m_bi_sec_aleatorio_ab79024ec54f7ab3a243d92dac5596070_icgraph.pd
+f Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio_ab79024ec54f7ab3a243d92dac5596070_icgraph.pdf
+>
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio_ab79024ec54f7ab3a243d92da
+c5596070_icgraph.pdf  used on input line 273.
+(pdftex.def)             Requested size: 339.0pt x 112.0063pt.
+ <./class_t_m_m_bi_sec_aleatorio_af3b3f353979875875816507267ee9ce4_cgraph.pdf>
+<class_t_m_m_bi_sec_aleatorio_af3b3f353979875875816507267ee9ce4_cgraph.pdf, id=
+3116, 727.71875pt x 301.125pt>
+File: class_t_m_m_bi_sec_aleatorio_af3b3f353979875875816507267ee9ce4_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio_af3b3f353979875875816507267ee9ce4_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio_af3b3f3539798758758165072
+67ee9ce4_cgraph.pdf  used on input line 294.
+(pdftex.def)             Requested size: 350.0pt x 144.83241pt.
+LaTeX Info: Redefining \. on input line 297.
+LaTeX Info: Redefining \% on input line 297.
+ [83] <./class_t_m_m_bi_sec_aleatorio_af3b3f353979875875816507267ee9ce4_icgraph
+.pdf>
+<class_t_m_m_bi_sec_aleatorio_af3b3f353979875875816507267ee9ce4_icgraph.pdf, id
+=3133, 335.2525pt x 112.42pt>
+File: class_t_m_m_bi_sec_aleatorio_af3b3f353979875875816507267ee9ce4_icgraph.pd
+f Graphic file (type pdf)
+<use class_t_m_m_bi_sec_aleatorio_af3b3f353979875875816507267ee9ce4_icgraph.pdf
+>
+Package pdftex.def Info: class_t_m_m_bi_sec_aleatorio_af3b3f3539798758758165072
+67ee9ce4_icgraph.pdf  used on input line 301.
+(pdftex.def)             Requested size: 334.0pt x 111.99945pt.
+) (class_t_m_m_uni_bi_inhibidor.tex <./class_t_m_m_uni_bi_inhibidor__inherit__g
+raph.pdf>
+<class_t_m_m_uni_bi_inhibidor__inherit__graph.pdf, id=3147, 202.7575pt x 606.26
+5pt>
+File: class_t_m_m_uni_bi_inhibidor__inherit__graph.pdf Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor__inherit__graph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor__inherit__graph.pdf  used
+ on input line 18.
+(pdftex.def)             Requested size: 183.94344pt x 550.0pt.
+ [84] <./class_t_m_m_uni_bi_inhibidor__coll__graph.pdf>
+<class_t_m_m_uni_bi_inhibidor__coll__graph.pdf, id=3170, 214.8025pt x 986.68625
+pt>
+File: class_t_m_m_uni_bi_inhibidor__coll__graph.pdf Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor__coll__graph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor__coll__graph.pdf  used on
+ input line 27.
+(pdftex.def)             Requested size: 119.74121pt x 550.0pt.
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
+
+[85] [86]
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
+ [87] <./class_t_m_m_uni_bi_inhibidor_a27f1f61c93dc9400e2111c7e84bfb813_cgraph.
+pdf>
+<class_t_m_m_uni_bi_inhibidor_a27f1f61c93dc9400e2111c7e84bfb813_cgraph.pdf, id=
+3285, 911.405pt x 698.61pt>
+File: class_t_m_m_uni_bi_inhibidor_a27f1f61c93dc9400e2111c7e84bfb813_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor_a27f1f61c93dc9400e2111c7e84bfb813_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor_a27f1f61c93dc9400e2111c7e
+84bfb813_cgraph.pdf  used on input line 117.
+(pdftex.def)             Requested size: 350.0pt x 268.28877pt.
+ [88]
+Underfull \hbox (badness 10000) detected at line 140
+[][][]
+ []
+
+ <./class_t_m_m_uni_bi_inhibidor_adff7e8d28bf0d198688fe6f6036b8bf8_cgraph.pdf>
+<class_t_m_m_uni_bi_inhibidor_adff7e8d28bf0d198688fe6f6036b8bf8_cgraph.pdf, id=
+3304, 573.14125pt x 291.0875pt>
+File: class_t_m_m_uni_bi_inhibidor_adff7e8d28bf0d198688fe6f6036b8bf8_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor_adff7e8d28bf0d198688fe6f6036b8bf8_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor_adff7e8d28bf0d198688fe6f6
+036b8bf8_cgraph.pdf  used on input line 147.
+(pdftex.def)             Requested size: 350.0pt x 177.75853pt.
+ <./class_t_m_m_uni_bi_inhibidor_adff7e8d28bf0d198688fe6f6036b8bf8_icgraph.pdf>
+<class_t_m_m_uni_bi_inhibidor_adff7e8d28bf0d198688fe6f6036b8bf8_icgraph.pdf, id
+=3312, 477.785pt x 262.9825pt>
+File: class_t_m_m_uni_bi_inhibidor_adff7e8d28bf0d198688fe6f6036b8bf8_icgraph.pd
+f Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor_adff7e8d28bf0d198688fe6f6036b8bf8_icgraph.pdf
+>
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor_adff7e8d28bf0d198688fe6f6
+036b8bf8_icgraph.pdf  used on input line 154.
+(pdftex.def)             Requested size: 350.0pt x 192.64575pt.
+LaTeX Info: Redefining \. on input line 165.
+LaTeX Info: Redefining \% on input line 165.
+
+[89] <./class_t_m_m_uni_bi_inhibidor_a97da04356397596583848a82396c423e_cgraph.p
+df>
+<class_t_m_m_uni_bi_inhibidor_a97da04356397596583848a82396c423e_cgraph.pdf, id=
+3331, 573.14125pt x 214.8025pt>
+File: class_t_m_m_uni_bi_inhibidor_a97da04356397596583848a82396c423e_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor_a97da04356397596583848a82396c423e_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor_a97da04356397596583848a82
+396c423e_cgraph.pdf  used on input line 185.
+(pdftex.def)             Requested size: 350.0pt x 131.17354pt.
+ <./class_t_m_m_uni_bi_inhibidor_a97da04356397596583848a82396c423e_icgraph.pdf>
+<class_t_m_m_uni_bi_inhibidor_a97da04356397596583848a82396c423e_icgraph.pdf, id
+=3339, 328.22626pt x 112.42pt>
+File: class_t_m_m_uni_bi_inhibidor_a97da04356397596583848a82396c423e_icgraph.pd
+f Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor_a97da04356397596583848a82396c423e_icgraph.pdf
+>
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor_a97da04356397596583848a82
+396c423e_icgraph.pdf  used on input line 192.
+(pdftex.def)             Requested size: 327.0pt x 112.00116pt.
+ [90] <./class_t_m_m_uni_bi_inhibidor_a20d6d999152c5042a3e8f9b57c661b4d_cgraph.
+pdf>
+<class_t_m_m_uni_bi_inhibidor_a20d6d999152c5042a3e8f9b57c661b4d_cgraph.pdf, id=
+3357, 742.775pt x 291.0875pt>
+File: class_t_m_m_uni_bi_inhibidor_a20d6d999152c5042a3e8f9b57c661b4d_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor_a20d6d999152c5042a3e8f9b57c661b4d_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor_a20d6d999152c5042a3e8f9b5
+7c661b4d_cgraph.pdf  used on input line 213.
+(pdftex.def)             Requested size: 350.0pt x 137.16202pt.
+ <./class_t_m_m_uni_bi_inhibidor_a20d6d999152c5042a3e8f9b57c661b4d_icgraph.pdf>
+<class_t_m_m_uni_bi_inhibidor_a20d6d999152c5042a3e8f9b57c661b4d_icgraph.pdf, id
+=3365, 330.23375pt x 112.42pt>
+File: class_t_m_m_uni_bi_inhibidor_a20d6d999152c5042a3e8f9b57c661b4d_icgraph.pd
+f Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor_a20d6d999152c5042a3e8f9b57c661b4d_icgraph.pdf
+>
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor_a20d6d999152c5042a3e8f9b5
+7c661b4d_icgraph.pdf  used on input line 220.
+(pdftex.def)             Requested size: 329.0pt x 112.0046pt.
+ <./class_t_m_m_uni_bi_inhibidor_afe8e3d6f6e91d0809a097c6ac9833f84_cgraph.pdf>
+<class_t_m_m_uni_bi_inhibidor_afe8e3d6f6e91d0809a097c6ac9833f84_cgraph.pdf, id=
+3375, 715.67375pt x 291.0875pt>
+File: class_t_m_m_uni_bi_inhibidor_afe8e3d6f6e91d0809a097c6ac9833f84_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor_afe8e3d6f6e91d0809a097c6ac9833f84_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor_afe8e3d6f6e91d0809a097c6a
+c9833f84_cgraph.pdf  used on input line 241.
+(pdftex.def)             Requested size: 350.0pt x 142.35873pt.
+ <./class_t_m_m_uni_bi_inhibidor_afe8e3d6f6e91d0809a097c6ac9833f84_icgraph.pdf>
+<class_t_m_m_uni_bi_inhibidor_afe8e3d6f6e91d0809a097c6ac9833f84_icgraph.pdf, id
+=3383, 328.22626pt x 112.42pt>
+File: class_t_m_m_uni_bi_inhibidor_afe8e3d6f6e91d0809a097c6ac9833f84_icgraph.pd
+f Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor_afe8e3d6f6e91d0809a097c6ac9833f84_icgraph.pdf
+>
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor_afe8e3d6f6e91d0809a097c6a
+c9833f84_icgraph.pdf  used on input line 248.
+(pdftex.def)             Requested size: 327.0pt x 112.00116pt.
+LaTeX Info: Redefining \. on input line 251.
+LaTeX Info: Redefining \% on input line 251.
+ [91] <./class_t_m_m_uni_bi_inhibidor_a59733a3b1589a10af47794977d0f487e_cgraph.
+pdf>
+<class_t_m_m_uni_bi_inhibidor_a59733a3b1589a10af47794977d0f487e_cgraph.pdf, id=
+3403, 748.7975pt x 291.0875pt>
+File: class_t_m_m_uni_bi_inhibidor_a59733a3b1589a10af47794977d0f487e_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor_a59733a3b1589a10af47794977d0f487e_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor_a59733a3b1589a10af4779497
+7d0f487e_cgraph.pdf  used on input line 269.
+(pdftex.def)             Requested size: 350.0pt x 136.0605pt.
+ <./class_t_m_m_uni_bi_inhibidor_a59733a3b1589a10af47794977d0f487e_icgraph.pdf>
+<class_t_m_m_uni_bi_inhibidor_a59733a3b1589a10af47794977d0f487e_icgraph.pdf, id
+=3411, 336.25626pt x 112.42pt>
+File: class_t_m_m_uni_bi_inhibidor_a59733a3b1589a10af47794977d0f487e_icgraph.pd
+f Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor_a59733a3b1589a10af47794977d0f487e_icgraph.pdf
+>
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor_a59733a3b1589a10af4779497
+7d0f487e_icgraph.pdf  used on input line 276.
+(pdftex.def)             Requested size: 335.0pt x 112.00116pt.
+ <./class_t_m_m_uni_bi_inhibidor_a4389b191c3605332cd2d4ee0dbb0f8b0_cgraph.pdf>
+<class_t_m_m_uni_bi_inhibidor_a4389b191c3605332cd2d4ee0dbb0f8b0_cgraph.pdf, id=
+3421, 717.68124pt x 300.12125pt>
+File: class_t_m_m_uni_bi_inhibidor_a4389b191c3605332cd2d4ee0dbb0f8b0_cgraph.pdf
+ Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor_a4389b191c3605332cd2d4ee0dbb0f8b0_cgraph.pdf>
+
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor_a4389b191c3605332cd2d4ee0
+dbb0f8b0_cgraph.pdf  used on input line 297.
+(pdftex.def)             Requested size: 350.0pt x 146.36461pt.
+ [92] <./class_t_m_m_uni_bi_inhibidor_a4389b191c3605332cd2d4ee0dbb0f8b0_icgraph
+.pdf>
+<class_t_m_m_uni_bi_inhibidor_a4389b191c3605332cd2d4ee0dbb0f8b0_icgraph.pdf, id
+=3438, 330.23375pt x 112.42pt>
+File: class_t_m_m_uni_bi_inhibidor_a4389b191c3605332cd2d4ee0dbb0f8b0_icgraph.pd
+f Graphic file (type pdf)
+<use class_t_m_m_uni_bi_inhibidor_a4389b191c3605332cd2d4ee0dbb0f8b0_icgraph.pdf
+>
+Package pdftex.def Info: class_t_m_m_uni_bi_inhibidor_a4389b191c3605332cd2d4ee0
+dbb0f8b0_icgraph.pdf  used on input line 304.
+(pdftex.def)             Requested size: 329.0pt x 112.0046pt.
+) (class_t_m_m_uni_inhibidor.tex
+Underfull \hbox (badness 2035) in paragraph at lines 5--6
+[]\T1/phv/m/n/10 Representa un me-ca-nis-mo del ti-po Michaelis-[]Menten uni-su
+s-tra-to con inhi-bi-cion com-pe-ti-ti-va. He-re-da de
+ []
+
+ <./class_t_m_m_uni_inhibidor__inherit__graph.pdf>
+<class_t_m_m_uni_inhibidor__inherit__graph.pdf, id=3452, 202.7575pt x 606.265pt
+>
+File: class_t_m_m_uni_inhibidor__inherit__graph.pdf Graphic file (type pdf)
+<use class_t_m_m_uni_inhibidor__inherit__graph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor__inherit__graph.pdf  used on
+ input line 18.
+(pdftex.def)             Requested size: 183.94344pt x 550.0pt.
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
+ [93] <./class_t_m_m_uni_inhibidor__coll__graph.pdf>
+<class_t_m_m_uni_inhibidor__coll__graph.pdf, id=3475, 214.8025pt x 986.68625pt>
+
+File: class_t_m_m_uni_inhibidor__coll__graph.pdf Graphic file (type pdf)
+<use class_t_m_m_uni_inhibidor__coll__graph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor__coll__graph.pdf  used on in
+put line 27.
+(pdftex.def)             Requested size: 119.74121pt x 550.0pt.
+ [94]
+LaTeX Info: Redefining \. on input line 38.
+LaTeX Info: Redefining \% on input line 38.
+ [95] [96]
+Underfull \hbox (badness 2035) in paragraph at lines 98--99
+[]\T1/phv/m/n/10 Representa un me-ca-nis-mo del ti-po Michaelis-[]Menten uni-su
+s-tra-to con inhi-bi-cion com-pe-ti-ti-va. He-re-da de
+ []
+
+ <./class_t_m_m_uni_inhibidor_aacd95490240c218832d2a12e5a6b33a2_cgraph.pdf>
+<class_t_m_m_uni_inhibidor_aacd95490240c218832d2a12e5a6b33a2_cgraph.pdf, id=359
+1, 1044.90375pt x 647.41875pt>
+File: class_t_m_m_uni_inhibidor_aacd95490240c218832d2a12e5a6b33a2_cgraph.pdf Gr
+aphic file (type pdf)
+<use class_t_m_m_uni_inhibidor_aacd95490240c218832d2a12e5a6b33a2_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor_aacd95490240c218832d2a12e5a6
+b33a2_cgraph.pdf  used on input line 117.
+(pdftex.def)             Requested size: 350.0pt x 216.85945pt.
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
+
+[97]
+Underfull \hbox (badness 10000) detected at line 140
+[][][]
+ []
+
+ <./class_t_m_m_uni_inhibidor_a61ed9f2604fb99b22b15f56a94598476_cgraph.pdf>
+<class_t_m_m_uni_inhibidor_a61ed9f2604fb99b22b15f56a94598476_cgraph.pdf, id=360
+9, 634.37pt x 214.8025pt>
+File: class_t_m_m_uni_inhibidor_a61ed9f2604fb99b22b15f56a94598476_cgraph.pdf Gr
+aphic file (type pdf)
+<use class_t_m_m_uni_inhibidor_a61ed9f2604fb99b22b15f56a94598476_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor_a61ed9f2604fb99b22b15f56a945
+98476_cgraph.pdf  used on input line 147.
+(pdftex.def)             Requested size: 350.0pt x 118.51538pt.
+ <./class_t_m_m_uni_inhibidor_a61ed9f2604fb99b22b15f56a94598476_icgraph.pdf>
+<class_t_m_m_uni_inhibidor_a61ed9f2604fb99b22b15f56a94598476_icgraph.pdf, id=36
+17, 640.3925pt x 262.9825pt>
+File: class_t_m_m_uni_inhibidor_a61ed9f2604fb99b22b15f56a94598476_icgraph.pdf G
+raphic file (type pdf)
+<use class_t_m_m_uni_inhibidor_a61ed9f2604fb99b22b15f56a94598476_icgraph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor_a61ed9f2604fb99b22b15f56a945
+98476_icgraph.pdf  used on input line 154.
+(pdftex.def)             Requested size: 350.0pt x 143.73392pt.
+
+[98] <./class_t_m_m_uni_inhibidor_ad8c3741daad20e9a2ce69b95bcd486aa_cgraph.pdf>
+<class_t_m_m_uni_inhibidor_ad8c3741daad20e9a2ce69b95bcd486aa_cgraph.pdf, id=363
+6, 634.37pt x 214.8025pt>
+File: class_t_m_m_uni_inhibidor_ad8c3741daad20e9a2ce69b95bcd486aa_cgraph.pdf Gr
+aphic file (type pdf)
+<use class_t_m_m_uni_inhibidor_ad8c3741daad20e9a2ce69b95bcd486aa_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor_ad8c3741daad20e9a2ce69b95bcd
+486aa_cgraph.pdf  used on input line 182.
+(pdftex.def)             Requested size: 350.0pt x 118.51538pt.
+ <./class_t_m_m_uni_inhibidor_ad8c3741daad20e9a2ce69b95bcd486aa_icgraph.pdf>
+<class_t_m_m_uni_inhibidor_ad8c3741daad20e9a2ce69b95bcd486aa_icgraph.pdf, id=36
+44, 454.69875pt x 100.375pt>
+File: class_t_m_m_uni_inhibidor_ad8c3741daad20e9a2ce69b95bcd486aa_icgraph.pdf G
+raphic file (type pdf)
+<use class_t_m_m_uni_inhibidor_ad8c3741daad20e9a2ce69b95bcd486aa_icgraph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor_ad8c3741daad20e9a2ce69b95bcd
+486aa_icgraph.pdf  used on input line 189.
+(pdftex.def)             Requested size: 350.0pt x 77.26294pt.
+ <./class_t_m_m_uni_inhibidor_a1ce34ddce6ad598235045dd9726e9e7e_cgraph.pdf>
+<class_t_m_m_uni_inhibidor_a1ce34ddce6ad598235045dd9726e9e7e_cgraph.pdf, id=365
+4, 807.015pt x 214.8025pt>
+File: class_t_m_m_uni_inhibidor_a1ce34ddce6ad598235045dd9726e9e7e_cgraph.pdf Gr
+aphic file (type pdf)
+<use class_t_m_m_uni_inhibidor_a1ce34ddce6ad598235045dd9726e9e7e_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor_a1ce34ddce6ad598235045dd9726
+e9e7e_cgraph.pdf  used on input line 210.
+(pdftex.def)             Requested size: 350.0pt x 93.15973pt.
+LaTeX Info: Redefining \. on input line 213.
+LaTeX Info: Redefining \% on input line 213.
+
+[99] <./class_t_m_m_uni_inhibidor_a1ce34ddce6ad598235045dd9726e9e7e_icgraph.pdf
+>
+<class_t_m_m_uni_inhibidor_a1ce34ddce6ad598235045dd9726e9e7e_icgraph.pdf, id=36
+71, 424.58624pt x 112.42pt>
+File: class_t_m_m_uni_inhibidor_a1ce34ddce6ad598235045dd9726e9e7e_icgraph.pdf G
+raphic file (type pdf)
+<use class_t_m_m_uni_inhibidor_a1ce34ddce6ad598235045dd9726e9e7e_icgraph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor_a1ce34ddce6ad598235045dd9726
+e9e7e_icgraph.pdf  used on input line 217.
+(pdftex.def)             Requested size: 350.0pt x 92.67558pt.
+ <./class_t_m_m_uni_inhibidor_a0a27cec47470b60e46fe110cab3edab6_cgraph.pdf>
+<class_t_m_m_uni_inhibidor_a0a27cec47470b60e46fe110cab3edab6_cgraph.pdf, id=368
+1, 807.015pt x 237.88875pt>
+File: class_t_m_m_uni_inhibidor_a0a27cec47470b60e46fe110cab3edab6_cgraph.pdf Gr
+aphic file (type pdf)
+<use class_t_m_m_uni_inhibidor_a0a27cec47470b60e46fe110cab3edab6_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor_a0a27cec47470b60e46fe110cab3
+edab6_cgraph.pdf  used on input line 238.
+(pdftex.def)             Requested size: 350.0pt x 103.17221pt.
+ <./class_t_m_m_uni_inhibidor_a0a27cec47470b60e46fe110cab3edab6_icgraph.pdf>
+<class_t_m_m_uni_inhibidor_a0a27cec47470b60e46fe110cab3edab6_icgraph.pdf, id=36
+89, 424.58624pt x 112.42pt>
+File: class_t_m_m_uni_inhibidor_a0a27cec47470b60e46fe110cab3edab6_icgraph.pdf G
+raphic file (type pdf)
+<use class_t_m_m_uni_inhibidor_a0a27cec47470b60e46fe110cab3edab6_icgraph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor_a0a27cec47470b60e46fe110cab3
+edab6_icgraph.pdf  used on input line 245.
+(pdftex.def)             Requested size: 350.0pt x 92.67558pt.
+
+[100] <./class_t_m_m_uni_inhibidor_a9bd74e953991c0873e15141e052eeeba_cgraph.pdf
+>
+<class_t_m_m_uni_inhibidor_a9bd74e953991c0873e15141e052eeeba_cgraph.pdf, id=371
+0, 813.0375pt x 242.9075pt>
+File: class_t_m_m_uni_inhibidor_a9bd74e953991c0873e15141e052eeeba_cgraph.pdf Gr
+aphic file (type pdf)
+<use class_t_m_m_uni_inhibidor_a9bd74e953991c0873e15141e052eeeba_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor_a9bd74e953991c0873e15141e052
+eeeba_cgraph.pdf  used on input line 266.
+(pdftex.def)             Requested size: 350.0pt x 104.56679pt.
+ <./class_t_m_m_uni_inhibidor_a9bd74e953991c0873e15141e052eeeba_icgraph.pdf>
+<class_t_m_m_uni_inhibidor_a9bd74e953991c0873e15141e052eeeba_icgraph.pdf, id=37
+18, 430.60875pt x 112.42pt>
+File: class_t_m_m_uni_inhibidor_a9bd74e953991c0873e15141e052eeeba_icgraph.pdf G
+raphic file (type pdf)
+<use class_t_m_m_uni_inhibidor_a9bd74e953991c0873e15141e052eeeba_icgraph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor_a9bd74e953991c0873e15141e052
+eeeba_icgraph.pdf  used on input line 273.
+(pdftex.def)             Requested size: 350.0pt x 91.37704pt.
+ <./class_t_m_m_uni_inhibidor_a7398e14df831e6270e987f4c5eaad236_cgraph.pdf>
+<class_t_m_m_uni_inhibidor_a7398e14df831e6270e987f4c5eaad236_cgraph.pdf, id=372
+8, 813.0375pt x 291.0875pt>
+File: class_t_m_m_uni_inhibidor_a7398e14df831e6270e987f4c5eaad236_cgraph.pdf Gr
+aphic file (type pdf)
+<use class_t_m_m_uni_inhibidor_a7398e14df831e6270e987f4c5eaad236_cgraph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor_a7398e14df831e6270e987f4c5ea
+ad236_cgraph.pdf  used on input line 294.
+(pdftex.def)             Requested size: 350.0pt x 125.30731pt.
+ <./class_t_m_m_uni_inhibidor_a7398e14df831e6270e987f4c5eaad236_icgraph.pdf>
+<class_t_m_m_uni_inhibidor_a7398e14df831e6270e987f4c5eaad236_icgraph.pdf, id=37
+36, 430.60875pt x 112.42pt>
+File: class_t_m_m_uni_inhibidor_a7398e14df831e6270e987f4c5eaad236_icgraph.pdf G
+raphic file (type pdf)
+<use class_t_m_m_uni_inhibidor_a7398e14df831e6270e987f4c5eaad236_icgraph.pdf>
+Package pdftex.def Info: class_t_m_m_uni_inhibidor_a7398e14df831e6270e987f4c5ea
+ad236_icgraph.pdf  used on input line 301.
+(pdftex.def)             Requested size: 350.0pt x 91.37704pt.
+LaTeX Info: Redefining \. on input line 304.
+LaTeX Info: Redefining \% on input line 304.
+ [101])
+(class_t_model.tex <./class_t_model__coll__graph.pdf>
+<class_t_model__coll__graph.pdf, id=3758, 214.8025pt x 421.575pt>
+File: class_t_model__coll__graph.pdf Graphic file (type pdf)
+<use class_t_model__coll__graph.pdf>
+Package pdftex.def Info: class_t_model__coll__graph.pdf  used on input line 18.
+
+(pdftex.def)             Requested size: 214.0pt x 420.00436pt.
+ [102]
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
+ [103] [104] <./class_t_model_af5af410318ed4ddff620cb139d0780a9_cgraph.pdf>
+<class_t_model_af5af410318ed4ddff620cb139d0780a9_cgraph.pdf, id=3941, 366.36874
+pt x 100.375pt>
+File: class_t_model_af5af410318ed4ddff620cb139d0780a9_cgraph.pdf Graphic file (
+type pdf)
+<use class_t_model_af5af410318ed4ddff620cb139d0780a9_cgraph.pdf>
+Package pdftex.def Info: class_t_model_af5af410318ed4ddff620cb139d0780a9_cgraph
+.pdf  used on input line 134.
+(pdftex.def)             Requested size: 350.0pt x 95.89635pt.
+ <./class_t_model_af5af410318ed4ddff620cb139d0780a9_icgraph.pdf>
+<class_t_model_af5af410318ed4ddff620cb139d0780a9_icgraph.pdf, id=3949, 337.26pt
+ x 100.375pt>
+File: class_t_model_af5af410318ed4ddff620cb139d0780a9_icgraph.pdf Graphic file 
+(type pdf)
+<use class_t_model_af5af410318ed4ddff620cb139d0780a9_icgraph.pdf>
+Package pdftex.def Info: class_t_model_af5af410318ed4ddff620cb139d0780a9_icgrap
+h.pdf  used on input line 141.
+(pdftex.def)             Requested size: 336.0pt x 100.00255pt.
+LaTeX Info: Redefining \. on input line 154.
+LaTeX Info: Redefining \% on input line 154.
+ [105] [106] <./class_t_model_a45494635ca0fd3779ea5147b616462c7_cgraph.pdf>
+<class_t_model_a45494635ca0fd3779ea5147b616462c7_cgraph.pdf, id=4046, 574.145pt
+ x 391.4625pt>
+File: class_t_model_a45494635ca0fd3779ea5147b616462c7_cgraph.pdf Graphic file (
+type pdf)
+<use class_t_model_a45494635ca0fd3779ea5147b616462c7_cgraph.pdf>
+Package pdftex.def Info: class_t_model_a45494635ca0fd3779ea5147b616462c7_cgraph
+.pdf  used on input line 225.
+(pdftex.def)             Requested size: 350.0pt x 238.64244pt.
+LaTeX Info: Redefining \. on input line 254.
+LaTeX Info: Redefining \% on input line 254.
+ [107]
+Underfull \hbox (badness 10000) detected at line 255
+[][][]
+ []
+
+ <./class_t_model_ac0d05c1585634d2e9101b75f108c499e_cgraph.pdf>
+<class_t_model_ac0d05c1585634d2e9101b75f108c499e_cgraph.pdf, id=4071, 537.00626
+pt x 100.375pt>
+File: class_t_model_ac0d05c1585634d2e9101b75f108c499e_cgraph.pdf Graphic file (
+type pdf)
+<use class_t_model_ac0d05c1585634d2e9101b75f108c499e_cgraph.pdf>
+Package pdftex.def Info: class_t_model_ac0d05c1585634d2e9101b75f108c499e_cgraph
+.pdf  used on input line 262.
+(pdftex.def)             Requested size: 350.0pt x 65.42062pt.
+ [108] <./class_t_model_a058434cf073381782bfbbe17905bdff9_cgraph.pdf>
+<class_t_model_a058434cf073381782bfbbe17905bdff9_cgraph.pdf, id=4090, 394.47375
+pt x 138.5175pt>
+File: class_t_model_a058434cf073381782bfbbe17905bdff9_cgraph.pdf Graphic file (
+type pdf)
+<use class_t_model_a058434cf073381782bfbbe17905bdff9_cgraph.pdf>
+Package pdftex.def Info: class_t_model_a058434cf073381782bfbbe17905bdff9_cgraph
+.pdf  used on input line 299.
+(pdftex.def)             Requested size: 350.0pt x 122.90184pt.
+
+Underfull \hbox (badness 10000) detected at line 317
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 335
+[][][]
+ []
+
+LaTeX Info: Redefining \. on input line 352.
+LaTeX Info: Redefining \% on input line 352.
+[109]
+Underfull \hbox (badness 10000) detected at line 353
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 366
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 379
+[][][]
+ []
+
+ <./class_t_model_ad7f4a56cd3c7e70307bb75d6d848bafa_cgraph.pdf>
+<class_t_model_ad7f4a56cd3c7e70307bb75d6d848bafa_cgraph.pdf, id=4115, 379.4175p
+t x 138.5175pt>
+File: class_t_model_ad7f4a56cd3c7e70307bb75d6d848bafa_cgraph.pdf Graphic file (
+type pdf)
+<use class_t_model_ad7f4a56cd3c7e70307bb75d6d848bafa_cgraph.pdf>
+Package pdftex.def Info: class_t_model_ad7f4a56cd3c7e70307bb75d6d848bafa_cgraph
+.pdf  used on input line 386.
+(pdftex.def)             Requested size: 350.0pt x 127.78003pt.
+
+Underfull \hbox (badness 10000) detected at line 399
+[][][]
+ []
+
+ <./class_t_model_aa540e17de770b4deab34377af8a27724_cgraph.pdf>
+<class_t_model_aa540e17de770b4deab34377af8a27724_cgraph.pdf, id=4123, 367.3725p
+t x 138.5175pt>
+File: class_t_model_aa540e17de770b4deab34377af8a27724_cgraph.pdf Graphic file (
+type pdf)
+<use class_t_model_aa540e17de770b4deab34377af8a27724_cgraph.pdf>
+Package pdftex.def Info: class_t_model_aa540e17de770b4deab34377af8a27724_cgraph
+.pdf  used on input line 406.
+(pdftex.def)             Requested size: 350.0pt x 131.97554pt.
+ [110]
+Underfull \hbox (badness 10000) detected at line 419
+[][][]
+ []
+
+ <./class_t_model_adde1214e971457ef9b758a131d6dbf3a_cgraph.pdf>
+<class_t_model_adde1214e971457ef9b758a131d6dbf3a_cgraph.pdf, id=4141, 372.39125
+pt x 138.5175pt>
+File: class_t_model_adde1214e971457ef9b758a131d6dbf3a_cgraph.pdf Graphic file (
+type pdf)
+<use class_t_model_adde1214e971457ef9b758a131d6dbf3a_cgraph.pdf>
+Package pdftex.def Info: class_t_model_adde1214e971457ef9b758a131d6dbf3a_cgraph
+.pdf  used on input line 426.
+(pdftex.def)             Requested size: 350.0pt x 130.19377pt.
+LaTeX Info: Redefining \. on input line 443.
+LaTeX Info: Redefining \% on input line 443.
+ [111]
+Underfull \hbox (badness 10000) detected at line 444
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 462
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 480
+[][][]
+ []
+
+[112]
+Underfull \hbox (badness 10000) detected at line 498
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 516
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 534
+[][][]
+ []
+
+ <./class_t_model_a47f72912b3399ef5f306b5ec355c7e43_icgraph.pdf>
+<class_t_model_a47f72912b3399ef5f306b5ec355c7e43_icgraph.pdf, id=4173, 366.3687
+4pt x 150.5625pt>
+File: class_t_model_a47f72912b3399ef5f306b5ec355c7e43_icgraph.pdf Graphic file 
+(type pdf)
+<use class_t_model_a47f72912b3399ef5f306b5ec355c7e43_icgraph.pdf>
+Package pdftex.def Info: class_t_model_a47f72912b3399ef5f306b5ec355c7e43_icgrap
+h.pdf  used on input line 541.
+(pdftex.def)             Requested size: 350.0pt x 143.84453pt.
+LaTeX Info: Redefining \. on input line 544.
+LaTeX Info: Redefining \% on input line 544.
+ [113]
+Underfull \hbox (badness 10000) detected at line 554
+[][][]
+ []
+
+ <./class_t_model_a6c0c433d34ba04805b5531f73cd30963_icgraph.pdf>
+<class_t_model_a6c0c433d34ba04805b5531f73cd30963_icgraph.pdf, id=4191, 531.9875
+pt x 100.375pt>
+File: class_t_model_a6c0c433d34ba04805b5531f73cd30963_icgraph.pdf Graphic file 
+(type pdf)
+<use class_t_model_a6c0c433d34ba04805b5531f73cd30963_icgraph.pdf>
+Package pdftex.def Info: class_t_model_a6c0c433d34ba04805b5531f73cd30963_icgrap
+h.pdf  used on input line 561.
+(pdftex.def)             Requested size: 350.0pt x 66.0394pt.
+
+Underfull \hbox (badness 10000) detected at line 574
+[][][]
+ []
+
+ <./class_t_model_a822ed3dc51f7e3e9d6bf7451b36b6673_icgraph.pdf>
+<class_t_model_a822ed3dc51f7e3e9d6bf7451b36b6673_icgraph.pdf, id=4199, 379.4175
+pt x 188.705pt>
+File: class_t_model_a822ed3dc51f7e3e9d6bf7451b36b6673_icgraph.pdf Graphic file 
+(type pdf)
+<use class_t_model_a822ed3dc51f7e3e9d6bf7451b36b6673_icgraph.pdf>
+Package pdftex.def Info: class_t_model_a822ed3dc51f7e3e9d6bf7451b36b6673_icgrap
+h.pdf  used on input line 581.
+(pdftex.def)             Requested size: 350.0pt x 174.07715pt.
+ [114]
+Underfull \hbox (badness 10000) detected at line 594
+[][][]
+ []
+
+ <./class_t_model_ab6b1b9169e0ef2b450020638d187d9c6_icgraph.pdf>
+<class_t_model_ab6b1b9169e0ef2b450020638d187d9c6_icgraph.pdf, id=4216, 372.3912
+5pt x 100.375pt>
+File: class_t_model_ab6b1b9169e0ef2b450020638d187d9c6_icgraph.pdf Graphic file 
+(type pdf)
+<use class_t_model_ab6b1b9169e0ef2b450020638d187d9c6_icgraph.pdf>
+Package pdftex.def Info: class_t_model_ab6b1b9169e0ef2b450020638d187d9c6_icgrap
+h.pdf  used on input line 601.
+(pdftex.def)             Requested size: 350.0pt x 94.3433pt.
+
+Underfull \hbox (badness 10000) detected at line 614
+[][][]
+ []
+
+ <./class_t_model_ad52f88995427f27d7c4edac053104ea3_icgraph.pdf>
+<class_t_model_ad52f88995427f27d7c4edac053104ea3_icgraph.pdf, id=4224, 394.4737
+5pt x 138.5175pt>
+File: class_t_model_ad52f88995427f27d7c4edac053104ea3_icgraph.pdf Graphic file 
+(type pdf)
+<use class_t_model_ad52f88995427f27d7c4edac053104ea3_icgraph.pdf>
+Package pdftex.def Info: class_t_model_ad52f88995427f27d7c4edac053104ea3_icgrap
+h.pdf  used on input line 621.
+(pdftex.def)             Requested size: 350.0pt x 122.90184pt.
+LaTeX Info: Redefining \. on input line 624.
+LaTeX Info: Redefining \% on input line 624.
+ [115]
+Underfull \hbox (badness 10000) detected at line 639
+[][][]
+ []
+
+ <./class_t_model_ae6fa3c29934151ab3f70edbfbaa0a1fd_icgraph.pdf>
+<class_t_model_ae6fa3c29934151ab3f70edbfbaa0a1fd_icgraph.pdf, id=4243, 359.3425
+pt x 100.375pt>
+File: class_t_model_ae6fa3c29934151ab3f70edbfbaa0a1fd_icgraph.pdf Graphic file 
+(type pdf)
+<use class_t_model_ae6fa3c29934151ab3f70edbfbaa0a1fd_icgraph.pdf>
+Package pdftex.def Info: class_t_model_ae6fa3c29934151ab3f70edbfbaa0a1fd_icgrap
+h.pdf  used on input line 646.
+(pdftex.def)             Requested size: 350.0pt x 97.77255pt.
+ [116]
+Underfull \hbox (badness 10000) detected at line 664
+[][][]
+ []
+
+ <./class_t_model_a6fbeb65e6363c98330168932b3ca9aaa_icgraph.pdf>
+<class_t_model_a6fbeb65e6363c98330168932b3ca9aaa_icgraph.pdf, id=4262, 381.425p
+t x 100.375pt>
+File: class_t_model_a6fbeb65e6363c98330168932b3ca9aaa_icgraph.pdf Graphic file 
+(type pdf)
+<use class_t_model_a6fbeb65e6363c98330168932b3ca9aaa_icgraph.pdf>
+Package pdftex.def Info: class_t_model_a6fbeb65e6363c98330168932b3ca9aaa_icgrap
+h.pdf  used on input line 671.
+(pdftex.def)             Requested size: 350.0pt x 92.1087pt.
+
+Underfull \hbox (badness 10000) detected at line 689
+[][][]
+ []
+
+ <./class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_cgraph.pdf>
+<class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_cgraph.pdf, id=4272, 376.40625
+pt x 100.375pt>
+File: class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_cgraph.pdf Graphic file (
+type pdf)
+<use class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_cgraph.pdf>
+Package pdftex.def Info: class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_cgraph
+.pdf  used on input line 696.
+(pdftex.def)             Requested size: 350.0pt x 93.3401pt.
+ <./class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_icgraph.pdf>
+<class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_icgraph.pdf, id=4280, 364.3612
+5pt x 100.375pt>
+File: class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_icgraph.pdf Graphic file 
+(type pdf)
+<use class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_icgraph.pdf>
+Package pdftex.def Info: class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_icgrap
+h.pdf  used on input line 703.
+(pdftex.def)             Requested size: 350.0pt x 96.42168pt.
+LaTeX Info: Redefining \. on input line 706.
+LaTeX Info: Redefining \% on input line 706.
+ [117]
+Underfull \hbox (badness 10000) detected at line 721
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 739
+[][][]
+ []
+
+ <./class_t_model_a12f72b360e54b0d4406a8fa6e12c6129_icgraph.pdf>
+<class_t_model_a12f72b360e54b0d4406a8fa6e12c6129_icgraph.pdf, id=4299, 537.0062
+6pt x 100.375pt>
+File: class_t_model_a12f72b360e54b0d4406a8fa6e12c6129_icgraph.pdf Graphic file 
+(type pdf)
+<use class_t_model_a12f72b360e54b0d4406a8fa6e12c6129_icgraph.pdf>
+Package pdftex.def Info: class_t_model_a12f72b360e54b0d4406a8fa6e12c6129_icgrap
+h.pdf  used on input line 760.
+(pdftex.def)             Requested size: 350.0pt x 65.42062pt.
+ [118]
+LaTeX Info: Redefining \. on input line 810.
+LaTeX Info: Redefining \% on input line 810.
+ [119])
+(class_t_parameter.tex <./class_t_parameter__coll__graph.pdf>
+<class_t_parameter__coll__graph.pdf, id=4342, 167.62625pt x 293.095pt>
+File: class_t_parameter__coll__graph.pdf Graphic file (type pdf)
+<use class_t_parameter__coll__graph.pdf>
+Package pdftex.def Info: class_t_parameter__coll__graph.pdf  used on input line
+ 18.
+(pdftex.def)             Requested size: 167.0pt x 291.99855pt.
+ [120]
+LaTeX Info: Redefining \. on input line 55.
+LaTeX Info: Redefining \% on input line 55.
+ [121] <./class_t_parameter_afcc4152125de596ee70335325e82f36d_cgraph.pdf>
+<class_t_parameter_afcc4152125de596ee70335325e82f36d_cgraph.pdf, id=4408, 375.4
+025pt x 100.375pt>
+File: class_t_parameter_afcc4152125de596ee70335325e82f36d_cgraph.pdf Graphic fi
+le (type pdf)
+<use class_t_parameter_afcc4152125de596ee70335325e82f36d_cgraph.pdf>
+Package pdftex.def Info: class_t_parameter_afcc4152125de596ee70335325e82f36d_cg
+raph.pdf  used on input line 103.
+(pdftex.def)             Requested size: 350.0pt x 93.58823pt.
+ [122]
+Underfull \hbox (badness 10000) detected at line 126
+[][][]
+ []
+
+ <./class_t_parameter_afe10a5affd1957eb780da584f15ecbe4_icgraph.pdf>
+<class_t_parameter_afe10a5affd1957eb780da584f15ecbe4_icgraph.pdf, id=4432, 358.
+33875pt x 100.375pt>
+File: class_t_parameter_afe10a5affd1957eb780da584f15ecbe4_icgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_parameter_afe10a5affd1957eb780da584f15ecbe4_icgraph.pdf>
+Package pdftex.def Info: class_t_parameter_afe10a5affd1957eb780da584f15ecbe4_ic
+graph.pdf  used on input line 133.
+(pdftex.def)             Requested size: 350.0pt x 98.04518pt.
+
+Underfull \hbox (badness 10000) detected at line 146
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 159
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 172
+[][][]
+ []
+
+LaTeX Info: Redefining \. on input line 180.
+LaTeX Info: Redefining \% on input line 180.
+[123]
+Underfull \hbox (badness 10000) detected at line 190
+[][][]
+ []
+
+ <./class_t_parameter_a7d2f0213501ac8315c03424ea829cbe0_icgraph.pdf>
+<class_t_parameter_a7d2f0213501ac8315c03424ea829cbe0_icgraph.pdf, id=4450, 375.
+4025pt x 100.375pt>
+File: class_t_parameter_a7d2f0213501ac8315c03424ea829cbe0_icgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_parameter_a7d2f0213501ac8315c03424ea829cbe0_icgraph.pdf>
+Package pdftex.def Info: class_t_parameter_a7d2f0213501ac8315c03424ea829cbe0_ic
+graph.pdf  used on input line 197.
+(pdftex.def)             Requested size: 350.0pt x 93.58823pt.
+ <./class_t_parameter_a7d20f5f9dc92d41f5a4629ab65fc417e_cgraph.pdf>
+<class_t_parameter_a7d20f5f9dc92d41f5a4629ab65fc417e_cgraph.pdf, id=4458, 358.3
+3875pt x 100.375pt>
+File: class_t_parameter_a7d20f5f9dc92d41f5a4629ab65fc417e_cgraph.pdf Graphic fi
+le (type pdf)
+<use class_t_parameter_a7d20f5f9dc92d41f5a4629ab65fc417e_cgraph.pdf>
+Package pdftex.def Info: class_t_parameter_a7d20f5f9dc92d41f5a4629ab65fc417e_cg
+raph.pdf  used on input line 219.
+(pdftex.def)             Requested size: 350.0pt x 98.04518pt.
+ [124]
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+[]\T1/pcr/m/n/8 const String TParameter::[]input[]Template = "PARAMETER $\OML/c
+mm/m/it/8 <$\T1/pcr/m/n/8 nombre[]_[]corto$\OML/cmm/m/it/8 >$ $<$\T1/pcr/m/n/8 
+nombre[]_[]largo$\OML/cmm/m/it/8 >$ $<$\T1/pcr/m/n/8 valor$\OML/cmm/m/it/8 >$\T
+1/pcr/m/n/8 "
+ []
+
+) (class_t_reaction.tex <./class_t_reaction__coll__graph.pdf>
+<class_t_reaction__coll__graph.pdf, id=4482, 214.8025pt x 800.9925pt>
+File: class_t_reaction__coll__graph.pdf Graphic file (type pdf)
+<use class_t_reaction__coll__graph.pdf>
+Package pdftex.def Info: class_t_reaction__coll__graph.pdf  used on input line 
+18.
+(pdftex.def)             Requested size: 147.50264pt x 550.0pt.
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
+ [125]
+Underfull \hbox (badness 1033) in paragraph at lines 24--25
+[][] \T1/phv/m/n/10 (String p[]_[]short[]Name, String p[]_[]full[]Name, [] p[]_
+[]sentido, const std::[]vector$\OML/cmm/m/it/10 <$
+ []
+
+[126]
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
+ [127] <./class_t_reaction_ae0662c4665943f5518ae7a8444e759fb_cgraph.pdf>
+<class_t_reaction_ae0662c4665943f5518ae7a8444e759fb_cgraph.pdf, id=4637, 745.78
+625pt x 100.375pt>
+File: class_t_reaction_ae0662c4665943f5518ae7a8444e759fb_cgraph.pdf Graphic fil
+e (type pdf)
+<use class_t_reaction_ae0662c4665943f5518ae7a8444e759fb_cgraph.pdf>
+Package pdftex.def Info: class_t_reaction_ae0662c4665943f5518ae7a8444e759fb_cgr
+aph.pdf  used on input line 127.
+(pdftex.def)             Requested size: 350.0pt x 47.10579pt.
+
+[128] <./class_t_reaction_a861e1e400bc3e97e1e9700c114316a41_cgraph.pdf>
+<class_t_reaction_a861e1e400bc3e97e1e9700c114316a41_cgraph.pdf, id=4656, 413.54
+5pt x 100.375pt>
+File: class_t_reaction_a861e1e400bc3e97e1e9700c114316a41_cgraph.pdf Graphic fil
+e (type pdf)
+<use class_t_reaction_a861e1e400bc3e97e1e9700c114316a41_cgraph.pdf>
+Package pdftex.def Info: class_t_reaction_a861e1e400bc3e97e1e9700c114316a41_cgr
+aph.pdf  used on input line 158.
+(pdftex.def)             Requested size: 350.0pt x 84.95308pt.
+ <./class_t_reaction_a861e1e400bc3e97e1e9700c114316a41_icgraph.pdf>
+<class_t_reaction_a861e1e400bc3e97e1e9700c114316a41_icgraph.pdf, id=4664, 582.1
+75pt x 100.375pt>
+File: class_t_reaction_a861e1e400bc3e97e1e9700c114316a41_icgraph.pdf Graphic fi
+le (type pdf)
+<use class_t_reaction_a861e1e400bc3e97e1e9700c114316a41_icgraph.pdf>
+Package pdftex.def Info: class_t_reaction_a861e1e400bc3e97e1e9700c114316a41_icg
+raph.pdf  used on input line 165.
+(pdftex.def)             Requested size: 350.0pt x 60.34645pt.
+
+Underfull \hbox (badness 10000) detected at line 178
+[][][]
+ []
+
+ <./class_t_reaction_a910b2d30b88293dc97f76300db9f3905_icgraph.pdf>
+<class_t_reaction_a910b2d30b88293dc97f76300db9f3905_icgraph.pdf, id=4672, 424.5
+8624pt x 200.75pt>
+File: class_t_reaction_a910b2d30b88293dc97f76300db9f3905_icgraph.pdf Graphic fi
+le (type pdf)
+<use class_t_reaction_a910b2d30b88293dc97f76300db9f3905_icgraph.pdf>
+Package pdftex.def Info: class_t_reaction_a910b2d30b88293dc97f76300db9f3905_icg
+raph.pdf  used on input line 185.
+(pdftex.def)             Requested size: 350.0pt x 165.49213pt.
+LaTeX Info: Redefining \. on input line 188.
+LaTeX Info: Redefining \% on input line 188.
+ [129]
+Underfull \hbox (badness 10000) detected at line 198
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 211
+[][][]
+ []
+
+ <./class_t_reaction_ab2d2437342af2beeaa3818be3cf903b5_icgraph.pdf>
+<class_t_reaction_ab2d2437342af2beeaa3818be3cf903b5_icgraph.pdf, id=4690, 785.9
+3625pt x 238.8925pt>
+File: class_t_reaction_ab2d2437342af2beeaa3818be3cf903b5_icgraph.pdf Graphic fi
+le (type pdf)
+<use class_t_reaction_ab2d2437342af2beeaa3818be3cf903b5_icgraph.pdf>
+Package pdftex.def Info: class_t_reaction_ab2d2437342af2beeaa3818be3cf903b5_icg
+raph.pdf  used on input line 218.
+(pdftex.def)             Requested size: 350.0pt x 106.38884pt.
+ [130]
+Underfull \hbox (badness 10000) detected at line 231
+[][][]
+ []
+
+ <./class_t_reaction_a7e87afed02be63e8a789f97bebdc124a_icgraph.pdf>
+<class_t_reaction_a7e87afed02be63e8a789f97bebdc124a_icgraph.pdf, id=4708, 791.9
+5876pt x 238.8925pt>
+File: class_t_reaction_a7e87afed02be63e8a789f97bebdc124a_icgraph.pdf Graphic fi
+le (type pdf)
+<use class_t_reaction_a7e87afed02be63e8a789f97bebdc124a_icgraph.pdf>
+Package pdftex.def Info: class_t_reaction_a7e87afed02be63e8a789f97bebdc124a_icg
+raph.pdf  used on input line 238.
+(pdftex.def)             Requested size: 350.0pt x 105.57596pt.
+
+Underfull \hbox (badness 10000) detected at line 256
+[][][]
+ []
+
+ <./class_t_reaction_ada88866d9b8c955b03a1415181994ce6_icgraph.pdf>
+<class_t_reaction_ada88866d9b8c955b03a1415181994ce6_icgraph.pdf, id=4718, 792.9
+625pt x 728.7225pt>
+File: class_t_reaction_ada88866d9b8c955b03a1415181994ce6_icgraph.pdf Graphic fi
+le (type pdf)
+<use class_t_reaction_ada88866d9b8c955b03a1415181994ce6_icgraph.pdf>
+Package pdftex.def Info: class_t_reaction_ada88866d9b8c955b03a1415181994ce6_icg
+raph.pdf  used on input line 263.
+(pdftex.def)             Requested size: 350.0pt x 321.65076pt.
+LaTeX Info: Redefining \. on input line 266.
+LaTeX Info: Redefining \% on input line 266.
+ [131]
+Underfull \hbox (badness 10000) detected at line 281
+[][][]
+ []
+
+ <./class_t_reaction_ae3762acaeb86390a70fb57a9c8061e39_icgraph.pdf>
+<class_t_reaction_ae3762acaeb86390a70fb57a9c8061e39_icgraph.pdf, id=4737, 830.1
+0126pt x 1041.8925pt>
+File: class_t_reaction_ae3762acaeb86390a70fb57a9c8061e39_icgraph.pdf Graphic fi
+le (type pdf)
+<use class_t_reaction_ae3762acaeb86390a70fb57a9c8061e39_icgraph.pdf>
+Package pdftex.def Info: class_t_reaction_ae3762acaeb86390a70fb57a9c8061e39_icg
+raph.pdf  used on input line 288.
+(pdftex.def)             Requested size: 350.0pt x 439.29295pt.
+ [132]
+Underfull \hbox (badness 10000) detected at line 301
+[][][]
+ []
+
+ <./class_t_reaction_a9fc380df98f36344ae0686632b22892c_icgraph.pdf>
+<class_t_reaction_a9fc380df98f36344ae0686632b22892c_icgraph.pdf, id=4753, 585.1
+8625pt x 463.7325pt>
+File: class_t_reaction_a9fc380df98f36344ae0686632b22892c_icgraph.pdf Graphic fi
+le (type pdf)
+<use class_t_reaction_a9fc380df98f36344ae0686632b22892c_icgraph.pdf>
+Package pdftex.def Info: class_t_reaction_a9fc380df98f36344ae0686632b22892c_icg
+raph.pdf  used on input line 308.
+(pdftex.def)             Requested size: 350.0pt x 277.37129pt.
+LaTeX Info: Redefining \. on input line 311.
+LaTeX Info: Redefining \% on input line 311.
+ [133] <./class_t_reaction_a9ff586b1e6a409124165d40bddc9482a_cgraph.pdf>
+<class_t_reaction_a9ff586b1e6a409124165d40bddc9482a_cgraph.pdf, id=4768, 597.23
+125pt x 100.375pt>
+File: class_t_reaction_a9ff586b1e6a409124165d40bddc9482a_cgraph.pdf Graphic fil
+e (type pdf)
+<use class_t_reaction_a9ff586b1e6a409124165d40bddc9482a_cgraph.pdf>
+Package pdftex.def Info: class_t_reaction_a9ff586b1e6a409124165d40bddc9482a_cgr
+aph.pdf  used on input line 332.
+(pdftex.def)             Requested size: 350.0pt x 58.82404pt.
+ <./class_t_reaction_a9ff586b1e6a409124165d40bddc9482a_icgraph.pdf>
+<class_t_reaction_a9ff586b1e6a409124165d40bddc9482a_icgraph.pdf, id=4776, 376.4
+0625pt x 100.375pt>
+File: class_t_reaction_a9ff586b1e6a409124165d40bddc9482a_icgraph.pdf Graphic fi
+le (type pdf)
+<use class_t_reaction_a9ff586b1e6a409124165d40bddc9482a_icgraph.pdf>
+Package pdftex.def Info: class_t_reaction_a9ff586b1e6a409124165d40bddc9482a_icg
+raph.pdf  used on input line 339.
+(pdftex.def)             Requested size: 350.0pt x 93.3401pt.
+ [134]
+Underfull \hbox (badness 10000) detected at line 357
+[][][]
+ []
+
+ <./class_t_reaction_a3222fa351cbf4ad913d1d47c650676ce_icgraph.pdf>
+<class_t_reaction_a3222fa351cbf4ad913d1d47c650676ce_icgraph.pdf, id=4793, 745.7
+8625pt x 100.375pt>
+File: class_t_reaction_a3222fa351cbf4ad913d1d47c650676ce_icgraph.pdf Graphic fi
+le (type pdf)
+<use class_t_reaction_a3222fa351cbf4ad913d1d47c650676ce_icgraph.pdf>
+Package pdftex.def Info: class_t_reaction_a3222fa351cbf4ad913d1d47c650676ce_icg
+raph.pdf  used on input line 364.
+(pdftex.def)             Requested size: 350.0pt x 47.10579pt.
+ <./class_t_reaction_affa3bd3d32b5a15fc41ada24088fedb3_cgraph.pdf>
+<class_t_reaction_affa3bd3d32b5a15fc41ada24088fedb3_cgraph.pdf, id=4801, 363.35
+75pt x 252.945pt>
+File: class_t_reaction_affa3bd3d32b5a15fc41ada24088fedb3_cgraph.pdf Graphic fil
+e (type pdf)
+<use class_t_reaction_affa3bd3d32b5a15fc41ada24088fedb3_cgraph.pdf>
+Package pdftex.def Info: class_t_reaction_affa3bd3d32b5a15fc41ada24088fedb3_cgr
+aph.pdf  used on input line 386.
+(pdftex.def)             Requested size: 350.0pt x 243.65425pt.
+LaTeX Info: Redefining \. on input line 389.
+LaTeX Info: Redefining \% on input line 389.
+ [135]
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
+[]\T1/pcr/m/n/8 const String TReaction::[]input[]Template = "REACTION $\OML/cmm
+/m/it/8 <$\T1/pcr/m/n/8 nombre[]_[]corto$\OML/cmm/m/it/8 >$ $<$\T1/pcr/m/n/8 no
+mbre[]_[]largo$\OML/cmm/m/it/8 >$ $<$\T1/pcr/m/n/8 lista[]_[]
+ []
+
+[136]) (class_t_simulation.tex <./class_t_simulation__coll__graph.pdf>
+<class_t_simulation__coll__graph.pdf, id=4844, 235.88126pt x 453.695pt>
+File: class_t_simulation__coll__graph.pdf Graphic file (type pdf)
+<use class_t_simulation__coll__graph.pdf>
+Package pdftex.def Info: class_t_simulation__coll__graph.pdf  used on input lin
+e 18.
+(pdftex.def)             Requested size: 235.0pt x 452.00471pt.
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
+ [137]
+[138]
+LaTeX Info: Redefining \. on input line 104.
+LaTeX Info: Redefining \% on input line 104.
+ [139] <./class_t_simulation_aff057868b43d4ed0fe2420ae8e53e995_icgraph.pdf>
+<class_t_simulation_aff057868b43d4ed0fe2420ae8e53e995_icgraph.pdf, id=5032, 387
+.4475pt x 112.42pt>
+File: class_t_simulation_aff057868b43d4ed0fe2420ae8e53e995_icgraph.pdf Graphic 
+file (type pdf)
+<use class_t_simulation_aff057868b43d4ed0fe2420ae8e53e995_icgraph.pdf>
+Package pdftex.def Info: class_t_simulation_aff057868b43d4ed0fe2420ae8e53e995_i
+cgraph.pdf  used on input line 145.
+(pdftex.def)             Requested size: 350.0pt x 101.55615pt.
+ [140] <./class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_cgraph.pdf>
+<class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_cgraph.pdf, id=5051, 400.
+49625pt x 100.375pt>
+File: class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_cgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_cgraph.pdf>
+Package pdftex.def Info: class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_c
+graph.pdf  used on input line 172.
+(pdftex.def)             Requested size: 350.0pt x 87.72374pt.
+ <./class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_icgraph.pdf>
+<class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_icgraph.pdf, id=5059, 388
+.45125pt x 100.375pt>
+File: class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_icgraph.pdf Graphic 
+file (type pdf)
+<use class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_icgraph.pdf>
+Package pdftex.def Info: class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_i
+cgraph.pdf  used on input line 179.
+(pdftex.def)             Requested size: 350.0pt x 90.4408pt.
+LaTeX Info: Redefining \. on input line 196.
+LaTeX Info: Redefining \% on input line 196.
+ [141] <./class_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001_cgraph.pdf>
+<class_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001_cgraph.pdf, id=5075, 400.
+49625pt x 112.42pt>
+File: class_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001_cgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001_cgraph.pdf>
+Package pdftex.def Info: class_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001_c
+graph.pdf  used on input line 201.
+(pdftex.def)             Requested size: 350.0pt x 98.25061pt.
+ <./class_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6_icgraph.pdf>
+<class_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6_icgraph.pdf, id=5083, 400
+.49625pt x 100.375pt>
+File: class_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6_icgraph.pdf Graphic 
+file (type pdf)
+<use class_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6_icgraph.pdf>
+Package pdftex.def Info: class_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6_i
+cgraph.pdf  used on input line 223.
+(pdftex.def)             Requested size: 350.0pt x 87.72374pt.
+ [142] <./class_t_simulation_a2b2de32d07b74c6c3a76b67215f15800_cgraph.pdf>
+<class_t_simulation_a2b2de32d07b74c6c3a76b67215f15800_cgraph.pdf, id=5103, 410.
+53375pt x 112.42pt>
+File: class_t_simulation_a2b2de32d07b74c6c3a76b67215f15800_cgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_simulation_a2b2de32d07b74c6c3a76b67215f15800_cgraph.pdf>
+Package pdftex.def Info: class_t_simulation_a2b2de32d07b74c6c3a76b67215f15800_c
+graph.pdf  used on input line 245.
+(pdftex.def)             Requested size: 350.0pt x 95.8422pt.
+
+Underfull \hbox (badness 10000) detected at line 273
+[][][]
+ []
+
+LaTeX Info: Redefining \. on input line 290.
+LaTeX Info: Redefining \% on input line 290.
+[143]
+Underfull \hbox (badness 10000) detected at line 291
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 309
+[][][]
+ []
+
+ <./class_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5_icgraph.pdf>
+<class_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5_icgraph.pdf, id=5128, 570
+.13pt x 100.375pt>
+File: class_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5_icgraph.pdf Graphic 
+file (type pdf)
+<use class_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5_icgraph.pdf>
+Package pdftex.def Info: class_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5_i
+cgraph.pdf  used on input line 316.
+(pdftex.def)             Requested size: 350.0pt x 61.6192pt.
+ [144]
+Underfull \hbox (badness 10000) detected at line 334
+[][][]
+ []
+
+ <./class_t_simulation_a1179f8897b35b9798dd3da62049d6c43_icgraph.pdf>
+<class_t_simulation_a1179f8897b35b9798dd3da62049d6c43_icgraph.pdf, id=5147, 410
+.53375pt x 162.6075pt>
+File: class_t_simulation_a1179f8897b35b9798dd3da62049d6c43_icgraph.pdf Graphic 
+file (type pdf)
+<use class_t_simulation_a1179f8897b35b9798dd3da62049d6c43_icgraph.pdf>
+Package pdftex.def Info: class_t_simulation_a1179f8897b35b9798dd3da62049d6c43_i
+cgraph.pdf  used on input line 341.
+(pdftex.def)             Requested size: 350.0pt x 138.62889pt.
+
+Underfull \hbox (badness 10000) detected at line 359
+[][][]
+ []
+
+ <./class_t_simulation_a528e9ed876aaea22481612e8a6fe2e95_icgraph.pdf>
+<class_t_simulation_a528e9ed876aaea22481612e8a6fe2e95_icgraph.pdf, id=5161, 397
+.485pt x 100.375pt>
+File: class_t_simulation_a528e9ed876aaea22481612e8a6fe2e95_icgraph.pdf Graphic 
+file (type pdf)
+<use class_t_simulation_a528e9ed876aaea22481612e8a6fe2e95_icgraph.pdf>
+Package pdftex.def Info: class_t_simulation_a528e9ed876aaea22481612e8a6fe2e95_i
+cgraph.pdf  used on input line 376.
+(pdftex.def)             Requested size: 350.0pt x 88.38692pt.
+LaTeX Info: Redefining \. on input line 387.
+LaTeX Info: Redefining \% on input line 387.
+ [145]
+Underfull \hbox (badness 10000) detected at line 389
+[][][]
+ []
+
+ <./class_t_simulation_a7950e734c85e85bedf4e477980db9a4d_cgraph.pdf>
+<class_t_simulation_a7950e734c85e85bedf4e477980db9a4d_cgraph.pdf, id=5180, 582.
+175pt x 226.8475pt>
+File: class_t_simulation_a7950e734c85e85bedf4e477980db9a4d_cgraph.pdf Graphic f
+ile (type pdf)
+<use class_t_simulation_a7950e734c85e85bedf4e477980db9a4d_cgraph.pdf>
+Package pdftex.def Info: class_t_simulation_a7950e734c85e85bedf4e477980db9a4d_c
+graph.pdf  used on input line 406.
+(pdftex.def)             Requested size: 350.0pt x 136.383pt.
+ [146]
+LaTeX Info: Redefining \. on input line 498.
+LaTeX Info: Redefining \% on input line 498.
+
+[147] [148]
+LaTeX Info: Redefining \. on input line 611.
+LaTeX Info: Redefining \% on input line 611.
+ [149]) (struct_t_substance.tex <./struct_t_substance__coll__graph.pdf>
+<struct_t_substance__coll__graph.pdf, id=5275, 181.67876pt x 415.5525pt>
+File: struct_t_substance__coll__graph.pdf Graphic file (type pdf)
+<use struct_t_substance__coll__graph.pdf>
+Package pdftex.def Info: struct_t_substance__coll__graph.pdf  used on input lin
+e 18.
+(pdftex.def)             Requested size: 181.0pt x 414.01065pt.
+ [150]
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+ [151]) (_metabolic_elements_8cpp.tex <./_metabolic_elements_8cpp__incl.pdf>
+<_metabolic_elements_8cpp__incl.pdf, id=5321, 198.7425pt x 212.795pt>
+File: _metabolic_elements_8cpp__incl.pdf Graphic file (type pdf)
+<use _metabolic_elements_8cpp__incl.pdf>
+Package pdftex.def Info: _metabolic_elements_8cpp__incl.pdf  used on input line
+ 8.
+(pdftex.def)             Requested size: 198.0pt x 212.00543pt.
+) (_metabolic_elements_8h.tex <./_metabolic_elements_8h__incl.pdf>
+<_metabolic_elements_8h__incl.pdf, id=5329, 188.705pt x 156.585pt>
+File: _metabolic_elements_8h__incl.pdf Graphic file (type pdf)
+<use _metabolic_elements_8h__incl.pdf>
+Package pdftex.def Info: _metabolic_elements_8h__incl.pdf  used on input line 9
+.
+(pdftex.def)             Requested size: 188.0pt x 155.99922pt.
+ <./_metabolic_elements_8h__dep__incl.pdf>
+<_metabolic_elements_8h__dep__incl.pdf, id=5337, 270.00874pt x 212.795pt>
+File: _metabolic_elements_8h__dep__incl.pdf Graphic file (type pdf)
+<use _metabolic_elements_8h__dep__incl.pdf>
+Package pdftex.def Info: _metabolic_elements_8h__dep__incl.pdf  used on input l
+ine 16.
+(pdftex.def)             Requested size: 269.0pt x 212.00543pt.
+ [152]
+LaTeX Info: Redefining \. on input line 62.
+LaTeX Info: Redefining \% on input line 62.
+ [153])
+(_metabolic_elements_8h_source.tex
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 1
+2.
+
+(C:\Users\usuario\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)
+[154]
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
+ [155] [156]
+LaTeX Info: Redefining \. on input line 260.
+LaTeX Info: Redefining \% on input line 260.
+ [157] [158]
+LaTeX Info: Redefining \. on input line 434.
+LaTeX Info: Redefining \% on input line 434.
+ [159]) (_prototipo_8cpp.tex <./_prototipo_8cpp__incl.pdf>
+<_prototipo_8cpp__incl.pdf, id=5910, 182.6825pt x 156.585pt>
+File: _prototipo_8cpp__incl.pdf Graphic file (type pdf)
+<use _prototipo_8cpp__incl.pdf>
+Package pdftex.def Info: _prototipo_8cpp__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 182.0pt x 156.0064pt.
+) (_prototipo_p_c_h1_8h.tex [160] <./_prototipo_p_c_h1_8h__incl.pdf>
+<_prototipo_p_c_h1_8h__incl.pdf, id=5948, 182.6825pt x 156.585pt>
+File: _prototipo_p_c_h1_8h__incl.pdf Graphic file (type pdf)
+<use _prototipo_p_c_h1_8h__incl.pdf>
+Package pdftex.def Info: _prototipo_p_c_h1_8h__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 182.0pt x 156.0064pt.
+)
+(_prototipo_p_c_h1_8h_source.tex) (_simulation_8cpp.tex <./_simulation_8cpp__in
+cl.pdf>
+<_simulation_8cpp__incl.pdf, id=5958, 483.8075pt x 212.795pt>
+File: _simulation_8cpp__incl.pdf Graphic file (type pdf)
+<use _simulation_8cpp__incl.pdf>
+Package pdftex.def Info: _simulation_8cpp__incl.pdf  used on input line 8.
+(pdftex.def)             Requested size: 350.0pt x 153.94933pt.
+) (_simulation_8h.tex <./_simulation_8h__incl.pdf>
+<_simulation_8h__incl.pdf, id=5966, 483.8075pt x 156.585pt>
+File: _simulation_8h__incl.pdf Graphic file (type pdf)
+<use _simulation_8h__incl.pdf>
+Package pdftex.def Info: _simulation_8h__incl.pdf  used on input line 12.
+(pdftex.def)             Requested size: 350.0pt x 113.28348pt.
+LaTeX Info: Redefining \. on input line 14.
+LaTeX Info: Redefining \% on input line 14.
+ [161] <./_simulation_8h__dep__incl.pdf>
+<_simulation_8h__dep__incl.pdf, id=5983, 231.86626pt x 212.795pt>
+File: _simulation_8h__dep__incl.pdf Graphic file (type pdf)
+<use _simulation_8h__dep__incl.pdf>
+Package pdftex.def Info: _simulation_8h__dep__incl.pdf  used on input line 19.
+(pdftex.def)             Requested size: 231.0pt x 212.00543pt.
+ [162]) (_simulation_8h_source.tex
+LaTeX Info: Redefining \. on input line 63.
+LaTeX Info: Redefining \% on input line 63.
+ [163]) (_unit1_8cpp.tex <./_unit1_8cpp__incl.pdf>
+<_unit1_8cpp__incl.pdf, id=6139, 2171.11125pt x 269.005pt>
+File: _unit1_8cpp__incl.pdf Graphic file (type pdf)
+<use _unit1_8cpp__incl.pdf>
+Package pdftex.def Info: _unit1_8cpp__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 350.0pt x 43.36183pt.
+) (_unit1_8h.tex [164] <./_unit1_8h__incl.pdf>
+<_unit1_8h__incl.pdf, id=6161, 2171.11125pt x 212.795pt>
+File: _unit1_8h__incl.pdf Graphic file (type pdf)
+<use _unit1_8h__incl.pdf>
+Package pdftex.def Info: _unit1_8h__incl.pdf  used on input line 28.
+(pdftex.def)             Requested size: 350.0pt x 34.30115pt.
+ <./_unit1_8h__dep__incl.pdf>
+<_unit1_8h__dep__incl.pdf, id=6169, 138.5175pt x 156.585pt>
+File: _unit1_8h__dep__incl.pdf Graphic file (type pdf)
+<use _unit1_8h__dep__incl.pdf>
+Package pdftex.def Info: _unit1_8h__dep__incl.pdf  used on input line 35.
+(pdftex.def)             Requested size: 138.0pt x 156.00162pt.
+LaTeX Info: Redefining \. on input line 47.
+LaTeX Info: Redefining \% on input line 47.
+ [165]) (_unit1_8h_source.tex [166]
+LaTeX Info: Redefining \. on input line 143.
+LaTeX Info: Redefining \% on input line 143.
+ [167]) (_unit2_8cpp.tex <./_unit2_8cpp__incl.pdf>
+<_unit2_8cpp__incl.pdf, id=6442, 606.265pt x 212.795pt>
+File: _unit2_8cpp__incl.pdf Graphic file (type pdf)
+<use _unit2_8cpp__incl.pdf>
+Package pdftex.def Info: _unit2_8cpp__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 350.0pt x 122.8497pt.
+ [168]) (_unit2_8h.tex <./_unit2_8h__incl.pdf>
+<_unit2_8h__incl.pdf, id=6460, 606.265pt x 156.585pt>
+File: _unit2_8h__incl.pdf Graphic file (type pdf)
+<use _unit2_8h__incl.pdf>
+Package pdftex.def Info: _unit2_8h__incl.pdf  used on input line 12.
+(pdftex.def)             Requested size: 350.0pt x 90.39883pt.
+ <./_unit2_8h__dep__incl.pdf>
+<_unit2_8h__dep__incl.pdf, id=6468, 209.78375pt x 212.795pt>
+File: _unit2_8h__dep__incl.pdf Graphic file (type pdf)
+<use _unit2_8h__dep__incl.pdf>
+Package pdftex.def Info: _unit2_8h__dep__incl.pdf  used on input line 19.
+(pdftex.def)             Requested size: 209.0pt x 211.99895pt.
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
+ [169]) (_unit2_8h_source.tex [170])
+LaTeX Info: Redefining \. on input line 264.
+LaTeX Info: Redefining \% on input line 264.
+ [171] [172
+
+]
+(refman.ind [173
+
+]
+LaTeX Info: Redefining \. on input line 246.
+LaTeX Info: Redefining \% on input line 246.
+ [174]
+LaTeX Info: Redefining \. on input line 370.
+LaTeX Info: Redefining \% on input line 370.
+ [175]
+LaTeX Info: Redefining \. on input line 496.
+LaTeX Info: Redefining \% on input line 496.
+ [176]
+LaTeX Info: Redefining \. on input line 618.
+LaTeX Info: Redefining \% on input line 618.
+ [177]
+LaTeX Info: Redefining \. on input line 734.
+LaTeX Info: Redefining \% on input line 734.
+ [178]
+LaTeX Info: Redefining \. on input line 851.
+LaTeX Info: Redefining \% on input line 851.
+ [179]
+LaTeX Info: Redefining \. on input line 961.
+LaTeX Info: Redefining \% on input line 961.
+ [180]) (refman.aux
+LaTeX Info: Redefining \. on input line 9.
+LaTeX Info: Redefining \% on input line 9.
+)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+ ***********
+Package rerunfilecheck Info: File `refman.out' has not changed.
+(rerunfilecheck)             Checksum: 0D2F522E747995741D7EDDEE428ECA8E;25669.
+ ) 
+Here is how much of TeX's memory you used:
+ 25314 strings out of 467871
+ 550030 string characters out of 5417408
+ 925705 words of memory out of 5000000
+ 52416 multiletter control sequences out of 15000+600000
+ 682869 words of font info for 115 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 103i,16n,117p,1505b,1265s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb><C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb><C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb><C:/Users/usuario/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/usuario/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/usuario/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/usuar
+io/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/U
+sers/usuario/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><
+C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.p
+fb><C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr
+o8a.pfb><C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helveti
+c/uhvb8a.pfb><C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/type1/urw/he
+lvetic/uhvb8ac.pfb><C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/type1/
+urw/helvetic/uhvr8a.pfb><C:/Users/usuario/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (183 pages, 4487694 bytes).
+PDF statistics:
+ 7552 PDF objects out of 8907 (max. 8388607)
+ 1341 named destinations out of 1440 (max. 500000)
+ 1686 words of extra memory for PDF output out of 10000 (max. 10000000)
+

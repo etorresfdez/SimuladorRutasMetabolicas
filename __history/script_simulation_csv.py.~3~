@@ -1,0 +1,69 @@
+'''
+script de python para lanzar el solver de sistemas de ecuaciones diferenciales
+para problemas de valores iniciales.
+
+INPUT: Formato del archivo de entrada
+    ecuaciones;- p[0]*x[0] + p[1]*x[1];- p[37]*x[5]*x[7] + p[38]*x[6]**2
+    X0;1;0.5;2
+    p;0.01;0.5;10
+    tini;0
+    tfin;100
+    ciclos;1000
+    method;Radau
+
+OUTPUT: Formato del archivo de salida
+    0.0;1.55307;0.573074
+    1.0;1.6;0.03
+    2.0;1.6;0.006
+'''
+
+import csv
+import sys
+import numpy as np
+from scipy.integrate import solve_ivp
+
+print("Lanzando " + sys.argv[0] + "...")
+
+# 1. Lee las variables de entrada del primer argumento
+datos = {}
+
+with open(sys.argv[1], encoding="utf-8") as f:
+    for line in f:
+        line = line.strip()
+        if not line:
+            continue
+        clave, *vals = line.split(";")
+        datos[clave] = vals
+
+ecuaciones = datos["ecuaciones"]
+X0 = list(map(float, datos["X0"]))
+p = list(map(float, datos["p"]))
+tini = float(datos["tini"][0])
+tfin = float(datos["tfin"][0])
+ciclos = int(datos["ciclos"][0])
+method = datos["method"][0]
+
+# 2. Define el sistema a partir del vector de strings mediante eval
+def sistema(t, x, p):
+    dxdt = np.zeros(len(x))
+    for i, eq_str in enumerate(ecuaciones):
+        dxdt[i] = eval(eq_str)
+    return dxdt
+
+# 3. Llama al solver de ecuaciones diferenciales de scipy
+t_eval = np.linspace(tini, tfin, ciclos)
+sol = solve_ivp(sistema, (tini, tfin), X0, args=(p,), method=method, t_eval=t_eval)
+
+# 4. Guarda los resultados y crea un archivo csv de salida
+with open(sys.argv[2], "w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f, delimiter=";")
+
+    # Datos
+    for i in range(sol.t.size):
+        fila = [sol.t[i]] + sol.y[:, i].tolist()
+        writer.writerow(fila)
+
+# 5. Forzar cierre de buffers y proceso
+sys.stdout.flush()
+sys.stderr.flush()
+sys.exit(0)

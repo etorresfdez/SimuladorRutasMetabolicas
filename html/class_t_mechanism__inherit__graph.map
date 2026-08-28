@@ -1,0 +1,15 @@
+<map id="TMechanism" name="TMechanism">
+<area shape="rect" id="Node000001" title="Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo." alt="" coords="472,5,634,459"/>
+<area shape="rect" id="Node000002" href="$class_t_hill_inhibidor_activador.html" title="Representa un mecanismo que sigue la ecuacion de Hill con un inhibidor y un activador...." alt="" coords="5,517,168,693"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="458,297,327,393,253,450,182,509,170,520,166,516,178,505,249,446,323,389,462,293"/>
+<area shape="rect" id="Node000003" href="$class_t_m_m_bi_bi_inhibidor.html" title="Representa un mecanismo de tipo Michaelis&#45;Menten con dos sustratos, dos productos e inhibicion compet..." alt="" coords="192,507,354,704"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="466,351,349,509,345,505,461,354"/>
+<area shape="rect" id="Node000004" href="$class_t_m_m_bi_sec_aleatorio.html" title="Representa un mecanismo del tipo Michaelis&#45;Menten bisustrato secuencial aleatorio...." alt="" coords="379,507,541,704"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="495,471,487,509,482,505,491,475"/>
+<area shape="rect" id="Node000005" href="$class_t_m_m_uni_bi_inhibidor.html" title="Representa un mecanismo de tipo Michaelis&#45;Menten con un sustrato, dos productos e inhibicion competit..." alt="" coords="566,507,728,704"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="615,471,625,508,620,506,613,476"/>
+<area shape="rect" id="Node000006" href="$class_t_m_m_uni_inhibidor.html" title="Representa un mecanismo del tipo Michaelis&#45;Menten unisustrato con inhibicion competitiva...." alt="" coords="752,507,914,704"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="645,350,763,507,758,507,642,355"/>
+<area shape="rect" id="Node000007" href="$class_t_mass_action.html" title="Representa un mecanismo que sigue la ley de accion de masas. Hereda de TMechanism." alt="" coords="939,507,1101,704"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="647,292,784,389,858,446,929,505,942,519,937,518,925,509,854,450,780,393,646,298"/>
+</map>

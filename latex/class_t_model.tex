@@ -1,0 +1,821 @@
+\doxysubsection{Referencia de la clase TModel}
+\hypertarget{class_t_model}{}\label{class_t_model}\index{TModel@{TModel}}
+
+
+Clase para encapsular un modelo completo, que representa una ruta metabolica especifica.  
+
+
+
+
+{\ttfamily \+\#include $<$Metabolic\+Elements.\+h$>$}
+
+
+
+Diagrama de colaboración de TModel:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{class_t_model__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_model_af5af410318ed4ddff620cb139d0780a9}{TModel}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_t_model}{TModel}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_model_a058434cf073381782bfbbe17905bdff9}{fill\+Reactions\+Combo\+Box}} (TCombo\+Box \texorpdfstring{$\ast$}{*}combo\+Reactions)
+\begin{DoxyCompactList}\small\item\em Rellena el objeto combo\+Reactions con la lista de las reacciones cargadas en el modelo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_model_a88ca28b8b4a021f3b142cb4c76200326}{fill\+Mechanism\+Combo\+Box}} (TCombo\+Box \texorpdfstring{$\ast$}{*}combo\+Mecanismos)
+\begin{DoxyCompactList}\small\item\em Rellena el objeto combo\+Mecanismos con la lista de tipos de mecanismos disponibles. Usa el contenido del mapa mechanism\+Templates de la clase. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_model_a598e3057d35978e144a03283964ce74f}{get\+Mechanism\+Template}} (const String \&key)
+\begin{DoxyCompactList}\small\item\em Dado el tipo de mecanismo (key), devuelve la plantilla de entrada de datos asociada. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_model_a9c87a62fe5b7ac1d04f7fff6070f184d}{add\+Metabolite}} (const \doxymbox{\hyperlink{class_t_metabolite}{TMetabolite}} \&metabolite)
+\begin{DoxyCompactList}\small\item\em Metodo para aniadir un metabolito al modelo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_model_a8d88ba06c296c10c7bf7b642fa257a00}{add\+Parameter}} (const \doxymbox{\hyperlink{class_t_parameter}{TParameter}} \&parameter)
+\begin{DoxyCompactList}\small\item\em Metodo para aniadir un parametro al modelo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_model_a393553bd5301af8da9ba6304b04cf21b}{add\+Reaction}} (const \doxymbox{\hyperlink{class_t_reaction}{TReaction}} \&reaction)
+\begin{DoxyCompactList}\small\item\em Metodo para aniadir una reaccion al modelo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_model_adac18e3346097ccc0be6894963b2d1af}{add\+Mechanism}} (const \doxymbox{\hyperlink{class_t_mechanism}{TMechanism}} \&mechanism)
+\begin{DoxyCompactList}\small\item\em Metodo para aniadir un mecanismo al modelo. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_t_metabolite}{TMetabolite}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_model_a44f82fb9d342458c072ed3dea15b7f43}{find\+Metabolite}} (String name) const
+\begin{DoxyCompactList}\small\item\em Dado el nombre corto de un metabolito, lo busca en el vector de metabolitos del modelo. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_t_parameter}{TParameter}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_model_adf78ac24d7abaaf99561876099b9c2c9}{find\+Parameter}} (String name) const
+\begin{DoxyCompactList}\small\item\em Dado el nombre corto de un parametro, lo busca en el vector de parametros del modelo. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_t_reaction}{TReaction}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_model_a8258971c01053ab6a05f59871b25857a}{find\+Reaction}} (String name) const
+\begin{DoxyCompactList}\small\item\em Dado el nombre corto de una reaccion, lo busca en el vector de reacciones del modelo. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_t_mechanism}{TMechanism}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6}{gives\+Mechanism}} (String name\+Reaction) const
+\begin{DoxyCompactList}\small\item\em Dado el nombre corto de una reaccion, devuelve el mecanismo cargado en el modelo que la describe. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_t_metabolite}{TMetabolite}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_model_a47f72912b3399ef5f306b5ec355c7e43}{get\+Metabolite}} (int i) const
+\begin{DoxyCompactList}\small\item\em Dado el indice de un metabolito, lo busca en el vector de metabolitos del modelo. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_t_parameter}{TParameter}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_model_ae6fa3c29934151ab3f70edbfbaa0a1fd}{get\+Parameter}} (int i) const
+\begin{DoxyCompactList}\small\item\em Dado el indice de un parametro, lo busca en el vector de parametros del modelo. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_t_reaction}{TReaction}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_model_a6fbeb65e6363c98330168932b3ca9aaa}{get\+Reaction}} (int i) const
+\begin{DoxyCompactList}\small\item\em Dado el indice de una reaccion, la busca en el vector de reacciones del modelo. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_t_mechanism}{TMechanism}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_model_af7a0006db89bc3af0ca15dfaa40b1204}{get\+Mechanism}} (int i) const
+\begin{DoxyCompactList}\small\item\em Dado el indice de un mecanismo, lo busca en el vector de mecanismos del modelo. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_model_a822ed3dc51f7e3e9d6bf7451b36b6673}{get\+NMetabolites}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de metabolitos que contiene el modelo. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_model_ab6b1b9169e0ef2b450020638d187d9c6}{get\+NParameters}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de parametros que contiene el modelo. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_model_ad52f88995427f27d7c4edac053104ea3}{get\+NReactions}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de reacciones que contiene el modelo. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_model_a6c0c433d34ba04805b5531f73cd30963}{get\+NMechanisms}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de mecanismos que contiene el modelo. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_model_afe4fdfc9cfb4d72cb688cf59b57403a8}{index\+Of\+Metabolite}} (String name) const
+\begin{DoxyCompactList}\small\item\em Devuelve el indice del metabolito de nombre \textquotesingle{}name\textquotesingle{} segun el vector de metabolitos del modelo. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_model_a9f142718edbb069267a7ee2d307ea82e}{index\+Of\+Parameter}} (String name) const
+\begin{DoxyCompactList}\small\item\em Devuelve el indice del parametro de nombre \textquotesingle{}name\textquotesingle{} segun el vector de parametros del modelo. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_t_mechanism}{TMechanism}} \doxymbox{\hyperlink{class_t_model_ac0d05c1585634d2e9101b75f108c499e}{Create\+Mechanism}} (String line, \doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*}model)
+\begin{DoxyCompactList}\small\item\em Dada la linea de entrada y el modelo, crea un objeto \doxylink{class_t_mechanism}{TMechanism}. La linea empieza por MECHANISM y se crea un tipo de mecanismo u otro segun el tipo especificado en el segundo campo de la linea. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_model_a45494635ca0fd3779ea5147b616462c7}{Build\+Equations}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la variacion de la concentracion de un metabolito. Hay tantas ecuaciones como metabolitos registrados. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_model_a87a3912842dfc000e86b46a620ac007b}{get\+Equation\+Python}} (int i)
+\begin{DoxyCompactList}\small\item\em Muestra la EDO de la posicion (i), correspondiente al metabolito (i). \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_model_a1244f411aa4366b7b0b90a2e9536710a}{get\+Equation\+Show}} (int i)
+\begin{DoxyCompactList}\small\item\em Muestra la EDO de la posicion (i), correspondiente al metabolito (i). \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_model_a3eb607dfb2ff5657d514969b443685eb}{get\+Equation\+Show\+Condensed}} (int i)
+\begin{DoxyCompactList}\small\item\em Muestra la EDO condensada de la posicion (i), correspondiente al metabolito (i). \end{DoxyCompactList}\item 
+const std::\+vector$<$ String $>$ \& \doxymbox{\hyperlink{class_t_model_aed2cbe008b16fdfc52521effdf524926}{get\+All\+Equations\+Python}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve un vector con todas las ecuaciones de los metabolitos guardados en el modelo. \end{DoxyCompactList}\item 
+const std::\+vector$<$ String $>$ \doxymbox{\hyperlink{class_t_model_aa540e17de770b4deab34377af8a27724}{get\+All\+Metabolite\+Names}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve un vector con todos los nombres cortos de los metabolitos guardados en el modelo. \end{DoxyCompactList}\item 
+const std::\+vector$<$ double $>$ \doxymbox{\hyperlink{class_t_model_ad7f4a56cd3c7e70307bb75d6d848bafa}{get\+All\+Initial\+Concen}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve un vector con todas las concentraciones iniciales de los metabolitos guardados en el modelo. \end{DoxyCompactList}\item 
+const std::\+vector$<$ double $>$ \doxymbox{\hyperlink{class_t_model_adde1214e971457ef9b758a131d6dbf3a}{get\+All\+Parameters}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve un vector con todos los parametros guardados en el modelo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_model_a455dc1a34b336d3a548ea4d6aa727411}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Borra el contenido actual del modelo. Elimina los metabolitos, parametros y reacciones cargadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_t_model_a12f72b360e54b0d4406a8fa6e12c6129}{init\+Mechanism\+Templates}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa el mapa mechanism\+Templates con los tipos de mecanismos disponibles en la aplicacion. Modifica el atributo "{}mechanism\+Templates"{} introduciendo parejas clave-\/valor:\+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_t_metabolite}{TMetabolite}} $>$ \doxymbox{\hyperlink{class_t_model_af4fcef58c90e59bb6be7d634dc9afed2}{metabolites}}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_t_parameter}{TParameter}} $>$ \doxymbox{\hyperlink{class_t_model_a14aa85ca8ab896f6335f5d2402404c15}{parameters}}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_t_reaction}{TReaction}} $>$ \doxymbox{\hyperlink{class_t_model_a64f46c8130e6a381f99935d27d265518}{reactions}}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_t_mechanism}{TMechanism}} $>$ \doxymbox{\hyperlink{class_t_model_a510348e1a7e7d1791b2d63b2ecce8fa9}{mechanisms}}
+\item 
+std::\+vector$<$ String $>$ \doxymbox{\hyperlink{class_t_model_a77b0737faff9bc48fc3a48508df5e562}{equations\+Python}}
+\item 
+std::\+vector$<$ String $>$ \doxymbox{\hyperlink{class_t_model_a4499fda58ef9b7d727fb8a51a95113f0}{equations\+Show}}
+\item 
+std::\+vector$<$ String $>$ \doxymbox{\hyperlink{class_t_model_a656f850dd2e04acb5c015d25edc7d824}{equations\+Show\+Condensed}}
+\item 
+std::\+map$<$ String, String $>$ \doxymbox{\hyperlink{class_t_model_ae846d66408443fe153bc25c86c754407}{mechanism\+Templates}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+Clase para encapsular un modelo completo, que representa una ruta metabolica especifica. 
+
+\label{class_t_model_doc-constructors}
+\Hypertarget{class_t_model_doc-constructors}
+\doxysubsubsection{Documentación de constructores y destructores}
+\Hypertarget{class_t_model_af5af410318ed4ddff620cb139d0780a9}\index{TModel@{TModel}!TModel@{TModel}}
+\index{TModel@{TModel}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{TModel()}{TModel()}}
+{\footnotesize\ttfamily \label{class_t_model_af5af410318ed4ddff620cb139d0780a9} 
+TModel::\+\+TModel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \doxylink{class_t_model}{TModel}. 
+
+Llama al metodo \doxylink{class_t_model_a12f72b360e54b0d4406a8fa6e12c6129}{init\+Mechanism\+Templates()} para inicializar el mapa de mechanism\+Templates con los tipos de mecanismos disponibles en la aplicacion. Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_af5af410318ed4ddff620cb139d0780a9_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_t_model_af5af410318ed4ddff620cb139d0780a9_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_t_model_doc-func-members}
+\Hypertarget{class_t_model_doc-func-members}
+\doxysubsubsection{Documentación de funciones miembro}
+\Hypertarget{class_t_model_adac18e3346097ccc0be6894963b2d1af}\index{TModel@{TModel}!addMechanism@{addMechanism}}
+\index{addMechanism@{addMechanism}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{addMechanism()}{addMechanism()}}
+{\footnotesize\ttfamily \label{class_t_model_adac18e3346097ccc0be6894963b2d1af} 
+void TModel::\+add\+Mechanism (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_t_mechanism}{TMechanism}} \&}]{mechanism}{}\end{DoxyParamCaption})}
+
+
+
+Metodo para aniadir un mecanismo al modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em reaction} & referencia constante de un objeto de tipo \doxylink{class_t_mechanism}{TMechanism} que se aniade a la lista de mecanismos del modelo. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_model_a9c87a62fe5b7ac1d04f7fff6070f184d}\index{TModel@{TModel}!addMetabolite@{addMetabolite}}
+\index{addMetabolite@{addMetabolite}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{addMetabolite()}{addMetabolite()}}
+{\footnotesize\ttfamily \label{class_t_model_a9c87a62fe5b7ac1d04f7fff6070f184d} 
+void TModel::\+add\+Metabolite (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_t_metabolite}{TMetabolite}} \&}]{metabolite}{}\end{DoxyParamCaption})}
+
+
+
+Metodo para aniadir un metabolito al modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em metabolite} & referencia constante de un objeto de tipo \doxylink{class_t_metabolite}{TMetabolite} que se aniade a la lista de metabolitos del modelo. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_model_a8d88ba06c296c10c7bf7b642fa257a00}\index{TModel@{TModel}!addParameter@{addParameter}}
+\index{addParameter@{addParameter}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{addParameter()}{addParameter()}}
+{\footnotesize\ttfamily \label{class_t_model_a8d88ba06c296c10c7bf7b642fa257a00} 
+void TModel::\+add\+Parameter (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_t_parameter}{TParameter}} \&}]{parameter}{}\end{DoxyParamCaption})}
+
+
+
+Metodo para aniadir un parametro al modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em parameter} & referencia constante de un objeto de tipo \doxylink{class_t_parameter}{TParameter} que se aniade a la lista de parametros del modelo. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_model_a393553bd5301af8da9ba6304b04cf21b}\index{TModel@{TModel}!addReaction@{addReaction}}
+\index{addReaction@{addReaction}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{addReaction()}{addReaction()}}
+{\footnotesize\ttfamily \label{class_t_model_a393553bd5301af8da9ba6304b04cf21b} 
+void TModel::\+add\+Reaction (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_t_reaction}{TReaction}} \&}]{reaction}{}\end{DoxyParamCaption})}
+
+
+
+Metodo para aniadir una reaccion al modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em reaction} & referencia constante de un objeto de tipo \doxylink{class_t_reaction}{TReaction} que se aniade a la lista de reacciones del modelo. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_model_a45494635ca0fd3779ea5147b616462c7}\index{TModel@{TModel}!BuildEquations@{BuildEquations}}
+\index{BuildEquations@{BuildEquations}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{BuildEquations()}{BuildEquations()}}
+{\footnotesize\ttfamily \label{class_t_model_a45494635ca0fd3779ea5147b616462c7} 
+void TModel::\+\+Build\+Equations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la variacion de la concentracion de un metabolito. Hay tantas ecuaciones como metabolitos registrados. 
+
+La forma de construirla es teniendo en cuenta si el metabolito aparece como reactivo o producto en cada reaccion. Si aparece como reactivo, se resta la ecuacion cinetica asociada a dicha reaccion; si aparece como producto, se suma.
+
+El metodo modifica los atributos "{}equations\+Python"{}, "{}equations\+Show"{} y "{}equations\+Show\+Condensed"{} de la clase. Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_a45494635ca0fd3779ea5147b616462c7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_a455dc1a34b336d3a548ea4d6aa727411}\index{TModel@{TModel}!Clear@{Clear}}
+\index{Clear@{Clear}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily \label{class_t_model_a455dc1a34b336d3a548ea4d6aa727411} 
+void TModel::\+\+Clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Borra el contenido actual del modelo. Elimina los metabolitos, parametros y reacciones cargadas. 
+
+\Hypertarget{class_t_model_ac0d05c1585634d2e9101b75f108c499e}\index{TModel@{TModel}!CreateMechanism@{CreateMechanism}}
+\index{CreateMechanism@{CreateMechanism}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{CreateMechanism()}{CreateMechanism()}}
+{\footnotesize\ttfamily \label{class_t_model_ac0d05c1585634d2e9101b75f108c499e} 
+\doxymbox{\hyperlink{class_t_mechanism}{TMechanism}} TModel::\+\+Create\+Mechanism (\begin{DoxyParamCaption}\item[{String}]{line}{, }\item[{\doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*}}]{model}{}\end{DoxyParamCaption})}
+
+
+
+Dada la linea de entrada y el modelo, crea un objeto \doxylink{class_t_mechanism}{TMechanism}. La linea empieza por MECHANISM y se crea un tipo de mecanismo u otro segun el tipo especificado en el segundo campo de la linea. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em line} & linea del texto de entrada que se lee. \\
+\hline
+{\em model} & puntero al modelo en el que se crea el mecanismo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el objeto \doxylink{class_t_mechanism}{TMechanism} creado. 
+\end{DoxyReturn}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_ac0d05c1585634d2e9101b75f108c499e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_a88ca28b8b4a021f3b142cb4c76200326}\index{TModel@{TModel}!fillMechanismComboBox@{fillMechanismComboBox}}
+\index{fillMechanismComboBox@{fillMechanismComboBox}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{fillMechanismComboBox()}{fillMechanismComboBox()}}
+{\footnotesize\ttfamily \label{class_t_model_a88ca28b8b4a021f3b142cb4c76200326} 
+void TModel::\+fill\+Mechanism\+Combo\+Box (\begin{DoxyParamCaption}\item[{TCombo\+Box \texorpdfstring{$\ast$}{*}}]{combo\+Mecanismos}{}\end{DoxyParamCaption})}
+
+
+
+Rellena el objeto combo\+Mecanismos con la lista de tipos de mecanismos disponibles. Usa el contenido del mapa mechanism\+Templates de la clase. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em combo\+Mecanismos} & objeto TCombo\+Box que contendra un desplegable con los tipos de mecanismos disponibles. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_model_a058434cf073381782bfbbe17905bdff9}\index{TModel@{TModel}!fillReactionsComboBox@{fillReactionsComboBox}}
+\index{fillReactionsComboBox@{fillReactionsComboBox}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{fillReactionsComboBox()}{fillReactionsComboBox()}}
+{\footnotesize\ttfamily \label{class_t_model_a058434cf073381782bfbbe17905bdff9} 
+void TModel::\+fill\+Reactions\+Combo\+Box (\begin{DoxyParamCaption}\item[{TCombo\+Box \texorpdfstring{$\ast$}{*}}]{combo\+Reactions}{}\end{DoxyParamCaption})}
+
+
+
+Rellena el objeto combo\+Reactions con la lista de las reacciones cargadas en el modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em combo\+Reactions} & objeto TCombo\+Box que contendra un desplegable con las reacciones cargadas en el modelo. \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_a058434cf073381782bfbbe17905bdff9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_a44f82fb9d342458c072ed3dea15b7f43}\index{TModel@{TModel}!findMetabolite@{findMetabolite}}
+\index{findMetabolite@{findMetabolite}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{findMetabolite()}{findMetabolite()}}
+{\footnotesize\ttfamily \label{class_t_model_a44f82fb9d342458c072ed3dea15b7f43} 
+const \doxymbox{\hyperlink{class_t_metabolite}{TMetabolite}} \texorpdfstring{$\ast$}{*} TModel::\+find\+Metabolite (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption}) const}
+
+
+
+Dado el nombre corto de un metabolito, lo busca en el vector de metabolitos del modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em name} & nombre corto del metabolito a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve un puntero al metabolito si este se encuentra en el modelo. Lanza una excepcion en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{class_t_model_adf78ac24d7abaaf99561876099b9c2c9}\index{TModel@{TModel}!findParameter@{findParameter}}
+\index{findParameter@{findParameter}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{findParameter()}{findParameter()}}
+{\footnotesize\ttfamily \label{class_t_model_adf78ac24d7abaaf99561876099b9c2c9} 
+const \doxymbox{\hyperlink{class_t_parameter}{TParameter}} \texorpdfstring{$\ast$}{*} TModel::\+find\+Parameter (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption}) const}
+
+
+
+Dado el nombre corto de un parametro, lo busca en el vector de parametros del modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em name} & nombre corto del parametro a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve un puntero al parametro si este se encuentra en el modelo. Lanza una excepcion en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{class_t_model_a8258971c01053ab6a05f59871b25857a}\index{TModel@{TModel}!findReaction@{findReaction}}
+\index{findReaction@{findReaction}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{findReaction()}{findReaction()}}
+{\footnotesize\ttfamily \label{class_t_model_a8258971c01053ab6a05f59871b25857a} 
+const \doxymbox{\hyperlink{class_t_reaction}{TReaction}} \texorpdfstring{$\ast$}{*} TModel::\+find\+Reaction (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption}) const}
+
+
+
+Dado el nombre corto de una reaccion, lo busca en el vector de reacciones del modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em name} & nombre corto de la reaccion a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve un puntero a la reaccion si esta se encuentra en el modelo. Lanza una excepcion en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{class_t_model_aed2cbe008b16fdfc52521effdf524926}\index{TModel@{TModel}!getAllEquationsPython@{getAllEquationsPython}}
+\index{getAllEquationsPython@{getAllEquationsPython}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getAllEquationsPython()}{getAllEquationsPython()}}
+{\footnotesize\ttfamily \label{class_t_model_aed2cbe008b16fdfc52521effdf524926} 
+const std::\+vector$<$ String $>$ \& TModel::\+get\+All\+Equations\+Python (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve un vector con todas las ecuaciones de los metabolitos guardados en el modelo. 
+
+\begin{DoxyReturn}{Devuelve}
+vector constante de tipo String 
+\end{DoxyReturn}
+\Hypertarget{class_t_model_ad7f4a56cd3c7e70307bb75d6d848bafa}\index{TModel@{TModel}!getAllInitialConcen@{getAllInitialConcen}}
+\index{getAllInitialConcen@{getAllInitialConcen}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getAllInitialConcen()}{getAllInitialConcen()}}
+{\footnotesize\ttfamily \label{class_t_model_ad7f4a56cd3c7e70307bb75d6d848bafa} 
+const std::\+vector$<$ double $>$ TModel::\+get\+All\+Initial\+Concen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve un vector con todas las concentraciones iniciales de los metabolitos guardados en el modelo. 
+
+\begin{DoxyReturn}{Devuelve}
+vector constante de tipo double 
+\end{DoxyReturn}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_ad7f4a56cd3c7e70307bb75d6d848bafa_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_aa540e17de770b4deab34377af8a27724}\index{TModel@{TModel}!getAllMetaboliteNames@{getAllMetaboliteNames}}
+\index{getAllMetaboliteNames@{getAllMetaboliteNames}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getAllMetaboliteNames()}{getAllMetaboliteNames()}}
+{\footnotesize\ttfamily \label{class_t_model_aa540e17de770b4deab34377af8a27724} 
+const std::\+vector$<$ String $>$ TModel::\+get\+All\+Metabolite\+Names (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve un vector con todos los nombres cortos de los metabolitos guardados en el modelo. 
+
+\begin{DoxyReturn}{Devuelve}
+vector constante de tipo String 
+\end{DoxyReturn}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_aa540e17de770b4deab34377af8a27724_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_adde1214e971457ef9b758a131d6dbf3a}\index{TModel@{TModel}!getAllParameters@{getAllParameters}}
+\index{getAllParameters@{getAllParameters}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getAllParameters()}{getAllParameters()}}
+{\footnotesize\ttfamily \label{class_t_model_adde1214e971457ef9b758a131d6dbf3a} 
+const std::\+vector$<$ double $>$ TModel::\+get\+All\+Parameters (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve un vector con todos los parametros guardados en el modelo. 
+
+\begin{DoxyReturn}{Devuelve}
+vector constante de tipo double 
+\end{DoxyReturn}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_adde1214e971457ef9b758a131d6dbf3a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_a87a3912842dfc000e86b46a620ac007b}\index{TModel@{TModel}!getEquationPython@{getEquationPython}}
+\index{getEquationPython@{getEquationPython}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getEquationPython()}{getEquationPython()}}
+{\footnotesize\ttfamily \label{class_t_model_a87a3912842dfc000e86b46a620ac007b} 
+String TModel::\+get\+Equation\+Python (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption})}
+
+
+
+Muestra la EDO de la posicion (i), correspondiente al metabolito (i). 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & indice del vector de ecuaciones. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+String EDO del metabolito numero (i), en formato String para Python. 
+\end{DoxyReturn}
+\Hypertarget{class_t_model_a1244f411aa4366b7b0b90a2e9536710a}\index{TModel@{TModel}!getEquationShow@{getEquationShow}}
+\index{getEquationShow@{getEquationShow}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getEquationShow()}{getEquationShow()}}
+{\footnotesize\ttfamily \label{class_t_model_a1244f411aa4366b7b0b90a2e9536710a} 
+String TModel::\+get\+Equation\+Show (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption})}
+
+
+
+Muestra la EDO de la posicion (i), correspondiente al metabolito (i). 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & indice del vector de ecuaciones. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+String EDO del metabolito numero (i), en formato String para el usuario. 
+\end{DoxyReturn}
+\Hypertarget{class_t_model_a3eb607dfb2ff5657d514969b443685eb}\index{TModel@{TModel}!getEquationShowCondensed@{getEquationShowCondensed}}
+\index{getEquationShowCondensed@{getEquationShowCondensed}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getEquationShowCondensed()}{getEquationShowCondensed()}}
+{\footnotesize\ttfamily \label{class_t_model_a3eb607dfb2ff5657d514969b443685eb} 
+String TModel::\+get\+Equation\+Show\+Condensed (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption})}
+
+
+
+Muestra la EDO condensada de la posicion (i), correspondiente al metabolito (i). 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & indice del vector de ecuaciones. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+String EDO del metabolito numero (i), en formato String para el usuario. 
+\end{DoxyReturn}
+\Hypertarget{class_t_model_af7a0006db89bc3af0ca15dfaa40b1204}\index{TModel@{TModel}!getMechanism@{getMechanism}}
+\index{getMechanism@{getMechanism}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getMechanism()}{getMechanism()}}
+{\footnotesize\ttfamily \label{class_t_model_af7a0006db89bc3af0ca15dfaa40b1204} 
+const \doxymbox{\hyperlink{class_t_mechanism}{TMechanism}} \texorpdfstring{$\ast$}{*} TModel::\+get\+Mechanism (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption}) const}
+
+
+
+Dado el indice de un mecanismo, lo busca en el vector de mecanismos del modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & indice del mecanismo a devolver. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve un puntero al mecanismo. Devuelve nullptr si el indice es invalido. 
+\end{DoxyReturn}
+\Hypertarget{class_t_model_a598e3057d35978e144a03283964ce74f}\index{TModel@{TModel}!getMechanismTemplate@{getMechanismTemplate}}
+\index{getMechanismTemplate@{getMechanismTemplate}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getMechanismTemplate()}{getMechanismTemplate()}}
+{\footnotesize\ttfamily \label{class_t_model_a598e3057d35978e144a03283964ce74f} 
+String TModel::\+get\+Mechanism\+Template (\begin{DoxyParamCaption}\item[{const String \&}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Dado el tipo de mecanismo (key), devuelve la plantilla de entrada de datos asociada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em key} & tipo de mecanismo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+String con la plantilla de entrada del tipo de mecanismo pedido 
+\end{DoxyReturn}
+\Hypertarget{class_t_model_a47f72912b3399ef5f306b5ec355c7e43}\index{TModel@{TModel}!getMetabolite@{getMetabolite}}
+\index{getMetabolite@{getMetabolite}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getMetabolite()}{getMetabolite()}}
+{\footnotesize\ttfamily \label{class_t_model_a47f72912b3399ef5f306b5ec355c7e43} 
+const \doxymbox{\hyperlink{class_t_metabolite}{TMetabolite}} \texorpdfstring{$\ast$}{*} TModel::\+get\+Metabolite (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption}) const}
+
+
+
+Dado el indice de un metabolito, lo busca en el vector de metabolitos del modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & indice del metabolito a devolver. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve un puntero al metabolito. Devuelve nullptr si el indice es invalido. 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_a47f72912b3399ef5f306b5ec355c7e43_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_a6c0c433d34ba04805b5531f73cd30963}\index{TModel@{TModel}!getNMechanisms@{getNMechanisms}}
+\index{getNMechanisms@{getNMechanisms}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getNMechanisms()}{getNMechanisms()}}
+{\footnotesize\ttfamily \label{class_t_model_a6c0c433d34ba04805b5531f73cd30963} 
+int TModel::\+get\+NMechanisms (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el numero de mecanismos que contiene el modelo. 
+
+\begin{DoxyReturn}{Devuelve}
+int numero de mecanismos del modelo. 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_a6c0c433d34ba04805b5531f73cd30963_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_a822ed3dc51f7e3e9d6bf7451b36b6673}\index{TModel@{TModel}!getNMetabolites@{getNMetabolites}}
+\index{getNMetabolites@{getNMetabolites}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getNMetabolites()}{getNMetabolites()}}
+{\footnotesize\ttfamily \label{class_t_model_a822ed3dc51f7e3e9d6bf7451b36b6673} 
+int TModel::\+get\+NMetabolites (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el numero de metabolitos que contiene el modelo. 
+
+\begin{DoxyReturn}{Devuelve}
+int numero de metabolitos del modelo. 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_a822ed3dc51f7e3e9d6bf7451b36b6673_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_ab6b1b9169e0ef2b450020638d187d9c6}\index{TModel@{TModel}!getNParameters@{getNParameters}}
+\index{getNParameters@{getNParameters}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getNParameters()}{getNParameters()}}
+{\footnotesize\ttfamily \label{class_t_model_ab6b1b9169e0ef2b450020638d187d9c6} 
+int TModel::\+get\+NParameters (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el numero de parametros que contiene el modelo. 
+
+\begin{DoxyReturn}{Devuelve}
+int numero de parametros del modelo. 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_ab6b1b9169e0ef2b450020638d187d9c6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_ad52f88995427f27d7c4edac053104ea3}\index{TModel@{TModel}!getNReactions@{getNReactions}}
+\index{getNReactions@{getNReactions}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getNReactions()}{getNReactions()}}
+{\footnotesize\ttfamily \label{class_t_model_ad52f88995427f27d7c4edac053104ea3} 
+int TModel::\+get\+NReactions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el numero de reacciones que contiene el modelo. 
+
+\begin{DoxyReturn}{Devuelve}
+int numero de reacciones del modelo. 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_ad52f88995427f27d7c4edac053104ea3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_ae6fa3c29934151ab3f70edbfbaa0a1fd}\index{TModel@{TModel}!getParameter@{getParameter}}
+\index{getParameter@{getParameter}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getParameter()}{getParameter()}}
+{\footnotesize\ttfamily \label{class_t_model_ae6fa3c29934151ab3f70edbfbaa0a1fd} 
+const \doxymbox{\hyperlink{class_t_parameter}{TParameter}} \texorpdfstring{$\ast$}{*} TModel::\+get\+Parameter (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption}) const}
+
+
+
+Dado el indice de un parametro, lo busca en el vector de parametros del modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & indice del parametro a devolver. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve un puntero al parametro. Devuelve nullptr si el indice es invalido. 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_ae6fa3c29934151ab3f70edbfbaa0a1fd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_a6fbeb65e6363c98330168932b3ca9aaa}\index{TModel@{TModel}!getReaction@{getReaction}}
+\index{getReaction@{getReaction}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{getReaction()}{getReaction()}}
+{\footnotesize\ttfamily \label{class_t_model_a6fbeb65e6363c98330168932b3ca9aaa} 
+const \doxymbox{\hyperlink{class_t_reaction}{TReaction}} \texorpdfstring{$\ast$}{*} TModel::\+get\+Reaction (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption}) const}
+
+
+
+Dado el indice de una reaccion, la busca en el vector de reacciones del modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & indice del reaccion a devolver. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve un puntero al reaccion. Devuelve nullptr si el indice es invalido. 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_a6fbeb65e6363c98330168932b3ca9aaa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6}\index{TModel@{TModel}!givesMechanism@{givesMechanism}}
+\index{givesMechanism@{givesMechanism}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{givesMechanism()}{givesMechanism()}}
+{\footnotesize\ttfamily \label{class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6} 
+const \doxymbox{\hyperlink{class_t_mechanism}{TMechanism}} \texorpdfstring{$\ast$}{*} TModel::\+gives\+Mechanism (\begin{DoxyParamCaption}\item[{String}]{name\+Reaction}{}\end{DoxyParamCaption}) const}
+
+
+
+Dado el nombre corto de una reaccion, devuelve el mecanismo cargado en el modelo que la describe. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em name} & nombre corto de una reaccion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve un puntero al mecanismo que describe la reaccion. 
+\end{DoxyReturn}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_model_afe4fdfc9cfb4d72cb688cf59b57403a8}\index{TModel@{TModel}!indexOfMetabolite@{indexOfMetabolite}}
+\index{indexOfMetabolite@{indexOfMetabolite}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{indexOfMetabolite()}{indexOfMetabolite()}}
+{\footnotesize\ttfamily \label{class_t_model_afe4fdfc9cfb4d72cb688cf59b57403a8} 
+int TModel::\+index\+Of\+Metabolite (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el indice del metabolito de nombre \textquotesingle{}name\textquotesingle{} segun el vector de metabolitos del modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em name} & Nombre corto del metabolito. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int Numero del indice del metabolito en el vector de metabolitos del modelo. Devuelve -\/1 si no lo encuentra. 
+\end{DoxyReturn}
+\Hypertarget{class_t_model_a9f142718edbb069267a7ee2d307ea82e}\index{TModel@{TModel}!indexOfParameter@{indexOfParameter}}
+\index{indexOfParameter@{indexOfParameter}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{indexOfParameter()}{indexOfParameter()}}
+{\footnotesize\ttfamily \label{class_t_model_a9f142718edbb069267a7ee2d307ea82e} 
+int TModel::\+index\+Of\+Parameter (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el indice del parametro de nombre \textquotesingle{}name\textquotesingle{} segun el vector de parametros del modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em name} & Nombre corto del parametro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int Numero del indice del parametro en el vector de parametros del modelo. Devuelve -\/1 si no lo encuentra. 
+\end{DoxyReturn}
+\Hypertarget{class_t_model_a12f72b360e54b0d4406a8fa6e12c6129}\index{TModel@{TModel}!initMechanismTemplates@{initMechanismTemplates}}
+\index{initMechanismTemplates@{initMechanismTemplates}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{initMechanismTemplates()}{initMechanismTemplates()}}
+{\footnotesize\ttfamily \label{class_t_model_a12f72b360e54b0d4406a8fa6e12c6129} 
+void TModel::\+init\+Mechanism\+Templates (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Inicializa el mapa mechanism\+Templates con los tipos de mecanismos disponibles en la aplicacion. Modifica el atributo "{}mechanism\+Templates"{} introduciendo parejas clave-\/valor:\+ 
+
+
+\begin{DoxyItemize}
+\item clave:\+ identificativo del tipo de mecanismo, String.
+\item valor:\+ plantilla con los campos necesarios para introducir un MECHANISM de ese tipo, String. 
+\end{DoxyItemize}Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_model_a12f72b360e54b0d4406a8fa6e12c6129_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_t_model_doc-variable-members}
+\Hypertarget{class_t_model_doc-variable-members}
+\doxysubsubsection{Documentación de datos miembro}
+\Hypertarget{class_t_model_a77b0737faff9bc48fc3a48508df5e562}\index{TModel@{TModel}!equationsPython@{equationsPython}}
+\index{equationsPython@{equationsPython}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{equationsPython}{equationsPython}}
+{\footnotesize\ttfamily \label{class_t_model_a77b0737faff9bc48fc3a48508df5e562} 
+std::\+vector$<$String$>$ TModel::\+equations\+Python\hspace{0.3cm}{\ttfamily [private]}}
+
+Lista de las EDOs que miden la variacion de la concentracion de cada metabolito a lo largo del tiempo. Formato Python. \Hypertarget{class_t_model_a4499fda58ef9b7d727fb8a51a95113f0}\index{TModel@{TModel}!equationsShow@{equationsShow}}
+\index{equationsShow@{equationsShow}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{equationsShow}{equationsShow}}
+{\footnotesize\ttfamily \label{class_t_model_a4499fda58ef9b7d727fb8a51a95113f0} 
+std::\+vector$<$String$>$ TModel::\+equations\+Show\hspace{0.3cm}{\ttfamily [private]}}
+
+Lista de las EDOs que miden la variacion de la concentracion de cada metabolito a lo largo del tiempo. Formato para salida usuario. \Hypertarget{class_t_model_a656f850dd2e04acb5c015d25edc7d824}\index{TModel@{TModel}!equationsShowCondensed@{equationsShowCondensed}}
+\index{equationsShowCondensed@{equationsShowCondensed}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{equationsShowCondensed}{equationsShowCondensed}}
+{\footnotesize\ttfamily \label{class_t_model_a656f850dd2e04acb5c015d25edc7d824} 
+std::\+vector$<$String$>$ TModel::\+equations\+Show\+Condensed\hspace{0.3cm}{\ttfamily [private]}}
+
+Muestra el nombre del mecanismo que se suma o resta, no la ecuacion cineta desglosada como en equations\+Show . \Hypertarget{class_t_model_a510348e1a7e7d1791b2d63b2ecce8fa9}\index{TModel@{TModel}!mechanisms@{mechanisms}}
+\index{mechanisms@{mechanisms}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{mechanisms}{mechanisms}}
+{\footnotesize\ttfamily \label{class_t_model_a510348e1a7e7d1791b2d63b2ecce8fa9} 
+std::\+vector$<$\doxymbox{\hyperlink{class_t_mechanism}{TMechanism}}$>$ TModel::\+mechanisms\hspace{0.3cm}{\ttfamily [private]}}
+
+Lista de los mecanismos que componen el modelo a simular. Uno para cada reaccion. \Hypertarget{class_t_model_ae846d66408443fe153bc25c86c754407}\index{TModel@{TModel}!mechanismTemplates@{mechanismTemplates}}
+\index{mechanismTemplates@{mechanismTemplates}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{mechanismTemplates}{mechanismTemplates}}
+{\footnotesize\ttfamily \label{class_t_model_ae846d66408443fe153bc25c86c754407} 
+std::\+map$<$String, String$>$ TModel::\+mechanism\+Templates\hspace{0.3cm}{\ttfamily [private]}}
+
+Mapa con los tipos de mecanismo disponibles en la aplicacion, junto a su plantilla de entrada \Hypertarget{class_t_model_af4fcef58c90e59bb6be7d634dc9afed2}\index{TModel@{TModel}!metabolites@{metabolites}}
+\index{metabolites@{metabolites}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{metabolites}{metabolites}}
+{\footnotesize\ttfamily \label{class_t_model_af4fcef58c90e59bb6be7d634dc9afed2} 
+std::\+vector$<$\doxymbox{\hyperlink{class_t_metabolite}{TMetabolite}}$>$ TModel::\+metabolites\hspace{0.3cm}{\ttfamily [private]}}
+
+Lista de los metabolitos que componen el modelo, cuya concentracion se va a medir en lal simulacion \Hypertarget{class_t_model_a14aa85ca8ab896f6335f5d2402404c15}\index{TModel@{TModel}!parameters@{parameters}}
+\index{parameters@{parameters}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{parameters}{parameters}}
+{\footnotesize\ttfamily \label{class_t_model_a14aa85ca8ab896f6335f5d2402404c15} 
+std::\+vector$<$\doxymbox{\hyperlink{class_t_parameter}{TParameter}}$>$ TModel::\+parameters\hspace{0.3cm}{\ttfamily [private]}}
+
+Lista de todos los parametros que aparecen en el modelo \Hypertarget{class_t_model_a64f46c8130e6a381f99935d27d265518}\index{TModel@{TModel}!reactions@{reactions}}
+\index{reactions@{reactions}!TModel@{TModel}}
+\doxyparagraph{\texorpdfstring{reactions}{reactions}}
+{\footnotesize\ttfamily \label{class_t_model_a64f46c8130e6a381f99935d27d265518} 
+std::\+vector$<$\doxymbox{\hyperlink{class_t_reaction}{TReaction}}$>$ TModel::\+reactions\hspace{0.3cm}{\ttfamily [private]}}
+
+Lista de las reacciones que componen el modelo a simular 
+
+La documentación de esta clase está generada de los siguientes archivos:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_metabolic_elements_8h}{Metabolic\+Elements.\+h}}\item 
+\doxymbox{\hyperlink{_metabolic_elements_8cpp}{Metabolic\+Elements.\+cpp}}\end{DoxyCompactItemize}

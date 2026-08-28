@@ -1,0 +1,9 @@
+<map id="TReaction::TReaction" name="TReaction::TReaction">
+<area shape="rect" id="Node000001" title="Constructor de TReaction, lee una linea completa del panel de entrada." alt="" coords="5,5,155,32"/>
+<area shape="rect" id="Node000002" href="$class_t_reaction.html#a9ff586b1e6a409124165d40bddc9482a" title="Dada una lista de sustancias, las separa en nombres y coeficientes estequimetricos." alt="" coords="203,5,399,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,16,190,19,184,19,155,21"/>
+<area shape="rect" id="Node000003" href="$class_t_reaction.html#a861e1e400bc3e97e1e9700c114316a41" title="Separa coeficiente estequiometrico del nombre del metabolito." alt="" coords="447,5,671,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="400,16,434,19,429,19,400,21"/>
+<area shape="rect" id="Node000004" href="$class_t_reaction.html#a3222fa351cbf4ad913d1d47c650676ce" title="Metodo que convierte un string en double con formato decimal &#39;.&#39;." alt="" coords="719,5,890,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="672,16,706,19,701,19,672,21"/>
+</map>

@@ -1,0 +1,139 @@
+\doxysubsection{Referencia del archivo Metabolic\+Elements.\+h}
+\hypertarget{_metabolic_elements_8h}{}\label{_metabolic_elements_8h}\index{MetabolicElements.h@{MetabolicElements.h}}
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$map$>$}\newline
+Gráfico de dependencias incluidas en Metabolic\+Elements.\+h:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{_metabolic_elements_8h__incl}
+\end{center}
+\end{figure}
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{_metabolic_elements_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_t_metabolite}{TMetabolite}}
+\begin{DoxyCompactList}\small\item\em Clase para encapsular los metabolitos del modelo. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_t_parameter}{TParameter}}
+\begin{DoxyCompactList}\small\item\em Clase para encapsular los parametros del modelo. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_t_substance}{TSubstance}}
+\begin{DoxyCompactList}\small\item\em struct \doxylink{struct_t_substance}{TSubstance} para agrupar el metabolito y su coeficiente que participan en una reaccion. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_t_reaction}{TReaction}}
+\begin{DoxyCompactList}\small\item\em Clase para encapsular las reacciones del modelo. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_t_mechanism}{TMechanism}}
+\begin{DoxyCompactList}\small\item\em Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_t_mass_action}{TMass\+Action}}
+\begin{DoxyCompactList}\small\item\em Representa un mecanismo que sigue la ley de accion de masas. Hereda de \doxylink{class_t_mechanism}{TMechanism}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_t_m_m_uni_inhibidor}{TMMUni\+Inhibidor}}
+\begin{DoxyCompactList}\small\item\em Representa un mecanismo del tipo Michaelis-\/\+Menten unisustrato con inhibicion competitiva. Hereda de \doxylink{class_t_mechanism}{TMechanism}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_t_m_m_bi_sec_aleatorio}{TMMBi\+Sec\+Aleatorio}}
+\begin{DoxyCompactList}\small\item\em Representa un mecanismo del tipo Michaelis-\/\+Menten bisustrato secuencial aleatorio. Hereda de \doxylink{class_t_mechanism}{TMechanism}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_t_m_m_uni_bi_inhibidor}{TMMUni\+Bi\+Inhibidor}}
+\begin{DoxyCompactList}\small\item\em Representa un mecanismo de tipo Michaelis-\/\+Menten con un sustrato, dos productos e inhibicion competitiva. Hereda de \doxylink{class_t_mechanism}{TMechanism}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_t_m_m_bi_bi_inhibidor}{TMMBi\+Bi\+Inhibidor}}
+\begin{DoxyCompactList}\small\item\em Representa un mecanismo de tipo Michaelis-\/\+Menten con dos sustratos, dos productos e inhibicion competitiva. Hereda de \doxylink{class_t_mechanism}{TMechanism}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_t_hill_inhibidor_activador}{THill\+Inhibidor\+Activador}}
+\begin{DoxyCompactList}\small\item\em Representa un mecanismo que sigue la ecuacion de Hill con un inhibidor y un activador. Hereda de \doxylink{class_t_mechanism}{TMechanism}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_t_model}{TModel}}
+\begin{DoxyCompactList}\small\item\em Clase para encapsular un modelo completo, que representa una ruta metabolica especifica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Enumeraciones}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74}{TReaction\+Direction}} \{ \doxymbox{\hyperlink{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74a72c5b8f2ec0ee12adbe1aa1ebd14f4e8}{rd\+UNI}}
+, \doxymbox{\hyperlink{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74a6a74a4b4394ed68e865f7279f2c8f1cf}{rd\+BI}}
+ \}
+\begin{DoxyCompactList}\small\item\em enum \doxylink{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74}{TReaction\+Direction}. Enumerado para representar el sentido de una reaccion. Hay dos posibilidades:\+ UNI si es unidireccional y BI si es bidireccional. \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2}{TMechanism\+Type}} \{ \newline
+\doxymbox{\hyperlink{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2ad4bb36cee99acaa04108a88f1aed50ad}{LEY\+\_\+\+ACCION\+\_\+\+MASAS}}
+, \doxymbox{\hyperlink{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2aa538b5a3ec33e5bc561c168f5cfb21ae}{MM\+\_\+\+UNI\+\_\+\+INHIBIDOR}}
+, \doxymbox{\hyperlink{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2a2376555488ef886f08c5fa23c9b0ba62}{MM\+\_\+\+BI\+\_\+\+SEC\+\_\+\+ALEATORIO}}
+, \doxymbox{\hyperlink{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2a5ab44c4e0e7e3104b5366e8c076eccd6}{MM\+\_\+\+UNI\+\_\+\+BI\+\_\+\+INHIBIDOR}}
+, \newline
+\doxymbox{\hyperlink{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2a9160021a4e17b9fc22cdd84248fd37ea}{MM\+\_\+\+BI\+\_\+\+BI\+\_\+\+INHIBIDOR}}
+, \doxymbox{\hyperlink{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2adecef335a1f27094b63b744419cc6491}{HILL\+\_\+\+INHIBIDOR\+\_\+\+ACTIVADOR}}
+ \}
+\begin{DoxyCompactList}\small\item\em enum \doxylink{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2}{TMechanism\+Type}. Enumerado para representar el tipo de mecanismo de una reaccion. Se contemplan 6 tipos de mecanismos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{_metabolic_elements_8h_doc-enum-members}
+\Hypertarget{_metabolic_elements_8h_doc-enum-members}
+\doxysubsubsection{Documentación de enumeraciones}
+\Hypertarget{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2}\index{MetabolicElements.h@{MetabolicElements.h}!TMechanismType@{TMechanismType}}
+\index{TMechanismType@{TMechanismType}!MetabolicElements.h@{MetabolicElements.h}}
+\doxyparagraph{\texorpdfstring{TMechanismType}{TMechanismType}}
+{\footnotesize\ttfamily \label{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2} 
+enum \doxymbox{\hyperlink{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2}{TMechanism\+Type}}}
+
+
+
+enum \doxylink{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2}{TMechanism\+Type}. Enumerado para representar el tipo de mecanismo de una reaccion. Se contemplan 6 tipos de mecanismos. 
+
+\begin{DoxyEnumFields}[2]{Valores de enumeraciones}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEY\_ACCION\_MASAS@{LEY\_ACCION\_MASAS}!MetabolicElements.h@{MetabolicElements.h}}
+\index{MetabolicElements.h@{MetabolicElements.h}!LEY\_ACCION\_MASAS@{LEY\_ACCION\_MASAS}}
+}\Hypertarget{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2ad4bb36cee99acaa04108a88f1aed50ad}\label{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2ad4bb36cee99acaa04108a88f1aed50ad} 
+LEY\+\_\+\+ACCION\+\_\+\+MASAS&Ley de accion de masas. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MM\_UNI\_INHIBIDOR@{MM\_UNI\_INHIBIDOR}!MetabolicElements.h@{MetabolicElements.h}}
+\index{MetabolicElements.h@{MetabolicElements.h}!MM\_UNI\_INHIBIDOR@{MM\_UNI\_INHIBIDOR}}
+}\Hypertarget{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2aa538b5a3ec33e5bc561c168f5cfb21ae}\label{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2aa538b5a3ec33e5bc561c168f5cfb21ae} 
+MM\+\_\+\+UNI\+\_\+\+INHIBIDOR&Michaelis-\/\+Menten unisustrato con inhibicion. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MM\_BI\_SEC\_ALEATORIO@{MM\_BI\_SEC\_ALEATORIO}!MetabolicElements.h@{MetabolicElements.h}}
+\index{MetabolicElements.h@{MetabolicElements.h}!MM\_BI\_SEC\_ALEATORIO@{MM\_BI\_SEC\_ALEATORIO}}
+}\Hypertarget{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2a2376555488ef886f08c5fa23c9b0ba62}\label{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2a2376555488ef886f08c5fa23c9b0ba62} 
+MM\+\_\+\+BI\+\_\+\+SEC\+\_\+\+ALEATORIO&Michaelis-\/\+Menten bisustrato secuencial aleatorio. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MM\_UNI\_BI\_INHIBIDOR@{MM\_UNI\_BI\_INHIBIDOR}!MetabolicElements.h@{MetabolicElements.h}}
+\index{MetabolicElements.h@{MetabolicElements.h}!MM\_UNI\_BI\_INHIBIDOR@{MM\_UNI\_BI\_INHIBIDOR}}
+}\Hypertarget{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2a5ab44c4e0e7e3104b5366e8c076eccd6}\label{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2a5ab44c4e0e7e3104b5366e8c076eccd6} 
+MM\+\_\+\+UNI\+\_\+\+BI\+\_\+\+INHIBIDOR&Michaelis-\/\+Menten unisustrato biproducto con inhibicion. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MM\_BI\_BI\_INHIBIDOR@{MM\_BI\_BI\_INHIBIDOR}!MetabolicElements.h@{MetabolicElements.h}}
+\index{MetabolicElements.h@{MetabolicElements.h}!MM\_BI\_BI\_INHIBIDOR@{MM\_BI\_BI\_INHIBIDOR}}
+}\Hypertarget{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2a9160021a4e17b9fc22cdd84248fd37ea}\label{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2a9160021a4e17b9fc22cdd84248fd37ea} 
+MM\+\_\+\+BI\+\_\+\+BI\+\_\+\+INHIBIDOR&Michaelis-\/\+Menten bisustrato biproducto con inhibicion. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HILL\_INHIBIDOR\_ACTIVADOR@{HILL\_INHIBIDOR\_ACTIVADOR}!MetabolicElements.h@{MetabolicElements.h}}
+\index{MetabolicElements.h@{MetabolicElements.h}!HILL\_INHIBIDOR\_ACTIVADOR@{HILL\_INHIBIDOR\_ACTIVADOR}}
+}\Hypertarget{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2adecef335a1f27094b63b744419cc6491}\label{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2adecef335a1f27094b63b744419cc6491} 
+HILL\+\_\+\+INHIBIDOR\+\_\+\+ACTIVADOR&Ecuacion de Hill con inhibidor y activador. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74}\index{MetabolicElements.h@{MetabolicElements.h}!TReactionDirection@{TReactionDirection}}
+\index{TReactionDirection@{TReactionDirection}!MetabolicElements.h@{MetabolicElements.h}}
+\doxyparagraph{\texorpdfstring{TReactionDirection}{TReactionDirection}}
+{\footnotesize\ttfamily \label{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74} 
+enum \doxymbox{\hyperlink{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74}{TReaction\+Direction}}}
+
+
+
+enum \doxylink{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74}{TReaction\+Direction}. Enumerado para representar el sentido de una reaccion. Hay dos posibilidades:\+ UNI si es unidireccional y BI si es bidireccional. 
+
+\begin{DoxyEnumFields}[2]{Valores de enumeraciones}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{rdUNI@{rdUNI}!MetabolicElements.h@{MetabolicElements.h}}
+\index{MetabolicElements.h@{MetabolicElements.h}!rdUNI@{rdUNI}}
+}\Hypertarget{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74a72c5b8f2ec0ee12adbe1aa1ebd14f4e8}\label{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74a72c5b8f2ec0ee12adbe1aa1ebd14f4e8} 
+rd\+UNI&La reaccion es unidireccional. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{rdBI@{rdBI}!MetabolicElements.h@{MetabolicElements.h}}
+\index{MetabolicElements.h@{MetabolicElements.h}!rdBI@{rdBI}}
+}\Hypertarget{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74a6a74a4b4394ed68e865f7279f2c8f1cf}\label{_metabolic_elements_8h_a0f7dc836b1e332242f462b99ff634c74a6a74a4b4394ed68e865f7279f2c8f1cf} 
+rd\+BI&La reaccion es bidireccional. \\
+\hline
+
+\end{DoxyEnumFields}

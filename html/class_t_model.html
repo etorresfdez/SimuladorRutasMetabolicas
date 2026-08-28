@@ -1,0 +1,1443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prototipo Simulacion Rutas Metabolicas: Referencia de la clase TModel</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Prototipo Simulacion Rutas Metabolicas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_t_model.html','','class_t_model-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase TModel</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Clase para encapsular un modelo completo, que representa una ruta metabolica especifica.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_metabolic_elements_8h_source.html">MetabolicElements.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboración de TModel:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model__coll__graph.png" border="0" usemap="#a_t_model_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_t_model_coll__map" id="a_t_model_coll__map">
+<area shape="rect" title="Clase para encapsular un modelo completo, que representa una ruta metabolica especifica." alt="" coords="5,5,184,459"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:af5af410318ed4ddff620cb139d0780a9" id="r_af5af410318ed4ddff620cb139d0780a9"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af5af410318ed4ddff620cb139d0780a9">TModel</a> ()</td></tr>
+<tr class="memdesc:af5af410318ed4ddff620cb139d0780a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de la clase <a class="el" href="class_t_model.html" title="Clase para encapsular un modelo completo, que representa una ruta metabolica especifica.">TModel</a>.  <br /></td></tr>
+<tr class="memitem:a058434cf073381782bfbbe17905bdff9" id="r_a058434cf073381782bfbbe17905bdff9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a058434cf073381782bfbbe17905bdff9">fillReactionsComboBox</a> (TComboBox *comboReactions)</td></tr>
+<tr class="memdesc:a058434cf073381782bfbbe17905bdff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rellena el objeto comboReactions con la lista de las reacciones cargadas en el modelo.  <br /></td></tr>
+<tr class="memitem:a88ca28b8b4a021f3b142cb4c76200326" id="r_a88ca28b8b4a021f3b142cb4c76200326"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a88ca28b8b4a021f3b142cb4c76200326">fillMechanismComboBox</a> (TComboBox *comboMecanismos)</td></tr>
+<tr class="memdesc:a88ca28b8b4a021f3b142cb4c76200326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rellena el objeto comboMecanismos con la lista de tipos de mecanismos disponibles. Usa el contenido del mapa mechanismTemplates de la clase.  <br /></td></tr>
+<tr class="memitem:a598e3057d35978e144a03283964ce74f" id="r_a598e3057d35978e144a03283964ce74f"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a598e3057d35978e144a03283964ce74f">getMechanismTemplate</a> (const String &amp;key)</td></tr>
+<tr class="memdesc:a598e3057d35978e144a03283964ce74f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dado el tipo de mecanismo (key), devuelve la plantilla de entrada de datos asociada.  <br /></td></tr>
+<tr class="memitem:a9c87a62fe5b7ac1d04f7fff6070f184d" id="r_a9c87a62fe5b7ac1d04f7fff6070f184d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9c87a62fe5b7ac1d04f7fff6070f184d">addMetabolite</a> (const <a class="el" href="class_t_metabolite.html">TMetabolite</a> &amp;metabolite)</td></tr>
+<tr class="memdesc:a9c87a62fe5b7ac1d04f7fff6070f184d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo para aniadir un metabolito al modelo.  <br /></td></tr>
+<tr class="memitem:a8d88ba06c296c10c7bf7b642fa257a00" id="r_a8d88ba06c296c10c7bf7b642fa257a00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8d88ba06c296c10c7bf7b642fa257a00">addParameter</a> (const <a class="el" href="class_t_parameter.html">TParameter</a> &amp;parameter)</td></tr>
+<tr class="memdesc:a8d88ba06c296c10c7bf7b642fa257a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo para aniadir un parametro al modelo.  <br /></td></tr>
+<tr class="memitem:a393553bd5301af8da9ba6304b04cf21b" id="r_a393553bd5301af8da9ba6304b04cf21b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a393553bd5301af8da9ba6304b04cf21b">addReaction</a> (const <a class="el" href="class_t_reaction.html">TReaction</a> &amp;reaction)</td></tr>
+<tr class="memdesc:a393553bd5301af8da9ba6304b04cf21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo para aniadir una reaccion al modelo.  <br /></td></tr>
+<tr class="memitem:adac18e3346097ccc0be6894963b2d1af" id="r_adac18e3346097ccc0be6894963b2d1af"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adac18e3346097ccc0be6894963b2d1af">addMechanism</a> (const <a class="el" href="class_t_mechanism.html">TMechanism</a> &amp;mechanism)</td></tr>
+<tr class="memdesc:adac18e3346097ccc0be6894963b2d1af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo para aniadir un mecanismo al modelo.  <br /></td></tr>
+<tr class="memitem:a44f82fb9d342458c072ed3dea15b7f43" id="r_a44f82fb9d342458c072ed3dea15b7f43"><td class="memItemLeft">const <a class="el" href="class_t_metabolite.html">TMetabolite</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a44f82fb9d342458c072ed3dea15b7f43">findMetabolite</a> (String name) const</td></tr>
+<tr class="memdesc:a44f82fb9d342458c072ed3dea15b7f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dado el nombre corto de un metabolito, lo busca en el vector de metabolitos del modelo.  <br /></td></tr>
+<tr class="memitem:adf78ac24d7abaaf99561876099b9c2c9" id="r_adf78ac24d7abaaf99561876099b9c2c9"><td class="memItemLeft">const <a class="el" href="class_t_parameter.html">TParameter</a> *&#160;</td><td class="memItemRight"><a class="el" href="#adf78ac24d7abaaf99561876099b9c2c9">findParameter</a> (String name) const</td></tr>
+<tr class="memdesc:adf78ac24d7abaaf99561876099b9c2c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dado el nombre corto de un parametro, lo busca en el vector de parametros del modelo.  <br /></td></tr>
+<tr class="memitem:a8258971c01053ab6a05f59871b25857a" id="r_a8258971c01053ab6a05f59871b25857a"><td class="memItemLeft">const <a class="el" href="class_t_reaction.html">TReaction</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a8258971c01053ab6a05f59871b25857a">findReaction</a> (String name) const</td></tr>
+<tr class="memdesc:a8258971c01053ab6a05f59871b25857a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dado el nombre corto de una reaccion, lo busca en el vector de reacciones del modelo.  <br /></td></tr>
+<tr class="memitem:ac8791eb54816ee2bfdd1ac6c38ae2ed6" id="r_ac8791eb54816ee2bfdd1ac6c38ae2ed6"><td class="memItemLeft">const <a class="el" href="class_t_mechanism.html">TMechanism</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac8791eb54816ee2bfdd1ac6c38ae2ed6">givesMechanism</a> (String nameReaction) const</td></tr>
+<tr class="memdesc:ac8791eb54816ee2bfdd1ac6c38ae2ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dado el nombre corto de una reaccion, devuelve el mecanismo cargado en el modelo que la describe.  <br /></td></tr>
+<tr class="memitem:a47f72912b3399ef5f306b5ec355c7e43" id="r_a47f72912b3399ef5f306b5ec355c7e43"><td class="memItemLeft">const <a class="el" href="class_t_metabolite.html">TMetabolite</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a47f72912b3399ef5f306b5ec355c7e43">getMetabolite</a> (int i) const</td></tr>
+<tr class="memdesc:a47f72912b3399ef5f306b5ec355c7e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dado el indice de un metabolito, lo busca en el vector de metabolitos del modelo.  <br /></td></tr>
+<tr class="memitem:ae6fa3c29934151ab3f70edbfbaa0a1fd" id="r_ae6fa3c29934151ab3f70edbfbaa0a1fd"><td class="memItemLeft">const <a class="el" href="class_t_parameter.html">TParameter</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae6fa3c29934151ab3f70edbfbaa0a1fd">getParameter</a> (int i) const</td></tr>
+<tr class="memdesc:ae6fa3c29934151ab3f70edbfbaa0a1fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dado el indice de un parametro, lo busca en el vector de parametros del modelo.  <br /></td></tr>
+<tr class="memitem:a6fbeb65e6363c98330168932b3ca9aaa" id="r_a6fbeb65e6363c98330168932b3ca9aaa"><td class="memItemLeft">const <a class="el" href="class_t_reaction.html">TReaction</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a6fbeb65e6363c98330168932b3ca9aaa">getReaction</a> (int i) const</td></tr>
+<tr class="memdesc:a6fbeb65e6363c98330168932b3ca9aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dado el indice de una reaccion, la busca en el vector de reacciones del modelo.  <br /></td></tr>
+<tr class="memitem:af7a0006db89bc3af0ca15dfaa40b1204" id="r_af7a0006db89bc3af0ca15dfaa40b1204"><td class="memItemLeft">const <a class="el" href="class_t_mechanism.html">TMechanism</a> *&#160;</td><td class="memItemRight"><a class="el" href="#af7a0006db89bc3af0ca15dfaa40b1204">getMechanism</a> (int i) const</td></tr>
+<tr class="memdesc:af7a0006db89bc3af0ca15dfaa40b1204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dado el indice de un mecanismo, lo busca en el vector de mecanismos del modelo.  <br /></td></tr>
+<tr class="memitem:a822ed3dc51f7e3e9d6bf7451b36b6673" id="r_a822ed3dc51f7e3e9d6bf7451b36b6673"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a822ed3dc51f7e3e9d6bf7451b36b6673">getNMetabolites</a> () const</td></tr>
+<tr class="memdesc:a822ed3dc51f7e3e9d6bf7451b36b6673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el numero de metabolitos que contiene el modelo.  <br /></td></tr>
+<tr class="memitem:ab6b1b9169e0ef2b450020638d187d9c6" id="r_ab6b1b9169e0ef2b450020638d187d9c6"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab6b1b9169e0ef2b450020638d187d9c6">getNParameters</a> () const</td></tr>
+<tr class="memdesc:ab6b1b9169e0ef2b450020638d187d9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el numero de parametros que contiene el modelo.  <br /></td></tr>
+<tr class="memitem:ad52f88995427f27d7c4edac053104ea3" id="r_ad52f88995427f27d7c4edac053104ea3"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ad52f88995427f27d7c4edac053104ea3">getNReactions</a> () const</td></tr>
+<tr class="memdesc:ad52f88995427f27d7c4edac053104ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el numero de reacciones que contiene el modelo.  <br /></td></tr>
+<tr class="memitem:a6c0c433d34ba04805b5531f73cd30963" id="r_a6c0c433d34ba04805b5531f73cd30963"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a6c0c433d34ba04805b5531f73cd30963">getNMechanisms</a> () const</td></tr>
+<tr class="memdesc:a6c0c433d34ba04805b5531f73cd30963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el numero de mecanismos que contiene el modelo.  <br /></td></tr>
+<tr class="memitem:afe4fdfc9cfb4d72cb688cf59b57403a8" id="r_afe4fdfc9cfb4d72cb688cf59b57403a8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#afe4fdfc9cfb4d72cb688cf59b57403a8">indexOfMetabolite</a> (String name) const</td></tr>
+<tr class="memdesc:afe4fdfc9cfb4d72cb688cf59b57403a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el indice del metabolito de nombre 'name' segun el vector de metabolitos del modelo.  <br /></td></tr>
+<tr class="memitem:a9f142718edbb069267a7ee2d307ea82e" id="r_a9f142718edbb069267a7ee2d307ea82e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a9f142718edbb069267a7ee2d307ea82e">indexOfParameter</a> (String name) const</td></tr>
+<tr class="memdesc:a9f142718edbb069267a7ee2d307ea82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el indice del parametro de nombre 'name' segun el vector de parametros del modelo.  <br /></td></tr>
+<tr class="memitem:ac0d05c1585634d2e9101b75f108c499e" id="r_ac0d05c1585634d2e9101b75f108c499e"><td class="memItemLeft"><a class="el" href="class_t_mechanism.html">TMechanism</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac0d05c1585634d2e9101b75f108c499e">CreateMechanism</a> (String line, <a class="el" href="class_t_model.html">TModel</a> *model)</td></tr>
+<tr class="memdesc:ac0d05c1585634d2e9101b75f108c499e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dada la linea de entrada y el modelo, crea un objeto <a class="el" href="class_t_mechanism.html" title="Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo.">TMechanism</a>. La linea empieza por MECHANISM y se crea un tipo de mecanismo u otro segun el tipo especificado en el segundo campo de la linea.  <br /></td></tr>
+<tr class="memitem:a45494635ca0fd3779ea5147b616462c7" id="r_a45494635ca0fd3779ea5147b616462c7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a45494635ca0fd3779ea5147b616462c7">BuildEquations</a> ()</td></tr>
+<tr class="memdesc:a45494635ca0fd3779ea5147b616462c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la variacion de la concentracion de un metabolito. Hay tantas ecuaciones como metabolitos registrados.  <br /></td></tr>
+<tr class="memitem:a87a3912842dfc000e86b46a620ac007b" id="r_a87a3912842dfc000e86b46a620ac007b"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a87a3912842dfc000e86b46a620ac007b">getEquationPython</a> (int i)</td></tr>
+<tr class="memdesc:a87a3912842dfc000e86b46a620ac007b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra la EDO de la posicion (i), correspondiente al metabolito (i).  <br /></td></tr>
+<tr class="memitem:a1244f411aa4366b7b0b90a2e9536710a" id="r_a1244f411aa4366b7b0b90a2e9536710a"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a1244f411aa4366b7b0b90a2e9536710a">getEquationShow</a> (int i)</td></tr>
+<tr class="memdesc:a1244f411aa4366b7b0b90a2e9536710a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra la EDO de la posicion (i), correspondiente al metabolito (i).  <br /></td></tr>
+<tr class="memitem:a3eb607dfb2ff5657d514969b443685eb" id="r_a3eb607dfb2ff5657d514969b443685eb"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a3eb607dfb2ff5657d514969b443685eb">getEquationShowCondensed</a> (int i)</td></tr>
+<tr class="memdesc:a3eb607dfb2ff5657d514969b443685eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra la EDO condensada de la posicion (i), correspondiente al metabolito (i).  <br /></td></tr>
+<tr class="memitem:aed2cbe008b16fdfc52521effdf524926" id="r_aed2cbe008b16fdfc52521effdf524926"><td class="memItemLeft">const std::vector&lt; String &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aed2cbe008b16fdfc52521effdf524926">getAllEquationsPython</a> () const</td></tr>
+<tr class="memdesc:aed2cbe008b16fdfc52521effdf524926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un vector con todas las ecuaciones de los metabolitos guardados en el modelo.  <br /></td></tr>
+<tr class="memitem:aa540e17de770b4deab34377af8a27724" id="r_aa540e17de770b4deab34377af8a27724"><td class="memItemLeft">const std::vector&lt; String &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa540e17de770b4deab34377af8a27724">getAllMetaboliteNames</a> () const</td></tr>
+<tr class="memdesc:aa540e17de770b4deab34377af8a27724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un vector con todos los nombres cortos de los metabolitos guardados en el modelo.  <br /></td></tr>
+<tr class="memitem:ad7f4a56cd3c7e70307bb75d6d848bafa" id="r_ad7f4a56cd3c7e70307bb75d6d848bafa"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad7f4a56cd3c7e70307bb75d6d848bafa">getAllInitialConcen</a> () const</td></tr>
+<tr class="memdesc:ad7f4a56cd3c7e70307bb75d6d848bafa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un vector con todas las concentraciones iniciales de los metabolitos guardados en el modelo.  <br /></td></tr>
+<tr class="memitem:adde1214e971457ef9b758a131d6dbf3a" id="r_adde1214e971457ef9b758a131d6dbf3a"><td class="memItemLeft">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#adde1214e971457ef9b758a131d6dbf3a">getAllParameters</a> () const</td></tr>
+<tr class="memdesc:adde1214e971457ef9b758a131d6dbf3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un vector con todos los parametros guardados en el modelo.  <br /></td></tr>
+<tr class="memitem:a455dc1a34b336d3a548ea4d6aa727411" id="r_a455dc1a34b336d3a548ea4d6aa727411"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a455dc1a34b336d3a548ea4d6aa727411">Clear</a> ()</td></tr>
+<tr class="memdesc:a455dc1a34b336d3a548ea4d6aa727411"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borra el contenido actual del modelo. Elimina los metabolitos, parametros y reacciones cargadas.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a12f72b360e54b0d4406a8fa6e12c6129" id="r_a12f72b360e54b0d4406a8fa6e12c6129"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a12f72b360e54b0d4406a8fa6e12c6129">initMechanismTemplates</a> ()</td></tr>
+<tr class="memdesc:a12f72b360e54b0d4406a8fa6e12c6129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el mapa mechanismTemplates con los tipos de mecanismos disponibles en la aplicacion. Modifica el atributo "mechanismTemplates" introduciendo parejas clave-valor:  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:af4fcef58c90e59bb6be7d634dc9afed2" id="r_af4fcef58c90e59bb6be7d634dc9afed2"><td class="memItemLeft">std::vector&lt; <a class="el" href="class_t_metabolite.html">TMetabolite</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af4fcef58c90e59bb6be7d634dc9afed2">metabolites</a></td></tr>
+<tr class="memitem:a14aa85ca8ab896f6335f5d2402404c15" id="r_a14aa85ca8ab896f6335f5d2402404c15"><td class="memItemLeft">std::vector&lt; <a class="el" href="class_t_parameter.html">TParameter</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a14aa85ca8ab896f6335f5d2402404c15">parameters</a></td></tr>
+<tr class="memitem:a64f46c8130e6a381f99935d27d265518" id="r_a64f46c8130e6a381f99935d27d265518"><td class="memItemLeft">std::vector&lt; <a class="el" href="class_t_reaction.html">TReaction</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a64f46c8130e6a381f99935d27d265518">reactions</a></td></tr>
+<tr class="memitem:a510348e1a7e7d1791b2d63b2ecce8fa9" id="r_a510348e1a7e7d1791b2d63b2ecce8fa9"><td class="memItemLeft">std::vector&lt; <a class="el" href="class_t_mechanism.html">TMechanism</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a510348e1a7e7d1791b2d63b2ecce8fa9">mechanisms</a></td></tr>
+<tr class="memitem:a77b0737faff9bc48fc3a48508df5e562" id="r_a77b0737faff9bc48fc3a48508df5e562"><td class="memItemLeft">std::vector&lt; String &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a77b0737faff9bc48fc3a48508df5e562">equationsPython</a></td></tr>
+<tr class="memitem:a4499fda58ef9b7d727fb8a51a95113f0" id="r_a4499fda58ef9b7d727fb8a51a95113f0"><td class="memItemLeft">std::vector&lt; String &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4499fda58ef9b7d727fb8a51a95113f0">equationsShow</a></td></tr>
+<tr class="memitem:a656f850dd2e04acb5c015d25edc7d824" id="r_a656f850dd2e04acb5c015d25edc7d824"><td class="memItemLeft">std::vector&lt; String &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a656f850dd2e04acb5c015d25edc7d824">equationsShowCondensed</a></td></tr>
+<tr class="memitem:ae846d66408443fe153bc25c86c754407" id="r_ae846d66408443fe153bc25c86c754407"><td class="memItemLeft">std::map&lt; String, String &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae846d66408443fe153bc25c86c754407">mechanismTemplates</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase para encapsular un modelo completo, que representa una ruta metabolica especifica. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="af5af410318ed4ddff620cb139d0780a9" name="af5af410318ed4ddff620cb139d0780a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5af410318ed4ddff620cb139d0780a9">&#9670;&#160;</a></span>TModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TModel::TModel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de la clase <a class="el" href="class_t_model.html" title="Clase para encapsular un modelo completo, que representa una ruta metabolica especifica.">TModel</a>. </p>
+<p>Llama al metodo <a class="el" href="#a12f72b360e54b0d4406a8fa6e12c6129" title="Inicializa el mapa mechanismTemplates con los tipos de mecanismos disponibles en la aplicacion....">initMechanismTemplates()</a> para inicializar el mapa de mechanismTemplates con los tipos de mecanismos disponibles en la aplicacion. </p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_af5af410318ed4ddff620cb139d0780a9_cgraph.png" border="0" usemap="#aclass_t_model_af5af410318ed4ddff620cb139d0780a9_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_af5af410318ed4ddff620cb139d0780a9_cgraph" id="aclass_t_model_af5af410318ed4ddff620cb139d0780a9_cgraph">
+<area shape="rect" title="Constructor de la clase TModel." alt="" coords="5,5,121,32"/>
+<area shape="rect" href="class_t_model.html#a12f72b360e54b0d4406a8fa6e12c6129" title="Inicializa el mapa mechanismTemplates con los tipos de mecanismos disponibles en la aplicacion...." alt="" coords="169,5,385,32"/>
+<area shape="poly" title=" " alt="" coords="121,16,156,18,150,19,121,21"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_af5af410318ed4ddff620cb139d0780a9_icgraph.png" border="0" usemap="#aclass_t_model_af5af410318ed4ddff620cb139d0780a9_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_af5af410318ed4ddff620cb139d0780a9_icgraph" id="aclass_t_model_af5af410318ed4ddff620cb139d0780a9_icgraph">
+<area shape="rect" title="Constructor de la clase TModel." alt="" coords="232,5,347,32"/>
+<area shape="rect" href="class_t_model.html#ac0d05c1585634d2e9101b75f108c499e" title="Dada la linea de entrada y el modelo, crea un objeto TMechanism. La linea empieza por MECHANISM y se ..." alt="" coords="5,5,184,32"/>
+<area shape="poly" title=" " alt="" coords="214,19,184,21,184,16,219,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="adac18e3346097ccc0be6894963b2d1af" name="adac18e3346097ccc0be6894963b2d1af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adac18e3346097ccc0be6894963b2d1af">&#9670;&#160;</a></span>addMechanism()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TModel::addMechanism </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_t_mechanism.html">TMechanism</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mechanism</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metodo para aniadir un mecanismo al modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reaction</td><td>referencia constante de un objeto de tipo <a class="el" href="class_t_mechanism.html" title="Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo.">TMechanism</a> que se aniade a la lista de mecanismos del modelo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9c87a62fe5b7ac1d04f7fff6070f184d" name="a9c87a62fe5b7ac1d04f7fff6070f184d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c87a62fe5b7ac1d04f7fff6070f184d">&#9670;&#160;</a></span>addMetabolite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TModel::addMetabolite </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_t_metabolite.html">TMetabolite</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>metabolite</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metodo para aniadir un metabolito al modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">metabolite</td><td>referencia constante de un objeto de tipo <a class="el" href="class_t_metabolite.html" title="Clase para encapsular los metabolitos del modelo.">TMetabolite</a> que se aniade a la lista de metabolitos del modelo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8d88ba06c296c10c7bf7b642fa257a00" name="a8d88ba06c296c10c7bf7b642fa257a00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d88ba06c296c10c7bf7b642fa257a00">&#9670;&#160;</a></span>addParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TModel::addParameter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_t_parameter.html">TParameter</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parameter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metodo para aniadir un parametro al modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameter</td><td>referencia constante de un objeto de tipo <a class="el" href="class_t_parameter.html" title="Clase para encapsular los parametros del modelo.">TParameter</a> que se aniade a la lista de parametros del modelo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a393553bd5301af8da9ba6304b04cf21b" name="a393553bd5301af8da9ba6304b04cf21b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a393553bd5301af8da9ba6304b04cf21b">&#9670;&#160;</a></span>addReaction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TModel::addReaction </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_t_reaction.html">TReaction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>reaction</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metodo para aniadir una reaccion al modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reaction</td><td>referencia constante de un objeto de tipo <a class="el" href="class_t_reaction.html" title="Clase para encapsular las reacciones del modelo.">TReaction</a> que se aniade a la lista de reacciones del modelo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a45494635ca0fd3779ea5147b616462c7" name="a45494635ca0fd3779ea5147b616462c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45494635ca0fd3779ea5147b616462c7">&#9670;&#160;</a></span>BuildEquations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TModel::BuildEquations </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la variacion de la concentracion de un metabolito. Hay tantas ecuaciones como metabolitos registrados. </p>
+<p>La forma de construirla es teniendo en cuenta si el metabolito aparece como reactivo o producto en cada reaccion. Si aparece como reactivo, se resta la ecuacion cinetica asociada a dicha reaccion; si aparece como producto, se suma.</p>
+<p>El metodo modifica los atributos "equationsPython", "equationsShow" y "equationsShowCondensed" de la clase. </p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_a45494635ca0fd3779ea5147b616462c7_cgraph.png" border="0" usemap="#aclass_t_model_a45494635ca0fd3779ea5147b616462c7_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_a45494635ca0fd3779ea5147b616462c7_cgraph" id="aclass_t_model_a45494635ca0fd3779ea5147b616462c7_cgraph">
+<area shape="rect" title="Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la v..." alt="" coords="5,215,165,241"/>
+<area shape="rect" href="class_t_mechanism.html#ac46c760fddcd416499a39131141c9804" title="Devuelve la ecuacion cinetica directa en forma de String. Formato para enviarla al solver de Python." alt="" coords="233,5,418,48"/>
+<area shape="poly" title=" " alt="" coords="90,213,107,181,134,139,169,96,211,58,222,53,218,57,214,62,173,99,138,143,112,184,95,216"/>
+<area shape="rect" href="class_t_mechanism.html#a8050df05e581819d5e5be8dfbb85b63c" title="Devuelve la ecuacion cinetica directa en forma de String. Formato para mostrarla por pantalla." alt="" coords="217,72,435,99"/>
+<area shape="poly" title=" " alt="" coords="95,213,141,161,174,133,211,108,228,103,224,106,214,113,178,137,145,165,99,216"/>
+<area shape="rect" href="class_t_mechanism.html#a478649141c58734f7a8032300c3e5598" title="Devuelve la ecuacion cinetica inversa en forma de String. Formato para enviarla al solver de Python." alt="" coords="229,123,422,165"/>
+<area shape="poly" title=" " alt="" coords="117,212,212,175,236,169,231,172,214,180,120,216"/>
+<area shape="rect" href="class_t_mechanism.html#ac25a2712fe94a70768c4af9f791ae051" title="Devuelve la ecuacion cinetica inversa en forma de String. Formato para mostrarla por pantalla." alt="" coords="213,189,439,216"/>
+<area shape="poly" title=" " alt="" coords="164,217,200,215,195,218,166,222"/>
+<area shape="rect" href="class_t_model.html#a822ed3dc51f7e3e9d6bf7451b36b6673" title="Devuelve el numero de metabolitos que contiene el modelo." alt="" coords="242,240,410,267"/>
+<area shape="poly" title=" " alt="" coords="164,234,229,242,225,244,166,239"/>
+<area shape="rect" href="class_t_model.html#ad52f88995427f27d7c4edac053104ea3" title="Devuelve el numero de reacciones que contiene el modelo." alt="" coords="246,291,406,317"/>
+<area shape="poly" title=" " alt="" coords="117,239,214,276,243,286,238,287,212,281,117,245"/>
+<area shape="rect" href="class_t_mechanism.html#a4645ac8a1913d474bded3ccb4f0b75ba" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="221,341,430,368"/>
+<area shape="poly" title=" " alt="" coords="100,239,148,283,180,307,214,327,231,336,226,336,211,332,177,311,145,287,99,244"/>
+<area shape="rect" href="class_t_model.html#ac8791eb54816ee2bfdd1ac6c38ae2ed6" title="Dado el nombre corto de una reaccion, devuelve el mecanismo cargado en el modelo que la describe." alt="" coords="241,392,411,419"/>
+<area shape="poly" title=" " alt="" coords="95,239,140,307,174,346,214,378,229,387,223,387,211,382,170,350,135,311,93,244"/>
+<area shape="rect" href="class_t_model.html#a6c0c433d34ba04805b5531f73cd30963" title="Devuelve el numero de mecanismos que contiene el modelo." alt="" coords="487,392,661,419"/>
+<area shape="poly" title=" " alt="" coords="411,403,474,405,469,405,411,408"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a455dc1a34b336d3a548ea4d6aa727411" name="a455dc1a34b336d3a548ea4d6aa727411"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a455dc1a34b336d3a548ea4d6aa727411">&#9670;&#160;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TModel::Clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Borra el contenido actual del modelo. Elimina los metabolitos, parametros y reacciones cargadas. </p>
+
+</div>
+</div>
+<a id="ac0d05c1585634d2e9101b75f108c499e" name="ac0d05c1585634d2e9101b75f108c499e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d05c1585634d2e9101b75f108c499e">&#9670;&#160;</a></span>CreateMechanism()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_mechanism.html">TMechanism</a> TModel::CreateMechanism </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_t_model.html">TModel</a> *</td>          <td class="paramname"><span class="paramname"><em>model</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dada la linea de entrada y el modelo, crea un objeto <a class="el" href="class_t_mechanism.html" title="Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo.">TMechanism</a>. La linea empieza por MECHANISM y se crea un tipo de mecanismo u otro segun el tipo especificado en el segundo campo de la linea. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>linea del texto de entrada que se lee. </td></tr>
+    <tr><td class="paramname">model</td><td>puntero al modelo en el que se crea el mecanismo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve el objeto <a class="el" href="class_t_mechanism.html" title="Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo.">TMechanism</a> creado. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_ac0d05c1585634d2e9101b75f108c499e_cgraph.png" border="0" usemap="#aclass_t_model_ac0d05c1585634d2e9101b75f108c499e_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_ac0d05c1585634d2e9101b75f108c499e_cgraph" id="aclass_t_model_ac0d05c1585634d2e9101b75f108c499e_cgraph">
+<area shape="rect" title="Dada la linea de entrada y el modelo, crea un objeto TMechanism. La linea empieza por MECHANISM y se ..." alt="" coords="5,5,184,32"/>
+<area shape="rect" href="class_t_model.html#af5af410318ed4ddff620cb139d0780a9" title="Constructor de la clase TModel." alt="" coords="232,5,347,32"/>
+<area shape="poly" title=" " alt="" coords="184,16,218,19,213,19,184,21"/>
+<area shape="rect" href="class_t_model.html#a12f72b360e54b0d4406a8fa6e12c6129" title="Inicializa el mapa mechanismTemplates con los tipos de mecanismos disponibles en la aplicacion...." alt="" coords="395,5,611,32"/>
+<area shape="poly" title=" " alt="" coords="347,16,382,19,377,19,347,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a88ca28b8b4a021f3b142cb4c76200326" name="a88ca28b8b4a021f3b142cb4c76200326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88ca28b8b4a021f3b142cb4c76200326">&#9670;&#160;</a></span>fillMechanismComboBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TModel::fillMechanismComboBox </td>
+          <td>(</td>
+          <td class="paramtype">TComboBox *</td>          <td class="paramname"><span class="paramname"><em>comboMecanismos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rellena el objeto comboMecanismos con la lista de tipos de mecanismos disponibles. Usa el contenido del mapa mechanismTemplates de la clase. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">comboMecanismos</td><td>objeto TComboBox que contendra un desplegable con los tipos de mecanismos disponibles. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a058434cf073381782bfbbe17905bdff9" name="a058434cf073381782bfbbe17905bdff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a058434cf073381782bfbbe17905bdff9">&#9670;&#160;</a></span>fillReactionsComboBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TModel::fillReactionsComboBox </td>
+          <td>(</td>
+          <td class="paramtype">TComboBox *</td>          <td class="paramname"><span class="paramname"><em>comboReactions</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rellena el objeto comboReactions con la lista de las reacciones cargadas en el modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">comboReactions</td><td>objeto TComboBox que contendra un desplegable con las reacciones cargadas en el modelo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_a058434cf073381782bfbbe17905bdff9_cgraph.png" border="0" usemap="#aclass_t_model_a058434cf073381782bfbbe17905bdff9_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_a058434cf073381782bfbbe17905bdff9_cgraph" id="aclass_t_model_a058434cf073381782bfbbe17905bdff9_cgraph">
+<area shape="rect" title="Rellena el objeto comboReactions con la lista de las reacciones cargadas en el modelo." alt="" coords="5,31,215,57"/>
+<area shape="rect" href="class_t_model.html#ad52f88995427f27d7c4edac053104ea3" title="Devuelve el numero de reacciones que contiene el modelo." alt="" coords="263,5,422,32"/>
+<area shape="poly" title=" " alt="" coords="215,30,250,29,244,30,215,35"/>
+<area shape="rect" href="class_t_model.html#a6fbeb65e6363c98330168932b3ca9aaa" title="Dado el indice de una reaccion, la busca en el vector de reacciones del modelo." alt="" coords="271,56,414,83"/>
+<area shape="poly" title=" " alt="" coords="215,53,258,60,253,60,215,58"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a44f82fb9d342458c072ed3dea15b7f43" name="a44f82fb9d342458c072ed3dea15b7f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44f82fb9d342458c072ed3dea15b7f43">&#9670;&#160;</a></span>findMetabolite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_t_metabolite.html">TMetabolite</a> * TModel::findMetabolite </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dado el nombre corto de un metabolito, lo busca en el vector de metabolitos del modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>nombre corto del metabolito a buscar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve un puntero al metabolito si este se encuentra en el modelo. Lanza una excepcion en caso contrario. </dd></dl>
+
+</div>
+</div>
+<a id="adf78ac24d7abaaf99561876099b9c2c9" name="adf78ac24d7abaaf99561876099b9c2c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf78ac24d7abaaf99561876099b9c2c9">&#9670;&#160;</a></span>findParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_t_parameter.html">TParameter</a> * TModel::findParameter </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dado el nombre corto de un parametro, lo busca en el vector de parametros del modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>nombre corto del parametro a buscar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve un puntero al parametro si este se encuentra en el modelo. Lanza una excepcion en caso contrario. </dd></dl>
+
+</div>
+</div>
+<a id="a8258971c01053ab6a05f59871b25857a" name="a8258971c01053ab6a05f59871b25857a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8258971c01053ab6a05f59871b25857a">&#9670;&#160;</a></span>findReaction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_t_reaction.html">TReaction</a> * TModel::findReaction </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dado el nombre corto de una reaccion, lo busca en el vector de reacciones del modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>nombre corto de la reaccion a buscar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve un puntero a la reaccion si esta se encuentra en el modelo. Lanza una excepcion en caso contrario. </dd></dl>
+
+</div>
+</div>
+<a id="aed2cbe008b16fdfc52521effdf524926" name="aed2cbe008b16fdfc52521effdf524926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed2cbe008b16fdfc52521effdf524926">&#9670;&#160;</a></span>getAllEquationsPython()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; String &gt; &amp; TModel::getAllEquationsPython </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve un vector con todas las ecuaciones de los metabolitos guardados en el modelo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>vector constante de tipo String </dd></dl>
+
+</div>
+</div>
+<a id="ad7f4a56cd3c7e70307bb75d6d848bafa" name="ad7f4a56cd3c7e70307bb75d6d848bafa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7f4a56cd3c7e70307bb75d6d848bafa">&#9670;&#160;</a></span>getAllInitialConcen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; double &gt; TModel::getAllInitialConcen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve un vector con todas las concentraciones iniciales de los metabolitos guardados en el modelo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>vector constante de tipo double </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_ad7f4a56cd3c7e70307bb75d6d848bafa_cgraph.png" border="0" usemap="#aclass_t_model_ad7f4a56cd3c7e70307bb75d6d848bafa_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_ad7f4a56cd3c7e70307bb75d6d848bafa_cgraph" id="aclass_t_model_ad7f4a56cd3c7e70307bb75d6d848bafa_cgraph">
+<area shape="rect" title="Devuelve un vector con todas las concentraciones iniciales de los metabolitos guardados en el modelo." alt="" coords="5,31,187,57"/>
+<area shape="rect" href="class_t_model.html#a47f72912b3399ef5f306b5ec355c7e43" title="Dado el indice de un metabolito, lo busca en el vector de metabolitos del modelo." alt="" coords="243,5,394,32"/>
+<area shape="poly" title=" " alt="" coords="187,31,230,28,225,30,188,36"/>
+<area shape="rect" href="class_t_model.html#a822ed3dc51f7e3e9d6bf7451b36b6673" title="Devuelve el numero de metabolitos que contiene el modelo." alt="" coords="235,56,402,83"/>
+<area shape="poly" title=" " alt="" coords="187,52,222,58,217,58,187,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa540e17de770b4deab34377af8a27724" name="aa540e17de770b4deab34377af8a27724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa540e17de770b4deab34377af8a27724">&#9670;&#160;</a></span>getAllMetaboliteNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; String &gt; TModel::getAllMetaboliteNames </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve un vector con todos los nombres cortos de los metabolitos guardados en el modelo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>vector constante de tipo String </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_aa540e17de770b4deab34377af8a27724_cgraph.png" border="0" usemap="#aclass_t_model_aa540e17de770b4deab34377af8a27724_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_aa540e17de770b4deab34377af8a27724_cgraph" id="aclass_t_model_aa540e17de770b4deab34377af8a27724_cgraph">
+<area shape="rect" title="Devuelve un vector con todos los nombres cortos de los metabolitos guardados en el modelo." alt="" coords="5,23,171,65"/>
+<area shape="rect" href="class_t_model.html#a47f72912b3399ef5f306b5ec355c7e43" title="Dado el indice de un metabolito, lo busca en el vector de metabolitos del modelo." alt="" coords="227,5,378,32"/>
+<area shape="poly" title=" " alt="" coords="171,32,214,29,209,30,172,37"/>
+<area shape="rect" href="class_t_model.html#a822ed3dc51f7e3e9d6bf7451b36b6673" title="Devuelve el numero de metabolitos que contiene el modelo." alt="" coords="219,56,386,83"/>
+<area shape="poly" title=" " alt="" coords="171,51,206,57,201,58,171,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adde1214e971457ef9b758a131d6dbf3a" name="adde1214e971457ef9b758a131d6dbf3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde1214e971457ef9b758a131d6dbf3a">&#9670;&#160;</a></span>getAllParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; double &gt; TModel::getAllParameters </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve un vector con todos los parametros guardados en el modelo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>vector constante de tipo double </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_adde1214e971457ef9b758a131d6dbf3a_cgraph.png" border="0" usemap="#aclass_t_model_adde1214e971457ef9b758a131d6dbf3a_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_adde1214e971457ef9b758a131d6dbf3a_cgraph" id="aclass_t_model_adde1214e971457ef9b758a131d6dbf3a_cgraph">
+<area shape="rect" title="Devuelve un vector con todos los parametros guardados en el modelo." alt="" coords="5,31,178,57"/>
+<area shape="rect" href="class_t_model.html#ab6b1b9169e0ef2b450020638d187d9c6" title="Devuelve el numero de parametros que contiene el modelo." alt="" coords="226,5,393,32"/>
+<area shape="poly" title=" " alt="" coords="177,31,213,30,208,31,178,37"/>
+<area shape="rect" href="class_t_model.html#ae6fa3c29934151ab3f70edbfbaa0a1fd" title="Dado el indice de un parametro, lo busca en el vector de parametros del modelo." alt="" coords="234,56,384,83"/>
+<area shape="poly" title=" " alt="" coords="178,51,221,59,216,59,178,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a87a3912842dfc000e86b46a620ac007b" name="a87a3912842dfc000e86b46a620ac007b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87a3912842dfc000e86b46a620ac007b">&#9670;&#160;</a></span>getEquationPython()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TModel::getEquationPython </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra la EDO de la posicion (i), correspondiente al metabolito (i). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>indice del vector de ecuaciones. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>String EDO del metabolito numero (i), en formato String para Python. </dd></dl>
+
+</div>
+</div>
+<a id="a1244f411aa4366b7b0b90a2e9536710a" name="a1244f411aa4366b7b0b90a2e9536710a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1244f411aa4366b7b0b90a2e9536710a">&#9670;&#160;</a></span>getEquationShow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TModel::getEquationShow </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra la EDO de la posicion (i), correspondiente al metabolito (i). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>indice del vector de ecuaciones. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>String EDO del metabolito numero (i), en formato String para el usuario. </dd></dl>
+
+</div>
+</div>
+<a id="a3eb607dfb2ff5657d514969b443685eb" name="a3eb607dfb2ff5657d514969b443685eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb607dfb2ff5657d514969b443685eb">&#9670;&#160;</a></span>getEquationShowCondensed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TModel::getEquationShowCondensed </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra la EDO condensada de la posicion (i), correspondiente al metabolito (i). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>indice del vector de ecuaciones. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>String EDO del metabolito numero (i), en formato String para el usuario. </dd></dl>
+
+</div>
+</div>
+<a id="af7a0006db89bc3af0ca15dfaa40b1204" name="af7a0006db89bc3af0ca15dfaa40b1204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7a0006db89bc3af0ca15dfaa40b1204">&#9670;&#160;</a></span>getMechanism()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_t_mechanism.html">TMechanism</a> * TModel::getMechanism </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dado el indice de un mecanismo, lo busca en el vector de mecanismos del modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>indice del mecanismo a devolver. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve un puntero al mecanismo. Devuelve nullptr si el indice es invalido. </dd></dl>
+
+</div>
+</div>
+<a id="a598e3057d35978e144a03283964ce74f" name="a598e3057d35978e144a03283964ce74f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a598e3057d35978e144a03283964ce74f">&#9670;&#160;</a></span>getMechanismTemplate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TModel::getMechanismTemplate </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dado el tipo de mecanismo (key), devuelve la plantilla de entrada de datos asociada. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>tipo de mecanismo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>String con la plantilla de entrada del tipo de mecanismo pedido </dd></dl>
+
+</div>
+</div>
+<a id="a47f72912b3399ef5f306b5ec355c7e43" name="a47f72912b3399ef5f306b5ec355c7e43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47f72912b3399ef5f306b5ec355c7e43">&#9670;&#160;</a></span>getMetabolite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_t_metabolite.html">TMetabolite</a> * TModel::getMetabolite </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dado el indice de un metabolito, lo busca en el vector de metabolitos del modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>indice del metabolito a devolver. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve un puntero al metabolito. Devuelve nullptr si el indice es invalido. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_a47f72912b3399ef5f306b5ec355c7e43_icgraph.png" border="0" usemap="#aclass_t_model_a47f72912b3399ef5f306b5ec355c7e43_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_a47f72912b3399ef5f306b5ec355c7e43_icgraph" id="aclass_t_model_a47f72912b3399ef5f306b5ec355c7e43_icgraph">
+<area shape="rect" title="Dado el indice de un metabolito, lo busca en el vector de metabolitos del modelo." alt="" coords="235,35,385,61"/>
+<area shape="rect" href="class_t_model.html#ad7f4a56cd3c7e70307bb75d6d848bafa" title="Devuelve un vector con todas las concentraciones iniciales de los metabolitos guardados en el modelo." alt="" coords="5,5,187,32"/>
+<area shape="poly" title=" " alt="" coords="217,36,187,34,187,28,222,35"/>
+<area shape="rect" href="class_t_model.html#aa540e17de770b4deab34377af8a27724" title="Devuelve un vector con todos los nombres cortos de los metabolitos guardados en el modelo." alt="" coords="13,56,179,99"/>
+<area shape="poly" title=" " alt="" coords="217,61,179,69,179,63,222,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6c0c433d34ba04805b5531f73cd30963" name="a6c0c433d34ba04805b5531f73cd30963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c0c433d34ba04805b5531f73cd30963">&#9670;&#160;</a></span>getNMechanisms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TModel::getNMechanisms </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el numero de mecanismos que contiene el modelo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>int numero de mecanismos del modelo. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_a6c0c433d34ba04805b5531f73cd30963_icgraph.png" border="0" usemap="#aclass_t_model_a6c0c433d34ba04805b5531f73cd30963_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_a6c0c433d34ba04805b5531f73cd30963_icgraph" id="aclass_t_model_a6c0c433d34ba04805b5531f73cd30963_icgraph">
+<area shape="rect" title="Devuelve el numero de mecanismos que contiene el modelo." alt="" coords="431,5,605,32"/>
+<area shape="rect" href="class_t_model.html#ac8791eb54816ee2bfdd1ac6c38ae2ed6" title="Dado el nombre corto de una reaccion, devuelve el mecanismo cargado en el modelo que la describe." alt="" coords="213,5,383,32"/>
+<area shape="poly" title=" " alt="" coords="413,19,384,21,383,16,418,19"/>
+<area shape="rect" href="class_t_model.html#a45494635ca0fd3779ea5147b616462c7" title="Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la v..." alt="" coords="5,5,165,32"/>
+<area shape="poly" title=" " alt="" coords="194,19,165,21,165,16,200,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a822ed3dc51f7e3e9d6bf7451b36b6673" name="a822ed3dc51f7e3e9d6bf7451b36b6673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a822ed3dc51f7e3e9d6bf7451b36b6673">&#9670;&#160;</a></span>getNMetabolites()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TModel::getNMetabolites </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el numero de metabolitos que contiene el modelo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>int numero de metabolitos del modelo. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_a822ed3dc51f7e3e9d6bf7451b36b6673_icgraph.png" border="0" usemap="#aclass_t_model_a822ed3dc51f7e3e9d6bf7451b36b6673_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_a822ed3dc51f7e3e9d6bf7451b36b6673_icgraph" id="aclass_t_model_a822ed3dc51f7e3e9d6bf7451b36b6673_icgraph">
+<area shape="rect" title="Devuelve el numero de metabolitos que contiene el modelo." alt="" coords="235,56,402,83"/>
+<area shape="rect" href="class_t_model.html#a45494635ca0fd3779ea5147b616462c7" title="Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la v..." alt="" coords="16,5,176,32"/>
+<area shape="poly" title=" " alt="" coords="239,53,158,35,158,30,244,51"/>
+<area shape="rect" href="class_t_model.html#ad7f4a56cd3c7e70307bb75d6d848bafa" title="Devuelve un vector con todas las concentraciones iniciales de los metabolitos guardados en el modelo." alt="" coords="5,56,187,83"/>
+<area shape="poly" title=" " alt="" coords="217,70,188,72,187,67,222,69"/>
+<area shape="rect" href="class_t_model.html#aa540e17de770b4deab34377af8a27724" title="Devuelve un vector con todos los nombres cortos de los metabolitos guardados en el modelo." alt="" coords="13,107,179,149"/>
+<area shape="poly" title=" " alt="" coords="253,86,180,109,178,104,248,88"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab6b1b9169e0ef2b450020638d187d9c6" name="ab6b1b9169e0ef2b450020638d187d9c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6b1b9169e0ef2b450020638d187d9c6">&#9670;&#160;</a></span>getNParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TModel::getNParameters </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el numero de parametros que contiene el modelo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>int numero de parametros del modelo. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_ab6b1b9169e0ef2b450020638d187d9c6_icgraph.png" border="0" usemap="#aclass_t_model_ab6b1b9169e0ef2b450020638d187d9c6_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_ab6b1b9169e0ef2b450020638d187d9c6_icgraph" id="aclass_t_model_ab6b1b9169e0ef2b450020638d187d9c6_icgraph">
+<area shape="rect" title="Devuelve el numero de parametros que contiene el modelo." alt="" coords="226,5,393,32"/>
+<area shape="rect" href="class_t_model.html#adde1214e971457ef9b758a131d6dbf3a" title="Devuelve un vector con todos los parametros guardados en el modelo." alt="" coords="5,5,178,32"/>
+<area shape="poly" title=" " alt="" coords="208,19,178,21,178,16,213,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad52f88995427f27d7c4edac053104ea3" name="ad52f88995427f27d7c4edac053104ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad52f88995427f27d7c4edac053104ea3">&#9670;&#160;</a></span>getNReactions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TModel::getNReactions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el numero de reacciones que contiene el modelo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>int numero de reacciones del modelo. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_ad52f88995427f27d7c4edac053104ea3_icgraph.png" border="0" usemap="#aclass_t_model_ad52f88995427f27d7c4edac053104ea3_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_ad52f88995427f27d7c4edac053104ea3_icgraph" id="aclass_t_model_ad52f88995427f27d7c4edac053104ea3_icgraph">
+<area shape="rect" title="Devuelve el numero de reacciones que contiene el modelo." alt="" coords="263,31,422,57"/>
+<area shape="rect" href="class_t_model.html#a45494635ca0fd3779ea5147b616462c7" title="Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la v..." alt="" coords="30,5,190,32"/>
+<area shape="poly" title=" " alt="" coords="245,34,190,30,190,25,250,33"/>
+<area shape="rect" href="class_t_model.html#a058434cf073381782bfbbe17905bdff9" title="Rellena el objeto comboReactions con la lista de las reacciones cargadas en el modelo." alt="" coords="5,56,215,83"/>
+<area shape="poly" title=" " alt="" coords="245,55,215,61,215,55,250,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae6fa3c29934151ab3f70edbfbaa0a1fd" name="ae6fa3c29934151ab3f70edbfbaa0a1fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6fa3c29934151ab3f70edbfbaa0a1fd">&#9670;&#160;</a></span>getParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_t_parameter.html">TParameter</a> * TModel::getParameter </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dado el indice de un parametro, lo busca en el vector de parametros del modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>indice del parametro a devolver. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve un puntero al parametro. Devuelve nullptr si el indice es invalido. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_ae6fa3c29934151ab3f70edbfbaa0a1fd_icgraph.png" border="0" usemap="#aclass_t_model_ae6fa3c29934151ab3f70edbfbaa0a1fd_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_ae6fa3c29934151ab3f70edbfbaa0a1fd_icgraph" id="aclass_t_model_ae6fa3c29934151ab3f70edbfbaa0a1fd_icgraph">
+<area shape="rect" title="Dado el indice de un parametro, lo busca en el vector de parametros del modelo." alt="" coords="226,5,376,32"/>
+<area shape="rect" href="class_t_model.html#adde1214e971457ef9b758a131d6dbf3a" title="Devuelve un vector con todos los parametros guardados en el modelo." alt="" coords="5,5,178,32"/>
+<area shape="poly" title=" " alt="" coords="208,19,178,21,178,16,213,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6fbeb65e6363c98330168932b3ca9aaa" name="a6fbeb65e6363c98330168932b3ca9aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fbeb65e6363c98330168932b3ca9aaa">&#9670;&#160;</a></span>getReaction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_t_reaction.html">TReaction</a> * TModel::getReaction </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dado el indice de una reaccion, la busca en el vector de reacciones del modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>indice del reaccion a devolver. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve un puntero al reaccion. Devuelve nullptr si el indice es invalido. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_a6fbeb65e6363c98330168932b3ca9aaa_icgraph.png" border="0" usemap="#aclass_t_model_a6fbeb65e6363c98330168932b3ca9aaa_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_a6fbeb65e6363c98330168932b3ca9aaa_icgraph" id="aclass_t_model_a6fbeb65e6363c98330168932b3ca9aaa_icgraph">
+<area shape="rect" title="Dado el indice de una reaccion, la busca en el vector de reacciones del modelo." alt="" coords="263,5,405,32"/>
+<area shape="rect" href="class_t_model.html#a058434cf073381782bfbbe17905bdff9" title="Rellena el objeto comboReactions con la lista de las reacciones cargadas en el modelo." alt="" coords="5,5,215,32"/>
+<area shape="poly" title=" " alt="" coords="245,19,215,21,215,16,250,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac8791eb54816ee2bfdd1ac6c38ae2ed6" name="ac8791eb54816ee2bfdd1ac6c38ae2ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8791eb54816ee2bfdd1ac6c38ae2ed6">&#9670;&#160;</a></span>givesMechanism()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_t_mechanism.html">TMechanism</a> * TModel::givesMechanism </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>nameReaction</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dado el nombre corto de una reaccion, devuelve el mecanismo cargado en el modelo que la describe. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>nombre corto de una reaccion. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Devuelve un puntero al mecanismo que describe la reaccion. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_cgraph.png" border="0" usemap="#aclass_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_cgraph" id="aclass_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_cgraph">
+<area shape="rect" title="Dado el nombre corto de una reaccion, devuelve el mecanismo cargado en el modelo que la describe." alt="" coords="5,5,176,32"/>
+<area shape="rect" href="class_t_model.html#a6c0c433d34ba04805b5531f73cd30963" title="Devuelve el numero de mecanismos que contiene el modelo." alt="" coords="224,5,398,32"/>
+<area shape="poly" title=" " alt="" coords="176,16,211,19,205,19,176,21"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_icgraph.png" border="0" usemap="#aclass_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_icgraph" id="aclass_t_model_ac8791eb54816ee2bfdd1ac6c38ae2ed6_icgraph">
+<area shape="rect" title="Dado el nombre corto de una reaccion, devuelve el mecanismo cargado en el modelo que la describe." alt="" coords="213,5,383,32"/>
+<area shape="rect" href="class_t_model.html#a45494635ca0fd3779ea5147b616462c7" title="Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la v..." alt="" coords="5,5,165,32"/>
+<area shape="poly" title=" " alt="" coords="194,19,165,21,165,16,200,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afe4fdfc9cfb4d72cb688cf59b57403a8" name="afe4fdfc9cfb4d72cb688cf59b57403a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4fdfc9cfb4d72cb688cf59b57403a8">&#9670;&#160;</a></span>indexOfMetabolite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TModel::indexOfMetabolite </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el indice del metabolito de nombre 'name' segun el vector de metabolitos del modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Nombre corto del metabolito. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int Numero del indice del metabolito en el vector de metabolitos del modelo. Devuelve -1 si no lo encuentra. </dd></dl>
+
+</div>
+</div>
+<a id="a9f142718edbb069267a7ee2d307ea82e" name="a9f142718edbb069267a7ee2d307ea82e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f142718edbb069267a7ee2d307ea82e">&#9670;&#160;</a></span>indexOfParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TModel::indexOfParameter </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el indice del parametro de nombre 'name' segun el vector de parametros del modelo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Nombre corto del parametro. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int Numero del indice del parametro en el vector de parametros del modelo. Devuelve -1 si no lo encuentra. </dd></dl>
+
+</div>
+</div>
+<a id="a12f72b360e54b0d4406a8fa6e12c6129" name="a12f72b360e54b0d4406a8fa6e12c6129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12f72b360e54b0d4406a8fa6e12c6129">&#9670;&#160;</a></span>initMechanismTemplates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TModel::initMechanismTemplates </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inicializa el mapa mechanismTemplates con los tipos de mecanismos disponibles en la aplicacion. Modifica el atributo "mechanismTemplates" introduciendo parejas clave-valor: </p>
+<ul>
+<li>clave: identificativo del tipo de mecanismo, String.</li>
+<li>valor: plantilla con los campos necesarios para introducir un MECHANISM de ese tipo, String. </li>
+</ul>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_model_a12f72b360e54b0d4406a8fa6e12c6129_icgraph.png" border="0" usemap="#aclass_t_model_a12f72b360e54b0d4406a8fa6e12c6129_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_model_a12f72b360e54b0d4406a8fa6e12c6129_icgraph" id="aclass_t_model_a12f72b360e54b0d4406a8fa6e12c6129_icgraph">
+<area shape="rect" title="Inicializa el mapa mechanismTemplates con los tipos de mecanismos disponibles en la aplicacion...." alt="" coords="395,5,611,32"/>
+<area shape="rect" href="class_t_model.html#af5af410318ed4ddff620cb139d0780a9" title="Constructor de la clase TModel." alt="" coords="232,5,347,32"/>
+<area shape="poly" title=" " alt="" coords="377,19,347,21,347,16,382,19"/>
+<area shape="rect" href="class_t_model.html#ac0d05c1585634d2e9101b75f108c499e" title="Dada la linea de entrada y el modelo, crea un objeto TMechanism. La linea empieza por MECHANISM y se ..." alt="" coords="5,5,184,32"/>
+<area shape="poly" title=" " alt="" coords="214,19,184,21,184,16,219,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a77b0737faff9bc48fc3a48508df5e562" name="a77b0737faff9bc48fc3a48508df5e562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77b0737faff9bc48fc3a48508df5e562">&#9670;&#160;</a></span>equationsPython</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;String&gt; TModel::equationsPython</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Lista de las EDOs que miden la variacion de la concentracion de cada metabolito a lo largo del tiempo. Formato Python. </p>
+
+</div>
+</div>
+<a id="a4499fda58ef9b7d727fb8a51a95113f0" name="a4499fda58ef9b7d727fb8a51a95113f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4499fda58ef9b7d727fb8a51a95113f0">&#9670;&#160;</a></span>equationsShow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;String&gt; TModel::equationsShow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Lista de las EDOs que miden la variacion de la concentracion de cada metabolito a lo largo del tiempo. Formato para salida usuario. </p>
+
+</div>
+</div>
+<a id="a656f850dd2e04acb5c015d25edc7d824" name="a656f850dd2e04acb5c015d25edc7d824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a656f850dd2e04acb5c015d25edc7d824">&#9670;&#160;</a></span>equationsShowCondensed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;String&gt; TModel::equationsShowCondensed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Muestra el nombre del mecanismo que se suma o resta, no la ecuacion cineta desglosada como en equationsShow . </p>
+
+</div>
+</div>
+<a id="a510348e1a7e7d1791b2d63b2ecce8fa9" name="a510348e1a7e7d1791b2d63b2ecce8fa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a510348e1a7e7d1791b2d63b2ecce8fa9">&#9670;&#160;</a></span>mechanisms</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_t_mechanism.html">TMechanism</a>&gt; TModel::mechanisms</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Lista de los mecanismos que componen el modelo a simular. Uno para cada reaccion. </p>
+
+</div>
+</div>
+<a id="ae846d66408443fe153bc25c86c754407" name="ae846d66408443fe153bc25c86c754407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae846d66408443fe153bc25c86c754407">&#9670;&#160;</a></span>mechanismTemplates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;String, String&gt; TModel::mechanismTemplates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Mapa con los tipos de mecanismo disponibles en la aplicacion, junto a su plantilla de entrada </p>
+
+</div>
+</div>
+<a id="af4fcef58c90e59bb6be7d634dc9afed2" name="af4fcef58c90e59bb6be7d634dc9afed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4fcef58c90e59bb6be7d634dc9afed2">&#9670;&#160;</a></span>metabolites</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_t_metabolite.html">TMetabolite</a>&gt; TModel::metabolites</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Lista de los metabolitos que componen el modelo, cuya concentracion se va a medir en lal simulacion </p>
+
+</div>
+</div>
+<a id="a14aa85ca8ab896f6335f5d2402404c15" name="a14aa85ca8ab896f6335f5d2402404c15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14aa85ca8ab896f6335f5d2402404c15">&#9670;&#160;</a></span>parameters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_t_parameter.html">TParameter</a>&gt; TModel::parameters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Lista de todos los parametros que aparecen en el modelo </p>
+
+</div>
+</div>
+<a id="a64f46c8130e6a381f99935d27d265518" name="a64f46c8130e6a381f99935d27d265518"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64f46c8130e6a381f99935d27d265518">&#9670;&#160;</a></span>reactions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_t_reaction.html">TReaction</a>&gt; TModel::reactions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Lista de las reacciones que componen el modelo a simular </p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li><a class="el" href="_metabolic_elements_8h_source.html">MetabolicElements.h</a></li>
+<li><a class="el" href="_metabolic_elements_8cpp.html">MetabolicElements.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_t_model.html">TModel</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

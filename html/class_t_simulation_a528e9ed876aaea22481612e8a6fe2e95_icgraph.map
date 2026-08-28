@@ -1,0 +1,5 @@
+<map id="TSimulation::ReadOutputCSV" name="TSimulation::ReadOutputCSV">
+<area shape="rect" id="Node000001" title="Lee el archivo &#39;output.csv&#39; generado por CallPython() y actualiza el contenido del atributo &#39;resultad..." alt="" coords="231,5,427,32"/>
+<area shape="rect" id="Node000002" href="$class_t_simulation.html#a7950e734c85e85bedf4e477980db9a4d" title="Lanza la simulacion: crea archivo de entrada de datos para el python y lo ejecuta...." alt="" coords="5,5,183,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,19,183,21,183,16,218,19"/>
+</map>

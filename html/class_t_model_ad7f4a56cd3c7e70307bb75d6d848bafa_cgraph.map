@@ -1,0 +1,7 @@
+<map id="TModel::getAllInitialConcen" name="TModel::getAllInitialConcen">
+<area shape="rect" id="Node000001" title="Devuelve un vector con todas las concentraciones iniciales de los metabolitos guardados en el modelo." alt="" coords="5,31,187,57"/>
+<area shape="rect" id="Node000002" href="$class_t_model.html#a47f72912b3399ef5f306b5ec355c7e43" title="Dado el indice de un metabolito, lo busca en el vector de metabolitos del modelo." alt="" coords="243,5,394,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,31,230,28,225,30,188,36"/>
+<area shape="rect" id="Node000003" href="$class_t_model.html#a822ed3dc51f7e3e9d6bf7451b36b6673" title="Devuelve el numero de metabolitos que contiene el modelo." alt="" coords="235,56,402,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,52,222,58,217,58,187,57"/>
+</map>

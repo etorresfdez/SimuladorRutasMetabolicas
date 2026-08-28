@@ -1,0 +1,474 @@
+\doxysubsection{Referencia de la clase TMechanism}
+\hypertarget{class_t_mechanism}{}\label{class_t_mechanism}\index{TMechanism@{TMechanism}}
+
+
+Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo.  
+
+
+
+
+{\ttfamily \+\#include $<$Metabolic\+Elements.\+h$>$}
+
+
+
+Diagrama de herencia de TMechanism\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_mechanism__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de TMechanism:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_t_mechanism__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285}{TMechanism}} (String line, \doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*}p\+\_\+model)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_t_mechanism}{TMechanism}. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a83135bad08af9d4416b57f7fe7c73493}{get\+Mech\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre del tipo de mecanismo. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba}{get\+Reaction\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre de la reaccion asociada al mecanismo. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_t_reaction}{TReaction}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d}{get\+Reaction}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve un puntero a la reaccion dada su nombre. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb}{get\+NMech\+Params}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de parametros del mecanismo guardados. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007}{get\+Mech\+Params}} (int i) const
+\begin{DoxyCompactList}\small\item\em Devuelve el parametro del mecanismo de la posicion \textquotesingle{}i\textquotesingle{}. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_ac46c760fddcd416499a39131141c9804}{get\+Direct\+Rate\+Python}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la ecuacion cinetica directa en forma de String. Formato para enviarla al solver de Python. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a478649141c58734f7a8032300c3e5598}{get\+Inverse\+Rate\+Python}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la ecuacion cinetica inversa en forma de String. Formato para enviarla al solver de Python. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c}{get\+Direct\+Rate\+Show}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la ecuacion cinetica directa en forma de String. Formato para mostrarla por pantalla. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_ac25a2712fe94a70768c4af9f791ae051}{get\+Inverse\+Rate\+Show}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la ecuacion cinetica inversa en forma de String. Formato para mostrarla por pantalla. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55}{to\+String}} (TMemo \texorpdfstring{$\ast$}{*}pantalla\+Salida) const
+\begin{DoxyCompactList}\small\item\em Muestra el mecanismo guardado y sus atributos. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_t_mechanism_a03ed06d4a482c878537e2211a3116ecd}{Check\+Elements}} () const
+\begin{DoxyCompactList}\small\item\em Metodo virtual para comprobar que los atributos cargados en el mecanismo son correctos. Depende del tipo de mecanismo. Lanza excepciones si no son correctos. Se comprueba que el numero de parametros es el adecuado, y que los metabolitos y parametros mencionados estan registrados en el modelo. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_t_mechanism_a1054dac3455a1c80abe423848c3fa2d2}{set\+Direct\+Rate\+Python}} ()
+\begin{DoxyCompactList}\small\item\em Metodo virtual para crear la ecuacion cinetica directa en forma de String. Depende del tipo de mecanismo. Formato para enviarla al solver de python. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_t_mechanism_ae0f128e6260d19a7a921282215393710}{set\+Inverse\+Rate\+Python}} ()
+\begin{DoxyCompactList}\small\item\em Metodo virtual para crear la ecuacion cinetica inversa en forma de String. Depende del tipo de mecanismo. Si la reaccion es unidireccional, devuelve "{}"{}. Formato para enviarla al solver de python. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_t_mechanism_afe8e95d9dff3a179b6768d2433e63391}{set\+Direct\+Rate\+Show}} ()
+\begin{DoxyCompactList}\small\item\em Metodo virtual para crear la ecuacion cinetica directa en forma de String. Depende del tipo de mecanismo. Formato para mostrarla por pantalla. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_t_mechanism_ad9fbcdcf6de41d2ebb66597165f199d0}{set\+Inverse\+Rate\+Show}} ()
+\begin{DoxyCompactList}\small\item\em Metodo virtual para crear la ecuacion cinetica inversa en forma de String. Depende del tipo de mecanismo. Si la reaccion es unidireccional, devuelve "{}"{}. Formato para mostrarla por pantalla. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_t_mechanism_a7b180e216a8bac42a71e1606735309e9}{\texorpdfstring{$\sim$}{\string~}\+TMechanism}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor virtual de la clase, por defecto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static const String \doxymbox{\hyperlink{class_t_mechanism_a270dc08673ee7a8edaaf2b0ff07cba65}{input\+Template}} = "{}MECHANISM $<$tipo\+\_\+mecanismo$>$ $<$nombre\+\_\+reaccion$>$ $<$parametros\+\_\+del\+\_\+mecanismo$>$"{}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2}{TMechanism\+Type}} \doxymbox{\hyperlink{class_t_mechanism_a05f8ce18a876e5f386b1bda9002824de}{mechanism\+Type}}
+\item 
+\doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_mechanism_a65c500e74d8cb41476d0b9baa75427d9}{model}}
+\item 
+String \doxymbox{\hyperlink{class_t_mechanism_aac356d4e3fd675a4ff936b3f08d5364f}{direct\+Rate\+Python}}
+\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a1d358f94f9433284a57b196e0756cd4a}{direct\+Rate\+Show}}
+\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a08b003740366b0e9625ebcdd00786608}{inverse\+Rate\+Python}}
+\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a84e928eb971c6e0b20acd4b099c8dc6f}{inverse\+Rate\+Show}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a0fcbfb1e612a4ab0418e6addf9ac9c67}{reaction\+Name}}
+\item 
+std::\+vector$<$ String $>$ \doxymbox{\hyperlink{class_t_mechanism_aa26346f3a054f199508c0eef665f8884}{mech\+Params}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo. 
+
+\label{class_t_mechanism_doc-constructors}
+\Hypertarget{class_t_mechanism_doc-constructors}
+\doxysubsubsection{Documentación de constructores y destructores}
+\Hypertarget{class_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285}\index{TMechanism@{TMechanism}!TMechanism@{TMechanism}}
+\index{TMechanism@{TMechanism}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{TMechanism()}{TMechanism()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285} 
+TMechanism::\+\+TMechanism (\begin{DoxyParamCaption}\item[{String}]{line}{, }\item[{\doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+model}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \doxylink{class_t_mechanism}{TMechanism}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em line} & linea de entrada de datos que comienza por "{}\+MECHANISM"{} \\
+\hline
+{\em p\+\_\+model} & modelo asociado al mecanismo \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_mechanism_a7b180e216a8bac42a71e1606735309e9}\index{TMechanism@{TMechanism}!````~TMechanism@{\texorpdfstring{$\sim$}{\string~}TMechanism}}
+\index{````~TMechanism@{\texorpdfstring{$\sim$}{\string~}TMechanism}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TMechanism()}{\string~TMechanism()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a7b180e216a8bac42a71e1606735309e9} 
+virtual TMechanism::\+\texorpdfstring{$\sim$}{\string~}\+TMechanism (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destructor virtual de la clase, por defecto. 
+
+
+
+\label{class_t_mechanism_doc-func-members}
+\Hypertarget{class_t_mechanism_doc-func-members}
+\doxysubsubsection{Documentación de funciones miembro}
+\Hypertarget{class_t_mechanism_a03ed06d4a482c878537e2211a3116ecd}\index{TMechanism@{TMechanism}!CheckElements@{CheckElements}}
+\index{CheckElements@{CheckElements}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{CheckElements()}{CheckElements()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a03ed06d4a482c878537e2211a3116ecd} 
+void TMechanism::\+\+Check\+Elements (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metodo virtual para comprobar que los atributos cargados en el mecanismo son correctos. Depende del tipo de mecanismo. Lanza excepciones si no son correctos. Se comprueba que el numero de parametros es el adecuado, y que los metabolitos y parametros mencionados estan registrados en el modelo. 
+
+
+
+Reimplementado en \doxymbox{\hyperlink{class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4}{THill\+Inhibidor\+Activador}}, \doxymbox{\hyperlink{class_t_mass_action_ab938b358d430a859fe1ebda15c581320}{TMass\+Action}}, \doxymbox{\hyperlink{class_t_m_m_bi_bi_inhibidor_a8301f2c15620dba9545389641e372c89}{TMMBi\+Bi\+Inhibidor}}, \doxymbox{\hyperlink{class_t_m_m_bi_sec_aleatorio_a4ab89662512bf0e1709d2e2ad8c779c2}{TMMBi\+Sec\+Aleatorio}}, \doxymbox{\hyperlink{class_t_m_m_uni_bi_inhibidor_a97da04356397596583848a82396c423e}{TMMUni\+Bi\+Inhibidor}} y \doxymbox{\hyperlink{class_t_m_m_uni_inhibidor_ad8c3741daad20e9a2ce69b95bcd486aa}{TMMUni\+Inhibidor}}.
+
+\Hypertarget{class_t_mechanism_ac46c760fddcd416499a39131141c9804}\index{TMechanism@{TMechanism}!getDirectRatePython@{getDirectRatePython}}
+\index{getDirectRatePython@{getDirectRatePython}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{getDirectRatePython()}{getDirectRatePython()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_ac46c760fddcd416499a39131141c9804} 
+String TMechanism::\+get\+Direct\+Rate\+Python (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve la ecuacion cinetica directa en forma de String. Formato para enviarla al solver de Python. 
+
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_mechanism_ac46c760fddcd416499a39131141c9804_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c}\index{TMechanism@{TMechanism}!getDirectRateShow@{getDirectRateShow}}
+\index{getDirectRateShow@{getDirectRateShow}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{getDirectRateShow()}{getDirectRateShow()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c} 
+String TMechanism::\+get\+Direct\+Rate\+Show (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve la ecuacion cinetica directa en forma de String. Formato para mostrarla por pantalla. 
+
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_mechanism_a478649141c58734f7a8032300c3e5598}\index{TMechanism@{TMechanism}!getInverseRatePython@{getInverseRatePython}}
+\index{getInverseRatePython@{getInverseRatePython}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{getInverseRatePython()}{getInverseRatePython()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a478649141c58734f7a8032300c3e5598} 
+String TMechanism::\+get\+Inverse\+Rate\+Python (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve la ecuacion cinetica inversa en forma de String. Formato para enviarla al solver de Python. 
+
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_mechanism_a478649141c58734f7a8032300c3e5598_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_mechanism_ac25a2712fe94a70768c4af9f791ae051}\index{TMechanism@{TMechanism}!getInverseRateShow@{getInverseRateShow}}
+\index{getInverseRateShow@{getInverseRateShow}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{getInverseRateShow()}{getInverseRateShow()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_ac25a2712fe94a70768c4af9f791ae051} 
+String TMechanism::\+get\+Inverse\+Rate\+Show (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve la ecuacion cinetica inversa en forma de String. Formato para mostrarla por pantalla. 
+
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_mechanism_ac25a2712fe94a70768c4af9f791ae051_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007}\index{TMechanism@{TMechanism}!getMechParams@{getMechParams}}
+\index{getMechParams@{getMechParams}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{getMechParams()}{getMechParams()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007} 
+String TMechanism::\+get\+Mech\+Params (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el parametro del mecanismo de la posicion \textquotesingle{}i\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & indice del parametro del mecanismo que devuelve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+String nombre corto del parametro del mecanismo, puede ser el nombre corto de un metabolito o un parametro. 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_mechanism_a83135bad08af9d4416b57f7fe7c73493}\index{TMechanism@{TMechanism}!getMechType@{getMechType}}
+\index{getMechType@{getMechType}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{getMechType()}{getMechType()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a83135bad08af9d4416b57f7fe7c73493} 
+String TMechanism::\+get\+Mech\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el nombre del tipo de mecanismo. 
+
+\begin{DoxyReturn}{Devuelve}
+String nombre del tipo de mecanismo. 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_mechanism_a83135bad08af9d4416b57f7fe7c73493_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb}\index{TMechanism@{TMechanism}!getNMechParams@{getNMechParams}}
+\index{getNMechParams@{getNMechParams}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{getNMechParams()}{getNMechParams()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb} 
+int TMechanism::\+get\+NMech\+Params (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el numero de parametros del mecanismo guardados. 
+
+\begin{DoxyReturn}{Devuelve}
+int numero de parametros del mecanismo. 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d}\index{TMechanism@{TMechanism}!getReaction@{getReaction}}
+\index{getReaction@{getReaction}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{getReaction()}{getReaction()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d} 
+const \doxymbox{\hyperlink{class_t_reaction}{TReaction}} \texorpdfstring{$\ast$}{*} TMechanism::\+get\+Reaction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve un puntero a la reaccion dada su nombre. 
+
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba}\index{TMechanism@{TMechanism}!getReactionName@{getReactionName}}
+\index{getReactionName@{getReactionName}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{getReactionName()}{getReactionName()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba} 
+String TMechanism::\+get\+Reaction\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el nombre de la reaccion asociada al mecanismo. 
+
+\begin{DoxyReturn}{Devuelve}
+String nombre corto de la reaccion. 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_mechanism_a1054dac3455a1c80abe423848c3fa2d2}\index{TMechanism@{TMechanism}!setDirectRatePython@{setDirectRatePython}}
+\index{setDirectRatePython@{setDirectRatePython}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{setDirectRatePython()}{setDirectRatePython()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a1054dac3455a1c80abe423848c3fa2d2} 
+void TMechanism::\+set\+Direct\+Rate\+Python (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metodo virtual para crear la ecuacion cinetica directa en forma de String. Depende del tipo de mecanismo. Formato para enviarla al solver de python. 
+
+
+
+Reimplementado en \doxymbox{\hyperlink{class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b}{THill\+Inhibidor\+Activador}}, \doxymbox{\hyperlink{class_t_mass_action_ab908415a5e4eb18a0ffaf33d5f58ad7c}{TMass\+Action}}, \doxymbox{\hyperlink{class_t_m_m_bi_bi_inhibidor_ae96c6cd6c35591da5afbd8e690366145}{TMMBi\+Bi\+Inhibidor}}, \doxymbox{\hyperlink{class_t_m_m_bi_sec_aleatorio_afc3e0110e898539d2128a7673f0239bc}{TMMBi\+Sec\+Aleatorio}}, \doxymbox{\hyperlink{class_t_m_m_uni_bi_inhibidor_a20d6d999152c5042a3e8f9b57c661b4d}{TMMUni\+Bi\+Inhibidor}} y \doxymbox{\hyperlink{class_t_m_m_uni_inhibidor_a1ce34ddce6ad598235045dd9726e9e7e}{TMMUni\+Inhibidor}}.
+
+\Hypertarget{class_t_mechanism_afe8e95d9dff3a179b6768d2433e63391}\index{TMechanism@{TMechanism}!setDirectRateShow@{setDirectRateShow}}
+\index{setDirectRateShow@{setDirectRateShow}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{setDirectRateShow()}{setDirectRateShow()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_afe8e95d9dff3a179b6768d2433e63391} 
+void TMechanism::\+set\+Direct\+Rate\+Show (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metodo virtual para crear la ecuacion cinetica directa en forma de String. Depende del tipo de mecanismo. Formato para mostrarla por pantalla. 
+
+
+
+Reimplementado en \doxymbox{\hyperlink{class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163}{THill\+Inhibidor\+Activador}}, \doxymbox{\hyperlink{class_t_mass_action_a05e6775beaf34a255e63993627e7ea17}{TMass\+Action}}, \doxymbox{\hyperlink{class_t_m_m_bi_bi_inhibidor_a7c70835aee1f69a6acf4cf49618d404f}{TMMBi\+Bi\+Inhibidor}}, \doxymbox{\hyperlink{class_t_m_m_bi_sec_aleatorio_aa655f131d118c0f2eb0d2f773c30da16}{TMMBi\+Sec\+Aleatorio}}, \doxymbox{\hyperlink{class_t_m_m_uni_bi_inhibidor_afe8e3d6f6e91d0809a097c6ac9833f84}{TMMUni\+Bi\+Inhibidor}} y \doxymbox{\hyperlink{class_t_m_m_uni_inhibidor_a0a27cec47470b60e46fe110cab3edab6}{TMMUni\+Inhibidor}}.
+
+\Hypertarget{class_t_mechanism_ae0f128e6260d19a7a921282215393710}\index{TMechanism@{TMechanism}!setInverseRatePython@{setInverseRatePython}}
+\index{setInverseRatePython@{setInverseRatePython}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{setInverseRatePython()}{setInverseRatePython()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_ae0f128e6260d19a7a921282215393710} 
+void TMechanism::\+set\+Inverse\+Rate\+Python (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metodo virtual para crear la ecuacion cinetica inversa en forma de String. Depende del tipo de mecanismo. Si la reaccion es unidireccional, devuelve "{}"{}. Formato para enviarla al solver de python. 
+
+
+
+Reimplementado en \doxymbox{\hyperlink{class_t_hill_inhibidor_activador_a1fe354667595968a2871276c71ed8f5a}{THill\+Inhibidor\+Activador}}, \doxymbox{\hyperlink{class_t_mass_action_a686b8ca0db5dfef10ba9b3adb8e0a40e}{TMass\+Action}}, \doxymbox{\hyperlink{class_t_m_m_bi_bi_inhibidor_a82dcfcc31f05b07fd90cc5be9df671d8}{TMMBi\+Bi\+Inhibidor}}, \doxymbox{\hyperlink{class_t_m_m_bi_sec_aleatorio_ab79024ec54f7ab3a243d92dac5596070}{TMMBi\+Sec\+Aleatorio}}, \doxymbox{\hyperlink{class_t_m_m_uni_bi_inhibidor_a59733a3b1589a10af47794977d0f487e}{TMMUni\+Bi\+Inhibidor}} y \doxymbox{\hyperlink{class_t_m_m_uni_inhibidor_a9bd74e953991c0873e15141e052eeeba}{TMMUni\+Inhibidor}}.
+
+\Hypertarget{class_t_mechanism_ad9fbcdcf6de41d2ebb66597165f199d0}\index{TMechanism@{TMechanism}!setInverseRateShow@{setInverseRateShow}}
+\index{setInverseRateShow@{setInverseRateShow}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{setInverseRateShow()}{setInverseRateShow()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_ad9fbcdcf6de41d2ebb66597165f199d0} 
+void TMechanism::\+set\+Inverse\+Rate\+Show (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Metodo virtual para crear la ecuacion cinetica inversa en forma de String. Depende del tipo de mecanismo. Si la reaccion es unidireccional, devuelve "{}"{}. Formato para mostrarla por pantalla. 
+
+
+
+Reimplementado en \doxymbox{\hyperlink{class_t_hill_inhibidor_activador_aa8fb8bb153ef57fe1da0d83d53533558}{THill\+Inhibidor\+Activador}}, \doxymbox{\hyperlink{class_t_mass_action_a14d0626057ebcbc68f87caf65a98ffe4}{TMass\+Action}}, \doxymbox{\hyperlink{class_t_m_m_bi_bi_inhibidor_a2e2b9f5d2797bdcae5f12f7b667962d5}{TMMBi\+Bi\+Inhibidor}}, \doxymbox{\hyperlink{class_t_m_m_bi_sec_aleatorio_af3b3f353979875875816507267ee9ce4}{TMMBi\+Sec\+Aleatorio}}, \doxymbox{\hyperlink{class_t_m_m_uni_bi_inhibidor_a4389b191c3605332cd2d4ee0dbb0f8b0}{TMMUni\+Bi\+Inhibidor}} y \doxymbox{\hyperlink{class_t_m_m_uni_inhibidor_a7398e14df831e6270e987f4c5eaad236}{TMMUni\+Inhibidor}}.
+
+\Hypertarget{class_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55}\index{TMechanism@{TMechanism}!toString@{toString}}
+\index{toString@{toString}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55} 
+void TMechanism::\+to\+String (\begin{DoxyParamCaption}\item[{TMemo \texorpdfstring{$\ast$}{*}}]{pantalla\+Salida}{}\end{DoxyParamCaption}) const}
+
+
+
+Muestra el mecanismo guardado y sus atributos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em pantalla\+Salida} & objeto de la interfaz donde se muestra \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_t_mechanism_doc-variable-members}
+\Hypertarget{class_t_mechanism_doc-variable-members}
+\doxysubsubsection{Documentación de datos miembro}
+\Hypertarget{class_t_mechanism_aac356d4e3fd675a4ff936b3f08d5364f}\index{TMechanism@{TMechanism}!directRatePython@{directRatePython}}
+\index{directRatePython@{directRatePython}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{directRatePython}{directRatePython}}
+{\footnotesize\ttfamily \label{class_t_mechanism_aac356d4e3fd675a4ff936b3f08d5364f} 
+String TMechanism::\+direct\+Rate\+Python\hspace{0.3cm}{\ttfamily [protected]}}
+
+String que representa la ecuacion cinetica directa, formato Python \Hypertarget{class_t_mechanism_a1d358f94f9433284a57b196e0756cd4a}\index{TMechanism@{TMechanism}!directRateShow@{directRateShow}}
+\index{directRateShow@{directRateShow}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{directRateShow}{directRateShow}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a1d358f94f9433284a57b196e0756cd4a} 
+String TMechanism::\+direct\+Rate\+Show\hspace{0.3cm}{\ttfamily [protected]}}
+
+String que representa la ecuacion cinetica directa, formato salida usuario \Hypertarget{class_t_mechanism_a270dc08673ee7a8edaaf2b0ff07cba65}\index{TMechanism@{TMechanism}!inputTemplate@{inputTemplate}}
+\index{inputTemplate@{inputTemplate}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{inputTemplate}{inputTemplate}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a270dc08673ee7a8edaaf2b0ff07cba65} 
+const String TMechanism::\+input\+Template = "{}MECHANISM $<$tipo\+\_\+mecanismo$>$ $<$nombre\+\_\+reaccion$>$ $<$parametros\+\_\+del\+\_\+mecanismo$>$"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Estructura de entrada de datos de un mecanismo \Hypertarget{class_t_mechanism_a08b003740366b0e9625ebcdd00786608}\index{TMechanism@{TMechanism}!inverseRatePython@{inverseRatePython}}
+\index{inverseRatePython@{inverseRatePython}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{inverseRatePython}{inverseRatePython}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a08b003740366b0e9625ebcdd00786608} 
+String TMechanism::\+inverse\+Rate\+Python\hspace{0.3cm}{\ttfamily [protected]}}
+
+String que representa la ecuacion cinetica inversa, formato Python \Hypertarget{class_t_mechanism_a84e928eb971c6e0b20acd4b099c8dc6f}\index{TMechanism@{TMechanism}!inverseRateShow@{inverseRateShow}}
+\index{inverseRateShow@{inverseRateShow}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{inverseRateShow}{inverseRateShow}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a84e928eb971c6e0b20acd4b099c8dc6f} 
+String TMechanism::\+inverse\+Rate\+Show\hspace{0.3cm}{\ttfamily [protected]}}
+
+String que representa la ecuacion cinetica inversa, formato salida usuario \Hypertarget{class_t_mechanism_a05f8ce18a876e5f386b1bda9002824de}\index{TMechanism@{TMechanism}!mechanismType@{mechanismType}}
+\index{mechanismType@{mechanismType}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{mechanismType}{mechanismType}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a05f8ce18a876e5f386b1bda9002824de} 
+\doxymbox{\hyperlink{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2}{TMechanism\+Type}} TMechanism::\+mechanism\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+Enumerado que indica el tipo de mecanismo \Hypertarget{class_t_mechanism_aa26346f3a054f199508c0eef665f8884}\index{TMechanism@{TMechanism}!mechParams@{mechParams}}
+\index{mechParams@{mechParams}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{mechParams}{mechParams}}
+{\footnotesize\ttfamily \label{class_t_mechanism_aa26346f3a054f199508c0eef665f8884} 
+std::\+vector$<$String$>$ TMechanism::\+mech\+Params\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector de los parametros asociados al mecanismo concreto de la reaccion \Hypertarget{class_t_mechanism_a65c500e74d8cb41476d0b9baa75427d9}\index{TMechanism@{TMechanism}!model@{model}}
+\index{model@{model}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a65c500e74d8cb41476d0b9baa75427d9} 
+\doxymbox{\hyperlink{class_t_model}{TModel}}\texorpdfstring{$\ast$}{*} TMechanism::\+model\hspace{0.3cm}{\ttfamily [protected]}}
+
+Modelo dentro del que se incluye el mecanismo \Hypertarget{class_t_mechanism_a0fcbfb1e612a4ab0418e6addf9ac9c67}\index{TMechanism@{TMechanism}!reactionName@{reactionName}}
+\index{reactionName@{reactionName}!TMechanism@{TMechanism}}
+\doxyparagraph{\texorpdfstring{reactionName}{reactionName}}
+{\footnotesize\ttfamily \label{class_t_mechanism_a0fcbfb1e612a4ab0418e6addf9ac9c67} 
+String TMechanism::\+reaction\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+Nombre de la reaccion que sigue el mecanismo creado 
+
+La documentación de esta clase está generada de los siguientes archivos:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_metabolic_elements_8h}{Metabolic\+Elements.\+h}}\item 
+\doxymbox{\hyperlink{_metabolic_elements_8cpp}{Metabolic\+Elements.\+cpp}}\end{DoxyCompactItemize}

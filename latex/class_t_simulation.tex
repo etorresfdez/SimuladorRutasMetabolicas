@@ -1,0 +1,620 @@
+\doxysubsection{Referencia de la clase TSimulation}
+\hypertarget{class_t_simulation}{}\label{class_t_simulation}\index{TSimulation@{TSimulation}}
+
+
+Clase para encapsular el proceso de simulacion.  
+
+
+
+
+{\ttfamily \+\#include $<$Simulation.\+h$>$}
+
+
+
+Diagrama de colaboración de TSimulation:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_t_simulation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_simulation_adb7ba8268e6da71da3df64ef6e4c1f93}{TSimulation}} (int p\+\_\+tini=0, int p\+\_\+tfin=10, int p\+\_\+ciclos=50, \doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method}} p\+\_\+metodo=\doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524ab414936a367cf5ba31aa943c386835e6}{Radau}})
+\begin{DoxyCompactList}\small\item\em Constructor de \doxylink{class_t_simulation}{TSimulation}. Tiene valores por defecto. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_af66f4d31f2472ddbf5f41b3f34bfd1a0}{fill\+Numeric\+Method\+Combo\+Box}} (TCombo\+Box \texorpdfstring{$\ast$}{*}combo\+Metodos)
+\begin{DoxyCompactList}\small\item\em Rellena el objeto combo\+Eleccion\+Meotodo con la lista de metodos numericos disponibles. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method}} \doxymbox{\hyperlink{class_t_simulation_a1533509999ef2fc5afbf762fb0aaaabb}{get\+Numeric\+Method\+From\+String}} (String metodo)
+\begin{DoxyCompactList}\small\item\em Efectua la conversion de string a enumerador \doxylink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method} usando el mapa numeric\+Methods. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5}{get\+Method\+String}} (\doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method}} metodo\+Enum)
+\begin{DoxyCompactList}\small\item\em Dado un enumerado sobre el metodo numerico, lo devuelve en formato String. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_simulation_a1179f8897b35b9798dd3da62049d6c43}{get\+Name\+Metabolite}} (int i)
+\begin{DoxyCompactList}\small\item\em Dado un indice, devuelve el nombre del metabolito que ocupa esa posicion en el vector de conc\+Names. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_t_instant_result}{TInstant\+Result}} \doxymbox{\hyperlink{class_t_simulation_a1a7464a967a330a9a77530700a003b6d}{get\+Instante\+Simulacion}} (int i)
+\begin{DoxyCompactList}\small\item\em Devuelve los datos del instante \textquotesingle{}i\textquotesingle{} de la simulacion. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_simulation_a59b9f6cd7fcad8d9988c795136c5f276}{get\+Ciclos}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve los ciclos de la simulacion. Corresponde con el total de instantes de simulacion generados. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_t_simulation_aba131c282bea7c36d6b9ba839ef6e502}{resultados\+Is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve true si el atributo \textquotesingle{}resultados\textquotesingle{} esta vacio, false en caso contrario. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_a215dd256dccffa170f7f93e36f26aceb}{set\+Initial\+Time}} (int ini)
+\begin{DoxyCompactList}\small\item\em Cambia el atributo tini de la clase \doxylink{class_t_simulation}{TSimulation}. Si no es un valor \texorpdfstring{$>$}{>}= 0 lanza una excepcion. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_a7d478a7641e046a4dbbe98122c5f4684}{set\+Final\+Time}} (int fin)
+\begin{DoxyCompactList}\small\item\em Cambia el atributo tfin de la clase \doxylink{class_t_simulation}{TSimulation}. Si no es un valor positivo y mayor que tini, lanza una excepcion. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_a24873d4f99cd7eb15bcc482f667bc8e4}{set\+Cicles}} (int cicles)
+\begin{DoxyCompactList}\small\item\em Cambia el atributo ciclos de la clase \doxylink{class_t_simulation}{TSimulation}. Si no es un valor positivo lanza una excepcion. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_a730b51b4e96092ed58a5ea48321199ec}{set\+Tiempo\+Empleado}} (double time)
+\begin{DoxyCompactList}\small\item\em Actualiza el tiempo empleado en la simulacion. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_a36868a14362d4fcb8fb26ae1e17cfcf1}{set\+Numeric\+Method}} (\doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method}} method)
+\begin{DoxyCompactList}\small\item\em Cambia el atributo metodo de la clase \doxylink{class_t_simulation}{TSimulation}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_adee42fb5f7d938a90928d9800352e916}{set\+Concen\+Names}} (const std::\+vector$<$ String $>$ \&c)
+\begin{DoxyCompactList}\small\item\em Cambia el atributo conc\+Names de la clase \doxylink{class_t_simulation}{TSimulation}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_af6d175e2cea59c791a0f87cd320e86cb}{set\+Initial\+Concen}} (const std::\+vector$<$ double $>$ \&ini)
+\begin{DoxyCompactList}\small\item\em Cambia el atributo conc\+Ini de la clase \doxylink{class_t_simulation}{TSimulation}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_a8764e6db857f41783c2192b5d121db2f}{set\+Equations}} (const std::\+vector$<$ String $>$ \&equations)
+\begin{DoxyCompactList}\small\item\em Cambia el atributo ecuaciones de la clase \doxylink{class_t_simulation}{TSimulation}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_a93af6bb92b6dde7c7798af04c8bc3650}{set\+Parameters}} (const std::\+vector$<$ double $>$ \&p)
+\begin{DoxyCompactList}\small\item\em Cambia el atributo params de la clase \doxylink{class_t_simulation}{TSimulation}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_a7950e734c85e85bedf4e477980db9a4d}{run\+Simulation}} ()
+\begin{DoxyCompactList}\small\item\em Lanza la simulacion:\+ crea archivo de entrada de datos para el python y lo ejecuta. Modifica el atributo privado de \textquotesingle{}resultados\textquotesingle{} con los datos obtenidos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6}{ejecutar\+Comando}} (String comando)
+\begin{DoxyCompactList}\small\item\em Ejecuta un comando a traves de la powershell de window. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_aff057868b43d4ed0fe2420ae8e53e995}{borrar\+Archivos\+Antiguos}} ()
+\begin{DoxyCompactList}\small\item\em Borra los ficheros anteriores de \textquotesingle{}input.\+csv\textquotesingle{}, \textquotesingle{}output.\+csv\textquotesingle{} y \textquotesingle{}grafico.\+png\textquotesingle{}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc}{Build\+Input\+CSV}} ()
+\begin{DoxyCompactList}\small\item\em Crea un archivo csv que sirve de entrada para el python que realiza la resolucion numerica del sistema. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_a528e9ed876aaea22481612e8a6fe2e95}{Read\+Output\+CSV}} ()
+\begin{DoxyCompactList}\small\item\em Lee el archivo \textquotesingle{}output.\+csv\textquotesingle{} generado por Call\+Python() y actualiza el contenido del atributo \textquotesingle{}resultados\textquotesingle{}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001}{create\+Table\+Results}} (TString\+Grid \texorpdfstring{$\ast$}{*}Grid)
+\begin{DoxyCompactList}\small\item\em Parte del contenido del atributo \textquotesingle{}resultados\textquotesingle{} y rellena la tabla que se pasa como parametro. En cada fila, para cada instante de tiempo, se muestra el valor de las concentraciones de los metabolitos obtenidas. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_simulation_a2b2de32d07b74c6c3a76b67215f15800}{export\+Results\+To\+CSV}} (const String \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Exporta los resultados de la simulacion en un archivo csv. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_t_simulation_acf3e89470d71020a57da0ddd0558fad7}{tini}}
+\item 
+int \doxymbox{\hyperlink{class_t_simulation_aa178dade5cbab576684b275a296f2338}{tfin}}
+\item 
+int \doxymbox{\hyperlink{class_t_simulation_a7d1c054cffeee5177c8a11bb71e3b809}{ciclos}}
+\item 
+\doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method}} \doxymbox{\hyperlink{class_t_simulation_af302dc27a30629ecf73efd4047aff26e}{metodo}}
+\item 
+std::\+vector$<$ String $>$ \doxymbox{\hyperlink{class_t_simulation_aa53c588f7f27a751e231907d0299ad42}{conc\+Names}}
+\item 
+std::\+vector$<$ double $>$ \doxymbox{\hyperlink{class_t_simulation_ac4a1fdd555c72ac2813cdbaad4d79198}{conc\+Ini}}
+\item 
+std::\+vector$<$ String $>$ \doxymbox{\hyperlink{class_t_simulation_aa6864bfe51c33b26a7d66a2b053f3e6d}{ecuaciones}}
+\item 
+std::\+vector$<$ double $>$ \doxymbox{\hyperlink{class_t_simulation_a233dcba25bab8d7cd08aa892eb9a501c}{params}}
+\item 
+std::\+map$<$ String, \doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method}} $>$ \doxymbox{\hyperlink{class_t_simulation_ad03a54d2c792e3d52987695aede668e5}{numeric\+Methods}}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_t_instant_result}{TInstant\+Result}} $>$ \doxymbox{\hyperlink{class_t_simulation_a29fec55282ff71500c06683a3b391375}{resultados}}
+\item 
+double \doxymbox{\hyperlink{class_t_simulation_aad9cfbabd517d703d8c3ecdc71d9df90}{tiempo\+Empleado}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+Clase para encapsular el proceso de simulacion. 
+
+\label{class_t_simulation_doc-constructors}
+\Hypertarget{class_t_simulation_doc-constructors}
+\doxysubsubsection{Documentación de constructores y destructores}
+\Hypertarget{class_t_simulation_adb7ba8268e6da71da3df64ef6e4c1f93}\index{TSimulation@{TSimulation}!TSimulation@{TSimulation}}
+\index{TSimulation@{TSimulation}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{TSimulation()}{TSimulation()}}
+{\footnotesize\ttfamily \label{class_t_simulation_adb7ba8268e6da71da3df64ef6e4c1f93} 
+TSimulation::\+\+TSimulation (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+tini}{ = {\ttfamily 0}, }\item[{int}]{p\+\_\+tfin}{ = {\ttfamily 10}, }\item[{int}]{p\+\_\+ciclos}{ = {\ttfamily 50}, }\item[{\doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method}}}]{p\+\_\+metodo}{ = {\ttfamily \doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524ab414936a367cf5ba31aa943c386835e6}{Radau}}}}\end{DoxyParamCaption})}
+
+
+
+Constructor de \doxylink{class_t_simulation}{TSimulation}. Tiene valores por defecto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p\+\_\+tini} & Tiempo inicial de la simulacion, tipo int \\
+\hline
+{\em p\+\_\+tfin} & Tiempo final de la simulacion, tipo int \\
+\hline
+{\em p\+\_\+ciclos} & Numero de pasos de la simulacion, tipo int \\
+\hline
+{\em p\+\_\+metodo} & Metodo mnumerico empleado en la simulacion, tipo \doxylink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method} \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_t_simulation_doc-func-members}
+\Hypertarget{class_t_simulation_doc-func-members}
+\doxysubsubsection{Documentación de funciones miembro}
+\Hypertarget{class_t_simulation_aff057868b43d4ed0fe2420ae8e53e995}\index{TSimulation@{TSimulation}!borrarArchivosAntiguos@{borrarArchivosAntiguos}}
+\index{borrarArchivosAntiguos@{borrarArchivosAntiguos}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{borrarArchivosAntiguos()}{borrarArchivosAntiguos()}}
+{\footnotesize\ttfamily \label{class_t_simulation_aff057868b43d4ed0fe2420ae8e53e995} 
+void TSimulation::\+borrar\+Archivos\+Antiguos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Borra los ficheros anteriores de \textquotesingle{}input.\+csv\textquotesingle{}, \textquotesingle{}output.\+csv\textquotesingle{} y \textquotesingle{}grafico.\+png\textquotesingle{}. 
+
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_simulation_aff057868b43d4ed0fe2420ae8e53e995_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc}\index{TSimulation@{TSimulation}!BuildInputCSV@{BuildInputCSV}}
+\index{BuildInputCSV@{BuildInputCSV}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{BuildInputCSV()}{BuildInputCSV()}}
+{\footnotesize\ttfamily \label{class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc} 
+void TSimulation::\+\+Build\+Input\+CSV (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Crea un archivo csv que sirve de entrada para el python que realiza la resolucion numerica del sistema. 
+
+En concreto, crea el archivo \textquotesingle{}input.\+csv\textquotesingle{} en la ruta de ejecucion de la aplicacion, que contiene:\+
+\begin{DoxyItemize}
+\item las ecuaciones para la variacion de la concentracion de cada metabolito (ecuaciones)
+\item las concentraciones iniciales de cada metabolito (conc\+Ini)
+\item los nombres cortos de los metabolitos (conc\+Names)
+\item todos los parametros implicados (params)
+\item tiempo inicial (tini)
+\item tiempo final (tfin)
+\item ciclos (ciclos)
+\item metodo numerico a emplear (metodo) 
+\end{DoxyItemize}Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001}\index{TSimulation@{TSimulation}!createTableResults@{createTableResults}}
+\index{createTableResults@{createTableResults}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{createTableResults()}{createTableResults()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001} 
+void TSimulation::\+create\+Table\+Results (\begin{DoxyParamCaption}\item[{TString\+Grid \texorpdfstring{$\ast$}{*}}]{Grid}{}\end{DoxyParamCaption})}
+
+
+
+Parte del contenido del atributo \textquotesingle{}resultados\textquotesingle{} y rellena la tabla que se pasa como parametro. En cada fila, para cada instante de tiempo, se muestra el valor de las concentraciones de los metabolitos obtenidas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Grid} & puntero a la tabla donde se cargan los datos para que el usuario lo vea en la interfaz. \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6}\index{TSimulation@{TSimulation}!ejecutarComando@{ejecutarComando}}
+\index{ejecutarComando@{ejecutarComando}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{ejecutarComando()}{ejecutarComando()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6} 
+void TSimulation::\+ejecutar\+Comando (\begin{DoxyParamCaption}\item[{String}]{comando}{}\end{DoxyParamCaption})}
+
+
+
+Ejecuta un comando a traves de la powershell de window. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em comando} & string con el comando a ejecutar. \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_simulation_a2b2de32d07b74c6c3a76b67215f15800}\index{TSimulation@{TSimulation}!exportResultsToCSV@{exportResultsToCSV}}
+\index{exportResultsToCSV@{exportResultsToCSV}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{exportResultsToCSV()}{exportResultsToCSV()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a2b2de32d07b74c6c3a76b67215f15800} 
+void TSimulation::\+export\+Results\+To\+CSV (\begin{DoxyParamCaption}\item[{const String \&}]{file\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Exporta los resultados de la simulacion en un archivo csv. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em file\+Path} & ruta donde se guarda el archivo \textquotesingle{}simulacion\+Tabla.\+csv\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_simulation_a2b2de32d07b74c6c3a76b67215f15800_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_simulation_af66f4d31f2472ddbf5f41b3f34bfd1a0}\index{TSimulation@{TSimulation}!fillNumericMethodComboBox@{fillNumericMethodComboBox}}
+\index{fillNumericMethodComboBox@{fillNumericMethodComboBox}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{fillNumericMethodComboBox()}{fillNumericMethodComboBox()}}
+{\footnotesize\ttfamily \label{class_t_simulation_af66f4d31f2472ddbf5f41b3f34bfd1a0} 
+void TSimulation::\+fill\+Numeric\+Method\+Combo\+Box (\begin{DoxyParamCaption}\item[{TCombo\+Box \texorpdfstring{$\ast$}{*}}]{combo\+Metodos}{}\end{DoxyParamCaption})}
+
+
+
+Rellena el objeto combo\+Eleccion\+Meotodo con la lista de metodos numericos disponibles. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em combo\+Metodos} & objeto TCombo\+Box que contendra un desplegable con los metodos numericos disponibles. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_simulation_a59b9f6cd7fcad8d9988c795136c5f276}\index{TSimulation@{TSimulation}!getCiclos@{getCiclos}}
+\index{getCiclos@{getCiclos}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{getCiclos()}{getCiclos()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a59b9f6cd7fcad8d9988c795136c5f276} 
+int TSimulation::\+get\+Ciclos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Devuelve los ciclos de la simulacion. Corresponde con el total de instantes de simulacion generados. 
+
+\begin{DoxyReturn}{Devuelve}
+entero con el numero de ciclos. 
+\end{DoxyReturn}
+\Hypertarget{class_t_simulation_a1a7464a967a330a9a77530700a003b6d}\index{TSimulation@{TSimulation}!getInstanteSimulacion@{getInstanteSimulacion}}
+\index{getInstanteSimulacion@{getInstanteSimulacion}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{getInstanteSimulacion()}{getInstanteSimulacion()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a1a7464a967a330a9a77530700a003b6d} 
+\doxymbox{\hyperlink{struct_t_instant_result}{TInstant\+Result}} TSimulation::\+get\+Instante\+Simulacion (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption})}
+
+
+
+Devuelve los datos del instante \textquotesingle{}i\textquotesingle{} de la simulacion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & instante de la simulacion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+objeto de tipo \doxylink{struct_t_instant_result}{TInstant\+Result} que contiene el instante temporal y los valores de las concentraciones en ese instante. 
+\end{DoxyReturn}
+\Hypertarget{class_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5}\index{TSimulation@{TSimulation}!getMethodString@{getMethodString}}
+\index{getMethodString@{getMethodString}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{getMethodString()}{getMethodString()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5} 
+String TSimulation::\+get\+Method\+String (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method}}}]{metodo\+Enum}{}\end{DoxyParamCaption})}
+
+
+
+Dado un enumerado sobre el metodo numerico, lo devuelve en formato String. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em metodo\+Enum} & enumerado que representa un metodo numerico. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+String metodo numerico correspondiente en formato String. 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_simulation_a1179f8897b35b9798dd3da62049d6c43}\index{TSimulation@{TSimulation}!getNameMetabolite@{getNameMetabolite}}
+\index{getNameMetabolite@{getNameMetabolite}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{getNameMetabolite()}{getNameMetabolite()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a1179f8897b35b9798dd3da62049d6c43} 
+String TSimulation::\+get\+Name\+Metabolite (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption})}
+
+
+
+Dado un indice, devuelve el nombre del metabolito que ocupa esa posicion en el vector de conc\+Names. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & indice de tipo int. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+String nombre del metabolito que se devuelve. 
+\end{DoxyReturn}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_simulation_a1179f8897b35b9798dd3da62049d6c43_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_simulation_a1533509999ef2fc5afbf762fb0aaaabb}\index{TSimulation@{TSimulation}!getNumericMethodFromString@{getNumericMethodFromString}}
+\index{getNumericMethodFromString@{getNumericMethodFromString}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{getNumericMethodFromString()}{getNumericMethodFromString()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a1533509999ef2fc5afbf762fb0aaaabb} 
+\doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method}} TSimulation::\+get\+Numeric\+Method\+From\+String (\begin{DoxyParamCaption}\item[{String}]{metodo}{}\end{DoxyParamCaption})}
+
+
+
+Efectua la conversion de string a enumerador \doxylink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method} usando el mapa numeric\+Methods. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em metodo} & en formato String \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+metodo en formato \doxylink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method} 
+\end{DoxyReturn}
+\Hypertarget{class_t_simulation_a528e9ed876aaea22481612e8a6fe2e95}\index{TSimulation@{TSimulation}!ReadOutputCSV@{ReadOutputCSV}}
+\index{ReadOutputCSV@{ReadOutputCSV}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{ReadOutputCSV()}{ReadOutputCSV()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a528e9ed876aaea22481612e8a6fe2e95} 
+void TSimulation::\+\+Read\+Output\+CSV (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lee el archivo \textquotesingle{}output.\+csv\textquotesingle{} generado por Call\+Python() y actualiza el contenido del atributo \textquotesingle{}resultados\textquotesingle{}. 
+
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_simulation_a528e9ed876aaea22481612e8a6fe2e95_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_simulation_aba131c282bea7c36d6b9ba839ef6e502}\index{TSimulation@{TSimulation}!resultadosIsEmpty@{resultadosIsEmpty}}
+\index{resultadosIsEmpty@{resultadosIsEmpty}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{resultadosIsEmpty()}{resultadosIsEmpty()}}
+{\footnotesize\ttfamily \label{class_t_simulation_aba131c282bea7c36d6b9ba839ef6e502} 
+bool TSimulation::\+resultados\+Is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Devuelve true si el atributo \textquotesingle{}resultados\textquotesingle{} esta vacio, false en caso contrario. 
+
+\begin{DoxyReturn}{Devuelve}
+bool 
+\end{DoxyReturn}
+\Hypertarget{class_t_simulation_a7950e734c85e85bedf4e477980db9a4d}\index{TSimulation@{TSimulation}!runSimulation@{runSimulation}}
+\index{runSimulation@{runSimulation}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{runSimulation()}{runSimulation()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a7950e734c85e85bedf4e477980db9a4d} 
+void TSimulation::\+run\+Simulation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lanza la simulacion:\+ crea archivo de entrada de datos para el python y lo ejecuta. Modifica el atributo privado de \textquotesingle{}resultados\textquotesingle{} con los datos obtenidos. 
+
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_simulation_a7950e734c85e85bedf4e477980db9a4d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_simulation_a24873d4f99cd7eb15bcc482f667bc8e4}\index{TSimulation@{TSimulation}!setCicles@{setCicles}}
+\index{setCicles@{setCicles}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{setCicles()}{setCicles()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a24873d4f99cd7eb15bcc482f667bc8e4} 
+void TSimulation::\+set\+Cicles (\begin{DoxyParamCaption}\item[{int}]{cicles}{}\end{DoxyParamCaption})}
+
+
+
+Cambia el atributo ciclos de la clase \doxylink{class_t_simulation}{TSimulation}. Si no es un valor positivo lanza una excepcion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cicles} & ciclos en los que se mide la simulacion, formato int. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_simulation_adee42fb5f7d938a90928d9800352e916}\index{TSimulation@{TSimulation}!setConcenNames@{setConcenNames}}
+\index{setConcenNames@{setConcenNames}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{setConcenNames()}{setConcenNames()}}
+{\footnotesize\ttfamily \label{class_t_simulation_adee42fb5f7d938a90928d9800352e916} 
+void TSimulation::\+set\+Concen\+Names (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ String $>$ \&}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Cambia el atributo conc\+Names de la clase \doxylink{class_t_simulation}{TSimulation}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em c} & vector con los nombres de los metabolitos de los que se va a estudiar la evolucion de su concentracion. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_simulation_a8764e6db857f41783c2192b5d121db2f}\index{TSimulation@{TSimulation}!setEquations@{setEquations}}
+\index{setEquations@{setEquations}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{setEquations()}{setEquations()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a8764e6db857f41783c2192b5d121db2f} 
+void TSimulation::\+set\+Equations (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ String $>$ \&}]{equations}{}\end{DoxyParamCaption})}
+
+
+
+Cambia el atributo ecuaciones de la clase \doxylink{class_t_simulation}{TSimulation}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em equations} & vector con las EDOs en formato python para cada metabolito. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_simulation_a7d478a7641e046a4dbbe98122c5f4684}\index{TSimulation@{TSimulation}!setFinalTime@{setFinalTime}}
+\index{setFinalTime@{setFinalTime}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{setFinalTime()}{setFinalTime()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a7d478a7641e046a4dbbe98122c5f4684} 
+void TSimulation::\+set\+Final\+Time (\begin{DoxyParamCaption}\item[{int}]{fin}{}\end{DoxyParamCaption})}
+
+
+
+Cambia el atributo tfin de la clase \doxylink{class_t_simulation}{TSimulation}. Si no es un valor positivo y mayor que tini, lanza una excepcion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fin} & tiempo final que se establece para la simulacion, formato int. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_simulation_af6d175e2cea59c791a0f87cd320e86cb}\index{TSimulation@{TSimulation}!setInitialConcen@{setInitialConcen}}
+\index{setInitialConcen@{setInitialConcen}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{setInitialConcen()}{setInitialConcen()}}
+{\footnotesize\ttfamily \label{class_t_simulation_af6d175e2cea59c791a0f87cd320e86cb} 
+void TSimulation::\+set\+Initial\+Concen (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ double $>$ \&}]{ini}{}\end{DoxyParamCaption})}
+
+
+
+Cambia el atributo conc\+Ini de la clase \doxylink{class_t_simulation}{TSimulation}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em ini} & vector con las concentraciones iniciales de los metabolitos que se estudiar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_simulation_a215dd256dccffa170f7f93e36f26aceb}\index{TSimulation@{TSimulation}!setInitialTime@{setInitialTime}}
+\index{setInitialTime@{setInitialTime}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{setInitialTime()}{setInitialTime()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a215dd256dccffa170f7f93e36f26aceb} 
+void TSimulation::\+set\+Initial\+Time (\begin{DoxyParamCaption}\item[{int}]{ini}{}\end{DoxyParamCaption})}
+
+
+
+Cambia el atributo tini de la clase \doxylink{class_t_simulation}{TSimulation}. Si no es un valor \texorpdfstring{$>$}{>}= 0 lanza una excepcion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em ini} & tiempo inicial que se establece para la simulacion, formato int. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_simulation_a36868a14362d4fcb8fb26ae1e17cfcf1}\index{TSimulation@{TSimulation}!setNumericMethod@{setNumericMethod}}
+\index{setNumericMethod@{setNumericMethod}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{setNumericMethod()}{setNumericMethod()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a36868a14362d4fcb8fb26ae1e17cfcf1} 
+void TSimulation::\+set\+Numeric\+Method (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method}}}]{method}{}\end{DoxyParamCaption})}
+
+
+
+Cambia el atributo metodo de la clase \doxylink{class_t_simulation}{TSimulation}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em method} & metodo numerico que se establece para la simulacion, formato \doxylink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_simulation_a93af6bb92b6dde7c7798af04c8bc3650}\index{TSimulation@{TSimulation}!setParameters@{setParameters}}
+\index{setParameters@{setParameters}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{setParameters()}{setParameters()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a93af6bb92b6dde7c7798af04c8bc3650} 
+void TSimulation::\+set\+Parameters (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ double $>$ \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Cambia el atributo params de la clase \doxylink{class_t_simulation}{TSimulation}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p} & vector con los parametros del modelo que aparecen en las ecuaciones. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_simulation_a730b51b4e96092ed58a5ea48321199ec}\index{TSimulation@{TSimulation}!setTiempoEmpleado@{setTiempoEmpleado}}
+\index{setTiempoEmpleado@{setTiempoEmpleado}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{setTiempoEmpleado()}{setTiempoEmpleado()}}
+{\footnotesize\ttfamily \label{class_t_simulation_a730b51b4e96092ed58a5ea48321199ec} 
+void TSimulation::\+set\+Tiempo\+Empleado (\begin{DoxyParamCaption}\item[{double}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza el tiempo empleado en la simulacion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em time} & tiempo empleado en realizar la simulacion, tipo double. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_t_simulation_doc-variable-members}
+\Hypertarget{class_t_simulation_doc-variable-members}
+\doxysubsubsection{Documentación de datos miembro}
+\Hypertarget{class_t_simulation_a7d1c054cffeee5177c8a11bb71e3b809}\index{TSimulation@{TSimulation}!ciclos@{ciclos}}
+\index{ciclos@{ciclos}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{ciclos}{ciclos}}
+{\footnotesize\ttfamily \label{class_t_simulation_a7d1c054cffeee5177c8a11bb71e3b809} 
+int TSimulation::\+ciclos\hspace{0.3cm}{\ttfamily [private]}}
+
+Numero de pasos de la simulacion \Hypertarget{class_t_simulation_ac4a1fdd555c72ac2813cdbaad4d79198}\index{TSimulation@{TSimulation}!concIni@{concIni}}
+\index{concIni@{concIni}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{concIni}{concIni}}
+{\footnotesize\ttfamily \label{class_t_simulation_ac4a1fdd555c72ac2813cdbaad4d79198} 
+std::\+vector$<$double$>$ TSimulation::\+conc\+Ini\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector con las concentraciones iniciales de los metabolitos \Hypertarget{class_t_simulation_aa53c588f7f27a751e231907d0299ad42}\index{TSimulation@{TSimulation}!concNames@{concNames}}
+\index{concNames@{concNames}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{concNames}{concNames}}
+{\footnotesize\ttfamily \label{class_t_simulation_aa53c588f7f27a751e231907d0299ad42} 
+std::\+vector$<$String$>$ TSimulation::\+conc\+Names\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector con los nombres de los metabolitos a simular su concentracion \Hypertarget{class_t_simulation_aa6864bfe51c33b26a7d66a2b053f3e6d}\index{TSimulation@{TSimulation}!ecuaciones@{ecuaciones}}
+\index{ecuaciones@{ecuaciones}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{ecuaciones}{ecuaciones}}
+{\footnotesize\ttfamily \label{class_t_simulation_aa6864bfe51c33b26a7d66a2b053f3e6d} 
+std::\+vector$<$String$>$ TSimulation::\+ecuaciones\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector con las ecuaciones de cada metabolito \Hypertarget{class_t_simulation_af302dc27a30629ecf73efd4047aff26e}\index{TSimulation@{TSimulation}!metodo@{metodo}}
+\index{metodo@{metodo}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{metodo}{metodo}}
+{\footnotesize\ttfamily \label{class_t_simulation_af302dc27a30629ecf73efd4047aff26e} 
+\doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method}} TSimulation::\+metodo\hspace{0.3cm}{\ttfamily [private]}}
+
+Metodo numerico empleado en la simulacion \Hypertarget{class_t_simulation_ad03a54d2c792e3d52987695aede668e5}\index{TSimulation@{TSimulation}!numericMethods@{numericMethods}}
+\index{numericMethods@{numericMethods}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{numericMethods}{numericMethods}}
+{\footnotesize\ttfamily \label{class_t_simulation_ad03a54d2c792e3d52987695aede668e5} 
+std::\+map$<$String, \doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{Numeric\+Method}}$>$ TSimulation::\+numeric\+Methods\hspace{0.3cm}{\ttfamily [private]}}
+
+Mapa con los metodos numericos \Hypertarget{class_t_simulation_a233dcba25bab8d7cd08aa892eb9a501c}\index{TSimulation@{TSimulation}!params@{params}}
+\index{params@{params}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{params}{params}}
+{\footnotesize\ttfamily \label{class_t_simulation_a233dcba25bab8d7cd08aa892eb9a501c} 
+std::\+vector$<$double$>$ TSimulation::\+params\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector con todos los parametros necesarios \Hypertarget{class_t_simulation_a29fec55282ff71500c06683a3b391375}\index{TSimulation@{TSimulation}!resultados@{resultados}}
+\index{resultados@{resultados}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{resultados}{resultados}}
+{\footnotesize\ttfamily \label{class_t_simulation_a29fec55282ff71500c06683a3b391375} 
+std::\+vector$<$\doxymbox{\hyperlink{struct_t_instant_result}{TInstant\+Result}}$>$ TSimulation::\+resultados\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector de resultados. Contiene las concentraciones de todos los metabolitos para cada tiempo. \Hypertarget{class_t_simulation_aa178dade5cbab576684b275a296f2338}\index{TSimulation@{TSimulation}!tfin@{tfin}}
+\index{tfin@{tfin}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{tfin}{tfin}}
+{\footnotesize\ttfamily \label{class_t_simulation_aa178dade5cbab576684b275a296f2338} 
+int TSimulation::\+tfin\hspace{0.3cm}{\ttfamily [private]}}
+
+Tiempo final de la simulacion \Hypertarget{class_t_simulation_aad9cfbabd517d703d8c3ecdc71d9df90}\index{TSimulation@{TSimulation}!tiempoEmpleado@{tiempoEmpleado}}
+\index{tiempoEmpleado@{tiempoEmpleado}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{tiempoEmpleado}{tiempoEmpleado}}
+{\footnotesize\ttfamily \label{class_t_simulation_aad9cfbabd517d703d8c3ecdc71d9df90} 
+double TSimulation::\+tiempo\+Empleado\hspace{0.3cm}{\ttfamily [private]}}
+
+Tiempo empleado en lanzar la simulacion \Hypertarget{class_t_simulation_acf3e89470d71020a57da0ddd0558fad7}\index{TSimulation@{TSimulation}!tini@{tini}}
+\index{tini@{tini}!TSimulation@{TSimulation}}
+\doxyparagraph{\texorpdfstring{tini}{tini}}
+{\footnotesize\ttfamily \label{class_t_simulation_acf3e89470d71020a57da0ddd0558fad7} 
+int TSimulation::\+tini\hspace{0.3cm}{\ttfamily [private]}}
+
+Tiempo inicial de la simulacion 
+
+La documentación de esta clase está generada de los siguientes archivos:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_simulation_8h}{Simulation.\+h}}\item 
+\doxymbox{\hyperlink{_simulation_8cpp}{Simulation.\+cpp}}\end{DoxyCompactItemize}

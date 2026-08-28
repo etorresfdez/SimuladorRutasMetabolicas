@@ -1,0 +1,1743 @@
+//---------------------------------------------------------------------------
+//
+// Libreria para encapsular los elementos de una ruta metabolica.
+// Contiene las clases:
+// 	- TMetabolite
+//	- TParameter
+//	- TReaction
+//	- TMechanism
+//      · TMassAction
+//      · TMMUniInhibidor
+//      · TMMBiSecAleatorio
+//      · TMMUniBiInhibidor
+//      · TMMBiBiInhibidor
+//      · THillInhibidorActivador
+// 	- TModel
+//
+// Archivo .cpp --> Implementaciones
+//
+//---------------------------------------------------------------------------
+
+#include "MetabolicElements.h"
+
+//***************************************************************************
+// Metodos de la clase TMetabolite
+
+// variables estaticas
+const String TMetabolite::inputTemplate = "METABOLITE <nombre_corto> <nombre_largo> <concentracion_inicial>";
+
+// metodo privado: conversor de float a string con formato ','
+String TMetabolite::FloatToStrComma(double value) const
+{
+	TFormatSettings formato = TFormatSettings::Create();
+	formato.DecimalSeparator = ',';
+
+	return FloatToStr(value, formato);
+}
+
+// metodo privado: conversor de string a float con formato ','
+double TMetabolite::StrToFloatComma(String texto) const
+{
+	TFormatSettings formato = TFormatSettings::Create();
+	formato.DecimalSeparator = ',';
+
+	return StrToFloat(texto, formato);
+}
+
+// Constructores
+TMetabolite::TMetabolite(String p_shortName, String p_fullName, double p_initialValue)
+{
+	shortName = p_shortName;
+    fullName = p_fullName;
+	initialValue = p_initialValue;
+}
+
+TMetabolite::TMetabolite(String line)
+{
+	TStringList* fields = new TStringList();
+
+    // separa la linea de entrada por tabuladores
+    fields->StrictDelimiter = true;
+    fields->Delimiter = '\t';
+    fields->DelimitedText = Trim(line);
+
+    // elimina campos vacios
+	for (int i = fields->Count - 1; i >= 0; i--)
+        if (Trim(fields->Strings[i]).IsEmpty())
+            fields->Delete(i);
+
+    // los metabolitos tienen 4 campos exactamente
+    if (fields->Count < 4)
+		throw Exception("Número de campos incorrecto para el metabolito. Estructura correcta: " + inputTemplate);
+
+    // rellena los atributos del metabolito
+    shortName = Trim(fields->Strings[1]);
+    fullName = Trim(fields->Strings[2]);
+	initialValue = StrToFloatComma(Trim(fields->Strings[3]));
+
+    // elimina el puntero creado
+	delete fields;
+}
+
+// Getters
+String TMetabolite::getShortName() const
+{
+    return shortName;
+}
+
+String TMetabolite::getFullName() const
+{
+	return fullName;
+}
+
+double TMetabolite::getInitialValue() const
+{
+	return initialValue;
+}
+
+// Setter
+void TMetabolite::setInitialValue(double initialConcentration)
+{
+    initialValue = initialConcentration;
+}
+
+// Mostrar el objeto metabolito
+void TMetabolite::toString(TMemo* pantallaSalida) const
+{
+    if (!pantallaSalida)
+        return;
+
+    pantallaSalida->Lines->Add("======== METABOLITE ========");
+    pantallaSalida->Lines->Add("Short name: " + shortName);
+    pantallaSalida->Lines->Add("Full name: " + fullName);
+	pantallaSalida->Lines->Add("Initial value: " + FloatToStrComma(initialValue));
+    pantallaSalida->Lines->Add("===========================");
+}
+
+//***************************************************************************
+// Metodos de la clase TParameter
+
+// variables estaticas
+const String TParameter::inputTemplate = "PARAMETER <nombre_corto> <nombre_largo> <valor>";
+
+// metodo privado: conversor de float a string con formato ','
+String TParameter::FloatToStrComma(double value) const
+{
+	TFormatSettings formato = TFormatSettings::Create();
+	formato.DecimalSeparator = ',';
+
+	return FloatToStr(value, formato);
+}
+
+// metodo privado: conversor de string a float con formato ','
+double TParameter::StrToFloatComma(String texto) const
+{
+	TFormatSettings formato = TFormatSettings::Create();
+	formato.DecimalSeparator = ',';
+
+	return StrToFloat(texto, formato);
+}
+
+// Constructores
+TParameter::TParameter(String p_shortName, String p_fullName, double p_value)
+{
+    shortName = p_shortName;
+    fullName = p_fullName;
+	value = p_value;
+}
+
+TParameter::TParameter(String line)
+{
+	TStringList* fields = new TStringList();
+
+    // separa la linea de entrada por tabuladores
+    fields->StrictDelimiter = true;
+    fields->Delimiter = '\t';
+    fields->DelimitedText = Trim(line);
+
+    // elimina campos vacios
+	for (int i = fields->Count - 1; i >= 0; i--)
+        if (Trim(fields->Strings[i]).IsEmpty())
+            fields->Delete(i);
+
+	// los parametros tienen 4 campos exactamente
+	if (fields->Count < 4)
+		throw Exception("Número de campos incorrecto para el parámetro. Estructura correcta: " + inputTemplate);
+
+    // rellena los atributos del parametro
+    shortName = Trim(fields->Strings[1]);
+    fullName = Trim(fields->Strings[2]);
+	value = StrToFloatComma(Trim(fields->Strings[3]));
+
+    // elimina el puntero creado
+	delete fields;
+}
+
+// Getters
+String TParameter::getShortName() const
+{
+    return shortName;
+}
+
+String TParameter::getFullName() const
+{
+    return fullName;
+}
+
+double TParameter::getValue() const
+{
+    return value;
+}
+
+// Mostrar el objeto parametro
+void TParameter::toString(TMemo* pantallaSalida) const
+{
+    if (!pantallaSalida)
+        return;
+
+    pantallaSalida->Lines->Add("========= PARAMETER =========");
+    pantallaSalida->Lines->Add("Short name: " + shortName);
+    pantallaSalida->Lines->Add("Full name: " + fullName);
+	pantallaSalida->Lines->Add("Value: " + FloatToStrComma(value));
+    pantallaSalida->Lines->Add("===========================");
+}
+
+//***************************************************************************
+// Metodos de la clase TReaction
+
+// Variables estaticas
+const String TReaction::inputTemplate = "REACTION <nombre_corto> <nombre_largo> <lista_reactivos> <sentido_reaccion> <lista_productos>";
+
+// metodo privado: conversor de string a float con formato ','
+double TReaction::StrToFloatComma(String texto) const
+{
+	TFormatSettings formato = TFormatSettings::Create();
+	formato.DecimalSeparator = ',';
+
+	return StrToFloat(texto, formato);
+}
+
+// Funciones auxiliares
+void TReaction::DividesCoeffMetabolite(String text, String& name, double& coeff)
+{
+    // por defecto, el nombre del metabolito es el contenido de text
+	text = Trim(text);
+	name = text;
+
+    // coeficiente estequiometrico por defecto
+	coeff = 1.0;
+
+	// si el nombre temporal del metabolito tiene un parentesis, tiene un coef != 1
+    // y se debe separar del nombre
+	if (text.Length() > 2 && text[1] == '(')
+    {
+        int pos = text.Pos(")");
+
+        if (pos > 0)
+		{
+			// extrae el numero del coeficiente
+			String coeffText = text.SubString(2, pos - 2);
+			coeff = StrToFloatComma(coeffText);
+
+            // extrae el nombre del metabolito
+			name = Trim(text.SubString(pos + 1, text.Length() - pos));
+
+			return;
+		}
+		else
+		{
+			throw Exception("Coeficiente estequimétrico mal introducido. Paréntesis desemparejado.");
+        }
+	}
+}
+
+void TReaction::ReadsSubstances(String s, String label)
+{
+	// s contiene un string con formato tipo "[A, (2)B, C]"
+	// valida los corchetes
+	int open = s.Pos("[");
+	int close = s.Pos("]");
+
+	if (open == 0 || close == 0 || close < open)
+		throw Exception("Corchetes desemparejados en lista de " + label + ".");
+
+	s = s.SubString(open + 1, close - open - 1);
+
+	// divide la cadena por las comas
+	TStringList* tmp = new TStringList();
+	tmp->StrictDelimiter = true;
+	tmp->Delimiter = ',';
+	tmp->DelimitedText = s;
+
+	// elimina espacios en blanco iniciales y finales para cada metabolito
+	for (int i = 0; i < tmp->Count; i++)
+		tmp->Strings[i] = Trim(tmp->Strings[i]);
+
+	// si no se han detectado metabolitos, lanza excepcion
+	if (tmp->Count == 0)
+		throw Exception("No se han introducido " + label + " para la reacción.");
+
+	// distingue entre reactivos y productos
+	if (label == "reactivos")
+	{
+		reactants.clear();
+
+		// para cada reactivo, guarda los coeficientes y nombre por separado
+		for (int i = 0; i < tmp->Count; i++)
+		{
+			String reactivo;
+			double coeff;
+
+			DividesCoeffMetabolite(tmp->Strings[i], reactivo, coeff);
+
+			// crea objeto sustancia con objeto TMetabolite y coeficiente double
+			TSubstance substance = {model->findMetabolite(reactivo), coeff};
+			reactants.push_back(substance);
+		}
+	}
+	else if (label == "productos")
+	{
+		products.clear();
+
+		// para cada producto, guarda los coeficientes y nombre por separado
+		for (int i = 0; i < tmp->Count; i++)
+		{
+			String producto;
+			double coeff;
+
+			DividesCoeffMetabolite(tmp->Strings[i], producto, coeff);
+
+			TSubstance substance = {model->findMetabolite(producto), coeff};
+			products.push_back(substance);
+		}
+	}
+
+    // elimina puntero temporal
+	delete tmp;
+}
+
+// Constructores
+TReaction::TReaction(String p_shortName, String p_fullName, TReactionDirection p_sentido,
+				  const std::vector<TSubstance>& p_reactants, const std::vector<TSubstance>& p_products,
+				  TModel* p_model)
+{
+    shortName = p_shortName;
+    fullName = p_fullName;
+	sentido = p_sentido;
+	reactants = p_reactants;
+	products = p_products;
+    model = p_model;
+}
+
+TReaction::TReaction(String line, TModel* p_model)
+{
+	// inicializa el modelo
+	model = p_model;
+
+	// inicializa los distintos campos leyendo la linea:
+	TStringList* fields = new TStringList();
+
+	// separa la linea por tabuladores
+	fields->StrictDelimiter = true;
+	fields->Delimiter = '\t';
+	fields->DelimitedText = Trim(line);
+
+	// elimina campos vacios
+	for (int i = fields->Count - 1; i >= 0; i--)
+		if (Trim(fields->Strings[i]).IsEmpty())
+			fields->Delete(i);
+
+	// una reaccion tiene exactamente 6 campos
+	if (fields->Count < 6)
+		throw Exception("Número de campos incorrecto para la reacción. Estructura correcta: " + inputTemplate);
+
+	// rellena atributos basicos
+	shortName = Trim(fields->Strings[1]);
+	fullName = Trim(fields->Strings[2]);
+
+	// el sentido es un enumerado, solo tiene dos posibilidades: 'UNI' o 'BI'
+	String dir = UpperCase(Trim(fields->Strings[4]));
+
+	if (dir == "UNI")
+		sentido = rdUNI;
+	else if (dir == "BI")
+		sentido = rdBI;
+	else
+		throw Exception("Sentido de reacción no válido. Valores posibles: 'BI', 'UNI'.");
+
+	// lee los reactivos y productos
+	ReadsSubstances(Trim(fields->Strings[3]), "reactivos");
+	ReadsSubstances(Trim(fields->Strings[5]), "productos");
+
+	// elimina puntero de los campos
+	delete fields;
+}
+
+// Getters
+String TReaction::getShortName() const
+{
+    return shortName;
+}
+
+String TReaction::getFullName() const
+{
+    return fullName;
+}
+
+String TReaction::getDirectionString() const
+{
+	switch (sentido) {
+		case rdUNI:
+			return "UNI";
+		case rdBI:
+			return "BI";
+		default:
+			return "";
+	}
+}
+
+int TReaction::getNReactants() const
+{
+	return reactants.size();
+}
+
+int TReaction::getNProducts() const
+{
+    return products.size();
+}
+
+const TSubstance TReaction::getReactant(int i) const
+{
+	return reactants[i];
+}
+
+const TSubstance TReaction::getProduct(int i) const
+{
+    return products[i];
+}
+
+// Mostrar el objeto reaccion
+void TReaction::toString(TMemo* pantallaSalida) const
+{
+    if (!pantallaSalida)
+        return;
+
+	pantallaSalida->Lines->Add("========= REACTION =========");
+    pantallaSalida->Lines->Add("Short name: " + shortName);
+    pantallaSalida->Lines->Add("Full name: " + fullName);
+    pantallaSalida->Lines->Add("Direction: " + getDirectionString());
+
+	pantallaSalida->Lines->Add("Reactants: ");
+	for (int i = 0; i < getNReactants(); i++)
+		pantallaSalida->Lines->Add(getReactant(i).substance->getShortName() + " (" + getReactant(i).coefficient + ")");
+
+	pantallaSalida->Lines->Add("Products: ");
+	for (int i = 0; i < getNProducts(); i++)
+		pantallaSalida->Lines->Add(getProduct(i).substance->getShortName() + " (" + getProduct(i).coefficient + ")");
+
+	pantallaSalida->Lines->Add("==========================");
+}
+
+//***************************************************************************
+// Metodos de la clase TModel
+
+// Constructor
+TModel::TModel()
+{
+    // metodo privado para inicializar la plantilla de tipos de mecanismos
+	initMechanismTemplates();
+}
+
+void TModel::initMechanismTemplates()
+{
+    // completa la clave-valor de cada tipo de mecanismo disponible (6)
+	mechanismTemplates =
+	{
+        {
+			"LEY-ACCION-MASAS",
+			"MECHANISM\tLEY-ACCION-MASAS\t<nombre_reaccion>\t[kdirecta, (kinversa)]"
+        },
+        {
+			"MM-UNI-INHIBIDOR",
+			"MECHANISM\tMM-UNI-INHIBIDOR\t<nombre_reaccion>\t[Vmax, KmA, KmI, Inhibidor, (Keq)]"
+        },
+        {
+			"MM-BI-SEC-ALEATORIO",
+			"MECHANISM\tMM-BI-SEC-ALEATORIO\t<nombre_reaccion>\t[Vmax, KmA, KmB, (KdA), (Keq)]"
+        },
+        {
+			"MM-UNI-BI-INHIBIDOR",
+			"MECHANISM\tMM-UNI-BI-INHIBIDOR\t<nombre_reaccion>\t[Vmax, VmaxInv, KmA, KmC, KmD, KmI, Keq, Inhibidor]"
+		},
+		{
+			"MM-BI-BI-INHIBIDOR",
+			"MECHANISM\tMM-BI-BI-INHIBIDOR\t<nombre_reaccion>\t[KmA, KmB, KmC, KmD, (Keq)]"
+		},
+		{
+			"HILL-INHIBIDOR-ACTIVADOR",
+			"MECHANISM\tHILL-INHIBIDOR-ACTIVADOR\t<nombre_reaccion>\t[Vmax, KmA, cte, A, Inhibidor, Activador]"
+		}
+    };
+}
+
+String TModel::getMechanismTemplate(const String& key)
+{
+	// busca el elemento del mapa con la clave dada
+	std::map<String, String>::iterator it = mechanismTemplates.find(key);
+
+    // devuelve el valor asociado a esa clave (plantilla del mecanismo concreto)
+	if(it != mechanismTemplates.end())
+		return it->second;
+
+    return "";
+}
+
+void TModel::fillMechanismComboBox(TComboBox* combo)
+{
+	// limpia el objeto combo
+	combo->Items->Clear();
+
+	// recorre el mapa mechanismTemplates para añadir cada clave al objeto combo
+	for(const std::pair<String, String>& p : mechanismTemplates)
+		combo->Items->Add(p.first);
+
+	// formato downlist
+	combo->Style = csDropDownList;
+}
+
+void TModel::fillReactionsComboBox(TComboBox* combo)
+{
+	// limpia el objeto combo
+	combo->Items->Clear();
+
+	// aniade opcion de todas las reacciones
+    combo->Items->Add("Todas");
+
+	// recorre el vector de reacciones para añadir el nombre corto de cada reaccion
+	for(int i=0; i<getNReactions(); i++)
+		combo->Items->Add(getReaction(i)->getShortName());
+
+	// formato downlist
+	combo->Style = csDropDownList;
+}
+
+// Metodos para aniadir elementos al modelo
+void TModel::addMetabolite(const TMetabolite& metabolite)
+{
+	metabolites.push_back(metabolite);
+}
+
+void TModel::addParameter(const TParameter& parameter)
+{
+	parameters.push_back(parameter);
+}
+
+void TModel::addReaction(const TReaction& reaction)
+{
+	reactions.push_back(reaction);
+}
+
+void TModel::addMechanism(const TMechanism& mechanism)
+{
+	mechanisms.push_back(mechanism);
+}
+
+// Metodos para obtener el numero de elementos del modelo
+int TModel::getNMetabolites() const
+{
+	return metabolites.size();
+}
+
+int TModel::getNParameters() const
+{
+	return parameters.size();
+}
+
+int TModel::getNReactions() const
+{
+	return reactions.size();
+}
+
+int TModel::getNMechanisms() const
+{
+    return mechanisms.size();
+}
+
+// Metodos para obtener objetos de los vectores del modelo
+const TMetabolite* TModel::getMetabolite(int i) const
+{
+	if (i>=0 && i<metabolites.size())
+		return &metabolites[i];
+	else
+		return nullptr;
+}
+
+const TParameter* TModel::getParameter(int i) const
+{
+	if (i>=0 && i<parameters.size())
+		return &parameters[i];
+    else
+		return nullptr;
+}
+
+const TReaction* TModel::getReaction(int i) const
+{
+	if (i>=0 && i<reactions.size())
+		return &reactions[i];
+    else
+		return nullptr;
+}
+
+const TMechanism* TModel::getMechanism(int i) const
+{
+	if (i>=0 && i<mechanisms.size())
+		return &mechanisms[i];
+    else
+		return nullptr;
+}
+
+// Metodos Validacion:
+// busca el nombre de un metabolito en la lista de metabolitos leidos del modelo
+const TMetabolite* TModel::findMetabolite(String name) const
+{
+	// recorre el vector de metabolitos registrados en el modelo
+	for (auto& m : metabolites)
+		if (m.getShortName() == name)
+			return &m;
+
+	throw Exception("'"+ name + "' no registrado como METABOLITE.");
+}
+
+// busca el nombre de un parametro en la lista de parametros leidos del modelo
+const TParameter* TModel::findParameter(String name) const
+{
+	// recorre el vector de parametros registrados en el modelo
+	for (auto& p : parameters)
+		if (p.getShortName() == name)
+			return &p;
+
+	throw Exception("'"+ name + "' no registrado como PARAMETER.");
+}
+
+// busca el nombre de una reaccion en la lista de reacciones leidas del modelo
+const TReaction* TModel::findReaction(String name) const
+{
+	// recorre el vector de reacciones registradas en el modelo
+	for (auto& r : reactions)
+		if (r.getShortName() == name)
+			return &r;
+
+	throw Exception("'"+ name + "' no registrada como REACTION.");
+}
+
+// Metodos para obtener el indice del metabolito y parametro a traves del nombre
+int TModel::indexOfMetabolite(String name) const
+{
+	int index = -1;
+
+	// recorre el vector de metabolitos registrados en el modelo
+	for (int i = 0; i < metabolites.size(); i++)
+		if (metabolites[i].getShortName() == name)
+			index = i;
+
+	return index;
+}
+
+int TModel::indexOfParameter(String name) const
+{
+	int index = -1;
+
+	// recorre el vector de parametros registrados en el modelo
+	for (int i = 0; i < parameters.size(); i++)
+		if (parameters[i].getShortName() == name)
+			index = i;
+
+	return index;
+}
+
+
+// Borra el contenido del modelo, reiniciandolo
+void TModel::Clear()
+{
+    metabolites.clear();
+    parameters.clear();
+	reactions.clear();
+    mechanisms.clear();
+}
+
+
+//***************************************************************************
+// Metodos de la clase TMechanism
+
+// variables estaticas
+const String TMechanism::inputTemplate = "MECHANISM <tipo_mecanismo> <nombre_reaccion> <parametros_del_mecanismo>";
+
+
+// Constructor
+TMechanism::TMechanism(String line, TModel* p_model)
+{
+    // inicializa el modelo
+	model = p_model;
+
+	// inicializa los distintos campos leyendo la linea:
+	TStringList* fields = new TStringList();
+
+	// separa la linea por tabuladores
+	fields->StrictDelimiter = true;
+	fields->Delimiter = '\t';
+	fields->DelimitedText = Trim(line);
+
+	// elimina campos vacios
+	for (int i = fields->Count - 1; i >= 0; i--)
+		if (Trim(fields->Strings[i]).IsEmpty())
+			fields->Delete(i);
+
+	// un mecanismo tiene exactamente 4 campos
+	if (fields->Count < 4)
+		throw Exception("Número de campos incorrecto para el mecanismo. Estructura correcta: " + inputTemplate);
+
+	// lee la reaccion asociada al mecanismo
+	if (model->findReaction(Trim(fields->Strings[2])))
+		reactionName = Trim(fields->Strings[2]);
+	else
+		throw Exception(Trim(fields->Strings[2]) + " reacción no registrada como REACTION.");
+
+	// lee los parametros del mecanismo
+	String s = Trim(fields->Strings[3]);
+
+	// valida los corchetes
+	int open = s.Pos("[");
+	int close = s.Pos("]");
+
+	if (open == 0 || close == 0 || close < open)
+		throw Exception("Corchetes desemparejados en lista de parámetros del mecanismo.");
+
+	s = s.SubString(open + 1, close - open - 1);
+
+	// divide la cadena por las comas
+	TStringList* tmp = new TStringList();
+	tmp->StrictDelimiter = true;
+	tmp->Delimiter = ',';
+	tmp->DelimitedText = s;
+
+	// si no se han detectado params del mecanismo, lanza excepcion
+	if (tmp->Count == 0)
+		throw Exception("No se han introducido parámetros para el mecanismo.");
+	else
+        // guarda cada parametro del mecanismo en el atributo mechParams
+		for (int i = 0; i < tmp->Count; i++)
+			mechParams.push_back(Trim(tmp->Strings[i]));
+
+	// elimina puntero de los campos
+	delete fields;
+	delete tmp;
+}
+
+// Getters
+String TMechanism::getMechType() const
+{
+	switch (mechanismType) {
+		case LEY_ACCION_MASAS:
+			return "LEY-ACCION-MASAS";
+		case MM_UNI_INHIBIDOR:
+			return "MM-UNI-INHIBIDOR";
+		case MM_BI_SEC_ALEATORIO:
+			return "MM-BI-SEC-ALEATORIO";
+		case MM_UNI_BI_INHIBIDOR:
+			return "MM-UNI-BI-INHIBIDOR";
+		case MM_BI_BI_INHIBIDOR:
+			return "MM-BI-BI-INHIBIDOR";
+		case HILL_INHIBIDOR_ACTIVADOR:
+			return "HILL-INHIBIDOR-ACTIVADOR";
+		default:
+			return "";
+	}
+}
+
+String TMechanism::getReactionName() const
+{
+	return reactionName;
+}
+
+int TMechanism::getNMechParams() const
+{
+	return mechParams.size();
+}
+
+String TMechanism::getMechParams(int i) const
+{
+	return mechParams[i];
+}
+
+const TReaction* TMechanism::getReaction() const
+{
+	return model->findReaction(getReactionName());
+}
+
+String TMechanism::getDirectRatePython() const
+{
+	return directRatePython;
+}
+
+String TMechanism::getInverseRatePython() const
+{
+	return inverseRatePython;
+}
+
+String TMechanism::getDirectRateShow() const
+{
+	return directRateShow;
+}
+
+String TMechanism::getInverseRateShow() const
+{
+    return inverseRateShow;
+}
+
+
+// Mostrar el objeto mecanismo
+void TMechanism::toString(TMemo* pantallaSalida) const
+{
+    if (!pantallaSalida)
+		return;
+
+	pantallaSalida->Lines->Add("======== MECHANISM ========");
+	pantallaSalida->Lines->Add("Type: " + getMechType());
+	pantallaSalida->Lines->Add("Reaction: " + getReactionName());
+
+	pantallaSalida->Lines->Add("Mech params: ");
+	for (int i = 0; i < getNMechParams(); i++)
+		pantallaSalida->Lines->Add(getMechParams(i));
+
+	pantallaSalida->Lines->Add("Direct  Rate Eq (Show)  : " + getDirectRateShow());
+	pantallaSalida->Lines->Add("Direct  Rate Eq (Python): " + getDirectRatePython());
+	pantallaSalida->Lines->Add("Inverse Rate Eq (Show)  : " + getInverseRateShow());
+	pantallaSalida->Lines->Add("Inverse Rate Eq (Python): " + getInverseRatePython());
+
+	pantallaSalida->Lines->Add("==========================");
+}
+
+// metodos virtuales
+void TMechanism::CheckElements() const {}
+void TMechanism::setDirectRatePython() {}
+void TMechanism::setInverseRatePython() {}
+void TMechanism::setDirectRateShow() {}
+void TMechanism::setInverseRateShow() {}
+
+
+//****************************************************************************
+// Metodos virtuales de clases hijas de mecanismo
+
+// LEY ACCION DE MASAS ________________________________________________________
+
+TMassAction::TMassAction(String line, TModel* p_model)
+    : TMechanism(line, p_model)
+{
+	mechanismType = LEY_ACCION_MASAS;
+
+	// comprueba los elementos leidos, segun la ley de accion de masas
+	CheckElements();
+
+	// genera las ecuaciones cineticas adecuadas
+	setDirectRatePython();
+	setDirectRateShow();
+	setInverseRatePython();
+	setInverseRateShow();
+}
+
+void TMassAction::CheckElements() const
+{
+	// comprueba el numero de parametros segun si la reaccion es BI o UNI
+	if((getReaction()->getDirectionString() == "BI") && (getNMechParams() != 2))
+		throw Exception(getMechType() + " para una reacción BI necesita: [kdirecta, kinversa].");
+	else if ((getReaction()->getDirectionString() == "UNI") && (getNMechParams() != 1))
+		throw Exception(getMechType() + " para una reacción UNI necesita: [kdirecta].");
+
+	// los parametros deben existir en el modelo
+	for (int i = 0; i < getNMechParams(); i++)
+		if(!model->findParameter(getMechParams(i)))
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+}
+
+String TMassAction::buildRateEquation(bool isPython, bool isDirect)
+{
+	String rate = "";
+
+    // define variables segun la direccion de la ecuacion
+	int index = 0;
+	int n = getReaction()->getNReactants();
+
+	if (!isDirect)
+	{
+		index = 1;
+		n = getReaction()->getNProducts();
+	}
+
+	// parametro
+	if(isPython)
+		rate = "p[" + IntToStr(model->indexOfParameter(getMechParams(index))) + "]";
+	else
+		rate = getMechParams(index);
+
+	// concentraciones
+    for (int i = 0; i < n; i++)
+	{
+        double coeff;
+		String name;
+        int index;
+
+		if(isDirect) 	// reactivos
+		{
+			coeff = getReaction()->getReactant(i).coefficient;
+			name  = getReaction()->getReactant(i).substance->getShortName();
+		}
+		else 			// productos
+        {
+            coeff = getReaction()->getProduct(i).coefficient;
+            name  = getReaction()->getProduct(i).substance->getShortName();
+		}
+
+		if (isPython)   // ponerlo en forma de vector con indices
+        {
+			index = model->indexOfMetabolite(name);
+			if (coeff == 1)
+				rate += "*x[" + IntToStr(index) + "]";
+			else
+				rate += "*x[" + IntToStr(index) + "]**" + coeff;
+
+        }
+		else           // formato salida para el usuario, con nombres de los metabolitos/params
+		{
+			if (coeff == 1)
+				rate += "* [" + name + "]";
+			else
+				rate += "* [" + name + "]^" + coeff;
+		}
+	}
+
+    return rate;
+}
+
+void TMassAction::setDirectRatePython()
+{
+	directRatePython = buildRateEquation(true, true);
+}
+
+void TMassAction::setDirectRateShow()
+{
+	directRateShow = buildRateEquation(false, true);
+}
+
+void TMassAction::setInverseRatePython()
+{
+	if(getReaction()->getDirectionString() == "BI")
+		inverseRatePython = buildRateEquation(true, false);
+	else
+		inverseRatePython = "";
+}
+
+void TMassAction::setInverseRateShow()
+{
+	if(getReaction()->getDirectionString() == "BI")
+		inverseRateShow = buildRateEquation(false, false);
+	else
+		inverseRateShow = "";
+}
+
+// MM UNISUSTRATO CON INHIBIDOR ________________________________________________
+
+TMMUniInhibidor::TMMUniInhibidor(String line, TModel* p_model)
+    : TMechanism(line, p_model)
+{
+	mechanismType = MM_UNI_INHIBIDOR;
+
+    // comprueba los elementos leidos, segun la ley de accion de masas
+	CheckElements();
+
+	// genera las ecuaciones cineticas adecuadas
+	setDirectRatePython();
+	setDirectRateShow();
+	setInverseRatePython();
+	setInverseRateShow();
+}
+
+void TMMUniInhibidor::CheckElements() const
+{
+    // comprueba el numero de parametros
+	if((getReaction()->getDirectionString() == "BI") && (getNMechParams() != 5))
+		throw Exception(getMechType() + " para una reacción BI necesita: [Vmax, KmA, KmI, I, Keq].");
+	else if((getReaction()->getDirectionString() == "UNI") && (getNMechParams() != 4))
+		throw Exception(getMechType() + " para una reacción UNI necesita: [Vmax, KmA, KmI, I].");
+
+	// los parametros deben existir en el modelo
+	for (int i = 0; i < 3; i++)                      	// Vmax, KmA, KmI
+		if(!model->findParameter(getMechParams(i)))
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+
+	if(getReaction()->getDirectionString() == "BI")  	// Keq
+		if(!model->findParameter(getMechParams(getNMechParams()-1)))
+			throw Exception("'" + getMechParams(getNMechParams()-1) + "' no está registrado como PARAMETER en el modelo.");
+
+	// el inhibidor debe ser un metabolito registrado
+    if(!model->findMetabolite(getMechParams(3)))        // I
+		throw Exception("'" + getMechParams(3) + "' no está registrado como METABOLITE en el modelo.");
+}
+
+String TMMUniInhibidor::BuildDenominator(bool isPython)
+{
+	String denominador = "";
+
+    // nombres cortos de los metabolitos que participan
+	String nameA = getReaction()->getReactant(0).substance->getShortName();  // reactivo
+	String nameI = getMechParams(3); 									     // inhibidor
+
+	// indices de los metabolitos y parametros para el formato python
+	int A = model->indexOfMetabolite(nameA);
+	int I = model->indexOfMetabolite(nameI);
+	int KmA = model->indexOfParameter(getMechParams(1));
+	int KmI = model->indexOfParameter(getMechParams(2));
+
+
+	if (isPython) // formato python
+	{
+		denominador = "p[" + IntToStr(KmA) + "]" +
+				   " + p[" + IntToStr(KmA) + "]*x[" + IntToStr(I) + "]/p[" + IntToStr(KmI) + "]" +
+				   " + x[" + IntToStr(A)   + "]";
+	}
+	else // formato salida para el usuario
+	{
+		denominador = getMechParams(1) + " *(1 + [" + nameI + "]/" + getMechParams(2) + ") + [" + nameA + "]";
+    }
+
+	return denominador;
+}
+
+void TMMUniInhibidor::setDirectRatePython()
+{
+    // construye la ecuacion cinetica por partes: numerador y denominador
+	directRatePython = "(p[" + IntToStr(model->indexOfParameter(getMechParams(0))) + "] *" +
+					    "x[" + IntToStr(model->indexOfMetabolite(getReaction()->getReactant(0).substance->getShortName())) + "])";
+	directRatePython += "/ (" + BuildDenominator(true) + ")";
+}
+
+void TMMUniInhibidor::setDirectRateShow()
+{
+	// construye la ecuacion cinetica por partes: numerador y denominador
+	directRateShow = "(" + getMechParams(0) + " *[" + getReaction()->getReactant(0).substance->getShortName() + "])";
+	directRateShow += "/ (" + BuildDenominator(false) + ")";
+}
+
+void TMMUniInhibidor::setInverseRatePython()
+{
+	// solo si la reaccion es bidireccional
+	if(getReaction()->getDirectionString() == "BI")
+	{
+		// construye la ecuacion cinetica por partes: numerador y denominador
+		inverseRatePython =  "(p[" + IntToStr(model->indexOfParameter(getMechParams(0))) + "]/" +
+							  "p[" + IntToStr(model->indexOfParameter(getMechParams(getNMechParams()-1))) + "] *" +
+							  "x[" + IntToStr(model->indexOfMetabolite(getReaction()->getProduct(0).substance->getShortName())) + "])";
+		inverseRatePython += "/(" + BuildDenominator(true) + ")";
+	}
+	else
+		inverseRatePython = "";
+}
+
+void TMMUniInhibidor::setInverseRateShow()
+{
+	// solo si la reaccion es bidireccional
+	if(getReaction()->getDirectionString() == "BI")
+	{
+		// construye la ecuacion cinetica por partes: numerador y denominador
+		inverseRateShow = "(" + getMechParams(0) + "/" + getMechParams(getNMechParams()-1) +
+						 "*[" + getReaction()->getProduct(0).substance->getShortName() + "])";
+		inverseRateShow += "/(" + BuildDenominator(false) + ")";
+	}
+	else
+		inverseRateShow = "";
+}
+
+
+// MM BISUSTRATO SECUENCIAL ALEATORIO __________________________________________
+
+TMMBiSecAleatorio::TMMBiSecAleatorio(String line, TModel* p_model)
+    : TMechanism(line, p_model)
+{
+	mechanismType = MM_BI_SEC_ALEATORIO;
+
+    // comprueba los elementos leidos, segun la ley de accion de masas
+	CheckElements();
+
+	// genera las ecuaciones cineticas adecuadas
+	setDirectRatePython();
+	setDirectRateShow();
+	setInverseRatePython();
+	setInverseRateShow();
+}
+
+void TMMBiSecAleatorio::CheckElements() const
+{
+	// comprueba el numero de parametros
+	if((getReaction()->getDirectionString() == "BI") && (getNMechParams() != 4) && (getNMechParams() != 5))
+		throw Exception(getMechType() + " para una reacción BI necesita: [Vmax, KmA, KmB, (KdA), Keq].");
+	else if((getReaction()->getDirectionString() == "UNI") && (getNMechParams() != 3) && (getNMechParams() != 4))
+		throw Exception(getMechType() + " para una reacción UNI necesita: [Vmax, KmA, KmB, (KdA)].");
+
+	// los parametros deben existir en el modelo
+	for (int i = 0; i < getNMechParams(); i++)
+		if(!model->findParameter(getMechParams(i)))
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+}
+
+String TMMBiSecAleatorio::BuildDenominator(bool isPython)
+{
+	String denominador = "";
+
+    // nombres cortos de los reactivos que participan
+	String nameA = getReaction()->getReactant(0).substance->getShortName();
+	String nameB = getReaction()->getReactant(1).substance->getShortName();
+
+	// indices de los metabolitos y parametros para el formato python
+	int A = model->indexOfMetabolite(nameA);
+	int B = model->indexOfMetabolite(nameB);
+	int KmA = model->indexOfParameter(getMechParams(1));
+	int KmB = model->indexOfParameter(getMechParams(2));
+	int KdA = -1;
+
+	if (isPython) // formato python
+	{
+		denominador = "x[" + IntToStr(A) + "]*x[" + IntToStr(B) + "]" +
+				   " + p[" + IntToStr(KmA) + "]*x[" + IntToStr(B) + "]" +
+				   " + p[" + IntToStr(KmB) + "]*x[" + IntToStr(A) + "]";
+
+		// distingue caso constante de disociacion
+		if (getNMechParams()>3 && getReaction()->getDirectionString() == "UNI")
+		{
+			KdA = model->indexOfParameter(getMechParams(3));
+			denominador += " + p[" + IntToStr(KdA) + "]*p[" + IntToStr(KmB) + "]";
+        }
+		else
+			denominador += " + p[" + IntToStr(KmA) + "]*p[" + IntToStr(KmB) + "]";
+	}
+	else // formato salida para el usuario
+	{
+		denominador = "[" + nameA + "]*[" + nameB + "]" +
+					" + " + getMechParams(1) + "*[" + nameB + "]" +
+					" + " + getMechParams(2) + "*[" + nameA + "]";
+
+		// distingue caso constante de disociacion
+		if (getNMechParams()>3 && getReaction()->getDirectionString() == "UNI")
+			denominador += " + " + getMechParams(3) + "*" + getMechParams(2);
+		else
+			denominador += " + " + getMechParams(1) + "*" + getMechParams(2);
+    }
+
+	return denominador;
+}
+
+void TMMBiSecAleatorio::setDirectRatePython()
+{
+    // indices de los metabolitos y parametros para el formato python
+	int A = model->indexOfMetabolite(getReaction()->getReactant(0).substance->getShortName());
+	int B = model->indexOfMetabolite(getReaction()->getReactant(1).substance->getShortName());
+	int Vmax = model->indexOfParameter(getMechParams(0));
+
+	// construye numerador con reactivos
+	directRatePython = "(p[" + IntToStr(Vmax) + "]*" +
+						"x[" + IntToStr(A) + "]*"
+					    "x[" + IntToStr(B) + "])";
+
+    // construye denominador
+	directRatePython += "/ (" + BuildDenominator(true) + ")";
+}
+
+void TMMBiSecAleatorio::setDirectRateShow()
+{
+	// construye numerador con reactivos
+	directRateShow = "(" + getMechParams(0) +
+					"*[" + getReaction()->getReactant(0).substance->getShortName() + "]" +
+				    "*[" + getReaction()->getReactant(1).substance->getShortName() + "])";
+	// construye denominador
+	directRateShow += "/ (" + BuildDenominator(false) + ")";
+}
+
+void TMMBiSecAleatorio::setInverseRatePython()
+{
+	// solo si la reaccion es bidireccional
+	if(getReaction()->getDirectionString() == "BI")
+	{
+		// indices de los metabolitos y parametros para el formato python
+		int C = model->indexOfMetabolite(getReaction()->getProduct(0).substance->getShortName());
+		int D = model->indexOfMetabolite(getReaction()->getProduct(1).substance->getShortName());
+		int Vmax = model->indexOfParameter(getMechParams(0));
+		int Keq = model->indexOfParameter(getMechParams(getNMechParams()-1));
+
+		// construye numerador con productos
+		inverseRatePython = "(p[" + IntToStr(Vmax) + "]/"
+							 "p[" + IntToStr(Keq) + "] *" +
+							 "x[" + IntToStr(C) + "]*"
+							 "x[" + IntToStr(D) + "])";
+
+        // construye denominador con Keq
+		inverseRatePython += "/(" + BuildDenominator(false) + ")";
+	}
+	else
+		inverseRatePython = "";
+}
+
+void TMMBiSecAleatorio::setInverseRateShow()
+{
+	// solo si la reaccion es bidireccional
+	if(getReaction()->getDirectionString() == "BI")
+	{
+		// construye numerador con productos
+		inverseRateShow = "(" + getMechParams(0) +
+                          "/" + getMechParams(getNMechParams()-1) +
+						 "*[" + getReaction()->getProduct(0).substance->getShortName() + "]" +
+						 "*[" + getReaction()->getProduct(1).substance->getShortName() + "])";
+        // construye denominador con Keq
+		inverseRateShow += "/(" + BuildDenominator(false) + ")";
+	}
+	else
+		inverseRateShow = "";
+}
+
+
+// MM UNI-BI CON INHIBIDOR _____________________________________________________
+
+TMMUniBiInhibidor::TMMUniBiInhibidor(String line, TModel* p_model)
+    : TMechanism(line, p_model)
+{
+	mechanismType = MM_UNI_BI_INHIBIDOR;
+
+    // comprueba los elementos leidos, segun la ley de accion de masas
+	CheckElements();
+
+	// genera las ecuaciones cineticas adecuadas
+	setDirectRatePython();
+	setDirectRateShow();
+	setInverseRatePython();
+	setInverseRateShow();
+}
+
+void TMMUniBiInhibidor::CheckElements() const
+{
+	// el mecanismo Uni-Bi implementado solo aplica a reacciones bidireccionales
+	if(getReaction()->getDirectionString() == "UNI")
+		throw Exception(getMechType() + " solo aplica a reacciones bidireccionales");
+
+	// comprueba el numero de parametros
+	if(getNMechParams() != 8)
+		throw Exception(getMechType() + " necesita: [Vmax, VmaxInv, KmA, KmC, KmD, KmI, Keq, Inhibidor].");
+
+	// los parametros deben existir en el modelo
+	for (int i = 0; i < (getNMechParams()-1); i++)
+		if(!model->findParameter(getMechParams(i)))
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+
+	// el inhibidor debe ser un metabolito en el modelo
+    if(!model->findMetabolite(getMechParams(getNMechParams()-1)))
+			throw Exception("'" + getMechParams(getNMechParams()-1) + "' no está registrado como METABOLITE en el modelo.");
+}
+
+String TMMUniBiInhibidor::BuildDenominator(bool isPython)
+{
+	String denominador = "";
+
+    // nombres cortos de los reactivos/productos que participan
+	String nameA = getReaction()->getReactant(0).substance->getShortName();
+	String nameC = getReaction()->getProduct(0).substance->getShortName();
+	String nameD = getReaction()->getProduct(1).substance->getShortName();
+
+	// indices de los metabolitos y parametros para el formato python
+	int I       = model->indexOfMetabolite(getMechParams(getNMechParams()-1));
+	int A       = model->indexOfMetabolite(nameA);
+	int C       = model->indexOfMetabolite(nameC);
+	int D       = model->indexOfMetabolite(nameD);
+	int Vmax    = model->indexOfParameter(getMechParams(0));
+	int VmaxInv = model->indexOfParameter(getMechParams(1));
+	int KmA     = model->indexOfParameter(getMechParams(2));
+	int KmC     = model->indexOfParameter(getMechParams(3));
+	int KmD     = model->indexOfParameter(getMechParams(4));
+	int KmI     = model->indexOfParameter(getMechParams(5));
+	int Keq     = model->indexOfParameter(getMechParams(6));
+
+	if (isPython) // formato python
+	{
+		denominador = "p[" + IntToStr(KmA) + "] + x[" + IntToStr(A) + "] + " +
+					  "(p[" + IntToStr(KmD) + "]*p[" + IntToStr(Vmax) + "])/" +
+					  "(p[" + IntToStr(Keq) + "]*p[" + IntToStr(VmaxInv) + "]) *x[" + IntToStr(C) + "] + " +
+					  "(p[" + IntToStr(KmC) + "]*p[" + IntToStr(Vmax) + "])/" +
+					  "(p[" + IntToStr(Keq) + "]*p[" + IntToStr(VmaxInv) + "]) *x[" + IntToStr(D) + "] + " +
+					   "p[" + IntToStr(Vmax) + "]/(p[" + IntToStr(Keq) + "]*p[" + IntToStr(VmaxInv) + "]) *" +
+					   "x[" + IntToStr(C) + "]*x[" + IntToStr(D) + "] + " +
+					  "(x[" + IntToStr(A) + "]*x[" + IntToStr(I) + "])/p[" + IntToStr(KmI) + "]";
+	}
+	else // formato salida para el usuario
+	{
+		denominador = getMechParams(2) + " + [" + nameA + "] + " +
+					  "(" + getMechParams(4) + "*" + getMechParams(0) + ")/" +
+					  "(" + getMechParams(6) + "*" + getMechParams(1) + ") *[" + nameC + "] + " +
+					  "(" + getMechParams(3) + "*" + getMechParams(0) + ")/" +
+					  "(" + getMechParams(6) + "*" + getMechParams(1) + ") *[" + nameD + "] + " +
+					   "" + getMechParams(0) + "/(" + getMechParams(6) + "*" + getMechParams(1) + ") *" +
+					   "[" + nameC + "]*[" + nameD + "] + " +
+					  "([" + nameA + "]*[" + getMechParams(getNMechParams()-1) + "])/" + getMechParams(5);
+    }
+
+	return denominador;
+}
+
+
+void TMMUniBiInhibidor::setDirectRatePython()
+{
+	// indices para formato python
+	int Vmax = model->indexOfParameter(getMechParams(0));
+	int A = model->indexOfMetabolite(getReaction()->getReactant(0).substance->getShortName());
+
+	// numerador
+	directRatePython = "(p[" + IntToStr(Vmax) + "]*x[" + IntToStr(A) + "])";
+
+	// denominador
+	directRatePython += "/ (" + BuildDenominator(true) + ")";
+}
+
+void TMMUniBiInhibidor::setDirectRateShow()
+{
+    // nombres para formato salida usuario
+	String Vmax = getMechParams(0);
+	String A = getReaction()->getReactant(0).substance->getShortName();
+
+	// numerador
+	directRateShow = "(" + Vmax + "*[" + A + "])";
+
+	// denominador
+	directRateShow += "/ (" + BuildDenominator(false) + ")";
+}
+
+void TMMUniBiInhibidor::setInverseRatePython()
+{
+	// este mecanismo siempre modelara reacciones bidireccionales
+
+    // indices para formato python
+	int Vmax = model->indexOfParameter(getMechParams(0));
+	int Keq = model->indexOfParameter(getMechParams(getNMechParams()-2));
+	int C = model->indexOfMetabolite(getReaction()->getProduct(0).substance->getShortName());
+    int D = model->indexOfMetabolite(getReaction()->getProduct(1).substance->getShortName());
+
+	// numerador
+	inverseRatePython = "(p[" + IntToStr(Vmax) + "]/p[" + IntToStr(Keq) + "] *x[" + IntToStr(C) + "]*x[" + IntToStr(D) + "])";
+
+	// denominador
+	inverseRatePython += "/ (" + BuildDenominator(true) + ")";
+}
+
+void TMMUniBiInhibidor::setInverseRateShow()
+{
+	// este mecanismo siempre modelara reacciones bidireccionales
+
+	// nombres para formato salida usuario
+	String Vmax = getMechParams(0);
+	String Keq  = getMechParams(getNMechParams()-2);
+	String C    = getReaction()->getProduct(0).substance->getShortName();
+	String D    = getReaction()->getProduct(1).substance->getShortName();
+
+	// numerador
+	inverseRateShow = "(" + Vmax + "/" + Keq +" *[" + C + "]*[" + D + "])";
+
+	// denominador
+	inverseRateShow += "/ (" + BuildDenominator(false) + ")";
+}
+
+
+// MM BI-BI CON INHIBIDOR ______________________________________________________
+
+TMMBiBiInhibidor::TMMBiBiInhibidor(String line, TModel* p_model)
+    : TMechanism(line, p_model)
+{
+	mechanismType = MM_BI_BI_INHIBIDOR;
+
+    // comprueba los elementos leidos, segun la ley de accion de masas
+	CheckElements();
+
+	// genera las ecuaciones cineticas adecuadas
+	setDirectRatePython();
+	setDirectRateShow();
+	setInverseRatePython();
+	setInverseRateShow();
+}
+
+void TMMBiBiInhibidor::CheckElements() const
+{
+	// comprueba el numero de parametros
+	if((getReaction()->getDirectionString() == "BI") && (getNMechParams() != 6))
+		throw Exception(getMechType() + " para una reacción BI necesita: [Vmax, KmA, KmB, KmC, KmD, Keq].");
+	else if((getReaction()->getDirectionString() == "UNI") && (getNMechParams() != 5))
+		throw Exception(getMechType() + " para una reacción UNI necesita: [Vmax, KmA, KmB, KmC, KmD].");
+
+	// los parametros deben existir en el modelo
+	for (int i = 0; i < getNMechParams(); i++)
+		if(!model->findParameter(getMechParams(i)))
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+}
+
+String TMMBiBiInhibidor::BuildDenominator(bool isPython)
+{
+	String denominador = "";
+
+    // nombres cortos de los reactivos/productos que participan
+	String nameA = getReaction()->getReactant(0).substance->getShortName();
+	String nameB = getReaction()->getReactant(1).substance->getShortName();
+	String nameC = getReaction()->getProduct(0).substance->getShortName();
+	String nameD = getReaction()->getProduct(1).substance->getShortName();
+
+	// indices de los metabolitos y parametros para el formato python
+	int A       = model->indexOfMetabolite(nameA);
+	int B       = model->indexOfMetabolite(nameB);
+	int C       = model->indexOfMetabolite(nameC);
+	int D       = model->indexOfMetabolite(nameD);
+	int Vmax    = model->indexOfParameter(getMechParams(0));
+	int KmA     = model->indexOfParameter(getMechParams(1));
+	int KmB     = model->indexOfParameter(getMechParams(2));
+	int KmC     = model->indexOfParameter(getMechParams(3));
+	int KmD     = model->indexOfParameter(getMechParams(4));
+
+	if (isPython) // formato python
+	{
+		denominador = "p[" + IntToStr(KmA) + "]*p[" + IntToStr(KmB) + "] * " +
+					  "(1 + x[" + IntToStr(A) + "]/p[" + IntToStr(KmA) + "] + " +
+						   "x[" + IntToStr(C) + "]/p[" + IntToStr(KmC) + "]) * " +
+					  "(1 + x[" + IntToStr(B) + "]/p[" + IntToStr(KmB) + "] + " +
+						   "x[" + IntToStr(D) + "]/p[" + IntToStr(KmD) + "])";
+	}
+	else // formato salida para el usuario
+	{
+		denominador = getMechParams(1) + "*"  + getMechParams(2) + " * " +
+					  "(1 + [" + nameA + "]/" + getMechParams(1) + " + " +
+						   "[" + nameC + "]/" + getMechParams(3) + ") * " +
+					  "(1 + [" + nameB + "]/" + getMechParams(2) + " + " +
+						   "[" + nameD + "]/" + getMechParams(4) + ")";
+    }
+
+	return denominador;
+}
+
+void TMMBiBiInhibidor::setDirectRatePython()
+{
+    // nombres para formato salida usuario
+	int Vmax = model->indexOfParameter(getMechParams(0));
+	int A    = model->indexOfMetabolite(getReaction()->getReactant(0).substance->getShortName());
+	int B    = model->indexOfMetabolite(getReaction()->getReactant(1).substance->getShortName());
+
+	// numerador
+	directRatePython = "(p[" + IntToStr(Vmax) + "] *x[" + IntToStr(A) + "]*x[" + IntToStr(B) + "])";
+
+	// denominador
+	directRatePython += "/ (" + BuildDenominator(true) + ")";
+}
+
+void TMMBiBiInhibidor::setDirectRateShow()
+{
+    // nombres para formato salida usuario
+	String Vmax = getMechParams(0);
+	String A    = getReaction()->getReactant(0).substance->getShortName();
+	String B    = getReaction()->getReactant(1).substance->getShortName();
+
+	// numerador
+	directRateShow = "(" + Vmax + " *[" + A + "]*[" + B + "])";
+
+	// denominador
+	directRateShow += "/ (" + BuildDenominator(false) + ")";
+}
+
+void TMMBiBiInhibidor::setInverseRatePython()
+{
+	if(getReaction()->getDirectionString() == "BI")
+	{
+		// nombres para formato salida usuario
+		int Vmax = model->indexOfParameter(getMechParams(0));
+		int Keq  = model->indexOfParameter(getMechParams(getNMechParams()-1));
+		int C    = model->indexOfMetabolite(getReaction()->getProduct(0).substance->getShortName());
+		int D    = model->indexOfMetabolite(getReaction()->getProduct(1).substance->getShortName());
+
+		// numerador
+		inverseRatePython = "(p[" + IntToStr(Vmax) + "]/p[" + IntToStr(Keq) +"] " +
+							"*x[" + IntToStr(C) + "]*x[" + IntToStr(D) + "])";
+
+		// denominador
+		inverseRatePython += "/ (" + BuildDenominator(true) + ")";
+    }
+	else
+		inverseRatePython = "";
+}
+
+void TMMBiBiInhibidor::setInverseRateShow()
+{
+	if(getReaction()->getDirectionString() == "BI")
+	{
+        // nombres para formato salida usuario
+		String Vmax = getMechParams(0);
+		String Keq  = getMechParams(getNMechParams()-1);
+		String C    = getReaction()->getProduct(0).substance->getShortName();
+		String D    = getReaction()->getProduct(1).substance->getShortName();
+
+		// numerador
+		inverseRateShow = "(" + Vmax + "/" + Keq +" *[" + C + "]*[" + D + "])";
+
+		// denominador
+		inverseRateShow += "/ (" + BuildDenominator(false) + ")";
+    }
+	else
+		inverseRateShow = "";
+}
+
+
+// ECUACION DE HILL CON INHIBIDOR Y ACTIVADOR __________________________________
+
+THillInhibidorActivador::THillInhibidorActivador(String line, TModel* p_model)
+    : TMechanism(line, p_model)
+{
+	mechanismType = HILL_INHIBIDOR_ACTIVADOR;
+
+    // comprueba los elementos leidos, segun la ley de accion de masas
+	CheckElements();
+
+	// genera las ecuaciones cineticas adecuadas
+	setDirectRatePython();
+	setDirectRateShow();
+	setInverseRatePython();
+	setInverseRateShow();
+}
+
+void THillInhibidorActivador::CheckElements() const
+{
+    // solo se implementa la ecuacion de hill en reacciones unidireccionales
+	if(getReaction()->getDirectionString() == "BI")
+		throw Exception(getMechType() + " solo aplica a reacciones unidireccionales");
+
+    // comprueba el numero de parametros
+	if(getNMechParams() != 6)
+		throw Exception(getMechType() + " necesita: [Vmax, KmA, cte, A, Inhibidor, Activador].");
+
+	// los parametros deben existir en el modelo
+	for (int i = 0; i < (getNMechParams()-3); i++)
+		if(!model->findParameter(getMechParams(i)))
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+
+	// el reactivo/inhibidor/activador deben ser metabolitos en el modelo
+	if(!model->findMetabolite(getMechParams(getNMechParams()-1)))
+		throw Exception("El activador '" + getMechParams(getNMechParams()-1) + "' no está registrado como METABOLITE en el modelo.");
+	if(!model->findMetabolite(getMechParams(getNMechParams()-2)))
+		throw Exception("El inhibidor '" + getMechParams(getNMechParams()-2) + "' no está registrado como METABOLITE en el modelo.");
+    if(!model->findMetabolite(getMechParams(getNMechParams()-3)))
+		throw Exception("El reactivo '" + getMechParams(getNMechParams()-3) + "' no está registrado como METABOLITE en el modelo.");
+}
+
+void THillInhibidorActivador::setDirectRatePython()
+{
+	// indices de los metabolitos y parametros para el formato python
+	int Vmax = model->indexOfParameter(getMechParams(0));
+	int KmA  = model->indexOfParameter(getMechParams(1));
+	int cte  = model->indexOfParameter(getMechParams(2));
+	int A    = model->indexOfMetabolite(getMechParams(3));
+	int Inh  = model->indexOfMetabolite(getMechParams(4));
+	int Act  = model->indexOfMetabolite(getMechParams(5));
+	int n = 2;
+
+	// numerador
+	directRatePython = "(p[" + IntToStr(Vmax) + "] *x[" + IntToStr(A) + "]**" + IntToStr(n) + ")";
+
+	// denominador
+	directRatePython += " / (p[" + IntToStr(KmA) + "] + p[" + IntToStr(KmA) + "]*p[" + IntToStr(cte) + "]* " +
+						"x[" + IntToStr(Inh) + "]**" + IntToStr(n) + " / x[" + IntToStr(Act) + "]**" + IntToStr(n) + " + " +
+						"x[" + IntToStr(A) + "]**" + IntToStr(n) + ")";
+}
+
+void THillInhibidorActivador::setDirectRateShow()
+{
+	int n = 2;
+
+	// numerador
+	directRateShow = "(" + getMechParams(0) + " *[" + getMechParams(3) + "]^" + IntToStr(n) + ")";
+
+	// denominador
+	directRateShow += " / (" + getMechParams(1) + " *(1 + " + getMechParams(2) + "* " +
+						 "[" + getMechParams(4) + "]^" + IntToStr(n) + " / [" + getMechParams(5) + "]^" + IntToStr(n) + ") + " +
+						 "[" + getMechParams(3) + "]^" + IntToStr(n) + ")";
+}
+
+void THillInhibidorActivador::setInverseRatePython()
+{
+	inverseRatePython = "";
+}
+
+void THillInhibidorActivador::setInverseRateShow()
+{
+    inverseRateShow = "";
+}
+
+
+// METODOS TMODEL ______________________________________________________________
+
+TMechanism TModel::CreateMechanism(String line, TModel* model)
+{
+	// separa la linea por tabuladores
+	TStringList* tmp = new TStringList();
+	tmp->StrictDelimiter = true;
+	tmp->Delimiter = '\t';
+	tmp->DelimitedText = Trim(line);
+
+	// Coge el segundo campo despues de MECHANISM
+	String type = Trim(tmp->Strings[1]);
+
+	try
+	{
+		if (type == "LEY-ACCION-MASAS") return TMassAction(line, model);
+		if (type == "MM-UNI-INHIBIDOR") return TMMUniInhibidor(line, model);
+		if (type == "MM-BI-SEC-ALEATORIO") return TMMBiSecAleatorio(line, model);
+		if (type == "MM-UNI-BI-INHIBIDOR") return TMMUniBiInhibidor(line, model);
+		if (type == "MM-BI-BI-INHIBIDOR") return TMMBiBiInhibidor(line, model);
+		if (type == "HILL-INHIBIDOR-ACTIVADOR") return THillInhibidorActivador(line, model);
+
+		throw Exception("Tipo de mecanismo no válido. Son válidos: "
+				"'LEY-ACCION-MASAS', "
+				"'MM-UNI-INHIBIDOR', "
+				"'MM-BI-SEC-ALEATORIO', "
+				"'MM-UNI-BI-INHIBIDOR', "
+				"'MM-BI-BI-INHIBIDOR', "
+				"'HILL-INHIBIDOR-ACTIVADOR'."
+		);
+	}
+	__finally
+	{
+		delete tmp;
+    }
+}
+
+const TMechanism* TModel::givesMechanism(String nameReaction) const
+{
+    // recorre los mecanismos
+	for (int i = 0; i < getNMechanisms(); i++)
+        // si coincide el nombre
+		if(mechanisms[i].getReactionName() == nameReaction)
+			return &mechanisms[i];
+
+	return nullptr;
+}
+
+
+void TModel::BuildEquations()
+{
+	// limpia las ecuaciones
+	equationsPython.clear();
+	equationsShow.clear();
+	equationsShowCondensed.clear();
+
+	// para cada metabolito
+	for (int i = 0; i < getNMetabolites(); i++)
+	{
+		String equationS = "";
+		String equationP = "";
+        String equationSC = "";
+
+		// recorre todas la reacciones
+		for (int j = 0; j < getNReactions(); j++)
+		{
+			// recorre los reactivos
+			for (int r = 0; r < reactions[j].getNReactants(); r++)
+			{
+				// si aparece como reactivo
+				if (metabolites[i].getShortName() == reactions[j].getReactant(r).substance->getShortName())
+				{
+					// restamos la ecuacion cinetica directa
+					equationP  += " - " + givesMechanism(reactions[j].getShortName())->getDirectRatePython();
+					equationS  += " - " + givesMechanism(reactions[j].getShortName())->getDirectRateShow();
+					equationSC += " - " + givesMechanism(reactions[j].getShortName())->getReactionName() + "_d";
+
+                    // sumamos la ecuacion cinetica inversa, en caso de que sea bidireccional
+					if (reactions[j].getDirectionString() == "BI")
+					{
+						equationP  += " + " + givesMechanism(reactions[j].getShortName())->getInverseRatePython();
+						equationS  += " + " + givesMechanism(reactions[j].getShortName())->getInverseRateShow();
+						equationSC += " + " + givesMechanism(reactions[j].getShortName())->getReactionName() + "_i";
+					}
+				}
+			}
+
+			// recorre los productos
+			for (int r = 0; r < reactions[j].getNProducts(); r++)
+			{
+				// si aparece como producto
+				if (metabolites[i].getShortName() == reactions[j].getProduct(r).substance->getShortName())
+				{
+					// sumamos la ecuacion cinetica directa
+					equationP  += " + " + givesMechanism(reactions[j].getShortName())->getDirectRatePython();
+					equationS  += " + " + givesMechanism(reactions[j].getShortName())->getDirectRateShow();
+					equationSC += " + " + givesMechanism(reactions[j].getShortName())->getReactionName() + "_d";
+
+					// restamos la ecuacion cinetica inversa, en caso de que sea bidireccional
+					if (reactions[j].getDirectionString() == "BI")
+					{
+						equationP  += " - " + givesMechanism(reactions[j].getShortName())->getInverseRatePython();
+						equationS  += " - " + givesMechanism(reactions[j].getShortName())->getInverseRateShow();
+						equationSC += " - " + givesMechanism(reactions[j].getShortName())->getReactionName() + "_i";
+                    }
+				}
+			}
+		}
+
+        // aniadimos la ecuacion del metabolito
+		equationsPython.push_back(equationP);
+		equationsShow.push_back(equationS);
+        equationsShowCondensed.push_back(equationSC);
+	}
+}
+
+String TModel::getEquationPython(int i)
+{
+	return equationsPython[i];
+}
+
+String TModel::getEquationShow(int i)
+{
+    return equationsShow[i];
+}
+
+String TModel::getEquationShowCondensed(int i)
+{
+    return equationsShowCondensed[i];
+}
+
+const std::vector<String> TModel::getAllMetaboliteNames() const
+{
+	std::vector<String> metaNames;
+
+	for (int i=0; i < getNMetabolites(); i++)
+		metaNames.push_back(getMetabolite(i)->getShortName());
+
+	return metaNames;
+}
+
+const std::vector<double> TModel::getAllInitialConcen() const
+{
+	std::vector<double> initialConcen;
+
+	for (int i=0; i < getNMetabolites(); i++)
+		initialConcen.push_back(getMetabolite(i)->getInitialValue());
+
+	return initialConcen;
+}
+
+const std::vector<String>& TModel::getAllEquationsPython() const
+{
+    return equationsPython;
+}
+
+const std::vector<double> TModel::getAllParameters() const
+{
+	std::vector<double> params;
+
+	for (int i=0; i < getNParameters(); i++)
+		params.push_back(getParameter(i)->getValue());
+
+	return params;
+}

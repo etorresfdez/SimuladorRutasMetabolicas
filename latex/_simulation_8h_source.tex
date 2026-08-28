@@ -1,0 +1,119 @@
+\doxysubsection{Simulation.\+h}
+\hypertarget{_simulation_8h_source}{}\label{_simulation_8h_source}\doxymbox{\hyperlink{_simulation_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Libreria\ para\ encapsular\ el\ proceso\ de\ simulacion\ de\ una\ ruta\ metabolica}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Contiene\ las\ clases:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ -\/\ TSimulation}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Contiene\ los\ enumerados:}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ -\/\ NumericMethod}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ \ \ \ ·\ RK45}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ \ \ \ ·\ Radau}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ \ \ \ \ ·\ BDF}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ \ \ \ ·\ LSODA}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ Archivo\ .h\ -\/-\/>\ Declaraciones}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <Vcl.Grids.hpp>}\ \ \ \ \ \ \ \textcolor{comment}{//\ uso\ TStringGrid}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <System.IOUtils.hpp>}\ \ \textcolor{comment}{//\ uso\ TFile}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <Vcl.Edge.hpp>}\ \ \ \ \ \ \ \ \textcolor{comment}{//\ uso\ TEdgeBrowser}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{NumericMethod}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524aa2bf2d8694138c6e502b89fbf36f13de}{RK45}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524ab414936a367cf5ba31aa943c386835e6}{Radau}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524a394ba4d29ef291286dc165c3a0b9b02a}{BDF}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524a9945fb5d05432a5ee5d12605da3d339d}{LSODA}}\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_t_instant_result}{TInstantResult}}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_t_instant_result_a938ab3a7c2f40d74005ce7671472eb5b}{tiempo}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ std::vector<double>\ \doxymbox{\hyperlink{struct_t_instant_result_ace0893185a00f5fb819f69596bcbc09a}{valores}};\ \ }
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_t_simulation_adb7ba8268e6da71da3df64ef6e4c1f93}{TSimulation}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ private\ members}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_t_simulation_acf3e89470d71020a57da0ddd0558fad7}{tini}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_t_simulation_aa178dade5cbab576684b275a296f2338}{tfin}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_t_simulation_a7d1c054cffeee5177c8a11bb71e3b809}{ciclos}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{NumericMethod}}\ \doxymbox{\hyperlink{class_t_simulation_af302dc27a30629ecf73efd4047aff26e}{metodo}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::vector<String>\ \doxymbox{\hyperlink{class_t_simulation_aa53c588f7f27a751e231907d0299ad42}{concNames}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ std::vector<double>\ \doxymbox{\hyperlink{class_t_simulation_ac4a1fdd555c72ac2813cdbaad4d79198}{concIni}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ std::vector<String>\ \doxymbox{\hyperlink{class_t_simulation_aa6864bfe51c33b26a7d66a2b053f3e6d}{ecuaciones}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ std::vector<double>\ \doxymbox{\hyperlink{class_t_simulation_a233dcba25bab8d7cd08aa892eb9a501c}{params}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ std::map<String,\ NumericMethod>\ \doxymbox{\hyperlink{class_t_simulation_ad03a54d2c792e3d52987695aede668e5}{numericMethods}};\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ std::vector<TInstantResult>\ \doxymbox{\hyperlink{class_t_simulation_a29fec55282ff71500c06683a3b391375}{resultados}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_t_simulation_aad9cfbabd517d703d8c3ecdc71d9df90}{tiempoEmpleado}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_t_simulation_adb7ba8268e6da71da3df64ef6e4c1f93}{TSimulation}}(\textcolor{keywordtype}{int}\ p\_tini=\ 0,\ \textcolor{keywordtype}{int}\ p\_tfin=\ 10,\ \textcolor{keywordtype}{int}\ p\_ciclos=\ 50,\ \doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{NumericMethod}}\ p\_metodo=\ \doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524ab414936a367cf5ba31aa943c386835e6}{Radau}});}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_af66f4d31f2472ddbf5f41b3f34bfd1a0}{fillNumericMethodComboBox}}(TComboBox*\ comboMetodos);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{NumericMethod}}\ \doxymbox{\hyperlink{class_t_simulation_a1533509999ef2fc5afbf762fb0aaaabb}{getNumericMethodFromString}}(String\ \doxymbox{\hyperlink{class_t_simulation_af302dc27a30629ecf73efd4047aff26e}{metodo}});}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ String\ \doxymbox{\hyperlink{class_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5}{getMethodString}}(\doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{NumericMethod}}\ metodoEnum);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ String\ \doxymbox{\hyperlink{class_t_simulation_a1179f8897b35b9798dd3da62049d6c43}{getNameMetabolite}}(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_t_instant_result}{TInstantResult}}\ \doxymbox{\hyperlink{class_t_simulation_a1a7464a967a330a9a77530700a003b6d}{getInstanteSimulacion}}(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_t_simulation_a59b9f6cd7fcad8d9988c795136c5f276}{getCiclos}}();}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_t_simulation_aba131c282bea7c36d6b9ba839ef6e502}{resultadosIsEmpty}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_a215dd256dccffa170f7f93e36f26aceb}{setInitialTime}}(\textcolor{keywordtype}{int}\ ini);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_a7d478a7641e046a4dbbe98122c5f4684}{setFinalTime}}(\textcolor{keywordtype}{int}\ fin);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_a24873d4f99cd7eb15bcc482f667bc8e4}{setCicles}}(\textcolor{keywordtype}{int}\ cicles);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_a730b51b4e96092ed58a5ea48321199ec}{setTiempoEmpleado}}(\textcolor{keywordtype}{double}\ time);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_a36868a14362d4fcb8fb26ae1e17cfcf1}{setNumericMethod}}(\doxymbox{\hyperlink{_simulation_8h_ac3aa7662e659b7dcd17242c02f059524}{NumericMethod}}\ method);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_adee42fb5f7d938a90928d9800352e916}{setConcenNames}}(\textcolor{keyword}{const}\ std::vector<String>\&\ c);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_af6d175e2cea59c791a0f87cd320e86cb}{setInitialConcen}}(\textcolor{keyword}{const}\ std::vector<double>\&\ ini);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_a8764e6db857f41783c2192b5d121db2f}{setEquations}}(\textcolor{keyword}{const}\ std::vector<String>\&\ equations);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_a93af6bb92b6dde7c7798af04c8bc3650}{setParameters}}(\textcolor{keyword}{const}\ std::vector<double>\&\ p);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_a7950e734c85e85bedf4e477980db9a4d}{runSimulation}}();}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6}{ejecutarComando}}(String\ comando);}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_aff057868b43d4ed0fe2420ae8e53e995}{borrarArchivosAntiguos}}();}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc}{BuildInputCSV}}();}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_a528e9ed876aaea22481612e8a6fe2e95}{ReadOutputCSV}}();}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001}{createTableResults}}(TStringGrid\ *Grid);}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_t_simulation_a2b2de32d07b74c6c3a76b67215f15800}{exportResultsToCSV}}(\textcolor{keyword}{const}\ String\ \&filePath);}
+\DoxyCodeLine{00234\ \};}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ }
+
+\end{DoxyCode}

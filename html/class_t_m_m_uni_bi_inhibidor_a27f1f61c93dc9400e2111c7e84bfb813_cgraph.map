@@ -1,0 +1,56 @@
+<map id="TMMUniBiInhibidor::TMMUniBiInhibidor" name="TMMUniBiInhibidor::TMMUniBiInhibidor">
+<area shape="rect" id="Node000001" title="Constructor de la clase TMMUniBiInhibidor. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="5,397,146,440"/>
+<area shape="rect" id="Node000002" href="$class_t_m_m_uni_bi_inhibidor.html#a97da04356397596583848a82396c423e" title="Comprueba que se han enviado los parametros necesarios para el mecanismo MMUniBiInhibidor: [Vmax,..." alt="" coords="438,5,578,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,396,93,352,116,294,148,232,169,203,192,177,245,133,305,97,366,69,425,49,421,52,368,74,308,102,248,137,196,181,173,206,153,235,121,296,98,353,85,398"/>
+<area shape="rect" id="Node000008" href="$class_t_m_m_uni_bi_inhibidor.html#a20d6d999152c5042a3e8f9b57c661b4d" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="212,317,355,360"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="131,395,213,364,210,368,135,399"/>
+<area shape="rect" id="Node000014" href="$class_t_m_m_uni_bi_inhibidor.html#afe8e3d6f6e91d0809a097c6ac9833f84" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="213,688,354,731"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="94,438,261,674,256,676,91,443"/>
+<area shape="rect" id="Node000015" href="$class_t_m_m_uni_bi_inhibidor.html#a59733a3b1589a10af47794977d0f487e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="208,191,359,233"/>
+<area shape="poly" id="edge24_Node000001_Node000015" title=" " alt="" coords="96,395,251,241,249,247,101,399"/>
+<area shape="rect" id="Node000016" href="$class_t_m_m_uni_bi_inhibidor.html#a4389b191c3605332cd2d4ee0dbb0f8b0" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="212,477,355,520"/>
+<area shape="poly" id="edge30_Node000001_Node000016" title=" " alt="" coords="132,438,214,470,209,472,134,443"/>
+<area shape="rect" id="Node000017" href="$class_t_mechanism.html#aa79afd1a85cdf4e07ac6fcdfb1577285" title="Constructor de la clase TMechanism." alt="" coords="194,755,373,781"/>
+<area shape="poly" id="edge37_Node000001_Node000017" title=" " alt="" coords="78,438,88,500,106,581,121,624,140,667,165,706,196,741,200,746,195,746,192,745,161,709,136,669,116,626,101,582,83,501,78,443"/>
+<area shape="rect" id="Node000003" href="$class_t_mechanism.html#a2a8fa75aa79ff89533af07051e1a1007" title="Devuelve el parametro del mecanismo de la posicion &#39;i&#39;." alt="" coords="647,380,847,407"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="525,46,562,100,597,167,611,216,614,258,621,297,630,317,644,338,664,357,690,373,684,373,661,361,640,342,625,319,616,298,609,259,605,217,592,169,557,103,525,51"/>
+<area shape="rect" id="Node000004" href="$class_t_mechanism.html#a83135bad08af9d4416b57f7fe7c73493" title="Devuelve el nombre del tipo de mecanismo." alt="" coords="656,13,838,40"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="577,24,642,25,638,28,579,29"/>
+<area shape="rect" id="Node000005" href="$class_t_mechanism.html#ad3082b5258b9df20f86bad71acd6bdfb" title="Devuelve el numero de parametros del mecanismo guardados." alt="" coords="642,161,852,188"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="559,46,596,64,663,108,719,151,714,152,660,112,593,69,560,51"/>
+<area shape="rect" id="Node000006" href="$class_t_mechanism.html#a952aaf0c9f7c5f2ab95e20ba55cdde4d" title="Devuelve un puntero a la reaccion dada su nombre." alt="" coords="660,301,834,328"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="532,46,565,78,597,116,621,157,645,198,685,248,724,291,718,290,681,251,640,202,616,160,592,119,561,82,532,51"/>
+<area shape="rect" id="Node000007" href="$class_t_mechanism.html#a4645ac8a1913d474bded3ccb4f0b75ba" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="900,301,1109,328"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="834,312,887,314,881,315,835,317"/>
+<area shape="poly" id="edge15_Node000008_Node000003" title=" " alt="" coords="355,344,634,378,630,382,356,350"/>
+<area shape="poly" id="edge16_Node000008_Node000006" title=" " alt="" coords="354,325,421,317,537,312,647,312,642,314,537,317,421,323,357,330"/>
+<area shape="rect" id="Node000009" href="$class_t_m_m_uni_bi_inhibidor.html#adff7e8d28bf0d198688fe6f6036b8bf8" title="Construye el denominador de la ecuacion cinetica de tipo MMUniBiInhibidor." alt="" coords="438,477,578,520"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="315,358,466,467,461,469,315,363"/>
+<area shape="rect" id="Node000013" href="$class_t_reaction.html#a9fc380df98f36344ae0686632b22892c" title="Devuelve el nombre corto de la reaccion." alt="" coords="421,224,594,251"/>
+<area shape="poly" id="edge17_Node000008_Node000013" title=" " alt="" coords="323,315,420,267,454,255,450,258,422,272,326,319"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="557,474,703,412,699,415,559,479"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="532,475,563,444,592,407,608,375,616,348,624,321,640,288,678,238,717,201,721,197,682,241,645,291,629,322,621,350,613,377,597,409,567,448,536,479"/>
+<area shape="poly" id="edge13_Node000009_Node000006" title=" " alt="" coords="567,475,592,457,609,435,616,413,623,390,640,366,665,347,694,333,690,336,667,351,644,370,628,392,621,414,614,437,596,461,570,479"/>
+<area shape="rect" id="Node000010" href="$class_t_reaction.html#ada88866d9b8c955b03a1415181994ce6" title="Devuelve el nombre corto del producto i de la reaccion." alt="" coords="671,540,823,567"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="578,512,673,536,668,537,578,517"/>
+<area shape="rect" id="Node000011" href="$class_t_reaction.html#ae3762acaeb86390a70fb57a9c8061e39" title="Devuelve el nombre corto del reactivo i de la reaccion." alt="" coords="667,772,827,799"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="524,518,575,593,644,682,721,762,716,761,640,686,571,596,522,523"/>
+<area shape="rect" id="Node000012" href="$class_t_metabolite.html#a7818e2aee3c3aa8bfeea327aa9643697" title="Devuelve el nombre corto del metabolito." alt="" coords="656,645,838,672"/>
+<area shape="poly" id="edge14_Node000009_Node000012" title=" " alt="" coords="542,518,716,636,711,637,541,523"/>
+<area shape="poly" id="edge20_Node000014_Node000003" title=" " alt="" coords="354,721,420,732,491,739,553,739,576,734,593,726,613,705,624,684,628,661,628,638,626,586,629,557,640,527,678,465,719,420,724,416,683,468,645,529,635,559,631,586,633,638,633,662,629,685,618,708,596,730,578,739,553,744,490,745,420,737,354,727"/>
+<area shape="poly" id="edge22_Node000014_Node000006" title=" " alt="" coords="352,685,410,661,475,627,538,584,567,558,592,530,606,509,612,489,615,449,618,409,626,388,640,366,661,347,689,333,685,336,665,351,644,370,631,391,624,411,621,450,617,490,610,511,596,534,571,562,542,588,478,632,413,666,354,690"/>
+<area shape="poly" id="edge19_Node000014_Node000009" title=" " alt="" coords="306,686,470,532,475,530,309,690"/>
+<area shape="poly" id="edge21_Node000014_Node000011" title=" " alt="" coords="355,729,375,741,390,757,398,773,406,788,422,800,456,813,491,821,564,823,633,815,689,804,694,803,634,820,564,829,490,826,454,818,420,805,402,792,393,776,386,760,371,745,354,734"/>
+<area shape="poly" id="edge23_Node000014_Node000012" title=" " alt="" coords="350,729,374,740,398,760,408,769,422,776,469,790,508,795,546,790,593,776,632,758,668,733,722,685,726,683,671,737,635,762,595,781,547,795,508,800,468,795,420,781,405,773,395,764,372,745,349,734"/>
+<area shape="poly" id="edge26_Node000015_Node000003" title=" " alt="" coords="357,188,413,178,476,175,538,184,568,194,596,210,611,224,620,239,625,272,627,305,633,322,644,338,666,357,692,373,686,373,662,361,640,342,628,324,622,306,619,272,615,241,607,227,593,214,566,199,537,189,475,180,414,183,359,192"/>
+<area shape="poly" id="edge27_Node000015_Node000005" title=" " alt="" coords="305,188,355,148,386,129,420,115,468,103,507,101,546,106,595,115,654,131,707,154,702,155,652,136,594,120,545,111,507,106,469,108,422,120,389,134,358,152,309,192"/>
+<area shape="poly" id="edge28_Node000015_Node000006" title=" " alt="" coords="332,188,388,169,455,154,526,150,561,155,595,166,625,185,660,217,727,289,721,289,656,221,621,189,593,170,560,160,526,156,455,159,389,174,335,192"/>
+<area shape="poly" id="edge25_Node000015_Node000009" title=" " alt="" coords="307,231,375,304,438,388,488,464,482,464,433,391,371,307,307,236"/>
+<area shape="poly" id="edge29_Node000015_Node000013" title=" " alt="" coords="358,218,408,225,403,227,360,223"/>
+<area shape="poly" id="edge32_Node000016_Node000003" title=" " alt="" coords="342,518,398,533,462,543,529,544,562,539,593,530,635,507,672,478,702,446,725,421,730,417,706,449,675,482,638,512,595,534,563,544,529,549,461,549,397,538,343,523"/>
+<area shape="poly" id="edge33_Node000016_Node000005" title=" " alt="" coords="314,475,714,195,713,200,317,479"/>
+<area shape="poly" id="edge35_Node000016_Node000006" title=" " alt="" coords="355,479,488,443,550,424,593,406,617,387,641,366,703,334,699,337,644,370,621,391,596,410,551,429,489,448,357,484"/>
+<area shape="poly" id="edge31_Node000016_Node000009" title=" " alt="" coords="355,496,425,498,420,500,356,501"/>
+<area shape="poly" id="edge34_Node000016_Node000010" title=" " alt="" coords="313,518,363,549,392,563,422,573,489,584,557,584,622,578,681,570,676,571,622,583,557,590,488,589,420,579,390,568,360,554,313,523"/>
+<area shape="poly" id="edge36_Node000016_Node000012" title=" " alt="" coords="310,518,360,556,422,591,477,611,533,626,644,648,638,649,532,631,475,616,420,596,357,561,309,523"/>
+</map>

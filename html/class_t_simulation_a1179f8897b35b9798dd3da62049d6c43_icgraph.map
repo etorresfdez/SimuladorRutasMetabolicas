@@ -1,0 +1,7 @@
+<map id="TSimulation::getNameMetabolite" name="TSimulation::getNameMetabolite">
+<area shape="rect" id="Node000001" title="Dado un indice, devuelve el nombre del metabolito que ocupa esa posicion en el vector de concNames." alt="" coords="233,47,444,73"/>
+<area shape="rect" id="Node000002" href="$class_t_simulation.html#a2a8e6d65dc879bc45023ebc75aec9001" title="Parte del contenido del atributo &#39;resultados&#39; y rellena la tabla que se pasa como parametro...." alt="" coords="12,5,178,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,44,178,41,178,35,224,43"/>
+<area shape="rect" id="Node000003" href="$class_t_simulation.html#a2b2de32d07b74c6c3a76b67215f15800" title="Exporta los resultados de la simulacion en un archivo csv." alt="" coords="5,72,185,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,77,186,84,185,78,224,76"/>
+</map>

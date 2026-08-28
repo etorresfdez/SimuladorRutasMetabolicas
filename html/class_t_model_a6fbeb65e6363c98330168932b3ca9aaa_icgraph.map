@@ -1,0 +1,5 @@
+<map id="TModel::getReaction" name="TModel::getReaction">
+<area shape="rect" id="Node000001" title="Dado el indice de una reaccion, la busca en el vector de reacciones del modelo." alt="" coords="263,5,405,32"/>
+<area shape="rect" id="Node000002" href="$class_t_model.html#a058434cf073381782bfbbe17905bdff9" title="Rellena el objeto comboReactions con la lista de las reacciones cargadas en el modelo." alt="" coords="5,5,215,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,19,215,21,215,16,250,19"/>
+</map>

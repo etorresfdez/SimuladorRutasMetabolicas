@@ -1,0 +1,19 @@
+<map id="TMMUniInhibidor::setDirectRateShow" name="TMMUniInhibidor::setDirectRateShow">
+<area shape="rect" id="Node000001" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="5,92,187,135"/>
+<area shape="rect" id="Node000002" href="$class_t_m_m_uni_inhibidor.html#a61ed9f2604fb99b22b15f56a94598476" title="Construye el denominador de la ecuacion cinetica de tipo MMUniInhibidor." alt="" coords="235,100,466,127"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,111,222,113,216,114,188,116"/>
+<area shape="rect" id="Node000003" href="$class_t_mechanism.html#a2a8fa75aa79ff89533af07051e1a1007" title="Devuelve el parametro del mecanismo de la posicion &#39;i&#39;." alt="" coords="514,5,713,32"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="147,89,234,60,370,36,501,24,496,26,371,41,235,65,149,94"/>
+<area shape="rect" id="Node000004" href="$class_t_reaction.html#ae3762acaeb86390a70fb57a9c8061e39" title="Devuelve el nombre corto del reactivo i de la reaccion." alt="" coords="534,63,694,89"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="186,92,234,85,383,75,520,74,515,76,384,80,235,91,188,97"/>
+<area shape="rect" id="Node000005" href="$class_t_mechanism.html#a952aaf0c9f7c5f2ab95e20ba55cdde4d" title="Devuelve un puntero a la reaccion dada su nombre." alt="" coords="526,125,701,152"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="187,130,235,136,379,143,513,143,508,144,379,148,234,141,187,135"/>
+<area shape="rect" id="Node000007" href="$class_t_metabolite.html#a7818e2aee3c3aa8bfeea327aa9643697" title="Devuelve el nombre corto del metabolito." alt="" coords="523,188,704,215"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="171,133,235,148,377,172,510,191,505,191,377,177,234,153,171,138"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="385,97,513,48,551,38,556,36,515,53,387,102"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="449,97,520,89,515,90,450,102"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="466,122,514,129,508,129,466,127"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="393,125,559,182,554,183,392,130"/>
+<area shape="rect" id="Node000006" href="$class_t_mechanism.html#a4645ac8a1913d474bded3ccb4f0b75ba" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="761,125,971,152"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="701,136,748,139,743,139,701,141"/>
+</map>

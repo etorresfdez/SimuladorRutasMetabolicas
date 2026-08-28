@@ -1,0 +1,5 @@
+<map id="TReaction" name="TReaction">
+<area shape="rect" id="Node000001" title="Clase para encapsular las reacciones del modelo." alt="" coords="11,531,178,963"/>
+<area shape="rect" id="Node000002" href="$class_t_model.html" title="Clase para encapsular un modelo completo, que representa una ruta metabolica especifica." alt="" coords="5,5,184,459"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,456,97,514,92,514,95,461"/>
+</map>

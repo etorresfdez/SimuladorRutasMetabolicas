@@ -1,0 +1,262 @@
+\doxysubsection{Referencia de la clase THill\+Inhibidor\+Activador}
+\hypertarget{class_t_hill_inhibidor_activador}{}\label{class_t_hill_inhibidor_activador}\index{THillInhibidorActivador@{THillInhibidorActivador}}
+
+
+Representa un mecanismo que sigue la ecuacion de Hill con un inhibidor y un activador. Hereda de \doxylink{class_t_mechanism}{TMechanism}.  
+
+
+
+
+{\ttfamily \+\#include $<$Metabolic\+Elements.\+h$>$}
+
+
+
+Diagrama de herencia de THill\+Inhibidor\+Activador\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_t_hill_inhibidor_activador__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de THill\+Inhibidor\+Activador:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_t_hill_inhibidor_activador__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_hill_inhibidor_activador_aa500c80dc4d5647b281f67063009228a}{THill\+Inhibidor\+Activador}} (String line, \doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*}p\+\_\+model)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_t_hill_inhibidor_activador}{THill\+Inhibidor\+Activador}. Llama al constructor del padre, rellena los atributos propios y hace validaciones extra concretas. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4}{Check\+Elements}} () const override
+\begin{DoxyCompactList}\small\item\em Comprueba que se envian los parametros propios del mecanismo Hill\+Inhibidor\+Activador:\+ \+[Vmax, KmA, cte, A, Inhibidor, Activador]\+. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b}{set\+Direct\+Rate\+Python}} () override
+\begin{DoxyCompactList}\small\item\em Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protected "{}direct\+Rate\+Python"{} de la clase padre. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_hill_inhibidor_activador_a1fe354667595968a2871276c71ed8f5a}{set\+Inverse\+Rate\+Python}} () override
+\begin{DoxyCompactList}\small\item\em Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protected "{}inverse\+Rate\+Python"{} de la clase padre. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163}{set\+Direct\+Rate\+Show}} () override
+\begin{DoxyCompactList}\small\item\em Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario. Modifica el atributo protected "{}direct\+Rate\+Show"{} de la clase padre. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_hill_inhibidor_activador_aa8fb8bb153ef57fe1da0d83d53533558}{set\+Inverse\+Rate\+Show}} () override
+\begin{DoxyCompactList}\small\item\em Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario. Modifica el atributo protected "{}inverse\+Rate\+Show"{} de la clase padre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxyparagraph*{Métodos públicos heredados de \doxymbox{\hyperlink{class_t_mechanism}{TMechanism}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_mechanism_aa79afd1a85cdf4e07ac6fcdfb1577285}{TMechanism}} (String line, \doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*}p\+\_\+model)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_t_mechanism}{TMechanism}. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a83135bad08af9d4416b57f7fe7c73493}{get\+Mech\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre del tipo de mecanismo. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a4645ac8a1913d474bded3ccb4f0b75ba}{get\+Reaction\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el nombre de la reaccion asociada al mecanismo. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_t_reaction}{TReaction}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_mechanism_a952aaf0c9f7c5f2ab95e20ba55cdde4d}{get\+Reaction}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve un puntero a la reaccion dada su nombre. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_t_mechanism_ad3082b5258b9df20f86bad71acd6bdfb}{get\+NMech\+Params}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de parametros del mecanismo guardados. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a2a8fa75aa79ff89533af07051e1a1007}{get\+Mech\+Params}} (int i) const
+\begin{DoxyCompactList}\small\item\em Devuelve el parametro del mecanismo de la posicion \textquotesingle{}i\textquotesingle{}. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_ac46c760fddcd416499a39131141c9804}{get\+Direct\+Rate\+Python}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la ecuacion cinetica directa en forma de String. Formato para enviarla al solver de Python. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a478649141c58734f7a8032300c3e5598}{get\+Inverse\+Rate\+Python}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la ecuacion cinetica inversa en forma de String. Formato para enviarla al solver de Python. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a8050df05e581819d5e5be8dfbb85b63c}{get\+Direct\+Rate\+Show}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la ecuacion cinetica directa en forma de String. Formato para mostrarla por pantalla. \end{DoxyCompactList}\item 
+String \doxymbox{\hyperlink{class_t_mechanism_ac25a2712fe94a70768c4af9f791ae051}{get\+Inverse\+Rate\+Show}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la ecuacion cinetica inversa en forma de String. Formato para mostrarla por pantalla. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_t_mechanism_ad2054d3b15fe158f94e381fe547f9e55}{to\+String}} (TMemo \texorpdfstring{$\ast$}{*}pantalla\+Salida) const
+\begin{DoxyCompactList}\small\item\em Muestra el mecanismo guardado y sus atributos. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_t_mechanism_a7b180e216a8bac42a71e1606735309e9}{\texorpdfstring{$\sim$}{\string~}\+TMechanism}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor virtual de la clase, por defecto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Otros miembros heredados}
+\doxyparagraph*{Atributos públicos estáticos heredados de \doxymbox{\hyperlink{class_t_mechanism}{TMechanism}}}
+\begin{DoxyCompactItemize}
+\item 
+static const String \doxymbox{\hyperlink{class_t_mechanism_a270dc08673ee7a8edaaf2b0ff07cba65}{input\+Template}} = "{}MECHANISM $<$tipo\+\_\+mecanismo$>$ $<$nombre\+\_\+reaccion$>$ $<$parametros\+\_\+del\+\_\+mecanismo$>$"{}
+\end{DoxyCompactItemize}
+\doxyparagraph*{Atributos protegidos heredados de \doxymbox{\hyperlink{class_t_mechanism}{TMechanism}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_metabolic_elements_8h_a83d1676f1e139ec0cf5114097373e5c2}{TMechanism\+Type}} \doxymbox{\hyperlink{class_t_mechanism_a05f8ce18a876e5f386b1bda9002824de}{mechanism\+Type}}
+\item 
+\doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_mechanism_a65c500e74d8cb41476d0b9baa75427d9}{model}}
+\item 
+String \doxymbox{\hyperlink{class_t_mechanism_aac356d4e3fd675a4ff936b3f08d5364f}{direct\+Rate\+Python}}
+\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a1d358f94f9433284a57b196e0756cd4a}{direct\+Rate\+Show}}
+\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a08b003740366b0e9625ebcdd00786608}{inverse\+Rate\+Python}}
+\item 
+String \doxymbox{\hyperlink{class_t_mechanism_a84e928eb971c6e0b20acd4b099c8dc6f}{inverse\+Rate\+Show}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+Representa un mecanismo que sigue la ecuacion de Hill con un inhibidor y un activador. Hereda de \doxylink{class_t_mechanism}{TMechanism}. 
+
+\label{class_t_hill_inhibidor_activador_doc-constructors}
+\Hypertarget{class_t_hill_inhibidor_activador_doc-constructors}
+\doxysubsubsection{Documentación de constructores y destructores}
+\Hypertarget{class_t_hill_inhibidor_activador_aa500c80dc4d5647b281f67063009228a}\index{THillInhibidorActivador@{THillInhibidorActivador}!THillInhibidorActivador@{THillInhibidorActivador}}
+\index{THillInhibidorActivador@{THillInhibidorActivador}!THillInhibidorActivador@{THillInhibidorActivador}}
+\doxyparagraph{\texorpdfstring{THillInhibidorActivador()}{THillInhibidorActivador()}}
+{\footnotesize\ttfamily \label{class_t_hill_inhibidor_activador_aa500c80dc4d5647b281f67063009228a} 
+THill\+Inhibidor\+Activador::\+\+THill\+Inhibidor\+Activador (\begin{DoxyParamCaption}\item[{String}]{line}{, }\item[{\doxymbox{\hyperlink{class_t_model}{TModel}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+model}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \doxylink{class_t_hill_inhibidor_activador}{THill\+Inhibidor\+Activador}. Llama al constructor del padre, rellena los atributos propios y hace validaciones extra concretas. 
+
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_hill_inhibidor_activador_aa500c80dc4d5647b281f67063009228a_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_t_hill_inhibidor_activador_doc-func-members}
+\Hypertarget{class_t_hill_inhibidor_activador_doc-func-members}
+\doxysubsubsection{Documentación de funciones miembro}
+\Hypertarget{class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4}\index{THillInhibidorActivador@{THillInhibidorActivador}!CheckElements@{CheckElements}}
+\index{CheckElements@{CheckElements}!THillInhibidorActivador@{THillInhibidorActivador}}
+\doxyparagraph{\texorpdfstring{CheckElements()}{CheckElements()}}
+{\footnotesize\ttfamily \label{class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4} 
+void THill\+Inhibidor\+Activador::\+\+Check\+Elements (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Comprueba que se envian los parametros propios del mecanismo Hill\+Inhibidor\+Activador:\+ \+[Vmax, KmA, cte, A, Inhibidor, Activador]\+. 
+
+
+\begin{DoxyItemize}
+\item Vmax:\+ velocidad maxima de la reaccion
+\item KmA:\+ concentracion del reactivo A para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+\item cte:\+ constante que mide la influencia del inhibidor y activador en la reaccion
+\item A:\+ reactivo que se une a la enzima en la reaccion
+\item Inhibidor:\+ metabolito que actua como inhibidor en la reaccion
+\item Activador:\+ metabolito que actua como activador en la reaccion Todos los parametros y metabolitos mencionados tienen que estar registrados en el modelo. 
+\end{DoxyItemize}
+
+Reimplementado de \doxymbox{\hyperlink{class_t_mechanism_a03ed06d4a482c878537e2211a3116ecd}{TMechanism}}.
+
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_hill_inhibidor_activador_ac8081966718290e0e320eb731f0083d4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b}\index{THillInhibidorActivador@{THillInhibidorActivador}!setDirectRatePython@{setDirectRatePython}}
+\index{setDirectRatePython@{setDirectRatePython}!THillInhibidorActivador@{THillInhibidorActivador}}
+\doxyparagraph{\texorpdfstring{setDirectRatePython()}{setDirectRatePython()}}
+{\footnotesize\ttfamily \label{class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b} 
+void THill\+Inhibidor\+Activador::\+set\+Direct\+Rate\+Python (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protected "{}direct\+Rate\+Python"{} de la clase padre. 
+
+
+
+Reimplementado de \doxymbox{\hyperlink{class_t_mechanism_a1054dac3455a1c80abe423848c3fa2d2}{TMechanism}}.
+
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_hill_inhibidor_activador_acee6ec3171bf98254be22d219f6e037b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163}\index{THillInhibidorActivador@{THillInhibidorActivador}!setDirectRateShow@{setDirectRateShow}}
+\index{setDirectRateShow@{setDirectRateShow}!THillInhibidorActivador@{THillInhibidorActivador}}
+\doxyparagraph{\texorpdfstring{setDirectRateShow()}{setDirectRateShow()}}
+{\footnotesize\ttfamily \label{class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163} 
+void THill\+Inhibidor\+Activador::\+set\+Direct\+Rate\+Show (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario. Modifica el atributo protected "{}direct\+Rate\+Show"{} de la clase padre. 
+
+
+
+Reimplementado de \doxymbox{\hyperlink{class_t_mechanism_afe8e95d9dff3a179b6768d2433e63391}{TMechanism}}.
+
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_hill_inhibidor_activador_ad7005d8496600717b5d85e97c6ce3163_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_hill_inhibidor_activador_a1fe354667595968a2871276c71ed8f5a}\index{THillInhibidorActivador@{THillInhibidorActivador}!setInverseRatePython@{setInverseRatePython}}
+\index{setInverseRatePython@{setInverseRatePython}!THillInhibidorActivador@{THillInhibidorActivador}}
+\doxyparagraph{\texorpdfstring{setInverseRatePython()}{setInverseRatePython()}}
+{\footnotesize\ttfamily \label{class_t_hill_inhibidor_activador_a1fe354667595968a2871276c71ed8f5a} 
+void THill\+Inhibidor\+Activador::\+set\+Inverse\+Rate\+Python (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protected "{}inverse\+Rate\+Python"{} de la clase padre. 
+
+
+
+Reimplementado de \doxymbox{\hyperlink{class_t_mechanism_ae0f128e6260d19a7a921282215393710}{TMechanism}}.
+
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_hill_inhibidor_activador_a1fe354667595968a2871276c71ed8f5a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_hill_inhibidor_activador_aa8fb8bb153ef57fe1da0d83d53533558}\index{THillInhibidorActivador@{THillInhibidorActivador}!setInverseRateShow@{setInverseRateShow}}
+\index{setInverseRateShow@{setInverseRateShow}!THillInhibidorActivador@{THillInhibidorActivador}}
+\doxyparagraph{\texorpdfstring{setInverseRateShow()}{setInverseRateShow()}}
+{\footnotesize\ttfamily \label{class_t_hill_inhibidor_activador_aa8fb8bb153ef57fe1da0d83d53533558} 
+void THill\+Inhibidor\+Activador::\+set\+Inverse\+Rate\+Show (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario. Modifica el atributo protected "{}inverse\+Rate\+Show"{} de la clase padre. 
+
+
+
+Reimplementado de \doxymbox{\hyperlink{class_t_mechanism_ad9fbcdcf6de41d2ebb66597165f199d0}{TMechanism}}.
+
+Gráfico de llamadas a esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_hill_inhibidor_activador_aa8fb8bb153ef57fe1da0d83d53533558_icgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada de los siguientes archivos:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_metabolic_elements_8h}{Metabolic\+Elements.\+h}}\item 
+\doxymbox{\hyperlink{_metabolic_elements_8cpp}{Metabolic\+Elements.\+cpp}}\end{DoxyCompactItemize}

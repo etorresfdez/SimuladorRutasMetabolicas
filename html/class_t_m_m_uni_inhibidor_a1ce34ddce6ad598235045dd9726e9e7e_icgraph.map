@@ -1,0 +1,5 @@
+<map id="TMMUniInhibidor::setDirectRatePython" name="TMMUniInhibidor::setDirectRatePython">
+<area shape="rect" id="Node000001" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="281,5,462,48"/>
+<area shape="rect" id="Node000002" href="$class_t_m_m_uni_inhibidor.html#aacd95490240c218832d2a12e5a6b33a2" title="Constructor de la clase TMMUniInhibidor. Llama al constructor del padre, rellena los atributos propio..." alt="" coords="5,13,233,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,27,233,29,233,24,268,27"/>
+</map>

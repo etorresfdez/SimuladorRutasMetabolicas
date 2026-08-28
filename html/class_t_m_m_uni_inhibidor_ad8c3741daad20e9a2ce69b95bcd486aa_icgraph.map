@@ -1,0 +1,5 @@
+<map id="TMMUniInhibidor::CheckElements" name="TMMUniInhibidor::CheckElements">
+<area shape="rect" id="Node000001" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMUniInhibidor: [Vmax,..." alt="" coords="281,5,502,32"/>
+<area shape="rect" id="Node000002" href="$class_t_m_m_uni_inhibidor.html#aacd95490240c218832d2a12e5a6b33a2" title="Constructor de la clase TMMUniInhibidor. Llama al constructor del padre, rellena los atributos propio..." alt="" coords="5,5,233,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="263,19,233,21,233,16,268,19"/>
+</map>

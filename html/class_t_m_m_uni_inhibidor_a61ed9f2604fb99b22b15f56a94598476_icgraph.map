@@ -1,0 +1,16 @@
+<map id="TMMUniInhibidor::BuildDenominator" name="TMMUniInhibidor::BuildDenominator">
+<area shape="rect" id="Node000001" title="Construye el denominador de la ecuacion cinetica de tipo MMUniInhibidor." alt="" coords="518,113,749,140"/>
+<area shape="rect" id="Node000002" href="$class_t_m_m_uni_inhibidor.html#a1ce34ddce6ad598235045dd9726e9e7e" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="285,5,466,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="583,107,469,62,439,51,439,46,471,58,588,107"/>
+<area shape="rect" id="Node000004" href="$class_t_m_m_uni_inhibidor.html#a0a27cec47470b60e46fe110cab3edab6" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="285,72,466,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="507,111,466,108,466,102,512,110"/>
+<area shape="rect" id="Node000005" href="$class_t_m_m_uni_inhibidor.html#a9bd74e953991c0873e15141e052eeeba" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="281,139,470,181"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="507,143,471,150,470,145,513,142"/>
+<area shape="rect" id="Node000006" href="$class_t_m_m_uni_inhibidor.html#a7398e14df831e6270e987f4c5eaad236" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="281,205,470,248"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="588,146,471,196,440,207,438,202,469,191,583,147"/>
+<area shape="rect" id="Node000003" href="$class_t_m_m_uni_inhibidor.html#aacd95490240c218832d2a12e5a6b33a2" title="Constructor de la clase TMMUniInhibidor. Llama al constructor del padre, rellena los atributos propio..." alt="" coords="5,113,233,140"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="294,55,282,62,153,115,151,111,280,58,299,53"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="267,108,227,115,226,110,272,106"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="263,146,227,143,226,138,268,145"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="294,199,280,196,152,143,153,138,282,191,299,200"/>
+</map>

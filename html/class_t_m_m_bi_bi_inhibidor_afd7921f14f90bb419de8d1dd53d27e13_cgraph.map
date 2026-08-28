@@ -1,0 +1,55 @@
+<map id="TMMBiBiInhibidor::TMMBiBiInhibidor" name="TMMBiBiInhibidor::TMMBiBiInhibidor">
+<area shape="rect" id="Node000001" title="Constructor de la clase TMMBiBiInhibidor. Llama al constructor del padre, rellena los atributos propi..." alt="" coords="5,453,192,496"/>
+<area shape="rect" id="Node000002" href="$class_t_m_m_bi_bi_inhibidor.html#a8301f2c15620dba9545389641e372c89" title="Comprueba que se envian los parametros propios del mecanismo MMBiBiInhibidor: [Vmax,..." alt="" coords="240,157,465,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,452,161,365,197,313,238,262,278,223,321,191,318,195,281,227,242,266,201,316,165,368,114,454"/>
+<area shape="rect" id="Node000008" href="$class_t_m_m_bi_bi_inhibidor.html#ae96c6cd6c35591da5afbd8e690366145" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="260,403,445,445"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="191,454,246,444,242,447,194,458"/>
+<area shape="rect" id="Node000014" href="$class_t_m_m_bi_bi_inhibidor.html#a7c70835aee1f69a6acf4cf49618d404f" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="260,605,445,648"/>
+<area shape="poly" id="edge17_Node000001_Node000014" title=" " alt="" coords="136,494,304,595,299,598,136,499"/>
+<area shape="rect" id="Node000015" href="$class_t_m_m_bi_bi_inhibidor.html#a82dcfcc31f05b07fd90cc5be9df671d8" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="256,276,449,319"/>
+<area shape="poly" id="edge23_Node000001_Node000015" title=" " alt="" coords="129,451,309,325,307,330,133,455"/>
+<area shape="rect" id="Node000016" href="$class_t_m_m_bi_bi_inhibidor.html#a2e2b9f5d2797bdcae5f12f7b667962d5" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="256,504,449,547"/>
+<area shape="poly" id="edge29_Node000001_Node000016" title=" " alt="" coords="191,491,243,502,238,504,193,496"/>
+<area shape="rect" id="Node000017" href="$class_t_mechanism.html#aa79afd1a85cdf4e07ac6fcdfb1577285" title="Constructor de la clase TMechanism." alt="" coords="263,672,442,699"/>
+<area shape="poly" id="edge36_Node000001_Node000017" title=" " alt="" coords="110,494,131,531,160,576,197,620,241,658,252,665,246,666,238,662,193,624,156,579,127,534,110,499"/>
+<area shape="rect" id="Node000003" href="$class_t_mechanism.html#a2a8fa75aa79ff89533af07051e1a1007" title="Devuelve el parametro del mecanismo de la posicion &#39;i&#39;." alt="" coords="796,411,996,437"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="397,155,470,138,561,128,609,129,658,135,705,147,750,167,780,189,806,216,829,247,847,279,875,343,891,396,886,395,870,345,843,281,824,250,802,220,777,193,747,172,704,152,657,140,609,134,561,134,471,143,400,159"/>
+<area shape="rect" id="Node000004" href="$class_t_mechanism.html#a83135bad08af9d4416b57f7fe7c73493" title="Devuelve el nombre del tipo de mecanismo." alt="" coords="540,5,722,32"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="366,155,426,103,468,74,512,48,550,35,546,39,514,53,470,78,430,108,370,159"/>
+<area shape="rect" id="Node000005" href="$class_t_mechanism.html#ad3082b5258b9df20f86bad71acd6bdfb" title="Devuelve el numero de parametros del mecanismo guardados." alt="" coords="526,259,735,285"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="391,182,580,252,575,254,392,187"/>
+<area shape="rect" id="Node000006" href="$class_t_mechanism.html#a952aaf0c9f7c5f2ab95e20ba55cdde4d" title="Devuelve un puntero a la reaccion dada su nombre." alt="" coords="809,461,983,488"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="465,165,547,166,630,172,702,185,730,195,750,207,773,236,782,266,782,297,777,327,772,358,771,388,779,418,798,448,802,453,797,452,794,451,774,420,766,389,767,358,772,327,777,296,777,267,768,239,747,211,728,199,701,190,630,177,547,171,467,170"/>
+<area shape="rect" id="Node000007" href="$class_t_mechanism.html#a4645ac8a1913d474bded3ccb4f0b75ba" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="1044,461,1253,488"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="983,472,1031,474,1026,475,984,477"/>
+<area shape="poly" id="edge14_Node000008_Node000003" title=" " alt="" coords="444,409,513,403,631,398,749,403,786,408,781,409,748,408,631,403,513,408,446,414"/>
+<area shape="poly" id="edge15_Node000008_Node000006" title=" " alt="" coords="445,430,795,464,791,467,446,435"/>
+<area shape="rect" id="Node000009" href="$class_t_m_m_bi_bi_inhibidor.html#a4efc1b68aecca229eb9a9467dd14ef94" title="Construye el denominador de la ecuacion cinetica de tipo MMBiBiInhibidor." alt="" coords="513,613,748,640"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="392,443,467,490,543,548,605,603,600,603,539,553,463,494,392,448"/>
+<area shape="rect" id="Node000013" href="$class_t_reaction.html#a9fc380df98f36344ae0686632b22892c" title="Devuelve el nombre corto de la reaccion." alt="" coords="544,309,717,336"/>
+<area shape="poly" id="edge16_Node000008_Node000013" title=" " alt="" coords="398,400,512,352,560,339,556,342,514,357,401,404"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="718,611,747,593,760,576,767,558,770,522,772,484,780,466,794,447,798,448,802,445,798,451,784,468,777,486,775,522,772,559,765,578,750,597,721,615"/>
+<area shape="poly" id="edge12_Node000009_Node000006" title=" " alt="" coords="700,610,747,592,783,571,816,546,869,501,874,498,820,550,786,575,750,597,702,615"/>
+<area shape="rect" id="Node000010" href="$class_t_reaction.html#ada88866d9b8c955b03a1415181994ce6" title="Devuelve el nombre corto del producto i de la reaccion." alt="" coords="820,664,972,691"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="704,638,810,660,805,661,705,643"/>
+<area shape="rect" id="Node000011" href="$class_t_reaction.html#ae3762acaeb86390a70fb57a9c8061e39" title="Devuelve el nombre corto del reactivo i de la reaccion." alt="" coords="816,841,976,868"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="643,638,705,713,749,760,798,802,850,835,844,834,795,806,745,763,701,717,641,643"/>
+<area shape="rect" id="Node000012" href="$class_t_metabolite.html#a7818e2aee3c3aa8bfeea327aa9643697" title="Devuelve el nombre corto del metabolito." alt="" coords="805,765,987,792"/>
+<area shape="poly" id="edge13_Node000009_Node000012" title=" " alt="" coords="656,638,860,757,855,757,655,643"/>
+<area shape="poly" id="edge19_Node000014_Node000003" title=" " alt="" coords="445,608,514,591,592,567,672,536,747,496,761,484,770,472,779,459,795,447,810,442,806,445,798,452,783,463,774,475,765,488,750,501,674,541,594,572,516,596,447,613"/>
+<area shape="poly" id="edge21_Node000014_Node000006" title=" " alt="" coords="445,640,528,651,615,660,693,660,724,657,747,650,771,636,792,619,830,579,859,537,880,504,884,500,864,540,834,582,796,623,774,640,749,654,725,662,693,666,615,665,527,657,446,645"/>
+<area shape="poly" id="edge18_Node000014_Node000009" title=" " alt="" coords="445,624,500,626,495,627,446,629"/>
+<area shape="poly" id="edge20_Node000014_Node000011" title=" " alt="" coords="445,642,467,658,483,682,490,706,489,754,487,777,489,799,497,820,515,839,551,862,591,877,634,886,678,889,763,884,832,873,838,872,763,889,678,895,633,891,590,883,549,867,511,843,492,822,484,800,482,777,484,753,485,707,479,684,463,662,445,648"/>
+<area shape="poly" id="edge22_Node000014_Node000012" title=" " alt="" coords="445,643,467,658,481,676,487,695,489,731,492,766,500,781,515,795,554,817,597,829,643,834,689,832,776,817,845,798,850,797,778,822,689,838,643,839,596,834,552,822,511,799,496,784,487,767,484,732,482,696,476,678,463,662,445,649"/>
+<area shape="poly" id="edge25_Node000015_Node000003" title=" " alt="" coords="378,274,437,233,474,214,512,200,579,181,634,171,660,171,688,175,717,185,750,200,777,219,802,242,842,295,871,350,889,397,883,395,866,352,837,298,798,245,774,223,747,205,715,190,686,180,660,176,634,176,580,187,514,205,476,219,440,238,382,278"/>
+<area shape="poly" id="edge26_Node000015_Node000005" title=" " alt="" coords="448,286,513,282,508,284,450,291"/>
+<area shape="poly" id="edge27_Node000015_Node000006" title=" " alt="" coords="391,273,465,240,511,224,559,212,610,206,660,208,707,220,750,245,771,268,780,293,781,319,778,345,774,371,774,398,781,423,798,448,802,453,797,452,794,451,776,425,769,398,769,371,773,344,776,318,775,294,766,271,747,249,705,225,659,213,610,211,560,218,512,230,467,245,394,278"/>
+<area shape="poly" id="edge24_Node000015_Node000009" title=" " alt="" coords="384,317,426,349,467,389,513,445,555,503,617,600,611,600,551,506,509,448,463,392,422,353,384,322"/>
+<area shape="poly" id="edge28_Node000015_Node000013" title=" " alt="" coords="448,304,531,312,526,315,450,309"/>
+<area shape="poly" id="edge31_Node000016_Node000003" title=" " alt="" coords="449,503,513,491,803,439,798,442,513,496,451,508"/>
+<area shape="poly" id="edge32_Node000016_Node000005" title=" " alt="" coords="405,501,436,482,463,456,475,435,481,414,483,374,486,335,495,315,511,295,519,292,515,296,515,299,499,318,491,336,488,374,487,415,480,437,467,459,439,486,408,506"/>
+<area shape="poly" id="edge34_Node000016_Node000006" title=" " alt="" coords="449,516,748,491,796,487,791,489,749,496,450,521"/>
+<area shape="poly" id="edge30_Node000016_Node000009" title=" " alt="" coords="414,545,579,607,574,608,413,550"/>
+<area shape="poly" id="edge33_Node000016_Node000010" title=" " alt="" coords="397,544,433,566,467,591,481,608,490,624,498,638,514,650,549,665,586,676,663,689,737,692,807,690,802,691,737,697,662,694,585,681,547,670,512,654,494,641,485,627,477,611,463,595,430,570,397,550"/>
+<area shape="poly" id="edge35_Node000016_Node000012" title=" " alt="" coords="403,545,437,565,467,592,484,621,489,649,496,674,503,686,515,698,545,719,578,736,650,761,722,774,792,782,787,782,722,779,649,766,576,741,542,724,511,702,499,689,491,676,484,650,479,623,463,595,434,570,403,550"/>
+</map>

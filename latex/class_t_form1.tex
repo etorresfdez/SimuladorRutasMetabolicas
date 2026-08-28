@@ -1,0 +1,1235 @@
+\doxysubsection{Referencia de la clase TForm1}
+\hypertarget{class_t_form1}{}\label{class_t_form1}\index{TForm1@{TForm1}}
+
+
+Es la ventana principal de la aplicacion y la encargada de la interfaz grafica de usuario.  
+
+
+
+
+{\ttfamily \+\#include $<$Unit1.\+h$>$}
+
+
+
+Diagrama de herencia de TForm1\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_t_form1__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de TForm1:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_t_form1__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a329defcfa3dd860b9171b45ab1098fd3}{Form\+Resize}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Adapta el tamanio de los paneles que contiene la interfaz al cambio de tamanio de la ventana. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a4155debba8bc79169bdff3e2e7454145}{Subir\+Archivo\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Accion que se genera al clicar sobre el boton Archivo/\+\+Subir del menu. Abre cuadro de dialogo para subir un archivo del ordenador. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a69313b46bbed2c28fba451d35bed90ef}{Guardar\+Archivo\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Accion que se genera al clicar sobre el boton Archivo/\+\+Guardar del menu. Abre cuadro de dialogo para guardar el panel de entrada actual como archivo txt en el ordenador. Solo permite formato txt. Se elige el nombre del archivo y la ruta donde se guarda. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a7b8100b0f829a433330f4aa65b317fd1}{Nuevo\+Archivo\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Accion que se genera al clicar sobre el boton Archivo/\+\+Nuevo del menu. Abre cuadro de dialogo para limpiar el panel de datos de entrada. Da opciones para borrarlo ("{}\+Aceptar"{}) o "{}\+Cancelar"{}. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_abbdc49091697f71071ce7e92d4ba9b21}{Cargar\+Ejemplo\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Accion que se genera al clicar sobre el boton Archivo/\+\+Cargar ejemplo del menu. Carga un archivo de ejemplo en la Entrada de Datos. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_af94a85828f23c7428f76484d72c2e42e}{Guardar\+Tabla\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Accion que se realiza al darle al boton \textquotesingle{}Guardar tabla\textquotesingle{} del menu. Guarda la tabla generada en la simulacion actual en la ruta especificada por el usuario. En formato txt con los datos separados por \textquotesingle{};\textquotesingle{}. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a06c5cf15ddee764c60091b683a434bc8}{Guardar\+Grafica\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Accion que se realiza al darle al boton \textquotesingle{}Guardar grafica\textquotesingle{} del menu. Guarda la grafica generada en la simulacion actual en la ruta especificada por el usuario. En formato png. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a4054d1c2b1745192b6b1cff6fee0bcd5}{Guardar\+Ecuaciones\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Accion que se realiza al darle al boton \textquotesingle{}Guardar ecuaciones y sistema\textquotesingle{} del menu. Genera un archivo txt con las ecuaciones cineticas de cada reaccion introducida. Tambien aniade el sistema de ecuaciones empleado para la simulacion. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a58ec67b65a9e7d2da6dba79d4c4c3313}{Manual\+Usuario\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Accion que se realiza al darle al boton \textquotesingle{}Manual de usuario\textquotesingle{} del menu. Muestra un cuadro de dialogo en el que aparece una breve descripcion de la aplicacion y cual es el flujo principal de interaccion del usuario con la interfaz. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a59c138436f623ae2e6452bda5aae24fd}{Acerca\+De\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Accion que se realiza al darle al boton \textquotesingle{}Acerca de\textquotesingle{} del menu. Muestra un cuadro de dialogo con una breve explicacion sobre la herramienta que se ha usado para implementar la aplicacion, indicando la autora, el año de creacion y la version. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a5ade53be84a10d8d2669064348ed4ae1}{Memo\+Texto\+Entrada\+Change}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Actualiza las variables bandera cuando se modifica el TMemo de entrada de datos. En concreto, pone a false \textquotesingle{}datos\+Validados\textquotesingle{} y \textquotesingle{}entrada\+Vacia\textquotesingle{}. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_ae520b5039bf5fa33ccf2cfa8126d4473}{Btn\+Validar\+Datos\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Accion que se genera al clicar sobre el boton Valida\+Datos. Valida el texto de entrada proporcionado. Muestra los errores en el objeto Memo\+Salida\+Validacion. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_affe85330b73bae8f89bf9fb739edf06f}{Btn\+Mostrar\+Sistema\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Accion que se genera al clicar sobre el boton Mostrar\+Sistema\+Ecuaciones. Muestra el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion representa la variacion de concentracion de un metabolito. Hay tantas ecuaciones como metabolitos registrados en el sistema. Escribe en Memo\+Salida\+Validacion. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a7f84220cfe27e325568532c24d1e7533}{info\+Meta\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Boton para obtener informacion sobre como introducir un Metabolito en el modelo. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a43001f7620650af63723839e11d264e4}{info\+Param\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Boton para obtener informacion sobre como introducir un Parametro en el modelo. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_ac4a322d5fd147b8f78b21a0d10062418}{info\+Mec\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Boton para obtener informacion sobre como introducir un Mecanismo en el modelo. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a02788683a6b4925e789f406ecb9d5a52}{info\+Reac\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Boton para obtener informacion sobre como introducir una Reaccion en el modelo. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a723f8b188febb6db118b1ee0da00b8c4}{info\+Metodo\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Boton para obtener informacion sobre los tipos de metodos numericos disponibles para resolver el sistema de ecuaciones generado a partir de los datos de entrada. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a797288bb997882dc0998f3404fb014d7}{Btn\+Metabolito\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Escribe en el panel de entrada de datos la plantilla para introducir un Metabolito. Con los campos necesarios para ello separados por tabuladores. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_ae51152d68d35be0ae8e5329f4d8cbbf5}{Btn\+Parametro\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Escribe en el panel de entrada de datos la plantilla para introducir un Parametro. Con los campos necesarios para ello separados por tabuladores. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_af5e815dc56d52fc5b5c60f625b602766}{Btn\+Reaccion\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Escribe en el panel de entrada de datos la plantilla para introducir una Reaccion. Con los campos necesarios para ello separados por tabuladores. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a460763217589b7b00f0561b1d588b3ca}{Btn\+Mecanismo\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Escribe en el panel de entrada de datos la plantilla para introducir un Mecanismo. Con los campos necesarios para ello separados por tabuladores. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a0027f47316b47ea5fdc245a7f8bf9511}{Combo\+Insertar\+Mecanismo\+Change}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Al seleccionar un mecanismo de la lista de mecanismos disponibles, muestra la plantilla del mecanismo elegido en el texto de entrada de datos. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a592eff540cbc9ff77e21d833059b9a39}{Combo\+Mostrar\+Reaccion\+Change}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Al seleccionar una reaccion de la lista de reacciones cargadas, muestra la ecuacion cinetica generada que describe su velocidad, tanto directa como inversa, en caso de que la reaccion sea bidireccional. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_ae580913222051e0123ef7a6df22c515c}{Btn\+Lanzar\+Simulacion\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Accion que se genera al clicar sobre el boton Lanzar Simulacion. Carga el sistema de ecuaciones del modelo y lanza un python para resolverlo con el metodo numerico escogido. Con ello, se simula la variacion de la concentracion de los metabolitos implicados durante en el rango de tiempo establecido. Al terminar, muestra una grafica con la evolucion de la concentracion de los distintos metabolitos. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a83bec61518b9f1b09e42e4456d42ed15}{String\+Grid\+Draw\+Cell}} (TObject \texorpdfstring{$\ast$}{*}Sender, System::\+\+Long\+Int ACol, System::\+\+Long\+Int ARow, TRect \&Rect, TGrid\+Draw\+State State)
+\begin{DoxyCompactList}\small\item\em Actualiza el formato de las celdas que pertenecen a la primera fila o primera columna. Establece un color distinto para ellas (amarillo claro) y con la letra en negrita. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a4c645d0ca24b0febcfe71ecf74d6fe33}{Image\+Grafica\+Dbl\+Click}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Amplia la imagen abriendo un nuevo formulario con la imagen maximizada. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_affac639c5f2cec3b97fd262a13ea389d}{Splitter1\+Can\+Resize}} (TObject \texorpdfstring{$\ast$}{*}Sender, int \&New\+Size, bool \&Accept)
+\begin{DoxyCompactList}\small\item\em Controla el redimensionamiento de los paneles al mover el splitter. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a05008fb7c2ed5a2b6c585b1948fcf4f6}{Splitter1\+Moved}} (TObject \texorpdfstring{$\ast$}{*}Sender)
+\begin{DoxyCompactList}\small\item\em Actualiza la interfaz despues de mover el splitter. \end{DoxyCompactList}\item 
+void \+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a88a1c0d872d5b1744f9d704e4a4ca4f9}{Form\+Close}} (TObject \texorpdfstring{$\ast$}{*}Sender, TClose\+Action \&Action)
+\begin{DoxyCompactList}\small\item\em Accion que se activa al cerrar la ventana de la aplicacion. Borra los archivos generados en la simulacion. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+fastcall \doxymbox{\hyperlink{class_t_form1_a4b77eaf706e8386bc8d79ec547efc8b9}{TForm1}} (TComponent \texorpdfstring{$\ast$}{*}Owner)
+\begin{DoxyCompactList}\small\item\em Constructor del formulario, ventana principal de la aplicacion. Inicializa el modelo a construir. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+TMain\+Menu \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a663d809447cba48ab33d9d44d9e0e42d}{Main\+Menu}}
+\item 
+TMenu\+Item \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_afea368fc3cc620ef8a143e5d82d3deb8}{Archivo}}
+\item 
+TMenu\+Item \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a77d371cc46133d52648d9671f962960d}{Subir\+Archivo}}
+\item 
+TMenu\+Item \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a653321ee99a43a437b35dbcfe45efc8a}{Nuevo\+Archivo}}
+\item 
+TMenu\+Item \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a14bc11ca7f8e858332bb9849091c6e57}{Guardar\+Archivo}}
+\item 
+TMenu\+Item \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a8b16c264f2bda8a6c197690317bd17df}{Resultados}}
+\item 
+TMenu\+Item \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_afe2a6b2419569bfded5e694c858351ad}{Cargar\+Ejemplo}}
+\item 
+TMenu\+Item \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_aac56c71df764a759b7a441b910371152}{Guardar\+Tabla}}
+\item 
+TMenu\+Item \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_af7caf8cee32806f87f8611fe45fc7642}{Guardar\+Grafica}}
+\item 
+TMenu\+Item \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a3a3337f2dd5e7cff82dcb26d82ce121a}{Guardar\+Ecuaciones}}
+\item 
+TMenu\+Item \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_aa5b56bcd60dcef88ffc7540c2dd6ded5}{Ayuda}}
+\item 
+TMenu\+Item \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a9afd818096bbc9d90b0d8a948d598b3a}{Manual\+Usuario}}
+\item 
+TMenu\+Item \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a37d7911e01eaeda4fab71a4534137ed7}{Acerca\+De}}
+\item 
+TPanel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_aa7fdd54b41e0cedd27cd7fd6284d5d55}{Panel\+Entrada\+Datos}}
+\item 
+TPanel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a02c5ecc5081717b9c228d0169ebc3706}{Insertar\+Mecanismo}}
+\item 
+TPanel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a10c77fa78d21fe66c8fa60032e6b1494}{Mostrar\+Ec\+Reaccion}}
+\item 
+TLabel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a922c8f6efedff3cae5f296313972a2b2}{Label\+Entrada\+Datos}}
+\item 
+TLabel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a9a2b36b411d7a73a6f386586b9c6b28b}{Label\+Mecanismo}}
+\item 
+TLabel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a09ac49a6cb43d562b19137da61d2c371}{Label\+Mostrar\+Ec\+Cinetica}}
+\item 
+TMemo \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_aa9e86c2dba2b22b377d54ef1dcde453a}{Memo\+Texto\+Entrada}}
+\item 
+TMemo \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_ab4a8940161709859783d852d614ff27d}{Memo\+Salida\+Validacion}}
+\item 
+TGrid\+Panel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_ab5924af8daf590ab836bafde5d21fd37}{Grid\+Botones\+Entrada}}
+\item 
+TButton \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a4cf69ff717fdf6cb6303c7135a6217fd}{Btn\+Metabolito}}
+\item 
+TButton \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a6c17650a72e319894075b410873e2ada}{Btn\+Parametro}}
+\item 
+TButton \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_ab17126f38fdba73ac6673b525b277aa6}{Btn\+Reaccion}}
+\item 
+TButton \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_ae00aabd5289ceae6440768a666688a22}{Btn\+Validar\+Datos}}
+\item 
+TButton \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_ac5bcf07bed92dadd74568a5802709b8f}{Btn\+Mostrar\+Sistema}}
+\item 
+TBit\+Btn \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a9fb79b1dab5c778460bc8861174bd3e7}{info\+Meta}}
+\item 
+TBit\+Btn \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_aa7794190632ca3a63a91be8d06ef46be}{info\+Param}}
+\item 
+TBit\+Btn \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_ae3e76258255ad11ed2d4f6934eaa2af7}{info\+Reac}}
+\item 
+TBit\+Btn \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a88059de68ca8a6aa0b7f77a2effde44a}{info\+Mec}}
+\item 
+TCombo\+Box \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a660c2035351aefe038fc7e14b493fe9c}{Combo\+Insertar\+Mecanismo}}
+\item 
+TCombo\+Box \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a894009436101b3472353b8beaf7879a0}{Combo\+Mostrar\+Reaccion}}
+\item 
+TSave\+Text\+File\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_aa712cb01027b39f9f81f190ae99213b7}{Save\+Text\+File\+Dialog}}
+\item 
+TOpen\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_af5d638939de80a0edcac2b80741875c4}{Dialog\+Subir\+Archivo}}
+\item 
+TTask\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_ae4dc4482b3617e822ddb407864b2d961}{Dialog\+Introducir\+Datos}}
+\item 
+TTask\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a4fb84711d5e78fd2275062bfcf3af039}{Dialog\+Nuevo\+Panel\+Entrada}}
+\item 
+TTask\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_ac318dd14bfbb9ce3d3c5b616092a043d}{Dialog\+Primero\+Valida}}
+\item 
+TTask\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a31da02670e94e7432d74ffe03895db66}{Dialog\+Metabolito}}
+\item 
+TTask\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_aa4820de2c5c3451d7f826446a6063098}{Dialog\+Parametro}}
+\item 
+TTask\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_aed4132415fbb1a0b29408631c98e1479}{Dialog\+Reaccion}}
+\item 
+TTask\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a5e5483fc072f203d20338ae160ff9b0d}{Dialog\+Mecanismo}}
+\item 
+TSplitter \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a251b602e4aa43042da5e2acf5a237f12}{Splitter1}}
+\item 
+TPanel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_ae7dae94601eefe835743dbe8d1ae2623}{Panel\+Simulacion}}
+\item 
+TPanel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_abb7627f3c59fc6e6799ab147a878a169}{Panel\+Eleccion\+Metodo}}
+\item 
+TLabel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a344f8330a3a7b26735eea0f2d4c43408}{Label\+Simulacion}}
+\item 
+TLabel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a1167e34f0e23238f966422f2012dced2}{Label\+Eleccion\+Metodo}}
+\item 
+TLabel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_af53c3331a120e002ed121f5f3e14e31d}{Label\+Tiempo\+Inicial}}
+\item 
+TLabel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a37c438ffb801cc74af48c65d2d770a39}{Label\+Tiempo\+Final}}
+\item 
+TLabel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a6bd391549e2b90ebc116cf705fd77723}{Label\+Ciclos}}
+\item 
+TGrid\+Panel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a5a1bc8e6e8b358271dc6569aa3c3451e}{Grid\+Botones\+Simulacion}}
+\item 
+TCombo\+Box \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a44a2ef081d543b54f87c14338698ab78}{Combo\+Eleccion\+Metodo}}
+\item 
+TSpin\+Edit \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a17af3972cdda8d1dadd0738018aae617}{Spin\+Tiempo\+Inicial}}
+\item 
+TSpin\+Edit \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_aa482bab5f28b9388e3b2892078dfa7a9}{Spin\+Tiempo\+Final}}
+\item 
+TSpin\+Edit \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_ac911a8c3298f01dea8af80d132fa847c}{Spin\+Ciclos}}
+\item 
+TBit\+Btn \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a6cea4aab69f5817adeee6faaccdf62f8}{info\+Metodo}}
+\item 
+TButton \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a3e544b8e8e5654ed51cd771bb00f0403}{Btn\+Lanzar\+Simulacion}}
+\item 
+TPanel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a93c988cb499157d0681bd7082a5cf977}{Panel\+Salida\+Datos}}
+\item 
+TLabel \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_abea774ddc34a5d12d34a568a48bdaca1}{Label\+Salida}}
+\item 
+TMemo \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a8c7ccdd0b566fdc4f31a07f1b610d609}{Memo\+Salida\+Sim\+Texto}}
+\item 
+TTask\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a276405b1e9a0b7f7e64f15bf1aa66a56}{Dialog\+Metodo}}
+\item 
+TTask\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_acd9a909f3f56bb5f69d440e53204a8e8}{Dialog\+No\+Grafica}}
+\item 
+TTask\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_af6f3b8acc373d4487b3dcddd99766944}{Dialog\+No\+Tabla}}
+\item 
+TTask\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_ac5fed2ecedb345756f064ad017b9a829}{Dialog\+Manual\+Usuario}}
+\item 
+TTask\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a5671a9e7ca546bd171c941a455819575}{Dialog\+Acerca\+De}}
+\item 
+TSave\+Text\+File\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_aa895da18090366efcec368f3a68e9a2f}{Save\+Tabla\+Simulacion}}
+\item 
+TSave\+Text\+File\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_ad4d23c9c9929b1edb9e1b1073795c111}{Save\+Grafica\+Simulacion}}
+\item 
+TSave\+Text\+File\+Dialog \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a3e7d1ab4251df32ffbec3a73083cfe92}{Save\+Ecuaciones}}
+\item 
+TPage\+Control \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a18b6c7736500126b008f5fc1ff5ee453}{Page\+Control\+Salida}}
+\item 
+TTab\+Sheet \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_ac32c021ce06fd2303fcd5216543946b5}{Tabla}}
+\item 
+TString\+Grid \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a798d3b58aedc24d649a7201fcf9e0a72}{String\+Grid}}
+\item 
+TTab\+Sheet \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a7c1486c3db708d6a674c9e5bd76d5082}{Grafica}}
+\item 
+TImage \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_t_form1_a287e0e1495b569b18373a0eb490f331d}{Image\+Grafica}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_model}{TModel}} \doxymbox{\hyperlink{class_t_form1_aef11bfb2a9d3c4f6043d2539a9b5eab4}{model}}
+\item 
+\doxymbox{\hyperlink{class_t_simulation}{TSimulation}} \doxymbox{\hyperlink{class_t_form1_a9211b1e013014197ef85fec1fbbbdb28}{simulation}}
+\item 
+bool \doxymbox{\hyperlink{class_t_form1_a200a0af091188d3e3d5e4341a4853b04}{entrada\+Vacia}}
+\item 
+bool \doxymbox{\hyperlink{class_t_form1_ab7754143b3db97431d635ef2dafba857}{datos\+Validados}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+Es la ventana principal de la aplicacion y la encargada de la interfaz grafica de usuario. 
+
+Contiene los componentes visuales (menu, botones, paneles, cuadros de texto, etiquetas, cuadros de dialogo...) y los metodos que gestionan los eventos generados por el usuario. 
+
+\label{class_t_form1_doc-constructors}
+\Hypertarget{class_t_form1_doc-constructors}
+\doxysubsubsection{Documentación de constructores y destructores}
+\Hypertarget{class_t_form1_a4b77eaf706e8386bc8d79ec547efc8b9}\index{TForm1@{TForm1}!TForm1@{TForm1}}
+\index{TForm1@{TForm1}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{TForm1()}{TForm1()}}
+{\footnotesize\ttfamily \label{class_t_form1_a4b77eaf706e8386bc8d79ec547efc8b9} 
+\+\_\+\+\_\+fastcall TForm1::\+\+TForm1 (\begin{DoxyParamCaption}\item[{TComponent \texorpdfstring{$\ast$}{*}}]{Owner}{}\end{DoxyParamCaption})}
+
+
+
+Constructor del formulario, ventana principal de la aplicacion. Inicializa el modelo a construir. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Componente} & propietario del formulario, responsable de gestionar su ciclo de vida. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_t_form1_doc-func-members}
+\Hypertarget{class_t_form1_doc-func-members}
+\doxysubsubsection{Documentación de funciones miembro}
+\Hypertarget{class_t_form1_a59c138436f623ae2e6452bda5aae24fd}\index{TForm1@{TForm1}!AcercaDeClick@{AcercaDeClick}}
+\index{AcercaDeClick@{AcercaDeClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{AcercaDeClick()}{AcercaDeClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a59c138436f623ae2e6452bda5aae24fd} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Acerca\+De\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Accion que se realiza al darle al boton \textquotesingle{}Acerca de\textquotesingle{} del menu. Muestra un cuadro de dialogo con una breve explicacion sobre la herramienta que se ha usado para implementar la aplicacion, indicando la autora, el año de creacion y la version. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton Acerca\+De de tipo TMenu\+Item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_ae580913222051e0123ef7a6df22c515c}\index{TForm1@{TForm1}!BtnLanzarSimulacionClick@{BtnLanzarSimulacionClick}}
+\index{BtnLanzarSimulacionClick@{BtnLanzarSimulacionClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{BtnLanzarSimulacionClick()}{BtnLanzarSimulacionClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_ae580913222051e0123ef7a6df22c515c} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Btn\+Lanzar\+Simulacion\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Accion que se genera al clicar sobre el boton Lanzar Simulacion. Carga el sistema de ecuaciones del modelo y lanza un python para resolverlo con el metodo numerico escogido. Con ello, se simula la variacion de la concentracion de los metabolitos implicados durante en el rango de tiempo establecido. Al terminar, muestra una grafica con la evolucion de la concentracion de los distintos metabolitos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton Lanzar\+Simulacion. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a460763217589b7b00f0561b1d588b3ca}\index{TForm1@{TForm1}!BtnMecanismoClick@{BtnMecanismoClick}}
+\index{BtnMecanismoClick@{BtnMecanismoClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{BtnMecanismoClick()}{BtnMecanismoClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a460763217589b7b00f0561b1d588b3ca} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Btn\+Mecanismo\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Escribe en el panel de entrada de datos la plantilla para introducir un Mecanismo. Con los campos necesarios para ello separados por tabuladores. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton Mecanismo. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a797288bb997882dc0998f3404fb014d7}\index{TForm1@{TForm1}!BtnMetabolitoClick@{BtnMetabolitoClick}}
+\index{BtnMetabolitoClick@{BtnMetabolitoClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{BtnMetabolitoClick()}{BtnMetabolitoClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a797288bb997882dc0998f3404fb014d7} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Btn\+Metabolito\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Escribe en el panel de entrada de datos la plantilla para introducir un Metabolito. Con los campos necesarios para ello separados por tabuladores. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton Metabolito. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_affe85330b73bae8f89bf9fb739edf06f}\index{TForm1@{TForm1}!BtnMostrarSistemaClick@{BtnMostrarSistemaClick}}
+\index{BtnMostrarSistemaClick@{BtnMostrarSistemaClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{BtnMostrarSistemaClick()}{BtnMostrarSistemaClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_affe85330b73bae8f89bf9fb739edf06f} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Btn\+Mostrar\+Sistema\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Accion que se genera al clicar sobre el boton Mostrar\+Sistema\+Ecuaciones. Muestra el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion representa la variacion de concentracion de un metabolito. Hay tantas ecuaciones como metabolitos registrados en el sistema. Escribe en Memo\+Salida\+Validacion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton Mostrar\+Sistema. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_ae51152d68d35be0ae8e5329f4d8cbbf5}\index{TForm1@{TForm1}!BtnParametroClick@{BtnParametroClick}}
+\index{BtnParametroClick@{BtnParametroClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{BtnParametroClick()}{BtnParametroClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_ae51152d68d35be0ae8e5329f4d8cbbf5} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Btn\+Parametro\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Escribe en el panel de entrada de datos la plantilla para introducir un Parametro. Con los campos necesarios para ello separados por tabuladores. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton Parametro. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_af5e815dc56d52fc5b5c60f625b602766}\index{TForm1@{TForm1}!BtnReaccionClick@{BtnReaccionClick}}
+\index{BtnReaccionClick@{BtnReaccionClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{BtnReaccionClick()}{BtnReaccionClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_af5e815dc56d52fc5b5c60f625b602766} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Btn\+Reaccion\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Escribe en el panel de entrada de datos la plantilla para introducir una Reaccion. Con los campos necesarios para ello separados por tabuladores. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton Reaccion. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_ae520b5039bf5fa33ccf2cfa8126d4473}\index{TForm1@{TForm1}!BtnValidarDatosClick@{BtnValidarDatosClick}}
+\index{BtnValidarDatosClick@{BtnValidarDatosClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{BtnValidarDatosClick()}{BtnValidarDatosClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_ae520b5039bf5fa33ccf2cfa8126d4473} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Btn\+Validar\+Datos\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Accion que se genera al clicar sobre el boton Valida\+Datos. Valida el texto de entrada proporcionado. Muestra los errores en el objeto Memo\+Salida\+Validacion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton Validar\+Datos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_abbdc49091697f71071ce7e92d4ba9b21}\index{TForm1@{TForm1}!CargarEjemploClick@{CargarEjemploClick}}
+\index{CargarEjemploClick@{CargarEjemploClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{CargarEjemploClick()}{CargarEjemploClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_abbdc49091697f71071ce7e92d4ba9b21} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Cargar\+Ejemplo\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Accion que se genera al clicar sobre el boton Archivo/\+\+Cargar ejemplo del menu. Carga un archivo de ejemplo en la Entrada de Datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton Cargar\+Ejemplo de tipo TMenu\+Item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a0027f47316b47ea5fdc245a7f8bf9511}\index{TForm1@{TForm1}!ComboInsertarMecanismoChange@{ComboInsertarMecanismoChange}}
+\index{ComboInsertarMecanismoChange@{ComboInsertarMecanismoChange}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{ComboInsertarMecanismoChange()}{ComboInsertarMecanismoChange()}}
+{\footnotesize\ttfamily \label{class_t_form1_a0027f47316b47ea5fdc245a7f8bf9511} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Combo\+Insertar\+Mecanismo\+Change (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Al seleccionar un mecanismo de la lista de mecanismos disponibles, muestra la plantilla del mecanismo elegido en el texto de entrada de datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & objeto TCombo\+Box con la lista de mecanismos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a592eff540cbc9ff77e21d833059b9a39}\index{TForm1@{TForm1}!ComboMostrarReaccionChange@{ComboMostrarReaccionChange}}
+\index{ComboMostrarReaccionChange@{ComboMostrarReaccionChange}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{ComboMostrarReaccionChange()}{ComboMostrarReaccionChange()}}
+{\footnotesize\ttfamily \label{class_t_form1_a592eff540cbc9ff77e21d833059b9a39} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Combo\+Mostrar\+Reaccion\+Change (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Al seleccionar una reaccion de la lista de reacciones cargadas, muestra la ecuacion cinetica generada que describe su velocidad, tanto directa como inversa, en caso de que la reaccion sea bidireccional. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & objeto TCombo\+Box con la lista de reacciones cargadas. \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_form1_a592eff540cbc9ff77e21d833059b9a39_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_form1_a88a1c0d872d5b1744f9d704e4a4ca4f9}\index{TForm1@{TForm1}!FormClose@{FormClose}}
+\index{FormClose@{FormClose}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{FormClose()}{FormClose()}}
+{\footnotesize\ttfamily \label{class_t_form1_a88a1c0d872d5b1744f9d704e4a4ca4f9} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Form\+Close (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{, }\item[{TClose\+Action \&}]{Action}{}\end{DoxyParamCaption})}
+
+
+
+Accion que se activa al cerrar la ventana de la aplicacion. Borra los archivos generados en la simulacion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & objeto que ha generado el cierre del formulario, normalmente el propio TForm. \\
+\hline
+{\em Action} & accion que determina que debe hacerse con el formulario despues del cierre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a329defcfa3dd860b9171b45ab1098fd3}\index{TForm1@{TForm1}!FormResize@{FormResize}}
+\index{FormResize@{FormResize}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{FormResize()}{FormResize()}}
+{\footnotesize\ttfamily \label{class_t_form1_a329defcfa3dd860b9171b45ab1098fd3} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Form\+Resize (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Adapta el tamanio de los paneles que contiene la interfaz al cambio de tamanio de la ventana. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & objeto de la interfaz que representa la ventana principal. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a69313b46bbed2c28fba451d35bed90ef}\index{TForm1@{TForm1}!GuardarArchivoClick@{GuardarArchivoClick}}
+\index{GuardarArchivoClick@{GuardarArchivoClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{GuardarArchivoClick()}{GuardarArchivoClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a69313b46bbed2c28fba451d35bed90ef} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Guardar\+Archivo\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Accion que se genera al clicar sobre el boton Archivo/\+\+Guardar del menu. Abre cuadro de dialogo para guardar el panel de entrada actual como archivo txt en el ordenador. Solo permite formato txt. Se elige el nombre del archivo y la ruta donde se guarda. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & objeto Guardar\+Archivo de tipo TMenu\+Item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a4054d1c2b1745192b6b1cff6fee0bcd5}\index{TForm1@{TForm1}!GuardarEcuacionesClick@{GuardarEcuacionesClick}}
+\index{GuardarEcuacionesClick@{GuardarEcuacionesClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{GuardarEcuacionesClick()}{GuardarEcuacionesClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a4054d1c2b1745192b6b1cff6fee0bcd5} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Guardar\+Ecuaciones\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Accion que se realiza al darle al boton \textquotesingle{}Guardar ecuaciones y sistema\textquotesingle{} del menu. Genera un archivo txt con las ecuaciones cineticas de cada reaccion introducida. Tambien aniade el sistema de ecuaciones empleado para la simulacion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton Guardar\+Ecuaciones de tipo TMenu\+Item. \\
+\hline
+\end{DoxyParams}
+Gráfico de llamadas de esta función:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_form1_a4054d1c2b1745192b6b1cff6fee0bcd5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_form1_a06c5cf15ddee764c60091b683a434bc8}\index{TForm1@{TForm1}!GuardarGraficaClick@{GuardarGraficaClick}}
+\index{GuardarGraficaClick@{GuardarGraficaClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{GuardarGraficaClick()}{GuardarGraficaClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a06c5cf15ddee764c60091b683a434bc8} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Guardar\+Grafica\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Accion que se realiza al darle al boton \textquotesingle{}Guardar grafica\textquotesingle{} del menu. Guarda la grafica generada en la simulacion actual en la ruta especificada por el usuario. En formato png. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton Guardar\+Grafica de tipo TMenu\+Item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_af94a85828f23c7428f76484d72c2e42e}\index{TForm1@{TForm1}!GuardarTablaClick@{GuardarTablaClick}}
+\index{GuardarTablaClick@{GuardarTablaClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{GuardarTablaClick()}{GuardarTablaClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_af94a85828f23c7428f76484d72c2e42e} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Guardar\+Tabla\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Accion que se realiza al darle al boton \textquotesingle{}Guardar tabla\textquotesingle{} del menu. Guarda la tabla generada en la simulacion actual en la ruta especificada por el usuario. En formato txt con los datos separados por \textquotesingle{};\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton Guardar\+Tabla de tipo TMenu\+Item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a4c645d0ca24b0febcfe71ecf74d6fe33}\index{TForm1@{TForm1}!ImageGraficaDblClick@{ImageGraficaDblClick}}
+\index{ImageGraficaDblClick@{ImageGraficaDblClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{ImageGraficaDblClick()}{ImageGraficaDblClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a4c645d0ca24b0febcfe71ecf74d6fe33} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Image\+Grafica\+Dbl\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Amplia la imagen abriendo un nuevo formulario con la imagen maximizada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & objeto de tipo TImage que representa la imagen \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_ac4a322d5fd147b8f78b21a0d10062418}\index{TForm1@{TForm1}!infoMecClick@{infoMecClick}}
+\index{infoMecClick@{infoMecClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{infoMecClick()}{infoMecClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_ac4a322d5fd147b8f78b21a0d10062418} 
+void \+\_\+\+\_\+fastcall TForm1::\+info\+Mec\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Boton para obtener informacion sobre como introducir un Mecanismo en el modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton info del Mecanismo. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a7f84220cfe27e325568532c24d1e7533}\index{TForm1@{TForm1}!infoMetaClick@{infoMetaClick}}
+\index{infoMetaClick@{infoMetaClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{infoMetaClick()}{infoMetaClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a7f84220cfe27e325568532c24d1e7533} 
+void \+\_\+\+\_\+fastcall TForm1::\+info\+Meta\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Boton para obtener informacion sobre como introducir un Metabolito en el modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton info del Metabolito. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a723f8b188febb6db118b1ee0da00b8c4}\index{TForm1@{TForm1}!infoMetodoClick@{infoMetodoClick}}
+\index{infoMetodoClick@{infoMetodoClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{infoMetodoClick()}{infoMetodoClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a723f8b188febb6db118b1ee0da00b8c4} 
+void \+\_\+\+\_\+fastcall TForm1::\+info\+Metodo\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Boton para obtener informacion sobre los tipos de metodos numericos disponibles para resolver el sistema de ecuaciones generado a partir de los datos de entrada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton info del Metodo numerico. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a43001f7620650af63723839e11d264e4}\index{TForm1@{TForm1}!infoParamClick@{infoParamClick}}
+\index{infoParamClick@{infoParamClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{infoParamClick()}{infoParamClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a43001f7620650af63723839e11d264e4} 
+void \+\_\+\+\_\+fastcall TForm1::\+info\+Param\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Boton para obtener informacion sobre como introducir un Parametro en el modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton info del Parametro. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a02788683a6b4925e789f406ecb9d5a52}\index{TForm1@{TForm1}!infoReacClick@{infoReacClick}}
+\index{infoReacClick@{infoReacClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{infoReacClick()}{infoReacClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a02788683a6b4925e789f406ecb9d5a52} 
+void \+\_\+\+\_\+fastcall TForm1::\+info\+Reac\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Boton para obtener informacion sobre como introducir una Reaccion en el modelo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton info de la Reaccion. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a58ec67b65a9e7d2da6dba79d4c4c3313}\index{TForm1@{TForm1}!ManualUsuarioClick@{ManualUsuarioClick}}
+\index{ManualUsuarioClick@{ManualUsuarioClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{ManualUsuarioClick()}{ManualUsuarioClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a58ec67b65a9e7d2da6dba79d4c4c3313} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Manual\+Usuario\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Accion que se realiza al darle al boton \textquotesingle{}Manual de usuario\textquotesingle{} del menu. Muestra un cuadro de dialogo en el que aparece una breve descripcion de la aplicacion y cual es el flujo principal de interaccion del usuario con la interfaz. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & boton Manual\+Usuario de tipo TMenu\+Item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a5ade53be84a10d8d2669064348ed4ae1}\index{TForm1@{TForm1}!MemoTextoEntradaChange@{MemoTextoEntradaChange}}
+\index{MemoTextoEntradaChange@{MemoTextoEntradaChange}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{MemoTextoEntradaChange()}{MemoTextoEntradaChange()}}
+{\footnotesize\ttfamily \label{class_t_form1_a5ade53be84a10d8d2669064348ed4ae1} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Memo\+Texto\+Entrada\+Change (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza las variables bandera cuando se modifica el TMemo de entrada de datos. En concreto, pone a false \textquotesingle{}datos\+Validados\textquotesingle{} y \textquotesingle{}entrada\+Vacia\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & objeto Guardar\+Tabla de tipo TMenu\+Item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a7b8100b0f829a433330f4aa65b317fd1}\index{TForm1@{TForm1}!NuevoArchivoClick@{NuevoArchivoClick}}
+\index{NuevoArchivoClick@{NuevoArchivoClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{NuevoArchivoClick()}{NuevoArchivoClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a7b8100b0f829a433330f4aa65b317fd1} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Nuevo\+Archivo\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Accion que se genera al clicar sobre el boton Archivo/\+\+Nuevo del menu. Abre cuadro de dialogo para limpiar el panel de datos de entrada. Da opciones para borrarlo ("{}\+Aceptar"{}) o "{}\+Cancelar"{}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & objeto Nuevo\+Archivo de tipo TMenu\+Item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_affac639c5f2cec3b97fd262a13ea389d}\index{TForm1@{TForm1}!Splitter1CanResize@{Splitter1CanResize}}
+\index{Splitter1CanResize@{Splitter1CanResize}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{Splitter1CanResize()}{Splitter1CanResize()}}
+{\footnotesize\ttfamily \label{class_t_form1_affac639c5f2cec3b97fd262a13ea389d} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Splitter1\+Can\+Resize (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{, }\item[{int \&}]{New\+Size}{, }\item[{bool \&}]{Accept}{}\end{DoxyParamCaption})}
+
+
+
+Controla el redimensionamiento de los paneles al mover el splitter. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & objeto que ha generado el evento, normalmente el propio TSplitter. \\
+\hline
+{\em New\+Size} & nuevo tamaño propuesto para el splitter durante el redimensionamiento. \\
+\hline
+{\em Accept} & true, si se realiza el nuevo redimensionamiento; false, si se rechaza. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a05008fb7c2ed5a2b6c585b1948fcf4f6}\index{TForm1@{TForm1}!Splitter1Moved@{Splitter1Moved}}
+\index{Splitter1Moved@{Splitter1Moved}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{Splitter1Moved()}{Splitter1Moved()}}
+{\footnotesize\ttfamily \label{class_t_form1_a05008fb7c2ed5a2b6c585b1948fcf4f6} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Splitter1\+Moved (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza la interfaz despues de mover el splitter. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & objeto que ha generado el evento, normalmente el propio TSplitter. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a83bec61518b9f1b09e42e4456d42ed15}\index{TForm1@{TForm1}!StringGridDrawCell@{StringGridDrawCell}}
+\index{StringGridDrawCell@{StringGridDrawCell}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{StringGridDrawCell()}{StringGridDrawCell()}}
+{\footnotesize\ttfamily \label{class_t_form1_a83bec61518b9f1b09e42e4456d42ed15} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+String\+Grid\+Draw\+Cell (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{, }\item[{System::\+\+Long\+Int}]{ACol}{, }\item[{System::\+\+Long\+Int}]{ARow}{, }\item[{TRect \&}]{Rect}{, }\item[{TGrid\+Draw\+State}]{State}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza el formato de las celdas que pertenecen a la primera fila o primera columna. Establece un color distinto para ellas (amarillo claro) y con la letra en negrita. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & objeto de tipo TString\+Grid que representa la tabla \\
+\hline
+{\em ACol} & indice de columna \\
+\hline
+{\em ARow} & indice de fila \\
+\hline
+{\em Rect} & rectangulo de coordenadas que representa la celda concreta \\
+\hline
+{\em State} & estados posibles de una celda:\+ dg\+Selected, gd\+Focused, gd\+Fixed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_form1_a4155debba8bc79169bdff3e2e7454145}\index{TForm1@{TForm1}!SubirArchivoClick@{SubirArchivoClick}}
+\index{SubirArchivoClick@{SubirArchivoClick}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{SubirArchivoClick()}{SubirArchivoClick()}}
+{\footnotesize\ttfamily \label{class_t_form1_a4155debba8bc79169bdff3e2e7454145} 
+void \+\_\+\+\_\+fastcall TForm1::\+\+Subir\+Archivo\+Click (\begin{DoxyParamCaption}\item[{TObject \texorpdfstring{$\ast$}{*}}]{Sender}{}\end{DoxyParamCaption})}
+
+
+
+Accion que se genera al clicar sobre el boton Archivo/\+\+Subir del menu. Abre cuadro de dialogo para subir un archivo del ordenador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sender} & objeto Subir\+Archivo de tipo TMenu\+Item. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_t_form1_doc-variable-members}
+\Hypertarget{class_t_form1_doc-variable-members}
+\doxysubsubsection{Documentación de datos miembro}
+\Hypertarget{class_t_form1_a37d7911e01eaeda4fab71a4534137ed7}\index{TForm1@{TForm1}!AcercaDe@{AcercaDe}}
+\index{AcercaDe@{AcercaDe}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{AcercaDe}{AcercaDe}}
+{\footnotesize\ttfamily \label{class_t_form1_a37d7911e01eaeda4fab71a4534137ed7} 
+TMenu\+Item\texorpdfstring{$\ast$}{*} TForm1::\+\+Acerca\+De}
+
+\Hypertarget{class_t_form1_afea368fc3cc620ef8a143e5d82d3deb8}\index{TForm1@{TForm1}!Archivo@{Archivo}}
+\index{Archivo@{Archivo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{Archivo}{Archivo}}
+{\footnotesize\ttfamily \label{class_t_form1_afea368fc3cc620ef8a143e5d82d3deb8} 
+TMenu\+Item\texorpdfstring{$\ast$}{*} TForm1::\+\+Archivo}
+
+\Hypertarget{class_t_form1_aa5b56bcd60dcef88ffc7540c2dd6ded5}\index{TForm1@{TForm1}!Ayuda@{Ayuda}}
+\index{Ayuda@{Ayuda}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{Ayuda}{Ayuda}}
+{\footnotesize\ttfamily \label{class_t_form1_aa5b56bcd60dcef88ffc7540c2dd6ded5} 
+TMenu\+Item\texorpdfstring{$\ast$}{*} TForm1::\+\+Ayuda}
+
+\Hypertarget{class_t_form1_a3e544b8e8e5654ed51cd771bb00f0403}\index{TForm1@{TForm1}!BtnLanzarSimulacion@{BtnLanzarSimulacion}}
+\index{BtnLanzarSimulacion@{BtnLanzarSimulacion}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{BtnLanzarSimulacion}{BtnLanzarSimulacion}}
+{\footnotesize\ttfamily \label{class_t_form1_a3e544b8e8e5654ed51cd771bb00f0403} 
+TButton\texorpdfstring{$\ast$}{*} TForm1::\+\+Btn\+Lanzar\+Simulacion}
+
+\Hypertarget{class_t_form1_a4cf69ff717fdf6cb6303c7135a6217fd}\index{TForm1@{TForm1}!BtnMetabolito@{BtnMetabolito}}
+\index{BtnMetabolito@{BtnMetabolito}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{BtnMetabolito}{BtnMetabolito}}
+{\footnotesize\ttfamily \label{class_t_form1_a4cf69ff717fdf6cb6303c7135a6217fd} 
+TButton\texorpdfstring{$\ast$}{*} TForm1::\+\+Btn\+Metabolito}
+
+\Hypertarget{class_t_form1_ac5bcf07bed92dadd74568a5802709b8f}\index{TForm1@{TForm1}!BtnMostrarSistema@{BtnMostrarSistema}}
+\index{BtnMostrarSistema@{BtnMostrarSistema}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{BtnMostrarSistema}{BtnMostrarSistema}}
+{\footnotesize\ttfamily \label{class_t_form1_ac5bcf07bed92dadd74568a5802709b8f} 
+TButton\texorpdfstring{$\ast$}{*} TForm1::\+\+Btn\+Mostrar\+Sistema}
+
+\Hypertarget{class_t_form1_a6c17650a72e319894075b410873e2ada}\index{TForm1@{TForm1}!BtnParametro@{BtnParametro}}
+\index{BtnParametro@{BtnParametro}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{BtnParametro}{BtnParametro}}
+{\footnotesize\ttfamily \label{class_t_form1_a6c17650a72e319894075b410873e2ada} 
+TButton\texorpdfstring{$\ast$}{*} TForm1::\+\+Btn\+Parametro}
+
+\Hypertarget{class_t_form1_ab17126f38fdba73ac6673b525b277aa6}\index{TForm1@{TForm1}!BtnReaccion@{BtnReaccion}}
+\index{BtnReaccion@{BtnReaccion}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{BtnReaccion}{BtnReaccion}}
+{\footnotesize\ttfamily \label{class_t_form1_ab17126f38fdba73ac6673b525b277aa6} 
+TButton\texorpdfstring{$\ast$}{*} TForm1::\+\+Btn\+Reaccion}
+
+\Hypertarget{class_t_form1_ae00aabd5289ceae6440768a666688a22}\index{TForm1@{TForm1}!BtnValidarDatos@{BtnValidarDatos}}
+\index{BtnValidarDatos@{BtnValidarDatos}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{BtnValidarDatos}{BtnValidarDatos}}
+{\footnotesize\ttfamily \label{class_t_form1_ae00aabd5289ceae6440768a666688a22} 
+TButton\texorpdfstring{$\ast$}{*} TForm1::\+\+Btn\+Validar\+Datos}
+
+\Hypertarget{class_t_form1_afe2a6b2419569bfded5e694c858351ad}\index{TForm1@{TForm1}!CargarEjemplo@{CargarEjemplo}}
+\index{CargarEjemplo@{CargarEjemplo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{CargarEjemplo}{CargarEjemplo}}
+{\footnotesize\ttfamily \label{class_t_form1_afe2a6b2419569bfded5e694c858351ad} 
+TMenu\+Item\texorpdfstring{$\ast$}{*} TForm1::\+\+Cargar\+Ejemplo}
+
+\Hypertarget{class_t_form1_a44a2ef081d543b54f87c14338698ab78}\index{TForm1@{TForm1}!ComboEleccionMetodo@{ComboEleccionMetodo}}
+\index{ComboEleccionMetodo@{ComboEleccionMetodo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{ComboEleccionMetodo}{ComboEleccionMetodo}}
+{\footnotesize\ttfamily \label{class_t_form1_a44a2ef081d543b54f87c14338698ab78} 
+TCombo\+Box\texorpdfstring{$\ast$}{*} TForm1::\+\+Combo\+Eleccion\+Metodo}
+
+\Hypertarget{class_t_form1_a660c2035351aefe038fc7e14b493fe9c}\index{TForm1@{TForm1}!ComboInsertarMecanismo@{ComboInsertarMecanismo}}
+\index{ComboInsertarMecanismo@{ComboInsertarMecanismo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{ComboInsertarMecanismo}{ComboInsertarMecanismo}}
+{\footnotesize\ttfamily \label{class_t_form1_a660c2035351aefe038fc7e14b493fe9c} 
+TCombo\+Box\texorpdfstring{$\ast$}{*} TForm1::\+\+Combo\+Insertar\+Mecanismo}
+
+\Hypertarget{class_t_form1_a894009436101b3472353b8beaf7879a0}\index{TForm1@{TForm1}!ComboMostrarReaccion@{ComboMostrarReaccion}}
+\index{ComboMostrarReaccion@{ComboMostrarReaccion}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{ComboMostrarReaccion}{ComboMostrarReaccion}}
+{\footnotesize\ttfamily \label{class_t_form1_a894009436101b3472353b8beaf7879a0} 
+TCombo\+Box\texorpdfstring{$\ast$}{*} TForm1::\+\+Combo\+Mostrar\+Reaccion}
+
+\Hypertarget{class_t_form1_ab7754143b3db97431d635ef2dafba857}\index{TForm1@{TForm1}!datosValidados@{datosValidados}}
+\index{datosValidados@{datosValidados}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{datosValidados}{datosValidados}}
+{\footnotesize\ttfamily \label{class_t_form1_ab7754143b3db97431d635ef2dafba857} 
+bool TForm1::\+datos\+Validados\hspace{0.3cm}{\ttfamily [private]}}
+
+Variable bandera para identificar si los datos han sido validados o no. \Hypertarget{class_t_form1_a5671a9e7ca546bd171c941a455819575}\index{TForm1@{TForm1}!DialogAcercaDe@{DialogAcercaDe}}
+\index{DialogAcercaDe@{DialogAcercaDe}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{DialogAcercaDe}{DialogAcercaDe}}
+{\footnotesize\ttfamily \label{class_t_form1_a5671a9e7ca546bd171c941a455819575} 
+TTask\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Dialog\+Acerca\+De}
+
+\Hypertarget{class_t_form1_ae4dc4482b3617e822ddb407864b2d961}\index{TForm1@{TForm1}!DialogIntroducirDatos@{DialogIntroducirDatos}}
+\index{DialogIntroducirDatos@{DialogIntroducirDatos}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{DialogIntroducirDatos}{DialogIntroducirDatos}}
+{\footnotesize\ttfamily \label{class_t_form1_ae4dc4482b3617e822ddb407864b2d961} 
+TTask\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Dialog\+Introducir\+Datos}
+
+\Hypertarget{class_t_form1_ac5fed2ecedb345756f064ad017b9a829}\index{TForm1@{TForm1}!DialogManualUsuario@{DialogManualUsuario}}
+\index{DialogManualUsuario@{DialogManualUsuario}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{DialogManualUsuario}{DialogManualUsuario}}
+{\footnotesize\ttfamily \label{class_t_form1_ac5fed2ecedb345756f064ad017b9a829} 
+TTask\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Dialog\+Manual\+Usuario}
+
+\Hypertarget{class_t_form1_a5e5483fc072f203d20338ae160ff9b0d}\index{TForm1@{TForm1}!DialogMecanismo@{DialogMecanismo}}
+\index{DialogMecanismo@{DialogMecanismo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{DialogMecanismo}{DialogMecanismo}}
+{\footnotesize\ttfamily \label{class_t_form1_a5e5483fc072f203d20338ae160ff9b0d} 
+TTask\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Dialog\+Mecanismo}
+
+\Hypertarget{class_t_form1_a31da02670e94e7432d74ffe03895db66}\index{TForm1@{TForm1}!DialogMetabolito@{DialogMetabolito}}
+\index{DialogMetabolito@{DialogMetabolito}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{DialogMetabolito}{DialogMetabolito}}
+{\footnotesize\ttfamily \label{class_t_form1_a31da02670e94e7432d74ffe03895db66} 
+TTask\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Dialog\+Metabolito}
+
+\Hypertarget{class_t_form1_a276405b1e9a0b7f7e64f15bf1aa66a56}\index{TForm1@{TForm1}!DialogMetodo@{DialogMetodo}}
+\index{DialogMetodo@{DialogMetodo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{DialogMetodo}{DialogMetodo}}
+{\footnotesize\ttfamily \label{class_t_form1_a276405b1e9a0b7f7e64f15bf1aa66a56} 
+TTask\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Dialog\+Metodo}
+
+\Hypertarget{class_t_form1_acd9a909f3f56bb5f69d440e53204a8e8}\index{TForm1@{TForm1}!DialogNoGrafica@{DialogNoGrafica}}
+\index{DialogNoGrafica@{DialogNoGrafica}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{DialogNoGrafica}{DialogNoGrafica}}
+{\footnotesize\ttfamily \label{class_t_form1_acd9a909f3f56bb5f69d440e53204a8e8} 
+TTask\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Dialog\+No\+Grafica}
+
+\Hypertarget{class_t_form1_af6f3b8acc373d4487b3dcddd99766944}\index{TForm1@{TForm1}!DialogNoTabla@{DialogNoTabla}}
+\index{DialogNoTabla@{DialogNoTabla}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{DialogNoTabla}{DialogNoTabla}}
+{\footnotesize\ttfamily \label{class_t_form1_af6f3b8acc373d4487b3dcddd99766944} 
+TTask\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Dialog\+No\+Tabla}
+
+\Hypertarget{class_t_form1_a4fb84711d5e78fd2275062bfcf3af039}\index{TForm1@{TForm1}!DialogNuevoPanelEntrada@{DialogNuevoPanelEntrada}}
+\index{DialogNuevoPanelEntrada@{DialogNuevoPanelEntrada}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{DialogNuevoPanelEntrada}{DialogNuevoPanelEntrada}}
+{\footnotesize\ttfamily \label{class_t_form1_a4fb84711d5e78fd2275062bfcf3af039} 
+TTask\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Dialog\+Nuevo\+Panel\+Entrada}
+
+\Hypertarget{class_t_form1_aa4820de2c5c3451d7f826446a6063098}\index{TForm1@{TForm1}!DialogParametro@{DialogParametro}}
+\index{DialogParametro@{DialogParametro}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{DialogParametro}{DialogParametro}}
+{\footnotesize\ttfamily \label{class_t_form1_aa4820de2c5c3451d7f826446a6063098} 
+TTask\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Dialog\+Parametro}
+
+\Hypertarget{class_t_form1_ac318dd14bfbb9ce3d3c5b616092a043d}\index{TForm1@{TForm1}!DialogPrimeroValida@{DialogPrimeroValida}}
+\index{DialogPrimeroValida@{DialogPrimeroValida}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{DialogPrimeroValida}{DialogPrimeroValida}}
+{\footnotesize\ttfamily \label{class_t_form1_ac318dd14bfbb9ce3d3c5b616092a043d} 
+TTask\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Dialog\+Primero\+Valida}
+
+\Hypertarget{class_t_form1_aed4132415fbb1a0b29408631c98e1479}\index{TForm1@{TForm1}!DialogReaccion@{DialogReaccion}}
+\index{DialogReaccion@{DialogReaccion}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{DialogReaccion}{DialogReaccion}}
+{\footnotesize\ttfamily \label{class_t_form1_aed4132415fbb1a0b29408631c98e1479} 
+TTask\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Dialog\+Reaccion}
+
+\Hypertarget{class_t_form1_af5d638939de80a0edcac2b80741875c4}\index{TForm1@{TForm1}!DialogSubirArchivo@{DialogSubirArchivo}}
+\index{DialogSubirArchivo@{DialogSubirArchivo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{DialogSubirArchivo}{DialogSubirArchivo}}
+{\footnotesize\ttfamily \label{class_t_form1_af5d638939de80a0edcac2b80741875c4} 
+TOpen\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Dialog\+Subir\+Archivo}
+
+\Hypertarget{class_t_form1_a200a0af091188d3e3d5e4341a4853b04}\index{TForm1@{TForm1}!entradaVacia@{entradaVacia}}
+\index{entradaVacia@{entradaVacia}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{entradaVacia}{entradaVacia}}
+{\footnotesize\ttfamily \label{class_t_form1_a200a0af091188d3e3d5e4341a4853b04} 
+bool TForm1::\+entrada\+Vacia\hspace{0.3cm}{\ttfamily [private]}}
+
+Variable bandera para identificar si se introducen datos de entrada o no. \Hypertarget{class_t_form1_a7c1486c3db708d6a674c9e5bd76d5082}\index{TForm1@{TForm1}!Grafica@{Grafica}}
+\index{Grafica@{Grafica}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{Grafica}{Grafica}}
+{\footnotesize\ttfamily \label{class_t_form1_a7c1486c3db708d6a674c9e5bd76d5082} 
+TTab\+Sheet\texorpdfstring{$\ast$}{*} TForm1::\+\+Grafica}
+
+\Hypertarget{class_t_form1_ab5924af8daf590ab836bafde5d21fd37}\index{TForm1@{TForm1}!GridBotonesEntrada@{GridBotonesEntrada}}
+\index{GridBotonesEntrada@{GridBotonesEntrada}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{GridBotonesEntrada}{GridBotonesEntrada}}
+{\footnotesize\ttfamily \label{class_t_form1_ab5924af8daf590ab836bafde5d21fd37} 
+TGrid\+Panel\texorpdfstring{$\ast$}{*} TForm1::\+\+Grid\+Botones\+Entrada}
+
+\Hypertarget{class_t_form1_a5a1bc8e6e8b358271dc6569aa3c3451e}\index{TForm1@{TForm1}!GridBotonesSimulacion@{GridBotonesSimulacion}}
+\index{GridBotonesSimulacion@{GridBotonesSimulacion}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{GridBotonesSimulacion}{GridBotonesSimulacion}}
+{\footnotesize\ttfamily \label{class_t_form1_a5a1bc8e6e8b358271dc6569aa3c3451e} 
+TGrid\+Panel\texorpdfstring{$\ast$}{*} TForm1::\+\+Grid\+Botones\+Simulacion}
+
+\Hypertarget{class_t_form1_a14bc11ca7f8e858332bb9849091c6e57}\index{TForm1@{TForm1}!GuardarArchivo@{GuardarArchivo}}
+\index{GuardarArchivo@{GuardarArchivo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{GuardarArchivo}{GuardarArchivo}}
+{\footnotesize\ttfamily \label{class_t_form1_a14bc11ca7f8e858332bb9849091c6e57} 
+TMenu\+Item\texorpdfstring{$\ast$}{*} TForm1::\+\+Guardar\+Archivo}
+
+\Hypertarget{class_t_form1_a3a3337f2dd5e7cff82dcb26d82ce121a}\index{TForm1@{TForm1}!GuardarEcuaciones@{GuardarEcuaciones}}
+\index{GuardarEcuaciones@{GuardarEcuaciones}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{GuardarEcuaciones}{GuardarEcuaciones}}
+{\footnotesize\ttfamily \label{class_t_form1_a3a3337f2dd5e7cff82dcb26d82ce121a} 
+TMenu\+Item\texorpdfstring{$\ast$}{*} TForm1::\+\+Guardar\+Ecuaciones}
+
+\Hypertarget{class_t_form1_af7caf8cee32806f87f8611fe45fc7642}\index{TForm1@{TForm1}!GuardarGrafica@{GuardarGrafica}}
+\index{GuardarGrafica@{GuardarGrafica}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{GuardarGrafica}{GuardarGrafica}}
+{\footnotesize\ttfamily \label{class_t_form1_af7caf8cee32806f87f8611fe45fc7642} 
+TMenu\+Item\texorpdfstring{$\ast$}{*} TForm1::\+\+Guardar\+Grafica}
+
+\Hypertarget{class_t_form1_aac56c71df764a759b7a441b910371152}\index{TForm1@{TForm1}!GuardarTabla@{GuardarTabla}}
+\index{GuardarTabla@{GuardarTabla}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{GuardarTabla}{GuardarTabla}}
+{\footnotesize\ttfamily \label{class_t_form1_aac56c71df764a759b7a441b910371152} 
+TMenu\+Item\texorpdfstring{$\ast$}{*} TForm1::\+\+Guardar\+Tabla}
+
+\Hypertarget{class_t_form1_a287e0e1495b569b18373a0eb490f331d}\index{TForm1@{TForm1}!ImageGrafica@{ImageGrafica}}
+\index{ImageGrafica@{ImageGrafica}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{ImageGrafica}{ImageGrafica}}
+{\footnotesize\ttfamily \label{class_t_form1_a287e0e1495b569b18373a0eb490f331d} 
+TImage\texorpdfstring{$\ast$}{*} TForm1::\+\+Image\+Grafica}
+
+\Hypertarget{class_t_form1_a88059de68ca8a6aa0b7f77a2effde44a}\index{TForm1@{TForm1}!infoMec@{infoMec}}
+\index{infoMec@{infoMec}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{infoMec}{infoMec}}
+{\footnotesize\ttfamily \label{class_t_form1_a88059de68ca8a6aa0b7f77a2effde44a} 
+TBit\+Btn\texorpdfstring{$\ast$}{*} TForm1::\+info\+Mec}
+
+\Hypertarget{class_t_form1_a9fb79b1dab5c778460bc8861174bd3e7}\index{TForm1@{TForm1}!infoMeta@{infoMeta}}
+\index{infoMeta@{infoMeta}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{infoMeta}{infoMeta}}
+{\footnotesize\ttfamily \label{class_t_form1_a9fb79b1dab5c778460bc8861174bd3e7} 
+TBit\+Btn\texorpdfstring{$\ast$}{*} TForm1::\+info\+Meta}
+
+\Hypertarget{class_t_form1_a6cea4aab69f5817adeee6faaccdf62f8}\index{TForm1@{TForm1}!infoMetodo@{infoMetodo}}
+\index{infoMetodo@{infoMetodo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{infoMetodo}{infoMetodo}}
+{\footnotesize\ttfamily \label{class_t_form1_a6cea4aab69f5817adeee6faaccdf62f8} 
+TBit\+Btn\texorpdfstring{$\ast$}{*} TForm1::\+info\+Metodo}
+
+\Hypertarget{class_t_form1_aa7794190632ca3a63a91be8d06ef46be}\index{TForm1@{TForm1}!infoParam@{infoParam}}
+\index{infoParam@{infoParam}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{infoParam}{infoParam}}
+{\footnotesize\ttfamily \label{class_t_form1_aa7794190632ca3a63a91be8d06ef46be} 
+TBit\+Btn\texorpdfstring{$\ast$}{*} TForm1::\+info\+Param}
+
+\Hypertarget{class_t_form1_ae3e76258255ad11ed2d4f6934eaa2af7}\index{TForm1@{TForm1}!infoReac@{infoReac}}
+\index{infoReac@{infoReac}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{infoReac}{infoReac}}
+{\footnotesize\ttfamily \label{class_t_form1_ae3e76258255ad11ed2d4f6934eaa2af7} 
+TBit\+Btn\texorpdfstring{$\ast$}{*} TForm1::\+info\+Reac}
+
+\Hypertarget{class_t_form1_a02c5ecc5081717b9c228d0169ebc3706}\index{TForm1@{TForm1}!InsertarMecanismo@{InsertarMecanismo}}
+\index{InsertarMecanismo@{InsertarMecanismo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{InsertarMecanismo}{InsertarMecanismo}}
+{\footnotesize\ttfamily \label{class_t_form1_a02c5ecc5081717b9c228d0169ebc3706} 
+TPanel\texorpdfstring{$\ast$}{*} TForm1::\+\+Insertar\+Mecanismo}
+
+\Hypertarget{class_t_form1_a6bd391549e2b90ebc116cf705fd77723}\index{TForm1@{TForm1}!LabelCiclos@{LabelCiclos}}
+\index{LabelCiclos@{LabelCiclos}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{LabelCiclos}{LabelCiclos}}
+{\footnotesize\ttfamily \label{class_t_form1_a6bd391549e2b90ebc116cf705fd77723} 
+TLabel\texorpdfstring{$\ast$}{*} TForm1::\+\+Label\+Ciclos}
+
+\Hypertarget{class_t_form1_a1167e34f0e23238f966422f2012dced2}\index{TForm1@{TForm1}!LabelEleccionMetodo@{LabelEleccionMetodo}}
+\index{LabelEleccionMetodo@{LabelEleccionMetodo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{LabelEleccionMetodo}{LabelEleccionMetodo}}
+{\footnotesize\ttfamily \label{class_t_form1_a1167e34f0e23238f966422f2012dced2} 
+TLabel\texorpdfstring{$\ast$}{*} TForm1::\+\+Label\+Eleccion\+Metodo}
+
+\Hypertarget{class_t_form1_a922c8f6efedff3cae5f296313972a2b2}\index{TForm1@{TForm1}!LabelEntradaDatos@{LabelEntradaDatos}}
+\index{LabelEntradaDatos@{LabelEntradaDatos}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{LabelEntradaDatos}{LabelEntradaDatos}}
+{\footnotesize\ttfamily \label{class_t_form1_a922c8f6efedff3cae5f296313972a2b2} 
+TLabel\texorpdfstring{$\ast$}{*} TForm1::\+\+Label\+Entrada\+Datos}
+
+\Hypertarget{class_t_form1_a9a2b36b411d7a73a6f386586b9c6b28b}\index{TForm1@{TForm1}!LabelMecanismo@{LabelMecanismo}}
+\index{LabelMecanismo@{LabelMecanismo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{LabelMecanismo}{LabelMecanismo}}
+{\footnotesize\ttfamily \label{class_t_form1_a9a2b36b411d7a73a6f386586b9c6b28b} 
+TLabel\texorpdfstring{$\ast$}{*} TForm1::\+\+Label\+Mecanismo}
+
+\Hypertarget{class_t_form1_a09ac49a6cb43d562b19137da61d2c371}\index{TForm1@{TForm1}!LabelMostrarEcCinetica@{LabelMostrarEcCinetica}}
+\index{LabelMostrarEcCinetica@{LabelMostrarEcCinetica}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{LabelMostrarEcCinetica}{LabelMostrarEcCinetica}}
+{\footnotesize\ttfamily \label{class_t_form1_a09ac49a6cb43d562b19137da61d2c371} 
+TLabel\texorpdfstring{$\ast$}{*} TForm1::\+\+Label\+Mostrar\+Ec\+Cinetica}
+
+\Hypertarget{class_t_form1_abea774ddc34a5d12d34a568a48bdaca1}\index{TForm1@{TForm1}!LabelSalida@{LabelSalida}}
+\index{LabelSalida@{LabelSalida}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{LabelSalida}{LabelSalida}}
+{\footnotesize\ttfamily \label{class_t_form1_abea774ddc34a5d12d34a568a48bdaca1} 
+TLabel\texorpdfstring{$\ast$}{*} TForm1::\+\+Label\+Salida}
+
+\Hypertarget{class_t_form1_a344f8330a3a7b26735eea0f2d4c43408}\index{TForm1@{TForm1}!LabelSimulacion@{LabelSimulacion}}
+\index{LabelSimulacion@{LabelSimulacion}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{LabelSimulacion}{LabelSimulacion}}
+{\footnotesize\ttfamily \label{class_t_form1_a344f8330a3a7b26735eea0f2d4c43408} 
+TLabel\texorpdfstring{$\ast$}{*} TForm1::\+\+Label\+Simulacion}
+
+\Hypertarget{class_t_form1_a37c438ffb801cc74af48c65d2d770a39}\index{TForm1@{TForm1}!LabelTiempoFinal@{LabelTiempoFinal}}
+\index{LabelTiempoFinal@{LabelTiempoFinal}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{LabelTiempoFinal}{LabelTiempoFinal}}
+{\footnotesize\ttfamily \label{class_t_form1_a37c438ffb801cc74af48c65d2d770a39} 
+TLabel\texorpdfstring{$\ast$}{*} TForm1::\+\+Label\+Tiempo\+Final}
+
+\Hypertarget{class_t_form1_af53c3331a120e002ed121f5f3e14e31d}\index{TForm1@{TForm1}!LabelTiempoInicial@{LabelTiempoInicial}}
+\index{LabelTiempoInicial@{LabelTiempoInicial}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{LabelTiempoInicial}{LabelTiempoInicial}}
+{\footnotesize\ttfamily \label{class_t_form1_af53c3331a120e002ed121f5f3e14e31d} 
+TLabel\texorpdfstring{$\ast$}{*} TForm1::\+\+Label\+Tiempo\+Inicial}
+
+\Hypertarget{class_t_form1_a663d809447cba48ab33d9d44d9e0e42d}\index{TForm1@{TForm1}!MainMenu@{MainMenu}}
+\index{MainMenu@{MainMenu}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{MainMenu}{MainMenu}}
+{\footnotesize\ttfamily \label{class_t_form1_a663d809447cba48ab33d9d44d9e0e42d} 
+TMain\+Menu\texorpdfstring{$\ast$}{*} TForm1::\+\+Main\+Menu}
+
+\Hypertarget{class_t_form1_a9afd818096bbc9d90b0d8a948d598b3a}\index{TForm1@{TForm1}!ManualUsuario@{ManualUsuario}}
+\index{ManualUsuario@{ManualUsuario}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{ManualUsuario}{ManualUsuario}}
+{\footnotesize\ttfamily \label{class_t_form1_a9afd818096bbc9d90b0d8a948d598b3a} 
+TMenu\+Item\texorpdfstring{$\ast$}{*} TForm1::\+\+Manual\+Usuario}
+
+\Hypertarget{class_t_form1_a8c7ccdd0b566fdc4f31a07f1b610d609}\index{TForm1@{TForm1}!MemoSalidaSimTexto@{MemoSalidaSimTexto}}
+\index{MemoSalidaSimTexto@{MemoSalidaSimTexto}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{MemoSalidaSimTexto}{MemoSalidaSimTexto}}
+{\footnotesize\ttfamily \label{class_t_form1_a8c7ccdd0b566fdc4f31a07f1b610d609} 
+TMemo\texorpdfstring{$\ast$}{*} TForm1::\+\+Memo\+Salida\+Sim\+Texto}
+
+\Hypertarget{class_t_form1_ab4a8940161709859783d852d614ff27d}\index{TForm1@{TForm1}!MemoSalidaValidacion@{MemoSalidaValidacion}}
+\index{MemoSalidaValidacion@{MemoSalidaValidacion}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{MemoSalidaValidacion}{MemoSalidaValidacion}}
+{\footnotesize\ttfamily \label{class_t_form1_ab4a8940161709859783d852d614ff27d} 
+TMemo\texorpdfstring{$\ast$}{*} TForm1::\+\+Memo\+Salida\+Validacion}
+
+\Hypertarget{class_t_form1_aa9e86c2dba2b22b377d54ef1dcde453a}\index{TForm1@{TForm1}!MemoTextoEntrada@{MemoTextoEntrada}}
+\index{MemoTextoEntrada@{MemoTextoEntrada}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{MemoTextoEntrada}{MemoTextoEntrada}}
+{\footnotesize\ttfamily \label{class_t_form1_aa9e86c2dba2b22b377d54ef1dcde453a} 
+TMemo\texorpdfstring{$\ast$}{*} TForm1::\+\+Memo\+Texto\+Entrada}
+
+\Hypertarget{class_t_form1_aef11bfb2a9d3c4f6043d2539a9b5eab4}\index{TForm1@{TForm1}!model@{model}}
+\index{model@{model}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \label{class_t_form1_aef11bfb2a9d3c4f6043d2539a9b5eab4} 
+\doxymbox{\hyperlink{class_t_model}{TModel}} TForm1::\+model\hspace{0.3cm}{\ttfamily [private]}}
+
+Objeto \doxylink{class_t_model}{TModel} asociado al formulario abierto. \Hypertarget{class_t_form1_a10c77fa78d21fe66c8fa60032e6b1494}\index{TForm1@{TForm1}!MostrarEcReaccion@{MostrarEcReaccion}}
+\index{MostrarEcReaccion@{MostrarEcReaccion}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{MostrarEcReaccion}{MostrarEcReaccion}}
+{\footnotesize\ttfamily \label{class_t_form1_a10c77fa78d21fe66c8fa60032e6b1494} 
+TPanel\texorpdfstring{$\ast$}{*} TForm1::\+\+Mostrar\+Ec\+Reaccion}
+
+\Hypertarget{class_t_form1_a653321ee99a43a437b35dbcfe45efc8a}\index{TForm1@{TForm1}!NuevoArchivo@{NuevoArchivo}}
+\index{NuevoArchivo@{NuevoArchivo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{NuevoArchivo}{NuevoArchivo}}
+{\footnotesize\ttfamily \label{class_t_form1_a653321ee99a43a437b35dbcfe45efc8a} 
+TMenu\+Item\texorpdfstring{$\ast$}{*} TForm1::\+\+Nuevo\+Archivo}
+
+\Hypertarget{class_t_form1_a18b6c7736500126b008f5fc1ff5ee453}\index{TForm1@{TForm1}!PageControlSalida@{PageControlSalida}}
+\index{PageControlSalida@{PageControlSalida}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{PageControlSalida}{PageControlSalida}}
+{\footnotesize\ttfamily \label{class_t_form1_a18b6c7736500126b008f5fc1ff5ee453} 
+TPage\+Control\texorpdfstring{$\ast$}{*} TForm1::\+\+Page\+Control\+Salida}
+
+\Hypertarget{class_t_form1_abb7627f3c59fc6e6799ab147a878a169}\index{TForm1@{TForm1}!PanelEleccionMetodo@{PanelEleccionMetodo}}
+\index{PanelEleccionMetodo@{PanelEleccionMetodo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{PanelEleccionMetodo}{PanelEleccionMetodo}}
+{\footnotesize\ttfamily \label{class_t_form1_abb7627f3c59fc6e6799ab147a878a169} 
+TPanel\texorpdfstring{$\ast$}{*} TForm1::\+\+Panel\+Eleccion\+Metodo}
+
+\Hypertarget{class_t_form1_aa7fdd54b41e0cedd27cd7fd6284d5d55}\index{TForm1@{TForm1}!PanelEntradaDatos@{PanelEntradaDatos}}
+\index{PanelEntradaDatos@{PanelEntradaDatos}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{PanelEntradaDatos}{PanelEntradaDatos}}
+{\footnotesize\ttfamily \label{class_t_form1_aa7fdd54b41e0cedd27cd7fd6284d5d55} 
+TPanel\texorpdfstring{$\ast$}{*} TForm1::\+\+Panel\+Entrada\+Datos}
+
+\Hypertarget{class_t_form1_a93c988cb499157d0681bd7082a5cf977}\index{TForm1@{TForm1}!PanelSalidaDatos@{PanelSalidaDatos}}
+\index{PanelSalidaDatos@{PanelSalidaDatos}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{PanelSalidaDatos}{PanelSalidaDatos}}
+{\footnotesize\ttfamily \label{class_t_form1_a93c988cb499157d0681bd7082a5cf977} 
+TPanel\texorpdfstring{$\ast$}{*} TForm1::\+\+Panel\+Salida\+Datos}
+
+\Hypertarget{class_t_form1_ae7dae94601eefe835743dbe8d1ae2623}\index{TForm1@{TForm1}!PanelSimulacion@{PanelSimulacion}}
+\index{PanelSimulacion@{PanelSimulacion}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{PanelSimulacion}{PanelSimulacion}}
+{\footnotesize\ttfamily \label{class_t_form1_ae7dae94601eefe835743dbe8d1ae2623} 
+TPanel\texorpdfstring{$\ast$}{*} TForm1::\+\+Panel\+Simulacion}
+
+\Hypertarget{class_t_form1_a8b16c264f2bda8a6c197690317bd17df}\index{TForm1@{TForm1}!Resultados@{Resultados}}
+\index{Resultados@{Resultados}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{Resultados}{Resultados}}
+{\footnotesize\ttfamily \label{class_t_form1_a8b16c264f2bda8a6c197690317bd17df} 
+TMenu\+Item\texorpdfstring{$\ast$}{*} TForm1::\+\+Resultados}
+
+\Hypertarget{class_t_form1_a3e7d1ab4251df32ffbec3a73083cfe92}\index{TForm1@{TForm1}!SaveEcuaciones@{SaveEcuaciones}}
+\index{SaveEcuaciones@{SaveEcuaciones}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{SaveEcuaciones}{SaveEcuaciones}}
+{\footnotesize\ttfamily \label{class_t_form1_a3e7d1ab4251df32ffbec3a73083cfe92} 
+TSave\+Text\+File\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Save\+Ecuaciones}
+
+\Hypertarget{class_t_form1_ad4d23c9c9929b1edb9e1b1073795c111}\index{TForm1@{TForm1}!SaveGraficaSimulacion@{SaveGraficaSimulacion}}
+\index{SaveGraficaSimulacion@{SaveGraficaSimulacion}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{SaveGraficaSimulacion}{SaveGraficaSimulacion}}
+{\footnotesize\ttfamily \label{class_t_form1_ad4d23c9c9929b1edb9e1b1073795c111} 
+TSave\+Text\+File\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Save\+Grafica\+Simulacion}
+
+\Hypertarget{class_t_form1_aa895da18090366efcec368f3a68e9a2f}\index{TForm1@{TForm1}!SaveTablaSimulacion@{SaveTablaSimulacion}}
+\index{SaveTablaSimulacion@{SaveTablaSimulacion}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{SaveTablaSimulacion}{SaveTablaSimulacion}}
+{\footnotesize\ttfamily \label{class_t_form1_aa895da18090366efcec368f3a68e9a2f} 
+TSave\+Text\+File\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Save\+Tabla\+Simulacion}
+
+\Hypertarget{class_t_form1_aa712cb01027b39f9f81f190ae99213b7}\index{TForm1@{TForm1}!SaveTextFileDialog@{SaveTextFileDialog}}
+\index{SaveTextFileDialog@{SaveTextFileDialog}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{SaveTextFileDialog}{SaveTextFileDialog}}
+{\footnotesize\ttfamily \label{class_t_form1_aa712cb01027b39f9f81f190ae99213b7} 
+TSave\+Text\+File\+Dialog\texorpdfstring{$\ast$}{*} TForm1::\+\+Save\+Text\+File\+Dialog}
+
+\Hypertarget{class_t_form1_a9211b1e013014197ef85fec1fbbbdb28}\index{TForm1@{TForm1}!simulation@{simulation}}
+\index{simulation@{simulation}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{simulation}{simulation}}
+{\footnotesize\ttfamily \label{class_t_form1_a9211b1e013014197ef85fec1fbbbdb28} 
+\doxymbox{\hyperlink{class_t_simulation}{TSimulation}} TForm1::\+simulation\hspace{0.3cm}{\ttfamily [private]}}
+
+Objeto \doxylink{class_t_simulation}{TSimulation} asociado al formaulario abierto. \Hypertarget{class_t_form1_ac911a8c3298f01dea8af80d132fa847c}\index{TForm1@{TForm1}!SpinCiclos@{SpinCiclos}}
+\index{SpinCiclos@{SpinCiclos}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{SpinCiclos}{SpinCiclos}}
+{\footnotesize\ttfamily \label{class_t_form1_ac911a8c3298f01dea8af80d132fa847c} 
+TSpin\+Edit\texorpdfstring{$\ast$}{*} TForm1::\+\+Spin\+Ciclos}
+
+\Hypertarget{class_t_form1_aa482bab5f28b9388e3b2892078dfa7a9}\index{TForm1@{TForm1}!SpinTiempoFinal@{SpinTiempoFinal}}
+\index{SpinTiempoFinal@{SpinTiempoFinal}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{SpinTiempoFinal}{SpinTiempoFinal}}
+{\footnotesize\ttfamily \label{class_t_form1_aa482bab5f28b9388e3b2892078dfa7a9} 
+TSpin\+Edit\texorpdfstring{$\ast$}{*} TForm1::\+\+Spin\+Tiempo\+Final}
+
+\Hypertarget{class_t_form1_a17af3972cdda8d1dadd0738018aae617}\index{TForm1@{TForm1}!SpinTiempoInicial@{SpinTiempoInicial}}
+\index{SpinTiempoInicial@{SpinTiempoInicial}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{SpinTiempoInicial}{SpinTiempoInicial}}
+{\footnotesize\ttfamily \label{class_t_form1_a17af3972cdda8d1dadd0738018aae617} 
+TSpin\+Edit\texorpdfstring{$\ast$}{*} TForm1::\+\+Spin\+Tiempo\+Inicial}
+
+\Hypertarget{class_t_form1_a251b602e4aa43042da5e2acf5a237f12}\index{TForm1@{TForm1}!Splitter1@{Splitter1}}
+\index{Splitter1@{Splitter1}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{Splitter1}{Splitter1}}
+{\footnotesize\ttfamily \label{class_t_form1_a251b602e4aa43042da5e2acf5a237f12} 
+TSplitter\texorpdfstring{$\ast$}{*} TForm1::\+\+Splitter1}
+
+\Hypertarget{class_t_form1_a798d3b58aedc24d649a7201fcf9e0a72}\index{TForm1@{TForm1}!StringGrid@{StringGrid}}
+\index{StringGrid@{StringGrid}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{StringGrid}{StringGrid}}
+{\footnotesize\ttfamily \label{class_t_form1_a798d3b58aedc24d649a7201fcf9e0a72} 
+TString\+Grid\texorpdfstring{$\ast$}{*} TForm1::\+\+String\+Grid}
+
+\Hypertarget{class_t_form1_a77d371cc46133d52648d9671f962960d}\index{TForm1@{TForm1}!SubirArchivo@{SubirArchivo}}
+\index{SubirArchivo@{SubirArchivo}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{SubirArchivo}{SubirArchivo}}
+{\footnotesize\ttfamily \label{class_t_form1_a77d371cc46133d52648d9671f962960d} 
+TMenu\+Item\texorpdfstring{$\ast$}{*} TForm1::\+\+Subir\+Archivo}
+
+\Hypertarget{class_t_form1_ac32c021ce06fd2303fcd5216543946b5}\index{TForm1@{TForm1}!Tabla@{Tabla}}
+\index{Tabla@{Tabla}!TForm1@{TForm1}}
+\doxyparagraph{\texorpdfstring{Tabla}{Tabla}}
+{\footnotesize\ttfamily \label{class_t_form1_ac32c021ce06fd2303fcd5216543946b5} 
+TTab\+Sheet\texorpdfstring{$\ast$}{*} TForm1::\+\+Tabla}
+
+
+
+La documentación de esta clase está generada de los siguientes archivos:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_unit1_8h}{Unit1.\+h}}\item 
+\doxymbox{\hyperlink{_unit1_8cpp}{Unit1.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="TMMUniBiInhibidor" name="TMMUniBiInhibidor">
+<area shape="rect" id="Node000001" title="Representa un mecanismo de tipo Michaelis&#45;Menten con un sustrato, dos productos e inhibicion competit..." alt="" coords="14,1012,176,1209"/>
+<area shape="rect" id="Node000002" href="$class_t_mechanism.html" title="Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo." alt="" coords="14,531,176,963"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,975,97,1013,92,1012,94,980"/>
+<area shape="rect" id="Node000003" href="$class_t_model.html" title="Clase para encapsular un modelo completo, que representa una ruta metabolica especifica." alt="" coords="5,5,184,459"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,456,97,514,92,514,95,461"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="TModel::fillReactionsComboBox" name="TModel::fillReactionsComboBox">
+<area shape="rect" id="Node000001" title="Rellena el objeto comboReactions con la lista de las reacciones cargadas en el modelo." alt="" coords="5,31,215,57"/>
+<area shape="rect" id="Node000002" href="$class_t_model.html#ad52f88995427f27d7c4edac053104ea3" title="Devuelve el numero de reacciones que contiene el modelo." alt="" coords="263,5,422,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,30,250,29,244,30,215,35"/>
+<area shape="rect" id="Node000003" href="$class_t_model.html#a6fbeb65e6363c98330168932b3ca9aaa" title="Dado el indice de una reaccion, la busca en el vector de reacciones del modelo." alt="" coords="271,56,414,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="215,53,258,60,253,60,215,58"/>
+</map>

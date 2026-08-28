@@ -1,0 +1,5 @@
+<map id="THillInhibidorActivador::setInverseRateShow" name="THillInhibidorActivador::setInverseRateShow">
+<area shape="rect" id="Node000001" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="214,5,366,48"/>
+<area shape="rect" id="Node000002" href="$class_t_hill_inhibidor_activador.html#aa500c80dc4d5647b281f67063009228a" title="Constructor de la clase THillInhibidorActivador. Llama al constructor del padre, rellena los atributo..." alt="" coords="5,5,166,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,27,166,29,166,24,201,26"/>
+</map>

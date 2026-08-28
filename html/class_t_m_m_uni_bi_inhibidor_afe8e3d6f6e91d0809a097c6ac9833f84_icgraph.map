@@ -1,0 +1,5 @@
+<map id="TMMUniBiInhibidor::setDirectRateShow" name="TMMUniBiInhibidor::setDirectRateShow">
+<area shape="rect" id="Node000001" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="194,5,334,48"/>
+<area shape="rect" id="Node000002" href="$class_t_m_m_uni_bi_inhibidor.html#a27f1f61c93dc9400e2111c7e84bfb813" title="Constructor de la clase TMMUniBiInhibidor. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="5,5,146,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,27,146,29,146,24,181,26"/>
+</map>

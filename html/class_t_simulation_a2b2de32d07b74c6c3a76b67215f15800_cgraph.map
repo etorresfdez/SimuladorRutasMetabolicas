@@ -1,0 +1,5 @@
+<map id="TSimulation::exportResultsToCSV" name="TSimulation::exportResultsToCSV">
+<area shape="rect" id="Node000001" title="Exporta los resultados de la simulacion en un archivo csv." alt="" coords="5,5,185,48"/>
+<area shape="rect" id="Node000002" href="$class_t_simulation.html#a1179f8897b35b9798dd3da62049d6c43" title="Dado un indice, devuelve el nombre del metabolito que ocupa esa posicion en el vector de concNames." alt="" coords="233,13,444,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,24,220,26,214,27,185,29"/>
+</map>

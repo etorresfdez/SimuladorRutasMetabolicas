@@ -1,0 +1,5 @@
+<map id="TMMBiBiInhibidor::CheckElements" name="TMMBiBiInhibidor::CheckElements">
+<area shape="rect" id="Node000001" title="Comprueba que se envian los parametros propios del mecanismo MMBiBiInhibidor: [Vmax,..." alt="" coords="240,13,465,40"/>
+<area shape="rect" id="Node000002" href="$class_t_m_m_bi_bi_inhibidor.html#afd7921f14f90bb419de8d1dd53d27e13" title="Constructor de la clase TMMBiBiInhibidor. Llama al constructor del padre, rellena los atributos propi..." alt="" coords="5,5,192,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,27,192,29,192,24,227,26"/>
+</map>

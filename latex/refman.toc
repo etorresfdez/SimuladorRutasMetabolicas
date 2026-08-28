@@ -1,0 +1,414 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Índice jerárquico}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Jerarquía de clases}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Índice de clases}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Lista de clases}{2}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Índice de archivos}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Lista de archivos}{3}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Documentación de clases}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Referencia de la clase TForm1}{3}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Descripción detallada}{9}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Documentación de constructores y destructores}{9}{subsubsection.4.1.2}%
+\contentsline {paragraph}{TForm1()}{9}{section*.6}%
+\contentsline {subsubsection}{\numberline {4.1.3}Documentación de funciones miembro}{9}{subsubsection.4.1.3}%
+\contentsline {paragraph}{AcercaDeClick()}{9}{section*.7}%
+\contentsline {paragraph}{BtnLanzarSimulacionClick()}{10}{section*.8}%
+\contentsline {paragraph}{BtnMecanismoClick()}{10}{section*.9}%
+\contentsline {paragraph}{BtnMetabolitoClick()}{10}{section*.10}%
+\contentsline {paragraph}{BtnMostrarSistemaClick()}{10}{section*.11}%
+\contentsline {paragraph}{BtnParametroClick()}{11}{section*.12}%
+\contentsline {paragraph}{BtnReaccionClick()}{11}{section*.13}%
+\contentsline {paragraph}{BtnValidarDatosClick()}{11}{section*.14}%
+\contentsline {paragraph}{CargarEjemploClick()}{12}{section*.15}%
+\contentsline {paragraph}{ComboInsertarMecanismoChange()}{12}{section*.16}%
+\contentsline {paragraph}{ComboMostrarReaccionChange()}{12}{section*.17}%
+\contentsline {paragraph}{FormClose()}{13}{section*.19}%
+\contentsline {paragraph}{FormResize()}{13}{section*.20}%
+\contentsline {paragraph}{GuardarArchivoClick()}{13}{section*.21}%
+\contentsline {paragraph}{GuardarEcuacionesClick()}{13}{section*.22}%
+\contentsline {paragraph}{GuardarGraficaClick()}{14}{section*.24}%
+\contentsline {paragraph}{GuardarTablaClick()}{14}{section*.25}%
+\contentsline {paragraph}{ImageGraficaDblClick()}{15}{section*.26}%
+\contentsline {paragraph}{infoMecClick()}{15}{section*.27}%
+\contentsline {paragraph}{infoMetaClick()}{15}{section*.28}%
+\contentsline {paragraph}{infoMetodoClick()}{15}{section*.29}%
+\contentsline {paragraph}{infoParamClick()}{16}{section*.30}%
+\contentsline {paragraph}{infoReacClick()}{16}{section*.31}%
+\contentsline {paragraph}{ManualUsuarioClick()}{16}{section*.32}%
+\contentsline {paragraph}{MemoTextoEntradaChange()}{16}{section*.33}%
+\contentsline {paragraph}{NuevoArchivoClick()}{17}{section*.34}%
+\contentsline {paragraph}{Splitter1CanResize()}{17}{section*.35}%
+\contentsline {paragraph}{Splitter1Moved()}{17}{section*.36}%
+\contentsline {paragraph}{StringGridDrawCell()}{17}{section*.37}%
+\contentsline {paragraph}{SubirArchivoClick()}{18}{section*.38}%
+\contentsline {subsubsection}{\numberline {4.1.4}Documentación de datos miembro}{18}{subsubsection.4.1.4}%
+\contentsline {paragraph}{AcercaDe}{18}{section*.39}%
+\contentsline {paragraph}{Archivo}{18}{section*.40}%
+\contentsline {paragraph}{Ayuda}{18}{section*.41}%
+\contentsline {paragraph}{BtnLanzarSimulacion}{18}{section*.42}%
+\contentsline {paragraph}{BtnMetabolito}{18}{section*.43}%
+\contentsline {paragraph}{BtnMostrarSistema}{19}{section*.44}%
+\contentsline {paragraph}{BtnParametro}{19}{section*.45}%
+\contentsline {paragraph}{BtnReaccion}{19}{section*.46}%
+\contentsline {paragraph}{BtnValidarDatos}{19}{section*.47}%
+\contentsline {paragraph}{CargarEjemplo}{19}{section*.48}%
+\contentsline {paragraph}{ComboEleccionMetodo}{19}{section*.49}%
+\contentsline {paragraph}{ComboInsertarMecanismo}{19}{section*.50}%
+\contentsline {paragraph}{ComboMostrarReaccion}{19}{section*.51}%
+\contentsline {paragraph}{datosValidados}{19}{section*.52}%
+\contentsline {paragraph}{DialogAcercaDe}{19}{section*.53}%
+\contentsline {paragraph}{DialogIntroducirDatos}{20}{section*.54}%
+\contentsline {paragraph}{DialogManualUsuario}{20}{section*.55}%
+\contentsline {paragraph}{DialogMecanismo}{20}{section*.56}%
+\contentsline {paragraph}{DialogMetabolito}{20}{section*.57}%
+\contentsline {paragraph}{DialogMetodo}{20}{section*.58}%
+\contentsline {paragraph}{DialogNoGrafica}{20}{section*.59}%
+\contentsline {paragraph}{DialogNoTabla}{20}{section*.60}%
+\contentsline {paragraph}{DialogNuevoPanelEntrada}{20}{section*.61}%
+\contentsline {paragraph}{DialogParametro}{20}{section*.62}%
+\contentsline {paragraph}{DialogPrimeroValida}{20}{section*.63}%
+\contentsline {paragraph}{DialogReaccion}{21}{section*.64}%
+\contentsline {paragraph}{DialogSubirArchivo}{21}{section*.65}%
+\contentsline {paragraph}{entradaVacia}{21}{section*.66}%
+\contentsline {paragraph}{Grafica}{21}{section*.67}%
+\contentsline {paragraph}{GridBotonesEntrada}{21}{section*.68}%
+\contentsline {paragraph}{GridBotonesSimulacion}{21}{section*.69}%
+\contentsline {paragraph}{GuardarArchivo}{21}{section*.70}%
+\contentsline {paragraph}{GuardarEcuaciones}{21}{section*.71}%
+\contentsline {paragraph}{GuardarGrafica}{21}{section*.72}%
+\contentsline {paragraph}{GuardarTabla}{21}{section*.73}%
+\contentsline {paragraph}{ImageGrafica}{22}{section*.74}%
+\contentsline {paragraph}{infoMec}{22}{section*.75}%
+\contentsline {paragraph}{infoMeta}{22}{section*.76}%
+\contentsline {paragraph}{infoMetodo}{22}{section*.77}%
+\contentsline {paragraph}{infoParam}{22}{section*.78}%
+\contentsline {paragraph}{infoReac}{22}{section*.79}%
+\contentsline {paragraph}{InsertarMecanismo}{22}{section*.80}%
+\contentsline {paragraph}{LabelCiclos}{22}{section*.81}%
+\contentsline {paragraph}{LabelEleccionMetodo}{22}{section*.82}%
+\contentsline {paragraph}{LabelEntradaDatos}{22}{section*.83}%
+\contentsline {paragraph}{LabelMecanismo}{23}{section*.84}%
+\contentsline {paragraph}{LabelMostrarEcCinetica}{23}{section*.85}%
+\contentsline {paragraph}{LabelSalida}{23}{section*.86}%
+\contentsline {paragraph}{LabelSimulacion}{23}{section*.87}%
+\contentsline {paragraph}{LabelTiempoFinal}{23}{section*.88}%
+\contentsline {paragraph}{LabelTiempoInicial}{23}{section*.89}%
+\contentsline {paragraph}{MainMenu}{23}{section*.90}%
+\contentsline {paragraph}{ManualUsuario}{23}{section*.91}%
+\contentsline {paragraph}{MemoSalidaSimTexto}{23}{section*.92}%
+\contentsline {paragraph}{MemoSalidaValidacion}{23}{section*.93}%
+\contentsline {paragraph}{MemoTextoEntrada}{24}{section*.94}%
+\contentsline {paragraph}{model}{24}{section*.95}%
+\contentsline {paragraph}{MostrarEcReaccion}{24}{section*.96}%
+\contentsline {paragraph}{NuevoArchivo}{24}{section*.97}%
+\contentsline {paragraph}{PageControlSalida}{24}{section*.98}%
+\contentsline {paragraph}{PanelEleccionMetodo}{24}{section*.99}%
+\contentsline {paragraph}{PanelEntradaDatos}{24}{section*.100}%
+\contentsline {paragraph}{PanelSalidaDatos}{24}{section*.101}%
+\contentsline {paragraph}{PanelSimulacion}{24}{section*.102}%
+\contentsline {paragraph}{Resultados}{24}{section*.103}%
+\contentsline {paragraph}{SaveEcuaciones}{25}{section*.104}%
+\contentsline {paragraph}{SaveGraficaSimulacion}{25}{section*.105}%
+\contentsline {paragraph}{SaveTablaSimulacion}{25}{section*.106}%
+\contentsline {paragraph}{SaveTextFileDialog}{25}{section*.107}%
+\contentsline {paragraph}{simulation}{25}{section*.108}%
+\contentsline {paragraph}{SpinCiclos}{25}{section*.109}%
+\contentsline {paragraph}{SpinTiempoFinal}{25}{section*.110}%
+\contentsline {paragraph}{SpinTiempoInicial}{25}{section*.111}%
+\contentsline {paragraph}{Splitter1}{25}{section*.112}%
+\contentsline {paragraph}{StringGrid}{25}{section*.113}%
+\contentsline {paragraph}{SubirArchivo}{26}{section*.114}%
+\contentsline {paragraph}{Tabla}{26}{section*.115}%
+\contentsline {subsection}{\numberline {4.2}Referencia de la clase TForm2}{26}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Descripción detallada}{27}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Documentación de constructores y destructores}{27}{subsubsection.4.2.2}%
+\contentsline {paragraph}{TForm2()}{27}{section*.120}%
+\contentsline {subsubsection}{\numberline {4.2.3}Documentación de datos miembro}{28}{subsubsection.4.2.3}%
+\contentsline {paragraph}{ImageGrafica}{28}{section*.121}%
+\contentsline {subsection}{\numberline {4.3}Referencia de la clase THill\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inhibidor\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Activador}{28}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Descripción detallada}{32}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Documentación de constructores y destructores}{32}{subsubsection.4.3.2}%
+\contentsline {paragraph}{THillInhibidorActivador()}{32}{section*.129}%
+\contentsline {subsubsection}{\numberline {4.3.3}Documentación de funciones miembro}{32}{subsubsection.4.3.3}%
+\contentsline {paragraph}{CheckElements()}{32}{section*.131}%
+\contentsline {paragraph}{setDirectRatePython()}{33}{section*.134}%
+\contentsline {paragraph}{setDirectRateShow()}{34}{section*.137}%
+\contentsline {paragraph}{setInverseRatePython()}{35}{section*.140}%
+\contentsline {paragraph}{setInverseRateShow()}{35}{section*.142}%
+\contentsline {subsection}{\numberline {4.4}Referencia de la estructura TInstant\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Result}{36}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Descripción detallada}{36}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Documentación de datos miembro}{36}{subsubsection.4.4.2}%
+\contentsline {paragraph}{tiempo}{36}{section*.146}%
+\contentsline {paragraph}{valores}{36}{section*.147}%
+\contentsline {subsection}{\numberline {4.5}Referencia de la clase TMass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Action}{37}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Descripción detallada}{40}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Documentación de constructores y destructores}{40}{subsubsection.4.5.2}%
+\contentsline {paragraph}{TMassAction()}{40}{section*.155}%
+\contentsline {subsubsection}{\numberline {4.5.3}Documentación de funciones miembro}{40}{subsubsection.4.5.3}%
+\contentsline {paragraph}{buildRateEquation()}{40}{section*.157}%
+\contentsline {paragraph}{CheckElements()}{41}{section*.160}%
+\contentsline {paragraph}{setDirectRatePython()}{42}{section*.163}%
+\contentsline {paragraph}{setDirectRateShow()}{43}{section*.166}%
+\contentsline {paragraph}{setInverseRatePython()}{44}{section*.169}%
+\contentsline {paragraph}{setInverseRateShow()}{44}{section*.172}%
+\contentsline {subsection}{\numberline {4.6}Referencia de la clase TMechanism}{45}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Descripción detallada}{48}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}Documentación de constructores y destructores}{48}{subsubsection.4.6.2}%
+\contentsline {paragraph}{TMechanism()}{48}{section*.181}%
+\contentsline {paragraph}{$\sim $TMechanism()}{49}{section*.183}%
+\contentsline {subsubsection}{\numberline {4.6.3}Documentación de funciones miembro}{49}{subsubsection.4.6.3}%
+\contentsline {paragraph}{CheckElements()}{49}{section*.184}%
+\contentsline {paragraph}{getDirectRatePython()}{49}{section*.185}%
+\contentsline {paragraph}{getDirectRateShow()}{50}{section*.187}%
+\contentsline {paragraph}{getInverseRatePython()}{50}{section*.189}%
+\contentsline {paragraph}{getInverseRateShow()}{51}{section*.191}%
+\contentsline {paragraph}{getMechParams()}{51}{section*.193}%
+\contentsline {paragraph}{getMechType()}{52}{section*.195}%
+\contentsline {paragraph}{getNMechParams()}{53}{section*.197}%
+\contentsline {paragraph}{getReaction()}{54}{section*.199}%
+\contentsline {paragraph}{getReactionName()}{55}{section*.202}%
+\contentsline {paragraph}{setDirectRatePython()}{56}{section*.204}%
+\contentsline {paragraph}{setDirectRateShow()}{57}{section*.205}%
+\contentsline {paragraph}{setInverseRatePython()}{57}{section*.206}%
+\contentsline {paragraph}{setInverseRateShow()}{57}{section*.207}%
+\contentsline {paragraph}{toString()}{57}{section*.208}%
+\contentsline {subsubsection}{\numberline {4.6.4}Documentación de datos miembro}{58}{subsubsection.4.6.4}%
+\contentsline {paragraph}{directRatePython}{58}{section*.210}%
+\contentsline {paragraph}{directRateShow}{58}{section*.211}%
+\contentsline {paragraph}{inputTemplate}{58}{section*.212}%
+\contentsline {paragraph}{inverseRatePython}{59}{section*.213}%
+\contentsline {paragraph}{inverseRateShow}{59}{section*.214}%
+\contentsline {paragraph}{mechanismType}{59}{section*.215}%
+\contentsline {paragraph}{mechParams}{59}{section*.216}%
+\contentsline {paragraph}{model}{59}{section*.217}%
+\contentsline {paragraph}{reactionName}{59}{section*.218}%
+\contentsline {subsection}{\numberline {4.7}Referencia de la clase TMetabolite}{60}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}Descripción detallada}{61}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}Documentación de constructores y destructores}{61}{subsubsection.4.7.2}%
+\contentsline {paragraph}{TMetabolite()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{61}{section*.224}%
+\contentsline {paragraph}{TMetabolite()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{62}{section*.225}%
+\contentsline {subsubsection}{\numberline {4.7.3}Documentación de funciones miembro}{62}{subsubsection.4.7.3}%
+\contentsline {paragraph}{FloatToStrDot()}{62}{section*.227}%
+\contentsline {paragraph}{getFullName()}{63}{section*.229}%
+\contentsline {paragraph}{getInitialValue()}{63}{section*.230}%
+\contentsline {paragraph}{getShortName()}{63}{section*.231}%
+\contentsline {paragraph}{setInitialValue()}{64}{section*.233}%
+\contentsline {paragraph}{StrToFloatDot()}{65}{section*.234}%
+\contentsline {paragraph}{toString()}{65}{section*.236}%
+\contentsline {subsubsection}{\numberline {4.7.4}Documentación de datos miembro}{66}{subsubsection.4.7.4}%
+\contentsline {paragraph}{fullName}{66}{section*.238}%
+\contentsline {paragraph}{initialValue}{66}{section*.239}%
+\contentsline {paragraph}{inputTemplate}{66}{section*.240}%
+\contentsline {paragraph}{shortName}{66}{section*.241}%
+\contentsline {subsection}{\numberline {4.8}Referencia de la clase TMMBi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inhibidor}{66}{subsection.4.8}%
+\contentsline {subsubsection}{\numberline {4.8.1}Descripción detallada}{70}{subsubsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.2}Documentación de constructores y destructores}{70}{subsubsection.4.8.2}%
+\contentsline {paragraph}{TMMBiBiInhibidor()}{70}{section*.249}%
+\contentsline {subsubsection}{\numberline {4.8.3}Documentación de funciones miembro}{71}{subsubsection.4.8.3}%
+\contentsline {paragraph}{BuildDenominator()}{71}{section*.251}%
+\contentsline {paragraph}{CheckElements()}{72}{section*.254}%
+\contentsline {paragraph}{setDirectRatePython()}{73}{section*.257}%
+\contentsline {paragraph}{setDirectRateShow()}{73}{section*.260}%
+\contentsline {paragraph}{setInverseRatePython()}{74}{section*.263}%
+\contentsline {paragraph}{setInverseRateShow()}{75}{section*.266}%
+\contentsline {subsection}{\numberline {4.9}Referencia de la clase TMMBi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sec\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Aleatorio}{75}{subsection.4.9}%
+\contentsline {subsubsection}{\numberline {4.9.1}Descripción detallada}{79}{subsubsection.4.9.1}%
+\contentsline {subsubsection}{\numberline {4.9.2}Documentación de constructores y destructores}{79}{subsubsection.4.9.2}%
+\contentsline {paragraph}{TMMBiSecAleatorio()}{79}{section*.276}%
+\contentsline {subsubsection}{\numberline {4.9.3}Documentación de funciones miembro}{80}{subsubsection.4.9.3}%
+\contentsline {paragraph}{BuildDenominator()}{80}{section*.278}%
+\contentsline {paragraph}{CheckElements()}{81}{section*.281}%
+\contentsline {paragraph}{setDirectRatePython()}{82}{section*.284}%
+\contentsline {paragraph}{setDirectRateShow()}{82}{section*.287}%
+\contentsline {paragraph}{setInverseRatePython()}{83}{section*.290}%
+\contentsline {paragraph}{setInverseRateShow()}{84}{section*.293}%
+\contentsline {subsection}{\numberline {4.10}Referencia de la clase TMMUni\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inhibidor}{84}{subsection.4.10}%
+\contentsline {subsubsection}{\numberline {4.10.1}Descripción detallada}{88}{subsubsection.4.10.1}%
+\contentsline {subsubsection}{\numberline {4.10.2}Documentación de constructores y destructores}{88}{subsubsection.4.10.2}%
+\contentsline {paragraph}{TMMUniBiInhibidor()}{88}{section*.303}%
+\contentsline {subsubsection}{\numberline {4.10.3}Documentación de funciones miembro}{89}{subsubsection.4.10.3}%
+\contentsline {paragraph}{BuildDenominator()}{89}{section*.305}%
+\contentsline {paragraph}{CheckElements()}{90}{section*.308}%
+\contentsline {paragraph}{setDirectRatePython()}{91}{section*.311}%
+\contentsline {paragraph}{setDirectRateShow()}{91}{section*.314}%
+\contentsline {paragraph}{setInverseRatePython()}{92}{section*.317}%
+\contentsline {paragraph}{setInverseRateShow()}{93}{section*.320}%
+\contentsline {subsection}{\numberline {4.11}Referencia de la clase TMMUni\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inhibidor}{93}{subsection.4.11}%
+\contentsline {subsubsection}{\numberline {4.11.1}Descripción detallada}{97}{subsubsection.4.11.1}%
+\contentsline {subsubsection}{\numberline {4.11.2}Documentación de constructores y destructores}{97}{subsubsection.4.11.2}%
+\contentsline {paragraph}{TMMUniInhibidor()}{97}{section*.330}%
+\contentsline {subsubsection}{\numberline {4.11.3}Documentación de funciones miembro}{98}{subsubsection.4.11.3}%
+\contentsline {paragraph}{BuildDenominator()}{98}{section*.332}%
+\contentsline {paragraph}{CheckElements()}{99}{section*.335}%
+\contentsline {paragraph}{setDirectRatePython()}{99}{section*.338}%
+\contentsline {paragraph}{setDirectRateShow()}{100}{section*.341}%
+\contentsline {paragraph}{setInverseRatePython()}{101}{section*.344}%
+\contentsline {paragraph}{setInverseRateShow()}{101}{section*.347}%
+\contentsline {subsection}{\numberline {4.12}Referencia de la clase TModel}{102}{subsection.4.12}%
+\contentsline {subsubsection}{\numberline {4.12.1}Descripción detallada}{105}{subsubsection.4.12.1}%
+\contentsline {subsubsection}{\numberline {4.12.2}Documentación de constructores y destructores}{105}{subsubsection.4.12.2}%
+\contentsline {paragraph}{TModel()}{105}{section*.354}%
+\contentsline {subsubsection}{\numberline {4.12.3}Documentación de funciones miembro}{106}{subsubsection.4.12.3}%
+\contentsline {paragraph}{addMechanism()}{106}{section*.357}%
+\contentsline {paragraph}{addMetabolite()}{106}{section*.358}%
+\contentsline {paragraph}{addParameter()}{106}{section*.359}%
+\contentsline {paragraph}{addReaction()}{106}{section*.360}%
+\contentsline {paragraph}{BuildEquations()}{107}{section*.361}%
+\contentsline {paragraph}{Clear()}{107}{section*.363}%
+\contentsline {paragraph}{CreateMechanism()}{108}{section*.364}%
+\contentsline {paragraph}{fillMechanismComboBox()}{108}{section*.366}%
+\contentsline {paragraph}{fillReactionsComboBox()}{108}{section*.367}%
+\contentsline {paragraph}{findMetabolite()}{109}{section*.369}%
+\contentsline {paragraph}{findParameter()}{109}{section*.370}%
+\contentsline {paragraph}{findReaction()}{110}{section*.371}%
+\contentsline {paragraph}{getAllEquationsPython()}{110}{section*.372}%
+\contentsline {paragraph}{getAllInitialConcen()}{110}{section*.373}%
+\contentsline {paragraph}{getAllMetaboliteNames()}{111}{section*.375}%
+\contentsline {paragraph}{getAllParameters()}{111}{section*.377}%
+\contentsline {paragraph}{getEquationPython()}{112}{section*.379}%
+\contentsline {paragraph}{getEquationShow()}{112}{section*.380}%
+\contentsline {paragraph}{getEquationShowCondensed()}{112}{section*.381}%
+\contentsline {paragraph}{getMechanism()}{113}{section*.382}%
+\contentsline {paragraph}{getMechanismTemplate()}{113}{section*.383}%
+\contentsline {paragraph}{getMetabolite()}{113}{section*.384}%
+\contentsline {paragraph}{getNMechanisms()}{114}{section*.386}%
+\contentsline {paragraph}{getNMetabolites()}{114}{section*.388}%
+\contentsline {paragraph}{getNParameters()}{115}{section*.390}%
+\contentsline {paragraph}{getNReactions()}{115}{section*.392}%
+\contentsline {paragraph}{getParameter()}{116}{section*.394}%
+\contentsline {paragraph}{getReaction()}{117}{section*.396}%
+\contentsline {paragraph}{givesMechanism()}{117}{section*.398}%
+\contentsline {paragraph}{indexOfMetabolite()}{118}{section*.401}%
+\contentsline {paragraph}{indexOfParameter()}{118}{section*.402}%
+\contentsline {paragraph}{initMechanismTemplates()}{119}{section*.403}%
+\contentsline {subsubsection}{\numberline {4.12.4}Documentación de datos miembro}{119}{subsubsection.4.12.4}%
+\contentsline {paragraph}{equationsPython}{119}{section*.405}%
+\contentsline {paragraph}{equationsShow}{119}{section*.406}%
+\contentsline {paragraph}{equationsShowCondensed}{119}{section*.407}%
+\contentsline {paragraph}{mechanisms}{119}{section*.408}%
+\contentsline {paragraph}{mechanismTemplates}{120}{section*.409}%
+\contentsline {paragraph}{metabolites}{120}{section*.410}%
+\contentsline {paragraph}{parameters}{120}{section*.411}%
+\contentsline {paragraph}{reactions}{120}{section*.412}%
+\contentsline {subsection}{\numberline {4.13}Referencia de la clase TParameter}{120}{subsection.4.13}%
+\contentsline {subsubsection}{\numberline {4.13.1}Descripción detallada}{122}{subsubsection.4.13.1}%
+\contentsline {subsubsection}{\numberline {4.13.2}Documentación de constructores y destructores}{122}{subsubsection.4.13.2}%
+\contentsline {paragraph}{TParameter()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{122}{section*.418}%
+\contentsline {paragraph}{TParameter()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{122}{section*.419}%
+\contentsline {subsubsection}{\numberline {4.13.3}Documentación de funciones miembro}{123}{subsubsection.4.13.3}%
+\contentsline {paragraph}{FloatToStrDot()}{123}{section*.421}%
+\contentsline {paragraph}{getFullName()}{123}{section*.423}%
+\contentsline {paragraph}{getShortName()}{123}{section*.424}%
+\contentsline {paragraph}{getValue()}{124}{section*.425}%
+\contentsline {paragraph}{StrToFloatDot()}{124}{section*.426}%
+\contentsline {paragraph}{toString()}{124}{section*.428}%
+\contentsline {subsubsection}{\numberline {4.13.4}Documentación de datos miembro}{125}{subsubsection.4.13.4}%
+\contentsline {paragraph}{fullName}{125}{section*.430}%
+\contentsline {paragraph}{inputTemplate}{125}{section*.431}%
+\contentsline {paragraph}{shortName}{125}{section*.432}%
+\contentsline {paragraph}{value}{125}{section*.433}%
+\contentsline {subsection}{\numberline {4.14}Referencia de la clase TReaction}{126}{subsection.4.14}%
+\contentsline {subsubsection}{\numberline {4.14.1}Descripción detallada}{127}{subsubsection.4.14.1}%
+\contentsline {subsubsection}{\numberline {4.14.2}Documentación de constructores y destructores}{128}{subsubsection.4.14.2}%
+\contentsline {paragraph}{TReaction()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{128}{section*.439}%
+\contentsline {paragraph}{TReaction()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{128}{section*.440}%
+\contentsline {subsubsection}{\numberline {4.14.3}Documentación de funciones miembro}{129}{subsubsection.4.14.3}%
+\contentsline {paragraph}{DividesCoeffMetabolite()}{129}{section*.442}%
+\contentsline {paragraph}{getDirectionString()}{129}{section*.445}%
+\contentsline {paragraph}{getFullName()}{130}{section*.447}%
+\contentsline {paragraph}{getNProducts()}{130}{section*.448}%
+\contentsline {paragraph}{getNReactants()}{131}{section*.450}%
+\contentsline {paragraph}{getProduct()}{131}{section*.452}%
+\contentsline {paragraph}{getReactant()}{132}{section*.454}%
+\contentsline {paragraph}{getShortName()}{133}{section*.456}%
+\contentsline {paragraph}{ReadsSubstances()}{134}{section*.458}%
+\contentsline {paragraph}{StrToFloatDot()}{135}{section*.461}%
+\contentsline {paragraph}{toString()}{135}{section*.463}%
+\contentsline {subsubsection}{\numberline {4.14.4}Documentación de datos miembro}{136}{subsubsection.4.14.4}%
+\contentsline {paragraph}{fullName}{136}{section*.465}%
+\contentsline {paragraph}{inputTemplate}{136}{section*.466}%
+\contentsline {paragraph}{model}{136}{section*.467}%
+\contentsline {paragraph}{products}{136}{section*.468}%
+\contentsline {paragraph}{reactants}{137}{section*.469}%
+\contentsline {paragraph}{sentido}{137}{section*.470}%
+\contentsline {paragraph}{shortName}{137}{section*.471}%
+\contentsline {subsection}{\numberline {4.15}Referencia de la clase TSimulation}{137}{subsection.4.15}%
+\contentsline {subsubsection}{\numberline {4.15.1}Descripción detallada}{140}{subsubsection.4.15.1}%
+\contentsline {subsubsection}{\numberline {4.15.2}Documentación de constructores y destructores}{140}{subsubsection.4.15.2}%
+\contentsline {paragraph}{TSimulation()}{140}{section*.475}%
+\contentsline {subsubsection}{\numberline {4.15.3}Documentación de funciones miembro}{140}{subsubsection.4.15.3}%
+\contentsline {paragraph}{borrarArchivosAntiguos()}{140}{section*.476}%
+\contentsline {paragraph}{BuildInputCSV()}{141}{section*.478}%
+\contentsline {paragraph}{createTableResults()}{142}{section*.481}%
+\contentsline {paragraph}{ejecutarComando()}{142}{section*.483}%
+\contentsline {paragraph}{exportResultsToCSV()}{143}{section*.485}%
+\contentsline {paragraph}{fillNumericMethodComboBox()}{143}{section*.487}%
+\contentsline {paragraph}{getCiclos()}{143}{section*.488}%
+\contentsline {paragraph}{getInstanteSimulacion()}{144}{section*.489}%
+\contentsline {paragraph}{getMethodString()}{144}{section*.490}%
+\contentsline {paragraph}{getNameMetabolite()}{144}{section*.492}%
+\contentsline {paragraph}{getNumericMethodFromString()}{145}{section*.494}%
+\contentsline {paragraph}{ReadOutputCSV()}{145}{section*.495}%
+\contentsline {paragraph}{resultadosIsEmpty()}{146}{section*.497}%
+\contentsline {paragraph}{runSimulation()}{146}{section*.498}%
+\contentsline {paragraph}{setCicles()}{146}{section*.500}%
+\contentsline {paragraph}{setConcenNames()}{147}{section*.501}%
+\contentsline {paragraph}{setEquations()}{147}{section*.502}%
+\contentsline {paragraph}{setFinalTime()}{147}{section*.503}%
+\contentsline {paragraph}{setInitialConcen()}{147}{section*.504}%
+\contentsline {paragraph}{setInitialTime()}{148}{section*.505}%
+\contentsline {paragraph}{setNumericMethod()}{148}{section*.506}%
+\contentsline {paragraph}{setParameters()}{148}{section*.507}%
+\contentsline {paragraph}{setTiempoEmpleado()}{148}{section*.508}%
+\contentsline {subsubsection}{\numberline {4.15.4}Documentación de datos miembro}{149}{subsubsection.4.15.4}%
+\contentsline {paragraph}{ciclos}{149}{section*.509}%
+\contentsline {paragraph}{concIni}{149}{section*.510}%
+\contentsline {paragraph}{concNames}{149}{section*.511}%
+\contentsline {paragraph}{ecuaciones}{149}{section*.512}%
+\contentsline {paragraph}{metodo}{149}{section*.513}%
+\contentsline {paragraph}{numericMethods}{149}{section*.514}%
+\contentsline {paragraph}{params}{149}{section*.515}%
+\contentsline {paragraph}{resultados}{150}{section*.516}%
+\contentsline {paragraph}{tfin}{150}{section*.517}%
+\contentsline {paragraph}{tiempoEmpleado}{150}{section*.518}%
+\contentsline {paragraph}{tini}{150}{section*.519}%
+\contentsline {subsection}{\numberline {4.16}Referencia de la estructura TSubstance}{150}{subsection.4.16}%
+\contentsline {subsubsection}{\numberline {4.16.1}Descripción detallada}{151}{subsubsection.4.16.1}%
+\contentsline {subsubsection}{\numberline {4.16.2}Documentación de datos miembro}{151}{subsubsection.4.16.2}%
+\contentsline {paragraph}{coefficient}{151}{section*.522}%
+\contentsline {paragraph}{substance}{152}{section*.523}%
+\contentsline {section}{\numberline {5}Documentación de archivos}{152}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Referencia del archivo Metabolic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Elements.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{152}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Referencia del archivo Metabolic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Elements.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{152}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Documentación de enumeraciones}{154}{subsubsection.5.2.1}%
+\contentsline {paragraph}{TMechanismType}{154}{section*.529}%
+\contentsline {paragraph}{TReactionDirection}{154}{section*.530}%
+\contentsline {subsection}{\numberline {5.3}Metabolic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Elements.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{155}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Referencia del archivo Prototipo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{160}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Documentación de funciones}{160}{subsubsection.5.4.1}%
+\contentsline {paragraph}{\_tWinMain()}{160}{section*.533}%
+\contentsline {paragraph}{USEFORM()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{160}{section*.534}%
+\contentsline {paragraph}{USEFORM()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{161}{section*.535}%
+\contentsline {subsection}{\numberline {5.5}Referencia del archivo Prototipo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PCH1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{161}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Prototipo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PCH1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{161}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Referencia del archivo Simulation.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{161}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Referencia del archivo Simulation.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{162}{subsection.5.8}%
+\contentsline {subsubsection}{\numberline {5.8.1}Documentación de enumeraciones}{163}{subsubsection.5.8.1}%
+\contentsline {paragraph}{NumericMethod}{163}{section*.542}%
+\contentsline {subsection}{\numberline {5.9}Simulation.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{163}{subsection.5.9}%
+\contentsline {subsection}{\numberline {5.10}Referencia del archivo Unit1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{164}{subsection.5.10}%
+\contentsline {subsubsection}{\numberline {5.10.1}Documentación de variables}{165}{subsubsection.5.10.1}%
+\contentsline {paragraph}{Form1}{165}{section*.545}%
+\contentsline {subsection}{\numberline {5.11}Referencia del archivo Unit1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{165}{subsection.5.11}%
+\contentsline {subsubsection}{\numberline {5.11.1}Documentación de variables}{166}{subsubsection.5.11.1}%
+\contentsline {paragraph}{Form1}{166}{section*.550}%
+\contentsline {subsection}{\numberline {5.12}Unit1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{166}{subsection.5.12}%
+\contentsline {subsection}{\numberline {5.13}Referencia del archivo Unit2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{168}{subsection.5.13}%
+\contentsline {subsubsection}{\numberline {5.13.1}Documentación de variables}{169}{subsubsection.5.13.1}%
+\contentsline {paragraph}{Form2}{169}{section*.553}%
+\contentsline {subsection}{\numberline {5.14}Referencia del archivo Unit2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{169}{subsection.5.14}%
+\contentsline {subsubsection}{\numberline {5.14.1}Documentación de variables}{170}{subsubsection.5.14.1}%
+\contentsline {paragraph}{Form2}{170}{section*.558}%
+\contentsline {subsection}{\numberline {5.15}Unit2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{170}{subsection.5.15}%
+\contentsline {section}{\'{I}ndice alfab\'{e}tico}{173}{section*.559}%

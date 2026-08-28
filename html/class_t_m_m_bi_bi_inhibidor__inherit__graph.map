@@ -1,0 +1,5 @@
+<map id="TMMBiBiInhibidor" name="TMMBiBiInhibidor">
+<area shape="rect" id="Node000001" title="Representa un mecanismo de tipo Michaelis&#45;Menten con dos sustratos, dos productos e inhibicion compet..." alt="" coords="5,507,167,704"/>
+<area shape="rect" id="Node000002" href="$class_t_mechanism.html" title="Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo." alt="" coords="5,5,167,459"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,471,89,507,84,507,86,476"/>
+</map>

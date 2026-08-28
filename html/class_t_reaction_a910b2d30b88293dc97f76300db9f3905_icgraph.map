@@ -1,0 +1,9 @@
+<map id="TReaction::getDirectionString" name="TReaction::getDirectionString">
+<area shape="rect" id="Node000001" title="Devuelve el sentido de la reaccion." alt="" coords="269,80,462,107"/>
+<area shape="rect" id="Node000002" href="$class_t_form1.html#a592eff540cbc9ff77e21d833059b9a39" title="Al seleccionar una reaccion de la lista de reacciones cargadas, muestra la ecuacion cinetica generada..." alt="" coords="5,5,221,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="295,76,196,51,197,46,300,74"/>
+<area shape="rect" id="Node000003" href="$class_t_form1.html#a4054d1c2b1745192b6b1cff6fee0bcd5" title="Accion que se realiza al darle al boton &#39;Guardar ecuaciones y sistema&#39; del menu. Genera un archivo tx..." alt="" coords="19,72,207,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,94,208,96,208,91,256,93"/>
+<area shape="rect" id="Node000004" href="$class_t_reaction.html#affa3bd3d32b5a15fc41ada24088fedb3" title="Muestra la reaccion guardada y sus atributos." alt="" coords="46,139,180,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="293,110,174,141,173,135,287,111"/>
+</map>

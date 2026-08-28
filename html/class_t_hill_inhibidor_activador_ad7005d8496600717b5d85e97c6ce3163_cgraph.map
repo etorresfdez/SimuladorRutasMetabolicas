@@ -1,0 +1,5 @@
+<map id="THillInhibidorActivador::setDirectRateShow" name="THillInhibidorActivador::setDirectRateShow">
+<area shape="rect" id="Node000001" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="5,5,158,48"/>
+<area shape="rect" id="Node000002" href="$class_t_mechanism.html#a2a8fa75aa79ff89533af07051e1a1007" title="Devuelve el parametro del mecanismo de la posicion &#39;i&#39;." alt="" coords="206,13,405,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,24,193,26,187,27,158,29"/>
+</map>

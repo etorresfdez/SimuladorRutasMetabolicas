@@ -1,0 +1,7 @@
+<map id="TModel::getAllParameters" name="TModel::getAllParameters">
+<area shape="rect" id="Node000001" title="Devuelve un vector con todos los parametros guardados en el modelo." alt="" coords="5,31,178,57"/>
+<area shape="rect" id="Node000002" href="$class_t_model.html#ab6b1b9169e0ef2b450020638d187d9c6" title="Devuelve el numero de parametros que contiene el modelo." alt="" coords="226,5,393,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,31,213,30,208,31,178,37"/>
+<area shape="rect" id="Node000003" href="$class_t_model.html#ae6fa3c29934151ab3f70edbfbaa0a1fd" title="Dado el indice de un parametro, lo busca en el vector de parametros del modelo." alt="" coords="234,56,384,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,51,221,59,216,59,178,57"/>
+</map>

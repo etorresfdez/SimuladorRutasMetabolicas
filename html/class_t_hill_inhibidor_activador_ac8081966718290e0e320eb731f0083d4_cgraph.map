@@ -1,0 +1,13 @@
+<map id="THillInhibidorActivador::CheckElements" name="THillInhibidorActivador::CheckElements">
+<area shape="rect" id="Node000001" title="Comprueba que se envian los parametros propios del mecanismo HillInhibidorActivador: [Vmax,..." alt="" coords="5,73,158,116"/>
+<area shape="rect" id="Node000002" href="$class_t_mechanism.html#a2a8fa75aa79ff89533af07051e1a1007" title="Devuelve el parametro del mecanismo de la posicion &#39;i&#39;." alt="" coords="211,5,410,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,70,205,41,234,35,229,38,207,47,132,75"/>
+<area shape="rect" id="Node000003" href="$class_t_mechanism.html#a83135bad08af9d4416b57f7fe7c73493" title="Devuelve el nombre del tipo de mecanismo." alt="" coords="219,56,402,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,84,206,80,201,82,159,89"/>
+<area shape="rect" id="Node000004" href="$class_t_mechanism.html#ad3082b5258b9df20f86bad71acd6bdfb" title="Devuelve el numero de parametros del mecanismo guardados." alt="" coords="206,107,415,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="158,100,192,106,187,107,158,106"/>
+<area shape="rect" id="Node000005" href="$class_t_mechanism.html#a952aaf0c9f7c5f2ab95e20ba55cdde4d" title="Devuelve un puntero a la reaccion dada su nombre." alt="" coords="223,157,398,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="132,114,207,143,234,153,229,153,205,148,131,119"/>
+<area shape="rect" id="Node000006" href="$class_t_mechanism.html#a4645ac8a1913d474bded3ccb4f0b75ba" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="463,157,672,184"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="398,168,450,171,445,171,398,173"/>
+</map>

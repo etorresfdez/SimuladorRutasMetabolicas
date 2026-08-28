@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2026/06/01 01:43:51.000.515,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2026/06/01 01:43:51.000.682,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2026/06/01 01:45:07.000.733,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Prototipo.cbproj=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2026/06/01 01:45:07.000.722,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\PrototipoPCH1.h=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2026/06/01 01:50:38.000.783,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Prototipo.cbproj=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Prototipo.cbproj</Transaction>
+    <Transaction>2026/06/06 17:33:44.000.819,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\File1.h</Transaction>
+    <Transaction>2026/06/06 17:37:17.000.378,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\MetabolicElements.h=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\File1.h</Transaction>
+    <Transaction>2026/06/06 17:39:09.000.341,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2026/06/06 17:39:28.000.921,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\MetabolicElements.cpp=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2026/06/22 00:20:26.000.257,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\File1.h</Transaction>
+    <Transaction>2026/06/22 00:20:37.000.683,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Simulation.h=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\File1.h</Transaction>
+    <Transaction>2026/06/22 00:22:06.000.201,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2026/06/22 00:22:18.000.352,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Simulation.cpp=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2026/06/23 23:19:49.000.562,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\json.hpp</Transaction>
+    <Transaction>2026/06/23 23:19:56.000.072,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\script_simulation.py</Transaction>
+    <Transaction>2026/06/23 23:22:13.000.798,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\json.hpp=</Transaction>
+    <Transaction>2026/06/26 21:12:04.000.974,=C:\Users\usuario\Desktop\TFG\pruebas_metodos_numericos\script2.py</Transaction>
+    <Transaction>2026/06/26 21:12:23.000.545,C:\Users\usuario\Desktop\TFG\pruebas_metodos_numericos\script2.py=</Transaction>
+    <Transaction>2026/06/26 21:12:39.000.650,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\script2.py</Transaction>
+    <Transaction>2026/06/27 03:02:34.000.526,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\script2.py=</Transaction>
+    <Transaction>2026/06/27 12:30:09.000.478,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\script_simulation_csv.py</Transaction>
+    <Transaction>2026/06/28 20:25:57.000.791,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\script_simulation_csv.py=</Transaction>
+    <Transaction>2026/06/30 21:00:26.000.972,=C:\Users\usuario\Desktop\TFG\aplicacion\docDoxygen\docHTML.html</Transaction>
+    <Transaction>2026/06/30 21:00:27.000.052,=C:\Users\usuario\Desktop\TFG\aplicacion\docDoxygen\docPDF.pdf</Transaction>
+    <Transaction>2026/06/30 21:01:54.000.176,C:\Users\usuario\Desktop\TFG\aplicacion\docDoxygen\docPDF.pdf=</Transaction>
+    <Transaction>2026/06/30 21:01:58.000.130,C:\Users\usuario\Desktop\TFG\aplicacion\docDoxygen\docHTML.html=</Transaction>
+    <Transaction>2026/06/30 21:24:21.000.659,=C:\Users\usuario\Desktop\TFG\aplicacion\docDoxygen\docPDF.pdf</Transaction>
+    <Transaction>2026/06/30 21:24:21.000.626,=C:\Users\usuario\Desktop\TFG\aplicacion\docDoxygen\docHTML.html</Transaction>
+    <Transaction>2026/06/30 21:25:00.000.339,C:\Users\usuario\Desktop\TFG\aplicacion\docDoxygen\docHTML.html=</Transaction>
+    <Transaction>2026/06/30 21:25:05.000.885,C:\Users\usuario\Desktop\TFG\aplicacion\docDoxygen\docPDF.pdf=</Transaction>
+    <Transaction>2026/06/30 21:26:02.000.362,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\docPDF.pdf</Transaction>
+    <Transaction>2026/06/30 21:26:02.000.345,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\docHTML.html</Transaction>
+    <Transaction>2026/06/30 21:27:05.000.981,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\doc\docPDF.pdf</Transaction>
+    <Transaction>2026/06/30 21:27:05.000.965,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\doc\docHTML.html</Transaction>
+    <Transaction>2026/06/30 23:25:31.000.850,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\doc\docPDF.pdf=</Transaction>
+    <Transaction>2026/06/30 23:25:40.000.732,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\doc\docHTML.html=</Transaction>
+    <Transaction>2026/07/01 00:01:14.000.945,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\script_simulation_csv.exe</Transaction>
+    <Transaction>2026/07/01 00:05:55.000.552,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\script_simulation_csv.exe=</Transaction>
+    <Transaction>2026/08/08 17:21:09.000.243,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+  </Transactions>
+</BorlandProject>

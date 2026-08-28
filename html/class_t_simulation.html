@@ -1,0 +1,1189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prototipo Simulacion Rutas Metabolicas: Referencia de la clase TSimulation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Prototipo Simulacion Rutas Metabolicas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_t_simulation.html','','class_t_simulation-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase TSimulation</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Clase para encapsular el proceso de simulacion.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_simulation_8h_source.html">Simulation.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboración de TSimulation:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_simulation__coll__graph.png" border="0" usemap="#a_t_simulation_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_t_simulation_coll__map" id="a_t_simulation_coll__map">
+<area shape="rect" title="Clase para encapsular el proceso de simulacion." alt="" coords="5,5,211,501"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:adb7ba8268e6da71da3df64ef6e4c1f93" id="r_adb7ba8268e6da71da3df64ef6e4c1f93"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adb7ba8268e6da71da3df64ef6e4c1f93">TSimulation</a> (int p_tini=0, int p_tfin=10, int p_ciclos=50, <a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a> p_metodo=<a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524ab414936a367cf5ba31aa943c386835e6">Radau</a>)</td></tr>
+<tr class="memdesc:adb7ba8268e6da71da3df64ef6e4c1f93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>. Tiene valores por defecto.  <br /></td></tr>
+<tr class="memitem:af66f4d31f2472ddbf5f41b3f34bfd1a0" id="r_af66f4d31f2472ddbf5f41b3f34bfd1a0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af66f4d31f2472ddbf5f41b3f34bfd1a0">fillNumericMethodComboBox</a> (TComboBox *comboMetodos)</td></tr>
+<tr class="memdesc:af66f4d31f2472ddbf5f41b3f34bfd1a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rellena el objeto comboEleccionMeotodo con la lista de metodos numericos disponibles.  <br /></td></tr>
+<tr class="memitem:a1533509999ef2fc5afbf762fb0aaaabb" id="r_a1533509999ef2fc5afbf762fb0aaaabb"><td class="memItemLeft"><a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1533509999ef2fc5afbf762fb0aaaabb">getNumericMethodFromString</a> (String metodo)</td></tr>
+<tr class="memdesc:a1533509999ef2fc5afbf762fb0aaaabb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Efectua la conversion de string a enumerador <a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524" title="enum NumericMethod. Enumerado para representar los distintos metodos numericos considerados.">NumericMethod</a> usando el mapa numericMethods.  <br /></td></tr>
+<tr class="memitem:a0d84cc40166a3b41972680ebf7dd75e5" id="r_a0d84cc40166a3b41972680ebf7dd75e5"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a0d84cc40166a3b41972680ebf7dd75e5">getMethodString</a> (<a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a> metodoEnum)</td></tr>
+<tr class="memdesc:a0d84cc40166a3b41972680ebf7dd75e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dado un enumerado sobre el metodo numerico, lo devuelve en formato String.  <br /></td></tr>
+<tr class="memitem:a1179f8897b35b9798dd3da62049d6c43" id="r_a1179f8897b35b9798dd3da62049d6c43"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a1179f8897b35b9798dd3da62049d6c43">getNameMetabolite</a> (int i)</td></tr>
+<tr class="memdesc:a1179f8897b35b9798dd3da62049d6c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dado un indice, devuelve el nombre del metabolito que ocupa esa posicion en el vector de concNames.  <br /></td></tr>
+<tr class="memitem:a1a7464a967a330a9a77530700a003b6d" id="r_a1a7464a967a330a9a77530700a003b6d"><td class="memItemLeft"><a class="el" href="struct_t_instant_result.html">TInstantResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1a7464a967a330a9a77530700a003b6d">getInstanteSimulacion</a> (int i)</td></tr>
+<tr class="memdesc:a1a7464a967a330a9a77530700a003b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve los datos del instante 'i' de la simulacion.  <br /></td></tr>
+<tr class="memitem:a59b9f6cd7fcad8d9988c795136c5f276" id="r_a59b9f6cd7fcad8d9988c795136c5f276"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a59b9f6cd7fcad8d9988c795136c5f276">getCiclos</a> ()</td></tr>
+<tr class="memdesc:a59b9f6cd7fcad8d9988c795136c5f276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve los ciclos de la simulacion. Corresponde con el total de instantes de simulacion generados.  <br /></td></tr>
+<tr class="memitem:aba131c282bea7c36d6b9ba839ef6e502" id="r_aba131c282bea7c36d6b9ba839ef6e502"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aba131c282bea7c36d6b9ba839ef6e502">resultadosIsEmpty</a> ()</td></tr>
+<tr class="memdesc:aba131c282bea7c36d6b9ba839ef6e502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve true si el atributo 'resultados' esta vacio, false en caso contrario.  <br /></td></tr>
+<tr class="memitem:a215dd256dccffa170f7f93e36f26aceb" id="r_a215dd256dccffa170f7f93e36f26aceb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a215dd256dccffa170f7f93e36f26aceb">setInitialTime</a> (int ini)</td></tr>
+<tr class="memdesc:a215dd256dccffa170f7f93e36f26aceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia el atributo tini de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>. Si no es un valor &gt;= 0 lanza una excepcion.  <br /></td></tr>
+<tr class="memitem:a7d478a7641e046a4dbbe98122c5f4684" id="r_a7d478a7641e046a4dbbe98122c5f4684"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7d478a7641e046a4dbbe98122c5f4684">setFinalTime</a> (int fin)</td></tr>
+<tr class="memdesc:a7d478a7641e046a4dbbe98122c5f4684"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia el atributo tfin de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>. Si no es un valor positivo y mayor que tini, lanza una excepcion.  <br /></td></tr>
+<tr class="memitem:a24873d4f99cd7eb15bcc482f667bc8e4" id="r_a24873d4f99cd7eb15bcc482f667bc8e4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a24873d4f99cd7eb15bcc482f667bc8e4">setCicles</a> (int cicles)</td></tr>
+<tr class="memdesc:a24873d4f99cd7eb15bcc482f667bc8e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia el atributo ciclos de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>. Si no es un valor positivo lanza una excepcion.  <br /></td></tr>
+<tr class="memitem:a730b51b4e96092ed58a5ea48321199ec" id="r_a730b51b4e96092ed58a5ea48321199ec"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a730b51b4e96092ed58a5ea48321199ec">setTiempoEmpleado</a> (double time)</td></tr>
+<tr class="memdesc:a730b51b4e96092ed58a5ea48321199ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza el tiempo empleado en la simulacion.  <br /></td></tr>
+<tr class="memitem:a36868a14362d4fcb8fb26ae1e17cfcf1" id="r_a36868a14362d4fcb8fb26ae1e17cfcf1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a36868a14362d4fcb8fb26ae1e17cfcf1">setNumericMethod</a> (<a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a> method)</td></tr>
+<tr class="memdesc:a36868a14362d4fcb8fb26ae1e17cfcf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia el atributo metodo de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>.  <br /></td></tr>
+<tr class="memitem:adee42fb5f7d938a90928d9800352e916" id="r_adee42fb5f7d938a90928d9800352e916"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adee42fb5f7d938a90928d9800352e916">setConcenNames</a> (const std::vector&lt; String &gt; &amp;c)</td></tr>
+<tr class="memdesc:adee42fb5f7d938a90928d9800352e916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia el atributo concNames de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>.  <br /></td></tr>
+<tr class="memitem:af6d175e2cea59c791a0f87cd320e86cb" id="r_af6d175e2cea59c791a0f87cd320e86cb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af6d175e2cea59c791a0f87cd320e86cb">setInitialConcen</a> (const std::vector&lt; double &gt; &amp;ini)</td></tr>
+<tr class="memdesc:af6d175e2cea59c791a0f87cd320e86cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia el atributo concIni de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>.  <br /></td></tr>
+<tr class="memitem:a8764e6db857f41783c2192b5d121db2f" id="r_a8764e6db857f41783c2192b5d121db2f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8764e6db857f41783c2192b5d121db2f">setEquations</a> (const std::vector&lt; String &gt; &amp;equations)</td></tr>
+<tr class="memdesc:a8764e6db857f41783c2192b5d121db2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia el atributo ecuaciones de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>.  <br /></td></tr>
+<tr class="memitem:a93af6bb92b6dde7c7798af04c8bc3650" id="r_a93af6bb92b6dde7c7798af04c8bc3650"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a93af6bb92b6dde7c7798af04c8bc3650">setParameters</a> (const std::vector&lt; double &gt; &amp;p)</td></tr>
+<tr class="memdesc:a93af6bb92b6dde7c7798af04c8bc3650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia el atributo params de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>.  <br /></td></tr>
+<tr class="memitem:a7950e734c85e85bedf4e477980db9a4d" id="r_a7950e734c85e85bedf4e477980db9a4d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7950e734c85e85bedf4e477980db9a4d">runSimulation</a> ()</td></tr>
+<tr class="memdesc:a7950e734c85e85bedf4e477980db9a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lanza la simulacion: crea archivo de entrada de datos para el python y lo ejecuta. Modifica el atributo privado de 'resultados' con los datos obtenidos.  <br /></td></tr>
+<tr class="memitem:a6ec5a7f42ac61f0714296a2ce91d89a6" id="r_a6ec5a7f42ac61f0714296a2ce91d89a6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6ec5a7f42ac61f0714296a2ce91d89a6">ejecutarComando</a> (String comando)</td></tr>
+<tr class="memdesc:a6ec5a7f42ac61f0714296a2ce91d89a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta un comando a traves de la powershell de window.  <br /></td></tr>
+<tr class="memitem:aff057868b43d4ed0fe2420ae8e53e995" id="r_aff057868b43d4ed0fe2420ae8e53e995"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aff057868b43d4ed0fe2420ae8e53e995">borrarArchivosAntiguos</a> ()</td></tr>
+<tr class="memdesc:aff057868b43d4ed0fe2420ae8e53e995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borra los ficheros anteriores de 'input.csv', 'output.csv' y 'grafico.png'.  <br /></td></tr>
+<tr class="memitem:ab6b7ea2b61104059a79336f4c195e8bc" id="r_ab6b7ea2b61104059a79336f4c195e8bc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab6b7ea2b61104059a79336f4c195e8bc">BuildInputCSV</a> ()</td></tr>
+<tr class="memdesc:ab6b7ea2b61104059a79336f4c195e8bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un archivo csv que sirve de entrada para el python que realiza la resolucion numerica del sistema.  <br /></td></tr>
+<tr class="memitem:a528e9ed876aaea22481612e8a6fe2e95" id="r_a528e9ed876aaea22481612e8a6fe2e95"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a528e9ed876aaea22481612e8a6fe2e95">ReadOutputCSV</a> ()</td></tr>
+<tr class="memdesc:a528e9ed876aaea22481612e8a6fe2e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee el archivo 'output.csv' generado por CallPython() y actualiza el contenido del atributo 'resultados'.  <br /></td></tr>
+<tr class="memitem:a2a8e6d65dc879bc45023ebc75aec9001" id="r_a2a8e6d65dc879bc45023ebc75aec9001"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2a8e6d65dc879bc45023ebc75aec9001">createTableResults</a> (TStringGrid *Grid)</td></tr>
+<tr class="memdesc:a2a8e6d65dc879bc45023ebc75aec9001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parte del contenido del atributo 'resultados' y rellena la tabla que se pasa como parametro. En cada fila, para cada instante de tiempo, se muestra el valor de las concentraciones de los metabolitos obtenidas.  <br /></td></tr>
+<tr class="memitem:a2b2de32d07b74c6c3a76b67215f15800" id="r_a2b2de32d07b74c6c3a76b67215f15800"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2b2de32d07b74c6c3a76b67215f15800">exportResultsToCSV</a> (const String &amp;filePath)</td></tr>
+<tr class="memdesc:a2b2de32d07b74c6c3a76b67215f15800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exporta los resultados de la simulacion en un archivo csv.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:acf3e89470d71020a57da0ddd0558fad7" id="r_acf3e89470d71020a57da0ddd0558fad7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acf3e89470d71020a57da0ddd0558fad7">tini</a></td></tr>
+<tr class="memitem:aa178dade5cbab576684b275a296f2338" id="r_aa178dade5cbab576684b275a296f2338"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa178dade5cbab576684b275a296f2338">tfin</a></td></tr>
+<tr class="memitem:a7d1c054cffeee5177c8a11bb71e3b809" id="r_a7d1c054cffeee5177c8a11bb71e3b809"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7d1c054cffeee5177c8a11bb71e3b809">ciclos</a></td></tr>
+<tr class="memitem:af302dc27a30629ecf73efd4047aff26e" id="r_af302dc27a30629ecf73efd4047aff26e"><td class="memItemLeft"><a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a>&#160;</td><td class="memItemRight"><a class="el" href="#af302dc27a30629ecf73efd4047aff26e">metodo</a></td></tr>
+<tr class="memitem:aa53c588f7f27a751e231907d0299ad42" id="r_aa53c588f7f27a751e231907d0299ad42"><td class="memItemLeft">std::vector&lt; String &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa53c588f7f27a751e231907d0299ad42">concNames</a></td></tr>
+<tr class="memitem:ac4a1fdd555c72ac2813cdbaad4d79198" id="r_ac4a1fdd555c72ac2813cdbaad4d79198"><td class="memItemLeft">std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac4a1fdd555c72ac2813cdbaad4d79198">concIni</a></td></tr>
+<tr class="memitem:aa6864bfe51c33b26a7d66a2b053f3e6d" id="r_aa6864bfe51c33b26a7d66a2b053f3e6d"><td class="memItemLeft">std::vector&lt; String &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa6864bfe51c33b26a7d66a2b053f3e6d">ecuaciones</a></td></tr>
+<tr class="memitem:a233dcba25bab8d7cd08aa892eb9a501c" id="r_a233dcba25bab8d7cd08aa892eb9a501c"><td class="memItemLeft">std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a233dcba25bab8d7cd08aa892eb9a501c">params</a></td></tr>
+<tr class="memitem:ad03a54d2c792e3d52987695aede668e5" id="r_ad03a54d2c792e3d52987695aede668e5"><td class="memItemLeft">std::map&lt; String, <a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad03a54d2c792e3d52987695aede668e5">numericMethods</a></td></tr>
+<tr class="memitem:a29fec55282ff71500c06683a3b391375" id="r_a29fec55282ff71500c06683a3b391375"><td class="memItemLeft">std::vector&lt; <a class="el" href="struct_t_instant_result.html">TInstantResult</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a29fec55282ff71500c06683a3b391375">resultados</a></td></tr>
+<tr class="memitem:aad9cfbabd517d703d8c3ecdc71d9df90" id="r_aad9cfbabd517d703d8c3ecdc71d9df90"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#aad9cfbabd517d703d8c3ecdc71d9df90">tiempoEmpleado</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase para encapsular el proceso de simulacion. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="adb7ba8268e6da71da3df64ef6e4c1f93" name="adb7ba8268e6da71da3df64ef6e4c1f93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb7ba8268e6da71da3df64ef6e4c1f93">&#9670;&#160;</a></span>TSimulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSimulation::TSimulation </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>p_tini</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>p_tfin</em></span><span class="paramdefsep"> = </span><span class="paramdefval">10</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>p_ciclos</em></span><span class="paramdefsep"> = </span><span class="paramdefval">50</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a></td>          <td class="paramname"><span class="paramname"><em>p_metodo</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524ab414936a367cf5ba31aa943c386835e6">Radau</a></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor de <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>. Tiene valores por defecto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_tini</td><td>Tiempo inicial de la simulacion, tipo int </td></tr>
+    <tr><td class="paramname">p_tfin</td><td>Tiempo final de la simulacion, tipo int </td></tr>
+    <tr><td class="paramname">p_ciclos</td><td>Numero de pasos de la simulacion, tipo int </td></tr>
+    <tr><td class="paramname">p_metodo</td><td>Metodo mnumerico empleado en la simulacion, tipo <a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524" title="enum NumericMethod. Enumerado para representar los distintos metodos numericos considerados.">NumericMethod</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="aff057868b43d4ed0fe2420ae8e53e995" name="aff057868b43d4ed0fe2420ae8e53e995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff057868b43d4ed0fe2420ae8e53e995">&#9670;&#160;</a></span>borrarArchivosAntiguos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::borrarArchivosAntiguos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Borra los ficheros anteriores de 'input.csv', 'output.csv' y 'grafico.png'. </p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_simulation_aff057868b43d4ed0fe2420ae8e53e995_icgraph.png" border="0" usemap="#aclass_t_simulation_aff057868b43d4ed0fe2420ae8e53e995_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_simulation_aff057868b43d4ed0fe2420ae8e53e995_icgraph" id="aclass_t_simulation_aff057868b43d4ed0fe2420ae8e53e995_icgraph">
+<area shape="rect" title="Borra los ficheros anteriores de &#39;input.csv&#39;, &#39;output.csv&#39; y &#39;grafico.png&#39;." alt="" coords="231,5,413,48"/>
+<area shape="rect" href="class_t_simulation.html#a7950e734c85e85bedf4e477980db9a4d" title="Lanza la simulacion: crea archivo de entrada de datos para el python y lo ejecuta...." alt="" coords="5,13,183,40"/>
+<area shape="poly" title=" " alt="" coords="212,27,183,29,183,24,218,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab6b7ea2b61104059a79336f4c195e8bc" name="ab6b7ea2b61104059a79336f4c195e8bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6b7ea2b61104059a79336f4c195e8bc">&#9670;&#160;</a></span>BuildInputCSV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::BuildInputCSV </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea un archivo csv que sirve de entrada para el python que realiza la resolucion numerica del sistema. </p>
+<p>En concreto, crea el archivo 'input.csv' en la ruta de ejecucion de la aplicacion, que contiene:</p><ul>
+<li>las ecuaciones para la variacion de la concentracion de cada metabolito (ecuaciones)</li>
+<li>las concentraciones iniciales de cada metabolito (concIni)</li>
+<li>los nombres cortos de los metabolitos (concNames)</li>
+<li>todos los parametros implicados (params)</li>
+<li>tiempo inicial (tini)</li>
+<li>tiempo final (tfin)</li>
+<li>ciclos (ciclos)</li>
+<li>metodo numerico a emplear (metodo) </li>
+</ul>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_cgraph.png" border="0" usemap="#aclass_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_cgraph" id="aclass_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_cgraph">
+<area shape="rect" title="Crea un archivo csv que sirve de entrada para el python que realiza la resolucion numerica del sistem..." alt="" coords="5,5,190,32"/>
+<area shape="rect" href="class_t_simulation.html#a0d84cc40166a3b41972680ebf7dd75e5" title="Dado un enumerado sobre el metodo numerico, lo devuelve en formato String." alt="" coords="238,5,431,32"/>
+<area shape="poly" title=" " alt="" coords="190,16,225,19,219,19,190,21"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_icgraph.png" border="0" usemap="#aclass_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_icgraph" id="aclass_t_simulation_ab6b7ea2b61104059a79336f4c195e8bc_icgraph">
+<area shape="rect" title="Crea un archivo csv que sirve de entrada para el python que realiza la resolucion numerica del sistem..." alt="" coords="231,5,415,32"/>
+<area shape="rect" href="class_t_simulation.html#a7950e734c85e85bedf4e477980db9a4d" title="Lanza la simulacion: crea archivo de entrada de datos para el python y lo ejecuta...." alt="" coords="5,5,183,32"/>
+<area shape="poly" title=" " alt="" coords="212,19,183,21,183,16,218,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2a8e6d65dc879bc45023ebc75aec9001" name="a2a8e6d65dc879bc45023ebc75aec9001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a8e6d65dc879bc45023ebc75aec9001">&#9670;&#160;</a></span>createTableResults()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::createTableResults </td>
+          <td>(</td>
+          <td class="paramtype">TStringGrid *</td>          <td class="paramname"><span class="paramname"><em>Grid</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parte del contenido del atributo 'resultados' y rellena la tabla que se pasa como parametro. En cada fila, para cada instante de tiempo, se muestra el valor de las concentraciones de los metabolitos obtenidas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Grid</td><td>puntero a la tabla donde se cargan los datos para que el usuario lo vea en la interfaz. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001_cgraph.png" border="0" usemap="#aclass_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001_cgraph" id="aclass_t_simulation_a2a8e6d65dc879bc45023ebc75aec9001_cgraph">
+<area shape="rect" title="Parte del contenido del atributo &#39;resultados&#39; y rellena la tabla que se pasa como parametro...." alt="" coords="5,5,171,48"/>
+<area shape="rect" href="class_t_simulation.html#a1179f8897b35b9798dd3da62049d6c43" title="Dado un indice, devuelve el nombre del metabolito que ocupa esa posicion en el vector de concNames." alt="" coords="219,13,430,40"/>
+<area shape="poly" title=" " alt="" coords="171,24,206,26,200,27,171,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6ec5a7f42ac61f0714296a2ce91d89a6" name="a6ec5a7f42ac61f0714296a2ce91d89a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ec5a7f42ac61f0714296a2ce91d89a6">&#9670;&#160;</a></span>ejecutarComando()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::ejecutarComando </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>comando</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ejecuta un comando a traves de la powershell de window. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">comando</td><td>string con el comando a ejecutar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6_icgraph.png" border="0" usemap="#aclass_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6_icgraph" id="aclass_t_simulation_a6ec5a7f42ac61f0714296a2ce91d89a6_icgraph">
+<area shape="rect" title="Ejecuta un comando a traves de la powershell de window." alt="" coords="231,5,431,32"/>
+<area shape="rect" href="class_t_simulation.html#a7950e734c85e85bedf4e477980db9a4d" title="Lanza la simulacion: crea archivo de entrada de datos para el python y lo ejecuta...." alt="" coords="5,5,183,32"/>
+<area shape="poly" title=" " alt="" coords="212,19,183,21,183,16,218,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2b2de32d07b74c6c3a76b67215f15800" name="a2b2de32d07b74c6c3a76b67215f15800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b2de32d07b74c6c3a76b67215f15800">&#9670;&#160;</a></span>exportResultsToCSV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::exportResultsToCSV </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exporta los resultados de la simulacion en un archivo csv. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>ruta donde se guarda el archivo 'simulacionTabla.csv' </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_simulation_a2b2de32d07b74c6c3a76b67215f15800_cgraph.png" border="0" usemap="#aclass_t_simulation_a2b2de32d07b74c6c3a76b67215f15800_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_simulation_a2b2de32d07b74c6c3a76b67215f15800_cgraph" id="aclass_t_simulation_a2b2de32d07b74c6c3a76b67215f15800_cgraph">
+<area shape="rect" title="Exporta los resultados de la simulacion en un archivo csv." alt="" coords="5,5,185,48"/>
+<area shape="rect" href="class_t_simulation.html#a1179f8897b35b9798dd3da62049d6c43" title="Dado un indice, devuelve el nombre del metabolito que ocupa esa posicion en el vector de concNames." alt="" coords="233,13,444,40"/>
+<area shape="poly" title=" " alt="" coords="185,24,220,26,214,27,185,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af66f4d31f2472ddbf5f41b3f34bfd1a0" name="af66f4d31f2472ddbf5f41b3f34bfd1a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af66f4d31f2472ddbf5f41b3f34bfd1a0">&#9670;&#160;</a></span>fillNumericMethodComboBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::fillNumericMethodComboBox </td>
+          <td>(</td>
+          <td class="paramtype">TComboBox *</td>          <td class="paramname"><span class="paramname"><em>comboMetodos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rellena el objeto comboEleccionMeotodo con la lista de metodos numericos disponibles. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">comboMetodos</td><td>objeto TComboBox que contendra un desplegable con los metodos numericos disponibles. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a59b9f6cd7fcad8d9988c795136c5f276" name="a59b9f6cd7fcad8d9988c795136c5f276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59b9f6cd7fcad8d9988c795136c5f276">&#9670;&#160;</a></span>getCiclos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TSimulation::getCiclos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve los ciclos de la simulacion. Corresponde con el total de instantes de simulacion generados. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>entero con el numero de ciclos. </dd></dl>
+
+</div>
+</div>
+<a id="a1a7464a967a330a9a77530700a003b6d" name="a1a7464a967a330a9a77530700a003b6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a7464a967a330a9a77530700a003b6d">&#9670;&#160;</a></span>getInstanteSimulacion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_t_instant_result.html">TInstantResult</a> TSimulation::getInstanteSimulacion </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve los datos del instante 'i' de la simulacion. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>instante de la simulacion. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>objeto de tipo <a class="el" href="struct_t_instant_result.html" title="struct TInstantResult. Estructura que almacena, para cada tiempo de la simulacion,...">TInstantResult</a> que contiene el instante temporal y los valores de las concentraciones en ese instante. </dd></dl>
+
+</div>
+</div>
+<a id="a0d84cc40166a3b41972680ebf7dd75e5" name="a0d84cc40166a3b41972680ebf7dd75e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d84cc40166a3b41972680ebf7dd75e5">&#9670;&#160;</a></span>getMethodString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TSimulation::getMethodString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a></td>          <td class="paramname"><span class="paramname"><em>metodoEnum</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dado un enumerado sobre el metodo numerico, lo devuelve en formato String. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">metodoEnum</td><td>enumerado que representa un metodo numerico. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>String metodo numerico correspondiente en formato String. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5_icgraph.png" border="0" usemap="#aclass_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5_icgraph" id="aclass_t_simulation_a0d84cc40166a3b41972680ebf7dd75e5_icgraph">
+<area shape="rect" title="Dado un enumerado sobre el metodo numerico, lo devuelve en formato String." alt="" coords="463,5,656,32"/>
+<area shape="rect" href="class_t_simulation.html#ab6b7ea2b61104059a79336f4c195e8bc" title="Crea un archivo csv que sirve de entrada para el python que realiza la resolucion numerica del sistem..." alt="" coords="231,5,415,32"/>
+<area shape="poly" title=" " alt="" coords="445,19,415,21,415,16,450,19"/>
+<area shape="rect" href="class_t_simulation.html#a7950e734c85e85bedf4e477980db9a4d" title="Lanza la simulacion: crea archivo de entrada de datos para el python y lo ejecuta...." alt="" coords="5,5,183,32"/>
+<area shape="poly" title=" " alt="" coords="212,19,183,21,183,16,218,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1179f8897b35b9798dd3da62049d6c43" name="a1179f8897b35b9798dd3da62049d6c43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1179f8897b35b9798dd3da62049d6c43">&#9670;&#160;</a></span>getNameMetabolite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String TSimulation::getNameMetabolite </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dado un indice, devuelve el nombre del metabolito que ocupa esa posicion en el vector de concNames. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>indice de tipo int. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>String nombre del metabolito que se devuelve. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_simulation_a1179f8897b35b9798dd3da62049d6c43_icgraph.png" border="0" usemap="#aclass_t_simulation_a1179f8897b35b9798dd3da62049d6c43_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_simulation_a1179f8897b35b9798dd3da62049d6c43_icgraph" id="aclass_t_simulation_a1179f8897b35b9798dd3da62049d6c43_icgraph">
+<area shape="rect" title="Dado un indice, devuelve el nombre del metabolito que ocupa esa posicion en el vector de concNames." alt="" coords="233,47,444,73"/>
+<area shape="rect" href="class_t_simulation.html#a2a8e6d65dc879bc45023ebc75aec9001" title="Parte del contenido del atributo &#39;resultados&#39; y rellena la tabla que se pasa como parametro...." alt="" coords="12,5,178,48"/>
+<area shape="poly" title=" " alt="" coords="218,44,178,41,178,35,224,43"/>
+<area shape="rect" href="class_t_simulation.html#a2b2de32d07b74c6c3a76b67215f15800" title="Exporta los resultados de la simulacion en un archivo csv." alt="" coords="5,72,185,115"/>
+<area shape="poly" title=" " alt="" coords="218,77,186,84,185,78,224,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1533509999ef2fc5afbf762fb0aaaabb" name="a1533509999ef2fc5afbf762fb0aaaabb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1533509999ef2fc5afbf762fb0aaaabb">&#9670;&#160;</a></span>getNumericMethodFromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a> TSimulation::getNumericMethodFromString </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>metodo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Efectua la conversion de string a enumerador <a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524" title="enum NumericMethod. Enumerado para representar los distintos metodos numericos considerados.">NumericMethod</a> usando el mapa numericMethods. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">metodo</td><td>en formato String </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>metodo en formato <a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524" title="enum NumericMethod. Enumerado para representar los distintos metodos numericos considerados.">NumericMethod</a> </dd></dl>
+
+</div>
+</div>
+<a id="a528e9ed876aaea22481612e8a6fe2e95" name="a528e9ed876aaea22481612e8a6fe2e95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528e9ed876aaea22481612e8a6fe2e95">&#9670;&#160;</a></span>ReadOutputCSV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::ReadOutputCSV </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lee el archivo 'output.csv' generado por CallPython() y actualiza el contenido del atributo 'resultados'. </p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_simulation_a528e9ed876aaea22481612e8a6fe2e95_icgraph.png" border="0" usemap="#aclass_t_simulation_a528e9ed876aaea22481612e8a6fe2e95_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_simulation_a528e9ed876aaea22481612e8a6fe2e95_icgraph" id="aclass_t_simulation_a528e9ed876aaea22481612e8a6fe2e95_icgraph">
+<area shape="rect" title="Lee el archivo &#39;output.csv&#39; generado por CallPython() y actualiza el contenido del atributo &#39;resultad..." alt="" coords="231,5,427,32"/>
+<area shape="rect" href="class_t_simulation.html#a7950e734c85e85bedf4e477980db9a4d" title="Lanza la simulacion: crea archivo de entrada de datos para el python y lo ejecuta...." alt="" coords="5,5,183,32"/>
+<area shape="poly" title=" " alt="" coords="212,19,183,21,183,16,218,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aba131c282bea7c36d6b9ba839ef6e502" name="aba131c282bea7c36d6b9ba839ef6e502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba131c282bea7c36d6b9ba839ef6e502">&#9670;&#160;</a></span>resultadosIsEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TSimulation::resultadosIsEmpty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve true si el atributo 'resultados' esta vacio, false en caso contrario. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a id="a7950e734c85e85bedf4e477980db9a4d" name="a7950e734c85e85bedf4e477980db9a4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7950e734c85e85bedf4e477980db9a4d">&#9670;&#160;</a></span>runSimulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::runSimulation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lanza la simulacion: crea archivo de entrada de datos para el python y lo ejecuta. Modifica el atributo privado de 'resultados' con los datos obtenidos. </p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_simulation_a7950e734c85e85bedf4e477980db9a4d_cgraph.png" border="0" usemap="#aclass_t_simulation_a7950e734c85e85bedf4e477980db9a4d_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_t_simulation_a7950e734c85e85bedf4e477980db9a4d_cgraph" id="aclass_t_simulation_a7950e734c85e85bedf4e477980db9a4d_cgraph">
+<area shape="rect" title="Lanza la simulacion: crea archivo de entrada de datos para el python y lo ejecuta...." alt="" coords="5,97,183,124"/>
+<area shape="rect" href="class_t_simulation.html#aff057868b43d4ed0fe2420ae8e53e995" title="Borra los ficheros anteriores de &#39;input.csv&#39;, &#39;output.csv&#39; y &#39;grafico.png&#39;." alt="" coords="240,5,422,48"/>
+<area shape="poly" title=" " alt="" coords="130,94,230,57,251,52,247,55,232,63,133,99"/>
+<area shape="rect" href="class_t_simulation.html#ab6b7ea2b61104059a79336f4c195e8bc" title="Crea un archivo csv que sirve de entrada para el python que realiza la resolucion numerica del sistem..." alt="" coords="239,72,423,99"/>
+<area shape="poly" title=" " alt="" coords="183,99,226,96,221,98,184,104"/>
+<area shape="rect" href="class_t_simulation.html#a6ec5a7f42ac61f0714296a2ce91d89a6" title="Ejecuta un comando a traves de la powershell de window." alt="" coords="231,123,431,149"/>
+<area shape="poly" title=" " alt="" coords="183,118,218,123,212,124,183,123"/>
+<area shape="rect" href="class_t_simulation.html#a528e9ed876aaea22481612e8a6fe2e95" title="Lee el archivo &#39;output.csv&#39; generado por CallPython() y actualiza el contenido del atributo &#39;resultad..." alt="" coords="233,173,429,200"/>
+<area shape="poly" title=" " alt="" coords="130,122,231,159,259,169,254,169,230,164,129,127"/>
+<area shape="rect" href="class_t_simulation.html#a0d84cc40166a3b41972680ebf7dd75e5" title="Dado un enumerado sobre el metodo numerico, lo devuelve en formato String." alt="" coords="479,72,672,99"/>
+<area shape="poly" title=" " alt="" coords="423,83,466,85,461,86,424,88"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a24873d4f99cd7eb15bcc482f667bc8e4" name="a24873d4f99cd7eb15bcc482f667bc8e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24873d4f99cd7eb15bcc482f667bc8e4">&#9670;&#160;</a></span>setCicles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::setCicles </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cicles</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cambia el atributo ciclos de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>. Si no es un valor positivo lanza una excepcion. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cicles</td><td>ciclos en los que se mide la simulacion, formato int. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adee42fb5f7d938a90928d9800352e916" name="adee42fb5f7d938a90928d9800352e916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adee42fb5f7d938a90928d9800352e916">&#9670;&#160;</a></span>setConcenNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::setConcenNames </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; String &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cambia el atributo concNames de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>vector con los nombres de los metabolitos de los que se va a estudiar la evolucion de su concentracion. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8764e6db857f41783c2192b5d121db2f" name="a8764e6db857f41783c2192b5d121db2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8764e6db857f41783c2192b5d121db2f">&#9670;&#160;</a></span>setEquations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::setEquations </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; String &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>equations</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cambia el atributo ecuaciones de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">equations</td><td>vector con las EDOs en formato python para cada metabolito. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7d478a7641e046a4dbbe98122c5f4684" name="a7d478a7641e046a4dbbe98122c5f4684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d478a7641e046a4dbbe98122c5f4684">&#9670;&#160;</a></span>setFinalTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::setFinalTime </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fin</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cambia el atributo tfin de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>. Si no es un valor positivo y mayor que tini, lanza una excepcion. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fin</td><td>tiempo final que se establece para la simulacion, formato int. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af6d175e2cea59c791a0f87cd320e86cb" name="af6d175e2cea59c791a0f87cd320e86cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6d175e2cea59c791a0f87cd320e86cb">&#9670;&#160;</a></span>setInitialConcen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::setInitialConcen </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ini</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cambia el atributo concIni de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ini</td><td>vector con las concentraciones iniciales de los metabolitos que se estudiar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a215dd256dccffa170f7f93e36f26aceb" name="a215dd256dccffa170f7f93e36f26aceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a215dd256dccffa170f7f93e36f26aceb">&#9670;&#160;</a></span>setInitialTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::setInitialTime </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ini</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cambia el atributo tini de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>. Si no es un valor &gt;= 0 lanza una excepcion. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ini</td><td>tiempo inicial que se establece para la simulacion, formato int. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a36868a14362d4fcb8fb26ae1e17cfcf1" name="a36868a14362d4fcb8fb26ae1e17cfcf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36868a14362d4fcb8fb26ae1e17cfcf1">&#9670;&#160;</a></span>setNumericMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::setNumericMethod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a></td>          <td class="paramname"><span class="paramname"><em>method</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cambia el atributo metodo de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">method</td><td>metodo numerico que se establece para la simulacion, formato <a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524" title="enum NumericMethod. Enumerado para representar los distintos metodos numericos considerados.">NumericMethod</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a93af6bb92b6dde7c7798af04c8bc3650" name="a93af6bb92b6dde7c7798af04c8bc3650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93af6bb92b6dde7c7798af04c8bc3650">&#9670;&#160;</a></span>setParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::setParameters </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cambia el atributo params de la clase <a class="el" href="class_t_simulation.html" title="Clase para encapsular el proceso de simulacion.">TSimulation</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>vector con los parametros del modelo que aparecen en las ecuaciones. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a730b51b4e96092ed58a5ea48321199ec" name="a730b51b4e96092ed58a5ea48321199ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a730b51b4e96092ed58a5ea48321199ec">&#9670;&#160;</a></span>setTiempoEmpleado()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSimulation::setTiempoEmpleado </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualiza el tiempo empleado en la simulacion. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>tiempo empleado en realizar la simulacion, tipo double. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a7d1c054cffeee5177c8a11bb71e3b809" name="a7d1c054cffeee5177c8a11bb71e3b809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d1c054cffeee5177c8a11bb71e3b809">&#9670;&#160;</a></span>ciclos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TSimulation::ciclos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Numero de pasos de la simulacion </p>
+
+</div>
+</div>
+<a id="ac4a1fdd555c72ac2813cdbaad4d79198" name="ac4a1fdd555c72ac2813cdbaad4d79198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a1fdd555c72ac2813cdbaad4d79198">&#9670;&#160;</a></span>concIni</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; TSimulation::concIni</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vector con las concentraciones iniciales de los metabolitos </p>
+
+</div>
+</div>
+<a id="aa53c588f7f27a751e231907d0299ad42" name="aa53c588f7f27a751e231907d0299ad42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa53c588f7f27a751e231907d0299ad42">&#9670;&#160;</a></span>concNames</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;String&gt; TSimulation::concNames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vector con los nombres de los metabolitos a simular su concentracion </p>
+
+</div>
+</div>
+<a id="aa6864bfe51c33b26a7d66a2b053f3e6d" name="aa6864bfe51c33b26a7d66a2b053f3e6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6864bfe51c33b26a7d66a2b053f3e6d">&#9670;&#160;</a></span>ecuaciones</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;String&gt; TSimulation::ecuaciones</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vector con las ecuaciones de cada metabolito </p>
+
+</div>
+</div>
+<a id="af302dc27a30629ecf73efd4047aff26e" name="af302dc27a30629ecf73efd4047aff26e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af302dc27a30629ecf73efd4047aff26e">&#9670;&#160;</a></span>metodo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a> TSimulation::metodo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Metodo numerico empleado en la simulacion </p>
+
+</div>
+</div>
+<a id="ad03a54d2c792e3d52987695aede668e5" name="ad03a54d2c792e3d52987695aede668e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad03a54d2c792e3d52987695aede668e5">&#9670;&#160;</a></span>numericMethods</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;String, <a class="el" href="_simulation_8h.html#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a>&gt; TSimulation::numericMethods</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Mapa con los metodos numericos </p>
+
+</div>
+</div>
+<a id="a233dcba25bab8d7cd08aa892eb9a501c" name="a233dcba25bab8d7cd08aa892eb9a501c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a233dcba25bab8d7cd08aa892eb9a501c">&#9670;&#160;</a></span>params</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; TSimulation::params</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vector con todos los parametros necesarios </p>
+
+</div>
+</div>
+<a id="a29fec55282ff71500c06683a3b391375" name="a29fec55282ff71500c06683a3b391375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29fec55282ff71500c06683a3b391375">&#9670;&#160;</a></span>resultados</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="struct_t_instant_result.html">TInstantResult</a>&gt; TSimulation::resultados</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vector de resultados. Contiene las concentraciones de todos los metabolitos para cada tiempo. </p>
+
+</div>
+</div>
+<a id="aa178dade5cbab576684b275a296f2338" name="aa178dade5cbab576684b275a296f2338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa178dade5cbab576684b275a296f2338">&#9670;&#160;</a></span>tfin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TSimulation::tfin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Tiempo final de la simulacion </p>
+
+</div>
+</div>
+<a id="aad9cfbabd517d703d8c3ecdc71d9df90" name="aad9cfbabd517d703d8c3ecdc71d9df90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad9cfbabd517d703d8c3ecdc71d9df90">&#9670;&#160;</a></span>tiempoEmpleado</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TSimulation::tiempoEmpleado</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Tiempo empleado en lanzar la simulacion </p>
+
+</div>
+</div>
+<a id="acf3e89470d71020a57da0ddd0558fad7" name="acf3e89470d71020a57da0ddd0558fad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf3e89470d71020a57da0ddd0558fad7">&#9670;&#160;</a></span>tini</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TSimulation::tini</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Tiempo inicial de la simulacion </p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li><a class="el" href="_simulation_8h_source.html">Simulation.h</a></li>
+<li><a class="el" href="_simulation_8cpp.html">Simulation.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_t_simulation.html">TSimulation</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

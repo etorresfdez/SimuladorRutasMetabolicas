@@ -1,0 +1,7 @@
+<map id="TModel::getNMechanisms" name="TModel::getNMechanisms">
+<area shape="rect" id="Node000001" title="Devuelve el numero de mecanismos que contiene el modelo." alt="" coords="431,5,605,32"/>
+<area shape="rect" id="Node000002" href="$class_t_model.html#ac8791eb54816ee2bfdd1ac6c38ae2ed6" title="Dado el nombre corto de una reaccion, devuelve el mecanismo cargado en el modelo que la describe." alt="" coords="213,5,383,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="413,19,384,21,383,16,418,19"/>
+<area shape="rect" id="Node000003" href="$class_t_model.html#a45494635ca0fd3779ea5147b616462c7" title="Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la v..." alt="" coords="5,5,165,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="194,19,165,21,165,16,200,19"/>
+</map>

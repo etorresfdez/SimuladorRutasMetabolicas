@@ -1,0 +1,7 @@
+<map id="TModel::getMetabolite" name="TModel::getMetabolite">
+<area shape="rect" id="Node000001" title="Dado el indice de un metabolito, lo busca en el vector de metabolitos del modelo." alt="" coords="235,35,385,61"/>
+<area shape="rect" id="Node000002" href="$class_t_model.html#ad7f4a56cd3c7e70307bb75d6d848bafa" title="Devuelve un vector con todas las concentraciones iniciales de los metabolitos guardados en el modelo." alt="" coords="5,5,187,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,36,187,34,187,28,222,35"/>
+<area shape="rect" id="Node000003" href="$class_t_model.html#aa540e17de770b4deab34377af8a27724" title="Devuelve un vector con todos los nombres cortos de los metabolitos guardados en el modelo." alt="" coords="13,56,179,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,61,179,69,179,63,222,60"/>
+</map>

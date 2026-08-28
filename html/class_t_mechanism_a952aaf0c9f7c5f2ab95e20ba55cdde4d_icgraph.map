@@ -1,0 +1,119 @@
+<map id="TMechanism::getReaction" name="TMechanism::getReaction">
+<area shape="rect" id="Node000001" title="Devuelve un puntero a la reaccion dada su nombre." alt="" coords="840,824,1015,851"/>
+<area shape="rect" id="Node000002" href="$class_t_m_m_bi_bi_inhibidor.html#a4efc1b68aecca229eb9a9467dd14ef94" title="Construye el denominador de la ecuacion cinetica de tipo MMBiBiInhibidor." alt="" coords="557,160,792,187"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="921,808,909,680,884,499,866,407,845,323,819,254,805,227,790,207,767,190,766,184,794,203,810,224,824,251,850,321,871,406,889,498,914,680,927,809"/>
+<area shape="rect" id="Node000003" href="$class_t_m_m_bi_bi_inhibidor.html#ae96c6cd6c35591da5afbd8e690366145" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="302,187,488,229"/>
+<area shape="poly" id="edge60_Node000001_Node000003" title=" " alt="" coords="921,808,908,690,883,526,865,442,844,367,819,306,805,283,791,266,770,253,740,242,662,226,573,216,489,212,486,207,573,211,663,220,742,237,772,248,794,262,809,280,824,304,849,365,870,441,888,525,913,689,926,809"/>
+<area shape="rect" id="Node000005" href="$class_t_m_m_bi_bi_inhibidor.html#a7c70835aee1f69a6acf4cf49618d404f" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="302,253,488,296"/>
+<area shape="poly" id="edge64_Node000001_Node000005" title=" " alt="" coords="921,808,907,696,881,541,864,464,843,394,818,338,805,317,791,302,770,290,740,281,662,271,572,269,489,271,486,266,572,263,662,266,741,276,772,285,794,298,809,314,823,336,848,392,869,463,887,540,912,695,926,809"/>
+<area shape="rect" id="Node000006" href="$class_t_m_m_bi_bi_inhibidor.html#a82dcfcc31f05b07fd90cc5be9df671d8" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="298,53,492,96"/>
+<area shape="poly" id="edge69_Node000001_Node000006" title=" " alt="" coords="923,807,915,659,895,445,878,336,855,237,826,157,809,127,791,105,770,92,741,83,664,72,576,69,493,71,490,66,576,64,665,67,742,78,772,88,794,101,814,124,831,154,861,235,883,335,900,445,921,659,928,809"/>
+<area shape="rect" id="Node000007" href="$class_t_m_m_bi_bi_inhibidor.html#a2e2b9f5d2797bdcae5f12f7b667962d5" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="298,120,492,163"/>
+<area shape="poly" id="edge74_Node000001_Node000007" title=" " alt="" coords="923,808,914,668,893,467,876,364,854,272,825,198,809,170,791,150,754,126,714,110,670,101,626,99,582,100,539,106,465,121,462,117,538,100,581,95,626,93,671,96,715,105,757,121,794,146,813,167,830,195,859,270,881,363,899,466,920,667,928,810"/>
+<area shape="rect" id="Node000008" href="$class_t_m_m_bi_sec_aleatorio.html#af112b1a3812d328d9836c7962dcc311a" title="Construye el denominador de la ecuacion cinetica de tipo MMBiSecAleatorio." alt="" coords="602,480,747,523"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="919,808,905,754,881,682,843,608,819,574,791,543,770,529,748,518,747,513,773,524,794,539,823,570,848,605,885,680,910,752,924,810"/>
+<area shape="rect" id="Node000009" href="$class_t_m_m_bi_sec_aleatorio.html#afc3e0110e898539d2128a7673f0239bc" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="322,437,468,480"/>
+<area shape="poly" id="edge61_Node000001_Node000009" title=" " alt="" coords="923,808,917,737,910,691,898,643,881,594,858,547,828,505,791,470,754,449,713,434,670,426,627,423,542,427,470,440,466,436,541,422,627,417,671,421,714,429,756,444,794,466,832,501,863,544,886,592,903,641,915,690,922,736,928,809"/>
+<area shape="rect" id="Node000011" href="$class_t_m_m_bi_sec_aleatorio.html#aa655f131d118c0f2eb0d2f773c30da16" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="322,504,468,547"/>
+<area shape="poly" id="edge65_Node000001_Node000011" title=" " alt="" coords="917,808,902,761,877,701,840,641,817,614,791,592,767,579,734,568,648,551,553,539,469,532,467,527,554,534,649,546,735,563,769,574,794,587,821,610,845,638,882,699,907,759,922,810"/>
+<area shape="rect" id="Node000012" href="$class_t_m_m_bi_sec_aleatorio.html#ab79024ec54f7ab3a243d92dac5596070" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="319,571,470,613"/>
+<area shape="poly" id="edge70_Node000001_Node000012" title=" " alt="" coords="914,809,897,770,871,723,835,676,814,655,791,638,753,619,712,604,669,593,626,587,543,582,473,585,470,580,543,577,627,581,670,588,713,599,755,614,794,634,818,651,839,672,875,720,902,768,919,810"/>
+<area shape="rect" id="Node000013" href="$class_t_m_m_bi_sec_aleatorio.html#af3b3f353979875875816507267ee9ce4" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="322,371,468,413"/>
+<area shape="poly" id="edge75_Node000001_Node000013" title=" " alt="" coords="924,807,920,730,914,679,903,625,886,570,862,516,831,468,791,427,768,415,735,406,649,394,554,391,470,391,467,387,554,385,650,389,736,400,770,410,794,423,835,465,867,514,891,568,908,624,919,678,925,729,929,809"/>
+<area shape="rect" id="Node000014" href="$class_t_m_m_uni_bi_inhibidor.html#adff7e8d28bf0d198688fe6f6036b8bf8" title="Construye el denominador de la ecuacion cinetica de tipo MMUniBiInhibidor." alt="" coords="604,816,745,859"/>
+<area shape="poly" id="edge19_Node000001_Node000014" title=" " alt="" coords="822,838,746,840,745,835,827,836"/>
+<area shape="rect" id="Node000015" href="$class_t_m_m_uni_bi_inhibidor.html#a20d6d999152c5042a3e8f9b57c661b4d" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="323,705,466,748"/>
+<area shape="poly" id="edge62_Node000001_Node000015" title=" " alt="" coords="884,817,841,799,792,781,705,761,618,747,468,732,466,727,619,742,706,756,793,776,843,794,889,816"/>
+<area shape="rect" id="Node000017" href="$class_t_m_m_uni_bi_inhibidor.html#afe8e3d6f6e91d0809a097c6ac9833f84" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="325,772,465,815"/>
+<area shape="poly" id="edge66_Node000001_Node000017" title=" " alt="" coords="864,820,792,807,704,798,616,793,467,793,464,788,616,788,705,792,793,801,869,819"/>
+<area shape="rect" id="Node000018" href="$class_t_m_m_uni_bi_inhibidor.html#a59733a3b1589a10af47794977d0f487e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="319,839,470,881"/>
+<area shape="poly" id="edge71_Node000001_Node000018" title=" " alt="" coords="865,857,793,873,706,880,620,880,472,871,470,866,620,875,706,875,792,868,870,854"/>
+<area shape="rect" id="Node000019" href="$class_t_m_m_uni_bi_inhibidor.html#a4389b191c3605332cd2d4ee0dbb0f8b0" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="323,905,466,948"/>
+<area shape="poly" id="edge76_Node000001_Node000019" title=" " alt="" coords="877,858,793,887,706,903,618,914,468,926,466,921,617,909,705,898,792,881,881,855"/>
+<area shape="rect" id="Node000020" href="$class_t_m_m_uni_inhibidor.html#a61ed9f2604fb99b22b15f56a94598476" title="Construye el denominador de la ecuacion cinetica de tipo MMUniInhibidor." alt="" coords="559,1136,790,1163"/>
+<area shape="poly" id="edge28_Node000001_Node000020" title=" " alt="" coords="922,864,909,920,885,989,847,1059,823,1091,794,1119,762,1138,759,1133,791,1115,819,1088,842,1056,880,986,904,919,919,868"/>
+<area shape="rect" id="Node000021" href="$class_t_m_m_uni_inhibidor.html#a1ce34ddce6ad598235045dd9726e9e7e" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="304,1023,486,1065"/>
+<area shape="poly" id="edge63_Node000001_Node000021" title=" " alt="" coords="917,863,900,904,873,948,838,991,817,1010,794,1025,756,1042,717,1054,635,1067,556,1069,487,1063,485,1058,556,1063,635,1062,716,1049,754,1037,791,1020,814,1006,834,987,869,945,895,902,914,867"/>
+<area shape="rect" id="Node000023" href="$class_t_m_m_uni_inhibidor.html#a0a27cec47470b60e46fe110cab3edab6" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="304,1089,486,1132"/>
+<area shape="poly" id="edge67_Node000001_Node000023" title=" " alt="" coords="921,863,907,913,881,971,844,1028,821,1053,794,1074,770,1085,739,1094,659,1106,570,1112,487,1114,485,1109,569,1107,658,1101,737,1089,768,1080,791,1070,817,1049,840,1025,876,968,902,911,918,868"/>
+<area shape="rect" id="Node000024" href="$class_t_m_m_uni_inhibidor.html#a9bd74e953991c0873e15141e052eeeba" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="300,1156,490,1199"/>
+<area shape="poly" id="edge72_Node000001_Node000024" title=" " alt="" coords="926,864,920,933,899,1020,882,1064,859,1107,830,1145,794,1177,755,1198,714,1212,671,1220,626,1222,541,1216,469,1202,468,1197,542,1211,627,1217,670,1214,713,1207,753,1193,791,1172,826,1142,855,1104,877,1062,894,1018,914,932,924,868"/>
+<area shape="rect" id="Node000025" href="$class_t_m_m_uni_inhibidor.html#a7398e14df831e6270e987f4c5eaad236" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="300,1223,490,1265"/>
+<area shape="poly" id="edge77_Node000001_Node000025" title=" " alt="" coords="928,864,924,941,917,989,905,1041,888,1093,865,1144,834,1189,794,1228,771,1239,740,1247,662,1256,574,1257,491,1254,489,1249,574,1252,662,1251,739,1242,769,1234,791,1223,830,1186,860,1141,883,1091,900,1040,912,988,919,941,925,868"/>
+<area shape="rect" id="Node000026" href="$class_t_mass_action.html#a31a4b542f91aab112a7bcb2e3de1819e" title="Construye la ecuacion cinetica segun la ley de accion de masas." alt="" coords="568,1456,781,1483"/>
+<area shape="poly" id="edge37_Node000001_Node000026" title=" " alt="" coords="925,863,913,989,887,1160,869,1248,848,1328,823,1394,809,1420,794,1439,767,1458,765,1453,790,1435,805,1417,818,1392,843,1327,864,1247,882,1159,908,988,922,868"/>
+<area shape="rect" id="Node000030" href="$class_t_mass_action.html#a686b8ca0db5dfef10ba9b3adb8e0a40e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="297,1407,492,1449"/>
+<area shape="poly" id="edge68_Node000001_Node000030" title=" " alt="" coords="925,864,913,983,888,1143,870,1223,849,1297,823,1356,809,1379,794,1395,772,1408,742,1418,665,1430,577,1435,493,1435,493,1429,577,1429,665,1425,741,1413,770,1403,791,1391,805,1375,819,1353,844,1295,865,1222,882,1142,908,982,922,868"/>
+<area shape="rect" id="Node000031" href="$class_t_mass_action.html#a14d0626057ebcbc68f87caf65a98ffe4" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="281,1591,509,1617"/>
+<area shape="poly" id="edge73_Node000001_Node000031" title=" " alt="" coords="926,864,916,1000,892,1190,874,1286,853,1375,826,1447,811,1475,794,1497,766,1519,738,1531,711,1536,683,1535,625,1533,593,1537,558,1548,535,1564,510,1581,477,1593,476,1587,508,1576,531,1560,556,1543,592,1531,624,1527,683,1530,711,1530,737,1526,763,1515,790,1493,806,1472,821,1445,847,1373,869,1285,887,1189,911,1000,923,868"/>
+<area shape="rect" id="Node000032" href="$class_t_hill_inhibidor_activador.html#ac8081966718290e0e320eb731f0083d4" title="Comprueba que se envian los parametros propios del mecanismo HillInhibidorActivador: [Vmax,..." alt="" coords="598,1288,751,1331"/>
+<area shape="poly" id="edge46_Node000001_Node000032" title=" " alt="" coords="927,864,922,945,903,1053,886,1112,863,1169,833,1223,794,1271,775,1287,752,1297,750,1293,772,1282,790,1267,828,1220,858,1167,881,1110,898,1052,917,945,924,868"/>
+<area shape="rect" id="Node000034" href="$class_t_mass_action.html#ab938b358d430a859fe1ebda15c581320" title="Comprueba que se han enviado los parametros necesarios del mecanismo MassAction: [kd,..." alt="" coords="575,1355,774,1381"/>
+<area shape="poly" id="edge48_Node000001_Node000034" title=" " alt="" coords="924,864,909,972,882,1116,864,1188,843,1254,820,1308,794,1345,776,1357,773,1353,790,1341,815,1305,838,1252,859,1187,876,1115,904,972,921,868"/>
+<area shape="rect" id="Node000035" href="$class_t_m_m_bi_bi_inhibidor.html#a8301f2c15620dba9545389641e372c89" title="Comprueba que se envian los parametros propios del mecanismo MMBiBiInhibidor: [Vmax,..." alt="" coords="562,5,787,32"/>
+<area shape="poly" id="edge50_Node000001_Node000035" title=" " alt="" coords="923,808,914,653,893,427,875,310,853,203,825,115,808,81,790,55,777,44,764,35,762,30,780,39,794,52,813,78,830,113,858,202,881,309,898,426,919,653,928,809"/>
+<area shape="rect" id="Node000036" href="$class_t_m_m_bi_sec_aleatorio.html#a4ab89662512bf0e1709d2e2ad8c779c2" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMBiSecAleatorio: [Vmax,..." alt="" coords="602,312,747,355"/>
+<area shape="poly" id="edge52_Node000001_Node000036" title=" " alt="" coords="924,807,919,724,913,669,902,609,885,546,862,484,830,426,790,375,770,359,748,349,747,344,773,355,794,371,835,424,866,482,890,544,907,607,918,668,925,724,929,809"/>
+<area shape="rect" id="Node000037" href="$class_t_m_m_uni_bi_inhibidor.html#a97da04356397596583848a82396c423e" title="Comprueba que se han enviado los parametros necesarios para el mecanismo MMUniBiInhibidor: [Vmax,..." alt="" coords="604,648,745,691"/>
+<area shape="poly" id="edge54_Node000001_Node000037" title=" " alt="" coords="903,812,855,762,824,735,791,712,746,690,745,685,794,707,828,731,859,758,908,812"/>
+<area shape="rect" id="Node000038" href="$class_t_m_m_uni_inhibidor.html#ad8c3741daad20e9a2ce69b95bcd486aa" title="Comprueba que se han enviado los parametros necesarios del mecanismo MMUniInhibidor: [Vmax,..." alt="" coords="564,984,785,1011"/>
+<area shape="poly" id="edge56_Node000001_Node000038" title=" " alt="" coords="908,861,860,917,828,944,794,968,750,986,747,981,791,963,825,940,856,913,904,865"/>
+<area shape="rect" id="Node000039" href="$class_t_form1.html#a592eff540cbc9ff77e21d833059b9a39" title="Al seleccionar una reaccion de la lista de reacciones cargadas, muestra la ecuacion cinetica generada..." alt="" coords="567,1557,782,1600"/>
+<area shape="poly" id="edge58_Node000001_Node000039" title=" " alt="" coords="926,864,916,1007,892,1209,874,1312,852,1407,826,1486,811,1517,794,1540,771,1559,769,1554,790,1537,806,1514,821,1484,847,1406,869,1311,887,1208,911,1007,923,869"/>
+<area shape="rect" id="Node000040" href="$class_t_form1.html#a4054d1c2b1745192b6b1cff6fee0bcd5" title="Accion que se realiza al darle al boton &#39;Guardar ecuaciones y sistema&#39; del menu. Genera un archivo tx..." alt="" coords="580,1624,769,1667"/>
+<area shape="poly" id="edge59_Node000001_Node000040" title=" " alt="" coords="927,864,919,1020,898,1244,880,1360,858,1466,830,1554,813,1588,794,1614,770,1632,768,1627,790,1610,808,1585,825,1552,853,1465,875,1359,892,1244,914,1020,924,868"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="545,191,490,199,486,194,549,187"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="627,195,510,244,476,255,472,251,508,239,631,191"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="624,155,508,111,475,99,472,94,510,105,629,152"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="540,160,493,155,490,150,544,157"/>
+<area shape="rect" id="Node000004" href="$class_t_m_m_bi_bi_inhibidor.html#afd7921f14f90bb419de8d1dd53d27e13" title="Constructor de la clase TMMBiBiInhibidor. Llama al constructor del padre, rellena los atributos propi..." alt="" coords="26,120,212,163"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="287,184,212,166,209,161,291,181"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="294,249,280,244,207,205,151,166,149,161,210,200,282,239,298,246"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="287,102,212,121,208,118,291,98"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="281,143,214,143,211,139,285,140"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="585,489,469,472,467,467,589,487"/>
+<area shape="poly" id="edge13_Node000008_Node000011" title=" " alt="" coords="585,511,469,521,467,517,589,507"/>
+<area shape="poly" id="edge15_Node000008_Node000012" title=" " alt="" coords="597,530,510,561,473,572,469,568,508,556,600,526"/>
+<area shape="poly" id="edge17_Node000008_Node000013" title=" " alt="" coords="614,474,508,428,469,414,467,409,510,423,619,472"/>
+<area shape="rect" id="Node000010" href="$class_t_m_m_bi_sec_aleatorio.html#ad4e65c49ef3a64b8162e1aab18289d3d" title="Constructor de la clase TMMBiSecAleatorio. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="46,437,192,480"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="305,460,194,461,191,456,309,457"/>
+<area shape="poly" id="edge14_Node000011_Node000010" title=" " alt="" coords="305,506,193,479,191,474,309,503"/>
+<area shape="poly" id="edge16_Node000012_Node000010" title=" " alt="" coords="303,570,280,561,207,522,151,483,149,478,210,517,282,556,307,567"/>
+<area shape="poly" id="edge18_Node000013_Node000010" title=" " alt="" coords="306,415,194,443,190,439,309,411"/>
+<area shape="poly" id="edge20_Node000014_Node000015" title=" " alt="" coords="616,810,508,762,468,748,466,743,510,758,621,808"/>
+<area shape="poly" id="edge22_Node000014_Node000017" title=" " alt="" coords="587,825,466,807,465,802,592,823"/>
+<area shape="poly" id="edge24_Node000014_Node000018" title=" " alt="" coords="587,846,472,856,470,852,591,843"/>
+<area shape="poly" id="edge26_Node000014_Node000019" title=" " alt="" coords="595,866,510,896,468,908,465,904,508,891,599,862"/>
+<area shape="rect" id="Node000016" href="$class_t_m_m_uni_bi_inhibidor.html#a27f1f61c93dc9400e2111c7e84bfb813" title="Constructor de la clase TMMUniBiInhibidor. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="49,772,189,815"/>
+<area shape="poly" id="edge21_Node000015_Node000016" title=" " alt="" coords="306,750,192,778,188,774,310,745"/>
+<area shape="poly" id="edge23_Node000017_Node000016" title=" " alt="" coords="307,795,191,796,188,791,311,792"/>
+<area shape="poly" id="edge25_Node000018_Node000016" title=" " alt="" coords="302,840,191,813,189,808,307,837"/>
+<area shape="poly" id="edge27_Node000019_Node000016" title=" " alt="" coords="306,905,280,896,207,857,151,818,149,813,210,852,282,891,311,903"/>
+<area shape="poly" id="edge29_Node000020_Node000021" title=" " alt="" coords="629,1130,508,1080,476,1068,474,1063,510,1075,634,1128"/>
+<area shape="poly" id="edge31_Node000020_Node000023" title=" " alt="" coords="556,1134,487,1126,485,1121,561,1132"/>
+<area shape="poly" id="edge33_Node000020_Node000024" title=" " alt="" coords="541,1164,491,1170,489,1165,546,1161"/>
+<area shape="poly" id="edge35_Node000020_Node000025" title=" " alt="" coords="622,1170,510,1213,474,1224,472,1220,508,1208,626,1167"/>
+<area shape="rect" id="Node000022" href="$class_t_m_m_uni_inhibidor.html#aacd95490240c218832d2a12e5a6b33a2" title="Constructor de la clase TMMUniInhibidor. Llama al constructor del padre, rellena los atributos propio..." alt="" coords="5,1097,233,1124"/>
+<area shape="poly" id="edge30_Node000021_Node000022" title=" " alt="" coords="287,1072,179,1099,176,1095,291,1068"/>
+<area shape="poly" id="edge32_Node000023_Node000022" title=" " alt="" coords="286,1112,234,1113,232,1108,291,1109"/>
+<area shape="poly" id="edge34_Node000024_Node000022" title=" " alt="" coords="287,1153,178,1127,177,1122,291,1150"/>
+<area shape="poly" id="edge36_Node000025_Node000022" title=" " alt="" coords="293,1218,280,1213,199,1169,139,1127,138,1122,201,1164,282,1208,299,1216"/>
+<area shape="rect" id="Node000027" href="$class_t_mass_action.html#ab908415a5e4eb18a0ffaf33d5f58ad7c" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="301,1524,488,1567"/>
+<area shape="poly" id="edge38_Node000026_Node000027" title=" " alt="" coords="605,1488,477,1526,475,1521,611,1487"/>
+<area shape="rect" id="Node000029" href="$class_t_mass_action.html#a05e6775beaf34a255e63993627e7ea17" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="285,1473,505,1500"/>
+<area shape="poly" id="edge40_Node000026_Node000029" title=" " alt="" coords="550,1477,506,1482,505,1477,556,1476"/>
+<area shape="poly" id="edge42_Node000026_Node000030" title=" " alt="" coords="562,1454,493,1445,493,1440,567,1453"/>
+<area shape="poly" id="edge44_Node000026_Node000031" title=" " alt="" coords="581,1488,559,1503,543,1522,536,1541,528,1561,511,1581,489,1593,487,1588,507,1577,524,1559,531,1539,538,1519,555,1499,576,1490"/>
+<area shape="rect" id="Node000028" href="$class_t_mass_action.html#a74563e7583262c8adf5b9ed1f9bbca63" title="Constructor de la clase TMassAction. Llama al constructor del padre, rellena los atributos propios y ..." alt="" coords="27,1473,211,1500"/>
+<area shape="poly" id="edge39_Node000027_Node000028" title=" " alt="" coords="283,1523,186,1503,185,1498,288,1521"/>
+<area shape="poly" id="edge41_Node000029_Node000028" title=" " alt="" coords="267,1488,212,1489,211,1484,272,1486"/>
+<area shape="poly" id="edge43_Node000030_Node000028" title=" " alt="" coords="280,1454,186,1475,184,1470,284,1450"/>
+<area shape="poly" id="edge45_Node000031_Node000028" title=" " alt="" coords="300,1586,280,1581,200,1542,140,1503,140,1498,203,1537,282,1576,305,1586"/>
+<area shape="rect" id="Node000033" href="$class_t_hill_inhibidor_activador.html#aa500c80dc4d5647b281f67063009228a" title="Constructor de la clase THillInhibidorActivador. Llama al constructor del padre, rellena los atributo..." alt="" coords="315,1289,475,1332"/>
+<area shape="poly" id="edge47_Node000032_Node000033" title=" " alt="" coords="580,1311,476,1313,475,1308,585,1309"/>
+<area shape="poly" id="edge49_Node000034_Node000028" title=" " alt="" coords="557,1363,495,1366,425,1371,352,1380,281,1397,240,1414,200,1435,140,1475,136,1471,197,1430,237,1409,280,1392,351,1375,424,1365,495,1361,562,1362"/>
+<area shape="poly" id="edge51_Node000035_Node000004" title=" " alt="" coords="544,12,484,13,416,18,348,27,281,44,243,60,206,80,148,121,144,118,204,75,241,55,280,39,347,22,416,12,484,8,548,9"/>
+<area shape="poly" id="edge53_Node000036_Node000010" title=" " alt="" coords="584,329,519,329,441,332,360,342,281,361,243,377,207,397,148,438,144,435,204,393,241,372,280,356,359,337,441,327,519,323,589,325"/>
+<area shape="poly" id="edge55_Node000037_Node000016" title=" " alt="" coords="587,664,521,664,443,667,361,677,281,696,243,712,207,732,148,773,144,770,204,727,241,707,280,691,360,672,443,662,521,659,591,661"/>
+<area shape="poly" id="edge57_Node000038_Node000022" title=" " alt="" coords="546,987,486,987,418,989,349,998,281,1013,238,1031,198,1054,138,1098,134,1095,195,1050,236,1026,280,1008,348,992,417,984,486,981,551,984"/>
+</map>

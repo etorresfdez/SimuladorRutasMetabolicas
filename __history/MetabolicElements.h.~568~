@@ -1,0 +1,1055 @@
+//---------------------------------------------------------------------------
+//
+// Libreria para encapsular los elementos de una ruta metabolica.
+// Contiene las clases:
+// 	- TMetabolite
+//	- TParameter
+//	- TReaction
+//	- TMechanism
+//      � TMassAction
+//      � TMMUniInhibidor
+//      � TMMBiSecAleatorio
+//      � TMMUniBiInhibidor
+//      � TMMBiBiInhibidor
+//      � THillInhibidorActivador
+// 	- TModel
+//
+// Archivo .h --> Declaraciones
+//
+//---------------------------------------------------------------------------
+
+#include <vector>
+#include <map>
+
+/**
+ * @brief enum TReactionDirection. Enumerado para representar el sentido de una reaccion.
+ * Hay dos posibilidades: UNI si es unidireccional y BI si es bidireccional.
+ */
+enum TReactionDirection
+{
+	rdUNI, 	/**< La reaccion es unidireccional. */
+	rdBI    /**< La reaccion es bidireccional. */
+};
+
+/**
+ * @brief enum TMechanismType. Enumerado para representar el tipo de mecanismo de una reaccion.
+ * Se contemplan 6 tipos de mecanismos.
+ */
+enum TMechanismType
+{
+	LEY_ACCION_MASAS, 			/**< Ley de accion de masas. */
+	MM_UNI_INHIBIDOR,           /**< Michaelis-Menten unisustrato con inhibicion. */
+	MM_BI_SEC_ALEATORIO,    	/**< Michaelis-Menten bisustrato secuencial aleatorio. */
+	MM_UNI_BI_INHIBIDOR,        /**< Michaelis-Menten unisustrato biproducto con inhibicion. */
+	MM_BI_BI_INHIBIDOR,         /**< Michaelis-Menten bisustrato biproducto con inhibicion. */
+	HILL_INHIBIDOR_ACTIVADOR    /**< Ecuacion de Hill con inhibidor y activador. */
+};
+
+class TModel;
+
+
+
+/**
+ *  @class TMetabolite
+ *  @brief Clase para encapsular los metabolitos del modelo.
+ */
+class TMetabolite
+{
+	private: // private members
+
+		String shortName;       	/**< Nombre corto del metabolito */
+		String fullName;        	/**< Nombre largo del metabolito */
+		double initialValue;    	/**< Concentracion inicial del metabolito */
+
+        /**
+		 *  @brief Metodo que convierte un double en string con formato decimal ','
+		 *  @param value numero con decimales con ','
+		 *  @return String palabra que se devuelve manteniendo el formato decimal '.'
+		 */
+		String FloatToStrComma(double value);
+
+	public:
+
+		static const String inputTemplate; /**< Estructura de entrada de datos de un metabolito */
+
+		/**
+		 *  @brief Constructor de TMetabolite
+		 *  @param p_shortName nombre corto del metabolito, tipo String
+		 *  @param p_fullName nombre largo del metabolito, tipo String
+		 *  @param p_initialValue concentracion inicial del metabolito, tipo double
+		 */
+		TMetabolite(String p_shortName, String p_fullName, double p_initialValue);
+
+		/**
+		 *  @brief Constructor de TMetabolite
+		 *  @param line linea del panel de entrada asociada a un metabolito, comienza por METABOLITE
+		 */
+		TMetabolite(String line);
+
+        /**
+		 *  @brief Devuelve el nombre corto del metabolito
+		 *  @return String nombre corto del metabolito
+		 */
+		String getShortName() const;
+
+		/**
+		 *  @brief Devuelve el nombre largo del metabolito
+		 *  @return String nombre largo del metabolito
+		 */
+		String getFullName() const;
+
+		/**
+		 *  @brief Devuelve la concentracion inicial del metabolito
+		 *  @return double concentracion inicial del metabolito
+		 */
+		double getInitialValue() const;
+
+        /**
+		 *  @brief Actualiza la concentracion inicial del metabolito
+		 *  @param double concentracion inicial del metabolito
+		 */
+		void setInitialValue(double initialConcentration);
+
+        /**
+		 *  @brief Muestra el metabolito guardado y sus atributos
+		 *  @param pantallaSalida objeto de la interfaz donde se muestra
+		 */
+		void toString(TMemo* pantallaSalida) const;
+};
+
+
+
+/**
+ *  @class TParameter
+ *  @brief Clase para encapsular los parametros del modelo.
+ */
+class TParameter
+{
+	private: // private members
+
+		String shortName;       	/**< Nombre corto del parametro */
+		String fullName;       		/**< Nombre largo del parametro */
+		double value;    			/**< Valor del parametro */
+
+
+        /**
+		 *  @brief Metodo que convierte un double en string con formato decimal ','
+		 *  @param value numero con decimales con ','
+		 *  @return String palabra que se devuelve manteniendo el formato decimal '.'
+		 */
+		String FloatToStrComma(double value);
+
+        /**
+		 *  @brief Metodo que convierte un double en string con formato decimal ','
+		 *  @param value numero con decimales con ','
+		 *  @return String palabra que se devuelve manteniendo el formato decimal '.'
+		 */
+		String StrToFloatComma(String texto);
+
+	public:
+
+		static const String inputTemplate; /**< Estructura de entrada de datos de un parametro */
+
+		/**
+		 *  @brief Constructor de TParameter
+		 *  @param p_shortName nombre corto del parametro, tipo String
+		 *  @param p_fullName nombre largo del parametro, tipo String
+		 *  @param p_value valor del parametro, tipo double
+		 */
+		TParameter(String p_shortName, String p_fullName, double p_value);
+
+		/**
+		 *  @brief Constructor de TParameter
+		 *  @param line linea del panel de entrada asociada a un parametro, comienza por PARAMETER
+		 */
+		TParameter(String line);
+
+        /**
+		 *  @brief Devuelve el nombre corto del parametro
+		 *  @return String nombre corto del parametro
+		 */
+		String getShortName() const;
+
+		/**
+		 *  @brief Devuelve el nombre largo del parametro
+		 *  @return String nombre largo del parametro
+		 */
+		String getFullName() const;
+
+		/**
+		 *  @brief Devuelve el valor del parametro
+		 *  @return double valor del parametro
+		 */
+		double getValue() const;
+
+		/**
+		 *  @brief Muestra el parametro guardado y sus atributos
+		 *  @param pantallaSalida objeto de la interfaz donde se muestra
+		 */
+		void toString(TMemo* pantallaSalida) const;
+};
+
+
+/**
+ *  @brief struct TSubstance para agrupar el metabolito y su coeficiente que participan en una reaccion.
+ */
+struct TSubstance
+{
+	const TMetabolite* substance;    	/**< Nombre corto del metabolito. */
+	double coefficient;         		/**< Coeficiente estequiometrico asociado. */
+};
+
+
+
+/**
+ *  @class TReaction
+ *  @brief Clase para encapsular las reacciones del modelo.
+ */
+class TReaction
+{
+	private: // private members
+
+		String shortName;       					/**< Nombre corto de la reaccion */
+		String fullName;        					/**< Nombre largo de la reaccion */
+		TReactionDirection sentido; 		 		/**< Sentido de la reaccion (UNI o BI) */
+		std::vector<TSubstance> reactants; 			/**< Array de reactivos de la reaccion */
+		std::vector<TSubstance> products;  			/**< Array de productos de la reaccion */
+		TModel* model;                              /**< Modelo al que pertenece la reaccion */
+
+		/**
+		 * @brief Dada una lista de sustancias, las separa en nombres y coeficientes estequimetricos.
+		 * @param sustancias lista de sustancias con formato [A, (2)B, C], tipo String
+         * @param label "reactivos" si las sustancias son reactivos, "productos" si son productos; tipo String
+		 *
+		 * Si label indica reactivos, rellena los atributos reactants y reactantStoichCoeffs.
+		 * Si label indica productos, rellena los atributos products y productStoichCoeffs.
+		 */
+		void ReadsSubstances(String sustancias, String label);
+
+		/**
+		 * @brief Separa coeficiente estequiometrico del nombre del metabolito.
+		 * @param text nombre temporal del metabolito extraido directamente del panel de entrada, tipo String
+		 * @param name nombre del metabolito sin el coeficiente estequiometrico (parametro por referencia), tipo String
+		 * @param coeff coeficiente estequiometrico del metabolito (parametro por referencia), tipo double
+		 *
+		 * Dado el text pasado como parametro, lo divide en coeficiente estequiometrico
+		 * (coeff) y nombre del metabolito (name) en caso de que dicho metabolito tenga un
+		 * coeficiente estequiometrico distinto de 1 en la reaccion. En ese caso, text tendra
+		 * la forma "(2)A", con el coeficiente estequiometrico entre parentesis.
+		 */
+		void DividesCoeffMetabolite(String text, String& name, double& coeff);
+
+	public:
+
+		static const String inputTemplate; /**< Estructura de entrada de datos de una reaccion */
+
+		/**
+		 *  @brief Constructor de TReaction
+		 *  @param p_shortName nombre corto de la reaccion, tipo String
+		 *  @param p_fullName nombre largo de la reaccion, tipo String
+		 *  @param p_sentido sentido de la reaccion (UNI o BI), tipo TReactionDirection
+		 *  @param p_reactants array de reactivos de la reaccion, tipo std::vector<TSubstance>
+		 *  @param p_products array de productos de la reaccion, tipo std::vector<TSubstance>
+		 *  @param p_model modelo al que pertenece la reaccion, tipo puntero a TModel
+		 */
+		TReaction(String p_shortName, String p_fullName, TReactionDirection p_sentido,
+				  const std::vector<TSubstance>& p_reactants, const std::vector<TSubstance>& p_products,
+				  TModel* model);
+
+		/**
+		 * @brief Constructor de TReaction, lee una linea completa del panel de entrada
+		 * @param line linea del panel de entrada asociada a una reaccion, comienza por REACTION
+		 * @param model modelo al que pertenece la reaccion
+		 */
+		TReaction(String line, TModel* model);
+
+        /**
+		 *  @brief Devuelve el nombre corto de la reaccion
+		 *  @return String nombre corto de la reaccion
+		 */
+		String getShortName() const;
+
+		/**
+		 *  @brief Devuelve el nombre largo del parametro
+		 *  @return String nombre largo del parametro
+		 */
+		String getFullName() const;
+
+		/**
+		 * @brief Devuelve el sentido de la reaccion
+		 * @return UNI o BI segun la reaccion sea unidireccional o bidireccional
+		 */
+		String getDirectionString() const;
+
+		/**
+		 * @brief Devuelve el numero de reactivos que tiene la reaccion
+		 * @return numero de reactivos
+		 */
+		int getNReactants() const;
+
+        /**
+		 * @brief Devuelve el numero de productos que tiene la reaccion
+		 * @return numero de productos
+		 */
+		int getNProducts() const;
+
+		/**
+		 * @brief Devuelve el nombre corto del reactivo i de la reaccion
+		 * @param i indice del reactivo a devolver (empieza en 0)
+		 * @return sustancia (metabolito y coef) que actua como reactivo en esta reaccion
+		 */
+		const TSubstance getReactant(int i) const;
+
+		/**
+		 * @brief Devuelve el nombre corto del producto i de la reaccion
+		 * @param i indice del producto a devolver (empieza en 0)
+		 * @return sustancia (metabolito y coef) que actua como producto en esta reaccion
+		 */
+		const TSubstance getProduct(int i) const;
+
+		/**
+		 *  @brief Muestra la reaccion guardada y sus atributos
+		 *  @param pantallaSalida objeto de la interfaz donde se muestra
+		 */
+		void toString(TMemo* pantallaSalida) const;
+};
+
+
+/**
+ *  @class TMechanism
+ *  @brief Clase padre para encapsular los mecanismos asociados a cada reaccion del modelo.
+ */
+class TMechanism
+{
+	private:
+		String reactionName;                /**< Nombre de la reaccion que sigue el mecanismo creado */
+		std::vector<String> mechParams;     /**< Vector de los parametros asociados al mecanismo concreto de la reaccion */
+
+	protected:
+		TMechanismType mechanismType;       /**< Enumerado que indica el tipo de mecanismo */
+		TModel* model;                      /**< Modelo dentro del que se incluye el mecanismo */
+		String directRatePython;            /**< String que representa la ecuacion cinetica directa, formato Python */
+		String directRateShow;              /**< String que representa la ecuacion cinetica directa, formato salida usuario */
+		String inverseRatePython;           /**< String que representa la ecuacion cinetica inversa, formato Python */
+		String inverseRateShow;             /**< String que representa la ecuacion cinetica inversa, formato salida usuario */
+
+	public:
+
+        static const String inputTemplate; /**< Estructura de entrada de datos de un mecanismo */
+
+		/**
+		 *  @brief Constructor de la clase TMechanism
+		 *  @param line linea de entrada de datos que comienza por "MECHANISM"
+         *  @param p_model modelo asociado al mecanismo
+		 */
+		TMechanism(String line, TModel* p_model);
+
+
+        /**
+		 *  @brief Devuelve el nombre del tipo de mecanismo.
+		 *  @return String nombre del tipo de mecanismo.
+		 */
+		String getMechType() const;
+
+		/**
+		 *  @brief Devuelve el nombre de la reaccion asociada al mecanismo.
+		 *  @return String nombre corto de la reaccion.
+		 */
+		String getReactionName() const;
+
+		/**
+		 *  @brief Devuelve un puntero a la reaccion dada su nombre.
+		 */
+		const TReaction* getReaction() const;
+
+		/**
+		 *  @brief Devuelve el numero de parametros del mecanismo guardados.
+		 *  @return int numero de parametros del mecanismo.
+		 */
+		int getNMechParams() const;
+
+		/**
+		 *  @brief Devuelve el parametro del mecanismo de la posicion 'i'.
+		 *  @param i indice del parametro del mecanismo que devuelve.
+         *  @return String nombre corto del parametro del mecanismo, puede ser el nombre corto de un metabolito o un parametro.
+		 */
+		String getMechParams(int i) const;
+
+		/**
+		 *  @brief Devuelve la ecuacion cinetica directa en forma de String.
+		 *  Formato para enviarla al solver de Python.
+		 */
+		String getDirectRatePython() const;
+
+		/**
+		 *  @brief Devuelve la ecuacion cinetica inversa en forma de String.
+		 *  Formato para enviarla al solver de Python.
+		 */
+		String getInverseRatePython() const;
+
+        /**
+		 *  @brief Devuelve la ecuacion cinetica directa en forma de String.
+		 *  Formato para mostrarla por pantalla.
+		 */
+		String getDirectRateShow() const;
+
+		/**
+		 *  @brief Devuelve la ecuacion cinetica inversa en forma de String.
+		 *  Formato para mostrarla por pantalla.
+		 */
+		String getInverseRateShow() const;
+
+        /**
+		 *  @brief Muestra el mecanismo guardado y sus atributos
+		 *  @param pantallaSalida objeto de la interfaz donde se muestra
+		 */
+		void toString(TMemo* pantallaSalida) const;
+
+
+         /**
+		 *  @brief Metodo virtual para comprobar que los atributos cargados en el mecanismo son correctos.
+		 *  Depende del tipo de mecanismo. Lanza excepciones si no son correctos.
+		 *  Se comprueba que el numero de parametros es el adecuado, y que los metabolitos y parametros mencionados estan registrados en el modelo.
+		 */
+		virtual void CheckElements() const;
+
+
+		/**
+		 *  @brief Metodo virtual para crear la ecuacion cinetica directa en forma de String.
+		 *  Depende del tipo de mecanismo. Formato para enviarla al solver de python.
+		 */
+		virtual void setDirectRatePython();
+
+		/**
+		 *  @brief Metodo virtual para crear la ecuacion cinetica inversa en forma de String.
+		 *  Depende del tipo de mecanismo. Si la reaccion es unidireccional, devuelve "".
+		 *  Formato para enviarla al solver de python.
+		 */
+		virtual void setInverseRatePython();
+
+		/**
+		 *  @brief Metodo virtual para crear la ecuacion cinetica directa en forma de String.
+		 *  Depende del tipo de mecanismo. Formato para mostrarla por pantalla.
+		 */
+		virtual void setDirectRateShow();
+
+		/**
+		 *  @brief Metodo virtual para crear la ecuacion cinetica inversa en forma de String.
+		 *  Depende del tipo de mecanismo. Si la reaccion es unidireccional, devuelve "".
+		 *  Formato para mostrarla por pantalla.
+		 */
+		virtual void setInverseRateShow();
+
+
+		/**
+		 *  @brief Destructor virtual de la clase, por defecto.
+		 */
+		virtual ~TMechanism() = default;
+};
+
+
+/**
+ *  @class TMassAction
+ *  @brief Representa un mecanismo que sigue la ley de accion de masas. Hereda de TMechanism.
+ */
+class TMassAction : public TMechanism
+{
+	public:
+
+		/**
+		 *  @brief Constructor de la clase TMassAction.
+		 *  Llama al constructor del padre, rellena los atributos propios y hace validaciones extra concretas.
+		 */
+		TMassAction(String line, TModel* p_model);
+
+        /**
+		 *  @brief Construye la ecuacion cinetica segun la ley de accion de masas.
+		 *  @param isPython variable bandera: true para generar ecuacion para enviarla a Python, false si es para mostrarla por pantalla
+         *  @return String con la ecuacion cinetica que se pide
+		 */
+		String buildRateEquation(bool isPython, bool isDirect);
+
+
+		/**
+		 *  @brief Comprueba que se han enviado los parametros necesarios del mecanismo MassAction:
+		 *  [kd, (ki)] --> entre parentesis los opcionales cuando la reaccion es bidireccional
+		 *  - kd: constante de velocidad directa
+		 *  - ki: constante de velocidad inversa
+		 *  Los parametros tienen que estar registrados previamente en el modelo como PARAMETER-
+		 */
+		void CheckElements() const override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica directa de la reaccion, en formato Python.
+		 *  Modifica el atributo protected "directRatePython" de la clase padre.
+		 */
+		void setDirectRatePython() override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica inversa de la reaccion, en formato Python.
+		 *  Modifica el atributo protected "inverseRatePython" de la clase padre.
+		 */
+		void setInverseRatePython() override;
+
+        /**
+		 *  @brief Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario.
+		 *  Modifica el atributo protected "directRateShow" de la clase padre.
+		 */
+		void setDirectRateShow() override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario.
+		 *  Modifica el atributo protected "inverseRateShow" de la clase padre.
+		 */
+		void setInverseRateShow() override;
+};
+
+
+/**
+ *  @class TMMUniInhibidor
+ *  @brief Representa un mecanismo del tipo Michaelis-Menten unisustrato con inhibicion competitiva. Hereda de TMechanism.
+ */
+class TMMUniInhibidor : public TMechanism
+{
+	public:
+
+		/**
+		 *  @brief Constructor de la clase TMMUniInhibidor.
+		 *  Llama al constructor del padre, rellena los atributos propios y hace validaciones extra concretas.
+		 */
+		TMMUniInhibidor(String line, TModel* p_model);
+
+        /**
+		 *  @brief Construye el denominador de la ecuacion cinetica de tipo MMUniInhibidor.
+		 *  @param isPython true: formato python, false: formato salida para el usuario.
+		 *  @return String que contiene el denominador de la ecuacion cinetica correspondiente.
+		 */
+		String BuildDenominator(bool isPython);
+
+
+		/**
+		 *  @brief Comprueba que se han enviado los parametros necesarios del mecanismo MMUniInhibidor:
+		 *  [Vmax, KmA, KmI, Inhibidor, (Keq)]
+         *  - Vmax: velocidad maxima de la reaccion
+		 *  - KmA: concentracion del reactivo A para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+		 *  - KmI: concentracion del inhibidor I para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+		 *  - I: metabolito que actua como inhibidor en esta reaccion
+		 *  - Keq: constante de equilibrio
+		 *  Todos los parametros y metabolitos mencionados tienen que estar registrados en el modelo.
+		 */
+		void CheckElements() const override;
+
+
+		/**
+		 *  @brief Construye la ecuacion cinetica directa de la reaccion, en formato Python.
+		 *  Modifica el atributo protected "directRatePython" de la clase padre.
+		 */
+		void setDirectRatePython() override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica inversa de la reaccion, en formato Python.
+		 *  Modifica el atributo protected "inverseRatePython" de la clase padre.
+		 */
+		void setInverseRatePython() override;
+
+        /**
+		 *  @brief Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario.
+		 *  Modifica el atributo protected "directRateShow" de la clase padre.
+		 */
+		void setDirectRateShow() override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario.
+		 *  Modifica el atributo protected "inverseRateShow" de la clase padre.
+		 */
+		void setInverseRateShow() override;
+};
+
+/**
+ *  @class TMMBiSecAleatorio
+ *  @brief Representa un mecanismo del tipo Michaelis-Menten bisustrato secuencial aleatorio. Hereda de TMechanism.
+ */
+class TMMBiSecAleatorio : public TMechanism
+{
+	public:
+
+		/**
+		 *  @brief Constructor de la clase TMMBiSecAleatorio.
+		 *  Llama al constructor del padre, rellena los atributos propios y hace validaciones extra concretas.
+		 */
+		TMMBiSecAleatorio(String line, TModel* p_model);
+
+		/**
+		 *  @brief Construye el denominador de la ecuacion cinetica de tipo MMBiSecAleatorio.
+		 *  @param isPython true: formato python, false: formato salida para el usuario.
+		 *  @return String que contiene el denominador de la ecuacion cinetica correspondiente.
+		 */
+		String BuildDenominator(bool isPython);
+
+
+        /**
+		 *  @brief Comprueba que se han enviado los parametros necesarios del mecanismo MMBiSecAleatorio:
+		 *  [Vmax, KmA, KmB, (KdA), (Keq)] --> entre parentesis los opcionales
+		 *  - Vmax: velocidad maxima de la reaccion
+		 *  - KmA: concentracion del reactivo A para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+		 *  - KmB: concentracion del reactivo B para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+		 *  - KdA: constante de disociacion del reactivo A con la enzima. Se tiene KdA * KmB = KmA * KdB
+		 *  - Keq: constante de equilibrio
+		 *  Todos los parametros mencionados tienen que estar registrados en el modelo.
+		 */
+		void CheckElements() const override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica directa de la reaccion, en formato Python.
+		 *  Modifica el atributo protected "directRatePython" de la clase padre.
+		 */
+		void setDirectRatePython() override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica inversa de la reaccion, en formato Python.
+		 *  Modifica el atributo protected "inverseRatePython" de la clase padre.
+		 */
+		void setInverseRatePython() override;
+
+        /**
+		 *  @brief Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario.
+		 *  Modifica el atributo protected "directRateShow" de la clase padre.
+		 */
+		void setDirectRateShow() override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario.
+		 *  Modifica el atributo protected "inverseRateShow" de la clase padre.
+		 */
+		void setInverseRateShow() override;
+};
+
+/**
+ *  @class TMMUniBiInhibidor
+ *  @brief Representa un mecanismo de tipo Michaelis-Menten con un sustrato, dos productos e inhibicion competitiva. Hereda de TMechanism.
+ */
+class TMMUniBiInhibidor : public TMechanism
+{
+	public:
+
+	   	/**
+		 *  @brief Constructor de la clase TMMUniBiInhibidor.
+		 *  Llama al constructor del padre, rellena los atributos propios y hace validaciones extra concretas.
+		 */
+		TMMUniBiInhibidor(String line, TModel* p_model);
+
+        /**
+		 *  @brief Construye el denominador de la ecuacion cinetica de tipo MMUniBiInhibidor.
+		 *  @param isPython true: formato python, false: formato salida para el usuario.
+		 *  @return String que contiene el denominador de la ecuacion cinetica correspondiente.
+		 */
+		String BuildDenominator(bool isPython);
+
+
+        /**
+		 *  @brief Comprueba que se han enviado los parametros necesarios para el mecanismo MMUniBiInhibidor:
+		 *  [Vmax, VmaxInv, KmA, KmC, KmD, KmI, Keq, Inhibidor] --> Se requiere que la reaccion sea bidireccional
+		 *  - Vmax: velocidad maxima de la reaccion directa
+		 *  - VmaxInv: velocidad maxima de la reaccion inversa
+		 *  - KmA: concentracion del reactivo A para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+		 *  - KmC: concentracion del producto C para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+		 *  - KmD: concentracion del producto D para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+		 *  - KmI: concentracion del inhibidor I para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+		 *  - Keq: constante de equilibrio
+		 *  - Inhibidor: metabolito que actua de inhibidor en esta reaccion
+         *  Todos los parametros y metabolitos mencionados tienen que estar registrados en el modelo.
+		 */
+		void CheckElements() const override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica directa de la reaccion, en formato Python.
+		 *  Modifica el atributo protected "directRatePython" de la clase padre.
+		 */
+		void setDirectRatePython() override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica inversa de la reaccion, en formato Python.
+		 *  Modifica el atributo protected "inverseRatePython" de la clase padre.
+		 */
+		void setInverseRatePython() override;
+
+        /**
+		 *  @brief Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario.
+		 *  Modifica el atributo protected "directRateShow" de la clase padre.
+		 */
+		void setDirectRateShow() override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario.
+		 *  Modifica el atributo protected "inverseRateShow" de la clase padre.
+		 */
+        void setInverseRateShow() override;
+};
+
+/**
+ *  @class TMMBiBiInhibidor
+ *  @brief Representa un mecanismo de tipo Michaelis-Menten con dos sustratos, dos productos e inhibicion competitiva. Hereda de TMechanism.
+ */
+class TMMBiBiInhibidor : public TMechanism
+{
+	public:
+
+		/**
+		 *  @brief Constructor de la clase TMMBiBiInhibidor.
+		 *  Llama al constructor del padre, rellena los atributos propios y hace validaciones extra concretas.
+		 */
+		TMMBiBiInhibidor(String line, TModel* p_model);
+
+        /**
+		 *  @brief Construye el denominador de la ecuacion cinetica de tipo MMBiBiInhibidor.
+		 *  @param isPython true: formato python, false: formato salida para el usuario.
+		 *  @return String que contiene el denominador de la ecuacion cinetica correspondiente.
+		 */
+		String BuildDenominator(bool isPython);
+
+
+        /**
+		 *  @brief Comprueba que se envian los parametros propios del mecanismo MMBiBiInhibidor:
+		 *  [Vmax, KmA, KmB, KmC, KmD, (Keq)]
+		 *  - Vmax: velocidad maxima de la reaccion
+		 *  - KmA: concentracion del reactivo A para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+		 *  - KmB: concentracion del reactivo B para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+		 *  - KmC: concentracion del producto C para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+		 *  - KmD: concentracion del producto D para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+		 *  - Keq: constante de equilibrio. Opcional para el caso de reaccion bidireccional
+		 *  La inhibicion se produce entre reactivos y productos de forma: A-C, B-D.
+         *  Todos los parametros mencionados tienen que estar registrados en el modelo.
+		 */
+		void CheckElements() const override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica directa de la reaccion, en formato Python.
+		 *  Modifica el atributo protected "directRatePython" de la clase padre.
+		 */
+		void setDirectRatePython() override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica inversa de la reaccion, en formato Python.
+		 *  Modifica el atributo protected "inverseRatePython" de la clase padre.
+		 */
+		void setInverseRatePython() override;
+
+        /**
+		 *  @brief Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario.
+		 *  Modifica el atributo protected "directRateShow" de la clase padre.
+		 */
+		void setDirectRateShow() override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario.
+		 *  Modifica el atributo protected "inverseRateShow" de la clase padre.
+		 */
+		void setInverseRateShow() override;
+};
+
+/**
+ *  @class THillInhibidorActivador
+ *  @brief Representa un mecanismo que sigue la ecuacion de Hill con un inhibidor y un activador. Hereda de TMechanism.
+ */
+class THillInhibidorActivador : public TMechanism
+{
+	public:
+
+	  	 /**
+		 *  @brief Constructor de la clase THillInhibidorActivador.
+		 *  Llama al constructor del padre, rellena los atributos propios y hace validaciones extra concretas.
+		 */
+		THillInhibidorActivador(String line, TModel* p_model);
+
+
+        /**
+		 *  @brief Comprueba que se envian los parametros propios del mecanismo HillInhibidorActivador:
+		 *  [Vmax, KmA, cte, A, Inhibidor, Activador]
+		 *  - Vmax: velocidad maxima de la reaccion
+		 *  - KmA: concentracion del reactivo A para la cual se consigue la mitad de la velocidad max cuando la enzima esta saturada
+		 *  - cte: constante que mide la influencia del inhibidor y activador en la reaccion
+		 *  - A: reactivo que se une a la enzima en la reaccion
+		 *  - Inhibidor: metabolito que actua como inhibidor en la reaccion
+		 *  - Activador: metabolito que actua como activador en la reaccion
+         *  Todos los parametros y metabolitos mencionados tienen que estar registrados en el modelo.
+		 */
+		void CheckElements() const override;
+
+
+		/**
+		 *  @brief Construye la ecuacion cinetica directa de la reaccion, en formato Python.
+		 *  Modifica el atributo protected "directRatePython" de la clase padre.
+		 */
+		void setDirectRatePython() override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica inversa de la reaccion, en formato Python.
+		 *  Modifica el atributo protected "inverseRatePython" de la clase padre.
+		 */
+		void setInverseRatePython() override;
+
+        /**
+		 *  @brief Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario.
+		 *  Modifica el atributo protected "directRateShow" de la clase padre.
+		 */
+		void setDirectRateShow() override;
+
+		/**
+		 *  @brief Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario.
+		 *  Modifica el atributo protected "inverseRateShow" de la clase padre.
+		 */
+		void setInverseRateShow() override;
+};
+
+
+/**
+ *  @class TModel
+ *  @brief Clase para encapsular un modelo completo, que representa una ruta metabolica especifica.
+ */
+class TModel
+{
+	private: // private members
+
+		std::vector<TMetabolite> metabolites;			/**< Lista de los metabolitos que componen el modelo, cuya concentracion se va a medir en lal simulacion */
+		std::vector<TParameter> parameters;     		/**< Lista de todos los parametros que aparecen en el modelo */
+		std::vector<TReaction> reactions;    			/**< Lista de las reacciones que componen el modelo a simular */
+		std::vector<TMechanism> mechanisms;    			/**< Lista de los mecanismos que componen el modelo a simular. Uno para cada reaccion. */
+		std::vector<String> equationsPython;    		/**< Lista de las EDOs que miden la variacion de la concentracion de cada metabolito a lo largo del tiempo. Formato Python. */
+		std::vector<String> equationsShow;      		/**< Lista de las EDOs que miden la variacion de la concentracion de cada metabolito a lo largo del tiempo. Formato para salida usuario. */
+		std::vector<String> equationsShowCondensed;     /**< Muestra el nombre del mecanismo que se suma o resta, no la ecuacion cineta desglosada como en equationsShow . */
+		std::map<String, String> mechanismTemplates;	/**< Mapa con los tipos de mecanismo disponibles en la aplicacion, junto a su plantilla de entrada */
+
+		/**
+		 *  @brief Inicializa el mapa mechanismTemplates con los tipos de mecanismos disponibles en la aplicacion.
+		 *  Modifica el atributo "mechanismTemplates" introduciendo parejas clave-valor:
+		 *  - clave: identificativo del tipo de mecanismo, String.
+		 *  - valor: plantilla con los campos necesarios para introducir un MECHANISM de ese tipo, String.
+		 */
+		void initMechanismTemplates();
+
+	public:
+
+		/**
+		 *  @brief Constructor de la clase TModel.
+		 *
+		 *  Llama al metodo initMechanismTemplates() para inicializar el mapa de mechanismTemplates
+         *  con los tipos de mecanismos disponibles en la aplicacion.
+		 */
+		TModel();
+
+
+        /**
+		 *  @brief Rellena el objeto comboReactions con la lista de las reacciones cargadas en el modelo.
+		 *  @param comboReactions objeto TComboBox que contendra un desplegable con las reacciones cargadas en el modelo.
+		 */
+		void fillReactionsComboBox(TComboBox* comboReactions);
+
+		/**
+		 *  @brief Rellena el objeto comboMecanismos con la lista de tipos de mecanismos disponibles.
+		 *  Usa el contenido del mapa mechanismTemplates de la clase.
+		 *  @param comboMecanismos objeto TComboBox que contendra un desplegable con los tipos de mecanismos disponibles.
+		 */
+		void fillMechanismComboBox(TComboBox* comboMecanismos);
+
+		/**
+		 *  @brief Dado el tipo de mecanismo (key), devuelve la plantilla de entrada de datos asociada.
+		 *  @param key tipo de mecanismo
+		 *  @return String con la plantilla de entrada del tipo de mecanismo pedido
+		 */
+		String getMechanismTemplate(const String& key);
+
+
+		/**
+		 *  @brief Metodo para aniadir un metabolito al modelo.
+		 *  @param metabolite referencia constante de un objeto de tipo TMetabolite que se aniade a la lista de metabolitos del modelo.
+		 */
+		void addMetabolite(const TMetabolite& metabolite);
+
+        /**
+		 *  @brief Metodo para aniadir un parametro al modelo.
+		 *  @param parameter referencia constante de un objeto de tipo TParameter que se aniade a la lista de parametros del modelo.
+		 */
+		void addParameter(const TParameter& parameter);
+
+        /**
+		 *  @brief Metodo para aniadir una reaccion al modelo.
+		 *  @param reaction referencia constante de un objeto de tipo TReaction que se aniade a la lista de reacciones del modelo.
+		 */
+		void addReaction(const TReaction& reaction);
+
+        /**
+		 *  @brief Metodo para aniadir un mecanismo al modelo.
+		 *  @param reaction referencia constante de un objeto de tipo TMechanism que se aniade a la lista de mecanismos del modelo.
+		 */
+		void addMechanism(const TMechanism& mechanism);
+
+		/**
+		 *  @brief Dado el nombre corto de un metabolito, lo busca en el vector de metabolitos del modelo.
+		 *  @param name nombre corto del metabolito a buscar.
+		 *  @return Devuelve un puntero al metabolito si este se encuentra en el modelo. Lanza una excepcion en caso contrario.
+		 */
+		const TMetabolite* findMetabolite(String name) const;
+
+		/**
+		 *  @brief Dado el nombre corto de un parametro, lo busca en el vector de parametros del modelo.
+		 *  @param name nombre corto del parametro a buscar.
+		 *  @return Devuelve un puntero al parametro si este se encuentra en el modelo. Lanza una excepcion en caso contrario.
+		 */
+		const TParameter* findParameter(String name) const;
+
+		/**
+		 *  @brief Dado el nombre corto de una reaccion, lo busca en el vector de reacciones del modelo.
+		 *  @param name nombre corto de la reaccion a buscar.
+		 *  @return Devuelve un puntero a la reaccion si esta se encuentra en el modelo. Lanza una excepcion en caso contrario.
+		 */
+		const TReaction* findReaction(String name) const;
+
+        /**
+		 *  @brief Dado el nombre corto de una reaccion, devuelve el mecanismo cargado en el modelo que la describe.
+		 *  @param name nombre corto de una reaccion.
+		 *  @return Devuelve un puntero al mecanismo que describe la reaccion.
+		 */
+		const TMechanism* givesMechanism(String nameReaction) const;
+
+
+        /**
+		 *  @brief Dado el indice de un metabolito, lo busca en el vector de metabolitos del modelo.
+		 *  @param i indice del metabolito a devolver.
+		 *  @return Devuelve un puntero al metabolito. Devuelve nullptr si el indice es invalido.
+		 */
+		const TMetabolite* getMetabolite(int i) const;
+
+		/**
+		 *  @brief Dado el indice de un parametro, lo busca en el vector de parametros del modelo.
+		 *  @param i indice del parametro a devolver.
+		 *  @return Devuelve un puntero al parametro. Devuelve nullptr si el indice es invalido.
+		 */
+		const TParameter* getParameter(int i) const;
+
+        /**
+		 *  @brief Dado el indice de una reaccion, la busca en el vector de reacciones del modelo.
+		 *  @param i indice del reaccion a devolver.
+		 *  @return Devuelve un puntero al reaccion. Devuelve nullptr si el indice es invalido.
+		 */
+		const TReaction* getReaction(int i) const;
+
+        /**
+		 *  @brief Dado el indice de un mecanismo, lo busca en el vector de mecanismos del modelo.
+		 *  @param i indice del mecanismo a devolver.
+		 *  @return Devuelve un puntero al mecanismo. Devuelve nullptr si el indice es invalido.
+		 */
+		const TMechanism* getMechanism(int i) const;
+
+		/**
+		 *  @brief Devuelve el numero de metabolitos que contiene el modelo.
+		 *  @return int numero de metabolitos del modelo.
+		 */
+		int getNMetabolites() const;
+
+        /**
+		 *  @brief Devuelve el numero de parametros que contiene el modelo.
+		 *  @return int numero de parametros del modelo.
+		 */
+		int getNParameters() const;
+
+        /**
+		 *  @brief Devuelve el numero de reacciones que contiene el modelo.
+		 *  @return int numero de reacciones del modelo.
+		 */
+		int getNReactions() const;
+
+		/**
+		 *  @brief Devuelve el numero de mecanismos que contiene el modelo.
+		 *  @return int numero de mecanismos del modelo.
+		 */
+		int getNMechanisms() const;
+
+
+		/**
+		 *  @brief Devuelve el indice del metabolito de nombre 'name' segun el vector de metabolitos del modelo.
+		 *  @param name Nombre corto del metabolito.
+		 *  @return int Numero del indice del metabolito en el vector de metabolitos del modelo. Devuelve -1 si no lo encuentra.
+		 */
+		int indexOfMetabolite(String name) const;
+
+        /**
+		 *  @brief Devuelve el indice del parametro de nombre 'name' segun el vector de parametros del modelo.
+		 *  @param name Nombre corto del parametro.
+		 *  @return int Numero del indice del parametro en el vector de parametros del modelo. Devuelve -1 si no lo encuentra.
+		 */
+		int indexOfParameter(String name) const;
+
+
+        /**
+		 *  @brief Dada la linea de entrada y el modelo, crea un objeto TMechanism.
+		 *  La linea empieza por MECHANISM y se crea un tipo de mecanismo u otro segun el tipo especificado en el segundo campo de la linea.
+		 *  @param line linea del texto de entrada que se lee.
+		 *  @param model puntero al modelo en el que se crea el mecanismo.
+		 *  @return Devuelve el objeto TMechanism creado.
+		 */
+		TMechanism CreateMechanism(String line, TModel* model);
+
+
+		/**
+		 *  @brief Metodo que construye el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion mide la
+		 *  variacion de la concentracion de un metabolito. Hay tantas ecuaciones como metabolitos registrados.
+		 *
+		 *  La forma de construirla es teniendo en cuenta si el metabolito aparece como reactivo o producto en cada reaccion.
+		 *  Si aparece como reactivo, se resta la ecuacion cinetica asociada a dicha reaccion; si aparece como producto, se suma.
+		 *
+         *  El metodo modifica los atributos "equationsPython", "equationsShow" y "equationsShowCondensed" de la clase.
+		 */
+		void BuildEquations();
+
+		/**
+		 *  @brief Muestra la EDO de la posicion (i), correspondiente al metabolito (i).
+		 *  @param i indice del vector de ecuaciones.
+		 *  @return String EDO del metabolito numero (i), en formato String para Python.
+		 */
+		String getEquationPython(int i);
+
+        /**
+		 *  @brief Muestra la EDO de la posicion (i), correspondiente al metabolito (i).
+		 *  @param i indice del vector de ecuaciones.
+		 *  @return String EDO del metabolito numero (i), en formato String para el usuario.
+		 */
+		String getEquationShow(int i);
+
+        /**
+		 *  @brief Muestra la EDO condensada de la posicion (i), correspondiente al metabolito (i).
+		 *  @param i indice del vector de ecuaciones.
+		 *  @return String EDO del metabolito numero (i), en formato String para el usuario.
+		 */
+		String getEquationShowCondensed(int i);
+
+        /**
+		 *  @brief Devuelve un vector con todas las ecuaciones de los metabolitos guardados en el modelo.
+		 *  @return vector constante de tipo String
+		 */
+		const std::vector<String>& getAllEquationsPython() const;
+
+		/**
+		 *  @brief Devuelve un vector con todos los nombres cortos de los metabolitos guardados en el modelo.
+		 *  @return vector constante de tipo String
+		 */
+		const std::vector<String> getAllMetaboliteNames() const;
+
+        /**
+		 *  @brief Devuelve un vector con todas las concentraciones iniciales de los metabolitos guardados en el modelo.
+		 *  @return vector constante de tipo double
+		 */
+		const std::vector<double> getAllInitialConcen() const;
+
+        /**
+		 *  @brief Devuelve un vector con todos los parametros guardados en el modelo.
+		 *  @return vector constante de tipo double
+		 */
+		const std::vector<double> getAllParameters() const;
+
+
+		/**
+		 *  @brief Borra el contenido actual del modelo.
+		 *  Elimina los metabolitos, parametros y reacciones cargadas.
+         */
+		void Clear();
+};

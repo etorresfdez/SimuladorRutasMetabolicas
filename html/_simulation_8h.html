@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prototipo Simulacion Rutas Metabolicas: Referencia del archivo Simulation.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Prototipo Simulacion Rutas Metabolicas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_simulation_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo Simulation.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;Vcl.Grids.hpp&gt;</code><br />
+<code>#include &lt;System.IOUtils.hpp&gt;</code><br />
+<code>#include &lt;Vcl.Edge.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependencias incluidas en Simulation.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="_simulation_8h__incl.png" border="0" usemap="#a_simulation_8h" loading="lazy" alt=""/></div>
+<map name="a_simulation_8h" id="a_simulation_8h">
+<area shape="rect" title=" " alt="" coords="161,5,254,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,63,107"/>
+<area shape="poly" title=" " alt="" coords="178,35,78,77,76,72,176,30"/>
+<area shape="rect" title=" " alt="" coords="87,80,133,107"/>
+<area shape="poly" title=" " alt="" coords="193,32,140,73,137,68,188,33"/>
+<area shape="rect" title=" " alt="" coords="157,80,258,107"/>
+<area shape="poly" title=" " alt="" coords="209,31,210,66,205,63,205,34"/>
+<area shape="rect" title=" " alt="" coords="282,80,418,107"/>
+<area shape="poly" title=" " alt="" coords="233,30,314,72,309,73,232,35"/>
+<area shape="rect" title=" " alt="" coords="442,80,541,107"/>
+<area shape="poly" title=" " alt="" coords="255,29,429,75,424,77,254,35"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="_simulation_8h__dep__incl.png" border="0" usemap="#a_simulation_8hdep" loading="lazy" alt=""/></div>
+<map name="a_simulation_8hdep" id="a_simulation_8hdep">
+<area shape="rect" title=" " alt="" coords="67,5,160,32"/>
+<area shape="rect" href="_simulation_8cpp.html" title=" " alt="" coords="5,80,113,107"/>
+<area shape="poly" title=" " alt="" coords="93,47,71,81,66,78,96,43"/>
+<area shape="rect" href="_unit1_8h.html" title=" " alt="" coords="137,80,200,107"/>
+<area shape="poly" title=" " alt="" coords="133,42,162,79,156,80,132,47"/>
+<area shape="rect" href="_unit1_8cpp.html" title=" " alt="" coords="130,155,207,181"/>
+<area shape="poly" title=" " alt="" coords="170,121,171,156,166,153,166,124"/>
+</map>
+</div>
+</div>
+<p><a href="_simulation_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Clases</h2></td></tr>
+<tr class="memitem:TInstantResult" id="r_TInstantResult"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_t_instant_result.html">TInstantResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct <a class="el" href="struct_t_instant_result.html" title="struct TInstantResult. Estructura que almacena, para cada tiempo de la simulacion,...">TInstantResult</a>. Estructura que almacena, para cada tiempo de la simulacion, las concentraciones de todos los metabolitos guardados.  <a href="struct_t_instant_result.html#details">Más...</a><br /></td></tr>
+<tr class="memitem:TSimulation" id="r_TSimulation"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_t_simulation.html">TSimulation</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clase para encapsular el proceso de simulacion.  <a href="class_t_simulation.html#details">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:ac3aa7662e659b7dcd17242c02f059524" id="r_ac3aa7662e659b7dcd17242c02f059524"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a> { <a class="el" href="#ac3aa7662e659b7dcd17242c02f059524aa2bf2d8694138c6e502b89fbf36f13de">RK45</a>
+, <a class="el" href="#ac3aa7662e659b7dcd17242c02f059524ab414936a367cf5ba31aa943c386835e6">Radau</a>
+, <a class="el" href="#ac3aa7662e659b7dcd17242c02f059524a394ba4d29ef291286dc165c3a0b9b02a">BDF</a>
+, <a class="el" href="#ac3aa7662e659b7dcd17242c02f059524a9945fb5d05432a5ee5d12605da3d339d">LSODA</a>
+ }</td></tr>
+<tr class="memdesc:ac3aa7662e659b7dcd17242c02f059524"><td class="mdescLeft">&#160;</td><td class="mdescRight">enum <a class="el" href="#ac3aa7662e659b7dcd17242c02f059524" title="enum NumericMethod. Enumerado para representar los distintos metodos numericos considerados.">NumericMethod</a>. Enumerado para representar los distintos metodos numericos considerados.  <a href="#ac3aa7662e659b7dcd17242c02f059524">Más...</a><br /></td></tr>
+</table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentación de enumeraciones</h2>
+<a id="ac3aa7662e659b7dcd17242c02f059524" name="ac3aa7662e659b7dcd17242c02f059524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3aa7662e659b7dcd17242c02f059524">&#9670;&#160;</a></span>NumericMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ac3aa7662e659b7dcd17242c02f059524">NumericMethod</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enum <a class="el" href="#ac3aa7662e659b7dcd17242c02f059524" title="enum NumericMethod. Enumerado para representar los distintos metodos numericos considerados.">NumericMethod</a>. Enumerado para representar los distintos metodos numericos considerados. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="ac3aa7662e659b7dcd17242c02f059524aa2bf2d8694138c6e502b89fbf36f13de" name="ac3aa7662e659b7dcd17242c02f059524aa2bf2d8694138c6e502b89fbf36f13de"></a>RK45&#160;</td><td class="fielddoc"><p>Metodo de Runge-Kutta explicito. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac3aa7662e659b7dcd17242c02f059524ab414936a367cf5ba31aa943c386835e6" name="ac3aa7662e659b7dcd17242c02f059524ab414936a367cf5ba31aa943c386835e6"></a>Radau&#160;</td><td class="fielddoc"><p>Metodo de Runge-Kutta implicito. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac3aa7662e659b7dcd17242c02f059524a394ba4d29ef291286dc165c3a0b9b02a" name="ac3aa7662e659b7dcd17242c02f059524a394ba4d29ef291286dc165c3a0b9b02a"></a>BDF&#160;</td><td class="fielddoc"><p>Metodo implicito multipaso. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac3aa7662e659b7dcd17242c02f059524a9945fb5d05432a5ee5d12605da3d339d" name="ac3aa7662e659b7dcd17242c02f059524a9945fb5d05432a5ee5d12605da3d339d"></a>LSODA&#160;</td><td class="fielddoc"><p>Metodo Adams/BDF con cambio automatico de metodo segun la rigidez del problema. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="_simulation_8h.html">Simulation.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

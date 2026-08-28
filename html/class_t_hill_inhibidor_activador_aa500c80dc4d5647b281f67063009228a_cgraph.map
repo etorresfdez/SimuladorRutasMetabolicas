@@ -1,0 +1,27 @@
+<map id="THillInhibidorActivador::THillInhibidorActivador" name="THillInhibidorActivador::THillInhibidorActivador">
+<area shape="rect" id="Node000001" title="Constructor de la clase THillInhibidorActivador. Llama al constructor del padre, rellena los atributo..." alt="" coords="5,172,166,215"/>
+<area shape="rect" id="Node000002" href="$class_t_hill_inhibidor_activador.html#ac8081966718290e0e320eb731f0083d4" title="Comprueba que se envian los parametros propios del mecanismo HillInhibidorActivador: [Vmax,..." alt="" coords="227,139,380,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,179,214,173,209,175,167,184"/>
+<area shape="rect" id="Node000008" href="$class_t_hill_inhibidor_activador.html#acee6ec3171bf98254be22d219f6e037b" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="227,5,380,48"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="100,170,147,115,178,84,212,58,223,54,219,57,215,62,181,88,151,118,105,173"/>
+<area shape="rect" id="Node000009" href="$class_t_hill_inhibidor_activador.html#ad7005d8496600717b5d85e97c6ce3163" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="227,72,380,115"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="124,169,213,124,229,119,224,123,215,129,127,174"/>
+<area shape="rect" id="Node000010" href="$class_t_hill_inhibidor_activador.html#a1fe354667595968a2871276c71ed8f5a" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="224,205,383,248"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="165,203,210,211,206,213,166,208"/>
+<area shape="rect" id="Node000011" href="$class_t_hill_inhibidor_activador.html#aa8fb8bb153ef57fe1da0d83d53533558" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="227,272,380,315"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="126,213,215,258,229,265,224,266,213,262,125,218"/>
+<area shape="rect" id="Node000012" href="$class_t_mechanism.html#aa79afd1a85cdf4e07ac6fcdfb1577285" title="Constructor de la clase TMechanism." alt="" coords="214,339,393,365"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="103,213,150,269,181,299,215,324,227,333,221,332,212,329,177,303,146,273,101,218"/>
+<area shape="rect" id="Node000003" href="$class_t_mechanism.html#a2a8fa75aa79ff89533af07051e1a1007" title="Devuelve el parametro del mecanismo de la posicion &#39;i&#39;." alt="" coords="446,63,645,89"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="365,136,392,124,416,111,440,99,465,93,460,95,442,104,418,116,394,129,367,140"/>
+<area shape="rect" id="Node000004" href="$class_t_mechanism.html#a83135bad08af9d4416b57f7fe7c73493" title="Devuelve el nombre del tipo de mecanismo." alt="" coords="454,113,637,140"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="379,147,441,140,436,142,381,152"/>
+<area shape="rect" id="Node000005" href="$class_t_mechanism.html#ad3082b5258b9df20f86bad71acd6bdfb" title="Devuelve el numero de parametros del mecanismo guardados." alt="" coords="441,164,650,191"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="379,163,428,168,423,169,380,168"/>
+<area shape="rect" id="Node000006" href="$class_t_mechanism.html#a952aaf0c9f7c5f2ab95e20ba55cdde4d" title="Devuelve un puntero a la reaccion dada su nombre." alt="" coords="458,215,633,241"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="372,179,442,200,473,210,467,211,440,205,372,185"/>
+<area shape="rect" id="Node000007" href="$class_t_mechanism.html#a4645ac8a1913d474bded3ccb4f0b75ba" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="698,215,908,241"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="633,225,685,228,680,228,633,231"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="379,40,464,58,459,60,380,45"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="379,85,433,83,428,85,381,90"/>
+</map>

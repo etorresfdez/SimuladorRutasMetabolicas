@@ -1,0 +1,15 @@
+<map id="TMechanism::TMechanism" name="TMechanism::TMechanism">
+<area shape="rect" id="Node000001" title="Constructor de la clase TMechanism." alt="" coords="281,164,460,191"/>
+<area shape="rect" id="Node000002" href="$class_t_hill_inhibidor_activador.html#aa500c80dc4d5647b281f67063009228a" title="Constructor de la clase THillInhibidorActivador. Llama al constructor del padre, rellena los atributo..." alt="" coords="39,5,199,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="344,153,295,108,264,83,231,62,200,48,199,43,234,58,268,79,299,104,349,152"/>
+<area shape="rect" id="Node000003" href="$class_t_mass_action.html#a74563e7583262c8adf5b9ed1f9bbca63" title="Constructor de la clase TMassAction. Llama al constructor del padre, rellena los atributos propios y ..." alt="" coords="27,72,211,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="329,157,284,135,232,113,194,102,193,97,234,108,286,130,334,156"/>
+<area shape="rect" id="Node000004" href="$class_t_m_m_bi_bi_inhibidor.html#afd7921f14f90bb419de8d1dd53d27e13" title="Constructor de la clase TMMBiBiInhibidor. Llama al constructor del padre, rellena los atributos propi..." alt="" coords="26,123,212,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="263,164,213,159,212,154,268,162"/>
+<area shape="rect" id="Node000005" href="$class_t_m_m_bi_sec_aleatorio.html#ad4e65c49ef3a64b8162e1aab18289d3d" title="Constructor de la clase TMMBiSecAleatorio. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="46,189,192,232"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="263,193,193,204,191,198,268,190"/>
+<area shape="rect" id="Node000006" href="$class_t_m_m_uni_bi_inhibidor.html#a27f1f61c93dc9400e2111c7e84bfb813" title="Constructor de la clase TMMUniBiInhibidor. Llama al constructor del padre, rellena los atributos prop..." alt="" coords="49,256,189,299"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="333,197,234,246,190,261,188,256,232,242,328,199"/>
+<area shape="rect" id="Node000007" href="$class_t_m_m_uni_inhibidor.html#aacd95490240c218832d2a12e5a6b33a2" title="Constructor de la clase TMMUniInhibidor. Llama al constructor del padre, rellena los atributos propio..." alt="" coords="5,323,233,349"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="352,202,303,260,270,289,234,313,206,325,205,320,231,308,267,285,299,256,348,205"/>
+</map>

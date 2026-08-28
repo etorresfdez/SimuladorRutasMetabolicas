@@ -1,0 +1,20 @@
+<map id="TReaction::getNProducts" name="TReaction::getNProducts">
+<area shape="rect" id="Node000001" title="Devuelve el numero de productos que tiene la reaccion." alt="" coords="773,127,943,153"/>
+<area shape="rect" id="Node000002" href="$class_t_mass_action.html#a31a4b542f91aab112a7bcb2e3de1819e" title="Construye la ecuacion cinetica segun la ley de accion de masas." alt="" coords="513,101,725,128"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="755,129,726,129,726,123,760,129"/>
+<area shape="rect" id="Node000008" href="$class_t_reaction.html#affa3bd3d32b5a15fc41ada24088fedb3" title="Muestra la reaccion guardada y sus atributos." alt="" coords="552,152,686,179"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="760,150,687,161,686,156,755,151"/>
+<area shape="rect" id="Node000003" href="$class_t_mass_action.html#ab908415a5e4eb18a0ffaf33d5f58ad7c" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="257,5,444,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="564,96,464,63,428,51,428,46,466,57,569,95"/>
+<area shape="rect" id="Node000005" href="$class_t_mass_action.html#a05e6775beaf34a255e63993627e7ea17" title="Construye la ecuacion cinetica directa de la reaccion, en formato salida para el usuario...." alt="" coords="241,72,461,99"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="495,102,461,100,461,95,500,101"/>
+<area shape="rect" id="Node000006" href="$class_t_mass_action.html#a686b8ca0db5dfef10ba9b3adb8e0a40e" title="Construye la ecuacion cinetica inversa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="253,123,448,165"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="495,128,449,136,448,131,500,128"/>
+<area shape="rect" id="Node000007" href="$class_t_mass_action.html#a14d0626057ebcbc68f87caf65a98ffe4" title="Construye la ecuacion cinetica inversa de la reaccion, en formato salida para el usuario...." alt="" coords="237,189,465,216"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="531,133,514,142,500,151,491,161,481,170,466,180,435,191,434,186,464,175,478,166,487,157,497,147,512,138,526,134"/>
+<area shape="rect" id="Node000004" href="$class_t_mass_action.html#a74563e7583262c8adf5b9ed1f9bbca63" title="Constructor de la clase TMassAction. Llama al constructor del padre, rellena los atributos propios y ..." alt="" coords="5,101,189,128"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="255,54,238,63,132,103,130,98,236,57,260,52"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="223,101,190,107,188,102,228,99"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="235,132,189,128,189,123,241,130"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="260,185,236,180,175,156,124,131,125,126,177,151,238,175,265,185"/>
+</map>

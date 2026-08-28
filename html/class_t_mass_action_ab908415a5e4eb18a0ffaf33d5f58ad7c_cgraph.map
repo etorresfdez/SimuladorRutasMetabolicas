@@ -1,0 +1,21 @@
+<map id="TMassAction::setDirectRatePython" name="TMassAction::setDirectRatePython">
+<area shape="rect" id="Node000001" title="Construye la ecuacion cinetica directa de la reaccion, en formato Python. Modifica el atributo protec..." alt="" coords="5,149,193,192"/>
+<area shape="rect" id="Node000002" href="$class_t_mass_action.html#a31a4b542f91aab112a7bcb2e3de1819e" title="Construye la ecuacion cinetica segun la ley de accion de masas." alt="" coords="241,157,453,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,168,228,170,223,172,194,173"/>
+<area shape="rect" id="Node000003" href="$class_t_mechanism.html#a2a8fa75aa79ff89533af07051e1a1007" title="Devuelve el parametro del mecanismo de la posicion &#39;i&#39;." alt="" coords="501,5,700,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="359,155,416,100,456,69,500,42,518,36,513,39,502,46,459,73,419,104,362,159"/>
+<area shape="rect" id="Node000004" href="$class_t_reaction.html#ab2d2437342af2beeaa3818be3cf903b5" title="Devuelve el numero de productos que tiene la reaccion." alt="" coords="516,56,685,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="371,155,428,124,500,92,525,86,520,88,502,97,431,129,373,159"/>
+<area shape="rect" id="Node000005" href="$class_t_reaction.html#a7e87afed02be63e8a789f97bebdc124a" title="Devuelve el numero de reactivos que tiene la reaccion." alt="" coords="512,107,689,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="417,154,518,136,513,138,418,159"/>
+<area shape="rect" id="Node000006" href="$class_t_reaction.html#ada88866d9b8c955b03a1415181994ce6" title="Devuelve el nombre corto del producto i de la reaccion." alt="" coords="524,157,677,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="453,168,512,170,506,171,454,173"/>
+<area shape="rect" id="Node000007" href="$class_t_reaction.html#ae3762acaeb86390a70fb57a9c8061e39" title="Devuelve el nombre corto del reactivo i de la reaccion." alt="" coords="520,208,681,235"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="417,182,518,204,513,205,417,187"/>
+<area shape="rect" id="Node000008" href="$class_t_mechanism.html#a952aaf0c9f7c5f2ab95e20ba55cdde4d" title="Devuelve un puntero a la reaccion dada su nombre." alt="" coords="514,259,688,285"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="372,182,431,213,502,244,526,254,520,254,500,249,428,218,371,187"/>
+<area shape="rect" id="Node000010" href="$class_t_metabolite.html#a7818e2aee3c3aa8bfeea327aa9643697" title="Devuelve el nombre corto del metabolito." alt="" coords="510,309,691,336"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="362,182,419,237,459,268,502,295,518,304,513,303,500,300,456,273,416,241,360,187"/>
+<area shape="rect" id="Node000009" href="$class_t_mechanism.html#a4645ac8a1913d474bded3ccb4f0b75ba" title="Devuelve el nombre de la reaccion asociada al mecanismo." alt="" coords="748,259,958,285"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="688,269,735,272,730,272,688,275"/>
+</map>
