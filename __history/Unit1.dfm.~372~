@@ -14,6 +14,7 @@ object Form1: TForm1
   Font.Style = []
   Menu = MainMenu
   Position = poDesigned
+  OnClose = FormClose
   OnResize = FormResize
   TextHeight = 15
   object PanelEntradaDatos: TPanel
@@ -51,8 +52,6 @@ object Form1: TForm1
       Height = 3
       Cursor = crVSplit
       Align = alTop
-      Color = clDodgerblue
-      ParentColor = False
       OnCanResize = Splitter1CanResize
       OnMoved = Splitter1Moved
     end
@@ -1109,6 +1108,7 @@ object Form1: TForm1
       Width = 465
       Height = 110
       Color = clBlanchedalmond
+      ReadOnly = True
       TabOrder = 0
     end
     object PageControlSalida: TPageControl

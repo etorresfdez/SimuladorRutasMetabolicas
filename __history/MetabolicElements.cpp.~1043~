@@ -26,20 +26,20 @@
 // variables estaticas
 const String TMetabolite::inputTemplate = "METABOLITE <nombre_corto> <nombre_largo> <concentracion_inicial>";
 
-// metodo privado: conversor de float a string con formato ','
-String TMetabolite::FloatToStrComma(double value)
+// metodo privado: conversor de float a string con formato '.'
+String TMetabolite::FloatToStrDot(double value) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
-	formato.DecimalSeparator = ',';
+	formato.DecimalSeparator = '.';
 
 	return FloatToStr(value, formato);
 }
 
-// metodo privado: conversor de string a float con formato ','
-double TMetabolite::StrToFloatComma(String texto)
+// metodo privado: conversor de string a float con formato '.'
+double TMetabolite::StrToFloatDot(String texto) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
-	formato.DecimalSeparator = ',';
+	formato.DecimalSeparator = '.';
 
 	return StrToFloat(texto, formato);
 }
@@ -73,7 +73,7 @@ TMetabolite::TMetabolite(String line)
     // rellena los atributos del metabolito
     shortName = Trim(fields->Strings[1]);
     fullName = Trim(fields->Strings[2]);
-	initialValue = StrToFloatComma(Trim(fields->Strings[3]));
+	initialValue = StrToFloatDot(Trim(fields->Strings[3]));
 
     // elimina el puntero creado
 	delete fields;
@@ -110,7 +110,7 @@ void TMetabolite::toString(TMemo* pantallaSalida) const
     pantallaSalida->Lines->Add("======== METABOLITE ========");
     pantallaSalida->Lines->Add("Short name: " + shortName);
     pantallaSalida->Lines->Add("Full name: " + fullName);
-	pantallaSalida->Lines->Add("Initial value: " + FloatToStrComma(initialValue));
+	pantallaSalida->Lines->Add("Initial value: " + FloatToStrDot(initialValue));
     pantallaSalida->Lines->Add("===========================");
 }
 
@@ -121,19 +121,19 @@ void TMetabolite::toString(TMemo* pantallaSalida) const
 const String TParameter::inputTemplate = "PARAMETER <nombre_corto> <nombre_largo> <valor>";
 
 // metodo privado: conversor de float a string con formato ','
-String TParameter::FloatToStrComma(double value)
+String TParameter::FloatToStrDot(double value) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
-	formato.DecimalSeparator = ',';
+	formato.DecimalSeparator = '.';
 
 	return FloatToStr(value, formato);
 }
 
 // metodo privado: conversor de string a float con formato ','
-double TParameter::StrToFloatComma(double value)
+double TParameter::StrToFloatDot(String texto) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
-	formato.DecimalSeparator = ',';
+	formato.DecimalSeparator = '.';
 
 	return StrToFloat(texto, formato);
 }
@@ -167,7 +167,7 @@ TParameter::TParameter(String line)
     // rellena los atributos del parametro
     shortName = Trim(fields->Strings[1]);
     fullName = Trim(fields->Strings[2]);
-	value = StrToFloatComma(Trim(fields->Strings[3]));
+	value = StrToFloatDot(Trim(fields->Strings[3]));
 
     // elimina el puntero creado
 	delete fields;
@@ -198,7 +198,7 @@ void TParameter::toString(TMemo* pantallaSalida) const
     pantallaSalida->Lines->Add("========= PARAMETER =========");
     pantallaSalida->Lines->Add("Short name: " + shortName);
     pantallaSalida->Lines->Add("Full name: " + fullName);
-	pantallaSalida->Lines->Add("Value: " + FloatToStrComma(value));
+	pantallaSalida->Lines->Add("Value: " + FloatToStrDot(value));
     pantallaSalida->Lines->Add("===========================");
 }
 
@@ -209,10 +209,10 @@ void TParameter::toString(TMemo* pantallaSalida) const
 const String TReaction::inputTemplate = "REACTION <nombre_corto> <nombre_largo> <lista_reactivos> <sentido_reaccion> <lista_productos>";
 
 // metodo privado: conversor de string a float con formato ','
-double TReaction::StrToFloatComma(double value)
+double TReaction::StrToFloatDot(String texto) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
-	formato.DecimalSeparator = ',';
+	formato.DecimalSeparator = '.';
 
 	return StrToFloat(texto, formato);
 }
@@ -237,7 +237,7 @@ void TReaction::DividesCoeffMetabolite(String text, String& name, double& coeff)
 		{
 			// extrae el numero del coeficiente
 			String coeffText = text.SubString(2, pos - 2);
-			coeff = StrToFloatComma(coeffText);
+			coeff = StrToFloatDot(coeffText);
 
             // extrae el nombre del metabolito
 			name = Trim(text.SubString(pos + 1, text.Length() - pos));
@@ -455,27 +455,27 @@ void TModel::initMechanismTemplates()
 	{
         {
 			"LEY-ACCION-MASAS",
-			"MECHANISM\tLEY-ACCION-MASAS\t<nombre_reaccion>\t[kdirecta, (kinversa)]"
+			"MECANISMO\tLEY-ACCION-MASAS\t<nombre_reaccion>\t[kdirecta, (kinversa)]"
         },
         {
 			"MM-UNI-INHIBIDOR",
-			"MECHANISM\tMM-UNI-INHIBIDOR\t<nombre_reaccion>\t[Vmax, KmA, KmI, Inhibidor, (Keq)]"
+			"MECANISMO\tMM-UNI-INHIBIDOR\t<nombre_reaccion>\t[Vmax, KmA, KmI, Inhibidor, (Keq)]"
         },
         {
 			"MM-BI-SEC-ALEATORIO",
-			"MECHANISM\tMM-BI-SEC-ALEATORIO\t<nombre_reaccion>\t[Vmax, KmA, KmB, (KdA), (Keq)]"
+			"MECANISMO\tMM-BI-SEC-ALEATORIO\t<nombre_reaccion>\t[Vmax, KmA, KmB, (KdA), (Keq)]"
         },
         {
 			"MM-UNI-BI-INHIBIDOR",
-			"MECHANISM\tMM-UNI-BI-INHIBIDOR\t<nombre_reaccion>\t[Vmax, VmaxInv, KmA, KmC, KmD, KmI, Keq, Inhibidor]"
+			"MECANISMO\tMM-UNI-BI-INHIBIDOR\t<nombre_reaccion>\t[Vmax, VmaxInv, KmA, KmC, KmD, KmI, Keq, Inhibidor]"
 		},
 		{
 			"MM-BI-BI-INHIBIDOR",
-			"MECHANISM\tMM-BI-BI-INHIBIDOR\t<nombre_reaccion>\t[KmA, KmB, KmC, KmD, (Keq)]"
+			"MECANISMO\tMM-BI-BI-INHIBIDOR\t<nombre_reaccion>\t[KmA, KmB, KmC, KmD, (Keq)]"
 		},
 		{
 			"HILL-INHIBIDOR-ACTIVADOR",
-			"MECHANISM\tHILL-INHIBIDOR-ACTIVADOR\t<nombre_reaccion>\t[Vmax, KmA, cte, A, Inhibidor, Activador]"
+			"MECANISMO\tHILL-INHIBIDOR-ACTIVADOR\t<nombre_reaccion>\t[Vmax, KmA, cte, A, Inhibidor, Activador]"
 		}
     };
 }
@@ -1741,4 +1741,3 @@ const std::vector<double> TModel::getAllParameters() const
 
 	return params;
 }
-

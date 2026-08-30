@@ -1116,7 +1116,7 @@ object Form1: TForm1
       Top = 144
       Width = 463
       Height = 310
-      ActivePage = Grafica
+      ActivePage = Tabla
       TabOrder = 1
       object Tabla: TTabSheet
         Caption = 'Tabla'

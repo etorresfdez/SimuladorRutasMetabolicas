@@ -14,6 +14,18 @@
 //      · THillInhibidorActivador
 // 	- TModel
 //
+// Contiene los enumerados:
+//  - TReactionDirection
+//		· rdUNI
+//		· rdBI
+//  - TMechanismType
+//		· LEY_ACCION_MASAS
+//		· MM_UNI_INHIBIDOR
+//		· MM_BI_SEC_ALEATORIO
+//		· MM_UNI_BI_INHIBIDOR
+//		· MM_BI_BI_INHIBIDOR
+//		· HILL_INHIBIDOR_ACTIVADOR
+//
 // Archivo .h --> Declaraciones
 //
 //---------------------------------------------------------------------------
@@ -62,11 +74,18 @@ class TMetabolite
 		double initialValue;    	/**< Concentracion inicial del metabolito */
 
         /**
-		 *  @brief Metodo que convierte un double en string con formato decimal ','
-		 *  @param value numero con decimales con ','
+		 *  @brief Metodo que convierte un double en string con formato decimal '.'
+		 *  @param value numero con decimales con '.'
 		 *  @return String palabra que se devuelve manteniendo el formato decimal '.'
 		 */
-		String FloatToStrComma(double value);
+		String FloatToStrDot(double value) const;
+
+        /**
+		 *  @brief Metodo que convierte un string en double con formato decimal '.'
+		 *  @param texto palabra que representa un numero con decimales con '.'
+		 *  @return double numero que se devuelve manteniendo el formato decimal '.'
+		 */
+		double StrToFloatDot(String texto) const;
 
 	public:
 
@@ -133,11 +152,18 @@ class TParameter
 
 
         /**
-		 *  @brief Metodo que convierte un double en string con formato decimal ','
-		 *  @param value numero con decimales con ','
+		 *  @brief Metodo que convierte un double en string con formato decimal '.'
+		 *  @param value numero con decimales con '.'
 		 *  @return String palabra que se devuelve manteniendo el formato decimal '.'
 		 */
-		String FloatToStrComma(double value);
+		String FloatToStrDot(double value) const;
+
+        /**
+		 *  @brief Metodo que convierte un string en double con formato decimal '.'
+		 *  @param texto palabra que representa un numero con decimales con '.'
+		 *  @return double numero que se devuelve manteniendo el formato decimal '.'
+		 */
+		double StrToFloatDot(String texto) const;
 
 	public:
 
@@ -208,6 +234,13 @@ class TReaction
 		std::vector<TSubstance> reactants; 			/**< Array de reactivos de la reaccion */
 		std::vector<TSubstance> products;  			/**< Array de productos de la reaccion */
 		TModel* model;                              /**< Modelo al que pertenece la reaccion */
+
+        /**
+		 *  @brief Metodo que convierte un string en double con formato decimal '.'
+		 *  @param texto palabra que representa un numero con decimales con '.'
+		 *  @return double numero que se devuelve manteniendo el formato decimal '.'
+		 */
+		double StrToFloatDot(String texto) const;
 
 		/**
 		 * @brief Dada una lista de sustancias, las separa en nombres y coeficientes estequimetricos.

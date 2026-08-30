@@ -101,7 +101,7 @@ class TMetabolite
 
 		/**
 		 *  @brief Constructor de TMetabolite
-		 *  @param line linea del panel de entrada asociada a un metabolito, comienza por METABOLITE
+		 *  @param line linea del panel de entrada asociada a un metabolito, comienza por METABOLITO
 		 */
 		TMetabolite(String line);
 
@@ -179,7 +179,7 @@ class TParameter
 
 		/**
 		 *  @brief Constructor de TParameter
-		 *  @param line linea del panel de entrada asociada a un parametro, comienza por PARAMETER
+		 *  @param line linea del panel de entrada asociada a un parametro, comienza por PARAMETRO
 		 */
 		TParameter(String line);
 
@@ -284,7 +284,7 @@ class TReaction
 
 		/**
 		 * @brief Constructor de TReaction, lee una linea completa del panel de entrada
-		 * @param line linea del panel de entrada asociada a una reaccion, comienza por REACTION
+		 * @param line linea del panel de entrada asociada a una reaccion, comienza por REACCION
 		 * @param model modelo al que pertenece la reaccion
 		 */
 		TReaction(String line, TModel* model);
@@ -361,11 +361,11 @@ class TMechanism
 
 	public:
 
-        static const String inputTemplate; /**< Estructura de entrada de datos de un mecanismo */
+		static const String inputTemplate; /**< Estructura de entrada de datos de un mecanismo */
 
 		/**
 		 *  @brief Constructor de la clase TMechanism
-		 *  @param line linea de entrada de datos que comienza por "MECHANISM"
+		 *  @param line linea de entrada de datos que comienza por MECANISMO
          *  @param p_model modelo asociado al mecanismo
 		 */
 		TMechanism(String line, TModel* p_model);

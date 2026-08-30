@@ -24,7 +24,7 @@
 // Metodos de la clase TMetabolite
 
 // variables estaticas
-const String TMetabolite::inputTemplate = "METABOLITE <nombre_corto> <nombre_largo> <concentracion_inicial>";
+const String TMetabolite::inputTemplate = "METABOLITO <nombre_corto> <nombre_largo> <concentracion_inicial>";
 
 // metodo privado: conversor de float a string con formato '.'
 String TMetabolite::FloatToStrDot(double value) const
@@ -118,7 +118,7 @@ void TMetabolite::toString(TMemo* pantallaSalida) const
 // Metodos de la clase TParameter
 
 // variables estaticas
-const String TParameter::inputTemplate = "PARAMETER <nombre_corto> <nombre_largo> <valor>";
+const String TParameter::inputTemplate = "PARAMETRO <nombre_corto> <nombre_largo> <valor>";
 
 // metodo privado: conversor de float a string con formato ','
 String TParameter::FloatToStrDot(double value) const
@@ -206,7 +206,7 @@ void TParameter::toString(TMemo* pantallaSalida) const
 // Metodos de la clase TReaction
 
 // Variables estaticas
-const String TReaction::inputTemplate = "REACTION <nombre_corto> <nombre_largo> <lista_reactivos> <sentido_reaccion> <lista_productos>";
+const String TReaction::inputTemplate = "REACCION <nombre_corto> <nombre_largo> <lista_reactivos> <sentido_reaccion> <lista_productos>";
 
 // metodo privado: conversor de string a float con formato ','
 double TReaction::StrToFloatDot(String texto) const
@@ -670,7 +670,7 @@ void TModel::Clear()
 // Metodos de la clase TMechanism
 
 // variables estaticas
-const String TMechanism::inputTemplate = "MECHANISM <tipo_mecanismo> <nombre_reaccion> <parametros_del_mecanismo>";
+const String TMechanism::inputTemplate = "MECANISMO <tipo_mecanismo> <nombre_reaccion> <parametros_del_mecanismo>";
 
 
 // Constructor
