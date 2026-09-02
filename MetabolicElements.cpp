@@ -107,7 +107,7 @@ void TMetabolite::toString(TMemo* pantallaSalida) const
     if (!pantallaSalida)
         return;
 
-    pantallaSalida->Lines->Add("======== METABOLITE ========");
+	pantallaSalida->Lines->Add("======== METABOLITO ========");
     pantallaSalida->Lines->Add("Short name: " + shortName);
     pantallaSalida->Lines->Add("Full name: " + fullName);
 	pantallaSalida->Lines->Add("Initial value: " + FloatToStrDot(initialValue));
@@ -195,7 +195,7 @@ void TParameter::toString(TMemo* pantallaSalida) const
     if (!pantallaSalida)
         return;
 
-    pantallaSalida->Lines->Add("========= PARAMETER =========");
+    pantallaSalida->Lines->Add("========= PARAMETRO =========");
     pantallaSalida->Lines->Add("Short name: " + shortName);
     pantallaSalida->Lines->Add("Full name: " + fullName);
 	pantallaSalida->Lines->Add("Value: " + FloatToStrDot(value));
@@ -422,7 +422,7 @@ void TReaction::toString(TMemo* pantallaSalida) const
     if (!pantallaSalida)
         return;
 
-	pantallaSalida->Lines->Add("========= REACTION =========");
+	pantallaSalida->Lines->Add("========= REACCION =========");
     pantallaSalida->Lines->Add("Short name: " + shortName);
     pantallaSalida->Lines->Add("Full name: " + fullName);
     pantallaSalida->Lines->Add("Direction: " + getDirectionString());
@@ -471,7 +471,7 @@ void TModel::initMechanismTemplates()
 		},
 		{
 			"MM-BI-BI-INHIBIDOR",
-			"MECANISMO\tMM-BI-BI-INHIBIDOR\t<nombre_reaccion>\t[KmA, KmB, KmC, KmD, (Keq)]"
+			"MECANISMO\tMM-BI-BI-INHIBIDOR\t<nombre_reaccion>\t[Vmax, KmA, KmB, KmC, KmD, (Keq)]"
 		},
 		{
 			"HILL-INHIBIDOR-ACTIVADOR",
@@ -605,7 +605,7 @@ const TMetabolite* TModel::findMetabolite(String name) const
 		if (m.getShortName() == name)
 			return &m;
 
-	throw Exception("'"+ name + "' no registrado como METABOLITE.");
+	throw Exception("'"+ name + "' no registrado como METABOLITO.");
 }
 
 // busca el nombre de un parametro en la lista de parametros leidos del modelo
@@ -616,7 +616,7 @@ const TParameter* TModel::findParameter(String name) const
 		if (p.getShortName() == name)
 			return &p;
 
-	throw Exception("'"+ name + "' no registrado como PARAMETER.");
+	throw Exception("'"+ name + "' no registrado como PARAMETRO.");
 }
 
 // busca el nombre de una reaccion en la lista de reacciones leidas del modelo
@@ -627,7 +627,7 @@ const TReaction* TModel::findReaction(String name) const
 		if (r.getShortName() == name)
 			return &r;
 
-	throw Exception("'"+ name + "' no registrada como REACTION.");
+	throw Exception("'"+ name + "' no registrada como REACCION.");
 }
 
 // Metodos para obtener el indice del metabolito y parametro a traves del nombre
@@ -700,7 +700,7 @@ TMechanism::TMechanism(String line, TModel* p_model)
 	if (model->findReaction(Trim(fields->Strings[2])))
 		reactionName = Trim(fields->Strings[2]);
 	else
-		throw Exception(Trim(fields->Strings[2]) + " reacción no registrada como REACTION.");
+		throw Exception(Trim(fields->Strings[2]) + " reacción no registrada como REACCION.");
 
 	// lee los parametros del mecanismo
 	String s = Trim(fields->Strings[3]);
@@ -801,7 +801,7 @@ void TMechanism::toString(TMemo* pantallaSalida) const
     if (!pantallaSalida)
 		return;
 
-	pantallaSalida->Lines->Add("======== MECHANISM ========");
+	pantallaSalida->Lines->Add("======== MECANISMO ========");
 	pantallaSalida->Lines->Add("Type: " + getMechType());
 	pantallaSalida->Lines->Add("Reaction: " + getReactionName());
 
@@ -856,7 +856,7 @@ void TMassAction::CheckElements() const
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < getNMechParams(); i++)
 		if(!model->findParameter(getMechParams(i)))
-			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETRO en el modelo.");
 }
 
 String TMassAction::buildRateEquation(bool isPython, bool isDirect)
@@ -972,15 +972,15 @@ void TMMUniInhibidor::CheckElements() const
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < 3; i++)                      	// Vmax, KmA, KmI
 		if(!model->findParameter(getMechParams(i)))
-			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETRO en el modelo.");
 
 	if(getReaction()->getDirectionString() == "BI")  	// Keq
 		if(!model->findParameter(getMechParams(getNMechParams()-1)))
-			throw Exception("'" + getMechParams(getNMechParams()-1) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(getNMechParams()-1) + "' no está registrado como PARAMETRO en el modelo.");
 
 	// el inhibidor debe ser un metabolito registrado
     if(!model->findMetabolite(getMechParams(3)))        // I
-		throw Exception("'" + getMechParams(3) + "' no está registrado como METABOLITE en el modelo.");
+		throw Exception("'" + getMechParams(3) + "' no está registrado como METABOLITO en el modelo.");
 }
 
 String TMMUniInhibidor::BuildDenominator(bool isPython)
@@ -1085,7 +1085,7 @@ void TMMBiSecAleatorio::CheckElements() const
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < getNMechParams(); i++)
 		if(!model->findParameter(getMechParams(i)))
-			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETRO en el modelo.");
 }
 
 String TMMBiSecAleatorio::BuildDenominator(bool isPython)
@@ -1232,11 +1232,11 @@ void TMMUniBiInhibidor::CheckElements() const
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < (getNMechParams()-1); i++)
 		if(!model->findParameter(getMechParams(i)))
-			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETRO en el modelo.");
 
 	// el inhibidor debe ser un metabolito en el modelo
     if(!model->findMetabolite(getMechParams(getNMechParams()-1)))
-			throw Exception("'" + getMechParams(getNMechParams()-1) + "' no está registrado como METABOLITE en el modelo.");
+			throw Exception("'" + getMechParams(getNMechParams()-1) + "' no está registrado como METABOLITO en el modelo.");
 }
 
 String TMMUniBiInhibidor::BuildDenominator(bool isPython)
@@ -1377,7 +1377,7 @@ void TMMBiBiInhibidor::CheckElements() const
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < getNMechParams(); i++)
 		if(!model->findParameter(getMechParams(i)))
-			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETRO en el modelo.");
 }
 
 String TMMBiBiInhibidor::BuildDenominator(bool isPython)
@@ -1521,15 +1521,15 @@ void THillInhibidorActivador::CheckElements() const
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < (getNMechParams()-3); i++)
 		if(!model->findParameter(getMechParams(i)))
-			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETRO en el modelo.");
 
 	// el reactivo/inhibidor/activador deben ser metabolitos en el modelo
 	if(!model->findMetabolite(getMechParams(getNMechParams()-1)))
-		throw Exception("El activador '" + getMechParams(getNMechParams()-1) + "' no está registrado como METABOLITE en el modelo.");
+		throw Exception("El activador '" + getMechParams(getNMechParams()-1) + "' no está registrado como METABOLITO en el modelo.");
 	if(!model->findMetabolite(getMechParams(getNMechParams()-2)))
-		throw Exception("El inhibidor '" + getMechParams(getNMechParams()-2) + "' no está registrado como METABOLITE en el modelo.");
+		throw Exception("El inhibidor '" + getMechParams(getNMechParams()-2) + "' no está registrado como METABOLITO en el modelo.");
     if(!model->findMetabolite(getMechParams(getNMechParams()-3)))
-		throw Exception("El reactivo '" + getMechParams(getNMechParams()-3) + "' no está registrado como METABOLITE en el modelo.");
+		throw Exception("El reactivo '" + getMechParams(getNMechParams()-3) + "' no está registrado como METABOLITO en el modelo.");
 }
 
 void THillInhibidorActivador::setDirectRatePython()
@@ -1586,7 +1586,7 @@ TMechanism TModel::CreateMechanism(String line, TModel* model)
 	tmp->Delimiter = '\t';
 	tmp->DelimitedText = Trim(line);
 
-	// Coge el segundo campo despues de MECHANISM
+	// Coge el segundo campo despues de MECANISMO
 	String type = Trim(tmp->Strings[1]);
 
 	try

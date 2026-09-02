@@ -501,7 +501,7 @@ class TMassAction : public TMechanism
 		 *  [kd, (ki)] --> entre parentesis los opcionales cuando la reaccion es bidireccional
 		 *  - kd: constante de velocidad directa
 		 *  - ki: constante de velocidad inversa
-		 *  Los parametros tienen que estar registrados previamente en el modelo como PARAMETER-
+		 *  Los parametros tienen que estar registrados previamente en el modelo como TParameter.
 		 */
 		void CheckElements() const override;
 
@@ -849,7 +849,7 @@ class TModel
 		 *  @brief Inicializa el mapa mechanismTemplates con los tipos de mecanismos disponibles en la aplicacion.
 		 *  Modifica el atributo "mechanismTemplates" introduciendo parejas clave-valor:
 		 *  - clave: identificativo del tipo de mecanismo, String.
-		 *  - valor: plantilla con los campos necesarios para introducir un MECHANISM de ese tipo, String.
+		 *  - valor: plantilla con los campos necesarios para introducir un MECANISMO de ese tipo, String.
 		 */
 		void initMechanismTemplates();
 
@@ -1008,7 +1008,7 @@ class TModel
 
         /**
 		 *  @brief Dada la linea de entrada y el modelo, crea un objeto TMechanism.
-		 *  La linea empieza por MECHANISM y se crea un tipo de mecanismo u otro segun el tipo especificado en el segundo campo de la linea.
+		 *  La linea empieza por MECANISMO y se crea un tipo de mecanismo u otro segun el tipo especificado en el segundo campo de la linea.
 		 *  @param line linea del texto de entrada que se lee.
 		 *  @param model puntero al modelo en el que se crea el mecanismo.
 		 *  @return Devuelve el objeto TMechanism creado.

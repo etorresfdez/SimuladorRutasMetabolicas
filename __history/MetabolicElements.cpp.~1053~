@@ -24,22 +24,22 @@
 // Metodos de la clase TMetabolite
 
 // variables estaticas
-const String TMetabolite::inputTemplate = "METABOLITE <nombre_corto> <nombre_largo> <concentracion_inicial>";
+const String TMetabolite::inputTemplate = "METABOLITO <nombre_corto> <nombre_largo> <concentracion_inicial>";
 
-// metodo privado: conversor de float a string con formato ','
-String TMetabolite::FloatToStrComma(double value) const
+// metodo privado: conversor de float a string con formato '.'
+String TMetabolite::FloatToStrDot(double value) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
-	formato.DecimalSeparator = ',';
+	formato.DecimalSeparator = '.';
 
 	return FloatToStr(value, formato);
 }
 
-// metodo privado: conversor de string a float con formato ','
-double TMetabolite::StrToFloatComma(String texto) const
+// metodo privado: conversor de string a float con formato '.'
+double TMetabolite::StrToFloatDot(String texto) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
-	formato.DecimalSeparator = ',';
+	formato.DecimalSeparator = '.';
 
 	return StrToFloat(texto, formato);
 }
@@ -73,7 +73,7 @@ TMetabolite::TMetabolite(String line)
     // rellena los atributos del metabolito
     shortName = Trim(fields->Strings[1]);
     fullName = Trim(fields->Strings[2]);
-	initialValue = StrToFloatComma(Trim(fields->Strings[3]));
+	initialValue = StrToFloatDot(Trim(fields->Strings[3]));
 
     // elimina el puntero creado
 	delete fields;
@@ -107,10 +107,10 @@ void TMetabolite::toString(TMemo* pantallaSalida) const
     if (!pantallaSalida)
         return;
 
-    pantallaSalida->Lines->Add("======== METABOLITE ========");
+	pantallaSalida->Lines->Add("======== METABOLITO ========");
     pantallaSalida->Lines->Add("Short name: " + shortName);
     pantallaSalida->Lines->Add("Full name: " + fullName);
-	pantallaSalida->Lines->Add("Initial value: " + FloatToStrComma(initialValue));
+	pantallaSalida->Lines->Add("Initial value: " + FloatToStrDot(initialValue));
     pantallaSalida->Lines->Add("===========================");
 }
 
@@ -118,22 +118,22 @@ void TMetabolite::toString(TMemo* pantallaSalida) const
 // Metodos de la clase TParameter
 
 // variables estaticas
-const String TParameter::inputTemplate = "PARAMETER <nombre_corto> <nombre_largo> <valor>";
+const String TParameter::inputTemplate = "PARAMETRO <nombre_corto> <nombre_largo> <valor>";
 
 // metodo privado: conversor de float a string con formato ','
-String TParameter::FloatToStrComma(double value) const
+String TParameter::FloatToStrDot(double value) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
-	formato.DecimalSeparator = ',';
+	formato.DecimalSeparator = '.';
 
 	return FloatToStr(value, formato);
 }
 
 // metodo privado: conversor de string a float con formato ','
-double TParameter::StrToFloatComma(String texto) const
+double TParameter::StrToFloatDot(String texto) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
-	formato.DecimalSeparator = ',';
+	formato.DecimalSeparator = '.';
 
 	return StrToFloat(texto, formato);
 }
@@ -167,7 +167,7 @@ TParameter::TParameter(String line)
     // rellena los atributos del parametro
     shortName = Trim(fields->Strings[1]);
     fullName = Trim(fields->Strings[2]);
-	value = StrToFloatComma(Trim(fields->Strings[3]));
+	value = StrToFloatDot(Trim(fields->Strings[3]));
 
     // elimina el puntero creado
 	delete fields;
@@ -195,10 +195,10 @@ void TParameter::toString(TMemo* pantallaSalida) const
     if (!pantallaSalida)
         return;
 
-    pantallaSalida->Lines->Add("========= PARAMETER =========");
+    pantallaSalida->Lines->Add("========= PARAMETRO =========");
     pantallaSalida->Lines->Add("Short name: " + shortName);
     pantallaSalida->Lines->Add("Full name: " + fullName);
-	pantallaSalida->Lines->Add("Value: " + FloatToStrComma(value));
+	pantallaSalida->Lines->Add("Value: " + FloatToStrDot(value));
     pantallaSalida->Lines->Add("===========================");
 }
 
@@ -206,13 +206,13 @@ void TParameter::toString(TMemo* pantallaSalida) const
 // Metodos de la clase TReaction
 
 // Variables estaticas
-const String TReaction::inputTemplate = "REACTION <nombre_corto> <nombre_largo> <lista_reactivos> <sentido_reaccion> <lista_productos>";
+const String TReaction::inputTemplate = "REACCION <nombre_corto> <nombre_largo> <lista_reactivos> <sentido_reaccion> <lista_productos>";
 
 // metodo privado: conversor de string a float con formato ','
-double TReaction::StrToFloatComma(String texto) const
+double TReaction::StrToFloatDot(String texto) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
-	formato.DecimalSeparator = ',';
+	formato.DecimalSeparator = '.';
 
 	return StrToFloat(texto, formato);
 }
@@ -237,7 +237,7 @@ void TReaction::DividesCoeffMetabolite(String text, String& name, double& coeff)
 		{
 			// extrae el numero del coeficiente
 			String coeffText = text.SubString(2, pos - 2);
-			coeff = StrToFloatComma(coeffText);
+			coeff = StrToFloatDot(coeffText);
 
             // extrae el nombre del metabolito
 			name = Trim(text.SubString(pos + 1, text.Length() - pos));
@@ -422,7 +422,7 @@ void TReaction::toString(TMemo* pantallaSalida) const
     if (!pantallaSalida)
         return;
 
-	pantallaSalida->Lines->Add("========= REACTION =========");
+	pantallaSalida->Lines->Add("========= REACCION =========");
     pantallaSalida->Lines->Add("Short name: " + shortName);
     pantallaSalida->Lines->Add("Full name: " + fullName);
     pantallaSalida->Lines->Add("Direction: " + getDirectionString());
@@ -455,27 +455,27 @@ void TModel::initMechanismTemplates()
 	{
         {
 			"LEY-ACCION-MASAS",
-			"MECHANISM\tLEY-ACCION-MASAS\t<nombre_reaccion>\t[kdirecta, (kinversa)]"
+			"MECANISMO\tLEY-ACCION-MASAS\t<nombre_reaccion>\t[kdirecta, (kinversa)]"
         },
         {
 			"MM-UNI-INHIBIDOR",
-			"MECHANISM\tMM-UNI-INHIBIDOR\t<nombre_reaccion>\t[Vmax, KmA, KmI, Inhibidor, (Keq)]"
+			"MECANISMO\tMM-UNI-INHIBIDOR\t<nombre_reaccion>\t[Vmax, KmA, KmI, Inhibidor, (Keq)]"
         },
         {
 			"MM-BI-SEC-ALEATORIO",
-			"MECHANISM\tMM-BI-SEC-ALEATORIO\t<nombre_reaccion>\t[Vmax, KmA, KmB, (KdA), (Keq)]"
+			"MECANISMO\tMM-BI-SEC-ALEATORIO\t<nombre_reaccion>\t[Vmax, KmA, KmB, (KdA), (Keq)]"
         },
         {
 			"MM-UNI-BI-INHIBIDOR",
-			"MECHANISM\tMM-UNI-BI-INHIBIDOR\t<nombre_reaccion>\t[Vmax, VmaxInv, KmA, KmC, KmD, KmI, Keq, Inhibidor]"
+			"MECANISMO\tMM-UNI-BI-INHIBIDOR\t<nombre_reaccion>\t[Vmax, VmaxInv, KmA, KmC, KmD, KmI, Keq, Inhibidor]"
 		},
 		{
 			"MM-BI-BI-INHIBIDOR",
-			"MECHANISM\tMM-BI-BI-INHIBIDOR\t<nombre_reaccion>\t[KmA, KmB, KmC, KmD, (Keq)]"
+			"MECANISMO\tMM-BI-BI-INHIBIDOR\t<nombre_reaccion>\t[Vmax, KmA, KmB, KmC, KmD, (Keq)]"
 		},
 		{
 			"HILL-INHIBIDOR-ACTIVADOR",
-			"MECHANISM\tHILL-INHIBIDOR-ACTIVADOR\t<nombre_reaccion>\t[Vmax, KmA, cte, A, Inhibidor, Activador]"
+			"MECANISMO\tHILL-INHIBIDOR-ACTIVADOR\t<nombre_reaccion>\t[Vmax, KmA, cte, A, Inhibidor, Activador]"
 		}
     };
 }
@@ -605,7 +605,7 @@ const TMetabolite* TModel::findMetabolite(String name) const
 		if (m.getShortName() == name)
 			return &m;
 
-	throw Exception("'"+ name + "' no registrado como METABOLITE.");
+	throw Exception("'"+ name + "' no registrado como METABOLITO.");
 }
 
 // busca el nombre de un parametro en la lista de parametros leidos del modelo
@@ -616,7 +616,7 @@ const TParameter* TModel::findParameter(String name) const
 		if (p.getShortName() == name)
 			return &p;
 
-	throw Exception("'"+ name + "' no registrado como PARAMETER.");
+	throw Exception("'"+ name + "' no registrado como PARAMETRO.");
 }
 
 // busca el nombre de una reaccion en la lista de reacciones leidas del modelo
@@ -627,7 +627,7 @@ const TReaction* TModel::findReaction(String name) const
 		if (r.getShortName() == name)
 			return &r;
 
-	throw Exception("'"+ name + "' no registrada como REACTION.");
+	throw Exception("'"+ name + "' no registrada como REACCION.");
 }
 
 // Metodos para obtener el indice del metabolito y parametro a traves del nombre
@@ -670,7 +670,7 @@ void TModel::Clear()
 // Metodos de la clase TMechanism
 
 // variables estaticas
-const String TMechanism::inputTemplate = "MECHANISM <tipo_mecanismo> <nombre_reaccion> <parametros_del_mecanismo>";
+const String TMechanism::inputTemplate = "MECANISMO <tipo_mecanismo> <nombre_reaccion> <parametros_del_mecanismo>";
 
 
 // Constructor
@@ -700,7 +700,7 @@ TMechanism::TMechanism(String line, TModel* p_model)
 	if (model->findReaction(Trim(fields->Strings[2])))
 		reactionName = Trim(fields->Strings[2]);
 	else
-		throw Exception(Trim(fields->Strings[2]) + " reacción no registrada como REACTION.");
+		throw Exception(Trim(fields->Strings[2]) + " reacción no registrada como REACCION.");
 
 	// lee los parametros del mecanismo
 	String s = Trim(fields->Strings[3]);
@@ -801,7 +801,7 @@ void TMechanism::toString(TMemo* pantallaSalida) const
     if (!pantallaSalida)
 		return;
 
-	pantallaSalida->Lines->Add("======== MECHANISM ========");
+	pantallaSalida->Lines->Add("======== MECANISMO ========");
 	pantallaSalida->Lines->Add("Type: " + getMechType());
 	pantallaSalida->Lines->Add("Reaction: " + getReactionName());
 
@@ -1377,7 +1377,7 @@ void TMMBiBiInhibidor::CheckElements() const
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < getNMechParams(); i++)
 		if(!model->findParameter(getMechParams(i)))
-			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETRO en el modelo.");
 }
 
 String TMMBiBiInhibidor::BuildDenominator(bool isPython)
@@ -1521,15 +1521,15 @@ void THillInhibidorActivador::CheckElements() const
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < (getNMechParams()-3); i++)
 		if(!model->findParameter(getMechParams(i)))
-			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETRO en el modelo.");
 
 	// el reactivo/inhibidor/activador deben ser metabolitos en el modelo
 	if(!model->findMetabolite(getMechParams(getNMechParams()-1)))
-		throw Exception("El activador '" + getMechParams(getNMechParams()-1) + "' no está registrado como METABOLITE en el modelo.");
+		throw Exception("El activador '" + getMechParams(getNMechParams()-1) + "' no está registrado como METABOLITO en el modelo.");
 	if(!model->findMetabolite(getMechParams(getNMechParams()-2)))
-		throw Exception("El inhibidor '" + getMechParams(getNMechParams()-2) + "' no está registrado como METABOLITE en el modelo.");
+		throw Exception("El inhibidor '" + getMechParams(getNMechParams()-2) + "' no está registrado como METABOLITO en el modelo.");
     if(!model->findMetabolite(getMechParams(getNMechParams()-3)))
-		throw Exception("El reactivo '" + getMechParams(getNMechParams()-3) + "' no está registrado como METABOLITE en el modelo.");
+		throw Exception("El reactivo '" + getMechParams(getNMechParams()-3) + "' no está registrado como METABOLITO en el modelo.");
 }
 
 void THillInhibidorActivador::setDirectRatePython()
@@ -1741,4 +1741,3 @@ const std::vector<double> TModel::getAllParameters() const
 
 	return params;
 }
-

@@ -14,6 +14,18 @@
 //      · THillInhibidorActivador
 // 	- TModel
 //
+// Contiene los enumerados:
+//  - TReactionDirection
+//		· rdUNI
+//		· rdBI
+//  - TMechanismType
+//		· LEY_ACCION_MASAS
+//		· MM_UNI_INHIBIDOR
+//		· MM_BI_SEC_ALEATORIO
+//		· MM_UNI_BI_INHIBIDOR
+//		· MM_BI_BI_INHIBIDOR
+//		· HILL_INHIBIDOR_ACTIVADOR
+//
 // Archivo .h --> Declaraciones
 //
 //---------------------------------------------------------------------------
@@ -62,11 +74,18 @@ class TMetabolite
 		double initialValue;    	/**< Concentracion inicial del metabolito */
 
         /**
-		 *  @brief Metodo que convierte un double en string con formato decimal ','
-		 *  @param value numero con decimales con ','
+		 *  @brief Metodo que convierte un double en string con formato decimal '.'
+		 *  @param value numero con decimales con '.'
 		 *  @return String palabra que se devuelve manteniendo el formato decimal '.'
 		 */
-		String FloatToStrComma(double value);
+		String FloatToStrDot(double value) const;
+
+        /**
+		 *  @brief Metodo que convierte un string en double con formato decimal '.'
+		 *  @param texto palabra que representa un numero con decimales con '.'
+		 *  @return double numero que se devuelve manteniendo el formato decimal '.'
+		 */
+		double StrToFloatDot(String texto) const;
 
 	public:
 
@@ -82,7 +101,7 @@ class TMetabolite
 
 		/**
 		 *  @brief Constructor de TMetabolite
-		 *  @param line linea del panel de entrada asociada a un metabolito, comienza por METABOLITE
+		 *  @param line linea del panel de entrada asociada a un metabolito, comienza por METABOLITO
 		 */
 		TMetabolite(String line);
 
@@ -133,18 +152,18 @@ class TParameter
 
 
         /**
-		 *  @brief Metodo que convierte un double en string con formato decimal ','
-		 *  @param value numero con decimales con ','
+		 *  @brief Metodo que convierte un double en string con formato decimal '.'
+		 *  @param value numero con decimales con '.'
 		 *  @return String palabra que se devuelve manteniendo el formato decimal '.'
 		 */
-		String FloatToStrComma(double value);
+		String FloatToStrDot(double value) const;
 
         /**
-		 *  @brief Metodo que convierte un string en double con formato decimal ','
-		 *  @param texto palabra que representa un numero con decimales con ','
+		 *  @brief Metodo que convierte un string en double con formato decimal '.'
+		 *  @param texto palabra que representa un numero con decimales con '.'
 		 *  @return double numero que se devuelve manteniendo el formato decimal '.'
 		 */
-		double StrToFloatComma(String texto);
+		double StrToFloatDot(String texto) const;
 
 	public:
 
@@ -160,7 +179,7 @@ class TParameter
 
 		/**
 		 *  @brief Constructor de TParameter
-		 *  @param line linea del panel de entrada asociada a un parametro, comienza por PARAMETER
+		 *  @param line linea del panel de entrada asociada a un parametro, comienza por PARAMETRO
 		 */
 		TParameter(String line);
 
@@ -216,6 +235,13 @@ class TReaction
 		std::vector<TSubstance> products;  			/**< Array de productos de la reaccion */
 		TModel* model;                              /**< Modelo al que pertenece la reaccion */
 
+        /**
+		 *  @brief Metodo que convierte un string en double con formato decimal '.'
+		 *  @param texto palabra que representa un numero con decimales con '.'
+		 *  @return double numero que se devuelve manteniendo el formato decimal '.'
+		 */
+		double StrToFloatDot(String texto) const;
+
 		/**
 		 * @brief Dada una lista de sustancias, las separa en nombres y coeficientes estequimetricos.
 		 * @param sustancias lista de sustancias con formato [A, (2)B, C], tipo String
@@ -258,7 +284,7 @@ class TReaction
 
 		/**
 		 * @brief Constructor de TReaction, lee una linea completa del panel de entrada
-		 * @param line linea del panel de entrada asociada a una reaccion, comienza por REACTION
+		 * @param line linea del panel de entrada asociada a una reaccion, comienza por REACCION
 		 * @param model modelo al que pertenece la reaccion
 		 */
 		TReaction(String line, TModel* model);
@@ -335,11 +361,11 @@ class TMechanism
 
 	public:
 
-        static const String inputTemplate; /**< Estructura de entrada de datos de un mecanismo */
+		static const String inputTemplate; /**< Estructura de entrada de datos de un mecanismo */
 
 		/**
 		 *  @brief Constructor de la clase TMechanism
-		 *  @param line linea de entrada de datos que comienza por "MECHANISM"
+		 *  @param line linea de entrada de datos que comienza por MECANISMO
          *  @param p_model modelo asociado al mecanismo
 		 */
 		TMechanism(String line, TModel* p_model);
