@@ -8,27 +8,27 @@ y estudiar sus variaciones.
 
 **CÓMO EJECUTAR LA APLICACIÓN**
 
-Descarga los archivos 'Prototipo.exe' y 'script.exe' ubicados en la carpeta ejecutable. Guárdalos en el mismo directorio y abre 'Prototipo.exe'.
+Descarga los archivos `Prototipo.exe` y `script.exe` ubicados en la carpeta ejecutable. Guárdalos en el mismo directorio y abre `Prototipo.exe`.
 <br><br>
 
 **FLUJO PRINCIPAL DE LA INTERFAZ**
 
-**1. Entrada de datos**: Introduce una ruta metabólica indicando los METABOLITOS que participan en ella, 
-las REACCIONES que la componen, qué tipo de MECANISMO sigue cada reacción y los PARÁMETROS de cinética química necesarios. 
+**1. Entrada de datos**: Introduce una ruta metabólica indicando los `METABOLITOS` que participan en ella, 
+las `REACCIONES` que la componen, qué tipo de `MECANISMO` sigue cada reacción y los `PARÁMETROS` de cinética química necesarios. 
 Para cada elemento, hay un botón que indica cómo introducirlo. También puedes usar el menú superior para subir plantillas 
 ya guardadas o cargar un ejemplo de ruta de la glucólisis.
 
-Después, VALIDA los datos introducidos mediante el botón 'Validar datos'. Si hay errores en la carga de datos, 
+Después, `VALIDA` los datos introducidos mediante el botón `Validar datos`. Si hay errores en la carga de datos, 
 la aplicación indica la línea donde se encuentran y el motivo. Si la validación es satisfactoria, se calculan las ecuaciones 
 cinéticas de cada reacción introducida y el sistema de ecuaciones asociado. El sistema contiene una ecuación por metabolito cargado 
-y representa su variación de concentración en el tiempo. Puede visualizarlos mediante los botones de 'Mostrar Ec.Cinética' y 
-'Mostrar Sistema de Ecuaciones'.
+y representa su variación de concentración en el tiempo. Puede visualizarlos mediante los botones de `Mostrar Ec.Cinética` y 
+`Mostrar Sistema de Ecuaciones`.
 
 **2. Configuración de la simulación**: Una vez validados los datos, establece el intervalo temporal y los ciclos 
 para la simulación, así como el método numérico a emplear. Se recomienda leer la información de los métodos numéricos 
-para entender cuándo conviene usar cada uno de ellos.
+para entender cuándo conviene usar cada uno de ellos. Después, dale al botón `Lanzar Simulación`.
 
-**3. Salida**: Tras lanzar la simulación, visualice los resultados obtenidos en forma de TABLA o GRÁFICA. 
+**3. Salida**: Visualice los resultados obtenidos en forma de `TABLA` o `GRÁFICA`. 
 En ellas se muestra la concentración de los metabolitos cargados en cada instante de la simulación, pudiendo analizar su evolución. 
 La gráfica y la tabla son descargables usando el menú superior.
 <br><br>
@@ -37,8 +37,8 @@ La gráfica y la tabla son descargables usando el menú superior.
 
 La documentación completa de esta aplicación ha sido generada automáticamente utilizando *Doxygen*. Puedes consultarla a través de los siguientes formatos:
 
-* **Manual en PDF:** Disponible en la ruta `SimulacdorRutasMetabolicas/latex/refman.pdf` (ideal para lectura offline o impresión).
-* **Versión Web (HTML):** Descarga la carpeta `SimulacdorRutasMetabolicas/html` y abre el archivo `index.html` en tu navegador web para navegar por la documentación de forma interactiva.
+* **Manual en PDF:** Disponible en la ruta `SimuladorRutasMetabolicas/latex/refman.pdf` (ideal para lectura offline o impresión).
+* **Versión Web (HTML):** Descarga la carpeta `SimuladorRutasMetabolicas/html` y abre el archivo `index.html` en tu navegador web para navegar por la documentación de forma interactiva.
 <br><br>
 
 **INFORMACIÓN DE LA APLICACIÓN**
