@@ -8,7 +8,7 @@ y estudiar sus variaciones.
 
 **CÓMO EJECUTAR LA APLICACIÓN**
 
-Descargue los archivos 'Prototipo.exe' y 'script.exe' ubicados en la carpeta ejecutable. Guárdalos en el mismo directorio y abre 'Prototipo.exe'.
+Descarga los archivos 'Prototipo.exe' y 'script.exe' ubicados en la carpeta ejecutable. Guárdalos en el mismo directorio y abre 'Prototipo.exe'.
 <br><br>
 
 **FLUJO PRINCIPAL DE LA INTERFAZ**
@@ -31,6 +31,13 @@ para entender cuándo conviene usar cada uno de ellos.
 **3. Salida**: Tras lanzar la simulación, el usuario puede visualizar los resultados obtenidos en forma de TABLA o GRÁFICA. 
 En ellas se muestra la concentración de los metabolitos cargados en cada instante de la simulación, pudiendo analizar su evolución. 
 La gráfica y la tabla son descargables usando el menú superior.
+<br><br>
+
+**CONSULTAR DOCUMENTACIÓN**
+La documentación completa de esta aplicación ha sido generada automáticamente utilizando *Doxygen*. Puedes consultarla a través de los siguientes formatos:
+
+* **Manual en PDF:** Disponible en la ruta `SimulacdorRutasMetabolicas/latex/refman.pdf` (ideal para lectura offline o impresión).
+* **Versión Web (HTML):** Descarga la carpeta `SimulacdorRutasMetabolicas/html` y abre el archivo `index.html` en tu navegador web para navegar por la documentación de forma interactiva.
 <br><br>
 
 **INFORMACIÓN DE LA APLICACIÓN**
