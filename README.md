@@ -28,9 +28,13 @@ y representa su variación de concentración en el tiempo. Puede visualizarlos m
 para la simulación, así como el método numérico a emplear. Se recomienda leer la información de los métodos numéricos 
 para entender cuándo conviene usar cada uno de ellos. Después, dale al botón `Lanzar Simulación`.
 
-**3. Salida**: Visualice los resultados obtenidos en forma de `TABLA` o `GRÁFICA`. 
-En ellas se muestra la concentración de los metabolitos cargados en cada instante de la simulación, pudiendo analizar su evolución. 
-La gráfica y la tabla son descargables usando el menú superior.
+**3. Salida**: Consulte los resultados obtenidos en forma de `TABLA` o `GRÁFICA`. 
+En ellas se muestra la concentración de los metabolitos cargados en cada instante de la simulación.
+La gráfica y la tabla son descargables usando el menú superior. Además, la gráfica es interactiva y ofrece las siguientes funcionalidades:
+
+* **Ampliar una región**: mantenga pulsado el botón izquierdo del ratón y arrastre el cursor para seleccionar la región que desea ampliar.
+* **Restablecer la vista inicial**: haga doble clic sobre la gráfica para recuperar la visualización original.
+* **Mostrar u ocultar metabolitos**: utilice la leyenda para seleccionar qué metabolitos desea visualizar. Por defecto, se muestran todos.
 <br><br>
 
 **CONSULTAR DOCUMENTACIÓN**
