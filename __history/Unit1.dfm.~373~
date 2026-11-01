@@ -52,8 +52,6 @@ object Form1: TForm1
       Height = 3
       Cursor = crVSplit
       Align = alTop
-      Color = clDimgray
-      ParentColor = False
       OnCanResize = Splitter1CanResize
       OnMoved = Splitter1Moved
     end
@@ -1110,6 +1108,7 @@ object Form1: TForm1
       Width = 465
       Height = 110
       Color = clBlanchedalmond
+      ReadOnly = True
       TabOrder = 0
     end
     object PageControlSalida: TPageControl
@@ -1141,18 +1140,20 @@ object Form1: TForm1
       object Grafica: TTabSheet
         Caption = 'Gr'#225'fica'
         ImageIndex = 2
-        object ImageGrafica: TImage
+        object Chart: TChart
           Left = 0
           Top = 0
           Width = 455
           Height = 280
+          Title.Text.Strings = (
+            'TChart')
           Align = alClient
-          Center = True
-          Proportional = True
-          Stretch = True
-          OnDblClick = ImageGraficaDblClick
-          ExplicitWidth = 452
-          ExplicitHeight = 277
+          BevelOuter = bvNone
+          TabOrder = 0
+          OnDblClick = ChartDblClick
+          ExplicitLeft = 5
+          DefaultCanvas = 'TGDIPlusCanvas'
+          ColorPaletteIndex = 13
         end
       end
     end

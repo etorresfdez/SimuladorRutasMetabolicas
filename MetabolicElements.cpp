@@ -120,7 +120,7 @@ void TMetabolite::toString(TMemo* pantallaSalida) const
 // variables estaticas
 const String TParameter::inputTemplate = "PARAMETRO <nombre_corto> <nombre_largo> <valor>";
 
-// metodo privado: conversor de float a string con formato ','
+// metodo privado: conversor de float a string con formato '.'
 String TParameter::FloatToStrDot(double value) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
@@ -129,7 +129,7 @@ String TParameter::FloatToStrDot(double value) const
 	return FloatToStr(value, formato);
 }
 
-// metodo privado: conversor de string a float con formato ','
+// metodo privado: conversor de string a float con formato '.'
 double TParameter::StrToFloatDot(String texto) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
@@ -208,7 +208,7 @@ void TParameter::toString(TMemo* pantallaSalida) const
 // Variables estaticas
 const String TReaction::inputTemplate = "REACCION <nombre_corto> <nombre_largo> <lista_reactivos> <sentido_reaccion> <lista_productos>";
 
-// metodo privado: conversor de string a float con formato ','
+// metodo privado: conversor de string a float con formato '.'
 double TReaction::StrToFloatDot(String texto) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
@@ -1637,7 +1637,9 @@ void TModel::BuildEquations()
 	{
 		String equationS = "";
 		String equationP = "";
-        String equationSC = "";
+		String equationSC = "";
+		String s_coeff = "";
+		double num_coeff = 1;
 
 		// recorre todas la reacciones
 		for (int j = 0; j < getNReactions(); j++)
@@ -1648,17 +1650,20 @@ void TModel::BuildEquations()
 				// si aparece como reactivo
 				if (metabolites[i].getShortName() == reactions[j].getReactant(r).substance->getShortName())
 				{
-					// restamos la ecuacion cinetica directa
-					equationP  += " - " + givesMechanism(reactions[j].getShortName())->getDirectRatePython();
-					equationS  += " - " + givesMechanism(reactions[j].getShortName())->getDirectRateShow();
-					equationSC += " - " + givesMechanism(reactions[j].getShortName())->getReactionName() + "_d";
+					num_coeff = reactions[j].getReactant(r).coefficient;
+					s_coeff = (num_coeff == 1) ? "" : FloatToStr(num_coeff) + "*";
 
-                    // sumamos la ecuacion cinetica inversa, en caso de que sea bidireccional
+					// restamos la ecuacion cinetica directa
+					equationP  += " - " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getDirectRatePython() + ")";
+					equationS  += " - " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getDirectRateShow() + ")";
+					equationSC += " - " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getReactionName() + "_d)";
+
+					// sumamos la ecuacion cinetica inversa, en caso de que sea bidireccional
 					if (reactions[j].getDirectionString() == "BI")
 					{
-						equationP  += " + " + givesMechanism(reactions[j].getShortName())->getInverseRatePython();
-						equationS  += " + " + givesMechanism(reactions[j].getShortName())->getInverseRateShow();
-						equationSC += " + " + givesMechanism(reactions[j].getShortName())->getReactionName() + "_i";
+						equationP  += " + " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getInverseRatePython() + ")";
+						equationS  += " + " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getInverseRateShow() + ")";
+						equationSC += " + " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getReactionName() + "_i)";
 					}
 				}
 			}
@@ -1669,17 +1674,20 @@ void TModel::BuildEquations()
 				// si aparece como producto
 				if (metabolites[i].getShortName() == reactions[j].getProduct(r).substance->getShortName())
 				{
+					num_coeff = reactions[j].getProduct(r).coefficient;
+					s_coeff = (num_coeff == 1) ? "" : FloatToStr(num_coeff) + "*";
+
 					// sumamos la ecuacion cinetica directa
-					equationP  += " + " + givesMechanism(reactions[j].getShortName())->getDirectRatePython();
-					equationS  += " + " + givesMechanism(reactions[j].getShortName())->getDirectRateShow();
-					equationSC += " + " + givesMechanism(reactions[j].getShortName())->getReactionName() + "_d";
+					equationP  += " + " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getDirectRatePython() + ")";
+					equationS  += " + " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getDirectRateShow() + ")";
+					equationSC += " + " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getReactionName() + "_d)";
 
 					// restamos la ecuacion cinetica inversa, en caso de que sea bidireccional
 					if (reactions[j].getDirectionString() == "BI")
 					{
-						equationP  += " - " + givesMechanism(reactions[j].getShortName())->getInverseRatePython();
-						equationS  += " - " + givesMechanism(reactions[j].getShortName())->getInverseRateShow();
-						equationSC += " - " + givesMechanism(reactions[j].getShortName())->getReactionName() + "_i";
+						equationP  += " - " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getInverseRatePython() + ")";
+						equationS  += " - " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getInverseRateShow() + ")";
+						equationSC += " - " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getReactionName() + "_i)";
                     }
 				}
 			}

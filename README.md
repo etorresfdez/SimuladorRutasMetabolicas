@@ -46,7 +46,7 @@ La documentación completa de esta aplicación ha sido generada automáticamente
 Simulador de Rutas Metabólicas <br>
 Versión 1.0 <br>
 Esta aplicación ha sido desarrollada como parte de un Trabajo Fin de Grado con el objetivo de facilitar la simulación de rutas metabólicas. 
-Se ha utilizado Embarcadero C++ Builder 12 Community Edition para la implementación de la interfaz gráfica y la gestión de la estructura de datos interna, y las librerías SciPy, NumPy y Matplotlib de Python para la resolución de las ecuaciones diferenciales resultantes y su visualización. <br><br>
+Se ha utilizado Embarcadero C++ Builder 13 Community Edition para la implementación de la interfaz gráfica y la gestión de la estructura de datos interna, y las librerías SciPy, NumPy y Matplotlib de Python para la resolución de las ecuaciones diferenciales resultantes y su visualización. <br><br>
 _Autora: Elena Torres Fernández_ <br>
 _Universidad de Granada_ <br>
 _Año_: 2026

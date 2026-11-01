@@ -19,7 +19,9 @@
 #include <map>
 #include <Vcl.Grids.hpp>       // uso TStringGrid
 #include <System.IOUtils.hpp>  // uso TFile
-#include <Vcl.Edge.hpp>        // uso TEdgeBrowser
+#include <VCLTee.Chart.hpp>
+#include <VCLTee.Series.hpp>
+#include <Vcl.CheckLst.hpp>
 
 
 /**
@@ -225,6 +227,20 @@ class TSimulation
 		 *  @param Grid puntero a la tabla donde se cargan los datos para que el usuario lo vea en la interfaz.
 		 */
 		void createTableResults(TStringGrid *Grid);
+
+        /**
+		 *  @brief Inicializa el objeto TChart creando un grafico vacio.
+		 *  @param Chart puntero a la grafica de la interfaz.
+		 */
+		void initializeChart(TChart *Chart);
+
+		/**
+		 *  @brief Parte del contenido del atributo 'resultados' y rellena la grafica que se pasa como parametro.
+		 *  Pinta una serie para la evolucion de la concentracion de cada metabolito.
+		 *  Crea una leyenda dinamica para seleccionar/deseleccionar los metabolitos que se muestran.
+		 *  @param Chart puntero a la grafica donde se cargan los datos para que el usuario lo vea en la interfaz.
+		 */
+		void createChart(TChart *Chart);
 
 		/**
 		 *  @brief Exporta los resultados de la simulacion en un archivo csv.

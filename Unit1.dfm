@@ -1140,18 +1140,19 @@ object Form1: TForm1
       object Grafica: TTabSheet
         Caption = 'Gr'#225'fica'
         ImageIndex = 2
-        object ImageGrafica: TImage
+        object Chart: TChart
           Left = 0
           Top = 0
           Width = 455
           Height = 280
+          Title.Text.Strings = (
+            'TChart')
           Align = alClient
-          Center = True
-          Proportional = True
-          Stretch = True
-          OnDblClick = ImageGraficaDblClick
-          ExplicitWidth = 452
-          ExplicitHeight = 277
+          BevelOuter = bvNone
+          TabOrder = 0
+          OnDblClick = ChartDblClick
+          DefaultCanvas = 'TGDIPlusCanvas'
+          ColorPaletteIndex = 13
         end
       end
     end

@@ -22,10 +22,16 @@
 #include <Vcl.OleCtrls.hpp>
 #include <SHDocVw.hpp>
 #include <ShellAPI.h>
+#include <VCLTee.Chart.hpp>
+#include <VCLTee.Series.hpp>
+#include <Vcl.CheckLst.hpp>
+#include <VCLTee.TeEngine.hpp>
+#include <VCLTee.TeeProcs.hpp>
+#include <Vcl.Imaging.pngimage.hpp>
+#include <Vcl.Graphics.hpp>
 
 #include "MetabolicElements.h"
 #include "Simulation.h"
-#include "Unit2.h"
 
 
 //---------------------------------------------------------------------------
@@ -121,7 +127,7 @@ __published:	// IDE-managed Components
 	TTabSheet *Tabla;
 	TStringGrid *StringGrid;
 	TTabSheet *Grafica;
-	TImage *ImageGrafica;
+	TChart *Chart;
 
 
 	/**
@@ -170,7 +176,8 @@ __published:	// IDE-managed Components
 
 	/**
 	 *  @brief Accion que se realiza al darle al boton 'Guardar grafica' del menu.
-	 *  Guarda la grafica generada en la simulacion actual en la ruta especificada por el usuario. En formato png.
+	 *  Guarda la grafica generada en la simulacion actual en la ruta especificada por el usuario.
+	 *  Conserva las modificaciones realizadas sobre la grafica. En formato png.
 	 *  @param Sender boton GuardarGrafica de tipo TMenuItem.
 	 */
 	void __fastcall GuardarGraficaClick(TObject *Sender);
@@ -198,33 +205,6 @@ __published:	// IDE-managed Components
 	 *  @param Sender boton AcercaDe de tipo TMenuItem.
 	 */
 	void __fastcall AcercaDeClick(TObject *Sender);
-
-
-
-    /**
-	 *  @brief Actualiza las variables bandera cuando se modifica el TMemo de entrada de datos.
-	 *  En concreto, pone a false 'datosValidados' y 'entradaVacia'.
-	 *  @param Sender objeto GuardarTabla de tipo TMenuItem.
-	 */
-	void __fastcall MemoTextoEntradaChange(TObject *Sender);
-
-	/**
-	 *  @brief Accion que se genera al clicar sobre el boton ValidaDatos.
-	 *  Valida el texto de entrada proporcionado.
-	 *  Muestra los errores en el objeto MemoSalidaValidacion.
-	 *  @param Sender boton ValidarDatos.
-	 */
-	void __fastcall BtnValidarDatosClick(TObject *Sender);
-
-    /**
-	 *  @brief Accion que se genera al clicar sobre el boton MostrarSistemaEcuaciones.
-	 *  Muestra el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion
-	 *  representa la variacion de concentracion de un metabolito. Hay tantas ecuaciones
-	 *  como metabolitos registrados en el sistema. Escribe en MemoSalidaValidacion.
-	 *  @param Sender boton MostrarSistema.
-	 */
-	void __fastcall BtnMostrarSistemaClick(TObject *Sender);
-
 
 	/**
 	 *  @brief Boton para obtener informacion sobre como introducir un Metabolito en el modelo.
@@ -286,6 +266,29 @@ __published:	// IDE-managed Components
 	void __fastcall BtnMecanismoClick(TObject *Sender);
 
 
+    /**
+	 *  @brief Actualiza las variables bandera cuando se modifica el TMemo de entrada de datos.
+	 *  En concreto, pone a false 'datosValidados' y 'entradaVacia'.
+	 *  @param Sender objeto GuardarTabla de tipo TMenuItem.
+	 */
+	void __fastcall MemoTextoEntradaChange(TObject *Sender);
+
+	/**
+	 *  @brief Accion que se genera al clicar sobre el boton ValidaDatos.
+	 *  Valida el texto de entrada proporcionado.
+	 *  Muestra los errores en el objeto MemoSalidaValidacion.
+	 *  @param Sender boton ValidarDatos.
+	 */
+	void __fastcall BtnValidarDatosClick(TObject *Sender);
+
+	/**
+	 *  @brief Accion que se genera al clicar sobre el boton MostrarSistemaEcuaciones.
+	 *  Muestra el sistema de ecuaciones diferenciales ordinarias, donde cada ecuacion
+	 *  representa la variacion de concentracion de un metabolito. Hay tantas ecuaciones
+	 *  como metabolitos registrados en el sistema. Escribe en MemoSalidaValidacion.
+	 *  @param Sender boton MostrarSistema.
+	 */
+	void __fastcall BtnMostrarSistemaClick(TObject *Sender);
 
 	/**
 	 *  @brief Al seleccionar un mecanismo de la lista de mecanismos disponibles,
@@ -302,7 +305,6 @@ __published:	// IDE-managed Components
 	 */
 	void __fastcall ComboMostrarReaccionChange(TObject *Sender);
 
-
 	/**
 	 *  @brief Accion que se genera al clicar sobre el boton Lanzar Simulacion.
 	 *  Carga el sistema de ecuaciones del modelo y lanza un python para resolverlo
@@ -315,22 +317,22 @@ __published:	// IDE-managed Components
 	void __fastcall BtnLanzarSimulacionClick(TObject *Sender);
 
 	/**
+	 *  @brief Accion que se genera cuando se hace doble click sobre el grafico.
+	 *  Resetea el zoom aplicado sobre la grafica.
+	 *  @param Sender objeto TChart que contiene la grafica de la simulacion.
+	 */
+	void __fastcall ChartDblClick(TObject *Sender);
+
+	/**
 	 *  @brief Actualiza el formato de las celdas que pertenecen a la primera fila o primera columna.
 	 *  Establece un color distinto para ellas (amarillo claro) y con la letra en negrita.
 	 *  @param Sender objeto de tipo TStringGrid que representa la tabla
 	 *  @param ACol indice de columna
 	 *  @param ARow indice de fila
 	 *  @param Rect rectangulo de coordenadas que representa la celda concreta
-     *  @param State estados posibles de una celda: dgSelected, gdFocused, gdFixed
+	 *  @param State estados posibles de una celda: dgSelected, gdFocused, gdFixed
 	 */
 	void __fastcall StringGridDrawCell(TObject *Sender, System::LongInt ACol, System::LongInt ARow, TRect &Rect, TGridDrawState State);
-
-	/**
-	 *  @brief Amplia la imagen abriendo un nuevo formulario con la imagen maximizada.
-     *  @param Sender objeto de tipo TImage que representa la imagen
-	 */
-	void __fastcall ImageGraficaDblClick(TObject *Sender);
-
 
 	/**
 	 * @brief Controla el redimensionamiento de los paneles al mover el splitter.
@@ -345,7 +347,6 @@ __published:	// IDE-managed Components
 	 * @param Sender objeto que ha generado el evento, normalmente el propio TSplitter.
 	 */
 	void __fastcall Splitter1Moved(TObject *Sender);
-
 
 	/**
 	 *  @brief Accion que se activa al cerrar la ventana de la aplicacion.

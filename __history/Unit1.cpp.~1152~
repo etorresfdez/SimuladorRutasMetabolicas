@@ -26,6 +26,9 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 	// rellena los combobox con los mecanismos y metodos numericos disponibles
 	model.fillMechanismComboBox(ComboInsertarMecanismo);
 	simulation.fillNumericMethodComboBox(ComboEleccionMetodo);
+
+	// inicializa la grafica vacia
+	simulation.initializeChart(Chart);
 }
 
 //---------------------------------------------------------------------------
@@ -618,9 +621,9 @@ void __fastcall TForm1::BtnMostrarSistemaClick(TObject *Sender)
 
 		for (int i=0; i < model.getNMetabolites(); i++)
 			MemoSalidaValidacion->Lines->Add("d["+ model.getMetabolite(i)->getShortName() + "]/dt = " + model.getEquationShowCondensed(i));
-																											//getEquationPython
-		MemoSalidaValidacion->Lines->Add("----------------------------------------------------------");
-	}
+																											// getEquationPython
+		MemoSalidaValidacion->Lines->Add("----------------------------------------------------------");     // getEquationShow
+	}                                                                                                       // getEquationShowCondensed
 }
 
 //---------------------------------------------------------------------------
@@ -699,9 +702,10 @@ void __fastcall TForm1::BtnLanzarSimulacionClick(TObject *Sender)
 		StringGrid->RowCount = 1;
 		StringGrid->Cells[0][0] = "";
 
-		// borra la imagen
-		ImageGrafica->Visible = false;
-		Application->ProcessMessages();
+		// borra la grafica
+		simulation.initializeChart(Chart);
+
+        this->Update();
 
 		// actualiza parametros simulacion desde los Spin
 		simulation.setInitialTime(SpinTiempoInicial->Value);
@@ -728,12 +732,9 @@ void __fastcall TForm1::BtnLanzarSimulacionClick(TObject *Sender)
 			// lanza la simulacion
 			simulation.runSimulation();
 
-			// carga tabla
+			// carga tabla y grafica
 			simulation.createTableResults(StringGrid);
-
-			// carga grafica
-			ImageGrafica->Picture->LoadFromFile("grafico.png");
-			ImageGrafica->Visible = true;
+            simulation.createChart(Chart);
 
 			// para el cronometro y extrae los segundos/minutos empleados
 			cronometro.Stop();
@@ -744,8 +745,8 @@ void __fastcall TForm1::BtnLanzarSimulacionClick(TObject *Sender)
 
 			// informacion de finalizacion
 			MemoSalidaSimTexto->Lines->Add("Simulación terminada en " + tiempoStr + ".");
-			MemoSalidaSimTexto->Lines->Add("Puedes consultar la evolución de las concentraciones en la tabla y gráfica inferiores.");
-
+			MemoSalidaSimTexto->Lines->Add("Consulta la evolución temporal de las concentraciones en la tabla y la gráfica inferiores.");
+			
             // borra archivos generados
 			DeleteFile("input.csv");
             Sleep(500); // ms
@@ -869,11 +870,20 @@ void __fastcall TForm1::GuardarGraficaClick(TObject *Sender)
 		SaveGraficaSimulacion->Filter = "Imagen PNG (*.png)|*.png";
 		SaveGraficaSimulacion->DefaultExt = "png";
 
+		// generar la imagen desde el objeto TChart
 		if (SaveGraficaSimulacion->Execute())
-		{
-			String origen = ExtractFilePath(Application->ExeName) + "grafico.png";
-			String destino = SaveGraficaSimulacion->FileName;
-			TFile::Copy(origen, destino, true);
+        {
+			// crea un bitmap
+			std::unique_ptr<TBitmap> bitmap(new TBitmap());
+			bitmap->SetSize(Chart->Width, Chart->Height);
+			Chart->PaintTo(bitmap->Canvas->Handle, 0, 0);
+
+			// convierte el bitmap a PNG
+            std::unique_ptr<TPngImage> png(new TPngImage());
+            png->Assign(bitmap.get());
+
+			// guarda el archivo png
+			png->SaveToFile(SaveGraficaSimulacion->FileName);
 		}
 	}
 }
@@ -955,8 +965,9 @@ void __fastcall TForm1::ManualUsuarioClick(TObject *Sender)
 		"para entender cuándo conviene usar cada uno de ellos.\n\n"
 
 		"3. Salida: Tras lanzar la simulación, el usuario puede visualizar los resultados obtenidos en forma de TABLA o GRÁFICA. "
-		"En ellas se muestra la concentración de los metabolitos cargados en cada instante de la simulación, pudiendo analizar su evolución. "
-		"La gráfica y la tabla son descargables usando el menú superior.";
+		"En ellas se muestra la concentración de los metabolitos cargados en cada instante de la simulación. "
+		"Para ampliar una región de la gráfica, mantén pulsado el botón izquierdo del ratón y arrastra para seleccionar el área deseada. "
+		"Para restablecer la vista inicial, haz doble clic sobre la gráfica. La gráfica y la tabla son descargables usando el menú superior.";
 
 	DialogManualUsuario->Execute();
 }
@@ -970,9 +981,9 @@ void __fastcall TForm1::AcercaDeClick(TObject *Sender)
 		"Versión 1.0\n\n"
 		"Esta aplicación ha sido desarrollada como parte de un Trabajo Fin de Grado con el objetivo "
 		"de facilitar la simulación de rutas metabólicas.\n\n"
-		"Se ha utilizado Embarcadero C++ Builder 12 Community Edition para la implementación de la "
-		"interfaz gráfica y las librerías SciPy, NumPy y Matplotlib de Python para la resolución "
-		"de las ecuaciones diferenciales resultantes y su visualización.";
+		"Se ha utilizado Embarcadero C++ Builder 13 Community Edition para la implementación de la "
+		"interfaz gráfica y las librerías SciPy y NumPy de Python para la resolución "
+		"de las ecuaciones diferenciales resultantes.";
 
 	DialogAcercaDe->FooterText =
 		"Autora: Elena Torres Fernández\n"
@@ -980,16 +991,6 @@ void __fastcall TForm1::AcercaDeClick(TObject *Sender)
 		"Año: 2026";
 
 	DialogAcercaDe->Execute();
-}
-//---------------------------------------------------------------------------
-void __fastcall TForm1::ImageGraficaDblClick(TObject *Sender)
-{
-	// copia la imagen al segundo formulario
-	Form2->ImageGrafica->Picture->LoadFromFile("grafico.png");
-
-	// abre la ventana maximizada
-	Form2->WindowState = wsMaximized;
-	Form2->Show();
 }
 //---------------------------------------------------------------------------
 
@@ -1000,6 +1001,12 @@ void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
 
     // libera la memoria del formulario
 	Action = caFree;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::ChartDblClick(TObject *Sender)
+{
+	Chart->UndoZoom();
 }
 //---------------------------------------------------------------------------
 
