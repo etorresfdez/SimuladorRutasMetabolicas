@@ -14,14 +14,6 @@
 //***************************************************************************
 // Metodos de la clase TSimulation
 
-// metodo privado para convertir un numero con decimales ',' en string con decimales '.'
-String TSimulation::FloatToStrDot(double value)
-{
-    TFormatSettings fs;
-    fs.DecimalSeparator = '.';
-    return FloatToStr(value, fs);
-}
-
 // Constructor
 TSimulation::TSimulation(int p_tini, int p_tfin, int p_ciclos, NumericMethod p_metodo)
 	: tini(p_tini), tfin(p_tfin), ciclos(p_ciclos), metodo(p_metodo)
@@ -170,6 +162,10 @@ void TSimulation::borrarArchivosAntiguos()
 
 void TSimulation::BuildInputCSV()
 {
+    // separador decimal
+	TFormatSettings fs;
+	fs.DecimalSeparator = '.';
+
 	// Usamos unique_ptr para asegurar la liberacion de memoria
 	std::unique_ptr<TStringList> csv(new TStringList());
 
@@ -192,7 +188,7 @@ void TSimulation::BuildInputCSV()
 		for (int i = 0; i < concIni.size(); i++)
 		{
 			linea += ";";
-			linea += FloatToStrDot(concIni[i]);
+			linea += FloatToStr(concIni[i], fs);
 		}
 		csv->Add(linea);
 
@@ -210,7 +206,7 @@ void TSimulation::BuildInputCSV()
 		for (int i = 0; i < params.size(); i++)
 		{
 			linea += ";";
-			linea += FloatToStrDot(params[i]);
+			linea += FloatToStr(params[i], fs);
 		}
 		csv->Add(linea);
 
@@ -321,31 +317,28 @@ void TSimulation::ReadOutputCSV()
 	}
 }
 
-void TSimulation::runSimulation(TProgressBar *progressBar)
+void TSimulation::runSimulation()
 {
-	// elimina input.csv, output.csv y grafico.png anteriores si hubiera
+	// elimina input.csv, output.csv y grafico.png anteriores
 	borrarArchivosAntiguos();
-	MemoSalidaSimTexto->Lines->Strings[MemoSalidaSimTexto->Lines->Count - 1] += "++";
-	Application->ProcessMessages();
 
 	// construye el archivo de entrada de datos para el python
 	BuildInputCSV();
-	MemoSalidaSimTexto->Lines->Strings[MemoSalidaSimTexto->Lines->Count - 1] += "++";
 
 	// ejecuta el Python --> crea el archivo output.csv y grafico.png
 	ejecutarComando("./script.exe");
-	MemoSalidaSimTexto->Lines->Strings[MemoSalidaSimTexto->Lines->Count - 1] += "++";
 
 	// lee output.csv para cargar el atributo 'resultados'
 	ReadOutputCSV();
-	MemoSalidaSimTexto->Lines->Strings[MemoSalidaSimTexto->Lines->Count - 1] += "++";
 }
 
 
 // Crea tabla a partir de los resultados obtenidos
 void TSimulation::createTableResults(TStringGrid *Grid)
 {
-	if (!Grid) return;
+    // separador decimal
+	TFormatSettings fs;
+	fs.DecimalSeparator = '.';
 
 	// comprueba si los resultados estan vacios
 	if (resultados.empty())
@@ -380,18 +373,69 @@ void TSimulation::createTableResults(TStringGrid *Grid)
 		const TInstantResult &r = resultados[i];
 
 		// Muestra el tiempo con dos decimales
-		Grid->Cells[0][i + 1] = FloatToStrF(r.tiempo, ffFixed, 15, 2);
+		Grid->Cells[0][i + 1] = FloatToStrF(r.tiempo, ffFixed, 15, 2, fs);
 
         // Muestra las concentraciones de los metabolitos con 4 decimales
 		int n = r.valores.size();
 		for (int j = 0; j < n; j++)
-			Grid->Cells[j + 1][i + 1] = FloatToStrF(r.valores[j], ffFixed, 15, 4);
+			Grid->Cells[j + 1][i + 1] = FloatToStrF(r.valores[j], ffFixed, 15, 4, fs);
 	}
+}
+
+// Inicializa grafica TChart
+void TSimulation::initializeChart(TChart *Chart)
+{
+    Chart->View3D = false;
+	Chart->RemoveAllSeries();
+    Chart->Legend->Visible = false;
+    Chart->Legend->CheckBoxes = false;
+	Chart->Legend->Title->Caption = "";
+	Chart->Title->Text->Clear();
+	Chart->Title->Font->Color = clBlack;
+	Chart->Title->Font->Size = 11;
+	Chart->Title->Text->Add("Evolución temporal de las concentraciones");
+	Chart->BottomAxis->Title->Font->Size = 10;
+	Chart->BottomAxis->Title->Caption = "Tiempo";
+	Chart->LeftAxis->Title->Font->Size = 10;
+	Chart->LeftAxis->Title->Caption = "Concentración";
+}
+
+
+// Rellena grafica TChart
+void TSimulation::createChart(TChart *Chart)
+{
+	if (resultados.empty())
+		return;
+
+	Chart->RemoveAllSeries();
+	int numVariables = resultados[0].valores.size();
+
+	// Crea una serie por cada metabolito con su nombre
+	for (int j = 0; j < numVariables; j++)
+	{
+		TLineSeries *serie = new TLineSeries(Chart);
+		serie->Title = getNameMetabolite(j);
+		serie->LinePen->Width = 2;
+		Chart->AddSeries(serie);
+	}
+
+	// Introduce los resultados de concentraciones en las series
+	for (int i = 0; i < resultados.size(); i++)
+		for (int j = 0; j < numVariables; j++)
+			Chart->Series[j]->AddXY(resultados[i].tiempo, resultados[i].valores[j]);
+
+	// Muestra la leyenda interactiva
+	Chart->Legend->Visible = true;
+	Chart->Legend->CheckBoxes = true;
 }
 
 // Exportar resultados
 void TSimulation::exportResultsToCSV(const String &filePath)
 {
+    // separador decimal
+	TFormatSettings fs;
+	fs.DecimalSeparator = '.';
+
 	// Usamos unique_ptr para gestion automatica de memoria
     std::unique_ptr<TStringList> csv(new TStringList());
 
@@ -409,11 +453,11 @@ void TSimulation::exportResultsToCSV(const String &filePath)
 	for (const auto &r : resultados)
 	{
 		// primer campo: tiempo
-		String linea = FloatToStrF(r.tiempo, ffFixed, 15, 2);
+		String linea = FloatToStrF(r.tiempo, ffFixed, 15, 2, fs);
 
 		// siguientes campos: concentraciones de los metabolitos
 		for (double val : r.valores)
-			linea += ";" + FloatToStrF(val, ffFixed, 15, 4);
+			linea += ";" + FloatToStrF(val, ffFixed, 15, 4, fs);
 		csv->Add(linea);
     }
 

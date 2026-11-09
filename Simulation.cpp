@@ -386,7 +386,11 @@ void TSimulation::createTableResults(TStringGrid *Grid)
 void TSimulation::initializeChart(TChart *Chart)
 {
     Chart->View3D = false;
-    Chart->RemoveAllSeries();
+	Chart->RemoveAllSeries();
+    Chart->Legend->Items->Custom = false;
+    Chart->Legend->Visible = false;
+    Chart->Legend->CheckBoxes = false;
+	Chart->Legend->Title->Caption = "";
 	Chart->Title->Text->Clear();
 	Chart->Title->Font->Color = clBlack;
 	Chart->Title->Font->Size = 11;
@@ -395,36 +399,35 @@ void TSimulation::initializeChart(TChart *Chart)
 	Chart->BottomAxis->Title->Caption = "Tiempo";
 	Chart->LeftAxis->Title->Font->Size = 10;
 	Chart->LeftAxis->Title->Caption = "Concentración";
-	Chart->Legend->Visible = false;
 }
 
 
 // Rellena grafica TChart
 void TSimulation::createChart(TChart *Chart)
 {
-    if (resultados.empty())
+	if (resultados.empty())
 		return;
 
 	Chart->RemoveAllSeries();
-    int numVariables = resultados[0].valores.size();
+	int numVariables = resultados[0].valores.size();
 
-    // Crea una serie por cada metabolito con su nombre
+	// Crea una serie por cada metabolito con su nombre
 	for (int j = 0; j < numVariables; j++)
 	{
 		TLineSeries *serie = new TLineSeries(Chart);
 		serie->Title = getNameMetabolite(j);
-        serie->LinePen->Width = 2;
+		serie->LinePen->Width = 2;
 		Chart->AddSeries(serie);
-    }
+	}
 
-    // Introduce los resultados de concentraciones en las series
+	// Introduce los resultados de concentraciones en las series
 	for (int i = 0; i < resultados.size(); i++)
-        for (int j = 0; j < numVariables; j++)
+		for (int j = 0; j < numVariables; j++)
 			Chart->Series[j]->AddXY(resultados[i].tiempo, resultados[i].valores[j]);
 
 	// Muestra la leyenda interactiva
 	Chart->Legend->Visible = true;
-    Chart->Legend->CheckBoxes = true;
+	Chart->Legend->CheckBoxes = true;
 }
 
 // Exportar resultados
