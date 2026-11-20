@@ -475,7 +475,7 @@ void TModel::initMechanismTemplates()
 		},
 		{
 			"HILL-INHIBIDOR-ACTIVADOR",
-			"MECANISMO\tHILL-INHIBIDOR-ACTIVADOR\t<nombre_reaccion>\t[Vmax, KmA, cte, A, Inhibidor, Activador]"
+			"MECANISMO\tHILL-INHIBIDOR-ACTIVADOR\t<nombre_reaccion>\t[Vmax, KmA, n, cte, A, Inhibidor, Activador]"
 		}
     };
 }
@@ -1515,8 +1515,8 @@ void THillInhibidorActivador::CheckElements() const
 		throw Exception(getMechType() + " solo aplica a reacciones unidireccionales");
 
     // comprueba el numero de parametros
-	if(getNMechParams() != 6)
-		throw Exception(getMechType() + " necesita: [Vmax, KmA, cte, A, Inhibidor, Activador].");
+	if(getNMechParams() != 7)
+		throw Exception(getMechType() + " necesita: [Vmax, KmA, n, cte, A, Inhibidor, Activador].");
 
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < (getNMechParams()-3); i++)
@@ -1537,32 +1537,30 @@ void THillInhibidorActivador::setDirectRatePython()
 	// indices de los metabolitos y parametros para el formato python
 	int Vmax = model->indexOfParameter(getMechParams(0));
 	int KmA  = model->indexOfParameter(getMechParams(1));
-	int cte  = model->indexOfParameter(getMechParams(2));
-	int A    = model->indexOfMetabolite(getMechParams(3));
-	int Inh  = model->indexOfMetabolite(getMechParams(4));
-	int Act  = model->indexOfMetabolite(getMechParams(5));
-	int n = 2;
+	int n    = model->indexOfParameter(getMechParams(2));
+	int cte  = model->indexOfParameter(getMechParams(3));
+	int A    = model->indexOfMetabolite(getMechParams(4));
+	int Inh  = model->indexOfMetabolite(getMechParams(5));
+	int Act  = model->indexOfMetabolite(getMechParams(6));
 
 	// numerador
 	directRatePython = "(p[" + IntToStr(Vmax) + "] *x[" + IntToStr(A) + "]**" + IntToStr(n) + ")";
 
 	// denominador
-	directRatePython += " / (p[" + IntToStr(KmA) + "] + p[" + IntToStr(KmA) + "]*p[" + IntToStr(cte) + "]* " +
+	directRatePython += " / (p[" + IntToStr(KmA) + "]**" + IntToStr(n) + " + p[" + IntToStr(KmA) + "]**" + IntToStr(n) + " *p[" + IntToStr(cte) + "]* " +
 						"x[" + IntToStr(Inh) + "]**" + IntToStr(n) + " / x[" + IntToStr(Act) + "]**" + IntToStr(n) + " + " +
 						"x[" + IntToStr(A) + "]**" + IntToStr(n) + ")";
 }
 
 void THillInhibidorActivador::setDirectRateShow()
 {
-	int n = 2;
-
 	// numerador
-	directRateShow = "(" + getMechParams(0) + " *[" + getMechParams(3) + "]^" + IntToStr(n) + ")";
+	directRateShow = "(" + getMechParams(0) + " *[" + getMechParams(4) + "]^" + getMechParams(2) + ")";
 
 	// denominador
-	directRateShow += " / (" + getMechParams(1) + " *(1 + " + getMechParams(2) + "* " +
-						 "[" + getMechParams(4) + "]^" + IntToStr(n) + " / [" + getMechParams(5) + "]^" + IntToStr(n) + ") + " +
-						 "[" + getMechParams(3) + "]^" + IntToStr(n) + ")";
+	directRateShow += " / (" + getMechParams(1) + "^" + getMechParams(2) + " *(1 + " + getMechParams(3) + "* " +
+						 "[" + getMechParams(5) + "]^" + getMechParams(2) + " / [" + getMechParams(6) + "]^" + getMechParams(2) + ") + " +
+						 "[" + getMechParams(4) + "]^" + getMechParams(2) + ")";
 }
 
 void THillInhibidorActivador::setInverseRatePython()

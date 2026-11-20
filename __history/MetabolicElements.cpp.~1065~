@@ -120,7 +120,7 @@ void TMetabolite::toString(TMemo* pantallaSalida) const
 // variables estaticas
 const String TParameter::inputTemplate = "PARAMETRO <nombre_corto> <nombre_largo> <valor>";
 
-// metodo privado: conversor de float a string con formato ','
+// metodo privado: conversor de float a string con formato '.'
 String TParameter::FloatToStrDot(double value) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
@@ -129,7 +129,7 @@ String TParameter::FloatToStrDot(double value) const
 	return FloatToStr(value, formato);
 }
 
-// metodo privado: conversor de string a float con formato ','
+// metodo privado: conversor de string a float con formato '.'
 double TParameter::StrToFloatDot(String texto) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
@@ -208,7 +208,7 @@ void TParameter::toString(TMemo* pantallaSalida) const
 // Variables estaticas
 const String TReaction::inputTemplate = "REACCION <nombre_corto> <nombre_largo> <lista_reactivos> <sentido_reaccion> <lista_productos>";
 
-// metodo privado: conversor de string a float con formato ','
+// metodo privado: conversor de string a float con formato '.'
 double TReaction::StrToFloatDot(String texto) const
 {
 	TFormatSettings formato = TFormatSettings::Create();
@@ -475,7 +475,7 @@ void TModel::initMechanismTemplates()
 		},
 		{
 			"HILL-INHIBIDOR-ACTIVADOR",
-			"MECANISMO\tHILL-INHIBIDOR-ACTIVADOR\t<nombre_reaccion>\t[Vmax, KmA, cte, A, Inhibidor, Activador]"
+			"MECANISMO\tHILL-INHIBIDOR-ACTIVADOR\t<nombre_reaccion>\t[Vmax, KmA, n, cte, A, Inhibidor, Activador]"
 		}
     };
 }
@@ -700,7 +700,7 @@ TMechanism::TMechanism(String line, TModel* p_model)
 	if (model->findReaction(Trim(fields->Strings[2])))
 		reactionName = Trim(fields->Strings[2]);
 	else
-		throw Exception(Trim(fields->Strings[2]) + " reacción no registrada como REACTION.");
+		throw Exception(Trim(fields->Strings[2]) + " reacción no registrada como REACCION.");
 
 	// lee los parametros del mecanismo
 	String s = Trim(fields->Strings[3]);
@@ -801,7 +801,7 @@ void TMechanism::toString(TMemo* pantallaSalida) const
     if (!pantallaSalida)
 		return;
 
-	pantallaSalida->Lines->Add("======== MECHANISM ========");
+	pantallaSalida->Lines->Add("======== MECANISMO ========");
 	pantallaSalida->Lines->Add("Type: " + getMechType());
 	pantallaSalida->Lines->Add("Reaction: " + getReactionName());
 
@@ -856,7 +856,7 @@ void TMassAction::CheckElements() const
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < getNMechParams(); i++)
 		if(!model->findParameter(getMechParams(i)))
-			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETRO en el modelo.");
 }
 
 String TMassAction::buildRateEquation(bool isPython, bool isDirect)
@@ -972,15 +972,15 @@ void TMMUniInhibidor::CheckElements() const
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < 3; i++)                      	// Vmax, KmA, KmI
 		if(!model->findParameter(getMechParams(i)))
-			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETRO en el modelo.");
 
 	if(getReaction()->getDirectionString() == "BI")  	// Keq
 		if(!model->findParameter(getMechParams(getNMechParams()-1)))
-			throw Exception("'" + getMechParams(getNMechParams()-1) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(getNMechParams()-1) + "' no está registrado como PARAMETRO en el modelo.");
 
 	// el inhibidor debe ser un metabolito registrado
     if(!model->findMetabolite(getMechParams(3)))        // I
-		throw Exception("'" + getMechParams(3) + "' no está registrado como METABOLITE en el modelo.");
+		throw Exception("'" + getMechParams(3) + "' no está registrado como METABOLITO en el modelo.");
 }
 
 String TMMUniInhibidor::BuildDenominator(bool isPython)
@@ -1085,7 +1085,7 @@ void TMMBiSecAleatorio::CheckElements() const
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < getNMechParams(); i++)
 		if(!model->findParameter(getMechParams(i)))
-			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETRO en el modelo.");
 }
 
 String TMMBiSecAleatorio::BuildDenominator(bool isPython)
@@ -1232,11 +1232,11 @@ void TMMUniBiInhibidor::CheckElements() const
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < (getNMechParams()-1); i++)
 		if(!model->findParameter(getMechParams(i)))
-			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETER en el modelo.");
+			throw Exception("'" + getMechParams(i) + "' no está registrado como PARAMETRO en el modelo.");
 
 	// el inhibidor debe ser un metabolito en el modelo
     if(!model->findMetabolite(getMechParams(getNMechParams()-1)))
-			throw Exception("'" + getMechParams(getNMechParams()-1) + "' no está registrado como METABOLITE en el modelo.");
+			throw Exception("'" + getMechParams(getNMechParams()-1) + "' no está registrado como METABOLITO en el modelo.");
 }
 
 String TMMUniBiInhibidor::BuildDenominator(bool isPython)
@@ -1515,8 +1515,8 @@ void THillInhibidorActivador::CheckElements() const
 		throw Exception(getMechType() + " solo aplica a reacciones unidireccionales");
 
     // comprueba el numero de parametros
-	if(getNMechParams() != 6)
-		throw Exception(getMechType() + " necesita: [Vmax, KmA, cte, A, Inhibidor, Activador].");
+	if(getNMechParams() != 7)
+		throw Exception(getMechType() + " necesita: [Vmax, KmA, n, cte, A, Inhibidor, Activador].");
 
 	// los parametros deben existir en el modelo
 	for (int i = 0; i < (getNMechParams()-3); i++)
@@ -1538,16 +1538,16 @@ void THillInhibidorActivador::setDirectRatePython()
 	int Vmax = model->indexOfParameter(getMechParams(0));
 	int KmA  = model->indexOfParameter(getMechParams(1));
 	int cte  = model->indexOfParameter(getMechParams(2));
-	int A    = model->indexOfMetabolite(getMechParams(3));
-	int Inh  = model->indexOfMetabolite(getMechParams(4));
-	int Act  = model->indexOfMetabolite(getMechParams(5));
-	int n = 2;
+	int n    = model->indexOfParameter(getMechParams(3));
+	int A    = model->indexOfMetabolite(getMechParams(4));
+	int Inh  = model->indexOfMetabolite(getMechParams(5));
+	int Act  = model->indexOfMetabolite(getMechParams(6));
 
 	// numerador
 	directRatePython = "(p[" + IntToStr(Vmax) + "] *x[" + IntToStr(A) + "]**" + IntToStr(n) + ")";
 
 	// denominador
-	directRatePython += " / (p[" + IntToStr(KmA) + "] + p[" + IntToStr(KmA) + "]*p[" + IntToStr(cte) + "]* " +
+	directRatePython += " / (p[" + IntToStr(KmA) + "]**" + IntToStr(n) + " + p[" + IntToStr(KmA) + "]**" + IntToStr(n) + " *p[" + IntToStr(cte) + "]* " +
 						"x[" + IntToStr(Inh) + "]**" + IntToStr(n) + " / x[" + IntToStr(Act) + "]**" + IntToStr(n) + " + " +
 						"x[" + IntToStr(A) + "]**" + IntToStr(n) + ")";
 }
@@ -1560,7 +1560,7 @@ void THillInhibidorActivador::setDirectRateShow()
 	directRateShow = "(" + getMechParams(0) + " *[" + getMechParams(3) + "]^" + IntToStr(n) + ")";
 
 	// denominador
-	directRateShow += " / (" + getMechParams(1) + " *(1 + " + getMechParams(2) + "* " +
+	directRateShow += " / (" + getMechParams(1) + "^" + IntToStr(n) + " *(1 + " + getMechParams(2) + "* " +
 						 "[" + getMechParams(4) + "]^" + IntToStr(n) + " / [" + getMechParams(5) + "]^" + IntToStr(n) + ") + " +
 						 "[" + getMechParams(3) + "]^" + IntToStr(n) + ")";
 }
@@ -1586,7 +1586,7 @@ TMechanism TModel::CreateMechanism(String line, TModel* model)
 	tmp->Delimiter = '\t';
 	tmp->DelimitedText = Trim(line);
 
-	// Coge el segundo campo despues de MECHANISM
+	// Coge el segundo campo despues de MECANISMO
 	String type = Trim(tmp->Strings[1]);
 
 	try
@@ -1637,7 +1637,9 @@ void TModel::BuildEquations()
 	{
 		String equationS = "";
 		String equationP = "";
-        String equationSC = "";
+		String equationSC = "";
+		String s_coeff = "";
+		double num_coeff = 1;
 
 		// recorre todas la reacciones
 		for (int j = 0; j < getNReactions(); j++)
@@ -1648,17 +1650,20 @@ void TModel::BuildEquations()
 				// si aparece como reactivo
 				if (metabolites[i].getShortName() == reactions[j].getReactant(r).substance->getShortName())
 				{
-					// restamos la ecuacion cinetica directa
-					equationP  += " - " + givesMechanism(reactions[j].getShortName())->getDirectRatePython();
-					equationS  += " - " + givesMechanism(reactions[j].getShortName())->getDirectRateShow();
-					equationSC += " - " + givesMechanism(reactions[j].getShortName())->getReactionName() + "_d";
+					num_coeff = reactions[j].getReactant(r).coefficient;
+					s_coeff = (num_coeff == 1) ? "" : FloatToStr(num_coeff) + "*";
 
-                    // sumamos la ecuacion cinetica inversa, en caso de que sea bidireccional
+					// restamos la ecuacion cinetica directa
+					equationP  += " - " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getDirectRatePython() + ")";
+					equationS  += " - " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getDirectRateShow() + ")";
+					equationSC += " - " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getReactionName() + "_d)";
+
+					// sumamos la ecuacion cinetica inversa, en caso de que sea bidireccional
 					if (reactions[j].getDirectionString() == "BI")
 					{
-						equationP  += " + " + givesMechanism(reactions[j].getShortName())->getInverseRatePython();
-						equationS  += " + " + givesMechanism(reactions[j].getShortName())->getInverseRateShow();
-						equationSC += " + " + givesMechanism(reactions[j].getShortName())->getReactionName() + "_i";
+						equationP  += " + " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getInverseRatePython() + ")";
+						equationS  += " + " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getInverseRateShow() + ")";
+						equationSC += " + " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getReactionName() + "_i)";
 					}
 				}
 			}
@@ -1669,17 +1674,20 @@ void TModel::BuildEquations()
 				// si aparece como producto
 				if (metabolites[i].getShortName() == reactions[j].getProduct(r).substance->getShortName())
 				{
+					num_coeff = reactions[j].getProduct(r).coefficient;
+					s_coeff = (num_coeff == 1) ? "" : FloatToStr(num_coeff) + "*";
+
 					// sumamos la ecuacion cinetica directa
-					equationP  += " + " + givesMechanism(reactions[j].getShortName())->getDirectRatePython();
-					equationS  += " + " + givesMechanism(reactions[j].getShortName())->getDirectRateShow();
-					equationSC += " + " + givesMechanism(reactions[j].getShortName())->getReactionName() + "_d";
+					equationP  += " + " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getDirectRatePython() + ")";
+					equationS  += " + " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getDirectRateShow() + ")";
+					equationSC += " + " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getReactionName() + "_d)";
 
 					// restamos la ecuacion cinetica inversa, en caso de que sea bidireccional
 					if (reactions[j].getDirectionString() == "BI")
 					{
-						equationP  += " - " + givesMechanism(reactions[j].getShortName())->getInverseRatePython();
-						equationS  += " - " + givesMechanism(reactions[j].getShortName())->getInverseRateShow();
-						equationSC += " - " + givesMechanism(reactions[j].getShortName())->getReactionName() + "_i";
+						equationP  += " - " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getInverseRatePython() + ")";
+						equationS  += " - " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getInverseRateShow() + ")";
+						equationSC += " - " + s_coeff + "(" + givesMechanism(reactions[j].getShortName())->getReactionName() + "_i)";
                     }
 				}
 			}
