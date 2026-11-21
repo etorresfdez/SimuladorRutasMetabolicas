@@ -280,18 +280,18 @@ void __fastcall TForm1::CargarEjemploClick(TObject *Sender)
 	"PARAMETRO\tV8\t\tV8\t\t343.096\n\n"
 	"PARAMETRO\tK8PEP\t\tK8PEP\t\t0.2\n\n"
 	"PARAMETRO\tK8ADP\t\tK8ADP\t\t0.17\n\n"
-	"PARAMETRO\tk11d\t\tk11d\t\t432.9\n\n"
-	"PARAMETRO\tk11i\t\tk11i\t\t133.333\n\n\n"
+	"PARAMETRO\tk9d\t\tk9d\t\t432.9\n\n"
+	"PARAMETRO\tk9i\t\tk9i\t\t133.333\n\n\n"
 	"MECANISMO\tLEY-ACCION-MASAS\t\tTrans\t\t[k0d, k0i]\n\n"
 	"MECANISMO\tMM-BI-SEC-ALEATORIO\t\tHK\t\t[V1, K1Glu, K1ATP, K1dGlu]\n\n"
 	"MECANISMO\tMM-UNI-INHIBIDOR\t\tPGI\t\t[V2, K2G6P, K2F6P, F6P, K2eq]\n\n"
-	"MECANISMO\tHILL-INHIBIDOR-ACTIVADOR\tPFK\t\t[V3, K3F6P, coefHill3, k3, F6P, ATP, AMP]\n\n"
+	"MECANISMO\tHILL-INHIBIDOR-ACTIVADOR\tPFK\t\t[V3, K3F6P, ncoefHill3, k3, F6P, ATP, AMP]\n\n"
 	"MECANISMO\tMM-UNI-BI-INHIBIDOR\t\tALD\t\t[V4d, V4i, K4FBP, K4GAP, K4DHAP, K4iGAP, K4eq, GAP]\n\n"
 	"MECANISMO\tMM-UNI-INHIBIDOR\t\tTIM\t\t[V5, K5DHAP, K5GAP, GAP, K5eq]\n\n"
 	"MECANISMO\tMM-BI-BI-INHIBIDOR\t\tGAPDH\t\t[V6, K6GAP, K6NAD, K6BPG, K6NADH, K6eq]\n\n"
 	"MECANISMO\tLEY-ACCION-MASAS\t\tPEP\t\t[k7d, k7i]\n\n"
 	"MECANISMO\tMM-BI-SEC-ALEATORIO\t\tPyK\t\t[V8, K8PEP, K8ADP]\n\n"
-	"MECANISMO\tLEY-ACCION-MASAS\t\tAK\t\t[k11d, k11i]\n\n"  ;
+	"MECANISMO\tLEY-ACCION-MASAS\t\tAK\t\t[k9d, k9i]\n\n"  ;
 }
 
 //---------------------------------------------------------------------------
